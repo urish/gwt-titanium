@@ -15,23 +15,18 @@
  */
 package org.urish.gwtit.client;
 
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
+public class ConstImpl implements Const {
+	String value;
 
-/**
- * Base class for bootstrapping into a Titanium application. It is recommended
- * that this class is extended and {@link #main()} implemented to begin a
- * Titanium application.
- * 
- * @author Uri Shaked
- */
-public abstract class GwtTitaniumBootstrap implements EntryPoint {
-
-	@Override
-	public final void onModuleLoad() {
-		Runner runner = GWT.create(Runner.class);
-		runner.run(this);
+	public ConstImpl(String value) {
+		this.value = value;
 	}
 
-	public abstract void main();
+	public String value() {
+		return this.value;
+	}
+
+	public String toString() {
+		return this.value;
+	}
 }

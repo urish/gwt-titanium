@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Chad Retz
+ * Copyright 2011 Uri Shaked
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,17 +15,6 @@
  */
 package org.urish.gwtit.client;
 
-import com.google.gwt.core.client.EntryPoint;
-
-/**
- * Entry point for gwt-node. This is currently empty.
- * 
- * @author Chad Retz
- */
-public class TitaniumNode implements EntryPoint {
-
-    @Override
-    public void onModuleLoad() {
-    }
-
+public interface EventCallback<T> {
+	void onEvent(T event);
 }

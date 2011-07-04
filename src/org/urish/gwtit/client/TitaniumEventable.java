@@ -1,8 +1,9 @@
-package com.titanium.core;
+package org.urish.gwtit.client;
+
 
 public interface TitaniumEventable<T> {
 	/**
-	 * add an event listener for the instance to receive view triggered events
+	 * Add an event listener for the instance to receive view triggered events
 	 * 
 	 * @param name name of the event
 	 * @param callback
@@ -10,7 +11,7 @@ public interface TitaniumEventable<T> {
 	void addEventListener(String name, EventCallback<T> callback);
 
 	/***
-	 * fire a synthesized event to the views listener
+	 * Fire a synthesized event to the views listener
 	 * 
 	 * @param name name of the event
 	 * @param event event object
@@ -18,7 +19,7 @@ public interface TitaniumEventable<T> {
 	void fireEvent(String name, T event);
 
 	/**
-	 * remove a previously added event listener
+	 * Remove a previously added event listener
 	 * 
 	 * @param name name of the event
 	 * @param callback callback function passed in addEventListener

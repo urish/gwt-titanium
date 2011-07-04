@@ -1,4 +1,4 @@
-package com.titanium.core;
+package org.urish.gwtit.client;
 
 public interface TitaniumObject {
 

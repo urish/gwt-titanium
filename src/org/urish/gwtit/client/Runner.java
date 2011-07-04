@@ -1,5 +1,5 @@
 /*
- * Copyright 2011 Chad Retz
+ * Copyright 2011 Uri Shaked
  * 
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,8 +15,6 @@
  */
 package org.urish.gwtit.client;
 
-
 public interface Runner {
-
-    void run(GwtTitaniumBootstrap bootstrap);
+	void run(GwtTitaniumBootstrap bootstrap);
 }
