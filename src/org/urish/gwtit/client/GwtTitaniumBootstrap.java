@@ -35,5 +35,5 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
         runner.run(this);
     }
     
-    public abstract Integer main();
+    public abstract void main();
 }
