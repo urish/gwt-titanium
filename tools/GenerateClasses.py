@@ -10,6 +10,9 @@ import org.urish.gwtit.client.AbstractTitaniumEventable;
 import org.urish.gwtit.client.Const;
 import org.urish.gwtit.client.ConstImpl;
 
+/**
+ * %(docString)s
+ */
 public class %(name)s extends %(parent)s {
 	protected %(name)s() {}
 
@@ -177,6 +180,8 @@ def generateMethodDoc(method):
 	parts = [
 		parseDocString(method['description']).capitalize()
 	]
+	if 'platforms' in method:
+		parts += ["@platforms " + ", ".join(method['platforms'])]
 	if 'parameters' in method:
 		for parameter in method['parameters']:
 			parts.append("@param %s %s" % (mapIdentifiers(parameter['name']), parseDocString(parameter['description'])))
@@ -184,6 +189,18 @@ def generateMethodDoc(method):
 		descr = parseDocString(method['returns']['description'])
 		if descr:
 			parts.append("@return " + descr)
+	return "\n * ".join(parts)
+
+def generateClassDoc(typeInfo):
+	parts = [
+		parseDocString(typeInfo['description']).capitalize()
+	]
+	if 'notes' in typeInfo:
+		parts += ["<p>", "Notes: " + typeInfo['notes']]
+	if 'platforms' in typeInfo:
+		parts += ["@platforms " + ", ".join(typeInfo['platforms'])]
+	if 'since' in typeInfo:
+		parts += ["@since " + typeInfo['since']]
 	return "\n * ".join(parts)
 
 def generateFactories(typeInfo, types):
@@ -205,7 +222,6 @@ def generateFactories(typeInfo, types):
 					'return': mapTypes(candidate['name']),
 				}
 	return result
-			
 
 def generateMethods(type, isSingleton):
 	result = ""
@@ -245,10 +261,11 @@ def generateMethods(type, isSingleton):
 	
 def generateEvents(type):
 	result = ""
-	for event in type['events']:
-		result += EVENT_TEMPLATE % {
-			'name': event['name'],
-		}
+	if 'events' in type:
+		for event in type['events']:
+			result += EVENT_TEMPLATE % {
+				'name': event['name'],
+			}
 	return result
 
 def generateClass(type, types):
@@ -264,9 +281,11 @@ def generateClass(type, types):
 		'package': ".".join(["titanium"] + name[1:-1]).lower(),
 		'name': name[-1],
 		'parent': parentClass,
+		'docString': generateClassDoc(type),
 		'properties': generateProperties(type, singleton),
 		'factories': generateFactories(type, types),
 		'methods': generateMethods(type, singleton) if ('methods' in type) else '',
+		'events': generateEvents(type),
 	}
 	dir = os.path.join(r"C:\Projects\gwt-titanium\src\org\urish\gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):
