@@ -102,6 +102,9 @@ def mapTypes(s):
 		return "Object"
 	if s.startswith("Titanium."):
 		path = s.split(".")
+		if path[-1].upper() == path[-1]:
+			# Constant
+			return "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
 	return "Object"
 	
@@ -114,18 +117,28 @@ def mapMethodNames(s):
 	if s == "toString":
 		return "toString_"
 	return s
-	
+
+def docStringLink(match):
+	return "{@link %s}" % mapTypes(match.group(1))
+
+def parseDocString(text):
+	text = re.sub("<(Titanium.[^>]+)>", docStringLink, text)
+	return re.sub("<[^>]+>", "", text)
+
 def generateProperties(type, isSingleton):
 	result = ""
 	if isSingleton:
-		getter = STATIC_GETTER_TEMPLATE
-		setter = STATIC_SETTER_TEMPLATE
+		getterTemplate = STATIC_GETTER_TEMPLATE
+		setterTemplate = STATIC_SETTER_TEMPLATE
 	else:
-		getter = GETTER_TEMPLATE
-		setter = SETTER_TEMPLATE		
+		getterTemplate = GETTER_TEMPLATE
+		setterTemplate = SETTER_TEMPLATE		
 	if 'properties' in type:
 		for property in type['properties']:
-			docString = ("@return " + property['description']) if property['description'] else ''
+			readonly = property['description'] and property['description'].lower().strip().startswith("readonly")
+			docString = ("@return " + parseDocString(property['description'])) if property['description'] else ''
+			getter = getterTemplate
+			setter = setterTemplate if not readonly else ""
 			if property['name'] != property['name'].upper():
 				if isinstance(property['type'], list):
 					for option in property['type']:
@@ -160,18 +173,15 @@ def generateProperties(type, isSingleton):
 				}
 	return result
 
-def stripHtml(text):
-	return re.sub("<[^>]+>", "", text)
-
 def generateMethodDoc(method):
 	parts = [
-		stripHtml(method['description']).capitalize()
+		parseDocString(method['description']).capitalize()
 	]
 	if 'parameters' in method:
 		for parameter in method['parameters']:
-			parts.append("@param %s %s" % (mapIdentifiers(parameter['name']), stripHtml(parameter['description'])))
+			parts.append("@param %s %s" % (mapIdentifiers(parameter['name']), parseDocString(parameter['description'])))
 	if 'returns' in method and 'description' in method['returns']:
-		descr = stripHtml(method['returns']['description'])
+		descr = parseDocString(method['returns']['description'])
 		if descr:
 			parts.append("@return " + descr)
 	return "\n * ".join(parts)
