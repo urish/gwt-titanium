@@ -81,13 +81,13 @@ CONSTRUCTOR_TEMPLATE = """
 
 EVENT_TEMPLATE = """
 	public native void add%(nameCapital)sHandler(Object handler) /*-{
-		return this.addEventListener('%(name)s', handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;));
+		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
 	public static native void add%(nameCapital)sHandler(EventCallback handler) /*-{
-		return %(module)s.addEventListener('%(name)s', handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;));
+		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
 
