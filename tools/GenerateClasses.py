@@ -1,16 +1,6 @@
-import json
 import os
 import re
-
-SKIP_METHODS = [
-	"addEventListener",
-	"fireEvent",
-	"removeEventListener",
-]
-
-SINGLETONS = [
-	"Titanium.API"
-]
+import yaml
 
 CLASS_TEMPLATE = """
 package org.urish.gwtit.%(package)s;
@@ -28,18 +18,30 @@ public class %(name)s extends %(parent)s {
 }
 """
 
-PROPERTY_TEMPLATE = """
+GETTER_TEMPLATE = """
 	public native %(type)s get%(nameCapital)s() /*-{
 		return this.%(name)s;
 	}-*/;
-
+"""
+SETTER_TEMPLATE = """
 	public native void set%(nameCapital)s(%(type)s value) /*-{
 		this.%(name)s = value;
 	}-*/;
 """
 
+STATIC_GETTER_TEMPLATE = """
+	public static native %(type)s get%(nameCapital)s() /*-{
+		return %(module)s.%(name)s;
+	}-*/;
+"""
+STATIC_SETTER_TEMPLATE = """
+	public static native void set%(nameCapital)s(%(type)s value) /*-{
+		%(module)s.%(name)s = value;
+	}-*/;
+"""
+
 CONST_TEMPLATE = """
-	public static final Const %(name)s = new ConstImpl("%(type)s.%(name)s");
+	public static final Const %(name)s = new ConstImpl("%(module)s.%(name)s");
 """
 
 STATIC_METHOD_TEMPLATE = """
@@ -47,7 +49,7 @@ STATIC_METHOD_TEMPLATE = """
 	 * %(docString)s
 	 */
 	public static native %(return)s %(name)s (%(params)s) /*-{
-		return %(type)s.%(name)s(%(paramNames)s);
+		return %(module)s.%(name)s(%(paramNames)s);
 	}-*/;
 """
 
@@ -82,6 +84,8 @@ def mapTypes(s):
 		return "float"
 	if s == "void":
 		return "void"
+	if type(s) == list:
+		return "Object"
 	if s.startswith("Titanium."):
 		path = s.split(".")
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
@@ -97,20 +101,44 @@ def mapMethodNames(s):
 		return "toString_"
 	return s
 	
-def generateProperties(type):
+def generateProperties(type, isSingleton):
 	result = ""
-	for property in type['properties']:
-		if (property['isInstanceProperty']):
-			result += PROPERTY_TEMPLATE % {
-				'name': property['name'],
-				'nameCapital': capitalFirst(property['name']),
-				'type': mapTypes(property['type']),
-			}
-		else:
-			result += CONST_TEMPLATE % {
-				'type': type['name'],
-				'name': property['name'],
-			}
+	if isSingleton:
+		getter = STATIC_GETTER_TEMPLATE
+		setter = STATIC_SETTER_TEMPLATE
+	else:
+		getter = GETTER_TEMPLATE
+		setter = SETTER_TEMPLATE		
+	if 'properties' in type:
+		for property in type['properties']:
+			if property['name'] != property['name'].upper():
+				if isinstance(property['type'], list):
+					for option in property['type']:
+						result += setter % {
+							'name': property['name'],
+							'nameCapital': capitalFirst(property['name']),
+							'type': mapTypes(option),
+							'module': type['name']
+						}
+					result += getter % {
+						'name': property['name'],
+						'nameCapital': capitalFirst(property['name']),
+						'type': "Object",
+						'module': type['name'],
+					}
+				else:
+					result += (getter + setter) % {
+						'name': property['name'],
+						'nameCapital': capitalFirst(property['name']),
+						'type': mapTypes(property['type']),
+						'module': type['name'],
+					}
+			else:
+				result += CONST_TEMPLATE % {
+					'type': property['type'],
+					'name': property['name'],
+					'module': type['name'],
+				}
 	return result
 
 def stripHtml(text):
@@ -123,36 +151,35 @@ def generateMethodDoc(method):
 	if 'parameters' in method:
 		for parameter in method['parameters']:
 			parts.append("@param %s %s" % (mapIdentifiers(parameter['name']), stripHtml(parameter['description'])))
-	if 'returnTypes' in method:
-		descr = stripHtml(method['returnTypes'][0]['description'])
+	if 'returns' in method and 'description' in method['returns']:
+		descr = stripHtml(method['returns']['description'])
 		if descr:
 			parts.append("@return " + descr)
 	return "\n * ".join(parts)
 
 def generateMethods(type, isSingleton):
 	result = ""
-	for method in type['functions']:
-		if method['name'] in SKIP_METHODS:
-			continue
+	for method in type['methods']:
 		duplicate = False
-		for property in type['properties']:
-			propName = capitalFirst(property['name'])
-			if method['name'] in ["get" + propName, "set" + propName]:
-				duplicate = True
+		if 'properties' in type:
+			for property in type['properties']:
+				propName = capitalFirst(property['name'])
+				if method['name'] in ["get" + propName, "set" + propName]:
+					duplicate = True
 		if duplicate:
 			continue
 		if method['name'].startswith("create"):
 			result += CONSTRUCTOR_TEMPLATE % {
 				'type': type['name'],
 				'name': method['name'],
-				'return': mapTypes(method['returnTypes'][0]["type"]),
+				'return': mapTypes(method['returns']["type"]) if 'returns' in method else 'void',
 			}
 		else:
 			returnType = "void"
 			params = []
 			paramNames = []
-			if "returnTypes" in method:
-				returnType = method['returnTypes'][0]["type"]
+			if "returns" in method:
+				returnType = method['returns']["type"]
 			if 'parameters' in method:
 				for parameter in method['parameters']:
 					name = mapIdentifiers(parameter['name'])
@@ -163,7 +190,7 @@ def generateMethods(type, isSingleton):
 			else:
 				template = METHOD_TEMPLATE
 			result += template % {
-				'type': type['name'],
+				'module': type['name'],
 				'name': mapMethodNames(method['name']),
 				'nativeName': method['name'],
 				'docString': generateMethodDoc(method),
@@ -182,25 +209,38 @@ def generateEvents(type):
 	return result
 
 def generateClass(type):
+	print type['name']
+	type['name'] = re.sub(r"(^|\.)(\d)", r"\1_\2", type['name'])
 	name = type['name'].split(".")
 	parentClass = "JavaScriptObject"
-	for method in type['functions']:
-		if method['name'] == 'addEventListener':
-			parentClass = "AbstractTitaniumEventable"
-	print type['name']
-	singleton = type['name'] in SINGLETONS
+	singleton = False
+	if 'extends' in type:
+		parentClass = mapTypes(type['extends'])
+		singleton = type['extends'] == 'Titanium.Module'
 	code = CLASS_TEMPLATE % {
 		'package': ".".join(["titanium"] + name[1:-1]).lower(),
 		'name': name[-1],
 		'parent': parentClass,
-		'properties': generateProperties(type),
-		'methods': generateMethods(type, singleton),
+		'properties': generateProperties(type, singleton),
+		'methods': generateMethods(type, singleton) if ('methods' in type) else '',
 	}
 	dir = os.path.join(r"C:\Projects\gwt-titanium\src\org\urish\gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):
 		os.makedirs(dir)
 	file(os.path.join(dir, name[-1] + ".java"), "w").write(code)
 
-data = json.load(open("C:/projects/zampona/api.jsca", "rb"))
-for type in data['types']:
-	generateClass(type)
+def getTypes(path):
+	with open(path, 'r') as f:
+		return list(yaml.load_all(f))
+
+def processDir(dir):
+	types = []
+	for root, dirs, files in os.walk(os.path.abspath(dir)):
+		for name in files:
+			if name.endswith('.yml'):
+				types.extend(getTypes(os.path.join(root, name)))
+	for type in types:
+		generateClass(type)
+
+processDir(r"C:\projects\titanium_mobile\apidoc")
+
