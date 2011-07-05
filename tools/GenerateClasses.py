@@ -20,6 +20,9 @@ public class %(name)s extends %(parent)s {
 """
 
 GETTER_TEMPLATE = """
+	/**
+	 * %(docString)s
+	 */
 	public native %(type)s get%(nameCapital)s() /*-{
 		return this.%(name)s;
 	}-*/;
@@ -31,6 +34,9 @@ SETTER_TEMPLATE = """
 """
 
 STATIC_GETTER_TEMPLATE = """
+	/**
+	 * %(docString)s
+	 */
 	public static native %(type)s get%(nameCapital)s() /*-{
 		return %(module)s.%(name)s;
 	}-*/;
@@ -83,9 +89,16 @@ def mapTypes(s):
 		return "String"
 	if s == "Number":
 		return "float"
+	if s == "Boolean":
+		return "boolean"
 	if s == "void":
 		return "void"
 	if type(s) == list:
+		return "Object"
+	arrayMatch = re.match("^Array<(.+)>$", s)
+	if arrayMatch:
+		return mapTypes(arrayMatch.group(1)) + "[]"
+	if s == "Object":
 		return "Object"
 	if s.startswith("Titanium."):
 		path = s.split(".")
@@ -112,6 +125,7 @@ def generateProperties(type, isSingleton):
 		setter = SETTER_TEMPLATE		
 	if 'properties' in type:
 		for property in type['properties']:
+			docString = ("@return " + property['description']) if property['description'] else ''
 			if property['name'] != property['name'].upper():
 				if isinstance(property['type'], list):
 					for option in property['type']:
@@ -119,13 +133,15 @@ def generateProperties(type, isSingleton):
 							'name': property['name'],
 							'nameCapital': capitalFirst(property['name']),
 							'type': mapTypes(option),
-							'module': type['name']
+							'module': type['name'],
+							'docString': docString,
 						}
 					result += getter % {
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
 						'type': "Object",
 						'module': type['name'],
+						'docString': docString,
 					}
 				else:
 					result += (getter + setter) % {
@@ -133,12 +149,14 @@ def generateProperties(type, isSingleton):
 						'nameCapital': capitalFirst(property['name']),
 						'type': mapTypes(property['type']),
 						'module': type['name'],
+						'docString': docString,
 					}
 			else:
 				result += CONST_TEMPLATE % {
 					'type': property['type'],
 					'name': property['name'],
 					'module': type['name'],
+					'docString': docString,
 				}
 	return result
 
