@@ -84,7 +84,7 @@ EVENT_TEMPLATE = """
 def capitalFirst(s):
 	return s[0].upper() + s[1:]
 
-def mapTypes(s):
+def mapTypes(s, withConsts = False):
 	if s == "String":
 		return "String"
 	if s == "Number":
@@ -97,12 +97,12 @@ def mapTypes(s):
 		return "Object"
 	arrayMatch = re.match("^Array<(.+)>$", s)
 	if arrayMatch:
-		return mapTypes(arrayMatch.group(1)) + "[]"
+		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
 	if s == "Object":
 		return "Object"
 	if s.startswith("Titanium."):
 		path = s.split(".")
-		if path[-1].upper() == path[-1]:
+		if withConsts and path[-1].upper() == path[-1]:
 			# Constant
 			return "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
@@ -119,7 +119,7 @@ def mapMethodNames(s):
 	return s
 
 def docStringLink(match):
-	return "{@link %s}" % mapTypes(match.group(1))
+	return "{@link %s}" % mapTypes(match.group(1), True)
 
 def parseDocString(text):
 	text = re.sub("<(Titanium.[^>]+)>", docStringLink, text)
@@ -192,11 +192,18 @@ def generateFactories(typeInfo, types):
 	for candidate in types:
 		if (candidate['name'].startswith(typeName + ".") and 
 			len(candidate['name'].split(".")) == len(typeName.split(".")) + 1):
-			result += CONSTRUCTOR_TEMPLATE % {
-				'type': typeName,
-				'name': 'create' + candidate['name'].split(".")[-1],
-				'return': mapTypes(candidate['name']),
-			}
+			factoryName = 'create' + candidate['name'].split(".")[-1]
+			duplicate = False
+			if 'methods' in typeInfo:
+				for method in typeInfo['methods']:
+					if method['name'] == factoryName:
+						duplicate = True
+			if not duplicate:
+				result += CONSTRUCTOR_TEMPLATE % {
+					'type': typeName,
+					'name': factoryName,
+					'return': mapTypes(candidate['name']),
+				}
 	return result
 			
 
