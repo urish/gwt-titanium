@@ -80,7 +80,7 @@ CONSTRUCTOR_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public native void add%(nameCapital)sHandler(Object handler) /*-{
+	public native void add%(nameCapital)sHandler(EventCallback handler) /*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
