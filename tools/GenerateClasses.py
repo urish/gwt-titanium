@@ -14,6 +14,7 @@ public class %(name)s extends %(parent)s {
 	protected %(name)s() {}
 
 	%(properties)s
+	%(factories)s
 	%(methods)s
 }
 """
@@ -157,6 +158,20 @@ def generateMethodDoc(method):
 			parts.append("@return " + descr)
 	return "\n * ".join(parts)
 
+def generateFactories(typeInfo, types):
+	typeName = typeInfo['name']
+	result = ""
+	for candidate in types:
+		if (candidate['name'].startswith(typeName + ".") and 
+			len(candidate['name'].split(".")) == len(typeName.split(".")) + 1):
+			result += CONSTRUCTOR_TEMPLATE % {
+				'type': typeName,
+				'name': 'create' + candidate['name'].split(".")[-1],
+				'return': mapTypes(candidate['name']),
+			}
+	return result
+			
+
 def generateMethods(type, isSingleton):
 	result = ""
 	for method in type['methods']:
@@ -168,36 +183,29 @@ def generateMethods(type, isSingleton):
 					duplicate = True
 		if duplicate:
 			continue
-		if method['name'].startswith("create"):
-			result += CONSTRUCTOR_TEMPLATE % {
-				'type': type['name'],
-				'name': method['name'],
-				'return': mapTypes(method['returns']["type"]) if 'returns' in method else 'void',
-			}
+		returnType = "void"
+		params = []
+		paramNames = []
+		if "returns" in method:
+			returnType = method['returns']["type"]
+		if 'parameters' in method:
+			for parameter in method['parameters']:
+				name = mapIdentifiers(parameter['name'])
+				paramNames.append(name)
+				params.append("%s %s" % (mapTypes(parameter['type']),name))
+		if isSingleton:
+			template = STATIC_METHOD_TEMPLATE 
 		else:
-			returnType = "void"
-			params = []
-			paramNames = []
-			if "returns" in method:
-				returnType = method['returns']["type"]
-			if 'parameters' in method:
-				for parameter in method['parameters']:
-					name = mapIdentifiers(parameter['name'])
-					paramNames.append(name)
-					params.append("%s %s" % (mapTypes(parameter['type']),name))
-			if isSingleton:
-				template = STATIC_METHOD_TEMPLATE 
-			else:
-				template = METHOD_TEMPLATE
-			result += template % {
-				'module': type['name'],
-				'name': mapMethodNames(method['name']),
-				'nativeName': method['name'],
-				'docString': generateMethodDoc(method),
-				'params': ", ".join(params),
-				'paramNames': ", ".join(paramNames),
-				'return': mapTypes(returnType),
-			}
+			template = METHOD_TEMPLATE
+		result += template % {
+			'module': type['name'],
+			'name': mapMethodNames(method['name']),
+			'nativeName': method['name'],
+			'docString': generateMethodDoc(method),
+			'params': ", ".join(params),
+			'paramNames': ", ".join(paramNames),
+			'return': mapTypes(returnType),
+		}
 	return result
 	
 def generateEvents(type):
@@ -208,7 +216,7 @@ def generateEvents(type):
 		}
 	return result
 
-def generateClass(type):
+def generateClass(type, types):
 	print type['name']
 	type['name'] = re.sub(r"(^|\.)(\d)", r"\1_\2", type['name'])
 	name = type['name'].split(".")
@@ -222,6 +230,7 @@ def generateClass(type):
 		'name': name[-1],
 		'parent': parentClass,
 		'properties': generateProperties(type, singleton),
+		'factories': generateFactories(type, types),
 		'methods': generateMethods(type, singleton) if ('methods' in type) else '',
 	}
 	dir = os.path.join(r"C:\Projects\gwt-titanium\src\org\urish\gwtit", "/".join(["titanium"] + name[1:-1]).lower())
@@ -240,7 +249,7 @@ def processDir(dir):
 			if name.endswith('.yml'):
 				types.extend(getTypes(os.path.join(root, name)))
 	for type in types:
-		generateClass(type)
+		generateClass(type, types)
 
 processDir(r"C:\projects\titanium_mobile\apidoc")
 
