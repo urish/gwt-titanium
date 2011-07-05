@@ -6,9 +6,9 @@ CLASS_TEMPLATE = """
 package org.urish.gwtit.%(package)s;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.AbstractTitaniumEventable;
 import org.urish.gwtit.client.Const;
 import org.urish.gwtit.client.ConstImpl;
+import org.urish.gwtit.client.EventCallback;
 
 /**
  * %(docString)s
@@ -19,6 +19,7 @@ public class %(name)s extends %(parent)s {
 	%(properties)s
 	%(factories)s
 	%(methods)s
+	%(events)s
 }
 """
 
@@ -79,9 +80,15 @@ CONSTRUCTOR_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public void add%(name)sHandler(Object handler) {
-		return addDomHandler(handler, ClickEvent.getType());
-	}
+	public native void add%(nameCapital)sHandler(Object handler) /*-{
+		return this.addEventListener('%(name)s', handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;));
+	}-*/;
+"""
+
+STATIC_EVENT_TEMPLATE = """
+	public static native void add%(nameCapital)sHandler(EventCallback handler) /*-{
+		return %(module)s.addEventListener('%(name)s', handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;));
+	}-*/;
 """
 
 def capitalFirst(s):
@@ -139,7 +146,7 @@ def generateProperties(type, isSingleton):
 	if 'properties' in type:
 		for property in type['properties']:
 			readonly = property['description'] and property['description'].lower().strip().startswith("readonly")
-			docString = ("@return " + parseDocString(property['description'])) if property['description'] else ''
+			docString = generatePropertyDoc(property)
 			getter = getterTemplate
 			setter = setterTemplate if not readonly else ""
 			if property['name'] != property['name'].upper():
@@ -175,6 +182,16 @@ def generateProperties(type, isSingleton):
 					'docString': docString,
 				}
 	return result
+
+def generatePropertyDoc(property):
+	parts = []
+	if property['description']:
+		parts.append("@return " + parseDocString(property['description']).capitalize())
+	if 'platforms' in property:
+		parts += ["@platforms " + ", ".join(property['platforms'])]
+	if 'since' in property:
+		parts += ["@since " + property['since']]
+	return "\n * ".join(parts)
 
 def generateMethodDoc(method):
 	parts = [
@@ -259,12 +276,20 @@ def generateMethods(type, isSingleton):
 		}
 	return result
 	
-def generateEvents(type):
+def capitalEventName(eventName):
+	def capitalMatch(match):
+		return match.group(1).upper()
+	return re.sub(":(.)", capitalMatch, capitalFirst(eventName))
+	
+def generateEvents(typeInfo, isSingleton):
 	result = ""
-	if 'events' in type:
-		for event in type['events']:
-			result += EVENT_TEMPLATE % {
+	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
+	if 'events' in typeInfo:
+		for event in typeInfo['events']:
+			result += template % {
 				'name': event['name'],
+				'nameCapital': capitalEventName(event['name']),
+				'module': typeInfo['name'],
 			}
 	return result
 
@@ -285,7 +310,7 @@ def generateClass(type, types):
 		'properties': generateProperties(type, singleton),
 		'factories': generateFactories(type, types),
 		'methods': generateMethods(type, singleton) if ('methods' in type) else '',
-		'events': generateEvents(type),
+		'events': generateEvents(type, singleton),
 	}
 	dir = os.path.join(r"C:\Projects\gwt-titanium\src\org\urish\gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):

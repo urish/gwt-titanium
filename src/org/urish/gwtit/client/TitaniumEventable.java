@@ -1,7 +1,9 @@
 package org.urish.gwtit.client;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
-public interface TitaniumEventable<T> {
+
+public interface TitaniumEventable<T extends JavaScriptObject> {
 	/**
 	 * Add an event listener for the instance to receive view triggered events
 	 * 

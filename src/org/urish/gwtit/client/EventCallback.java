@@ -15,6 +15,8 @@
  */
 package org.urish.gwtit.client;
 
-public interface EventCallback<T> {
+import com.google.gwt.core.client.JavaScriptObject;
+
+public interface EventCallback<T extends JavaScriptObject> {
 	void onEvent(T event);
 }
