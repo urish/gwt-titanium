@@ -1,8 +1,41 @@
+#
+# Copyright 2011 Uri Shaked
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not
+# use this file except in compliance with the License. You may obtain a copy of
+# the License at
+# 
+# http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+# WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+# License for the specific language governing permissions and limitations under
+# the License.
+
 import os
 import re
 import yaml
 
 CLASS_TEMPLATE = """
+/*
+ * Copyright 2011 Uri Shaked
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+ 
+/* Automatically generated code, don't edit ! */
+
 package org.urish.gwtit.%(package)s;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -315,7 +348,7 @@ def generateClass(type, types):
 	dir = os.path.join(r"C:\Projects\gwt-titanium\src\org\urish\gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):
 		os.makedirs(dir)
-	file(os.path.join(dir, name[-1] + ".java"), "w").write(code)
+	file(os.path.join(dir, name[-1] + ".java"), "w").write(code.lstrip())
 
 def getTypes(path):
 	with open(path, 'r') as f:
