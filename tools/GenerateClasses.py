@@ -120,14 +120,14 @@ CONSTRUCTOR_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public native void add%(nameCapital)sHandler(EventCallback handler) 
+	public native void add%(nameCapital)sHandler(EventCallback<JavaScriptObject> handler) 
 	/*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public static native void add%(nameCapital)sHandler(EventCallback handler) 
+	public static native void add%(nameCapital)sHandler(EventCallback<JavaScriptObject> handler) 
 	/*-{
 		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
