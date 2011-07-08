@@ -15,6 +15,10 @@
  */
 package org.urish.gwtit.client;
 
+import org.urish.gwtit.client.util.Timer;
+import org.urish.gwtit.client.util.TimerCallback;
+import org.urish.gwtit.client.util.Timers;
+
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 
@@ -31,6 +35,14 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
 	public final void onModuleLoad() {
 		Runner runner = GWT.create(Runner.class);
 		runner.run(this);
+	}
+
+	public Timer setTimeout(int milliseconds, TimerCallback callback) {
+		return Timers.setTimeout(milliseconds, callback);
+	}
+
+	public Timer setInterval(int milliseconds, TimerCallback callback) {
+		return Timers.setInterval(milliseconds, callback);
 	}
 
 	public abstract void main();
