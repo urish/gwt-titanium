@@ -511,6 +511,25 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 *            {@link org.urish.gwtit.titanium.Android.FLAG_UPDATE_CURRENT}
 	 */
 	public static native org.urish.gwtit.titanium.android.PendingIntent createPendingIntent(
+			org.urish.gwtit.titanium.android.Intent intent)
+	/*-{
+		return Titanium.Android.createPendingIntent(intent);
+	}-*/;
+
+	/**
+	 * Create a {@link org.urish.gwtit.titanium.android.pendingintent} to be
+	 * used inside a {@link org.urish.gwtit.titanium.android.notification}
+	 * 
+	 * @param intent
+	 *            The Intent that will be executed
+	 * @param flags
+	 *            Can be any of
+	 *            {@link org.urish.gwtit.titanium.Android.FLAG_CANCEL_CURRENT},
+	 *            {@link org.urish.gwtit.titanium.Android.FLAG_NO_CREATE},
+	 *            {@link org.urish.gwtit.titanium.Android.FLAG_ONE_SHOT},
+	 *            {@link org.urish.gwtit.titanium.Android.FLAG_UPDATE_CURRENT}
+	 */
+	public static native org.urish.gwtit.titanium.android.PendingIntent createPendingIntent(
 			org.urish.gwtit.titanium.android.Intent intent, float flags)
 	/*-{
 		return Titanium.Android.createPendingIntent(intent, flags);

@@ -16,6 +16,7 @@
 import os
 import re
 import yaml
+from copy import copy
 
 CLASS_TEMPLATE = """
 /*
@@ -301,26 +302,31 @@ def generateMethods(type, isSingleton):
 		returnType = "void"
 		params = []
 		paramNames = []
+		permutations = []
 		if "returns" in method:
 			returnType = method['returns']["type"]
 		if 'parameters' in method:
 			for parameter in method['parameters']:
+				if 'optional' in parameter and parameter['optional']:
+					permutations.append((copy(params), copy(paramNames)))
 				name = mapIdentifiers(parameter['name'])
 				paramNames.append(name)
 				params.append("%s %s" % (mapTypes(parameter['type']),name))
+		permutations.append((params, paramNames))
 		if isSingleton:
 			template = STATIC_METHOD_TEMPLATE 
 		else:
 			template = METHOD_TEMPLATE
-		result += template % {
-			'module': type['name'],
-			'name': mapMethodNames(method['name']),
-			'nativeName': method['name'],
-			'docString': generateMethodDoc(method),
-			'params': ", ".join(params),
-			'paramNames': ", ".join(paramNames),
-			'return': mapTypes(returnType),
-		}
+		for params, paramNames in permutations:
+			result += template % {
+				'module': type['name'],
+				'name': mapMethodNames(method['name']),
+				'nativeName': method['name'],
+				'docString': generateMethodDoc(method),
+				'params': ", ".join(params),
+				'paramNames': ", ".join(paramNames),
+				'return': mapTypes(returnType),
+			}
 	return result
 	
 def capitalEventName(eventName):
@@ -349,6 +355,8 @@ def generateClass(projectRoot, type, types):
 	if 'extends' in type:
 		parentClass = mapTypes(type['extends'])
 		singleton = type['extends'] == 'Titanium.Module'
+	if type['name'] == "Titanium.Module":
+		parentClass = "org.urish.gwtit.client.TitaniumModule"
 	code = CLASS_TEMPLATE % {
 		'package': ".".join(["titanium"] + name[1:-1]).lower(),
 		'name': name[-1],
@@ -385,7 +393,7 @@ def processDir(inputDir, projectDir):
 	for type in types:
 		classes.append(generateClass(projectDir, type, types))
 	# Format code
-	for someClasses in chunks(classes, 16):
+	for someClasses in chunks(classes, 32):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
 if __name__ == "__main__":

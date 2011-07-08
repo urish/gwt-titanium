@@ -74,6 +74,19 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return The key in the locale file to use for the title property
+	 */
+	public native String getTitleid()
+	/*-{
+		return this.titleid;
+	}-*/;
+
+	public native void setTitleid(String value)
+	/*-{
+		this.titleid = value;
+	}-*/;
+
+	/**
 	 * @return The root level tab window. all tabs must have at least one root
 	 *         level tab window.
 	 */

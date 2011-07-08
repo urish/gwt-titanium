@@ -135,6 +135,19 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	 * @param hint
 	 *            the text to use if no key found in the localization file
 	 */
+	public static native String getString(String key)
+	/*-{
+		return Titanium.Locale.getString(key);
+	}-*/;
+
+	/**
+	 * Return a localization string
+	 * 
+	 * @param key
+	 *            the key to use when mapping into the localization file
+	 * @param hint
+	 *            the text to use if no key found in the localization file
+	 */
 	public static native String getString(String key, String hint)
 	/*-{
 		return Titanium.Locale.getString(key, hint);

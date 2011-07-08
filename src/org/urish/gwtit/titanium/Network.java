@@ -189,9 +189,54 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *            {@link org.urish.gwtit.titanium.network.BonjourBrowser}
 	 */
 	public static native org.urish.gwtit.titanium.network.BonjourBrowser createBonjourBrowser(String serviceType,
+			String domain)
+	/*-{
+		return Titanium.Network.createBonjourBrowser(serviceType, domain);
+	}-*/;
+
+	/**
+	 * Create and return an instance of
+	 * {@link org.urish.gwtit.titanium.network.bonjourbrowser}
+	 * 
+	 * @platforms iphone, ipad
+	 * @param serviceType
+	 *            service to search for, must include the protocol type suffix
+	 *            (._tcp)
+	 * @param domain
+	 *            the Bonjour service domain to conduct the search in. Default
+	 *            value is 'local.'
+	 * @param parameters
+	 *            A dictionary object of properties defined in
+	 *            {@link org.urish.gwtit.titanium.network.BonjourBrowser}
+	 */
+	public static native org.urish.gwtit.titanium.network.BonjourBrowser createBonjourBrowser(String serviceType,
 			String domain, Object parameters)
 	/*-{
 		return Titanium.Network.createBonjourBrowser(serviceType, domain, parameters);
+	}-*/;
+
+	/**
+	 * Create and return an instance of
+	 * {@link org.urish.gwtit.titanium.network.bonjourservice}
+	 * 
+	 * @platforms iphone, ipad
+	 * @param name
+	 *            the name of the service. Must be a unique identifier for this
+	 *            service type and domain.
+	 * @param type
+	 *            the type of service. Must include the protocol identifier
+	 *            (._tcp)
+	 * @param domain
+	 *            the domain to publish the service in. Default value is
+	 *            'local.'
+	 * @param parameters
+	 *            A dictionary object with properties defined in
+	 *            {@link org.urish.gwtit.titanium.network.BonjourService}
+	 */
+	public static native org.urish.gwtit.titanium.network.BonjourService createBonjourService(String name, String type,
+			String domain)
+	/*-{
+		return Titanium.Network.createBonjourService(name, type, domain);
 	}-*/;
 
 	/**

@@ -75,9 +75,43 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
+	public native Object field(float index)
+	/*-{
+		return this.field(index);
+	}-*/;
+
+	/**
+	 * Retrieve a row value by field index
+	 * 
+	 * @param index
+	 *            column index (which is zero based)
+	 * @param type
+	 *            One of (
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_STRING} |
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_INT} |
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
+	 */
 	public native Object field(float index, float type)
 	/*-{
 		return this.field(index, type);
+	}-*/;
+
+	/**
+	 * Retrieve a row value by field name
+	 * 
+	 * @param name
+	 *            column name from SQL query
+	 * @param type
+	 *            One of (
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_STRING} |
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_INT} |
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
+	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
+	 */
+	public native Object fieldByName(String name)
+	/*-{
+		return this.fieldByName(name);
 	}-*/;
 
 	/**

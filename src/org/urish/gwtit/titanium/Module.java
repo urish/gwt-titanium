@@ -24,7 +24,7 @@ package org.urish.gwtit.titanium;
  * 
  * @since 0.1
  */
-public class Module extends org.urish.gwtit.titanium.Proxy {
+public class Module extends org.urish.gwtit.client.TitaniumModule {
 	protected Module() {
 	}
 

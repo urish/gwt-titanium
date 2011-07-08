@@ -129,10 +129,13 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * Add a tab to the tab group
+	 * 
+	 * @param tab
+	 *            The tab to add
 	 */
-	public native void addTab()
+	public native void addTab(org.urish.gwtit.titanium.ui.Tab tab)
 	/*-{
-		return this.addTab();
+		return this.addTab(tab);
 	}-*/;
 
 	/**

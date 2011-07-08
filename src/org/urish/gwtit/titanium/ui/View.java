@@ -579,6 +579,19 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *            method will be performed asynchronously. if null, it will be
 	 *            performed immediately
 	 */
+	public native Object toImage()
+	/*-{
+		return this.toImage();
+	}-*/;
+
+	/**
+	 * Return a blob image of the rendered view
+	 * 
+	 * @param f
+	 *            function to be invoked upon completion. if non-null, this
+	 *            method will be performed asynchronously. if null, it will be
+	 *            performed immediately
+	 */
 	public native Object toImage(Object f)
 	/*-{
 		return this.toImage(f);

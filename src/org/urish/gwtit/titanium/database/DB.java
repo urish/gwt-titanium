@@ -88,6 +88,21 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 *            function or an array of objects to be replaced in the query
 	 *            using `?` substitution.
 	 */
+	public native Object execute(String sql)
+	/*-{
+		return this.execute(sql);
+	}-*/;
+
+	/**
+	 * Execute a sql statement against the database and returns a resultset
+	 * 
+	 * @param sql
+	 *            the SQL to execute
+	 * @param vararg
+	 *            one or more optional variable arguments passed to this
+	 *            function or an array of objects to be replaced in the query
+	 *            using `?` substitution.
+	 */
 	public native Object execute(String sql, Object[] vararg)
 	/*-{
 		return this.execute(sql, vararg);
