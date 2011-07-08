@@ -32,12 +32,12 @@ public class PickerColumn extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Number of rows in the column (readonly)
 	 */
-	public native float getRowCount()
+	public final native float getRowCount()
 	/*-{
 		return this.rowCount;
 	}-*/;
 
-	public native void setRowCount(float value)
+	public final native void setRowCount(float value)
 	/*-{
 		this.rowCount = value;
 	}-*/;
@@ -45,12 +45,12 @@ public class PickerColumn extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return An array of rows
 	 */
-	public native Object[] getRows()
+	public final native Object[] getRows()
 	/*-{
 		return this.rows;
 	}-*/;
 
-	public native void setRows(Object[] value)
+	public final native void setRows(Object[] value)
 	/*-{
 		this.rows = value;
 	}-*/;
@@ -61,7 +61,7 @@ public class PickerColumn extends org.urish.gwtit.titanium.ui.View {
 	 * @param row
 	 *            The row to add.
 	 */
-	public native void addRow(org.urish.gwtit.titanium.ui.PickerRow row)
+	public final native void addRow(org.urish.gwtit.titanium.ui.PickerRow row)
 	/*-{
 		return this.addRow(row);
 	}-*/;
@@ -72,7 +72,7 @@ public class PickerColumn extends org.urish.gwtit.titanium.ui.View {
 	 * @param row
 	 *            The row to remove.
 	 */
-	public native void removeRow(org.urish.gwtit.titanium.ui.PickerRow row)
+	public final native void removeRow(org.urish.gwtit.titanium.ui.PickerRow row)
 	/*-{
 		return this.removeRow(row);
 	}-*/;

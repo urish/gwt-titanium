@@ -39,12 +39,12 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Array of images to display in the view
 	 */
-	public native Object[] getImages()
+	public final native Object[] getImages()
 	/*-{
 		return this.images;
 	}-*/;
 
-	public native void setImages(Object[] value)
+	public final native void setImages(Object[] value)
 	/*-{
 		this.images = value;
 	}-*/;
@@ -52,12 +52,12 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Index to make selected
 	 */
-	public native float getSelected()
+	public final native float getSelected()
 	/*-{
 		return this.selected;
 	}-*/;
 
-	public native void setSelected(float value)
+	public final native void setSelected(float value)
 	/*-{
 		this.selected = value;
 	}-*/;
@@ -75,12 +75,12 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	 *            at that size). If passed as a TiFile or URL, will perform a
 	 *            check for '@2x' on Retina displays
 	 */
-	public native void setImage(float index, Object image)
+	public final native void setImage(float index, Object image)
 	/*-{
 		return this.setImage(index, image);
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

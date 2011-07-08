@@ -32,12 +32,12 @@ public class Group extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The name of the group
 	 */
-	public native String getName()
+	public final native String getName()
 	/*-{
 		return this.name;
 	}-*/;
 
-	public native void setName(String value)
+	public final native void setName(String value)
 	/*-{
 		this.name = value;
 	}-*/;
@@ -49,7 +49,7 @@ public class Group extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.contacts.Person} object to add
 	 *            to the group
 	 */
-	public native void add(org.urish.gwtit.titanium.contacts.Person person)
+	public final native void add(org.urish.gwtit.titanium.contacts.Person person)
 	/*-{
 		return this.add(person);
 	}-*/;
@@ -57,7 +57,7 @@ public class Group extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * The complete list of members of the group
 	 */
-	public native void members()
+	public final native void members()
 	/*-{
 		return this.members();
 	}-*/;
@@ -69,7 +69,7 @@ public class Group extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.contacts.Person} object to
 	 *            remove from the group
 	 */
-	public native void remove(org.urish.gwtit.titanium.contacts.Person person)
+	public final native void remove(org.urish.gwtit.titanium.contacts.Person person)
 	/*-{
 		return this.remove(person);
 	}-*/;
@@ -83,7 +83,7 @@ public class Group extends org.urish.gwtit.titanium.Proxy {
 	 *            or
 	 *            {@link org.urish.gwtit.titanium.Contacts.CONTACTS_SORT_LAST_NAME}
 	 */
-	public native void sortedMembers(float sortBy)
+	public final native void sortedMembers(float sortBy)
 	/*-{
 		return this.sortedMembers(sortBy);
 	}-*/;

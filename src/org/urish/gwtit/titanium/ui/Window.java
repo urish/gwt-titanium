@@ -184,12 +184,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         valid when the window is a child of a tab.
 	 * @platforms iphone, ipad
 	 */
-	public native String getBackButtonTitle()
+	public final native String getBackButtonTitle()
 	/*-{
 		return this.backButtonTitle;
 	}-*/;
 
-	public native void setBackButtonTitle(String value)
+	public final native void setBackButtonTitle(String value)
 	/*-{
 		this.backButtonTitle = value;
 	}-*/;
@@ -199,12 +199,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         iphone. this is only valid when the window is a child of a tab.
 	 * @platforms iphone, ipad
 	 */
-	public native String getBackButtonTitleImage()
+	public final native String getBackButtonTitleImage()
 	/*-{
 		return this.backButtonTitleImage;
 	}-*/;
 
-	public native void setBackButtonTitleImage(String value)
+	public final native void setBackButtonTitleImage(String value)
 	/*-{
 		this.backButtonTitleImage = value;
 	}-*/;
@@ -214,12 +214,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native String getBarColor()
+	public final native String getBarColor()
 	/*-{
 		return this.barColor;
 	}-*/;
 
-	public native void setBarColor(String value)
+	public final native void setBarColor(String value)
 	/*-{
 		this.barColor = value;
 	}-*/;
@@ -229,12 +229,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native String getBarImage()
+	public final native String getBarImage()
 	/*-{
 		return this.barImage;
 	}-*/;
 
-	public native void setBarImage(String value)
+	public final native void setBarImage(String value)
 	/*-{
 		this.barImage = value;
 	}-*/;
@@ -246,12 +246,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         setting it after window creation will no effect.
 	 * @platforms android
 	 */
-	public native boolean getExitOnClose()
+	public final native boolean getExitOnClose()
 	/*-{
 		return this.exitOnClose;
 	}-*/;
 
-	public native void setExitOnClose(boolean value)
+	public final native void setExitOnClose(boolean value)
 	/*-{
 		this.exitOnClose = value;
 	}-*/;
@@ -259,12 +259,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean indicates if the window is fullscreen (no device chrome)
 	 */
-	public native boolean getFullscreen()
+	public final native boolean getFullscreen()
 	/*-{
 		return this.fullscreen;
 	}-*/;
 
-	public native void setFullscreen(boolean value)
+	public final native void setFullscreen(boolean value)
 	/*-{
 		this.fullscreen = value;
 	}-*/;
@@ -273,12 +273,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return View to show in the left nav bar area. only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native Object getLeftNavButton()
+	public final native Object getLeftNavButton()
 	/*-{
 		return this.leftNavButton;
 	}-*/;
 
-	public native void setLeftNavButton(Object value)
+	public final native void setLeftNavButton(Object value)
 	/*-{
 		this.leftNavButton = value;
 	}-*/;
@@ -293,12 +293,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         will still be visible *if* it was visible in the previous window.
 	 *         `navbarhidden` and `modal` do work fine together, however.
 	 */
-	public native boolean getModal()
+	public final native boolean getModal()
 	/*-{
 		return this.modal;
 	}-*/;
 
-	public native void setModal(boolean value)
+	public final native void setModal(boolean value)
 	/*-{
 		this.modal = value;
 	}-*/;
@@ -307,58 +307,64 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return For modal windows, hide the nav bar (true) or show the nav bar
 	 *         (false, default).
 	 */
-	public native boolean getNavBarHidden()
+	public final native boolean getNavBarHidden()
 	/*-{
 		return this.navBarHidden;
 	}-*/;
 
-	public native void setNavBarHidden(boolean value)
+	public final native void setNavBarHidden(boolean value)
 	/*-{
 		this.navBarHidden = value;
 	}-*/;
 
 	/**
-	 * @return The opacity from 0.0-1.0. android notes: if you set any of
-	 *         `windowsoftinputmode`, `fullscreen`, or `navbarhidden`, *and* you
-	 *         wish to use the `opacity` property at any time during the
-	 *         window's lifetime, be sure to set an `opacity` value before
-	 *         opening the window. you can later change that value -- and you
-	 *         can set it to 1 for full opacity if you wish -- but the important
-	 *         thing is that you set it to a value before opening the window if
-	 *         you will want to set it at any time during the window's lifetime.
-	 *         the technical reason for this is that if the opacity property is
-	 *         present (i.e., has been set to something) and a new android
-	 *         activity will be created for the window, then a translucent theme
-	 *         will be used for the activity. window transparency (opacity
-	 *         values below 1) will only work in android if the activity's theme
-	 *         is translucent, and we will only use a translucent theme for an
-	 *         activity if you set an opacity property before opening the
-	 *         window. additionally, do not use `opacity` and `fullscreen: true`
-	 *         together, because translucent themes in android cannot hide the
-	 *         status bar. finally, if you do set the `opacity` property, be
-	 *         sure to also set a `backgroundimage` or `backgroundcolor`
-	 *         property as well, unless you want the window to be completely
-	 *         transparent.
+	 * @return Array of orientation mode constants defined in {@link
+	 *         org.urish.gwtit..titanium.ui}. on android, orientation modes that
+	 *         can be set are dependant on the android sdk level of the device
+	 *         itself. it should be noted that, the definition of portrait or
+	 *         landscape mode can vary based on the physical orientation of the
+	 *         device. for example, on some devices
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_left} represents the
+	 *         top of the device being at the 270 degree position but other
+	 *         devices may (based on camera position for example) treat this
+	 *         position as {@link org.urish.gwtit.titanium.ui.landscape_right}.
+	 *         in general, applications for android that need to be aware of
+	 *         orientation should try and limit their orientation logic to
+	 *         handling either portrait or landscape rather than worrying about
+	 *         the reverse modes. this approach will allow the orientation modes
+	 *         to adopt a more natural feel for the specific device.
+	 * 
+	 *         the following list breaks down the orientation behavior on
+	 *         android: 1) ({@link org.urish.gwtit.titanium.ui.portrait} or
+	 *         {@link org.urish.gwtit.titanium.ui.upside_portrait}) and (
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_left} or
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_right}) - enables
+	 *         full sensor which lets the operating system control the
+	 *         orientation of the screen based on the sensor inside the device.
+	 *         2) {@link org.urish.gwtit.titanium.ui.portrait} or
+	 *         {@link org.urish.gwtit.titanium.ui.upside_portrait} - enables
+	 *         sensor portrait mode on android 2.3 and above. sensor portrait
+	 *         mode on android means the screen will shift between both portrait
+	 *         modes according to the sensor inside the device. if the android
+	 *         version is less than 2.3, then normal portrait mode is locked. 3)
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_left} or
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_right} - enables
+	 *         sensor landscape mode on android 2.3 and above. sensor landscape
+	 *         mode on android means the screen will shift between both
+	 *         landscape modes according to the sensor inside the device. if the
+	 *         android version is less than 2.3, then normal landscape mode is
+	 *         locked. 4) {@link org.urish.gwtit.titanium.ui.portrait} - locks
+	 *         screen orientation to portrait mode 5)
+	 *         {@link org.urish.gwtit.titanium.ui.landscape} - locks screen
+	 *         orientation to landscape mode 6) empty array - resets the
+	 *         orientation to default sensor control
 	 */
-	public native float getOpacity()
-	/*-{
-		return this.opacity;
-	}-*/;
-
-	public native void setOpacity(float value)
-	/*-{
-		this.opacity = value;
-	}-*/;
-
-	/**
-	 * @return Array of orientation mode constants defined in [titanium.ui]
-	 */
-	public native Object[] getOrientationModes()
+	public final native float[] getOrientationModes()
 	/*-{
 		return this.orientationModes;
 	}-*/;
 
-	public native void setOrientationModes(Object[] value)
+	public final native void setOrientationModes(float[] value)
 	/*-{
 		this.orientationModes = value;
 	}-*/;
@@ -367,12 +373,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return View to show in the right nav bar area. only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native Object getRightNavButton()
+	public final native Object getRightNavButton()
 	/*-{
 		return this.rightNavButton;
 	}-*/;
 
-	public native void setRightNavButton(Object value)
+	public final native void setRightNavButton(Object value)
 	/*-{
 		this.rightNavButton = value;
 	}-*/;
@@ -381,12 +387,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the tab bar should be hidden. this is only
 	 *         valid when the window is a child of a tab.
 	 */
-	public native boolean getTabBarHidden()
+	public final native boolean getTabBarHidden()
 	/*-{
 		return this.tabBarHidden;
 	}-*/;
 
-	public native void setTabBarHidden(boolean value)
+	public final native void setTabBarHidden(boolean value)
 	/*-{
 		this.tabBarHidden = value;
 	}-*/;
@@ -394,12 +400,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Title of the window.
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -408,12 +414,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return View to show in the title area. only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native Object getTitleControl()
+	public final native Object getTitleControl()
 	/*-{
 		return this.titleControl;
 	}-*/;
 
-	public native void setTitleControl(Object value)
+	public final native void setTitleControl(Object value)
 	/*-{
 		this.titleControl = value;
 	}-*/;
@@ -423,12 +429,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native String getTitleImage()
+	public final native String getTitleImage()
 	/*-{
 		return this.titleImage;
 	}-*/;
 
-	public native void setTitleImage(String value)
+	public final native void setTitleImage(String value)
 	/*-{
 		this.titleImage = value;
 	}-*/;
@@ -436,12 +442,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Title prompt for the window. only available in iphone.
 	 */
-	public native String getTitlePrompt()
+	public final native String getTitlePrompt()
 	/*-{
 		return this.titlePrompt;
 	}-*/;
 
-	public native void setTitlePrompt(String value)
+	public final native void setTitlePrompt(String value)
 	/*-{
 		this.titlePrompt = value;
 	}-*/;
@@ -449,12 +455,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The key in the locale file to use for the title property
 	 */
-	public native String getTitleid()
+	public final native String getTitleid()
 	/*-{
 		return this.titleid;
 	}-*/;
 
-	public native void setTitleid(String value)
+	public final native void setTitleid(String value)
 	/*-{
 		this.titleid = value;
 	}-*/;
@@ -462,12 +468,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The key in the locale file to use for the titleprompt property
 	 */
-	public native String getTitlepromptid()
+	public final native String getTitlepromptid()
 	/*-{
 		return this.titlepromptid;
 	}-*/;
 
-	public native void setTitlepromptid(String value)
+	public final native void setTitlepromptid(String value)
 	/*-{
 		this.titlepromptid = value;
 	}-*/;
@@ -478,12 +484,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         child of a tab.
 	 * @platforms iphone, ipad
 	 */
-	public native Object[] getToolbar()
+	public final native Object[] getToolbar()
 	/*-{
 		return this.toolbar;
 	}-*/;
 
-	public native void setToolbar(Object[] value)
+	public final native void setToolbar(Object[] value)
 	/*-{
 		this.toolbar = value;
 	}-*/;
@@ -493,12 +499,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getTranslucent()
+	public final native boolean getTranslucent()
 	/*-{
 		return this.translucent;
 	}-*/;
 
-	public native void setTranslucent(boolean value)
+	public final native void setTranslucent(boolean value)
 	/*-{
 		this.translucent = value;
 	}-*/;
@@ -508,12 +514,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         window will create a new javascript sub-context that will run in
 	 *         its own thread and global variable space.
 	 */
-	public native String getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;
 
-	public native void setUrl(String value)
+	public final native void setUrl(String value)
 	/*-{
 		this.url = value;
 	}-*/;
@@ -529,12 +535,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * 
 	 * @platforms android
 	 */
-	public native float getWindowSoftInputMode()
+	public final native float getWindowSoftInputMode()
 	/*-{
 		return this.windowSoftInputMode;
 	}-*/;
 
-	public native void setWindowSoftInputMode(float value)
+	public final native void setWindowSoftInputMode(float value)
 	/*-{
 		this.windowSoftInputMode = value;
 	}-*/;
@@ -545,7 +551,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @param options
 	 *            close the window with optional animation or display properties
 	 */
-	public native void close(Object options)
+	public final native void close(Object options)
 	/*-{
 		return this.close(options);
 	}-*/;
@@ -556,57 +562,57 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @param options
 	 *            open the window with optional animation or display properties
 	 */
-	public native void open(Object options)
+	public final native void open(Object options)
 	/*-{
 		return this.open(options);
 	}-*/;
 
-	public native void addAndroidBackHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addAndroidBackHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addAndroidCameraHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addAndroidCameraHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addAndroidFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addAndroidFocusHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addAndroidSearchHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addAndroidSearchHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addAndroidVoldownHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addAndroidVoldownHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addAndroidVolupHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addAndroidVolupHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addBlurHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addBlurHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addCloseHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCloseHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addFocusHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addOpenHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addOpenHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -30,12 +30,12 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The source number to encode
 	 */
-	public native float getSource()
+	public final native float getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public native void setSource(float value)
+	public final native void setSource(float value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -43,12 +43,12 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The destination buffer
 	 */
-	public native org.urish.gwtit.titanium.Buffer getDest()
+	public final native org.urish.gwtit.titanium.Buffer getDest()
 	/*-{
 		return this.dest;
 	}-*/;
 
-	public native void setDest(org.urish.gwtit.titanium.Buffer value)
+	public final native void setDest(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.dest = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	 *         {@link org.urish.gwtit.titanium.codec.type_long}, or
 	 *         {@link org.urish.gwtit.titanium.codec.type_double}
 	 */
-	public native String getType()
+	public final native String getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(String value)
+	public final native void setType(String value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -75,12 +75,12 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The position in dest to set the encoded data
 	 */
-	public native float getPosition()
+	public final native float getPosition()
 	/*-{
 		return this.position;
 	}-*/;
 
-	public native void setPosition(float value)
+	public final native void setPosition(float value)
 	/*-{
 		this.position = value;
 	}-*/;
@@ -88,12 +88,12 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The byte order to encode with
 	 */
-	public native float getByteOrder()
+	public final native float getByteOrder()
 	/*-{
 		return this.byteOrder;
 	}-*/;
 
-	public native void setByteOrder(float value)
+	public final native void setByteOrder(float value)
 	/*-{
 		this.byteOrder = value;
 	}-*/;

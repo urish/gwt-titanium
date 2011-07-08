@@ -33,12 +33,12 @@ public class AcceptParams extends JavaScriptObject {
 	 * @return The timeout for connect() and all i/o write() operations. cannot
 	 *         be modified when not in the initialized state
 	 */
-	public native float getTimeout()
+	public final native float getTimeout()
 	/*-{
 		return this.timeout;
 	}-*/;
 
-	public native void setTimeout(float value)
+	public final native void setTimeout(float value)
 	/*-{
 		this.timeout = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class AcceptParams extends JavaScriptObject {
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public native Object getError()
+	public final native Object getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public native void setError(Object value)
+	public final native void setError(Object value)
 	/*-{
 		this.error = value;
 	}-*/;

@@ -33,12 +33,12 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Audio compression constant to be used for the recording
 	 */
-	public native float getCompression()
+	public final native float getCompression()
 	/*-{
 		return this.compression;
 	}-*/;
 
-	public native void setCompression(float value)
+	public final native void setCompression(float value)
 	/*-{
 		this.compression = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Audio format constant for used for the recording
 	 */
-	public native float getFormat()
+	public final native float getFormat()
 	/*-{
 		return this.format;
 	}-*/;
 
-	public native void setFormat(float value)
+	public final native void setFormat(float value)
 	/*-{
 		this.format = value;
 	}-*/;
@@ -59,7 +59,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Readonly property to indicate if paused
 	 */
-	public native boolean getPaused()
+	public final native boolean getPaused()
 	/*-{
 		return this.paused;
 	}-*/;
@@ -67,7 +67,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Readonly property to indicate if recording
 	 */
-	public native boolean getRecording()
+	public final native boolean getRecording()
 	/*-{
 		return this.recording;
 	}-*/;
@@ -75,7 +75,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Readonly property to indicate if stopped
 	 */
-	public native boolean getStopped()
+	public final native boolean getStopped()
 	/*-{
 		return this.stopped;
 	}-*/;
@@ -83,7 +83,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Called to temporarily pause recording
 	 */
-	public native void pause()
+	public final native void pause()
 	/*-{
 		return this.pause();
 	}-*/;
@@ -91,7 +91,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Called to resume audio recording
 	 */
-	public native void resume()
+	public final native void resume()
 	/*-{
 		return this.resume();
 	}-*/;
@@ -99,7 +99,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Called to start recording audio
 	 */
-	public native void start()
+	public final native void start()
 	/*-{
 		return this.start();
 	}-*/;
@@ -107,7 +107,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Called to stop recording audio
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;

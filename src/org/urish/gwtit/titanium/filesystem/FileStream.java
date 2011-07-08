@@ -29,12 +29,4 @@ public class FileStream extends org.urish.gwtit.titanium.IOStream {
 	protected FileStream() {
 	}
 
-	/**
-	 * Closes file stream, exception is thrown on error
-	 */
-	public native void close()
-	/*-{
-		return this.close();
-	}-*/;
-
 }

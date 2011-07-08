@@ -39,12 +39,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	 * @return The property specifies if the animation should be replayed in
 	 *         reverse upon completion
 	 */
-	public native boolean getAutoreverse()
+	public final native boolean getAutoreverse()
 	/*-{
 		return this.autoreverse;
 	}-*/;
 
-	public native void setAutoreverse(boolean value)
+	public final native void setAutoreverse(boolean value)
 	/*-{
 		this.autoreverse = value;
 	}-*/;
@@ -52,12 +52,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the backgroundcolor property to change during animation
 	 */
-	public native String getBackgroundColor()
+	public final native String getBackgroundColor()
 	/*-{
 		return this.backgroundColor;
 	}-*/;
 
-	public native void setBackgroundColor(String value)
+	public final native void setBackgroundColor(String value)
 	/*-{
 		this.backgroundColor = value;
 	}-*/;
@@ -65,12 +65,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the bottom property to change during animation
 	 */
-	public native float getBottom()
+	public final native float getBottom()
 	/*-{
 		return this.bottom;
 	}-*/;
 
-	public native void setBottom(float value)
+	public final native void setBottom(float value)
 	/*-{
 		this.bottom = value;
 	}-*/;
@@ -78,12 +78,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the center property to change during animation
 	 */
-	public native Object getCenter()
+	public final native Object getCenter()
 	/*-{
 		return this.center;
 	}-*/;
 
-	public native void setCenter(Object value)
+	public final native void setCenter(Object value)
 	/*-{
 		this.center = value;
 	}-*/;
@@ -91,12 +91,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the color property to change during animation
 	 */
-	public native String getColor()
+	public final native String getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public native void setColor(String value)
+	public final native void setColor(String value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -104,12 +104,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The curve of the animation
 	 */
-	public native float getCurve()
+	public final native float getCurve()
 	/*-{
 		return this.curve;
 	}-*/;
 
-	public native void setCurve(float value)
+	public final native void setCurve(float value)
 	/*-{
 		this.curve = value;
 	}-*/;
@@ -118,12 +118,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	 * @return The duration of time in milliseconds before starting the
 	 *         animation
 	 */
-	public native float getDelay()
+	public final native float getDelay()
 	/*-{
 		return this.delay;
 	}-*/;
 
-	public native void setDelay(float value)
+	public final native void setDelay(float value)
 	/*-{
 		this.delay = value;
 	}-*/;
@@ -131,12 +131,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The duration of time in milliseconds to perform the animation
 	 */
-	public native float getDuration()
+	public final native float getDuration()
 	/*-{
 		return this.duration;
 	}-*/;
 
-	public native void setDuration(float value)
+	public final native void setDuration(float value)
 	/*-{
 		this.duration = value;
 	}-*/;
@@ -144,12 +144,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the height property to change during animation
 	 */
-	public native float getHeight()
+	public final native float getHeight()
 	/*-{
 		return this.height;
 	}-*/;
 
-	public native void setHeight(float value)
+	public final native void setHeight(float value)
 	/*-{
 		this.height = value;
 	}-*/;
@@ -157,12 +157,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the left property to change during animation
 	 */
-	public native float getLeft()
+	public final native float getLeft()
 	/*-{
 		return this.left;
 	}-*/;
 
-	public native void setLeft(float value)
+	public final native void setLeft(float value)
 	/*-{
 		this.left = value;
 	}-*/;
@@ -170,12 +170,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the opacity property to change during animation
 	 */
-	public native float getOpacity()
+	public final native float getOpacity()
 	/*-{
 		return this.opacity;
 	}-*/;
 
-	public native void setOpacity(float value)
+	public final native void setOpacity(float value)
 	/*-{
 		this.opacity = value;
 	}-*/;
@@ -183,12 +183,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the opaque property to change during animation
 	 */
-	public native boolean getOpaque()
+	public final native boolean getOpaque()
 	/*-{
 		return this.opaque;
 	}-*/;
 
-	public native void setOpaque(boolean value)
+	public final native void setOpaque(boolean value)
 	/*-{
 		this.opaque = value;
 	}-*/;
@@ -196,12 +196,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of times the animation should be performed
 	 */
-	public native float getRepeat()
+	public final native float getRepeat()
 	/*-{
 		return this.repeat;
 	}-*/;
 
-	public native void setRepeat(float value)
+	public final native void setRepeat(float value)
 	/*-{
 		this.repeat = value;
 	}-*/;
@@ -209,12 +209,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the right property to change during animation
 	 */
-	public native float getRight()
+	public final native float getRight()
 	/*-{
 		return this.right;
 	}-*/;
 
-	public native void setRight(float value)
+	public final native void setRight(float value)
 	/*-{
 		this.right = value;
 	}-*/;
@@ -222,12 +222,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the top property to change during animation
 	 */
-	public native float getTop()
+	public final native float getTop()
 	/*-{
 		return this.top;
 	}-*/;
 
-	public native void setTop(float value)
+	public final native void setTop(float value)
 	/*-{
 		this.top = value;
 	}-*/;
@@ -235,12 +235,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the transform property to change during animation
 	 */
-	public native Object getTransform()
+	public final native Object getTransform()
 	/*-{
 		return this.transform;
 	}-*/;
 
-	public native void setTransform(Object value)
+	public final native void setTransform(Object value)
 	/*-{
 		this.transform = value;
 	}-*/;
@@ -249,12 +249,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	 * @return During a transition animation, this is the constant to the type
 	 *         of transition to use
 	 */
-	public native float getTransition()
+	public final native float getTransition()
 	/*-{
 		return this.transition;
 	}-*/;
 
-	public native void setTransition(float value)
+	public final native void setTransition(float value)
 	/*-{
 		this.transition = value;
 	}-*/;
@@ -262,12 +262,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the visible property to change during animation
 	 */
-	public native boolean getVisible()
+	public final native boolean getVisible()
 	/*-{
 		return this.visible;
 	}-*/;
 
-	public native void setVisible(boolean value)
+	public final native void setVisible(boolean value)
 	/*-{
 		this.visible = value;
 	}-*/;
@@ -275,12 +275,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the width property to change during animation
 	 */
-	public native float getWidth()
+	public final native float getWidth()
 	/*-{
 		return this.width;
 	}-*/;
 
-	public native void setWidth(float value)
+	public final native void setWidth(float value)
 	/*-{
 		this.width = value;
 	}-*/;
@@ -288,22 +288,22 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the zindex property to change during animation
 	 */
-	public native float getZIndex()
+	public final native float getZIndex()
 	/*-{
 		return this.zIndex;
 	}-*/;
 
-	public native void setZIndex(float value)
+	public final native void setZIndex(float value)
 	/*-{
 		this.zIndex = value;
 	}-*/;
 
-	public native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

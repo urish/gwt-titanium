@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the animation styles used for transitions.
@@ -31,14 +29,39 @@ public class AnimationStyle extends org.urish.gwtit.titanium.Proxy {
 	protected AnimationStyle() {
 	}
 
-	public static final Const CURL_DOWN = new ConstImpl("Titanium.UI.iPhone.AnimationStyle.CURL_DOWN");
+	private static native final float value_CURL_DOWN()
+	/*-{
+		return Titanium.UI.iPhone.AnimationStyle.CURL_DOWN;
+	}-*/;
 
-	public static final Const CURL_UP = new ConstImpl("Titanium.UI.iPhone.AnimationStyle.CURL_UP");
+	public static final float CURL_DOWN = value_CURL_DOWN();
 
-	public static final Const FLIP_FROM_LEFT = new ConstImpl("Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT");
+	private static native final float value_CURL_UP()
+	/*-{
+		return Titanium.UI.iPhone.AnimationStyle.CURL_UP;
+	}-*/;
 
-	public static final Const FLIP_FROM_RIGHT = new ConstImpl("Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT");
+	public static final float CURL_UP = value_CURL_UP();
 
-	public static final Const NONE = new ConstImpl("Titanium.UI.iPhone.AnimationStyle.NONE");
+	private static native final float value_FLIP_FROM_LEFT()
+	/*-{
+		return Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT;
+	}-*/;
+
+	public static final float FLIP_FROM_LEFT = value_FLIP_FROM_LEFT();
+
+	private static native final float value_FLIP_FROM_RIGHT()
+	/*-{
+		return Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT;
+	}-*/;
+
+	public static final float FLIP_FROM_RIGHT = value_FLIP_FROM_RIGHT();
+
+	private static native final float value_NONE()
+	/*-{
+		return Titanium.UI.iPhone.AnimationStyle.NONE;
+	}-*/;
+
+	public static final float NONE = value_NONE();
 
 }

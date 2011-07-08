@@ -40,12 +40,12 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @return The entry at position [1,1] in the matrix.
 	 * @platforms iphone, ipad
 	 */
-	public native float getA()
+	public final native float getA()
 	/*-{
 		return this.a;
 	}-*/;
 
-	public native void setA(float value)
+	public final native void setA(float value)
 	/*-{
 		this.a = value;
 	}-*/;
@@ -54,12 +54,12 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @return The entry at position [1,2] in the matrix.
 	 * @platforms iphone, ipad
 	 */
-	public native float getB()
+	public final native float getB()
 	/*-{
 		return this.b;
 	}-*/;
 
-	public native void setB(float value)
+	public final native void setB(float value)
 	/*-{
 		this.b = value;
 	}-*/;
@@ -68,12 +68,12 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @return The entry at position [2,1] in the matrix.
 	 * @platforms iphone, ipad
 	 */
-	public native float getC()
+	public final native float getC()
 	/*-{
 		return this.c;
 	}-*/;
 
-	public native void setC(float value)
+	public final native void setC(float value)
 	/*-{
 		this.c = value;
 	}-*/;
@@ -82,12 +82,12 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @return The entry at position [2,2] in the matrix.
 	 * @platforms iphone, ipad
 	 */
-	public native float getD()
+	public final native float getD()
 	/*-{
 		return this.d;
 	}-*/;
 
-	public native void setD(float value)
+	public final native void setD(float value)
 	/*-{
 		this.d = value;
 	}-*/;
@@ -96,12 +96,12 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @return The entry at position [3,1] in the matrix.
 	 * @platforms iphone, ipad
 	 */
-	public native float getTx()
+	public final native float getTx()
 	/*-{
 		return this.tx;
 	}-*/;
 
-	public native void setTx(float value)
+	public final native void setTx(float value)
 	/*-{
 		this.tx = value;
 	}-*/;
@@ -110,12 +110,12 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @return The entry at position [3,2] in the matrix.
 	 * @platforms iphone, ipad
 	 */
-	public native float getTy()
+	public final native float getTy()
 	/*-{
 		return this.ty;
 	}-*/;
 
-	public native void setTy(float value)
+	public final native void setTy(float value)
 	/*-{
 		this.ty = value;
 	}-*/;
@@ -123,7 +123,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns a matrix constructed by inverting an existing matrix
 	 */
-	public native void invert()
+	public final native void invert()
 	/*-{
 		return this.invert();
 	}-*/;
@@ -143,7 +143,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            matrix t2 does not necessarily equal the result of multiplying
 	 *            matrix t2 by matrix t1.
 	 */
-	public native Object multiply(Object t2)
+	public final native Object multiply(Object t2)
 	/*-{
 		return this.multiply(t2);
 	}-*/;
@@ -156,7 +156,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            positive value specifies counterclockwise rotation and a
 	 *            negative value specifies clockwise rotation.
 	 */
-	public native Object rotate(float angle)
+	public final native Object rotate(float angle)
 	/*-{
 		return this.rotate(angle);
 	}-*/;
@@ -169,7 +169,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param sy
 	 *            The value by which to scale y values of the matrix
 	 */
-	public native Object scale(float sx, float sy)
+	public final native Object scale(float sx, float sy)
 	/*-{
 		return this.scale(sx, sy);
 	}-*/;
@@ -182,7 +182,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param ty
 	 *            The value by which to move y values with the matrix
 	 */
-	public native Object translate(float tx, float ty)
+	public final native Object translate(float tx, float ty)
 	/*-{
 		return this.translate(tx, ty);
 	}-*/;

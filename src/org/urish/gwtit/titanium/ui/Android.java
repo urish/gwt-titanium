@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The android specific ui capabilities. all properties, methods and events in
@@ -32,44 +30,124 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	protected Android() {
 	}
 
-	public static final Const LINKIFY_ALL = new ConstImpl("Titanium.UI.Android.LINKIFY_ALL");
+	private static native final float value_LINKIFY_ALL()
+	/*-{
+		return Titanium.UI.Android.LINKIFY_ALL;
+	}-*/;
 
-	public static final Const LINKIFY_EMAIL_ADDRESSES = new ConstImpl("Titanium.UI.Android.LINKIFY_EMAIL_ADDRESSES");
+	public static final float LINKIFY_ALL = value_LINKIFY_ALL();
 
-	public static final Const LINKIFY_MAP_ADDRESSES = new ConstImpl("Titanium.UI.Android.LINKIFY_MAP_ADDRESSES");
+	private static native final float value_LINKIFY_EMAIL_ADDRESSES()
+	/*-{
+		return Titanium.UI.Android.LINKIFY_EMAIL_ADDRESSES;
+	}-*/;
 
-	public static final Const LINKIFY_MAP_LINKS = new ConstImpl("Titanium.UI.Android.LINKIFY_MAP_LINKS");
+	public static final float LINKIFY_EMAIL_ADDRESSES = value_LINKIFY_EMAIL_ADDRESSES();
 
-	public static final Const LINKIFY_PHONE_NUMBERS = new ConstImpl("Titanium.UI.Android.LINKIFY_PHONE_NUMBERS");
+	private static native final float value_LINKIFY_MAP_ADDRESSES()
+	/*-{
+		return Titanium.UI.Android.LINKIFY_MAP_ADDRESSES;
+	}-*/;
 
-	public static final Const LINKIFY_WEB_URLS = new ConstImpl("Titanium.UI.Android.LINKIFY_WEB_URLS");
+	public static final float LINKIFY_MAP_ADDRESSES = value_LINKIFY_MAP_ADDRESSES();
 
-	public static final Const SOFT_INPUT_ADJUST_PAN = new ConstImpl("Titanium.UI.Android.SOFT_INPUT_ADJUST_PAN");
+	private static native final float value_LINKIFY_MAP_LINKS()
+	/*-{
+		return Titanium.UI.Android.LINKIFY_MAP_LINKS;
+	}-*/;
 
-	public static final Const SOFT_INPUT_ADJUST_RESIZE = new ConstImpl("Titanium.UI.Android.SOFT_INPUT_ADJUST_RESIZE");
+	public static final float LINKIFY_MAP_LINKS = value_LINKIFY_MAP_LINKS();
 
-	public static final Const SOFT_INPUT_ADJUST_UNSPECIFIED = new ConstImpl(
-			"Titanium.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED");
+	private static native final float value_LINKIFY_PHONE_NUMBERS()
+	/*-{
+		return Titanium.UI.Android.LINKIFY_PHONE_NUMBERS;
+	}-*/;
 
-	public static final Const SOFT_INPUT_STATE_HIDDEN = new ConstImpl("Titanium.UI.Android.SOFT_INPUT_STATE_HIDDEN");
+	public static final float LINKIFY_PHONE_NUMBERS = value_LINKIFY_PHONE_NUMBERS();
 
-	public static final Const SOFT_INPUT_STATE_UNSPECIFIED = new ConstImpl(
-			"Titanium.UI.Android.SOFT_INPUT_STATE_UNSPECIFIED");
+	private static native final float value_LINKIFY_WEB_URLS()
+	/*-{
+		return Titanium.UI.Android.LINKIFY_WEB_URLS;
+	}-*/;
 
-	public static final Const SOFT_INPUT_STATE_VISIBLE = new ConstImpl("Titanium.UI.Android.SOFT_INPUT_STATE_VISIBLE");
+	public static final float LINKIFY_WEB_URLS = value_LINKIFY_WEB_URLS();
 
-	public static final Const SOFT_KEYBOARD_DEFAULT_ON_FOCUS = new ConstImpl(
-			"Titanium.UI.Android.SOFT_KEYBOARD_DEFAULT_ON_FOCUS");
+	private static native final float value_SOFT_INPUT_ADJUST_PAN()
+	/*-{
+		return Titanium.UI.Android.SOFT_INPUT_ADJUST_PAN;
+	}-*/;
 
-	public static final Const SOFT_KEYBOARD_HIDE_ON_FOCUS = new ConstImpl(
-			"Titanium.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS");
+	public static final float SOFT_INPUT_ADJUST_PAN = value_SOFT_INPUT_ADJUST_PAN();
 
-	public static final Const SOFT_KEYBOARD_SHOW_ON_FOCUS = new ConstImpl(
-			"Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS");
+	private static native final float value_SOFT_INPUT_ADJUST_RESIZE()
+	/*-{
+		return Titanium.UI.Android.SOFT_INPUT_ADJUST_RESIZE;
+	}-*/;
 
-	public static final Const SWITCH_STYLE_CHECKBOX = new ConstImpl("Titanium.UI.Android.SWITCH_STYLE_CHECKBOX");
+	public static final float SOFT_INPUT_ADJUST_RESIZE = value_SOFT_INPUT_ADJUST_RESIZE();
 
-	public static final Const SWITCH_STYLE_TOGGLEBUTTON = new ConstImpl("Titanium.UI.Android.SWITCH_STYLE_TOGGLEBUTTON");
+	private static native final float value_SOFT_INPUT_ADJUST_UNSPECIFIED()
+	/*-{
+		return Titanium.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED;
+	}-*/;
+
+	public static final float SOFT_INPUT_ADJUST_UNSPECIFIED = value_SOFT_INPUT_ADJUST_UNSPECIFIED();
+
+	private static native final float value_SOFT_INPUT_STATE_HIDDEN()
+	/*-{
+		return Titanium.UI.Android.SOFT_INPUT_STATE_HIDDEN;
+	}-*/;
+
+	public static final float SOFT_INPUT_STATE_HIDDEN = value_SOFT_INPUT_STATE_HIDDEN();
+
+	private static native final float value_SOFT_INPUT_STATE_UNSPECIFIED()
+	/*-{
+		return Titanium.UI.Android.SOFT_INPUT_STATE_UNSPECIFIED;
+	}-*/;
+
+	public static final float SOFT_INPUT_STATE_UNSPECIFIED = value_SOFT_INPUT_STATE_UNSPECIFIED();
+
+	private static native final float value_SOFT_INPUT_STATE_VISIBLE()
+	/*-{
+		return Titanium.UI.Android.SOFT_INPUT_STATE_VISIBLE;
+	}-*/;
+
+	public static final float SOFT_INPUT_STATE_VISIBLE = value_SOFT_INPUT_STATE_VISIBLE();
+
+	private static native final float value_SOFT_KEYBOARD_DEFAULT_ON_FOCUS()
+	/*-{
+		return Titanium.UI.Android.SOFT_KEYBOARD_DEFAULT_ON_FOCUS;
+	}-*/;
+
+	public static final float SOFT_KEYBOARD_DEFAULT_ON_FOCUS = value_SOFT_KEYBOARD_DEFAULT_ON_FOCUS();
+
+	private static native final float value_SOFT_KEYBOARD_HIDE_ON_FOCUS()
+	/*-{
+		return Titanium.UI.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS;
+	}-*/;
+
+	public static final float SOFT_KEYBOARD_HIDE_ON_FOCUS = value_SOFT_KEYBOARD_HIDE_ON_FOCUS();
+
+	private static native final float value_SOFT_KEYBOARD_SHOW_ON_FOCUS()
+	/*-{
+		return Titanium.UI.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS;
+	}-*/;
+
+	public static final float SOFT_KEYBOARD_SHOW_ON_FOCUS = value_SOFT_KEYBOARD_SHOW_ON_FOCUS();
+
+	private static native final float value_SWITCH_STYLE_CHECKBOX()
+	/*-{
+		return Titanium.UI.Android.SWITCH_STYLE_CHECKBOX;
+	}-*/;
+
+	public static final float SWITCH_STYLE_CHECKBOX = value_SWITCH_STYLE_CHECKBOX();
+
+	private static native final float value_SWITCH_STYLE_TOGGLEBUTTON()
+	/*-{
+		return Titanium.UI.Android.SWITCH_STYLE_TOGGLEBUTTON;
+	}-*/;
+
+	public static final float SWITCH_STYLE_TOGGLEBUTTON = value_SWITCH_STYLE_TOGGLEBUTTON();
 
 	/**
 	 * Request that the soft keyboard hide. note: it is not currently possible
@@ -92,6 +170,45 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	public static native void openPreferences()
 	/*-{
 		return Titanium.UI.Android.openPreferences();
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.UI.Android.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.UI.Android.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.UI.Android.fireEvent(name, event);
 	}-*/;
 
 }

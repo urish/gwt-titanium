@@ -33,12 +33,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The host to connect to or listen on. cannot be modified when not
 	 *         in the initialized state. supports both ipv4 and ipv6
 	 */
-	public native String getHost()
+	public final native String getHost()
 	/*-{
 		return this.host;
 	}-*/;
 
-	public native void setHost(String value)
+	public final native void setHost(String value)
 	/*-{
 		this.host = value;
 	}-*/;
@@ -47,12 +47,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The port to connect to or listen on. cannot be modified when not
 	 *         in the initialized state
 	 */
-	public native float getPort()
+	public final native float getPort()
 	/*-{
 		return this.port;
 	}-*/;
 
-	public native void setPort(float value)
+	public final native void setPort(float value)
 	/*-{
 		this.port = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 *         max number of pending connections has been reached will be
 	 *         rejected.
 	 */
-	public native float getListenQueueSize()
+	public final native float getListenQueueSize()
 	/*-{
 		return this.listenQueueSize;
 	}-*/;
 
-	public native void setListenQueueSize(float value)
+	public final native void setListenQueueSize(float value)
 	/*-{
 		this.listenQueueSize = value;
 	}-*/;
@@ -77,12 +77,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The timeout for connect() and all i/o write() operations. cannot
 	 *         be modified when not in the initialized state
 	 */
-	public native float getTimeout()
+	public final native float getTimeout()
 	/*-{
 		return this.timeout;
 	}-*/;
 
-	public native void setTimeout(float value)
+	public final native void setTimeout(float value)
 	/*-{
 		this.timeout = value;
 	}-*/;
@@ -91,12 +91,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The callback to be fired after the socket enters the "connected"
 	 *         state. only invoked following a successful connect() call
 	 */
-	public native Object getConnected()
+	public final native Object getConnected()
 	/*-{
 		return this.connected;
 	}-*/;
 
-	public native void setConnected(Object value)
+	public final native void setConnected(Object value)
 	/*-{
 		this.connected = value;
 	}-*/;
@@ -104,12 +104,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public native Object getError()
+	public final native Object getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public native void setError(Object value)
+	public final native void setError(Object value)
 	/*-{
 		this.error = value;
 	}-*/;
@@ -117,12 +117,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The callback to be fired when a listener accepts a connection
 	 */
-	public native Object getAccepted()
+	public final native Object getAccepted()
 	/*-{
 		return this.accepted;
 	}-*/;
 
-	public native void setAccepted(Object value)
+	public final native void setAccepted(Object value)
 	/*-{
 		this.accepted = value;
 	}-*/;
@@ -130,12 +130,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Current state of the socket
 	 */
-	public native float getState()
+	public final native float getState()
 	/*-{
 		return this.state;
 	}-*/;
 
-	public native void setState(float value)
+	public final native void setState(float value)
 	/*-{
 		this.state = value;
 	}-*/;
@@ -146,7 +146,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * host and port has not been set on the proxy. nonblocking; connection
 	 * attempts are asynchronous
 	 */
-	public native void connect()
+	public final native void connect()
 	/*-{
 		return this.connect();
 	}-*/;
@@ -159,7 +159,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * the error callback in this event. throws exception if the socket is in a
 	 * listening or connected state
 	 */
-	public native void listen()
+	public final native void listen()
 	/*-{
 		return this.listen();
 	}-*/;
@@ -180,7 +180,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 *            parameters that contain callbacks to be set on next accepted
 	 *            socket
 	 */
-	public native void accept(org.urish.gwtit.titanium.AcceptParams params)
+	public final native void accept(org.urish.gwtit.titanium.AcceptParams params)
 	/*-{
 		return this.accept(params);
 	}-*/;
@@ -189,7 +189,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * Closes a socket. throws exception if the socket is not in a connected or
 	 * listening state. blocking
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;

@@ -48,7 +48,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The boolean to pass to the method
 	 */
-	public native void setBoolean(float viewId, String methodName, boolean value)
+	public final native void setBoolean(float viewId, String methodName, boolean value)
 	/*-{
 		return this.setBoolean(viewId, methodName, value);
 	}-*/;
@@ -71,7 +71,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param started
 	 *            True if you want the clock to be started, false if not
 	 */
-	public native void setChronometer(float viewId, java.util.Date base, String format, boolean started)
+	public final native void setChronometer(float viewId, java.util.Date base, String format, boolean started)
 	/*-{
 		return this.setChronometer(viewId, base, format, started);
 	}-*/;
@@ -91,7 +91,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The double to pass to the method
 	 */
-	public native void setDouble(float viewId, String methodName, float value)
+	public final native void setDouble(float viewId, String methodName, float value)
 	/*-{
 		return this.setDouble(viewId, methodName, value);
 	}-*/;
@@ -108,7 +108,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param srcId
 	 *            The resource id of the image
 	 */
-	public native void setImageViewResource(float viewId, float srcId)
+	public final native void setImageViewResource(float viewId, float srcId)
 	/*-{
 		return this.setImageViewResource(viewId, srcId);
 	}-*/;
@@ -127,7 +127,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 *            The URI of the image (both Android and Titanium URLs are
 	 *            supported)
 	 */
-	public native void setImageViewUri(float viewId, String uri)
+	public final native void setImageViewUri(float viewId, String uri)
 	/*-{
 		return this.setImageViewUri(viewId, uri);
 	}-*/;
@@ -147,7 +147,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The int to pass to the method
 	 */
-	public native void setInt(float viewId, String methodName, float value)
+	public final native void setInt(float viewId, String methodName, float value)
 	/*-{
 		return this.setInt(viewId, methodName, value);
 	}-*/;
@@ -166,7 +166,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param pendingIntent
 	 *            The PendingIntent to execute when this view is clicked
 	 */
-	public native void setOnClickPendingIntent(float viewId,
+	public final native void setOnClickPendingIntent(float viewId,
 			org.urish.gwtit.titanium.android.PendingIntent pendingIntent)
 	/*-{
 		return this.setOnClickPendingIntent(viewId, pendingIntent);
@@ -189,7 +189,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param indeterminate
 	 *            Whether or not the progress in indeterminate
 	 */
-	public native void setProgressBar(float viewId, float max, float progress, boolean indeterminate)
+	public final native void setProgressBar(float viewId, float max, float progress, boolean indeterminate)
 	/*-{
 		return this.setProgressBar(viewId, max, progress, indeterminate);
 	}-*/;
@@ -209,7 +209,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The String to pass to the method
 	 */
-	public native void setString(float viewId, String methodName, String value)
+	public final native void setString(float viewId, String methodName, String value)
 	/*-{
 		return this.setString(viewId, methodName, value);
 	}-*/;
@@ -226,7 +226,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param color
 	 *            A color as an integer
 	 */
-	public native void setTextColor(float viewId, float color)
+	public final native void setTextColor(float viewId, float color)
 	/*-{
 		return this.setTextColor(viewId, color);
 	}-*/;
@@ -243,7 +243,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param text
 	 *            The new text of the TextView
 	 */
-	public native void setTextViewText(float viewId, String text)
+	public final native void setTextViewText(float viewId, String text)
 	/*-{
 		return this.setTextViewText(viewId, text);
 	}-*/;
@@ -263,7 +263,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The URI (as a string) to pass to the method
 	 */
-	public native void setUri(float viewId, String methodName, String value)
+	public final native void setUri(float viewId, String methodName, String value)
 	/*-{
 		return this.setUri(viewId, methodName, value);
 	}-*/;
@@ -283,7 +283,7 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Android.INVISIBLE}, or
 	 *            {@link org.urish.gwtit.titanium.Android.GONE}
 	 */
-	public native void setViewVisibility(float viewId, float visibility)
+	public final native void setViewVisibility(float viewId, float visibility)
 	/*-{
 		return this.setViewVisibility(viewId, visibility);
 	}-*/;

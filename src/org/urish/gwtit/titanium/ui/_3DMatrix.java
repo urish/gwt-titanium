@@ -40,12 +40,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [1,1] in the matrix.
 	 */
-	public native float getM11()
+	public final native float getM11()
 	/*-{
 		return this.m11;
 	}-*/;
 
-	public native void setM11(float value)
+	public final native void setM11(float value)
 	/*-{
 		this.m11 = value;
 	}-*/;
@@ -53,12 +53,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [1,2] in the matrix.
 	 */
-	public native float getM12()
+	public final native float getM12()
 	/*-{
 		return this.m12;
 	}-*/;
 
-	public native void setM12(float value)
+	public final native void setM12(float value)
 	/*-{
 		this.m12 = value;
 	}-*/;
@@ -66,12 +66,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [1,3] in the matrix.
 	 */
-	public native float getM13()
+	public final native float getM13()
 	/*-{
 		return this.m13;
 	}-*/;
 
-	public native void setM13(float value)
+	public final native void setM13(float value)
 	/*-{
 		this.m13 = value;
 	}-*/;
@@ -79,12 +79,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [1,4] in the matrix.
 	 */
-	public native float getM14()
+	public final native float getM14()
 	/*-{
 		return this.m14;
 	}-*/;
 
-	public native void setM14(float value)
+	public final native void setM14(float value)
 	/*-{
 		this.m14 = value;
 	}-*/;
@@ -92,12 +92,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [2,1] in the matrix.
 	 */
-	public native float getM21()
+	public final native float getM21()
 	/*-{
 		return this.m21;
 	}-*/;
 
-	public native void setM21(float value)
+	public final native void setM21(float value)
 	/*-{
 		this.m21 = value;
 	}-*/;
@@ -105,12 +105,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [2,2] in the matrix.
 	 */
-	public native float getM22()
+	public final native float getM22()
 	/*-{
 		return this.m22;
 	}-*/;
 
-	public native void setM22(float value)
+	public final native void setM22(float value)
 	/*-{
 		this.m22 = value;
 	}-*/;
@@ -118,12 +118,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [2,3] in the matrix.
 	 */
-	public native float getM23()
+	public final native float getM23()
 	/*-{
 		return this.m23;
 	}-*/;
 
-	public native void setM23(float value)
+	public final native void setM23(float value)
 	/*-{
 		this.m23 = value;
 	}-*/;
@@ -131,12 +131,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [2,4] in the matrix.
 	 */
-	public native float getM24()
+	public final native float getM24()
 	/*-{
 		return this.m24;
 	}-*/;
 
-	public native void setM24(float value)
+	public final native void setM24(float value)
 	/*-{
 		this.m24 = value;
 	}-*/;
@@ -144,12 +144,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [3,1] in the matrix.
 	 */
-	public native float getM31()
+	public final native float getM31()
 	/*-{
 		return this.m31;
 	}-*/;
 
-	public native void setM31(float value)
+	public final native void setM31(float value)
 	/*-{
 		this.m31 = value;
 	}-*/;
@@ -157,12 +157,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [3,2] in the matrix.
 	 */
-	public native float getM32()
+	public final native float getM32()
 	/*-{
 		return this.m32;
 	}-*/;
 
-	public native void setM32(float value)
+	public final native void setM32(float value)
 	/*-{
 		this.m32 = value;
 	}-*/;
@@ -170,12 +170,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [3,3] in the matrix.
 	 */
-	public native float getM33()
+	public final native float getM33()
 	/*-{
 		return this.m33;
 	}-*/;
 
-	public native void setM33(float value)
+	public final native void setM33(float value)
 	/*-{
 		this.m33 = value;
 	}-*/;
@@ -183,12 +183,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [3,4] in the matrix.
 	 */
-	public native float getM34()
+	public final native float getM34()
 	/*-{
 		return this.m34;
 	}-*/;
 
-	public native void setM34(float value)
+	public final native void setM34(float value)
 	/*-{
 		this.m34 = value;
 	}-*/;
@@ -196,12 +196,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [4,1] in the matrix.
 	 */
-	public native float getM41()
+	public final native float getM41()
 	/*-{
 		return this.m41;
 	}-*/;
 
-	public native void setM41(float value)
+	public final native void setM41(float value)
 	/*-{
 		this.m41 = value;
 	}-*/;
@@ -209,12 +209,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [4,2] in the matrix.
 	 */
-	public native float getM42()
+	public final native float getM42()
 	/*-{
 		return this.m42;
 	}-*/;
 
-	public native void setM42(float value)
+	public final native void setM42(float value)
 	/*-{
 		this.m42 = value;
 	}-*/;
@@ -222,12 +222,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [4,3] in the matrix.
 	 */
-	public native float getM43()
+	public final native float getM43()
 	/*-{
 		return this.m43;
 	}-*/;
 
-	public native void setM43(float value)
+	public final native void setM43(float value)
 	/*-{
 		this.m43 = value;
 	}-*/;
@@ -235,12 +235,12 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The entry at position [4,4] in the matrix.
 	 */
-	public native float getM44()
+	public final native float getM44()
 	/*-{
 		return this.m44;
 	}-*/;
 
-	public native void setM44(float value)
+	public final native void setM44(float value)
 	/*-{
 		this.m44 = value;
 	}-*/;
@@ -248,7 +248,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns a matrix constructed by inverting an existing matrix
 	 */
-	public native void invert()
+	public final native void invert()
 	/*-{
 		return this.invert();
 	}-*/;
@@ -268,7 +268,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            matrix t2 does not necessarily equal the result of multiplying
 	 *            matrix t2 by matrix t1.
 	 */
-	public native Object multiply(Object t2)
+	public final native Object multiply(Object t2)
 	/*-{
 		return this.multiply(t2);
 	}-*/;
@@ -287,7 +287,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param z
 	 *            The z part of the vector about which to rotate
 	 */
-	public native Object rotate(float angle, float x, float y, float z)
+	public final native Object rotate(float angle, float x, float y, float z)
 	/*-{
 		return this.rotate(angle, x, y, z);
 	}-*/;
@@ -302,7 +302,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param sz
 	 *            The value by which to scale z values of the matrix
 	 */
-	public native Object scale(float sx, float sy, float sz)
+	public final native Object scale(float sx, float sy, float sz)
 	/*-{
 		return this.scale(sx, sy, sz);
 	}-*/;
@@ -317,7 +317,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param tz
 	 *            The value by which to move z values with the matrix
 	 */
-	public native Object translate(float tx, float ty, float tz)
+	public final native Object translate(float tx, float ty, float tz)
 	/*-{
 		return this.translate(tx, ty, tz);
 	}-*/;

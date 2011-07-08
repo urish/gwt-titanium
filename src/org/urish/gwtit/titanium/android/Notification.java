@@ -44,12 +44,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The audio stream type to use when playing the sound.
 	 */
-	public native float getAudioStreamType()
+	public final native float getAudioStreamType()
 	/*-{
 		return this.audioStreamType;
 	}-*/;
 
-	public native void setAudioStreamType(float value)
+	public final native void setAudioStreamType(float value)
 	/*-{
 		this.audioStreamType = value;
 	}-*/;
@@ -58,12 +58,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return The {@link org.urish.gwtit.titanium.android.pendingintent} to
 	 *         execute when the expanded status entry is clicked.
 	 */
-	public native Object getContentIntent()
+	public final native Object getContentIntent()
 	/*-{
 		return this.contentIntent;
 	}-*/;
 
-	public native void setContentIntent(Object value)
+	public final native void setContentIntent(Object value)
 	/*-{
 		this.contentIntent = value;
 	}-*/;
@@ -71,12 +71,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Description text of the notification.
 	 */
-	public native String getContentText()
+	public final native String getContentText()
 	/*-{
 		return this.contentText;
 	}-*/;
 
-	public native void setContentText(String value)
+	public final native void setContentText(String value)
 	/*-{
 		this.contentText = value;
 	}-*/;
@@ -84,12 +84,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Title of the notification.
 	 */
-	public native String getContentTitle()
+	public final native String getContentTitle()
 	/*-{
 		return this.contentTitle;
 	}-*/;
 
-	public native void setContentTitle(String value)
+	public final native void setContentTitle(String value)
 	/*-{
 		this.contentTitle = value;
 	}-*/;
@@ -97,12 +97,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Specifies which values should be taken from the defaults.
 	 */
-	public native float getDefaults()
+	public final native float getDefaults()
 	/*-{
 		return this.defaults;
 	}-*/;
 
-	public native void setDefaults(float value)
+	public final native void setDefaults(float value)
 	/*-{
 		this.defaults = value;
 	}-*/;
@@ -112,12 +112,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 *         execute when the status entry is deleted by the user with the
 	 *         "clear all notifications" button.
 	 */
-	public native Object getDeleteIntent()
+	public final native Object getDeleteIntent()
 	/*-{
 		return this.deleteIntent;
 	}-*/;
 
-	public native void setDeleteIntent(Object value)
+	public final native void setDeleteIntent(Object value)
 	/*-{
 		this.deleteIntent = value;
 	}-*/;
@@ -133,22 +133,22 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.android.flag_only_alert_once},
 	 *         {@link org.urish.gwtit.titanium.android.flag_show_lights}
 	 */
-	public native float getFlags()
+	public final native float getFlags()
 	/*-{
 		return this.flags;
 	}-*/;
 
-	public native void setFlags(float value)
+	public final native void setFlags(float value)
 	/*-{
 		this.flags = value;
 	}-*/;
 
-	public native void setIcon(float value)
+	public final native void setIcon(float value)
 	/*-{
 		this.icon = value;
 	}-*/;
 
-	public native void setIcon(String value)
+	public final native void setIcon(String value)
 	/*-{
 		this.icon = value;
 	}-*/;
@@ -157,7 +157,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return A resource id or url to an icon (the url must be an image located
 	 *         in resources/android/images/ or an android content uri)
 	 */
-	public native Object getIcon()
+	public final native Object getIcon()
 	/*-{
 		return this.icon;
 	}-*/;
@@ -165,12 +165,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The color for the led to blink
 	 */
-	public native float getLedARGB()
+	public final native float getLedARGB()
 	/*-{
 		return this.ledARGB;
 	}-*/;
 
-	public native void setLedARGB(float value)
+	public final native void setLedARGB(float value)
 	/*-{
 		this.ledARGB = value;
 	}-*/;
@@ -179,12 +179,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return The number of milliseconds for the led to be off while it's
 	 *         flashing.
 	 */
-	public native float getLedOffMS()
+	public final native float getLedOffMS()
 	/*-{
 		return this.ledOffMS;
 	}-*/;
 
-	public native void setLedOffMS(float value)
+	public final native void setLedOffMS(float value)
 	/*-{
 		this.ledOffMS = value;
 	}-*/;
@@ -193,12 +193,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return The number of milliseconds for the led to be on while it's
 	 *         flashing.
 	 */
-	public native float getLedOnMS()
+	public final native float getLedOnMS()
 	/*-{
 		return this.ledOnMS;
 	}-*/;
 
-	public native void setLedOnMS(float value)
+	public final native void setLedOnMS(float value)
 	/*-{
 		this.ledOnMS = value;
 	}-*/;
@@ -206,12 +206,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of events that this notification represents.
 	 */
-	public native float getNumber()
+	public final native float getNumber()
 	/*-{
 		return this.number;
 	}-*/;
 
-	public native void setNumber(float value)
+	public final native void setNumber(float value)
 	/*-{
 		this.number = value;
 	}-*/;
@@ -219,12 +219,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return A url to the sound to play (supports android + titanium urls)
 	 */
-	public native String getSound()
+	public final native String getSound()
 	/*-{
 		return this.sound;
 	}-*/;
 
-	public native void setSound(String value)
+	public final native void setSound(String value)
 	/*-{
 		this.sound = value;
 	}-*/;
@@ -233,22 +233,22 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return Text to scroll across the screen when this item is added to the
 	 *         status bar.
 	 */
-	public native String getTickerText()
+	public final native String getTickerText()
 	/*-{
 		return this.tickerText;
 	}-*/;
 
-	public native void setTickerText(String value)
+	public final native void setTickerText(String value)
 	/*-{
 		this.tickerText = value;
 	}-*/;
 
-	public native void setWhen(java.util.Date value)
+	public final native void setWhen(java.util.Date value)
 	/*-{
 		this.when = value;
 	}-*/;
 
-	public native void setWhen(float value)
+	public final native void setWhen(float value)
 	/*-{
 		this.when = value;
 	}-*/;
@@ -256,7 +256,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The timestamp for the notification (defaults to the current time)
 	 */
-	public native Object getWhen()
+	public final native Object getWhen()
 	/*-{
 		return this.when;
 	}-*/;
@@ -269,7 +269,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * .html#setlatesteventinfo(android.content.context, java.lang.charsequence,
 	 * java.lang.charsequence, android.app.pendingintent))
 	 */
-	public native void setLatestEventInfo()
+	public final native void setLatestEventInfo()
 	/*-{
 		return this.setLatestEventInfo();
 	}-*/;

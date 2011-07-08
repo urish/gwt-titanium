@@ -45,12 +45,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return (iphone only) boolean to indicate if the scroll view can cancel
 	 *         subview touches in order to scroll instead. default of true
 	 */
-	public native boolean getCanCancelEvents()
+	public final native boolean getCanCancelEvents()
 	/*-{
 		return this.canCancelEvents;
 	}-*/;
 
-	public native void setCanCancelEvents(boolean value)
+	public final native void setCanCancelEvents(boolean value)
 	/*-{
 		this.canCancelEvents = value;
 	}-*/;
@@ -58,12 +58,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The height of the scrollable area
 	 */
-	public native float getContentHeight()
+	public final native float getContentHeight()
 	/*-{
 		return this.contentHeight;
 	}-*/;
 
-	public native void setContentHeight(float value)
+	public final native void setContentHeight(float value)
 	/*-{
 		this.contentHeight = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An object (with x and y properties) to indicate the offset of the
 	 *         content area
 	 */
-	public native Object getContentOffset()
+	public final native Object getContentOffset()
 	/*-{
 		return this.contentOffset;
 	}-*/;
 
-	public native void setContentOffset(Object value)
+	public final native void setContentOffset(Object value)
 	/*-{
 		this.contentOffset = value;
 	}-*/;
@@ -85,12 +85,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The width of the scrollable area
 	 */
-	public native float getContentWidth()
+	public final native float getContentWidth()
 	/*-{
 		return this.contentWidth;
 	}-*/;
 
-	public native void setContentWidth(float value)
+	public final native void setContentWidth(float value)
 	/*-{
 		this.contentWidth = value;
 	}-*/;
@@ -99,12 +99,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Disable view bouncing. ios only.
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getDisableBounce()
+	public final native boolean getDisableBounce()
 	/*-{
 		return this.disableBounce;
 	}-*/;
 
-	public native void setDisableBounce(boolean value)
+	public final native void setDisableBounce(boolean value)
 	/*-{
 		this.disableBounce = value;
 	}-*/;
@@ -113,12 +113,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to control the horizontal bounce during scrolling
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getHorizontalBounce()
+	public final native boolean getHorizontalBounce()
 	/*-{
 		return this.horizontalBounce;
 	}-*/;
 
-	public native void setHorizontalBounce(boolean value)
+	public final native void setHorizontalBounce(boolean value)
 	/*-{
 		this.horizontalBounce = value;
 	}-*/;
@@ -127,12 +127,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The maximum scale of the content
 	 * @platforms iphone, ipad
 	 */
-	public native float getMaxZoomScale()
+	public final native float getMaxZoomScale()
 	/*-{
 		return this.maxZoomScale;
 	}-*/;
 
-	public native void setMaxZoomScale(float value)
+	public final native void setMaxZoomScale(float value)
 	/*-{
 		this.maxZoomScale = value;
 	}-*/;
@@ -141,12 +141,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The minimum scale of the content
 	 * @platforms iphone, ipad
 	 */
-	public native float getMinZoomScale()
+	public final native float getMinZoomScale()
 	/*-{
 		return this.minZoomScale;
 	}-*/;
 
-	public native void setMinZoomScale(float value)
+	public final native void setMinZoomScale(float value)
 	/*-{
 		this.minZoomScale = value;
 	}-*/;
@@ -156,12 +156,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * 
 	 * @platforms android
 	 */
-	public native String getScrollType()
+	public final native String getScrollType()
 	/*-{
 		return this.scrollType;
 	}-*/;
 
-	public native void setScrollType(String value)
+	public final native void setScrollType(String value)
 	/*-{
 		this.scrollType = value;
 	}-*/;
@@ -170,12 +170,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate whether the horizontal scroll indicator is
 	 *         visible
 	 */
-	public native boolean getShowHorizontalScrollIndicator()
+	public final native boolean getShowHorizontalScrollIndicator()
 	/*-{
 		return this.showHorizontalScrollIndicator;
 	}-*/;
 
-	public native void setShowHorizontalScrollIndicator(boolean value)
+	public final native void setShowHorizontalScrollIndicator(boolean value)
 	/*-{
 		this.showHorizontalScrollIndicator = value;
 	}-*/;
@@ -184,12 +184,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate whether the vertical scroll indicator is
 	 *         visible
 	 */
-	public native boolean getShowVerticalScrollIndicator()
+	public final native boolean getShowVerticalScrollIndicator()
 	/*-{
 		return this.showVerticalScrollIndicator;
 	}-*/;
 
-	public native void setShowVerticalScrollIndicator(boolean value)
+	public final native void setShowVerticalScrollIndicator(boolean value)
 	/*-{
 		this.showVerticalScrollIndicator = value;
 	}-*/;
@@ -198,12 +198,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to control the vertical bounce during scrolling
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getVerticalBounce()
+	public final native boolean getVerticalBounce()
 	/*-{
 		return this.verticalBounce;
 	}-*/;
 
-	public native void setVerticalBounce(boolean value)
+	public final native void setVerticalBounce(boolean value)
 	/*-{
 		this.verticalBounce = value;
 	}-*/;
@@ -212,12 +212,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Set the zoom scale for the current content area
 	 * @platforms iphone, ipad
 	 */
-	public native float getZoomScale()
+	public final native float getZoomScale()
 	/*-{
 		return this.zoomScale;
 	}-*/;
 
-	public native void setZoomScale(float value)
+	public final native void setZoomScale(float value)
 	/*-{
 		this.zoomScale = value;
 	}-*/;
@@ -230,17 +230,17 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @param y
 	 *            the y point within the view
 	 */
-	public native void scrollTo(float x, float y)
+	public final native void scrollTo(float x, float y)
 	/*-{
 		return this.scrollTo(x, y);
 	}-*/;
 
-	public native void addScaleHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addScaleHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addScrollHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addScrollHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

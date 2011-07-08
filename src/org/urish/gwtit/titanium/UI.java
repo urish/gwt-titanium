@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The main {@link org.urish.gwtit..titanium.ui} module. the ui module is
@@ -117,190 +115,642 @@ public class UI extends org.urish.gwtit.titanium.Module {
 	protected UI() {
 	}
 
-	public static final Const ANIMATION_CURVE_EASE_IN = new ConstImpl("Titanium.UI.ANIMATION_CURVE_EASE_IN");
+	private static native final float value_ANIMATION_CURVE_EASE_IN()
+	/*-{
+		return Titanium.UI.ANIMATION_CURVE_EASE_IN;
+	}-*/;
 
-	public static final Const ANIMATION_CURVE_EASE_IN_OUT = new ConstImpl("Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT");
+	public static final float ANIMATION_CURVE_EASE_IN = value_ANIMATION_CURVE_EASE_IN();
 
-	public static final Const ANIMATION_CURVE_EASE_OUT = new ConstImpl("Titanium.UI.ANIMATION_CURVE_EASE_OUT");
+	private static native final float value_ANIMATION_CURVE_EASE_IN_OUT()
+	/*-{
+		return Titanium.UI.ANIMATION_CURVE_EASE_IN_OUT;
+	}-*/;
 
-	public static final Const ANIMATION_CURVE_LINEAR = new ConstImpl("Titanium.UI.ANIMATION_CURVE_LINEAR");
+	public static final float ANIMATION_CURVE_EASE_IN_OUT = value_ANIMATION_CURVE_EASE_IN_OUT();
 
-	public static final Const AUTODETECT_ADDRESS = new ConstImpl("Titanium.UI.AUTODETECT_ADDRESS");
+	private static native final float value_ANIMATION_CURVE_EASE_OUT()
+	/*-{
+		return Titanium.UI.ANIMATION_CURVE_EASE_OUT;
+	}-*/;
 
-	public static final Const AUTODETECT_ALL = new ConstImpl("Titanium.UI.AUTODETECT_ALL");
+	public static final float ANIMATION_CURVE_EASE_OUT = value_ANIMATION_CURVE_EASE_OUT();
 
-	public static final Const AUTODETECT_CALENDAR = new ConstImpl("Titanium.UI.AUTODETECT_CALENDAR");
+	private static native final float value_ANIMATION_CURVE_LINEAR()
+	/*-{
+		return Titanium.UI.ANIMATION_CURVE_LINEAR;
+	}-*/;
 
-	public static final Const AUTODETECT_LINK = new ConstImpl("Titanium.UI.AUTODETECT_LINK");
+	public static final float ANIMATION_CURVE_LINEAR = value_ANIMATION_CURVE_LINEAR();
 
-	public static final Const AUTODETECT_NONE = new ConstImpl("Titanium.UI.AUTODETECT_NONE");
+	private static native final float value_AUTODETECT_ADDRESS()
+	/*-{
+		return Titanium.UI.AUTODETECT_ADDRESS;
+	}-*/;
 
-	public static final Const AUTODETECT_PHONE = new ConstImpl("Titanium.UI.AUTODETECT_PHONE");
+	public static final float AUTODETECT_ADDRESS = value_AUTODETECT_ADDRESS();
 
-	public static final Const BLEND_MODE_CLEAR = new ConstImpl("Titanium.UI.BLEND_MODE_CLEAR");
+	private static native final float value_AUTODETECT_ALL()
+	/*-{
+		return Titanium.UI.AUTODETECT_ALL;
+	}-*/;
 
-	public static final Const BLEND_MODE_COLOR = new ConstImpl("Titanium.UI.BLEND_MODE_COLOR");
+	public static final float AUTODETECT_ALL = value_AUTODETECT_ALL();
 
-	public static final Const BLEND_MODE_COLOR_BURN = new ConstImpl("Titanium.UI.BLEND_MODE_COLOR_BURN");
+	private static native final float value_AUTODETECT_CALENDAR()
+	/*-{
+		return Titanium.UI.AUTODETECT_CALENDAR;
+	}-*/;
 
-	public static final Const BLEND_MODE_COLOR_DODGE = new ConstImpl("Titanium.UI.BLEND_MODE_COLOR_DODGE");
+	public static final float AUTODETECT_CALENDAR = value_AUTODETECT_CALENDAR();
 
-	public static final Const BLEND_MODE_COPY = new ConstImpl("Titanium.UI.BLEND_MODE_COPY");
+	private static native final float value_AUTODETECT_LINK()
+	/*-{
+		return Titanium.UI.AUTODETECT_LINK;
+	}-*/;
 
-	public static final Const BLEND_MODE_DARKEN = new ConstImpl("Titanium.UI.BLEND_MODE_DARKEN");
+	public static final float AUTODETECT_LINK = value_AUTODETECT_LINK();
 
-	public static final Const BLEND_MODE_DESTINATION_ATOP = new ConstImpl("Titanium.UI.BLEND_MODE_DESTINATION_ATOP");
+	private static native final float value_AUTODETECT_NONE()
+	/*-{
+		return Titanium.UI.AUTODETECT_NONE;
+	}-*/;
 
-	public static final Const BLEND_MODE_DESTINATION_IN = new ConstImpl("Titanium.UI.BLEND_MODE_DESTINATION_IN");
+	public static final float AUTODETECT_NONE = value_AUTODETECT_NONE();
 
-	public static final Const BLEND_MODE_DESTINATION_OUT = new ConstImpl("Titanium.UI.BLEND_MODE_DESTINATION_OUT");
+	private static native final float value_AUTODETECT_PHONE()
+	/*-{
+		return Titanium.UI.AUTODETECT_PHONE;
+	}-*/;
 
-	public static final Const BLEND_MODE_DESTINATION_OVER = new ConstImpl("Titanium.UI.BLEND_MODE_DESTINATION_OVER");
+	public static final float AUTODETECT_PHONE = value_AUTODETECT_PHONE();
 
-	public static final Const BLEND_MODE_DIFFERENCE = new ConstImpl("Titanium.UI.BLEND_MODE_DIFFERENCE");
+	private static native final float value_BLEND_MODE_CLEAR()
+	/*-{
+		return Titanium.UI.BLEND_MODE_CLEAR;
+	}-*/;
 
-	public static final Const BLEND_MODE_EXCLUSION = new ConstImpl("Titanium.UI.BLEND_MODE_EXCLUSION");
+	public static final float BLEND_MODE_CLEAR = value_BLEND_MODE_CLEAR();
 
-	public static final Const BLEND_MODE_HARD_LIGHT = new ConstImpl("Titanium.UI.BLEND_MODE_HARD_LIGHT");
+	private static native final float value_BLEND_MODE_COLOR()
+	/*-{
+		return Titanium.UI.BLEND_MODE_COLOR;
+	}-*/;
 
-	public static final Const BLEND_MODE_HUE = new ConstImpl("Titanium.UI.BLEND_MODE_HUE");
+	public static final float BLEND_MODE_COLOR = value_BLEND_MODE_COLOR();
 
-	public static final Const BLEND_MODE_LIGHTEN = new ConstImpl("Titanium.UI.BLEND_MODE_LIGHTEN");
+	private static native final float value_BLEND_MODE_COLOR_BURN()
+	/*-{
+		return Titanium.UI.BLEND_MODE_COLOR_BURN;
+	}-*/;
 
-	public static final Const BLEND_MODE_LUMINOSITY = new ConstImpl("Titanium.UI.BLEND_MODE_LUMINOSITY");
+	public static final float BLEND_MODE_COLOR_BURN = value_BLEND_MODE_COLOR_BURN();
 
-	public static final Const BLEND_MODE_MULTIPLY = new ConstImpl("Titanium.UI.BLEND_MODE_MULTIPLY");
+	private static native final float value_BLEND_MODE_COLOR_DODGE()
+	/*-{
+		return Titanium.UI.BLEND_MODE_COLOR_DODGE;
+	}-*/;
 
-	public static final Const BLEND_MODE_NORMAL = new ConstImpl("Titanium.UI.BLEND_MODE_NORMAL");
+	public static final float BLEND_MODE_COLOR_DODGE = value_BLEND_MODE_COLOR_DODGE();
 
-	public static final Const BLEND_MODE_OVERLAY = new ConstImpl("Titanium.UI.BLEND_MODE_OVERLAY");
+	private static native final float value_BLEND_MODE_COPY()
+	/*-{
+		return Titanium.UI.BLEND_MODE_COPY;
+	}-*/;
 
-	public static final Const BLEND_MODE_PLUS_DARKER = new ConstImpl("Titanium.UI.BLEND_MODE_PLUS_DARKER");
+	public static final float BLEND_MODE_COPY = value_BLEND_MODE_COPY();
 
-	public static final Const BLEND_MODE_PLUS_LIGHTER = new ConstImpl("Titanium.UI.BLEND_MODE_PLUS_LIGHTER");
+	private static native final float value_BLEND_MODE_DARKEN()
+	/*-{
+		return Titanium.UI.BLEND_MODE_DARKEN;
+	}-*/;
 
-	public static final Const BLEND_MODE_SATURATION = new ConstImpl("Titanium.UI.BLEND_MODE_SATURATION");
+	public static final float BLEND_MODE_DARKEN = value_BLEND_MODE_DARKEN();
 
-	public static final Const BLEND_MODE_SCREEN = new ConstImpl("Titanium.UI.BLEND_MODE_SCREEN");
+	private static native final float value_BLEND_MODE_DESTINATION_ATOP()
+	/*-{
+		return Titanium.UI.BLEND_MODE_DESTINATION_ATOP;
+	}-*/;
 
-	public static final Const BLEND_MODE_SOFT_LIGHT = new ConstImpl("Titanium.UI.BLEND_MODE_SOFT_LIGHT");
+	public static final float BLEND_MODE_DESTINATION_ATOP = value_BLEND_MODE_DESTINATION_ATOP();
 
-	public static final Const BLEND_MODE_SOURCE_ATOP = new ConstImpl("Titanium.UI.BLEND_MODE_SOURCE_ATOP");
+	private static native final float value_BLEND_MODE_DESTINATION_IN()
+	/*-{
+		return Titanium.UI.BLEND_MODE_DESTINATION_IN;
+	}-*/;
 
-	public static final Const BLEND_MODE_SOURCE_IN = new ConstImpl("Titanium.UI.BLEND_MODE_SOURCE_IN");
+	public static final float BLEND_MODE_DESTINATION_IN = value_BLEND_MODE_DESTINATION_IN();
 
-	public static final Const BLEND_MODE_SOURCE_OUT = new ConstImpl("Titanium.UI.BLEND_MODE_SOURCE_OUT");
+	private static native final float value_BLEND_MODE_DESTINATION_OUT()
+	/*-{
+		return Titanium.UI.BLEND_MODE_DESTINATION_OUT;
+	}-*/;
 
-	public static final Const BLEND_MODE_XOR = new ConstImpl("Titanium.UI.BLEND_MODE_XOR");
+	public static final float BLEND_MODE_DESTINATION_OUT = value_BLEND_MODE_DESTINATION_OUT();
 
-	public static final Const FACE_DOWN = new ConstImpl("Titanium.UI.FACE_DOWN");
+	private static native final float value_BLEND_MODE_DESTINATION_OVER()
+	/*-{
+		return Titanium.UI.BLEND_MODE_DESTINATION_OVER;
+	}-*/;
 
-	public static final Const FACE_UP = new ConstImpl("Titanium.UI.FACE_UP");
+	public static final float BLEND_MODE_DESTINATION_OVER = value_BLEND_MODE_DESTINATION_OVER();
 
-	public static final Const INPUT_BORDERSTYLE_BEZEL = new ConstImpl("Titanium.UI.INPUT_BORDERSTYLE_BEZEL");
+	private static native final float value_BLEND_MODE_DIFFERENCE()
+	/*-{
+		return Titanium.UI.BLEND_MODE_DIFFERENCE;
+	}-*/;
 
-	public static final Const INPUT_BORDERSTYLE_LINE = new ConstImpl("Titanium.UI.INPUT_BORDERSTYLE_LINE");
+	public static final float BLEND_MODE_DIFFERENCE = value_BLEND_MODE_DIFFERENCE();
 
-	public static final Const INPUT_BORDERSTYLE_NONE = new ConstImpl("Titanium.UI.INPUT_BORDERSTYLE_NONE");
+	private static native final float value_BLEND_MODE_EXCLUSION()
+	/*-{
+		return Titanium.UI.BLEND_MODE_EXCLUSION;
+	}-*/;
 
-	public static final Const INPUT_BORDERSTYLE_ROUNDED = new ConstImpl("Titanium.UI.INPUT_BORDERSTYLE_ROUNDED");
+	public static final float BLEND_MODE_EXCLUSION = value_BLEND_MODE_EXCLUSION();
 
-	public static final Const INPUT_BUTTONMODE_ALWAYS = new ConstImpl("Titanium.UI.INPUT_BUTTONMODE_ALWAYS");
+	private static native final float value_BLEND_MODE_HARD_LIGHT()
+	/*-{
+		return Titanium.UI.BLEND_MODE_HARD_LIGHT;
+	}-*/;
 
-	public static final Const INPUT_BUTTONMODE_NEVER = new ConstImpl("Titanium.UI.INPUT_BUTTONMODE_NEVER");
+	public static final float BLEND_MODE_HARD_LIGHT = value_BLEND_MODE_HARD_LIGHT();
 
-	public static final Const INPUT_BUTTONMODE_ONBLUR = new ConstImpl("Titanium.UI.INPUT_BUTTONMODE_ONBLUR");
+	private static native final float value_BLEND_MODE_HUE()
+	/*-{
+		return Titanium.UI.BLEND_MODE_HUE;
+	}-*/;
 
-	public static final Const INPUT_BUTTONMODE_ONFOCUS = new ConstImpl("Titanium.UI.INPUT_BUTTONMODE_ONFOCUS");
+	public static final float BLEND_MODE_HUE = value_BLEND_MODE_HUE();
 
-	public static final Const KEYBOARD_APPEARANCE_ALERT = new ConstImpl("Titanium.UI.KEYBOARD_APPEARANCE_ALERT");
+	private static native final float value_BLEND_MODE_LIGHTEN()
+	/*-{
+		return Titanium.UI.BLEND_MODE_LIGHTEN;
+	}-*/;
 
-	public static final Const KEYBOARD_APPEARANCE_DEFAULT = new ConstImpl("Titanium.UI.KEYBOARD_APPEARANCE_DEFAULT");
+	public static final float BLEND_MODE_LIGHTEN = value_BLEND_MODE_LIGHTEN();
 
-	public static final Const KEYBOARD_ASCII = new ConstImpl("Titanium.UI.KEYBOARD_ASCII");
+	private static native final float value_BLEND_MODE_LUMINOSITY()
+	/*-{
+		return Titanium.UI.BLEND_MODE_LUMINOSITY;
+	}-*/;
 
-	public static final Const KEYBOARD_DEFAULT = new ConstImpl("Titanium.UI.KEYBOARD_DEFAULT");
+	public static final float BLEND_MODE_LUMINOSITY = value_BLEND_MODE_LUMINOSITY();
 
-	public static final Const KEYBOARD_EMAIL = new ConstImpl("Titanium.UI.KEYBOARD_EMAIL");
+	private static native final float value_BLEND_MODE_MULTIPLY()
+	/*-{
+		return Titanium.UI.BLEND_MODE_MULTIPLY;
+	}-*/;
 
-	public static final Const KEYBOARD_NAMEPHONE_PAD = new ConstImpl("Titanium.UI.KEYBOARD_NAMEPHONE_PAD");
+	public static final float BLEND_MODE_MULTIPLY = value_BLEND_MODE_MULTIPLY();
 
-	public static final Const KEYBOARD_NUMBERS_PUNCTUATION = new ConstImpl("Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION");
+	private static native final float value_BLEND_MODE_NORMAL()
+	/*-{
+		return Titanium.UI.BLEND_MODE_NORMAL;
+	}-*/;
 
-	public static final Const KEYBOARD_NUMBER_PAD = new ConstImpl("Titanium.UI.KEYBOARD_NUMBER_PAD");
+	public static final float BLEND_MODE_NORMAL = value_BLEND_MODE_NORMAL();
 
-	public static final Const KEYBOARD_PHONE_PAD = new ConstImpl("Titanium.UI.KEYBOARD_PHONE_PAD");
+	private static native final float value_BLEND_MODE_OVERLAY()
+	/*-{
+		return Titanium.UI.BLEND_MODE_OVERLAY;
+	}-*/;
 
-	public static final Const KEYBOARD_URL = new ConstImpl("Titanium.UI.KEYBOARD_URL");
+	public static final float BLEND_MODE_OVERLAY = value_BLEND_MODE_OVERLAY();
 
-	public static final Const LANDSCAPE_LEFT = new ConstImpl("Titanium.UI.LANDSCAPE_LEFT");
+	private static native final float value_BLEND_MODE_PLUS_DARKER()
+	/*-{
+		return Titanium.UI.BLEND_MODE_PLUS_DARKER;
+	}-*/;
 
-	public static final Const LANDSCAPE_RIGHT = new ConstImpl("Titanium.UI.LANDSCAPE_RIGHT");
+	public static final float BLEND_MODE_PLUS_DARKER = value_BLEND_MODE_PLUS_DARKER();
 
-	public static final Const NOTIFICATION_DURATION_LONG = new ConstImpl("Titanium.UI.NOTIFICATION_DURATION_LONG");
+	private static native final float value_BLEND_MODE_PLUS_LIGHTER()
+	/*-{
+		return Titanium.UI.BLEND_MODE_PLUS_LIGHTER;
+	}-*/;
 
-	public static final Const NOTIFICATION_DURATION_SHORT = new ConstImpl("Titanium.UI.NOTIFICATION_DURATION_SHORT");
+	public static final float BLEND_MODE_PLUS_LIGHTER = value_BLEND_MODE_PLUS_LIGHTER();
 
-	public static final Const PICKER_TYPE_COUNT_DOWN_TIMER = new ConstImpl("Titanium.UI.PICKER_TYPE_COUNT_DOWN_TIMER");
+	private static native final float value_BLEND_MODE_SATURATION()
+	/*-{
+		return Titanium.UI.BLEND_MODE_SATURATION;
+	}-*/;
 
-	public static final Const PICKER_TYPE_DATE = new ConstImpl("Titanium.UI.PICKER_TYPE_DATE");
+	public static final float BLEND_MODE_SATURATION = value_BLEND_MODE_SATURATION();
 
-	public static final Const PICKER_TYPE_DATE_AND_TIME = new ConstImpl("Titanium.UI.PICKER_TYPE_DATE_AND_TIME");
+	private static native final float value_BLEND_MODE_SCREEN()
+	/*-{
+		return Titanium.UI.BLEND_MODE_SCREEN;
+	}-*/;
 
-	public static final Const PICKER_TYPE_PLAIN = new ConstImpl("Titanium.UI.PICKER_TYPE_PLAIN");
+	public static final float BLEND_MODE_SCREEN = value_BLEND_MODE_SCREEN();
 
-	public static final Const PICKER_TYPE_TIME = new ConstImpl("Titanium.UI.PICKER_TYPE_TIME");
+	private static native final float value_BLEND_MODE_SOFT_LIGHT()
+	/*-{
+		return Titanium.UI.BLEND_MODE_SOFT_LIGHT;
+	}-*/;
 
-	public static final Const PORTRAIT = new ConstImpl("Titanium.UI.PORTRAIT");
+	public static final float BLEND_MODE_SOFT_LIGHT = value_BLEND_MODE_SOFT_LIGHT();
 
-	public static final Const RETURNKEY_DEFAULT = new ConstImpl("Titanium.UI.RETURNKEY_DEFAULT");
+	private static native final float value_BLEND_MODE_SOURCE_ATOP()
+	/*-{
+		return Titanium.UI.BLEND_MODE_SOURCE_ATOP;
+	}-*/;
 
-	public static final Const RETURNKEY_DONE = new ConstImpl("Titanium.UI.RETURNKEY_DONE");
+	public static final float BLEND_MODE_SOURCE_ATOP = value_BLEND_MODE_SOURCE_ATOP();
 
-	public static final Const RETURNKEY_EMERGENCY_CALL = new ConstImpl("Titanium.UI.RETURNKEY_EMERGENCY_CALL");
+	private static native final float value_BLEND_MODE_SOURCE_IN()
+	/*-{
+		return Titanium.UI.BLEND_MODE_SOURCE_IN;
+	}-*/;
 
-	public static final Const RETURNKEY_GO = new ConstImpl("Titanium.UI.RETURNKEY_GO");
+	public static final float BLEND_MODE_SOURCE_IN = value_BLEND_MODE_SOURCE_IN();
 
-	public static final Const RETURNKEY_GOOGLE = new ConstImpl("Titanium.UI.RETURNKEY_GOOGLE");
+	private static native final float value_BLEND_MODE_SOURCE_OUT()
+	/*-{
+		return Titanium.UI.BLEND_MODE_SOURCE_OUT;
+	}-*/;
 
-	public static final Const RETURNKEY_JOIN = new ConstImpl("Titanium.UI.RETURNKEY_JOIN");
+	public static final float BLEND_MODE_SOURCE_OUT = value_BLEND_MODE_SOURCE_OUT();
 
-	public static final Const RETURNKEY_NEXT = new ConstImpl("Titanium.UI.RETURNKEY_NEXT");
+	private static native final float value_BLEND_MODE_XOR()
+	/*-{
+		return Titanium.UI.BLEND_MODE_XOR;
+	}-*/;
 
-	public static final Const RETURNKEY_ROUTE = new ConstImpl("Titanium.UI.RETURNKEY_ROUTE");
+	public static final float BLEND_MODE_XOR = value_BLEND_MODE_XOR();
 
-	public static final Const RETURNKEY_SEARCH = new ConstImpl("Titanium.UI.RETURNKEY_SEARCH");
+	private static native final float value_FACE_DOWN()
+	/*-{
+		return Titanium.UI.FACE_DOWN;
+	}-*/;
 
-	public static final Const RETURNKEY_SEND = new ConstImpl("Titanium.UI.RETURNKEY_SEND");
+	public static final float FACE_DOWN = value_FACE_DOWN();
 
-	public static final Const RETURNKEY_YAHOO = new ConstImpl("Titanium.UI.RETURNKEY_YAHOO");
+	private static native final float value_FACE_UP()
+	/*-{
+		return Titanium.UI.FACE_UP;
+	}-*/;
 
-	public static final Const TEXT_ALIGNMENT_CENTER = new ConstImpl("Titanium.UI.TEXT_ALIGNMENT_CENTER");
+	public static final float FACE_UP = value_FACE_UP();
 
-	public static final Const TEXT_ALIGNMENT_LEFT = new ConstImpl("Titanium.UI.TEXT_ALIGNMENT_LEFT");
+	private static native final float value_INPUT_BORDERSTYLE_BEZEL()
+	/*-{
+		return Titanium.UI.INPUT_BORDERSTYLE_BEZEL;
+	}-*/;
 
-	public static final Const TEXT_ALIGNMENT_RIGHT = new ConstImpl("Titanium.UI.TEXT_ALIGNMENT_RIGHT");
+	public static final float INPUT_BORDERSTYLE_BEZEL = value_INPUT_BORDERSTYLE_BEZEL();
 
-	public static final Const TEXT_AUTOCAPITALIZATION_ALL = new ConstImpl("Titanium.UI.TEXT_AUTOCAPITALIZATION_ALL");
+	private static native final float value_INPUT_BORDERSTYLE_LINE()
+	/*-{
+		return Titanium.UI.INPUT_BORDERSTYLE_LINE;
+	}-*/;
 
-	public static final Const TEXT_AUTOCAPITALIZATION_NONE = new ConstImpl("Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE");
+	public static final float INPUT_BORDERSTYLE_LINE = value_INPUT_BORDERSTYLE_LINE();
 
-	public static final Const TEXT_AUTOCAPITALIZATION_SENTENCES = new ConstImpl(
-			"Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES");
+	private static native final float value_INPUT_BORDERSTYLE_NONE()
+	/*-{
+		return Titanium.UI.INPUT_BORDERSTYLE_NONE;
+	}-*/;
 
-	public static final Const TEXT_AUTOCAPITALIZATION_WORDS = new ConstImpl("Titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS");
+	public static final float INPUT_BORDERSTYLE_NONE = value_INPUT_BORDERSTYLE_NONE();
 
-	public static final Const TEXT_VERTICAL_ALIGNMENT_BOTTOM = new ConstImpl(
-			"Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM");
+	private static native final float value_INPUT_BORDERSTYLE_ROUNDED()
+	/*-{
+		return Titanium.UI.INPUT_BORDERSTYLE_ROUNDED;
+	}-*/;
 
-	public static final Const TEXT_VERTICAL_ALIGNMENT_CENTER = new ConstImpl(
-			"Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER");
+	public static final float INPUT_BORDERSTYLE_ROUNDED = value_INPUT_BORDERSTYLE_ROUNDED();
 
-	public static final Const TEXT_VERTICAL_ALIGNMENT_TOP = new ConstImpl("Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP");
+	private static native final float value_INPUT_BUTTONMODE_ALWAYS()
+	/*-{
+		return Titanium.UI.INPUT_BUTTONMODE_ALWAYS;
+	}-*/;
 
-	public static final Const UNKNOWN = new ConstImpl("Titanium.UI.UNKNOWN");
+	public static final float INPUT_BUTTONMODE_ALWAYS = value_INPUT_BUTTONMODE_ALWAYS();
 
-	public static final Const UPSIDE_PORTRAIT = new ConstImpl("Titanium.UI.UPSIDE_PORTRAIT");
+	private static native final float value_INPUT_BUTTONMODE_NEVER()
+	/*-{
+		return Titanium.UI.INPUT_BUTTONMODE_NEVER;
+	}-*/;
+
+	public static final float INPUT_BUTTONMODE_NEVER = value_INPUT_BUTTONMODE_NEVER();
+
+	private static native final float value_INPUT_BUTTONMODE_ONBLUR()
+	/*-{
+		return Titanium.UI.INPUT_BUTTONMODE_ONBLUR;
+	}-*/;
+
+	public static final float INPUT_BUTTONMODE_ONBLUR = value_INPUT_BUTTONMODE_ONBLUR();
+
+	private static native final float value_INPUT_BUTTONMODE_ONFOCUS()
+	/*-{
+		return Titanium.UI.INPUT_BUTTONMODE_ONFOCUS;
+	}-*/;
+
+	public static final float INPUT_BUTTONMODE_ONFOCUS = value_INPUT_BUTTONMODE_ONFOCUS();
+
+	private static native final float value_KEYBOARD_APPEARANCE_ALERT()
+	/*-{
+		return Titanium.UI.KEYBOARD_APPEARANCE_ALERT;
+	}-*/;
+
+	public static final float KEYBOARD_APPEARANCE_ALERT = value_KEYBOARD_APPEARANCE_ALERT();
+
+	private static native final float value_KEYBOARD_APPEARANCE_DEFAULT()
+	/*-{
+		return Titanium.UI.KEYBOARD_APPEARANCE_DEFAULT;
+	}-*/;
+
+	public static final float KEYBOARD_APPEARANCE_DEFAULT = value_KEYBOARD_APPEARANCE_DEFAULT();
+
+	private static native final float value_KEYBOARD_ASCII()
+	/*-{
+		return Titanium.UI.KEYBOARD_ASCII;
+	}-*/;
+
+	public static final float KEYBOARD_ASCII = value_KEYBOARD_ASCII();
+
+	private static native final float value_KEYBOARD_DEFAULT()
+	/*-{
+		return Titanium.UI.KEYBOARD_DEFAULT;
+	}-*/;
+
+	public static final float KEYBOARD_DEFAULT = value_KEYBOARD_DEFAULT();
+
+	private static native final float value_KEYBOARD_EMAIL()
+	/*-{
+		return Titanium.UI.KEYBOARD_EMAIL;
+	}-*/;
+
+	public static final float KEYBOARD_EMAIL = value_KEYBOARD_EMAIL();
+
+	private static native final float value_KEYBOARD_NAMEPHONE_PAD()
+	/*-{
+		return Titanium.UI.KEYBOARD_NAMEPHONE_PAD;
+	}-*/;
+
+	public static final float KEYBOARD_NAMEPHONE_PAD = value_KEYBOARD_NAMEPHONE_PAD();
+
+	private static native final float value_KEYBOARD_NUMBERS_PUNCTUATION()
+	/*-{
+		return Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION;
+	}-*/;
+
+	public static final float KEYBOARD_NUMBERS_PUNCTUATION = value_KEYBOARD_NUMBERS_PUNCTUATION();
+
+	private static native final float value_KEYBOARD_NUMBER_PAD()
+	/*-{
+		return Titanium.UI.KEYBOARD_NUMBER_PAD;
+	}-*/;
+
+	public static final float KEYBOARD_NUMBER_PAD = value_KEYBOARD_NUMBER_PAD();
+
+	private static native final float value_KEYBOARD_PHONE_PAD()
+	/*-{
+		return Titanium.UI.KEYBOARD_PHONE_PAD;
+	}-*/;
+
+	public static final float KEYBOARD_PHONE_PAD = value_KEYBOARD_PHONE_PAD();
+
+	private static native final float value_KEYBOARD_URL()
+	/*-{
+		return Titanium.UI.KEYBOARD_URL;
+	}-*/;
+
+	public static final float KEYBOARD_URL = value_KEYBOARD_URL();
+
+	private static native final float value_LANDSCAPE_LEFT()
+	/*-{
+		return Titanium.UI.LANDSCAPE_LEFT;
+	}-*/;
+
+	public static final float LANDSCAPE_LEFT = value_LANDSCAPE_LEFT();
+
+	private static native final float value_LANDSCAPE_RIGHT()
+	/*-{
+		return Titanium.UI.LANDSCAPE_RIGHT;
+	}-*/;
+
+	public static final float LANDSCAPE_RIGHT = value_LANDSCAPE_RIGHT();
+
+	private static native final float value_NOTIFICATION_DURATION_LONG()
+	/*-{
+		return Titanium.UI.NOTIFICATION_DURATION_LONG;
+	}-*/;
+
+	public static final float NOTIFICATION_DURATION_LONG = value_NOTIFICATION_DURATION_LONG();
+
+	private static native final float value_NOTIFICATION_DURATION_SHORT()
+	/*-{
+		return Titanium.UI.NOTIFICATION_DURATION_SHORT;
+	}-*/;
+
+	public static final float NOTIFICATION_DURATION_SHORT = value_NOTIFICATION_DURATION_SHORT();
+
+	private static native final float value_PICKER_TYPE_COUNT_DOWN_TIMER()
+	/*-{
+		return Titanium.UI.PICKER_TYPE_COUNT_DOWN_TIMER;
+	}-*/;
+
+	public static final float PICKER_TYPE_COUNT_DOWN_TIMER = value_PICKER_TYPE_COUNT_DOWN_TIMER();
+
+	private static native final float value_PICKER_TYPE_DATE()
+	/*-{
+		return Titanium.UI.PICKER_TYPE_DATE;
+	}-*/;
+
+	public static final float PICKER_TYPE_DATE = value_PICKER_TYPE_DATE();
+
+	private static native final float value_PICKER_TYPE_DATE_AND_TIME()
+	/*-{
+		return Titanium.UI.PICKER_TYPE_DATE_AND_TIME;
+	}-*/;
+
+	public static final float PICKER_TYPE_DATE_AND_TIME = value_PICKER_TYPE_DATE_AND_TIME();
+
+	private static native final float value_PICKER_TYPE_PLAIN()
+	/*-{
+		return Titanium.UI.PICKER_TYPE_PLAIN;
+	}-*/;
+
+	public static final float PICKER_TYPE_PLAIN = value_PICKER_TYPE_PLAIN();
+
+	private static native final float value_PICKER_TYPE_TIME()
+	/*-{
+		return Titanium.UI.PICKER_TYPE_TIME;
+	}-*/;
+
+	public static final float PICKER_TYPE_TIME = value_PICKER_TYPE_TIME();
+
+	private static native final float value_PORTRAIT()
+	/*-{
+		return Titanium.UI.PORTRAIT;
+	}-*/;
+
+	public static final float PORTRAIT = value_PORTRAIT();
+
+	private static native final float value_RETURNKEY_DEFAULT()
+	/*-{
+		return Titanium.UI.RETURNKEY_DEFAULT;
+	}-*/;
+
+	public static final float RETURNKEY_DEFAULT = value_RETURNKEY_DEFAULT();
+
+	private static native final float value_RETURNKEY_DONE()
+	/*-{
+		return Titanium.UI.RETURNKEY_DONE;
+	}-*/;
+
+	public static final float RETURNKEY_DONE = value_RETURNKEY_DONE();
+
+	private static native final float value_RETURNKEY_EMERGENCY_CALL()
+	/*-{
+		return Titanium.UI.RETURNKEY_EMERGENCY_CALL;
+	}-*/;
+
+	public static final float RETURNKEY_EMERGENCY_CALL = value_RETURNKEY_EMERGENCY_CALL();
+
+	private static native final float value_RETURNKEY_GO()
+	/*-{
+		return Titanium.UI.RETURNKEY_GO;
+	}-*/;
+
+	public static final float RETURNKEY_GO = value_RETURNKEY_GO();
+
+	private static native final float value_RETURNKEY_GOOGLE()
+	/*-{
+		return Titanium.UI.RETURNKEY_GOOGLE;
+	}-*/;
+
+	public static final float RETURNKEY_GOOGLE = value_RETURNKEY_GOOGLE();
+
+	private static native final float value_RETURNKEY_JOIN()
+	/*-{
+		return Titanium.UI.RETURNKEY_JOIN;
+	}-*/;
+
+	public static final float RETURNKEY_JOIN = value_RETURNKEY_JOIN();
+
+	private static native final float value_RETURNKEY_NEXT()
+	/*-{
+		return Titanium.UI.RETURNKEY_NEXT;
+	}-*/;
+
+	public static final float RETURNKEY_NEXT = value_RETURNKEY_NEXT();
+
+	private static native final float value_RETURNKEY_ROUTE()
+	/*-{
+		return Titanium.UI.RETURNKEY_ROUTE;
+	}-*/;
+
+	public static final float RETURNKEY_ROUTE = value_RETURNKEY_ROUTE();
+
+	private static native final float value_RETURNKEY_SEARCH()
+	/*-{
+		return Titanium.UI.RETURNKEY_SEARCH;
+	}-*/;
+
+	public static final float RETURNKEY_SEARCH = value_RETURNKEY_SEARCH();
+
+	private static native final float value_RETURNKEY_SEND()
+	/*-{
+		return Titanium.UI.RETURNKEY_SEND;
+	}-*/;
+
+	public static final float RETURNKEY_SEND = value_RETURNKEY_SEND();
+
+	private static native final float value_RETURNKEY_YAHOO()
+	/*-{
+		return Titanium.UI.RETURNKEY_YAHOO;
+	}-*/;
+
+	public static final float RETURNKEY_YAHOO = value_RETURNKEY_YAHOO();
+
+	private static native final float value_TEXT_ALIGNMENT_CENTER()
+	/*-{
+		return Titanium.UI.TEXT_ALIGNMENT_CENTER;
+	}-*/;
+
+	public static final float TEXT_ALIGNMENT_CENTER = value_TEXT_ALIGNMENT_CENTER();
+
+	private static native final float value_TEXT_ALIGNMENT_LEFT()
+	/*-{
+		return Titanium.UI.TEXT_ALIGNMENT_LEFT;
+	}-*/;
+
+	public static final float TEXT_ALIGNMENT_LEFT = value_TEXT_ALIGNMENT_LEFT();
+
+	private static native final float value_TEXT_ALIGNMENT_RIGHT()
+	/*-{
+		return Titanium.UI.TEXT_ALIGNMENT_RIGHT;
+	}-*/;
+
+	public static final float TEXT_ALIGNMENT_RIGHT = value_TEXT_ALIGNMENT_RIGHT();
+
+	private static native final float value_TEXT_AUTOCAPITALIZATION_ALL()
+	/*-{
+		return Titanium.UI.TEXT_AUTOCAPITALIZATION_ALL;
+	}-*/;
+
+	public static final float TEXT_AUTOCAPITALIZATION_ALL = value_TEXT_AUTOCAPITALIZATION_ALL();
+
+	private static native final float value_TEXT_AUTOCAPITALIZATION_NONE()
+	/*-{
+		return Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE;
+	}-*/;
+
+	public static final float TEXT_AUTOCAPITALIZATION_NONE = value_TEXT_AUTOCAPITALIZATION_NONE();
+
+	private static native final float value_TEXT_AUTOCAPITALIZATION_SENTENCES()
+	/*-{
+		return Titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES;
+	}-*/;
+
+	public static final float TEXT_AUTOCAPITALIZATION_SENTENCES = value_TEXT_AUTOCAPITALIZATION_SENTENCES();
+
+	private static native final float value_TEXT_AUTOCAPITALIZATION_WORDS()
+	/*-{
+		return Titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS;
+	}-*/;
+
+	public static final float TEXT_AUTOCAPITALIZATION_WORDS = value_TEXT_AUTOCAPITALIZATION_WORDS();
+
+	private static native final float value_TEXT_VERTICAL_ALIGNMENT_BOTTOM()
+	/*-{
+		return Titanium.UI.TEXT_VERTICAL_ALIGNMENT_BOTTOM;
+	}-*/;
+
+	public static final float TEXT_VERTICAL_ALIGNMENT_BOTTOM = value_TEXT_VERTICAL_ALIGNMENT_BOTTOM();
+
+	private static native final float value_TEXT_VERTICAL_ALIGNMENT_CENTER()
+	/*-{
+		return Titanium.UI.TEXT_VERTICAL_ALIGNMENT_CENTER;
+	}-*/;
+
+	public static final float TEXT_VERTICAL_ALIGNMENT_CENTER = value_TEXT_VERTICAL_ALIGNMENT_CENTER();
+
+	private static native final float value_TEXT_VERTICAL_ALIGNMENT_TOP()
+	/*-{
+		return Titanium.UI.TEXT_VERTICAL_ALIGNMENT_TOP;
+	}-*/;
+
+	public static final float TEXT_VERTICAL_ALIGNMENT_TOP = value_TEXT_VERTICAL_ALIGNMENT_TOP();
+
+	private static native final float value_UNKNOWN()
+	/*-{
+		return Titanium.UI.UNKNOWN;
+	}-*/;
+
+	public static final float UNKNOWN = value_UNKNOWN();
+
+	private static native final float value_UPSIDE_PORTRAIT()
+	/*-{
+		return Titanium.UI.UPSIDE_PORTRAIT;
+	}-*/;
+
+	public static final float UPSIDE_PORTRAIT = value_UPSIDE_PORTRAIT();
 
 	/**
 	 * @return This sets the background color of the master uiview (when there
@@ -342,6 +792,23 @@ public class UI extends org.urish.gwtit.titanium.Module {
 	public static native void setCurrentWindow(org.urish.gwtit.titanium.ui.Window value)
 	/*-{
 		Titanium.UI.currentWindow = value;
+	}-*/;
+
+	/**
+	 * @return Deprecated. to set an orientation, it is suggested to instead set
+	 *         {@link org.urish.gwtit.titanium.window.orientationmodes} to the
+	 *         specific orientation desired. when set, this will update the
+	 *         orientation of the current window to the specified orientation
+	 *         value.
+	 */
+	public static native float getOrientation()
+	/*-{
+		return Titanium.UI.orientation;
+	}-*/;
+
+	public static native void setOrientation(float value)
+	/*-{
+		Titanium.UI.orientation = value;
 	}-*/;
 
 	public static native org.urish.gwtit.titanium.ui._2DMatrix create_2DMatrix()

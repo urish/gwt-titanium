@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the position value that can be used for the `position`
@@ -33,12 +31,32 @@ public class TableViewScrollPosition extends org.urish.gwtit.titanium.Proxy {
 	protected TableViewScrollPosition() {
 	}
 
-	public static final Const BOTTOM = new ConstImpl("Titanium.UI.iPhone.TableViewScrollPosition.BOTTOM");
+	private static native final float value_BOTTOM()
+	/*-{
+		return Titanium.UI.iPhone.TableViewScrollPosition.BOTTOM;
+	}-*/;
 
-	public static final Const MIDDLE = new ConstImpl("Titanium.UI.iPhone.TableViewScrollPosition.MIDDLE");
+	public static final float BOTTOM = value_BOTTOM();
 
-	public static final Const NONE = new ConstImpl("Titanium.UI.iPhone.TableViewScrollPosition.NONE");
+	private static native final float value_MIDDLE()
+	/*-{
+		return Titanium.UI.iPhone.TableViewScrollPosition.MIDDLE;
+	}-*/;
 
-	public static final Const TOP = new ConstImpl("Titanium.UI.iPhone.TableViewScrollPosition.TOP");
+	public static final float MIDDLE = value_MIDDLE();
+
+	private static native final float value_NONE()
+	/*-{
+		return Titanium.UI.iPhone.TableViewScrollPosition.NONE;
+	}-*/;
+
+	public static final float NONE = value_NONE();
+
+	private static native final float value_TOP()
+	/*-{
+		return Titanium.UI.iPhone.TableViewScrollPosition.TOP;
+	}-*/;
+
+	public static final float TOP = value_TOP();
 
 }

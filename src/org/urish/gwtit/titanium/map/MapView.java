@@ -43,12 +43,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean is mapping actions should be animated
 	 */
-	public native boolean getAnimate()
+	public final native boolean getAnimate()
 	/*-{
 		return this.animate;
 	}-*/;
 
-	public native void setAnimate(boolean value)
+	public final native void setAnimate(boolean value)
 	/*-{
 		this.animate = value;
 	}-*/;
@@ -56,12 +56,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return An array of annotations to add to the map
 	 */
-	public native Object[] getAnnotations()
+	public final native Object[] getAnnotations()
 	/*-{
 		return this.annotations;
 	}-*/;
 
-	public native void setAnnotations(Object[] value)
+	public final native void setAnnotations(Object[] value)
 	/*-{
 		this.annotations = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.map.satellite_type} or
 	 *         {@link org.urish.gwtit.titanium.map.hybrid_type}.
 	 */
-	public native float getMapType()
+	public final native float getMapType()
 	/*-{
 		return this.mapType;
 	}-*/;
 
-	public native void setMapType(float value)
+	public final native void setMapType(float value)
 	/*-{
 		this.mapType = value;
 	}-*/;
@@ -87,12 +87,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *         the region location to set the map: `latitudedelta`,
 	 *         `longitudedelta`, `latitude`, `longitude`.
 	 */
-	public native Object getRegion()
+	public final native Object getRegion()
 	/*-{
 		return this.region;
 	}-*/;
 
-	public native void setRegion(Object value)
+	public final native void setRegion(Object value)
 	/*-{
 		this.region = value;
 	}-*/;
@@ -101,12 +101,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the map should attempt to fit the map view
 	 *         into the region in the visible view
 	 */
-	public native boolean getRegionFit()
+	public final native boolean getRegionFit()
 	/*-{
 		return this.regionFit;
 	}-*/;
 
-	public native void setRegionFit(boolean value)
+	public final native void setRegionFit(boolean value)
 	/*-{
 		this.regionFit = value;
 	}-*/;
@@ -115,12 +115,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the map should show the user's current
 	 *         device location as a pin on the map
 	 */
-	public native boolean getUserLocation()
+	public final native boolean getUserLocation()
 	/*-{
 		return this.userLocation;
 	}-*/;
 
-	public native void setUserLocation(boolean value)
+	public final native void setUserLocation(boolean value)
 	/*-{
 		this.userLocation = value;
 	}-*/;
@@ -132,7 +132,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            either a dictionary of properties for the annotation or a
 	 *            {@link org.urish.gwtit.titanium.map.Annotation} instance.
 	 */
-	public native void addAnnotation(Object annotation)
+	public final native void addAnnotation(Object annotation)
 	/*-{
 		return this.addAnnotation(annotation);
 	}-*/;
@@ -145,7 +145,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            annotation or a
 	 *            [Titanium.Map.Annotation](Titanium.Map.Annotation) instance.
 	 */
-	public native void addAnnotations(Object annotations)
+	public final native void addAnnotations(Object annotations)
 	/*-{
 		return this.addAnnotations(annotations);
 	}-*/;
@@ -158,7 +158,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            dictionary of values with longitude and latitude keys, `color`
 	 *            for the line color and `width` for the line width.
 	 */
-	public native void addRoute(Object route)
+	public final native void addRoute(Object route)
 	/*-{
 		return this.addRoute(route);
 	}-*/;
@@ -170,7 +170,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            either a string of the annotation title or a
 	 *            {@link org.urish.gwtit.titanium.map.Annotation} reference.
 	 */
-	public native void deselectAnnotation(Object annotation)
+	public final native void deselectAnnotation(Object annotation)
 	/*-{
 		return this.deselectAnnotation(annotation);
 	}-*/;
@@ -178,7 +178,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Removes all annotations added to the map
 	 */
-	public native void removeAllAnnotations()
+	public final native void removeAllAnnotations()
 	/*-{
 		return this.removeAllAnnotations();
 	}-*/;
@@ -190,7 +190,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            either a string of the annotation title or a
 	 *            {@link org.urish.gwtit.titanium.map.Annotation} reference.
 	 */
-	public native void removeAnnotation(Object annotation)
+	public final native void removeAnnotation(Object annotation)
 	/*-{
 		return this.removeAnnotation(annotation);
 	}-*/;
@@ -202,7 +202,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            an array of either a string of the annotation title or a
 	 *            {@link org.urish.gwtit.titanium.map.Annotation} reference.
 	 */
-	public native void removeAnnotations(Object annotation)
+	public final native void removeAnnotations(Object annotation)
 	/*-{
 		return this.removeAnnotations(annotation);
 	}-*/;
@@ -213,7 +213,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 * @param route
 	 *            same route object used during addRoute
 	 */
-	public native void removeRoute(Object route)
+	public final native void removeRoute(Object route)
 	/*-{
 		return this.removeRoute(route);
 	}-*/;
@@ -225,7 +225,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            either a string of the annotation title or a
 	 *            {@link org.urish.gwtit.titanium.map.Annotation} reference.
 	 */
-	public native void selectAnnotation(Object annotation)
+	public final native void selectAnnotation(Object annotation)
 	/*-{
 		return this.selectAnnotation(annotation);
 	}-*/;
@@ -238,7 +238,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            specifying the location to set the map: `latitudeDelta`,
 	 *            `longitudeDelta`, `latitude`, `longitude`.
 	 */
-	public native void setLocation(Object location)
+	public final native void setLocation(Object location)
 	/*-{
 		return this.setLocation(location);
 	}-*/;
@@ -249,32 +249,27 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 * @param level
 	 *            zoom level (can be positive or negative)
 	 */
-	public native void zoom(float level)
+	public final native void zoom(float level)
 	/*-{
 		return this.zoom(level);
 	}-*/;
 
-	public native void addClickHandler(EventCallback<JavaScriptObject> handler)
-	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
-	}-*/;
-
-	public native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addErrorHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addLoadingHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addLoadingHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addRegionChangedHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addRegionChangedHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('regionChanged', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

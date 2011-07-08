@@ -37,12 +37,12 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The color of the message label
 	 */
-	public native String getColor()
+	public final native String getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public native void setColor(String value)
+	public final native void setColor(String value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -50,12 +50,12 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The font object for the activity message label
 	 */
-	public native Object getFont()
+	public final native Object getFont()
 	/*-{
 		return this.font;
 	}-*/;
 
-	public native void setFont(Object value)
+	public final native void setFont(Object value)
 	/*-{
 		this.font = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The activity message label text
 	 */
-	public native String getMessage()
+	public final native String getMessage()
 	/*-{
 		return this.message;
 	}-*/;
 
-	public native void setMessage(String value)
+	public final native void setMessage(String value)
 	/*-{
 		this.message = value;
 	}-*/;
@@ -76,12 +76,12 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The key in the locale file to use for the message property
 	 */
-	public native String getMessageid()
+	public final native String getMessageid()
 	/*-{
 		return this.messageid;
 	}-*/;
 
-	public native void setMessageid(String value)
+	public final native void setMessageid(String value)
 	/*-{
 		this.messageid = value;
 	}-*/;
@@ -89,12 +89,12 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The style constant of the activity indicator
 	 */
-	public native float getStyle()
+	public final native float getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(float value)
+	public final native void setStyle(float value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -102,7 +102,7 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Call hide to make the activity indicator hidden and stop spinning
 	 */
-	public native void hide()
+	public final native void hide()
 	/*-{
 		return this.hide();
 	}-*/;
@@ -110,7 +110,7 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Call show to make the activity indicator visible and start spinning
 	 */
-	public native void show()
+	public final native void show()
 	/*-{
 		return this.show();
 	}-*/;

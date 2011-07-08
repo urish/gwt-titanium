@@ -46,12 +46,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 *         if the content is different) to provide maximum rendering
 	 *         performance.
 	 */
-	public native String getClassName()
+	public final native String getClassName()
 	/*-{
 		return this.className;
 	}-*/;
 
-	public native void setClassName(String value)
+	public final native void setClassName(String value)
 	/*-{
 		this.className = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Default color of the row when not selected
 	 */
-	public native String getColor()
+	public final native String getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public native void setColor(String value)
+	public final native void setColor(String value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -73,12 +73,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return Render a system provided check mark in the right image area of
 	 *         the row cell
 	 */
-	public native boolean getHasCheck()
+	public final native boolean getHasCheck()
 	/*-{
 		return this.hasCheck;
 	}-*/;
 
-	public native void setHasCheck(boolean value)
+	public final native void setHasCheck(boolean value)
 	/*-{
 		this.hasCheck = value;
 	}-*/;
@@ -87,12 +87,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return Render a system provided right arrow in the right image area of
 	 *         the row cell
 	 */
-	public native boolean getHasChild()
+	public final native boolean getHasChild()
 	/*-{
 		return this.hasChild;
 	}-*/;
 
-	public native void setHasChild(boolean value)
+	public final native void setHasChild(boolean value)
 	/*-{
 		this.hasChild = value;
 	}-*/;
@@ -101,12 +101,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return Render a system provided blue indicator icon in the right image
 	 *         area of the row cell
 	 */
-	public native boolean getHasDetail()
+	public final native boolean getHasDetail()
 	/*-{
 		return this.hasDetail;
 	}-*/;
 
-	public native void setHasDetail(boolean value)
+	public final native void setHasDetail(boolean value)
 	/*-{
 		this.hasDetail = value;
 	}-*/;
@@ -114,12 +114,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The indention level for the cell (defaults to 0)
 	 */
-	public native float getIndentionLevel()
+	public final native float getIndentionLevel()
 	/*-{
 		return this.indentionLevel;
 	}-*/;
 
-	public native void setIndentionLevel(float value)
+	public final native void setIndentionLevel(float value)
 	/*-{
 		this.indentionLevel = value;
 	}-*/;
@@ -128,12 +128,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return The layout algorithm to use for the layout. either absolute
 	 *         (default) or vertical.
 	 */
-	public native String getLayout()
+	public final native String getLayout()
 	/*-{
 		return this.layout;
 	}-*/;
 
-	public native void setLayout(String value)
+	public final native void setLayout(String value)
 	/*-{
 		this.layout = value;
 	}-*/;
@@ -141,12 +141,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Image url to render in the left image area of the row cell
 	 */
-	public native String getLeftImage()
+	public final native String getLeftImage()
 	/*-{
 		return this.leftImage;
 	}-*/;
 
-	public native void setLeftImage(String value)
+	public final native void setLeftImage(String value)
 	/*-{
 		this.leftImage = value;
 	}-*/;
@@ -154,12 +154,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Image url to render in the right image area of the row cell
 	 */
-	public native String getRightImage()
+	public final native String getRightImage()
 	/*-{
 		return this.rightImage;
 	}-*/;
 
-	public native void setRightImage(String value)
+	public final native void setRightImage(String value)
 	/*-{
 		this.rightImage = value;
 	}-*/;
@@ -167,12 +167,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The background color to render when the row cell is selected
 	 */
-	public native String getSelectedBackgroundColor()
+	public final native String getSelectedBackgroundColor()
 	/*-{
 		return this.selectedBackgroundColor;
 	}-*/;
 
-	public native void setSelectedBackgroundColor(String value)
+	public final native void setSelectedBackgroundColor(String value)
 	/*-{
 		this.selectedBackgroundColor = value;
 	}-*/;
@@ -180,12 +180,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The background image to render when the row cell is selected
 	 */
-	public native String getSelectedBackgroundImage()
+	public final native String getSelectedBackgroundImage()
 	/*-{
 		return this.selectedBackgroundImage;
 	}-*/;
 
-	public native void setSelectedBackgroundImage(String value)
+	public final native void setSelectedBackgroundImage(String value)
 	/*-{
 		this.selectedBackgroundImage = value;
 	}-*/;
@@ -193,12 +193,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Color of the row during selection
 	 */
-	public native String getSelectedColor()
+	public final native String getSelectedColor()
 	/*-{
 		return this.selectedColor;
 	}-*/;
 
-	public native void setSelectedColor(String value)
+	public final native void setSelectedColor(String value)
 	/*-{
 		this.selectedColor = value;
 	}-*/;
@@ -208,12 +208,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 *         iphone, use the constants from
 	 *         titanium.ui.iphone.tableviewcellselectionstyle
 	 */
-	public native float getSelectionStyle()
+	public final native float getSelectionStyle()
 	/*-{
 		return this.selectionStyle;
 	}-*/;
 
-	public native void setSelectionStyle(float value)
+	public final native void setSelectionStyle(float value)
 	/*-{
 		this.selectionStyle = value;
 	}-*/;
@@ -222,12 +222,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return The title cell value. do not specify if using views as children
 	 *         of the row
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;

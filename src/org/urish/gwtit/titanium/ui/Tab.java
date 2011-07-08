@@ -37,12 +37,12 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	 * @return The badge value for the tab group for this tab. null indicates no
 	 *         badge is value
 	 */
-	public native String getBadge()
+	public final native String getBadge()
 	/*-{
 		return this.badge;
 	}-*/;
 
-	public native void setBadge(String value)
+	public final native void setBadge(String value)
 	/*-{
 		this.badge = value;
 	}-*/;
@@ -50,12 +50,12 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The icon url for the tab group for this tab
 	 */
-	public native String getIcon()
+	public final native String getIcon()
 	/*-{
 		return this.icon;
 	}-*/;
 
-	public native void setIcon(String value)
+	public final native void setIcon(String value)
 	/*-{
 		this.icon = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The title for the tab group for this tab
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -76,12 +76,12 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The key in the locale file to use for the title property
 	 */
-	public native String getTitleid()
+	public final native String getTitleid()
 	/*-{
 		return this.titleid;
 	}-*/;
 
-	public native void setTitleid(String value)
+	public final native void setTitleid(String value)
 	/*-{
 		this.titleid = value;
 	}-*/;
@@ -90,12 +90,12 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	 * @return The root level tab window. all tabs must have at least one root
 	 *         level tab window.
 	 */
-	public native Object getWindow()
+	public final native Object getWindow()
 	/*-{
 		return this.window;
 	}-*/;
 
-	public native void setWindow(Object value)
+	public final native void setWindow(Object value)
 	/*-{
 		this.window = value;
 	}-*/;

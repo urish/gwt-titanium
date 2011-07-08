@@ -29,12 +29,12 @@ public class CreateBufferArgs extends JavaScriptObject {
 	protected CreateBufferArgs() {
 	}
 
-	public native void setValue(String value)
+	public final native void setValue(String value)
 	/*-{
 		this.value = value;
 	}-*/;
 
-	public native void setValue(float value)
+	public final native void setValue(float value)
 	/*-{
 		this.value = value;
 	}-*/;
@@ -47,7 +47,7 @@ public class CreateBufferArgs extends JavaScriptObject {
 	 *         {@link org.urish.gwtit.titanium.codec.encodenumber} and placing
 	 *         the encoded value in the returned buffer.)
 	 */
-	public native Object getValue()
+	public final native Object getValue()
 	/*-{
 		return this.value;
 	}-*/;
@@ -55,12 +55,12 @@ public class CreateBufferArgs extends JavaScriptObject {
 	/**
 	 * @return The length of the buffer.
 	 */
-	public native float getLength()
+	public final native float getLength()
 	/*-{
 		return this.length;
 	}-*/;
 
-	public native void setLength(float value)
+	public final native void setLength(float value)
 	/*-{
 		this.length = value;
 	}-*/;
@@ -68,12 +68,12 @@ public class CreateBufferArgs extends JavaScriptObject {
 	/**
 	 * @return The type of data encoding to use with `value`.
 	 */
-	public native String getType()
+	public final native String getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(String value)
+	public final native void setType(String value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -81,12 +81,12 @@ public class CreateBufferArgs extends JavaScriptObject {
 	/**
 	 * @return The byte order of this buffer.
 	 */
-	public native float getByteOrder()
+	public final native float getByteOrder()
 	/*-{
 		return this.byteOrder;
 	}-*/;
 
-	public native void setByteOrder(float value)
+	public final native void setByteOrder(float value)
 	/*-{
 		this.byteOrder = value;
 	}-*/;

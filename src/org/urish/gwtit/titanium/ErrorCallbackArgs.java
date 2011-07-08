@@ -32,12 +32,12 @@ public class ErrorCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return Socket that experienced the error
 	 */
-	public native org.urish.gwtit.titanium.network.socket.TCP getSocket()
+	public final native org.urish.gwtit.titanium.network.socket.TCP getSocket()
 	/*-{
 		return this.socket;
 	}-*/;
 
-	public native void setSocket(org.urish.gwtit.titanium.network.socket.TCP value)
+	public final native void setSocket(org.urish.gwtit.titanium.network.socket.TCP value)
 	/*-{
 		this.socket = value;
 	}-*/;
@@ -45,12 +45,12 @@ public class ErrorCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return A stringified description of the error
 	 */
-	public native String getError()
+	public final native String getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public native void setError(String value)
+	public final native void setError(String value)
 	/*-{
 		this.error = value;
 	}-*/;
@@ -58,12 +58,12 @@ public class ErrorCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return The error code of the error (potentially system-dependent)
 	 */
-	public native float getErrorCode()
+	public final native float getErrorCode()
 	/*-{
 		return this.errorCode;
 	}-*/;
 
-	public native void setErrorCode(float value)
+	public final native void setErrorCode(float value)
 	/*-{
 		this.errorCode = value;
 	}-*/;

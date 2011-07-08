@@ -189,4 +189,43 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 		return Titanium.App.Properties.setString(property, value);
 	}-*/;
 
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.App.Properties.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.App.Properties.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.App.Properties.fireEvent(name, event);
+	}-*/;
+
 }

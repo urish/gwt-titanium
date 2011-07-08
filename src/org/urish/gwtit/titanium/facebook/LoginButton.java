@@ -39,12 +39,12 @@ public class LoginButton extends org.urish.gwtit.titanium.ui.View {
 	 * @return Set to "wide" to show a wider version of the button that displays
 	 *         "connect with facebook" instead of just "connect".
 	 */
-	public native String getStyle()
+	public final native String getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(String value)
+	public final native void setStyle(String value)
 	/*-{
 		this.style = value;
 	}-*/;

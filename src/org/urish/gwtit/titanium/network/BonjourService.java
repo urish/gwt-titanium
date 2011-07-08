@@ -46,12 +46,12 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The domain of the service
 	 */
-	public native String getDomain()
+	public final native String getDomain()
 	/*-{
 		return this.domain;
 	}-*/;
 
-	public native void setDomain(String value)
+	public final native void setDomain(String value)
 	/*-{
 		this.domain = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether or not the service is local to the device
 	 */
-	public native boolean getIsLocal()
+	public final native boolean getIsLocal()
 	/*-{
 		return this.isLocal;
 	}-*/;
 
-	public native void setIsLocal(boolean value)
+	public final native void setIsLocal(boolean value)
 	/*-{
 		this.isLocal = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The name of the service
 	 */
-	public native String getName()
+	public final native String getName()
 	/*-{
 		return this.name;
 	}-*/;
 
-	public native void setName(String value)
+	public final native void setName(String value)
 	/*-{
 		this.name = value;
 	}-*/;
@@ -85,12 +85,12 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The tcpsocket object that is used to connect to the service
 	 */
-	public native Object getSocket()
+	public final native Object getSocket()
 	/*-{
 		return this.socket;
 	}-*/;
 
-	public native void setSocket(Object value)
+	public final native void setSocket(Object value)
 	/*-{
 		this.socket = value;
 	}-*/;
@@ -98,12 +98,12 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The type of the service
 	 */
-	public native String getType()
+	public final native String getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(String value)
+	public final native void setType(String value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -114,7 +114,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	 * @param socket
 	 *            a TCPSocket object to associate with the Bonjour service.
 	 */
-	public native void publish(Object socket)
+	public final native void publish(Object socket)
 	/*-{
 		return this.publish(socket);
 	}-*/;
@@ -128,7 +128,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	 *            the timeout for service resolution, in seconds. Optional,
 	 *            default is 120s.
 	 */
-	public native void resolve(float timeout)
+	public final native void resolve(float timeout)
 	/*-{
 		return this.resolve(timeout);
 	}-*/;
@@ -136,7 +136,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Halts publication of a service.
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;

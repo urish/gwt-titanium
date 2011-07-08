@@ -49,12 +49,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 *         links. ios only.
 	 * @platforms iphone, ipad
 	 */
-	public native float getAutoLink()
+	public final native float getAutoLink()
 	/*-{
 		return this.autoLink;
 	}-*/;
 
-	public native void setAutoLink(float value)
+	public final native void setAutoLink(float value)
 	/*-{
 		this.autoLink = value;
 	}-*/;
@@ -71,12 +71,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 *         (only android)
 	 * @platforms android
 	 */
-	public native float getAutocapitalization()
+	public final native float getAutocapitalization()
 	/*-{
 		return this.autocapitalization;
 	}-*/;
 
-	public native void setAutocapitalization(float value)
+	public final native void setAutocapitalization(float value)
 	/*-{
 		this.autocapitalization = value;
 	}-*/;
@@ -84,12 +84,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean indicating if the field is editable
 	 */
-	public native boolean getEditable()
+	public final native boolean getEditable()
 	/*-{
 		return this.editable;
 	}-*/;
 
-	public native void setEditable(boolean value)
+	public final native void setEditable(boolean value)
 	/*-{
 		this.editable = value;
 	}-*/;
@@ -97,12 +97,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean indicating the enabled state of the field
 	 */
-	public native boolean getEnabled()
+	public final native boolean getEnabled()
 	/*-{
 		return this.enabled;
 	}-*/;
 
-	public native void setEnabled(boolean value)
+	public final native void setEnabled(boolean value)
 	/*-{
 		this.enabled = value;
 	}-*/;
@@ -111,12 +111,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 * @return Array of toolbar button objects to be used when the keyboard is
 	 *         displayed
 	 */
-	public native Object[] getKeyboardToolbar()
+	public final native Object[] getKeyboardToolbar()
 	/*-{
 		return this.keyboardToolbar;
 	}-*/;
 
-	public native void setKeyboardToolbar(Object[] value)
+	public final native void setKeyboardToolbar(Object[] value)
 	/*-{
 		this.keyboardToolbar = value;
 	}-*/;
@@ -124,12 +124,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The color of the keyboard toolbar
 	 */
-	public native String getKeyboardToolbarColor()
+	public final native String getKeyboardToolbarColor()
 	/*-{
 		return this.keyboardToolbarColor;
 	}-*/;
 
-	public native void setKeyboardToolbarColor(String value)
+	public final native void setKeyboardToolbarColor(String value)
 	/*-{
 		this.keyboardToolbarColor = value;
 	}-*/;
@@ -137,12 +137,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The height of the keyboard toolbar
 	 */
-	public native float getKeyboardToolbarHeight()
+	public final native float getKeyboardToolbarHeight()
 	/*-{
 		return this.keyboardToolbarHeight;
 	}-*/;
 
-	public native void setKeyboardToolbarHeight(float value)
+	public final native void setKeyboardToolbarHeight(float value)
 	/*-{
 		this.keyboardToolbarHeight = value;
 	}-*/;
@@ -151,12 +151,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the return key should be suppressed during
 	 *         entry
 	 */
-	public native boolean getSuppressReturn()
+	public final native boolean getSuppressReturn()
 	/*-{
 		return this.suppressReturn;
 	}-*/;
 
-	public native void setSuppressReturn(boolean value)
+	public final native void setSuppressReturn(boolean value)
 	/*-{
 		this.suppressReturn = value;
 	}-*/;
@@ -164,12 +164,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Value of the field
 	 */
-	public native String getValue()
+	public final native String getValue()
 	/*-{
 		return this.value;
 	}-*/;
 
-	public native void setValue(String value)
+	public final native void setValue(String value)
 	/*-{
 		this.value = value;
 	}-*/;
@@ -177,7 +177,7 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Force the field to lose focus
 	 */
-	public native void blur()
+	public final native void blur()
 	/*-{
 		return this.blur();
 	}-*/;
@@ -185,7 +185,7 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Force the field to gain focus
 	 */
-	public native void focus()
+	public final native void focus()
 	/*-{
 		return this.focus();
 	}-*/;
@@ -193,32 +193,32 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Return boolean (true) if the field has text
 	 */
-	public native void hasText()
+	public final native void hasText()
 	/*-{
 		return this.hasText();
 	}-*/;
 
-	public native void addBlurHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addBlurHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addFocusHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addReturnHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addReturnHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addSelectedHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addSelectedHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('selected', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

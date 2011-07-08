@@ -57,12 +57,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_all}
 	 *         to indicate how the field should be capitalized during typing.
 	 */
-	public native float getAutocapitalization()
+	public final native float getAutocapitalization()
 	/*-{
 		return this.autocapitalization;
 	}-*/;
 
-	public native void setAutocapitalization(float value)
+	public final native void setAutocapitalization(float value)
 	/*-{
 		this.autocapitalization = value;
 	}-*/;
@@ -70,12 +70,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The border style constant for the field
 	 */
-	public native float getBorderStyle()
+	public final native float getBorderStyle()
 	/*-{
 		return this.borderStyle;
 	}-*/;
 
-	public native void setBorderStyle(float value)
+	public final native void setBorderStyle(float value)
 	/*-{
 		this.borderStyle = value;
 	}-*/;
@@ -83,12 +83,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The mode constant for how to handle displaying the clear button
 	 */
-	public native float getClearButtonMode()
+	public final native float getClearButtonMode()
 	/*-{
 		return this.clearButtonMode;
 	}-*/;
 
-	public native void setClearButtonMode(float value)
+	public final native void setClearButtonMode(float value)
 	/*-{
 		this.clearButtonMode = value;
 	}-*/;
@@ -97,12 +97,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean that indicates if the value of the field is cleared upon
 	 *         editing
 	 */
-	public native boolean getClearOnEdit()
+	public final native boolean getClearOnEdit()
 	/*-{
 		return this.clearOnEdit;
 	}-*/;
 
-	public native void setClearOnEdit(boolean value)
+	public final native void setClearOnEdit(boolean value)
 	/*-{
 		this.clearOnEdit = value;
 	}-*/;
@@ -110,12 +110,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean indicating if the field is editable
 	 */
-	public native boolean getEditable()
+	public final native boolean getEditable()
 	/*-{
 		return this.editable;
 	}-*/;
 
-	public native void setEditable(boolean value)
+	public final native void setEditable(boolean value)
 	/*-{
 		this.editable = value;
 	}-*/;
@@ -123,12 +123,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean indicating the enabled state of the field
 	 */
-	public native boolean getEnabled()
+	public final native boolean getEnabled()
 	/*-{
 		return this.enabled;
 	}-*/;
 
-	public native void setEnabled(boolean value)
+	public final native void setEnabled(boolean value)
 	/*-{
 		this.enabled = value;
 	}-*/;
@@ -136,12 +136,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The hint text to display when the field is unfocused
 	 */
-	public native String getHintText()
+	public final native String getHintText()
 	/*-{
 		return this.hintText;
 	}-*/;
 
-	public native void setHintText(String value)
+	public final native void setHintText(String value)
 	/*-{
 		this.hintText = value;
 	}-*/;
@@ -150,12 +150,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return Array of toolbar button objects to be used when the keyboard is
 	 *         displayed
 	 */
-	public native Object[] getKeyboardToolbar()
+	public final native Object[] getKeyboardToolbar()
 	/*-{
 		return this.keyboardToolbar;
 	}-*/;
 
-	public native void setKeyboardToolbar(Object[] value)
+	public final native void setKeyboardToolbar(Object[] value)
 	/*-{
 		this.keyboardToolbar = value;
 	}-*/;
@@ -163,12 +163,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The color of the keyboard toolbar
 	 */
-	public native String getKeyboardToolbarColor()
+	public final native String getKeyboardToolbarColor()
 	/*-{
 		return this.keyboardToolbarColor;
 	}-*/;
 
-	public native void setKeyboardToolbarColor(String value)
+	public final native void setKeyboardToolbarColor(String value)
 	/*-{
 		this.keyboardToolbarColor = value;
 	}-*/;
@@ -176,12 +176,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The height of the keyboard toolbar
 	 */
-	public native float getKeyboardToolbarHeight()
+	public final native float getKeyboardToolbarHeight()
 	/*-{
 		return this.keyboardToolbarHeight;
 	}-*/;
 
-	public native void setKeyboardToolbarHeight(float value)
+	public final native void setKeyboardToolbarHeight(float value)
 	/*-{
 		this.keyboardToolbarHeight = value;
 	}-*/;
@@ -189,12 +189,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The left button view
 	 */
-	public native Object getLeftButton()
+	public final native Object getLeftButton()
 	/*-{
 		return this.leftButton;
 	}-*/;
 
-	public native void setLeftButton(Object value)
+	public final native void setLeftButton(Object value)
 	/*-{
 		this.leftButton = value;
 	}-*/;
@@ -202,12 +202,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The mode of the left button view
 	 */
-	public native float getLeftButtonMode()
+	public final native float getLeftButtonMode()
 	/*-{
 		return this.leftButtonMode;
 	}-*/;
 
-	public native void setLeftButtonMode(float value)
+	public final native void setLeftButtonMode(float value)
 	/*-{
 		this.leftButtonMode = value;
 	}-*/;
@@ -216,12 +216,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return The left padding of the space between the button and the edge of
 	 *         the field
 	 */
-	public native float getLeftButtonPadding()
+	public final native float getLeftButtonPadding()
 	/*-{
 		return this.leftButtonPadding;
 	}-*/;
 
-	public native void setLeftButtonPadding(float value)
+	public final native void setLeftButtonPadding(float value)
 	/*-{
 		this.leftButtonPadding = value;
 	}-*/;
@@ -230,12 +230,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return The minimum size of the font when the font is sized based on the
 	 *         contents. enables font scaling to fit
 	 */
-	public native float getMinimumFontSize()
+	public final native float getMinimumFontSize()
 	/*-{
 		return this.minimumFontSize;
 	}-*/;
 
-	public native void setMinimumFontSize(float value)
+	public final native void setMinimumFontSize(float value)
 	/*-{
 		this.minimumFontSize = value;
 	}-*/;
@@ -243,12 +243,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The left padding of the text field
 	 */
-	public native float getPaddingLeft()
+	public final native float getPaddingLeft()
 	/*-{
 		return this.paddingLeft;
 	}-*/;
 
-	public native void setPaddingLeft(float value)
+	public final native void setPaddingLeft(float value)
 	/*-{
 		this.paddingLeft = value;
 	}-*/;
@@ -256,12 +256,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The right padding of the text field
 	 */
-	public native float getPaddingRight()
+	public final native float getPaddingRight()
 	/*-{
 		return this.paddingRight;
 	}-*/;
 
-	public native void setPaddingRight(float value)
+	public final native void setPaddingRight(float value)
 	/*-{
 		this.paddingRight = value;
 	}-*/;
@@ -269,12 +269,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The right button view
 	 */
-	public native Object getRightButton()
+	public final native Object getRightButton()
 	/*-{
 		return this.rightButton;
 	}-*/;
 
-	public native void setRightButton(Object value)
+	public final native void setRightButton(Object value)
 	/*-{
 		this.rightButton = value;
 	}-*/;
@@ -282,12 +282,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The mode of the right button view
 	 */
-	public native float getRightButtonMode()
+	public final native float getRightButtonMode()
 	/*-{
 		return this.rightButtonMode;
 	}-*/;
 
-	public native void setRightButtonMode(float value)
+	public final native void setRightButtonMode(float value)
 	/*-{
 		this.rightButtonMode = value;
 	}-*/;
@@ -296,12 +296,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return The right padding of the space between the button and the edge of
 	 *         the field
 	 */
-	public native float getRightButtonPadding()
+	public final native float getRightButtonPadding()
 	/*-{
 		return this.rightButtonPadding;
 	}-*/;
 
-	public native void setRightButtonPadding(float value)
+	public final native void setRightButtonPadding(float value)
 	/*-{
 		this.rightButtonPadding = value;
 	}-*/;
@@ -310,12 +310,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the return key should be suppressed during
 	 *         entry
 	 */
-	public native boolean getSuppressReturn()
+	public final native boolean getSuppressReturn()
 	/*-{
 		return this.suppressReturn;
 	}-*/;
 
-	public native void setSuppressReturn(boolean value)
+	public final native void setSuppressReturn(boolean value)
 	/*-{
 		this.suppressReturn = value;
 	}-*/;
@@ -323,22 +323,22 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Value of the field
 	 */
-	public native String getValue()
+	public final native String getValue()
 	/*-{
 		return this.value;
 	}-*/;
 
-	public native void setValue(String value)
+	public final native void setValue(String value)
 	/*-{
 		this.value = value;
 	}-*/;
 
-	public native void setVerticalAlign(float value)
+	public final native void setVerticalAlign(float value)
 	/*-{
 		this.verticalAlign = value;
 	}-*/;
 
-	public native void setVerticalAlign(String value)
+	public final native void setVerticalAlign(String value)
 	/*-{
 		this.verticalAlign = value;
 	}-*/;
@@ -346,7 +346,7 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The constant or string value for the fields vertical alignment.
 	 */
-	public native Object getVerticalAlign()
+	public final native Object getVerticalAlign()
 	/*-{
 		return this.verticalAlign;
 	}-*/;
@@ -354,7 +354,7 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Force the field to lose focus
 	 */
-	public native void blur()
+	public final native void blur()
 	/*-{
 		return this.blur();
 	}-*/;
@@ -362,7 +362,7 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Force the field to gain focus
 	 */
-	public native void focus()
+	public final native void focus()
 	/*-{
 		return this.focus();
 	}-*/;
@@ -370,27 +370,27 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Return boolean (true) if the field has text
 	 */
-	public native void hasText()
+	public final native void hasText()
 	/*-{
 		return this.hasText();
 	}-*/;
 
-	public native void addBlurHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addBlurHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addFocusHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addReturnHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addReturnHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -13,8 +13,17 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.urish.gwtit.client;
 
-public interface Const {
-	public String value();
+/* Automatically generated code, don't edit ! */
+
+package org.urish.gwtit.titanium.xml;
+
+
+/**
+ * A proxy
+ */
+public class Node extends org.urish.gwtit.titanium.Proxy {
+	protected Node() {
+	}
+
 }

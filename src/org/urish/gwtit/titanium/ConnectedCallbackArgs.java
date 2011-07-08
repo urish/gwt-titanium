@@ -33,12 +33,12 @@ public class ConnectedCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return Socket instance that has been connected
 	 */
-	public native org.urish.gwtit.titanium.network.socket.TCP getSocket()
+	public final native org.urish.gwtit.titanium.network.socket.TCP getSocket()
 	/*-{
 		return this.socket;
 	}-*/;
 
-	public native void setSocket(org.urish.gwtit.titanium.network.socket.TCP value)
+	public final native void setSocket(org.urish.gwtit.titanium.network.socket.TCP value)
 	/*-{
 		this.socket = value;
 	}-*/;

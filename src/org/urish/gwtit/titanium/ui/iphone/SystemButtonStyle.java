@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the system button styles that can be used for the
@@ -32,12 +30,32 @@ public class SystemButtonStyle extends org.urish.gwtit.titanium.Proxy {
 	protected SystemButtonStyle() {
 	}
 
-	public static final Const BAR = new ConstImpl("Titanium.UI.iPhone.SystemButtonStyle.BAR");
+	private static native final float value_BAR()
+	/*-{
+		return Titanium.UI.iPhone.SystemButtonStyle.BAR;
+	}-*/;
 
-	public static final Const BORDERED = new ConstImpl("Titanium.UI.iPhone.SystemButtonStyle.BORDERED");
+	public static final float BAR = value_BAR();
 
-	public static final Const DONE = new ConstImpl("Titanium.UI.iPhone.SystemButtonStyle.DONE");
+	private static native final float value_BORDERED()
+	/*-{
+		return Titanium.UI.iPhone.SystemButtonStyle.BORDERED;
+	}-*/;
 
-	public static final Const PLAIN = new ConstImpl("Titanium.UI.iPhone.SystemButtonStyle.PLAIN");
+	public static final float BORDERED = value_BORDERED();
+
+	private static native final float value_DONE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButtonStyle.DONE;
+	}-*/;
+
+	public static final float DONE = value_DONE();
+
+	private static native final float value_PLAIN()
+	/*-{
+		return Titanium.UI.iPhone.SystemButtonStyle.PLAIN;
+	}-*/;
+
+	public static final float PLAIN = value_PLAIN();
 
 }

@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.media;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 import org.urish.gwtit.client.EventCallback;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -35,36 +33,79 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	protected AudioPlayer() {
 	}
 
-	public static final Const STATE_BUFFERING = new ConstImpl("Titanium.Media.AudioPlayer.STATE_BUFFERING");
+	private static native final float value_STATE_BUFFERING()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_BUFFERING;
+	}-*/;
 
-	public static final Const STATE_INITIALIZED = new ConstImpl("Titanium.Media.AudioPlayer.STATE_INITIALIZED");
+	public static final float STATE_BUFFERING = value_STATE_BUFFERING();
 
-	public static final Const STATE_PAUSED = new ConstImpl("Titanium.Media.AudioPlayer.STATE_PAUSED");
+	private static native final float value_STATE_INITIALIZED()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_INITIALIZED;
+	}-*/;
 
-	public static final Const STATE_PLAYING = new ConstImpl("Titanium.Media.AudioPlayer.STATE_PLAYING");
+	public static final float STATE_INITIALIZED = value_STATE_INITIALIZED();
 
-	public static final Const STATE_STARTING = new ConstImpl("Titanium.Media.AudioPlayer.STATE_STARTING");
+	private static native final float value_STATE_PAUSED()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_PAUSED;
+	}-*/;
 
-	public static final Const STATE_STOPPED = new ConstImpl("Titanium.Media.AudioPlayer.STATE_STOPPED");
+	public static final float STATE_PAUSED = value_STATE_PAUSED();
 
-	public static final Const STATE_STOPPING = new ConstImpl("Titanium.Media.AudioPlayer.STATE_STOPPING");
+	private static native final float value_STATE_PLAYING()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_PLAYING;
+	}-*/;
 
-	public static final Const STATE_WAITING_FOR_DATA = new ConstImpl(
-			"Titanium.Media.AudioPlayer.STATE_WAITING_FOR_DATA");
+	public static final float STATE_PLAYING = value_STATE_PLAYING();
 
-	public static final Const STATE_WAITING_FOR_QUEUE = new ConstImpl(
-			"Titanium.Media.AudioPlayer.STATE_WAITING_FOR_QUEUE");
+	private static native final float value_STATE_STARTING()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_STARTING;
+	}-*/;
+
+	public static final float STATE_STARTING = value_STATE_STARTING();
+
+	private static native final float value_STATE_STOPPED()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_STOPPED;
+	}-*/;
+
+	public static final float STATE_STOPPED = value_STATE_STOPPED();
+
+	private static native final float value_STATE_STOPPING()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_STOPPING;
+	}-*/;
+
+	public static final float STATE_STOPPING = value_STATE_STOPPING();
+
+	private static native final float value_STATE_WAITING_FOR_DATA()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_WAITING_FOR_DATA;
+	}-*/;
+
+	public static final float STATE_WAITING_FOR_DATA = value_STATE_WAITING_FOR_DATA();
+
+	private static native final float value_STATE_WAITING_FOR_QUEUE()
+	/*-{
+		return Titanium.Media.AudioPlayer.STATE_WAITING_FOR_QUEUE;
+	}-*/;
+
+	public static final float STATE_WAITING_FOR_QUEUE = value_STATE_WAITING_FOR_QUEUE();
 
 	/**
 	 * @return Boolean to indicate if audio should continue playing even if
 	 *         activity is paused (android only as of 1.3.0)
 	 */
-	public native boolean getAllowBackground()
+	public final native boolean getAllowBackground()
 	/*-{
 		return this.allowBackground;
 	}-*/;
 
-	public native void setAllowBackground(boolean value)
+	public final native void setAllowBackground(boolean value)
 	/*-{
 		this.allowBackground = value;
 	}-*/;
@@ -72,12 +113,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Bit rate of the current playback stream
 	 */
-	public native float getBitRate()
+	public final native float getBitRate()
 	/*-{
 		return this.bitRate;
 	}-*/;
 
-	public native void setBitRate(float value)
+	public final native void setBitRate(float value)
 	/*-{
 		this.bitRate = value;
 	}-*/;
@@ -85,12 +126,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns boolean indicating if the playback is idle
 	 */
-	public native boolean getIdle()
+	public final native boolean getIdle()
 	/*-{
 		return this.idle;
 	}-*/;
 
-	public native void setIdle(boolean value)
+	public final native void setIdle(boolean value)
 	/*-{
 		this.idle = value;
 	}-*/;
@@ -98,12 +139,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns boolean indicating if the playback is paused
 	 */
-	public native boolean getPaused()
+	public final native boolean getPaused()
 	/*-{
 		return this.paused;
 	}-*/;
 
-	public native void setPaused(boolean value)
+	public final native void setPaused(boolean value)
 	/*-{
 		this.paused = value;
 	}-*/;
@@ -111,12 +152,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns boolean indicating if the playback is streaming audio
 	 */
-	public native boolean getPlaying()
+	public final native boolean getPlaying()
 	/*-{
 		return this.playing;
 	}-*/;
 
-	public native void setPlaying(boolean value)
+	public final native void setPlaying(boolean value)
 	/*-{
 		this.playing = value;
 	}-*/;
@@ -125,12 +166,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	 * @return Returns the current playback progress. will return zero if
 	 *         samplerate has not yet been detected
 	 */
-	public native float getProgress()
+	public final native float getProgress()
 	/*-{
 		return this.progress;
 	}-*/;
 
-	public native void setProgress(float value)
+	public final native void setProgress(float value)
 	/*-{
 		this.progress = value;
 	}-*/;
@@ -138,12 +179,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns int for the current state of playback
 	 */
-	public native float getState()
+	public final native float getState()
 	/*-{
 		return this.state;
 	}-*/;
 
-	public native void setState(float value)
+	public final native void setState(float value)
 	/*-{
 		this.state = value;
 	}-*/;
@@ -151,12 +192,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns the url for the current playback
 	 */
-	public native String getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;
 
-	public native void setUrl(String value)
+	public final native void setUrl(String value)
 	/*-{
 		this.url = value;
 	}-*/;
@@ -165,12 +206,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	 * @return Returns boolean indicating if the playback is waiting for audio
 	 *         data from the network
 	 */
-	public native boolean getWaiting()
+	public final native boolean getWaiting()
 	/*-{
 		return this.waiting;
 	}-*/;
 
-	public native void setWaiting(boolean value)
+	public final native void setWaiting(boolean value)
 	/*-{
 		this.waiting = value;
 	}-*/;
@@ -179,12 +220,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	 * @return The size of the buffer used for streaming, in bytes
 	 * @platforms iphone, ipad
 	 */
-	public native float getBufferSize()
+	public final native float getBufferSize()
 	/*-{
 		return this.bufferSize;
 	}-*/;
 
-	public native void setBufferSize(float value)
+	public final native void setBufferSize(float value)
 	/*-{
 		this.bufferSize = value;
 	}-*/;
@@ -192,7 +233,7 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Pause playback
 	 */
-	public native void pause()
+	public final native void pause()
 	/*-{
 		return this.pause();
 	}-*/;
@@ -200,7 +241,7 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Start playback
 	 */
-	public native void start()
+	public final native void start()
 	/*-{
 		return this.start();
 	}-*/;
@@ -208,7 +249,7 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Convert a state into a textual description suitable for display
 	 */
-	public native String stateDescription()
+	public final native String stateDescription()
 	/*-{
 		return this.stateDescription();
 	}-*/;
@@ -216,17 +257,17 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Stop playback
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addProgressHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addProgressHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('progress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

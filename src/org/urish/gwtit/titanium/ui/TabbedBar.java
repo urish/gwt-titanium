@@ -39,12 +39,12 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The selected index
 	 */
-	public native float getIndex()
+	public final native float getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public native void setIndex(float value)
+	public final native void setIndex(float value)
 	/*-{
 		this.index = value;
 	}-*/;
@@ -53,12 +53,12 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	 * @return The array of labels for the tabbed bar. each object should have
 	 *         the properties `title`, `image`, `width` and `enabled`.
 	 */
-	public native Object[] getLabels()
+	public final native Object[] getLabels()
 	/*-{
 		return this.labels;
 	}-*/;
 
-	public native void setLabels(Object[] value)
+	public final native void setLabels(Object[] value)
 	/*-{
 		this.labels = value;
 	}-*/;
@@ -66,12 +66,12 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The style of the tabbed bar
 	 */
-	public native float getStyle()
+	public final native float getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(float value)
+	public final native void setStyle(float value)
 	/*-{
 		this.style = value;
 	}-*/;

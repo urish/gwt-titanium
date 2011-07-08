@@ -36,12 +36,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The intent that was used to start this activity
 	 */
-	public native org.urish.gwtit.titanium.android.Intent getIntent()
+	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
 		return this.intent;
 	}-*/;
 
-	public native void setIntent(org.urish.gwtit.titanium.android.Intent value)
+	public final native void setIntent(org.urish.gwtit.titanium.android.Intent value)
 	/*-{
 		this.intent = value;
 	}-*/;
@@ -54,12 +54,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *         menu button. see the menu examples in
 	 *         {@link org.urish.gwtit.titanium.android.menu}
 	 */
-	public native Object getOnCreateOptionsMenu()
+	public final native Object getOnCreateOptionsMenu()
 	/*-{
 		return this.onCreateOptionsMenu;
 	}-*/;
 
-	public native void setOnCreateOptionsMenu(Object value)
+	public final native void setOnCreateOptionsMenu(Object value)
 	/*-{
 		this.onCreateOptionsMenu = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *         button. see the menu examples in
 	 *         {@link org.urish.gwtit.titanium.android.menu}
 	 */
-	public native Object getOnPrepareOptionsMenu()
+	public final native Object getOnPrepareOptionsMenu()
 	/*-{
 		return this.onPrepareOptionsMenu;
 	}-*/;
 
-	public native void setOnPrepareOptionsMenu(Object value)
+	public final native void setOnPrepareOptionsMenu(Object value)
 	/*-{
 		this.onPrepareOptionsMenu = value;
 	}-*/;
@@ -87,12 +87,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *         values that begin with screen_orientation in the
 	 *         {@link org.urish.gwtit.titanium.android} module.
 	 */
-	public native float getRequestedOrientation()
+	public final native float getRequestedOrientation()
 	/*-{
 		return this.requestedOrientation;
 	}-*/;
 
-	public native void setRequestedOrientation(float value)
+	public final native void setRequestedOrientation(float value)
 	/*-{
 		this.requestedOrientation = value;
 	}-*/;
@@ -103,7 +103,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 * [finish](http://developer.android.com/reference/android/
 	 * app/activity.html#finish())
 	 */
-	public native void finish()
+	public final native void finish()
 	/*-{
 		return this.finish();
 	}-*/;
@@ -122,7 +122,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 * @param format
 	 *            Optional format arguments for the String resource
 	 */
-	public native String getString(float resourceId, Object[] format)
+	public final native String getString(float resourceId, Object[] format)
 	/*-{
 		return this.getString(resourceId, format);
 	}-*/;
@@ -143,7 +143,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *            An optional {@link org.urish.gwtit.titanium.android.Intent}
 	 *            with extra result data
 	 */
-	public native void setResult(float resultCode, org.urish.gwtit.titanium.android.Intent intent)
+	public final native void setResult(float resultCode, org.urish.gwtit.titanium.android.Intent intent)
 	/*-{
 		return this.setResult(resultCode, intent);
 	}-*/;
@@ -158,7 +158,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 * @param intent
 	 *            Description of the Activity to start
 	 */
-	public native void startActivity(org.urish.gwtit.titanium.android.Intent intent)
+	public final native void startActivity(org.urish.gwtit.titanium.android.Intent intent)
 	/*-{
 		return this.startActivity(intent);
 	}-*/;
@@ -178,42 +178,42 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *            it's result. See example in
 	 *            {@link org.urish.gwtit.titanium.android.Activity}.
 	 */
-	public native void startActivityForResult(org.urish.gwtit.titanium.android.Intent intent, Object callback)
+	public final native void startActivityForResult(org.urish.gwtit.titanium.android.Intent intent, Object callback)
 	/*-{
 		return this.startActivityForResult(intent, callback);
 	}-*/;
 
-	public native void addCreateHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCreateHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addDestroyHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addDestroyHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addNewIntentHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addNewIntentHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addPauseHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addPauseHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addResumeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addResumeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStopHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStopHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

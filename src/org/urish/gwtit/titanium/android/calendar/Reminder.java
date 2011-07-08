@@ -38,12 +38,12 @@ public class Reminder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The id of the reminder.
 	 */
-	public native String getId()
+	public final native String getId()
 	/*-{
 		return this.id;
 	}-*/;
 
-	public native void setId(String value)
+	public final native void setId(String value)
 	/*-{
 		this.id = value;
 	}-*/;
@@ -52,12 +52,12 @@ public class Reminder extends org.urish.gwtit.titanium.Proxy {
 	 * @return The reminder method. possible values are the method constants in
 	 *         {@link org.urish.gwtit.titanium.android.calendar}.
 	 */
-	public native float getMethod()
+	public final native float getMethod()
 	/*-{
 		return this.method;
 	}-*/;
 
-	public native void setMethod(float value)
+	public final native void setMethod(float value)
 	/*-{
 		this.method = value;
 	}-*/;
@@ -65,12 +65,12 @@ public class Reminder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The minutes before the event when the reminder should occur.
 	 */
-	public native float getMinutes()
+	public final native float getMinutes()
 	/*-{
 		return this.minutes;
 	}-*/;
 
-	public native void setMinutes(float value)
+	public final native void setMinutes(float value)
 	/*-{
 		this.minutes = value;
 	}-*/;

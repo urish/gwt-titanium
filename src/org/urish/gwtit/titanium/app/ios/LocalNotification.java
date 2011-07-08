@@ -33,7 +33,7 @@ public class LocalNotification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Cancel the pending notification
 	 */
-	public native void cancel()
+	public final native void cancel()
 	/*-{
 		return this.cancel();
 	}-*/;

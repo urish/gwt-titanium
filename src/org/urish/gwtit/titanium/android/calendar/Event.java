@@ -40,12 +40,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.android.calendar.alert} objects
 	 *         which are the alerts - if any - for this event.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Alert[] getAlerts()
+	public final native org.urish.gwtit.titanium.android.calendar.Alert[] getAlerts()
 	/*-{
 		return this.alerts;
 	}-*/;
 
-	public native void setAlerts(org.urish.gwtit.titanium.android.calendar.Alert[] value)
+	public final native void setAlerts(org.urish.gwtit.titanium.android.calendar.Alert[] value)
 	/*-{
 		this.alerts = value;
 	}-*/;
@@ -53,12 +53,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether the event is all day.
 	 */
-	public native boolean getAllDay()
+	public final native boolean getAllDay()
 	/*-{
 		return this.allDay;
 	}-*/;
 
-	public native void setAllDay(boolean value)
+	public final native void setAllDay(boolean value)
 	/*-{
 		this.allDay = value;
 	}-*/;
@@ -66,12 +66,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The date/time at which the event begins.
 	 */
-	public native java.util.Date getBegin()
+	public final native java.util.Date getBegin()
 	/*-{
 		return this.begin;
 	}-*/;
 
-	public native void setBegin(java.util.Date value)
+	public final native void setBegin(java.util.Date value)
 	/*-{
 		this.begin = value;
 	}-*/;
@@ -79,12 +79,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The event description.
 	 */
-	public native String getDescription()
+	public final native String getDescription()
 	/*-{
 		return this.description;
 	}-*/;
 
-	public native void setDescription(String value)
+	public final native void setDescription(String value)
 	/*-{
 		this.description = value;
 	}-*/;
@@ -92,12 +92,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The date/time at which the event ends.
 	 */
-	public native java.util.Date getEnd()
+	public final native java.util.Date getEnd()
 	/*-{
 		return this.end;
 	}-*/;
 
-	public native void setEnd(java.util.Date value)
+	public final native void setEnd(java.util.Date value)
 	/*-{
 		this.end = value;
 	}-*/;
@@ -105,12 +105,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return An object containing extended properties of the event.
 	 */
-	public native Object getExtendedProperties()
+	public final native Object getExtendedProperties()
 	/*-{
 		return this.extendedProperties;
 	}-*/;
 
-	public native void setExtendedProperties(Object value)
+	public final native void setExtendedProperties(Object value)
 	/*-{
 		this.extendedProperties = value;
 	}-*/;
@@ -118,12 +118,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether an alarm is scheduled for the event.
 	 */
-	public native boolean getHasAlarm()
+	public final native boolean getHasAlarm()
 	/*-{
 		return this.hasAlarm;
 	}-*/;
 
-	public native void setHasAlarm(boolean value)
+	public final native void setHasAlarm(boolean value)
 	/*-{
 		this.hasAlarm = value;
 	}-*/;
@@ -131,12 +131,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * 
 	 */
-	public native boolean getHasExtendedProperties()
+	public final native boolean getHasExtendedProperties()
 	/*-{
 		return this.hasExtendedProperties;
 	}-*/;
 
-	public native void setHasExtendedProperties(boolean value)
+	public final native void setHasExtendedProperties(boolean value)
 	/*-{
 		this.hasExtendedProperties = value;
 	}-*/;
@@ -144,12 +144,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The id of the event.
 	 */
-	public native String getId()
+	public final native String getId()
 	/*-{
 		return this.id;
 	}-*/;
 
-	public native void setId(String value)
+	public final native void setId(String value)
 	/*-{
 		this.id = value;
 	}-*/;
@@ -157,12 +157,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The event location.
 	 */
-	public native String getLocation()
+	public final native String getLocation()
 	/*-{
 		return this.location;
 	}-*/;
 
-	public native void setLocation(String value)
+	public final native void setLocation(String value)
 	/*-{
 		this.location = value;
 	}-*/;
@@ -172,12 +172,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.android.calendar.reminder}
 	 *         objects which are the reminders - if any - for this event.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Reminder[] getReminders()
+	public final native org.urish.gwtit.titanium.android.calendar.Reminder[] getReminders()
 	/*-{
 		return this.reminders;
 	}-*/;
 
-	public native void setReminders(org.urish.gwtit.titanium.android.calendar.Reminder[] value)
+	public final native void setReminders(org.urish.gwtit.titanium.android.calendar.Reminder[] value)
 	/*-{
 		this.reminders = value;
 	}-*/;
@@ -186,12 +186,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 * @return The status of the event. possible values are the status constants
 	 *         in {@link org.urish.gwtit.titanium.android.calendar}.
 	 */
-	public native float getStatus()
+	public final native float getStatus()
 	/*-{
 		return this.status;
 	}-*/;
 
-	public native void setStatus(float value)
+	public final native void setStatus(float value)
 	/*-{
 		this.status = value;
 	}-*/;
@@ -199,12 +199,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The title string for the event.
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -213,12 +213,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 * @return The event's visibility. possible values are the visibility
 	 *         constants in {@link org.urish.gwtit.titanium.android.calendar}.
 	 */
-	public native float getVisibility()
+	public final native float getVisibility()
 	/*-{
 		return this.visibility;
 	}-*/;
 
-	public native void setVisibility(float value)
+	public final native void setVisibility(float value)
 	/*-{
 		this.visibility = value;
 	}-*/;
@@ -233,7 +233,7 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *            Properties for the new alert, corresponding to properties of
 	 *            {@link org.urish.gwtit.titanium.android.calendar.Alert}.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Alert createAlert(Object data)
+	public final native org.urish.gwtit.titanium.android.calendar.Alert createAlert(Object data)
 	/*-{
 		return this.createAlert(data);
 	}-*/;
@@ -248,7 +248,7 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *            Properties for the new reminder, corresponding to properties
 	 *            of {@link org.urish.gwtit.titanium.android.calendar.Reminder}.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Reminder createReminder(Object data)
+	public final native org.urish.gwtit.titanium.android.calendar.Reminder createReminder(Object data)
 	/*-{
 		return this.createReminder(data);
 	}-*/;
@@ -260,7 +260,7 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *            The name of the extended property whose value should be
 	 *            returned.
 	 */
-	public native String getExtendedProperty(String name)
+	public final native String getExtendedProperty(String name)
 	/*-{
 		return this.getExtendedProperty(name);
 	}-*/;
@@ -273,7 +273,7 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The value to which to set the named extended property.
 	 */
-	public native void setExtendedProperty(String name, String value)
+	public final native void setExtendedProperty(String name, String value)
 	/*-{
 		return this.setExtendedProperty(name, value);
 	}-*/;

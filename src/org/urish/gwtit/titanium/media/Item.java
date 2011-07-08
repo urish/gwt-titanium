@@ -33,12 +33,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The artist for the album of the item
 	 */
-	public native String getAlbumArtist()
+	public final native String getAlbumArtist()
 	/*-{
 		return this.albumArtist;
 	}-*/;
 
-	public native void setAlbumArtist(String value)
+	public final native void setAlbumArtist(String value)
 	/*-{
 		this.albumArtist = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The album title of the item
 	 */
-	public native String getAlbumTitle()
+	public final native String getAlbumTitle()
 	/*-{
 		return this.albumTitle;
 	}-*/;
 
-	public native void setAlbumTitle(String value)
+	public final native void setAlbumTitle(String value)
 	/*-{
 		this.albumTitle = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of tracks for the album of the item
 	 */
-	public native float getAlbumTrackCount()
+	public final native float getAlbumTrackCount()
 	/*-{
 		return this.albumTrackCount;
 	}-*/;
 
-	public native void setAlbumTrackCount(float value)
+	public final native void setAlbumTrackCount(float value)
 	/*-{
 		this.albumTrackCount = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The track number of the item
 	 */
-	public native float getAlbumTrackNumber()
+	public final native float getAlbumTrackNumber()
 	/*-{
 		return this.albumTrackNumber;
 	}-*/;
 
-	public native void setAlbumTrackNumber(float value)
+	public final native void setAlbumTrackNumber(float value)
 	/*-{
 		this.albumTrackNumber = value;
 	}-*/;
@@ -85,12 +85,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The artist of the item
 	 */
-	public native String getArtist()
+	public final native String getArtist()
 	/*-{
 		return this.artist;
 	}-*/;
 
-	public native void setArtist(String value)
+	public final native void setArtist(String value)
 	/*-{
 		this.artist = value;
 	}-*/;
@@ -99,12 +99,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	 * @return A blob object containing the image for the item's artwork, or
 	 *         null if none
 	 */
-	public native Object getArtwork()
+	public final native Object getArtwork()
 	/*-{
 		return this.artwork;
 	}-*/;
 
-	public native void setArtwork(Object value)
+	public final native void setArtwork(Object value)
 	/*-{
 		this.artwork = value;
 	}-*/;
@@ -112,12 +112,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The composer of the item
 	 */
-	public native String getComposer()
+	public final native String getComposer()
 	/*-{
 		return this.composer;
 	}-*/;
 
-	public native void setComposer(String value)
+	public final native void setComposer(String value)
 	/*-{
 		this.composer = value;
 	}-*/;
@@ -125,12 +125,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The total number of discs of the item
 	 */
-	public native float getDiscCount()
+	public final native float getDiscCount()
 	/*-{
 		return this.discCount;
 	}-*/;
 
-	public native void setDiscCount(float value)
+	public final native void setDiscCount(float value)
 	/*-{
 		this.discCount = value;
 	}-*/;
@@ -138,12 +138,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The disc number of the item
 	 */
-	public native float getDiscNumber()
+	public final native float getDiscNumber()
 	/*-{
 		return this.discNumber;
 	}-*/;
 
-	public native void setDiscNumber(float value)
+	public final native void setDiscNumber(float value)
 	/*-{
 		this.discNumber = value;
 	}-*/;
@@ -151,12 +151,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The genre of the item
 	 */
-	public native String getGenre()
+	public final native String getGenre()
 	/*-{
 		return this.genre;
 	}-*/;
 
-	public native void setGenre(String value)
+	public final native void setGenre(String value)
 	/*-{
 		this.genre = value;
 	}-*/;
@@ -164,12 +164,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return True if the item is part of a compilation album
 	 */
-	public native boolean getIsCompilation()
+	public final native boolean getIsCompilation()
 	/*-{
 		return this.isCompilation;
 	}-*/;
 
-	public native void setIsCompilation(boolean value)
+	public final native void setIsCompilation(boolean value)
 	/*-{
 		this.isCompilation = value;
 	}-*/;
@@ -177,12 +177,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The lyrics of the item
 	 */
-	public native String getLyrics()
+	public final native String getLyrics()
 	/*-{
 		return this.lyrics;
 	}-*/;
 
-	public native void setLyrics(String value)
+	public final native void setLyrics(String value)
 	/*-{
 		this.lyrics = value;
 	}-*/;
@@ -190,12 +190,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The type of the item
 	 */
-	public native float getMediaType()
+	public final native float getMediaType()
 	/*-{
 		return this.mediaType;
 	}-*/;
 
-	public native void setMediaType(float value)
+	public final native void setMediaType(float value)
 	/*-{
 		this.mediaType = value;
 	}-*/;
@@ -203,12 +203,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of times the item has been played
 	 */
-	public native float getPlayCount()
+	public final native float getPlayCount()
 	/*-{
 		return this.playCount;
 	}-*/;
 
-	public native void setPlayCount(float value)
+	public final native void setPlayCount(float value)
 	/*-{
 		this.playCount = value;
 	}-*/;
@@ -216,12 +216,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The length (in seconds) of the item
 	 */
-	public native float getPlaybackDuration()
+	public final native float getPlaybackDuration()
 	/*-{
 		return this.playbackDuration;
 	}-*/;
 
-	public native void setPlaybackDuration(float value)
+	public final native void setPlaybackDuration(float value)
 	/*-{
 		this.playbackDuration = value;
 	}-*/;
@@ -230,12 +230,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	 * @return The title of a podcast item. only for media types of
 	 *         {@link org.urish.gwtit.titanium.media.music_media_type_podcast}.
 	 */
-	public native String getPodcastTitle()
+	public final native String getPodcastTitle()
 	/*-{
 		return this.podcastTitle;
 	}-*/;
 
-	public native void setPodcastTitle(String value)
+	public final native void setPodcastTitle(String value)
 	/*-{
 		this.podcastTitle = value;
 	}-*/;
@@ -243,12 +243,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The rating of the item
 	 */
-	public native float getRating()
+	public final native float getRating()
 	/*-{
 		return this.rating;
 	}-*/;
 
-	public native void setRating(float value)
+	public final native void setRating(float value)
 	/*-{
 		this.rating = value;
 	}-*/;
@@ -256,12 +256,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of times the item has been skipped
 	 */
-	public native float getSkipCount()
+	public final native float getSkipCount()
 	/*-{
 		return this.skipCount;
 	}-*/;
 
-	public native void setSkipCount(float value)
+	public final native void setSkipCount(float value)
 	/*-{
 		this.skipCount = value;
 	}-*/;
@@ -269,12 +269,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The title of the item
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;

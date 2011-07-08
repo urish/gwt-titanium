@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 import org.urish.gwtit.client.EventCallback;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -34,46 +32,131 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	protected Geolocation() {
 	}
 
-	public static final Const ACCURACY_BEST = new ConstImpl("Titanium.Geolocation.ACCURACY_BEST");
+	private static native final float value_ACCURACY_BEST()
+	/*-{
+		return Titanium.Geolocation.ACCURACY_BEST;
+	}-*/;
 
-	public static final Const ACCURACY_HUNDRED_METERS = new ConstImpl("Titanium.Geolocation.ACCURACY_HUNDRED_METERS");
+	public static final float ACCURACY_BEST = value_ACCURACY_BEST();
 
-	public static final Const ACCURACY_KILOMETER = new ConstImpl("Titanium.Geolocation.ACCURACY_KILOMETER");
+	private static native final float value_ACCURACY_HUNDRED_METERS()
+	/*-{
+		return Titanium.Geolocation.ACCURACY_HUNDRED_METERS;
+	}-*/;
 
-	public static final Const ACCURACY_NEAREST_TEN_METERS = new ConstImpl(
-			"Titanium.Geolocation.ACCURACY_NEAREST_TEN_METERS");
+	public static final float ACCURACY_HUNDRED_METERS = value_ACCURACY_HUNDRED_METERS();
 
-	public static final Const ACCURACY_THREE_KILOMETERS = new ConstImpl(
-			"Titanium.Geolocation.ACCURACY_THREE_KILOMETERS");
+	private static native final float value_ACCURACY_KILOMETER()
+	/*-{
+		return Titanium.Geolocation.ACCURACY_KILOMETER;
+	}-*/;
 
-	public static final Const AUTHORIZATION_AUTHORIZED = new ConstImpl("Titanium.Geolocation.AUTHORIZATION_AUTHORIZED");
+	public static final float ACCURACY_KILOMETER = value_ACCURACY_KILOMETER();
 
-	public static final Const AUTHORIZATION_DENIED = new ConstImpl("Titanium.Geolocation.AUTHORIZATION_DENIED");
+	private static native final float value_ACCURACY_NEAREST_TEN_METERS()
+	/*-{
+		return Titanium.Geolocation.ACCURACY_NEAREST_TEN_METERS;
+	}-*/;
 
-	public static final Const AUTHORIZATION_RESTRICTED = new ConstImpl("Titanium.Geolocation.AUTHORIZATION_RESTRICTED");
+	public static final float ACCURACY_NEAREST_TEN_METERS = value_ACCURACY_NEAREST_TEN_METERS();
 
-	public static final Const AUTHORIZATION_UNKNOWN = new ConstImpl("Titanium.Geolocation.AUTHORIZATION_UNKNOWN");
+	private static native final float value_ACCURACY_THREE_KILOMETERS()
+	/*-{
+		return Titanium.Geolocation.ACCURACY_THREE_KILOMETERS;
+	}-*/;
 
-	public static final Const ERROR_DENIED = new ConstImpl("Titanium.Geolocation.ERROR_DENIED");
+	public static final float ACCURACY_THREE_KILOMETERS = value_ACCURACY_THREE_KILOMETERS();
 
-	public static final Const ERROR_HEADING_FAILURE = new ConstImpl("Titanium.Geolocation.ERROR_HEADING_FAILURE");
+	private static native final float value_AUTHORIZATION_AUTHORIZED()
+	/*-{
+		return Titanium.Geolocation.AUTHORIZATION_AUTHORIZED;
+	}-*/;
 
-	public static final Const ERROR_LOCATION_UNKNOWN = new ConstImpl("Titanium.Geolocation.ERROR_LOCATION_UNKNOWN");
+	public static final float AUTHORIZATION_AUTHORIZED = value_AUTHORIZATION_AUTHORIZED();
 
-	public static final Const ERROR_NETWORK = new ConstImpl("Titanium.Geolocation.ERROR_NETWORK");
+	private static native final float value_AUTHORIZATION_DENIED()
+	/*-{
+		return Titanium.Geolocation.AUTHORIZATION_DENIED;
+	}-*/;
 
-	public static final Const ERROR_REGION_MONITORING_DELAYED = new ConstImpl(
-			"Titanium.Geolocation.ERROR_REGION_MONITORING_DELAYED");
+	public static final float AUTHORIZATION_DENIED = value_AUTHORIZATION_DENIED();
 
-	public static final Const ERROR_REGION_MONITORING_DENIED = new ConstImpl(
-			"Titanium.Geolocation.ERROR_REGION_MONITORING_DENIED");
+	private static native final float value_AUTHORIZATION_RESTRICTED()
+	/*-{
+		return Titanium.Geolocation.AUTHORIZATION_RESTRICTED;
+	}-*/;
 
-	public static final Const ERROR_REGION_MONITORING_FAILURE = new ConstImpl(
-			"Titanium.Geolocation.ERROR_REGION_MONITORING_FAILURE");
+	public static final float AUTHORIZATION_RESTRICTED = value_AUTHORIZATION_RESTRICTED();
 
-	public static final Const PROVIDER_GPS = new ConstImpl("Titanium.Geolocation.PROVIDER_GPS");
+	private static native final float value_AUTHORIZATION_UNKNOWN()
+	/*-{
+		return Titanium.Geolocation.AUTHORIZATION_UNKNOWN;
+	}-*/;
 
-	public static final Const PROVIDER_NETWORK = new ConstImpl("Titanium.Geolocation.PROVIDER_NETWORK");
+	public static final float AUTHORIZATION_UNKNOWN = value_AUTHORIZATION_UNKNOWN();
+
+	private static native final float value_ERROR_DENIED()
+	/*-{
+		return Titanium.Geolocation.ERROR_DENIED;
+	}-*/;
+
+	public static final float ERROR_DENIED = value_ERROR_DENIED();
+
+	private static native final float value_ERROR_HEADING_FAILURE()
+	/*-{
+		return Titanium.Geolocation.ERROR_HEADING_FAILURE;
+	}-*/;
+
+	public static final float ERROR_HEADING_FAILURE = value_ERROR_HEADING_FAILURE();
+
+	private static native final float value_ERROR_LOCATION_UNKNOWN()
+	/*-{
+		return Titanium.Geolocation.ERROR_LOCATION_UNKNOWN;
+	}-*/;
+
+	public static final float ERROR_LOCATION_UNKNOWN = value_ERROR_LOCATION_UNKNOWN();
+
+	private static native final float value_ERROR_NETWORK()
+	/*-{
+		return Titanium.Geolocation.ERROR_NETWORK;
+	}-*/;
+
+	public static final float ERROR_NETWORK = value_ERROR_NETWORK();
+
+	private static native final float value_ERROR_REGION_MONITORING_DELAYED()
+	/*-{
+		return Titanium.Geolocation.ERROR_REGION_MONITORING_DELAYED;
+	}-*/;
+
+	public static final float ERROR_REGION_MONITORING_DELAYED = value_ERROR_REGION_MONITORING_DELAYED();
+
+	private static native final float value_ERROR_REGION_MONITORING_DENIED()
+	/*-{
+		return Titanium.Geolocation.ERROR_REGION_MONITORING_DENIED;
+	}-*/;
+
+	public static final float ERROR_REGION_MONITORING_DENIED = value_ERROR_REGION_MONITORING_DENIED();
+
+	private static native final float value_ERROR_REGION_MONITORING_FAILURE()
+	/*-{
+		return Titanium.Geolocation.ERROR_REGION_MONITORING_FAILURE;
+	}-*/;
+
+	public static final float ERROR_REGION_MONITORING_FAILURE = value_ERROR_REGION_MONITORING_FAILURE();
+
+	private static native final String value_PROVIDER_GPS()
+	/*-{
+		return Titanium.Geolocation.PROVIDER_GPS;
+	}-*/;
+
+	public static final String PROVIDER_GPS = value_PROVIDER_GPS();
+
+	private static native final String value_PROVIDER_NETWORK()
+	/*-{
+		return Titanium.Geolocation.PROVIDER_NETWORK;
+	}-*/;
+
+	public static final String PROVIDER_NETWORK = value_PROVIDER_NETWORK();
 
 	/**
 	 * @return The minimum change of position (in meters) before a 'location'
@@ -241,6 +324,45 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	public static native void reverseGeocoder(float latitude, float longitude, Object callback)
 	/*-{
 		return Titanium.Geolocation.reverseGeocoder(latitude, longitude, callback);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Geolocation.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Geolocation.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Geolocation.fireEvent(name, event);
 	}-*/;
 
 	public static native void addCalibrationHandler(EventCallback<JavaScriptObject> handler)

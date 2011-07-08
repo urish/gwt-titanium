@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 import org.urish.gwtit.client.EventCallback;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -34,13 +32,33 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	protected Platform() {
 	}
 
-	public static final Const BATTERY_STATE_CHARGING = new ConstImpl("Titanium.Platform.BATTERY_STATE_CHARGING");
+	private static native final float value_BATTERY_STATE_CHARGING()
+	/*-{
+		return Titanium.Platform.BATTERY_STATE_CHARGING;
+	}-*/;
 
-	public static final Const BATTERY_STATE_FULL = new ConstImpl("Titanium.Platform.BATTERY_STATE_FULL");
+	public static final float BATTERY_STATE_CHARGING = value_BATTERY_STATE_CHARGING();
 
-	public static final Const BATTERY_STATE_UNKNOWN = new ConstImpl("Titanium.Platform.BATTERY_STATE_UNKNOWN");
+	private static native final float value_BATTERY_STATE_FULL()
+	/*-{
+		return Titanium.Platform.BATTERY_STATE_FULL;
+	}-*/;
 
-	public static final Const BATTERY_STATE_UNPLUGGED = new ConstImpl("Titanium.Platform.BATTERY_STATE_UNPLUGGED");
+	public static final float BATTERY_STATE_FULL = value_BATTERY_STATE_FULL();
+
+	private static native final float value_BATTERY_STATE_UNKNOWN()
+	/*-{
+		return Titanium.Platform.BATTERY_STATE_UNKNOWN;
+	}-*/;
+
+	public static final float BATTERY_STATE_UNKNOWN = value_BATTERY_STATE_UNKNOWN();
+
+	private static native final float value_BATTERY_STATE_UNPLUGGED()
+	/*-{
+		return Titanium.Platform.BATTERY_STATE_UNPLUGGED;
+	}-*/;
+
+	public static final float BATTERY_STATE_UNPLUGGED = value_BATTERY_STATE_UNPLUGGED();
 
 	/**
 	 * @return The ip address that the device reports (only applicable on wifi
@@ -317,6 +335,53 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	public static native void openURL(String url)
 	/*-{
 		return Titanium.Platform.openURL(url);
+	}-*/;
+
+	/**
+	 * Whether device settings are set to show times in 24-hour format.
+	 */
+	public static native boolean is24HourTimeFormat()
+	/*-{
+		return Titanium.Platform.is24HourTimeFormat();
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Platform.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Platform.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Platform.fireEvent(name, event);
 	}-*/;
 
 	public static native void addBatteryHandler(EventCallback<JavaScriptObject> handler)

@@ -35,7 +35,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	 *            buffer to read stream data into
 	 * @return Number of bytes read.
 	 */
-	public native float read(org.urish.gwtit.titanium.Buffer buffer)
+	public final native float read(org.urish.gwtit.titanium.Buffer buffer)
 	/*-{
 		return this.read(buffer);
 	}-*/;
@@ -51,7 +51,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	 *            length of data to read from buffer
 	 * @return Number of bytes read.
 	 */
-	public native float read(org.urish.gwtit.titanium.Buffer buffer, float offset, float length)
+	public final native float read(org.urish.gwtit.titanium.Buffer buffer, float offset, float length)
 	/*-{
 		return this.read(buffer, offset, length);
 	}-*/;
@@ -63,7 +63,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	 *            buffer to write to stream
 	 * @return Number of bytes written.
 	 */
-	public native float write(org.urish.gwtit.titanium.Buffer buffer)
+	public final native float write(org.urish.gwtit.titanium.Buffer buffer)
 	/*-{
 		return this.write(buffer);
 	}-*/;
@@ -79,7 +79,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	 *            length of data to write from buffer
 	 * @return Number of bytes written.
 	 */
-	public native float write(org.urish.gwtit.titanium.Buffer buffer, float offset, float length)
+	public final native float write(org.urish.gwtit.titanium.Buffer buffer, float offset, float length)
 	/*-{
 		return this.write(buffer, offset, length);
 	}-*/;
@@ -89,7 +89,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @return true if stream is writeable, false otherwise
 	 */
-	public native boolean isWriteable()
+	public final native boolean isWriteable()
 	/*-{
 		return this.isWriteable();
 	}-*/;
@@ -99,7 +99,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @return true if stream is readable, false otherwise
 	 */
-	public native boolean isReadable()
+	public final native boolean isReadable()
 	/*-{
 		return this.isReadable();
 	}-*/;
@@ -107,7 +107,7 @@ public class IOStream extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Closes stream and throws exception on error
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;

@@ -42,4 +42,10 @@ public class StringUtil {
 	/*-{
 		return String.formatDecimal(decimal);
 	}-*/;
+
+	public static native String format(String string, Object... args)
+	/*-{
+		args.unshift(string);
+		return String.format.apply(String, args);
+	}-*/;
 }

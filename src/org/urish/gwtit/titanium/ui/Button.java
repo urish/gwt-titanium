@@ -32,12 +32,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The foreground color of the button text
 	 */
-	public native String getColor()
+	public final native String getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public native void setColor(String value)
+	public final native void setColor(String value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -45,12 +45,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean that indicates if the button is enabled or not
 	 */
-	public native boolean getEnabled()
+	public final native boolean getEnabled()
 	/*-{
 		return this.enabled;
 	}-*/;
 
-	public native void setEnabled(boolean value)
+	public final native void setEnabled(boolean value)
 	/*-{
 		this.enabled = value;
 	}-*/;
@@ -58,12 +58,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The font properties of the button
 	 */
-	public native Object getFont()
+	public final native Object getFont()
 	/*-{
 		return this.font;
 	}-*/;
 
-	public native void setFont(Object value)
+	public final native void setFont(Object value)
 	/*-{
 		this.font = value;
 	}-*/;
@@ -71,12 +71,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image to display on the button to the left of the title
 	 */
-	public native String getImage()
+	public final native String getImage()
 	/*-{
 		return this.image;
 	}-*/;
 
-	public native void setImage(String value)
+	public final native void setImage(String value)
 	/*-{
 		this.image = value;
 	}-*/;
@@ -85,12 +85,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	 * @return The selected color of the button text when the button is in the
 	 *         selected state
 	 */
-	public native String getSelectedColor()
+	public final native String getSelectedColor()
 	/*-{
 		return this.selectedColor;
 	}-*/;
 
-	public native void setSelectedColor(String value)
+	public final native void setSelectedColor(String value)
 	/*-{
 		this.selectedColor = value;
 	}-*/;
@@ -98,12 +98,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Style constant for the type of button
 	 */
-	public native float getStyle()
+	public final native float getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(float value)
+	public final native void setStyle(float value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -111,12 +111,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Button title
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -125,12 +125,12 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	 * @return The key in the locale file to use for the title property
 	 * @since 1.5
 	 */
-	public native String getTitleid()
+	public final native String getTitleid()
 	/*-{
 		return this.titleid;
 	}-*/;
 
-	public native void setTitleid(String value)
+	public final native void setTitleid(String value)
 	/*-{
 		this.titleid = value;
 	}-*/;

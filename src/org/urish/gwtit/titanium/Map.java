@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The top level map module. the map module is used for creating in-application
@@ -31,11 +29,26 @@ public class Map extends org.urish.gwtit.titanium.Module {
 	protected Map() {
 	}
 
-	public static final Const HYBRID_TYPE = new ConstImpl("Titanium.Map.HYBRID_TYPE");
+	private static native final float value_HYBRID_TYPE()
+	/*-{
+		return Titanium.Map.HYBRID_TYPE;
+	}-*/;
 
-	public static final Const SATELLITE_TYPE = new ConstImpl("Titanium.Map.SATELLITE_TYPE");
+	public static final float HYBRID_TYPE = value_HYBRID_TYPE();
 
-	public static final Const STANDARD_TYPE = new ConstImpl("Titanium.Map.STANDARD_TYPE");
+	private static native final float value_SATELLITE_TYPE()
+	/*-{
+		return Titanium.Map.SATELLITE_TYPE;
+	}-*/;
+
+	public static final float SATELLITE_TYPE = value_SATELLITE_TYPE();
+
+	private static native final float value_STANDARD_TYPE()
+	/*-{
+		return Titanium.Map.STANDARD_TYPE;
+	}-*/;
+
+	public static final float STANDARD_TYPE = value_STANDARD_TYPE();
 
 	public static native org.urish.gwtit.titanium.map.Annotation createAnnotation()
 	/*-{

@@ -32,12 +32,12 @@ public class PumpCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return Stream being read from
 	 */
-	public native org.urish.gwtit.titanium.IOStream getSource()
+	public final native org.urish.gwtit.titanium.IOStream getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public native void setSource(org.urish.gwtit.titanium.IOStream value)
+	public final native void setSource(org.urish.gwtit.titanium.IOStream value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class PumpCallbackArgs extends JavaScriptObject {
 	 * @return Buffer object holding the data currently being pumped to the
 	 *         handler method
 	 */
-	public native org.urish.gwtit.titanium.Buffer getBuffer()
+	public final native org.urish.gwtit.titanium.Buffer getBuffer()
 	/*-{
 		return this.buffer;
 	}-*/;
 
-	public native void setBuffer(org.urish.gwtit.titanium.Buffer value)
+	public final native void setBuffer(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.buffer = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class PumpCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return Number of bytes processed in the current pump segment
 	 */
-	public native float getBytesProcessed()
+	public final native float getBytesProcessed()
 	/*-{
 		return this.bytesProcessed;
 	}-*/;
 
-	public native void setBytesProcessed(float value)
+	public final native void setBytesProcessed(float value)
 	/*-{
 		this.bytesProcessed = value;
 	}-*/;
@@ -73,12 +73,12 @@ public class PumpCallbackArgs extends JavaScriptObject {
 	 * @return Total number of bytes processed in the overall pump operation so
 	 *         far
 	 */
-	public native float getTotalBytesProcessed()
+	public final native float getTotalBytesProcessed()
 	/*-{
 		return this.totalBytesProcessed;
 	}-*/;
 
-	public native void setTotalBytesProcessed(float value)
+	public final native void setTotalBytesProcessed(float value)
 	/*-{
 		this.totalBytesProcessed = value;
 	}-*/;
@@ -86,12 +86,12 @@ public class PumpCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return State representing error
 	 */
-	public native String getErrorState()
+	public final native String getErrorState()
 	/*-{
 		return this.errorState;
 	}-*/;
 
-	public native void setErrorState(String value)
+	public final native void setErrorState(String value)
 	/*-{
 		this.errorState = value;
 	}-*/;
@@ -99,12 +99,12 @@ public class PumpCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return Description of the error
 	 */
-	public native String getErrorDescription()
+	public final native String getErrorDescription()
 	/*-{
 		return this.errorDescription;
 	}-*/;
 
-	public native void setErrorDescription(String value)
+	public final native void setErrorDescription(String value)
 	/*-{
 		this.errorDescription = value;
 	}-*/;

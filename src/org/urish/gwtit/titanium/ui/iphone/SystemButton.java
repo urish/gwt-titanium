@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the system button style for buttons.
@@ -31,56 +29,186 @@ public class SystemButton extends org.urish.gwtit.titanium.Proxy {
 	protected SystemButton() {
 	}
 
-	public static final Const ACTION = new ConstImpl("Titanium.UI.iPhone.SystemButton.ACTION");
+	private static native final float value_ACTION()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.ACTION;
+	}-*/;
 
-	public static final Const ACTIVITY = new ConstImpl("Titanium.UI.iPhone.SystemButton.ACTIVITY");
+	public static final float ACTION = value_ACTION();
 
-	public static final Const ADD = new ConstImpl("Titanium.UI.iPhone.SystemButton.ADD");
+	private static native final float value_ACTIVITY()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.ACTIVITY;
+	}-*/;
 
-	public static final Const BOOKMARKS = new ConstImpl("Titanium.UI.iPhone.SystemButton.BOOKMARKS");
+	public static final float ACTIVITY = value_ACTIVITY();
 
-	public static final Const CAMERA = new ConstImpl("Titanium.UI.iPhone.SystemButton.CAMERA");
+	private static native final float value_ADD()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.ADD;
+	}-*/;
 
-	public static final Const CANCEL = new ConstImpl("Titanium.UI.iPhone.SystemButton.CANCEL");
+	public static final float ADD = value_ADD();
 
-	public static final Const COMPOSE = new ConstImpl("Titanium.UI.iPhone.SystemButton.COMPOSE");
+	private static native final float value_BOOKMARKS()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.BOOKMARKS;
+	}-*/;
 
-	public static final Const CONTACT_ADD = new ConstImpl("Titanium.UI.iPhone.SystemButton.CONTACT_ADD");
+	public static final float BOOKMARKS = value_BOOKMARKS();
 
-	public static final Const DISCLOSURE = new ConstImpl("Titanium.UI.iPhone.SystemButton.DISCLOSURE");
+	private static native final float value_CAMERA()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.CAMERA;
+	}-*/;
 
-	public static final Const DONE = new ConstImpl("Titanium.UI.iPhone.SystemButton.DONE");
+	public static final float CAMERA = value_CAMERA();
 
-	public static final Const EDIT = new ConstImpl("Titanium.UI.iPhone.SystemButton.EDIT");
+	private static native final float value_CANCEL()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.CANCEL;
+	}-*/;
 
-	public static final Const FAST_FORWARD = new ConstImpl("Titanium.UI.iPhone.SystemButton.FAST_FORWARD");
+	public static final float CANCEL = value_CANCEL();
 
-	public static final Const FIXED_SPACE = new ConstImpl("Titanium.UI.iPhone.SystemButton.FIXED_SPACE");
+	private static native final float value_COMPOSE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.COMPOSE;
+	}-*/;
 
-	public static final Const FLEXIBLE_SPACE = new ConstImpl("Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE");
+	public static final float COMPOSE = value_COMPOSE();
 
-	public static final Const INFO_DARK = new ConstImpl("Titanium.UI.iPhone.SystemButton.INFO_DARK");
+	private static native final float value_CONTACT_ADD()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.CONTACT_ADD;
+	}-*/;
 
-	public static final Const INFO_LIGHT = new ConstImpl("Titanium.UI.iPhone.SystemButton.INFO_LIGHT");
+	public static final float CONTACT_ADD = value_CONTACT_ADD();
 
-	public static final Const ORGANIZE = new ConstImpl("Titanium.UI.iPhone.SystemButton.ORGANIZE");
+	private static native final float value_DISCLOSURE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.DISCLOSURE;
+	}-*/;
 
-	public static final Const PAUSE = new ConstImpl("Titanium.UI.iPhone.SystemButton.PAUSE");
+	public static final float DISCLOSURE = value_DISCLOSURE();
 
-	public static final Const PLAY = new ConstImpl("Titanium.UI.iPhone.SystemButton.PLAY");
+	private static native final float value_DONE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.DONE;
+	}-*/;
 
-	public static final Const REFRESH = new ConstImpl("Titanium.UI.iPhone.SystemButton.REFRESH");
+	public static final float DONE = value_DONE();
 
-	public static final Const REPLY = new ConstImpl("Titanium.UI.iPhone.SystemButton.REPLY");
+	private static native final float value_EDIT()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.EDIT;
+	}-*/;
 
-	public static final Const REWIND = new ConstImpl("Titanium.UI.iPhone.SystemButton.REWIND");
+	public static final float EDIT = value_EDIT();
 
-	public static final Const SAVE = new ConstImpl("Titanium.UI.iPhone.SystemButton.SAVE");
+	private static native final float value_FAST_FORWARD()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.FAST_FORWARD;
+	}-*/;
 
-	public static final Const SPINNER = new ConstImpl("Titanium.UI.iPhone.SystemButton.SPINNER");
+	public static final float FAST_FORWARD = value_FAST_FORWARD();
 
-	public static final Const STOP = new ConstImpl("Titanium.UI.iPhone.SystemButton.STOP");
+	private static native final float value_FIXED_SPACE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.FIXED_SPACE;
+	}-*/;
 
-	public static final Const TRASH = new ConstImpl("Titanium.UI.iPhone.SystemButton.TRASH");
+	public static final float FIXED_SPACE = value_FIXED_SPACE();
+
+	private static native final float value_FLEXIBLE_SPACE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.FLEXIBLE_SPACE;
+	}-*/;
+
+	public static final float FLEXIBLE_SPACE = value_FLEXIBLE_SPACE();
+
+	private static native final float value_INFO_DARK()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.INFO_DARK;
+	}-*/;
+
+	public static final float INFO_DARK = value_INFO_DARK();
+
+	private static native final float value_INFO_LIGHT()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.INFO_LIGHT;
+	}-*/;
+
+	public static final float INFO_LIGHT = value_INFO_LIGHT();
+
+	private static native final float value_ORGANIZE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.ORGANIZE;
+	}-*/;
+
+	public static final float ORGANIZE = value_ORGANIZE();
+
+	private static native final float value_PAUSE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.PAUSE;
+	}-*/;
+
+	public static final float PAUSE = value_PAUSE();
+
+	private static native final float value_PLAY()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.PLAY;
+	}-*/;
+
+	public static final float PLAY = value_PLAY();
+
+	private static native final float value_REFRESH()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.REFRESH;
+	}-*/;
+
+	public static final float REFRESH = value_REFRESH();
+
+	private static native final float value_REPLY()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.REPLY;
+	}-*/;
+
+	public static final float REPLY = value_REPLY();
+
+	private static native final float value_REWIND()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.REWIND;
+	}-*/;
+
+	public static final float REWIND = value_REWIND();
+
+	private static native final float value_SAVE()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.SAVE;
+	}-*/;
+
+	public static final float SAVE = value_SAVE();
+
+	private static native final float value_SPINNER()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.SPINNER;
+	}-*/;
+
+	public static final float SPINNER = value_SPINNER();
+
+	private static native final float value_STOP()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.STOP;
+	}-*/;
+
+	public static final float STOP = value_STOP();
+
+	private static native final float value_TRASH()
+	/*-{
+		return Titanium.UI.iPhone.SystemButton.TRASH;
+	}-*/;
+
+	public static final float TRASH = value_TRASH();
 
 }

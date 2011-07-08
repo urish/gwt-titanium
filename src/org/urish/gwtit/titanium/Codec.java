@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A module for converting numbers and strings to and from a
@@ -31,33 +29,103 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	protected Codec() {
 	}
 
-	public static final Const CHARSET_ASCII = new ConstImpl("Titanium.Codec.CHARSET_ASCII");
+	private static native final String value_CHARSET_ASCII()
+	/*-{
+		return Titanium.Codec.CHARSET_ASCII;
+	}-*/;
 
-	public static final Const CHARSET_ISO_LATIN_1 = new ConstImpl("Titanium.Codec.CHARSET_ISO_LATIN_1");
+	public static final String CHARSET_ASCII = value_CHARSET_ASCII();
 
-	public static final Const CHARSET_UTF8 = new ConstImpl("Titanium.Codec.CHARSET_UTF8");
+	private static native final String value_CHARSET_ISO_LATIN_1()
+	/*-{
+		return Titanium.Codec.CHARSET_ISO_LATIN_1;
+	}-*/;
 
-	public static final Const CHARSET_UTF16 = new ConstImpl("Titanium.Codec.CHARSET_UTF16");
+	public static final String CHARSET_ISO_LATIN_1 = value_CHARSET_ISO_LATIN_1();
 
-	public static final Const CHARSET_UTF16BE = new ConstImpl("Titanium.Codec.CHARSET_UTF16BE");
+	private static native final String value_CHARSET_UTF8()
+	/*-{
+		return Titanium.Codec.CHARSET_UTF8;
+	}-*/;
 
-	public static final Const CHARSET_UTF16LE = new ConstImpl("Titanium.Codec.CHARSET_UTF16LE");
+	public static final String CHARSET_UTF8 = value_CHARSET_UTF8();
 
-	public static final Const TYPE_BYTE = new ConstImpl("Titanium.Codec.TYPE_BYTE");
+	private static native final String value_CHARSET_UTF16()
+	/*-{
+		return Titanium.Codec.CHARSET_UTF16;
+	}-*/;
 
-	public static final Const TYPE_SHORT = new ConstImpl("Titanium.Codec.TYPE_SHORT");
+	public static final String CHARSET_UTF16 = value_CHARSET_UTF16();
 
-	public static final Const TYPE_INT = new ConstImpl("Titanium.Codec.TYPE_INT");
+	private static native final String value_CHARSET_UTF16BE()
+	/*-{
+		return Titanium.Codec.CHARSET_UTF16BE;
+	}-*/;
 
-	public static final Const TYPE_FLOAT = new ConstImpl("Titanium.Codec.TYPE_FLOAT");
+	public static final String CHARSET_UTF16BE = value_CHARSET_UTF16BE();
 
-	public static final Const TYPE_LONG = new ConstImpl("Titanium.Codec.TYPE_LONG");
+	private static native final String value_CHARSET_UTF16LE()
+	/*-{
+		return Titanium.Codec.CHARSET_UTF16LE;
+	}-*/;
 
-	public static final Const TYPE_DOUBLE = new ConstImpl("Titanium.Codec.TYPE_DOUBLE");
+	public static final String CHARSET_UTF16LE = value_CHARSET_UTF16LE();
 
-	public static final Const BIG_ENDIAN = new ConstImpl("Titanium.Codec.BIG_ENDIAN");
+	private static native final String value_TYPE_BYTE()
+	/*-{
+		return Titanium.Codec.TYPE_BYTE;
+	}-*/;
 
-	public static final Const LITTLE_ENDIAN = new ConstImpl("Titanium.Codec.LITTLE_ENDIAN");
+	public static final String TYPE_BYTE = value_TYPE_BYTE();
+
+	private static native final String value_TYPE_SHORT()
+	/*-{
+		return Titanium.Codec.TYPE_SHORT;
+	}-*/;
+
+	public static final String TYPE_SHORT = value_TYPE_SHORT();
+
+	private static native final String value_TYPE_INT()
+	/*-{
+		return Titanium.Codec.TYPE_INT;
+	}-*/;
+
+	public static final String TYPE_INT = value_TYPE_INT();
+
+	private static native final String value_TYPE_FLOAT()
+	/*-{
+		return Titanium.Codec.TYPE_FLOAT;
+	}-*/;
+
+	public static final String TYPE_FLOAT = value_TYPE_FLOAT();
+
+	private static native final String value_TYPE_LONG()
+	/*-{
+		return Titanium.Codec.TYPE_LONG;
+	}-*/;
+
+	public static final String TYPE_LONG = value_TYPE_LONG();
+
+	private static native final String value_TYPE_DOUBLE()
+	/*-{
+		return Titanium.Codec.TYPE_DOUBLE;
+	}-*/;
+
+	public static final String TYPE_DOUBLE = value_TYPE_DOUBLE();
+
+	private static native final float value_BIG_ENDIAN()
+	/*-{
+		return Titanium.Codec.BIG_ENDIAN;
+	}-*/;
+
+	public static final float BIG_ENDIAN = value_BIG_ENDIAN();
+
+	private static native final float value_LITTLE_ENDIAN()
+	/*-{
+		return Titanium.Codec.LITTLE_ENDIAN;
+	}-*/;
+
+	public static final float LITTLE_ENDIAN = value_LITTLE_ENDIAN();
 
 	/**
 	 * Get the os native byte order (either
@@ -126,6 +194,45 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	public static native String decodeString(Object options)
 	/*-{
 		return Titanium.Codec.decodeString(options);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Codec.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Codec.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Codec.fireEvent(name, event);
 	}-*/;
 
 }

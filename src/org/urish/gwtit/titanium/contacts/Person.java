@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.contacts;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * An object which represents a person in the contacts database.
@@ -36,18 +34,23 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	protected Person() {
 	}
 
-	public static final Const URL = new ConstImpl("Titanium.Contacts.Person.URL");
+	private static native final Object value_URL()
+	/*-{
+		return Titanium.Contacts.Person.URL;
+	}-*/;
+
+	public static final Object URL = value_URL();
 
 	/**
 	 * @return The addresses for the person. multi-value, valid labels are:
 	 *         `home`, `work`, `other`. values are dictionaries.
 	 */
-	public native Object getAddress()
+	public final native Object getAddress()
 	/*-{
 		return this.address;
 	}-*/;
 
-	public native void setAddress(Object value)
+	public final native void setAddress(Object value)
 	/*-{
 		this.address = value;
 	}-*/;
@@ -56,12 +59,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return The birthday of the person. single value, format is
 	 *         "yyyy-mm-dd't'hh:mm:ss'.'sss+0000"
 	 */
-	public native String getBirthday()
+	public final native String getBirthday()
 	/*-{
 		return this.birthday;
 	}-*/;
 
-	public native void setBirthday(String value)
+	public final native void setBirthday(String value)
 	/*-{
 		this.birthday = value;
 	}-*/;
@@ -70,12 +73,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return The date the person was created in the database. single value,
 	 *         format is "yyyy-mm-dd't'hh:mm:ss'.'sss+0000", read-only
 	 */
-	public native String getCreated()
+	public final native String getCreated()
 	/*-{
 		return this.created;
 	}-*/;
 
-	public native void setCreated(String value)
+	public final native void setCreated(String value)
 	/*-{
 		this.created = value;
 	}-*/;
@@ -85,12 +88,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         `anniversary`. values are strings of format
 	 *         "yyyy-mm-dd't'hh:mm:ss'.'sss+0000"
 	 */
-	public native Object getDate()
+	public final native Object getDate()
 	/*-{
 		return this.date;
 	}-*/;
 
-	public native void setDate(Object value)
+	public final native void setDate(Object value)
 	/*-{
 		this.date = value;
 	}-*/;
@@ -98,12 +101,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The department of the person. single value
 	 */
-	public native String getDepartment()
+	public final native String getDepartment()
 	/*-{
 		return this.department;
 	}-*/;
 
-	public native void setDepartment(String value)
+	public final native void setDepartment(String value)
 	/*-{
 		this.department = value;
 	}-*/;
@@ -112,12 +115,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return The email addresses for the person. multi-value, valid labels
 	 *         are: `home`, `work`, `other`. values are strings.
 	 */
-	public native Object getEmail()
+	public final native Object getEmail()
 	/*-{
 		return this.email;
 	}-*/;
 
-	public native void setEmail(Object value)
+	public final native void setEmail(Object value)
 	/*-{
 		this.email = value;
 	}-*/;
@@ -125,12 +128,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The first name of the person. single value
 	 */
-	public native String getFirstName()
+	public final native String getFirstName()
 	/*-{
 		return this.firstName;
 	}-*/;
 
-	public native void setFirstName(String value)
+	public final native void setFirstName(String value)
 	/*-{
 		this.firstName = value;
 	}-*/;
@@ -138,12 +141,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The phonetic first name of the person. single value
 	 */
-	public native String getFirstPhonetic()
+	public final native String getFirstPhonetic()
 	/*-{
 		return this.firstPhonetic;
 	}-*/;
 
-	public native void setFirstPhonetic(String value)
+	public final native void setFirstPhonetic(String value)
 	/*-{
 		this.firstPhonetic = value;
 	}-*/;
@@ -151,12 +154,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The localized full name of the person. single value, read-only
 	 */
-	public native String getFullName()
+	public final native String getFullName()
 	/*-{
 		return this.fullName;
 	}-*/;
 
-	public native void setFullName(String value)
+	public final native void setFullName(String value)
 	/*-{
 		this.fullName = value;
 	}-*/;
@@ -165,12 +168,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return A blob object representing the image for the person. set to
 	 *         `null` to remove the image. single value
 	 */
-	public native Object getImage()
+	public final native Object getImage()
 	/*-{
 		return this.image;
 	}-*/;
 
-	public native void setImage(Object value)
+	public final native void setImage(Object value)
 	/*-{
 		this.image = value;
 	}-*/;
@@ -180,12 +183,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         labels are: `aim`, `icq`, `jabber`, `msn`, `yahoo`. values are
 	 *         dictionaries.
 	 */
-	public native Object getInstantMessage()
+	public final native Object getInstantMessage()
 	/*-{
 		return this.instantMessage;
 	}-*/;
 
-	public native void setInstantMessage(Object value)
+	public final native void setInstantMessage(Object value)
 	/*-{
 		this.instantMessage = value;
 	}-*/;
@@ -193,12 +196,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The job title of the person. single value
 	 */
-	public native String getJobTitle()
+	public final native String getJobTitle()
 	/*-{
 		return this.jobTitle;
 	}-*/;
 
-	public native void setJobTitle(String value)
+	public final native void setJobTitle(String value)
 	/*-{
 		this.jobTitle = value;
 	}-*/;
@@ -208,12 +211,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.contacts.contacts_kind_person} or
 	 *         {@link org.urish.gwtit.titanium.contacts.contacts_kind_organization}
 	 */
-	public native float getKind()
+	public final native float getKind()
 	/*-{
 		return this.kind;
 	}-*/;
 
-	public native void setKind(float value)
+	public final native void setKind(float value)
 	/*-{
 		this.kind = value;
 	}-*/;
@@ -221,12 +224,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The last name of the person. single value
 	 */
-	public native String getLastName()
+	public final native String getLastName()
 	/*-{
 		return this.lastName;
 	}-*/;
 
-	public native void setLastName(String value)
+	public final native void setLastName(String value)
 	/*-{
 		this.lastName = value;
 	}-*/;
@@ -234,12 +237,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The phonetic last name of the person. single value
 	 */
-	public native String getLastPhonetic()
+	public final native String getLastPhonetic()
 	/*-{
 		return this.lastPhonetic;
 	}-*/;
 
-	public native void setLastPhonetic(String value)
+	public final native void setLastPhonetic(String value)
 	/*-{
 		this.lastPhonetic = value;
 	}-*/;
@@ -247,12 +250,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The middle name of the person. single value
 	 */
-	public native String getMiddleName()
+	public final native String getMiddleName()
 	/*-{
 		return this.middleName;
 	}-*/;
 
-	public native void setMiddleName(String value)
+	public final native void setMiddleName(String value)
 	/*-{
 		this.middleName = value;
 	}-*/;
@@ -260,12 +263,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The phonetic middle name of the person. single value
 	 */
-	public native String getMiddlePhonetic()
+	public final native String getMiddlePhonetic()
 	/*-{
 		return this.middlePhonetic;
 	}-*/;
 
-	public native void setMiddlePhonetic(String value)
+	public final native void setMiddlePhonetic(String value)
 	/*-{
 		this.middlePhonetic = value;
 	}-*/;
@@ -274,12 +277,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return The most recent date the person was modified. single value,
 	 *         format is "yyyy-mm-dd't'hh:mm:ss'.'sss+0000", read-only
 	 */
-	public native String getModified()
+	public final native String getModified()
 	/*-{
 		return this.modified;
 	}-*/;
 
-	public native void setModified(String value)
+	public final native void setModified(String value)
 	/*-{
 		this.modified = value;
 	}-*/;
@@ -287,12 +290,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The nickname of the person. single value
 	 */
-	public native String getNickname()
+	public final native String getNickname()
 	/*-{
 		return this.nickname;
 	}-*/;
 
-	public native void setNickname(String value)
+	public final native void setNickname(String value)
 	/*-{
 		this.nickname = value;
 	}-*/;
@@ -300,12 +303,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Notes for the person. single value
 	 */
-	public native String getNote()
+	public final native String getNote()
 	/*-{
 		return this.note;
 	}-*/;
 
-	public native void setNote(String value)
+	public final native void setNote(String value)
 	/*-{
 		this.note = value;
 	}-*/;
@@ -313,12 +316,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The organization the person belongs to. single value
 	 */
-	public native String getOrganization()
+	public final native String getOrganization()
 	/*-{
 		return this.organization;
 	}-*/;
 
-	public native void setOrganization(String value)
+	public final native void setOrganization(String value)
 	/*-{
 		this.organization = value;
 	}-*/;
@@ -328,12 +331,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         `home`, `work`, `other`, `mobile`, `pager`, `workfax`, `homefax`,
 	 *         `main`, `iphone`. values are strings.
 	 */
-	public native Object getPhone()
+	public final native Object getPhone()
 	/*-{
 		return this.phone;
 	}-*/;
 
-	public native void setPhone(Object value)
+	public final native void setPhone(Object value)
 	/*-{
 		this.phone = value;
 	}-*/;
@@ -341,12 +344,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The prefix for the person. single value
 	 */
-	public native String getPrefix()
+	public final native String getPrefix()
 	/*-{
 		return this.prefix;
 	}-*/;
 
-	public native void setPrefix(String value)
+	public final native void setPrefix(String value)
 	/*-{
 		this.prefix = value;
 	}-*/;
@@ -357,12 +360,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         `child`, `friend`, `spouse`, `partner`, `manager`, `assistant`.
 	 *         values are strings.
 	 */
-	public native Object getRelatedNames()
+	public final native Object getRelatedNames()
 	/*-{
 		return this.relatedNames;
 	}-*/;
 
-	public native void setRelatedNames(Object value)
+	public final native void setRelatedNames(Object value)
 	/*-{
 		this.relatedNames = value;
 	}-*/;
@@ -370,12 +373,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The suffix for the person. single value
 	 */
-	public native String getSuffix()
+	public final native String getSuffix()
 	/*-{
 		return this.suffix;
 	}-*/;
 
-	public native void setSuffix(String value)
+	public final native void setSuffix(String value)
 	/*-{
 		this.suffix = value;
 	}-*/;

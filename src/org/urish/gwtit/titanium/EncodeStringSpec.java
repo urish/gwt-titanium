@@ -30,12 +30,12 @@ public class EncodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The source string to encode
 	 */
-	public native String getSource()
+	public final native String getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public native void setSource(String value)
+	public final native void setSource(String value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -43,12 +43,12 @@ public class EncodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The destination buffer
 	 */
-	public native org.urish.gwtit.titanium.Buffer getDest()
+	public final native org.urish.gwtit.titanium.Buffer getDest()
 	/*-{
 		return this.dest;
 	}-*/;
 
-	public native void setDest(org.urish.gwtit.titanium.Buffer value)
+	public final native void setDest(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.dest = value;
 	}-*/;
@@ -56,12 +56,12 @@ public class EncodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The position in `dest` to set the encoded string.
 	 */
-	public native float getDestPosition()
+	public final native float getDestPosition()
 	/*-{
 		return this.destPosition;
 	}-*/;
 
-	public native void setDestPosition(float value)
+	public final native void setDestPosition(float value)
 	/*-{
 		this.destPosition = value;
 	}-*/;
@@ -69,12 +69,12 @@ public class EncodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The position in `source` to start encoding.
 	 */
-	public native float getSourcePosition()
+	public final native float getSourcePosition()
 	/*-{
 		return this.sourcePosition;
 	}-*/;
 
-	public native void setSourcePosition(float value)
+	public final native void setSourcePosition(float value)
 	/*-{
 		this.sourcePosition = value;
 	}-*/;
@@ -82,12 +82,12 @@ public class EncodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The number of characters in `source` to encode.
 	 */
-	public native float getSourceLength()
+	public final native float getSourceLength()
 	/*-{
 		return this.sourceLength;
 	}-*/;
 
-	public native void setSourceLength(float value)
+	public final native void setSourceLength(float value)
 	/*-{
 		this.sourceLength = value;
 	}-*/;
@@ -95,12 +95,12 @@ public class EncodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The character set to use when encoding this string to bytes.
 	 */
-	public native String getCharset()
+	public final native String getCharset()
 	/*-{
 		return this.charset;
 	}-*/;
 
-	public native void setCharset(String value)
+	public final native void setCharset(String value)
 	/*-{
 		this.charset = value;
 	}-*/;

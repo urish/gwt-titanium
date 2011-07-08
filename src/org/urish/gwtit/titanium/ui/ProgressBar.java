@@ -35,12 +35,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The color of the progress bar text
 	 */
-	public native String getColor()
+	public final native String getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public native void setColor(String value)
+	public final native void setColor(String value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -48,12 +48,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The font object for the progress bar text
 	 */
-	public native Object getFont()
+	public final native Object getFont()
 	/*-{
 		return this.font;
 	}-*/;
 
-	public native void setFont(Object value)
+	public final native void setFont(Object value)
 	/*-{
 		this.font = value;
 	}-*/;
@@ -61,12 +61,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The maximum value of the progress bar
 	 */
-	public native float getMax()
+	public final native float getMax()
 	/*-{
 		return this.max;
 	}-*/;
 
-	public native void setMax(float value)
+	public final native void setMax(float value)
 	/*-{
 		this.max = value;
 	}-*/;
@@ -74,12 +74,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The progress bar message
 	 */
-	public native String getMessage()
+	public final native String getMessage()
 	/*-{
 		return this.message;
 	}-*/;
 
-	public native void setMessage(String value)
+	public final native void setMessage(String value)
 	/*-{
 		this.message = value;
 	}-*/;
@@ -87,12 +87,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The minimum value of the progress bar
 	 */
-	public native float getMin()
+	public final native float getMin()
 	/*-{
 		return this.min;
 	}-*/;
 
-	public native void setMin(float value)
+	public final native void setMin(float value)
 	/*-{
 		this.min = value;
 	}-*/;
@@ -100,12 +100,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The style of the progress bar
 	 */
-	public native float getStyle()
+	public final native float getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(float value)
+	public final native void setStyle(float value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -113,12 +113,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The current value of the progress bar
 	 */
-	public native float getValue()
+	public final native float getValue()
 	/*-{
 		return this.value;
 	}-*/;
 
-	public native void setValue(float value)
+	public final native void setValue(float value)
 	/*-{
 		this.value = value;
 	}-*/;

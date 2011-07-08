@@ -37,12 +37,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         value. anchor specifies the position by which animation should
 	 *         occur. center is 0.5, 0.5
 	 */
-	public native Object getAnchorPoint()
+	public final native Object getAnchorPoint()
 	/*-{
 		return this.anchorPoint;
 	}-*/;
 
-	public native void setAnchorPoint(Object value)
+	public final native void setAnchorPoint(Object value)
 	/*-{
 		this.anchorPoint = value;
 	}-*/;
@@ -51,12 +51,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return Read-only object with x and y properties of where the view is
 	 *         during animation
 	 */
-	public native Object getAnimatedCenterPoint()
+	public final native Object getAnimatedCenterPoint()
 	/*-{
 		return this.animatedCenterPoint;
 	}-*/;
 
-	public native void setAnimatedCenterPoint(Object value)
+	public final native void setAnimatedCenterPoint(Object value)
 	/*-{
 		this.animatedCenterPoint = value;
 	}-*/;
@@ -64,12 +64,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The background color of the view
 	 */
-	public native String getBackgroundColor()
+	public final native String getBackgroundColor()
 	/*-{
 		return this.backgroundColor;
 	}-*/;
 
-	public native void setBackgroundColor(String value)
+	public final native void setBackgroundColor(String value)
 	/*-{
 		this.backgroundColor = value;
 	}-*/;
@@ -78,12 +78,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return The disabled background color of the view. (android)
 	 * @platforms android
 	 */
-	public native String getBackgroundDisabledColor()
+	public final native String getBackgroundDisabledColor()
 	/*-{
 		return this.backgroundDisabledColor;
 	}-*/;
 
-	public native void setBackgroundDisabledColor(String value)
+	public final native void setBackgroundDisabledColor(String value)
 	/*-{
 		this.backgroundDisabledColor = value;
 	}-*/;
@@ -92,12 +92,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return The disabled background image url of the view. (android)
 	 * @platforms android
 	 */
-	public native String getBackgroundDisabledImage()
+	public final native String getBackgroundDisabledImage()
 	/*-{
 		return this.backgroundDisabledImage;
 	}-*/;
 
-	public native void setBackgroundDisabledImage(String value)
+	public final native void setBackgroundDisabledImage(String value)
 	/*-{
 		this.backgroundDisabledImage = value;
 	}-*/;
@@ -107,12 +107,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         for normal views. (android)
 	 * @platforms android
 	 */
-	public native String getBackgroundFocusedColor()
+	public final native String getBackgroundFocusedColor()
 	/*-{
 		return this.backgroundFocusedColor;
 	}-*/;
 
-	public native void setBackgroundFocusedColor(String value)
+	public final native void setBackgroundFocusedColor(String value)
 	/*-{
 		this.backgroundFocusedColor = value;
 	}-*/;
@@ -122,12 +122,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         true for normal views. (android)
 	 * @platforms android
 	 */
-	public native String getBackgroundFocusedImage()
+	public final native String getBackgroundFocusedImage()
 	/*-{
 		return this.backgroundFocusedImage;
 	}-*/;
 
-	public native void setBackgroundFocusedImage(String value)
+	public final native void setBackgroundFocusedImage(String value)
 	/*-{
 		this.backgroundFocusedImage = value;
 	}-*/;
@@ -137,12 +137,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         type,startpoint
 	 *         ,endpoint,startradius,endradius,backfillstart,backfillend,colors.
 	 */
-	public native Object getBackgroundGradient()
+	public final native Object getBackgroundGradient()
 	/*-{
 		return this.backgroundGradient;
 	}-*/;
 
-	public native void setBackgroundGradient(Object value)
+	public final native void setBackgroundGradient(Object value)
 	/*-{
 		this.backgroundGradient = value;
 	}-*/;
@@ -150,12 +150,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The background image url of the view
 	 */
-	public native String getBackgroundImage()
+	public final native String getBackgroundImage()
 	/*-{
 		return this.backgroundImage;
 	}-*/;
 
-	public native void setBackgroundImage(String value)
+	public final native void setBackgroundImage(String value)
 	/*-{
 		this.backgroundImage = value;
 	}-*/;
@@ -173,12 +173,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         of the left end cap and the middle portion together and then
 	 *         subtracting that value from the width of the image
 	 */
-	public native float getBackgroundLeftCap()
+	public final native float getBackgroundLeftCap()
 	/*-{
 		return this.backgroundLeftCap;
 	}-*/;
 
-	public native void setBackgroundLeftCap(float value)
+	public final native void setBackgroundLeftCap(float value)
 	/*-{
 		this.backgroundLeftCap = value;
 	}-*/;
@@ -188,12 +188,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         for normal views. (android)
 	 * @platforms android
 	 */
-	public native String getBackgroundSelectedColor()
+	public final native String getBackgroundSelectedColor()
 	/*-{
 		return this.backgroundSelectedColor;
 	}-*/;
 
-	public native void setBackgroundSelectedColor(String value)
+	public final native void setBackgroundSelectedColor(String value)
 	/*-{
 		this.backgroundSelectedColor = value;
 	}-*/;
@@ -203,12 +203,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         true for normal views. (android)
 	 * @platforms android
 	 */
-	public native String getBackgroundSelectedImage()
+	public final native String getBackgroundSelectedImage()
 	/*-{
 		return this.backgroundSelectedImage;
 	}-*/;
 
-	public native void setBackgroundSelectedImage(String value)
+	public final native void setBackgroundSelectedImage(String value)
 	/*-{
 		this.backgroundSelectedImage = value;
 	}-*/;
@@ -226,12 +226,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         of the top end cap and the middle portion together and then
 	 *         subtracting that value from the height of the image
 	 */
-	public native float getBackgroundTopCap()
+	public final native float getBackgroundTopCap()
 	/*-{
 		return this.backgroundTopCap;
 	}-*/;
 
-	public native void setBackgroundTopCap(float value)
+	public final native void setBackgroundTopCap(float value)
 	/*-{
 		this.backgroundTopCap = value;
 	}-*/;
@@ -239,12 +239,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The border color of the view
 	 */
-	public native String getBorderColor()
+	public final native String getBorderColor()
 	/*-{
 		return this.borderColor;
 	}-*/;
 
-	public native void setBorderColor(String value)
+	public final native void setBorderColor(String value)
 	/*-{
 		this.borderColor = value;
 	}-*/;
@@ -252,12 +252,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The border radius of the view
 	 */
-	public native float getBorderRadius()
+	public final native float getBorderRadius()
 	/*-{
 		return this.borderRadius;
 	}-*/;
 
-	public native void setBorderRadius(float value)
+	public final native void setBorderRadius(float value)
 	/*-{
 		this.borderRadius = value;
 	}-*/;
@@ -265,22 +265,22 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The border width of the view
 	 */
-	public native float getBorderWidth()
+	public final native float getBorderWidth()
 	/*-{
 		return this.borderWidth;
 	}-*/;
 
-	public native void setBorderWidth(float value)
+	public final native void setBorderWidth(float value)
 	/*-{
 		this.borderWidth = value;
 	}-*/;
 
-	public native void setBottom(float value)
+	public final native void setBottom(float value)
 	/*-{
 		this.bottom = value;
 	}-*/;
 
-	public native void setBottom(String value)
+	public final native void setBottom(String value)
 	/*-{
 		this.bottom = value;
 	}-*/;
@@ -290,7 +290,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         to the view's parent. can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
-	public native Object getBottom()
+	public final native Object getBottom()
 	/*-{
 		return this.bottom;
 	}-*/;
@@ -299,12 +299,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return A dictionary with properties x and y to indicate the center of
 	 *         the views position relative to the parent view
 	 */
-	public native Object getCenter()
+	public final native Object getCenter()
 	/*-{
 		return this.center;
 	}-*/;
 
-	public native void setCenter(Object value)
+	public final native void setCenter(Object value)
 	/*-{
 		this.center = value;
 	}-*/;
@@ -315,22 +315,22 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @platforms android
 	 */
-	public native boolean getFocusable()
+	public final native boolean getFocusable()
 	/*-{
 		return this.focusable;
 	}-*/;
 
-	public native void setFocusable(boolean value)
+	public final native void setFocusable(boolean value)
 	/*-{
 		this.focusable = value;
 	}-*/;
 
-	public native void setHeight(float value)
+	public final native void setHeight(float value)
 	/*-{
 		this.height = value;
 	}-*/;
 
-	public native void setHeight(String value)
+	public final native void setHeight(String value)
 	/*-{
 		this.height = value;
 	}-*/;
@@ -339,17 +339,17 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return Property for the view height. can be either a float value or a
 	 *         dimension string ie 'auto' (default).
 	 */
-	public native Object getHeight()
+	public final native Object getHeight()
 	/*-{
 		return this.height;
 	}-*/;
 
-	public native void setLeft(float value)
+	public final native void setLeft(float value)
 	/*-{
 		this.left = value;
 	}-*/;
 
-	public native void setLeft(String value)
+	public final native void setLeft(String value)
 	/*-{
 		this.left = value;
 	}-*/;
@@ -359,7 +359,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         the view's parent. can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
-	public native Object getLeft()
+	public final native Object getLeft()
 	/*-{
 		return this.left;
 	}-*/;
@@ -367,22 +367,22 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The opacity from 0.0-1.0
 	 */
-	public native float getOpacity()
+	public final native float getOpacity()
 	/*-{
 		return this.opacity;
 	}-*/;
 
-	public native void setOpacity(float value)
+	public final native void setOpacity(float value)
 	/*-{
 		this.opacity = value;
 	}-*/;
 
-	public native void setRight(float value)
+	public final native void setRight(float value)
 	/*-{
 		this.right = value;
 	}-*/;
 
-	public native void setRight(String value)
+	public final native void setRight(String value)
 	/*-{
 		this.right = value;
 	}-*/;
@@ -392,7 +392,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         to the view's parent. can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
-	public native Object getRight()
+	public final native Object getRight()
 	/*-{
 		return this.right;
 	}-*/;
@@ -401,12 +401,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return The size of the view as a dictionary of width and height
 	 *         properties
 	 */
-	public native Object getSize()
+	public final native Object getSize()
 	/*-{
 		return this.size;
 	}-*/;
 
-	public native void setSize(Object value)
+	public final native void setSize(Object value)
 	/*-{
 		this.size = value;
 	}-*/;
@@ -417,22 +417,22 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         titanium.ui.android.soft_keyboard_show_on_focus. (android only)
 	 * @platforms android
 	 */
-	public native float getSoftKeyboardOnFocus()
+	public final native float getSoftKeyboardOnFocus()
 	/*-{
 		return this.softKeyboardOnFocus;
 	}-*/;
 
-	public native void setSoftKeyboardOnFocus(float value)
+	public final native void setSoftKeyboardOnFocus(float value)
 	/*-{
 		this.softKeyboardOnFocus = value;
 	}-*/;
 
-	public native void setTop(float value)
+	public final native void setTop(float value)
 	/*-{
 		this.top = value;
 	}-*/;
 
-	public native void setTop(String value)
+	public final native void setTop(String value)
 	/*-{
 		this.top = value;
 	}-*/;
@@ -442,7 +442,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         the view's parent. can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
-	public native Object getTop()
+	public final native Object getTop()
 	/*-{
 		return this.top;
 	}-*/;
@@ -451,12 +451,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return A boolean indicating if the view should receive touch events
 	 *         (true, default) or forward them to peers (false)
 	 */
-	public native boolean getTouchEnabled()
+	public final native boolean getTouchEnabled()
 	/*-{
 		return this.touchEnabled;
 	}-*/;
 
-	public native void setTouchEnabled(boolean value)
+	public final native void setTouchEnabled(boolean value)
 	/*-{
 		this.touchEnabled = value;
 	}-*/;
@@ -464,12 +464,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The transformation matrix to apply to the view
 	 */
-	public native Object getTransform()
+	public final native Object getTransform()
 	/*-{
 		return this.transform;
 	}-*/;
 
-	public native void setTransform(Object value)
+	public final native void setTransform(Object value)
 	/*-{
 		this.transform = value;
 	}-*/;
@@ -477,22 +477,22 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return A boolean of the visibility of the view
 	 */
-	public native boolean getVisible()
+	public final native boolean getVisible()
 	/*-{
 		return this.visible;
 	}-*/;
 
-	public native void setVisible(boolean value)
+	public final native void setVisible(boolean value)
 	/*-{
 		this.visible = value;
 	}-*/;
 
-	public native void setWidth(float value)
+	public final native void setWidth(float value)
 	/*-{
 		this.width = value;
 	}-*/;
 
-	public native void setWidth(String value)
+	public final native void setWidth(String value)
 	/*-{
 		this.width = value;
 	}-*/;
@@ -501,7 +501,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return Property for the view width. can be either a float value or a
 	 *         dimension string ie 'auto' (default).
 	 */
-	public native Object getWidth()
+	public final native Object getWidth()
 	/*-{
 		return this.width;
 	}-*/;
@@ -509,12 +509,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The z index position relative to other sibling views
 	 */
-	public native float getZIndex()
+	public final native float getZIndex()
 	/*-{
 		return this.zIndex;
 	}-*/;
 
-	public native void setZIndex(float value)
+	public final native void setZIndex(float value)
 	/*-{
 		this.zIndex = value;
 	}-*/;
@@ -525,7 +525,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param view
 	 *            the view to add to this views hiearchy
 	 */
-	public native void add(Object view)
+	public final native void add(Object view)
 	/*-{
 		return this.add(view);
 	}-*/;
@@ -539,7 +539,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param callback
 	 *            function to be invoked upon completion of the animation
 	 */
-	public native void animate(Object obj, Object callback)
+	public final native void animate(Object obj, Object callback)
 	/*-{
 		return this.animate(obj, callback);
 	}-*/;
@@ -547,7 +547,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Hide the view
 	 */
-	public native void hide()
+	public final native void hide()
 	/*-{
 		return this.hide();
 	}-*/;
@@ -558,7 +558,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param view
 	 *            the view to remove from this views hiearchy
 	 */
-	public native void remove(Object view)
+	public final native void remove(Object view)
 	/*-{
 		return this.remove(view);
 	}-*/;
@@ -566,7 +566,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Make the view visible
 	 */
-	public native void show()
+	public final native void show()
 	/*-{
 		return this.show();
 	}-*/;
@@ -579,7 +579,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *            method will be performed asynchronously. if null, it will be
 	 *            performed immediately
 	 */
-	public native Object toImage()
+	public final native Object toImage()
 	/*-{
 		return this.toImage();
 	}-*/;
@@ -592,57 +592,57 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *            method will be performed asynchronously. if null, it will be
 	 *            performed immediately
 	 */
-	public native Object toImage(Object f)
+	public final native Object toImage(Object f)
 	/*-{
 		return this.toImage(f);
 	}-*/;
 
-	public native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addDblclickHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addDblclickHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addDoubletapHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addDoubletapHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addSingletapHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addSingletapHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addSwipeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addSwipeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addTouchcancelHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addTouchcancelHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addTouchendHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addTouchendHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addTouchmoveHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addTouchmoveHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addTouchstartHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addTouchstartHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addTwofingertapHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addTwofingertapHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

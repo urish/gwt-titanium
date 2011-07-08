@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 import org.urish.gwtit.client.EventCallback;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -35,39 +33,124 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	protected Network() {
 	}
 
-	public static final Const INADDR_ANY = new ConstImpl("Titanium.Network.INADDR_ANY");
+	private static native final String value_INADDR_ANY()
+	/*-{
+		return Titanium.Network.INADDR_ANY;
+	}-*/;
 
-	public static final Const NETWORK_LAN = new ConstImpl("Titanium.Network.NETWORK_LAN");
+	public static final String INADDR_ANY = value_INADDR_ANY();
 
-	public static final Const NETWORK_MOBILE = new ConstImpl("Titanium.Network.NETWORK_MOBILE");
+	private static native final float value_NETWORK_LAN()
+	/*-{
+		return Titanium.Network.NETWORK_LAN;
+	}-*/;
 
-	public static final Const NETWORK_NONE = new ConstImpl("Titanium.Network.NETWORK_NONE");
+	public static final float NETWORK_LAN = value_NETWORK_LAN();
 
-	public static final Const NETWORK_UNKNOWN = new ConstImpl("Titanium.Network.NETWORK_UNKNOWN");
+	private static native final float value_NETWORK_MOBILE()
+	/*-{
+		return Titanium.Network.NETWORK_MOBILE;
+	}-*/;
 
-	public static final Const NETWORK_WIFI = new ConstImpl("Titanium.Network.NETWORK_WIFI");
+	public static final float NETWORK_MOBILE = value_NETWORK_MOBILE();
 
-	public static final Const NOTIFICATION_TYPE_ALERT = new ConstImpl("Titanium.Network.NOTIFICATION_TYPE_ALERT");
+	private static native final float value_NETWORK_NONE()
+	/*-{
+		return Titanium.Network.NETWORK_NONE;
+	}-*/;
 
-	public static final Const NOTIFICATION_TYPE_BADGE = new ConstImpl("Titanium.Network.NOTIFICATION_TYPE_BADGE");
+	public static final float NETWORK_NONE = value_NETWORK_NONE();
 
-	public static final Const NOTIFICATION_TYPE_SOUND = new ConstImpl("Titanium.Network.NOTIFICATION_TYPE_SOUND");
+	private static native final float value_NETWORK_UNKNOWN()
+	/*-{
+		return Titanium.Network.NETWORK_UNKNOWN;
+	}-*/;
 
-	public static final Const READ_MODE = new ConstImpl("Titanium.Network.READ_MODE");
+	public static final float NETWORK_UNKNOWN = value_NETWORK_UNKNOWN();
 
-	public static final Const READ_WRITE_MODE = new ConstImpl("Titanium.Network.READ_WRITE_MODE");
+	private static native final float value_NETWORK_WIFI()
+	/*-{
+		return Titanium.Network.NETWORK_WIFI;
+	}-*/;
 
-	public static final Const SOCKET_CLOSED = new ConstImpl("Titanium.Network.SOCKET_CLOSED");
+	public static final float NETWORK_WIFI = value_NETWORK_WIFI();
 
-	public static final Const SOCKET_CONNECTED = new ConstImpl("Titanium.Network.SOCKET_CONNECTED");
+	private static native final float value_NOTIFICATION_TYPE_ALERT()
+	/*-{
+		return Titanium.Network.NOTIFICATION_TYPE_ALERT;
+	}-*/;
 
-	public static final Const SOCKET_ERROR = new ConstImpl("Titanium.Network.SOCKET_ERROR");
+	public static final float NOTIFICATION_TYPE_ALERT = value_NOTIFICATION_TYPE_ALERT();
 
-	public static final Const SOCKET_INITIALIZED = new ConstImpl("Titanium.Network.SOCKET_INITIALIZED");
+	private static native final float value_NOTIFICATION_TYPE_BADGE()
+	/*-{
+		return Titanium.Network.NOTIFICATION_TYPE_BADGE;
+	}-*/;
 
-	public static final Const SOCKET_LISTENING = new ConstImpl("Titanium.Network.SOCKET_LISTENING");
+	public static final float NOTIFICATION_TYPE_BADGE = value_NOTIFICATION_TYPE_BADGE();
 
-	public static final Const WRITE_MODE = new ConstImpl("Titanium.Network.WRITE_MODE");
+	private static native final float value_NOTIFICATION_TYPE_SOUND()
+	/*-{
+		return Titanium.Network.NOTIFICATION_TYPE_SOUND;
+	}-*/;
+
+	public static final float NOTIFICATION_TYPE_SOUND = value_NOTIFICATION_TYPE_SOUND();
+
+	private static native final float value_READ_MODE()
+	/*-{
+		return Titanium.Network.READ_MODE;
+	}-*/;
+
+	public static final float READ_MODE = value_READ_MODE();
+
+	private static native final float value_READ_WRITE_MODE()
+	/*-{
+		return Titanium.Network.READ_WRITE_MODE;
+	}-*/;
+
+	public static final float READ_WRITE_MODE = value_READ_WRITE_MODE();
+
+	private static native final float value_SOCKET_CLOSED()
+	/*-{
+		return Titanium.Network.SOCKET_CLOSED;
+	}-*/;
+
+	public static final float SOCKET_CLOSED = value_SOCKET_CLOSED();
+
+	private static native final float value_SOCKET_CONNECTED()
+	/*-{
+		return Titanium.Network.SOCKET_CONNECTED;
+	}-*/;
+
+	public static final float SOCKET_CONNECTED = value_SOCKET_CONNECTED();
+
+	private static native final float value_SOCKET_ERROR()
+	/*-{
+		return Titanium.Network.SOCKET_ERROR;
+	}-*/;
+
+	public static final float SOCKET_ERROR = value_SOCKET_ERROR();
+
+	private static native final float value_SOCKET_INITIALIZED()
+	/*-{
+		return Titanium.Network.SOCKET_INITIALIZED;
+	}-*/;
+
+	public static final float SOCKET_INITIALIZED = value_SOCKET_INITIALIZED();
+
+	private static native final float value_SOCKET_LISTENING()
+	/*-{
+		return Titanium.Network.SOCKET_LISTENING;
+	}-*/;
+
+	public static final float SOCKET_LISTENING = value_SOCKET_LISTENING();
+
+	private static native final float value_WRITE_MODE()
+	/*-{
+		return Titanium.Network.WRITE_MODE;
+	}-*/;
+
+	public static final float WRITE_MODE = value_WRITE_MODE();
 
 	/**
 	 * @return The network type value as a constant.
@@ -338,6 +421,45 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	public static native void removeConnectivityListener(Object callback)
 	/*-{
 		return Titanium.Network.removeConnectivityListener(callback);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Network.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Network.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Network.fireEvent(name, event);
 	}-*/;
 
 	public static native void addChangeHandler(EventCallback<JavaScriptObject> handler)

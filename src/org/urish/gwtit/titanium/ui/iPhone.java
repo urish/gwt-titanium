@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The iphone/ipad specific ui capabilities. all properties, methods and events
@@ -32,29 +30,61 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	protected iPhone() {
 	}
 
-	public static final Const MODAL_PRESENTATION_CURRENT_CONTEXT = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_PRESENTATION_CURRENT_CONTEXT");
+	private static native final float value_MODAL_PRESENTATION_CURRENT_CONTEXT()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_PRESENTATION_CURRENT_CONTEXT;
+	}-*/;
 
-	public static final Const MODAL_PRESENTATION_FORMSHEET = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_PRESENTATION_FORMSHEET");
+	public static final float MODAL_PRESENTATION_CURRENT_CONTEXT = value_MODAL_PRESENTATION_CURRENT_CONTEXT();
 
-	public static final Const MODAL_PRESENTATION_FULLSCREEN = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_PRESENTATION_FULLSCREEN");
+	private static native final float value_MODAL_PRESENTATION_FORMSHEET()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_PRESENTATION_FORMSHEET;
+	}-*/;
 
-	public static final Const MODAL_PRESENTATION_PAGESHEET = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_PRESENTATION_PAGESHEET");
+	public static final float MODAL_PRESENTATION_FORMSHEET = value_MODAL_PRESENTATION_FORMSHEET();
 
-	public static final Const MODAL_TRANSITION_STYLE_COVER_VERTICAL = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_COVER_VERTICAL");
+	private static native final float value_MODAL_PRESENTATION_FULLSCREEN()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_PRESENTATION_FULLSCREEN;
+	}-*/;
 
-	public static final Const MODAL_TRANSITION_STYLE_CROSS_DISSOLVE = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_CROSS_DISSOLVE");
+	public static final float MODAL_PRESENTATION_FULLSCREEN = value_MODAL_PRESENTATION_FULLSCREEN();
 
-	public static final Const MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL");
+	private static native final float value_MODAL_PRESENTATION_PAGESHEET()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_PRESENTATION_PAGESHEET;
+	}-*/;
 
-	public static final Const MODAL_TRANSITION_STYLE_PARTIAL_CURL = new ConstImpl(
-			"Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL");
+	public static final float MODAL_PRESENTATION_PAGESHEET = value_MODAL_PRESENTATION_PAGESHEET();
+
+	private static native final float value_MODAL_TRANSITION_STYLE_COVER_VERTICAL()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_COVER_VERTICAL;
+	}-*/;
+
+	public static final float MODAL_TRANSITION_STYLE_COVER_VERTICAL = value_MODAL_TRANSITION_STYLE_COVER_VERTICAL();
+
+	private static native final float value_MODAL_TRANSITION_STYLE_CROSS_DISSOLVE()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_CROSS_DISSOLVE;
+	}-*/;
+
+	public static final float MODAL_TRANSITION_STYLE_CROSS_DISSOLVE = value_MODAL_TRANSITION_STYLE_CROSS_DISSOLVE();
+
+	private static native final float value_MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL;
+	}-*/;
+
+	public static final float MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL = value_MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL();
+
+	private static native final float value_MODAL_TRANSITION_STYLE_PARTIAL_CURL()
+	/*-{
+		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL;
+	}-*/;
+
+	public static final float MODAL_TRANSITION_STYLE_PARTIAL_CURL = value_MODAL_TRANSITION_STYLE_PARTIAL_CURL();
 
 	/**
 	 * @return Set the application badge for the application's icon in the
@@ -204,6 +234,45 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	public static native void showStatusBar(boolean animated, float animationStyle)
 	/*-{
 		return Titanium.UI.iPhone.showStatusBar(animated, animationStyle);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.UI.iPhone.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.UI.iPhone.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.UI.iPhone.fireEvent(name, event);
 	}-*/;
 
 }

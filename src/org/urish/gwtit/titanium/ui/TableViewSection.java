@@ -32,12 +32,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The title of the section footer
 	 */
-	public native String getFooterTitle()
+	public final native String getFooterTitle()
 	/*-{
 		return this.footerTitle;
 	}-*/;
 
-	public native void setFooterTitle(String value)
+	public final native void setFooterTitle(String value)
 	/*-{
 		this.footerTitle = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	 * @return A view to use instead of the default label when rendering the
 	 *         section footer
 	 */
-	public native Object getFooterView()
+	public final native Object getFooterView()
 	/*-{
 		return this.footerView;
 	}-*/;
 
-	public native void setFooterView(Object value)
+	public final native void setFooterView(Object value)
 	/*-{
 		this.footerView = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The title of the section header
 	 */
-	public native String getHeaderTitle()
+	public final native String getHeaderTitle()
 	/*-{
 		return this.headerTitle;
 	}-*/;
 
-	public native void setHeaderTitle(String value)
+	public final native void setHeaderTitle(String value)
 	/*-{
 		this.headerTitle = value;
 	}-*/;
@@ -73,12 +73,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	 * @return A view to use instead of the default label when rendering the
 	 *         section header
 	 */
-	public native Object getHeaderView()
+	public final native Object getHeaderView()
 	/*-{
 		return this.headerView;
 	}-*/;
 
-	public native void setHeaderView(Object value)
+	public final native void setHeaderView(Object value)
 	/*-{
 		this.headerView = value;
 	}-*/;
@@ -86,12 +86,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The (readonly) number of rows in the section
 	 */
-	public native float getRowCount()
+	public final native float getRowCount()
 	/*-{
 		return this.rowCount;
 	}-*/;
 
-	public native void setRowCount(float value)
+	public final native void setRowCount(float value)
 	/*-{
 		this.rowCount = value;
 	}-*/;

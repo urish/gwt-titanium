@@ -37,12 +37,12 @@ public class DisplayCaps extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns the density property of the display device.
 	 */
-	public native String getDensity()
+	public final native String getDensity()
 	/*-{
 		return this.density;
 	}-*/;
 
-	public native void setDensity(String value)
+	public final native void setDensity(String value)
 	/*-{
 		this.density = value;
 	}-*/;
@@ -50,12 +50,12 @@ public class DisplayCaps extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The dpi of the display device.
 	 */
-	public native float getDpi()
+	public final native float getDpi()
 	/*-{
 		return this.dpi;
 	}-*/;
 
-	public native void setDpi(float value)
+	public final native void setDpi(float value)
 	/*-{
 		this.dpi = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class DisplayCaps extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The height of the device screen
 	 */
-	public native float getPlatformHeight()
+	public final native float getPlatformHeight()
 	/*-{
 		return this.platformHeight;
 	}-*/;
 
-	public native void setPlatformHeight(float value)
+	public final native void setPlatformHeight(float value)
 	/*-{
 		this.platformHeight = value;
 	}-*/;
@@ -76,12 +76,12 @@ public class DisplayCaps extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The width of the device screen
 	 */
-	public native float getPlatformWidth()
+	public final native float getPlatformWidth()
 	/*-{
 		return this.platformWidth;
 	}-*/;
 
-	public native void setPlatformWidth(float value)
+	public final native void setPlatformWidth(float value)
 	/*-{
 		this.platformWidth = value;
 	}-*/;

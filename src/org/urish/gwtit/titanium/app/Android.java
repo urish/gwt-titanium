@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.app;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A module used to access the android's [application
@@ -32,7 +30,12 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	protected Android() {
 	}
 
-	public static final Const R = new ConstImpl("Titanium.App.Android.R");
+	private static native final org.urish.gwtit.titanium.app.android.R value_R()
+	/*-{
+		return Titanium.App.Android.R;
+	}-*/;
+
+	public static final org.urish.gwtit.titanium.app.android.R R = value_R();
 
 	public static native org.urish.gwtit.titanium.app.android.R createR()
 	/*-{

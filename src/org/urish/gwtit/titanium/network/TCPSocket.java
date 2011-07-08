@@ -57,12 +57,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.network.inaddr_any} or an
 	 *         identifier for the local device in order to listen
 	 */
-	public native String getHostName()
+	public final native String getHostName()
 	/*-{
 		return this.hostName;
 	}-*/;
 
-	public native void setHostName(String value)
+	public final native void setHostName(String value)
 	/*-{
 		this.hostName = value;
 	}-*/;
@@ -70,12 +70,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether or not the socket is valid
 	 */
-	public native boolean getIsValid()
+	public final native boolean getIsValid()
 	/*-{
 		return this.isValid;
 	}-*/;
 
-	public native void setIsValid(boolean value)
+	public final native void setIsValid(boolean value)
 	/*-{
 		this.isValid = value;
 	}-*/;
@@ -83,12 +83,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The socket's mode
 	 */
-	public native float getMode()
+	public final native float getMode()
 	/*-{
 		return this.mode;
 	}-*/;
 
-	public native void setMode(float value)
+	public final native void setMode(float value)
 	/*-{
 		this.mode = value;
 	}-*/;
@@ -96,12 +96,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The port to connect/listen on
 	 */
-	public native float getPort()
+	public final native float getPort()
 	/*-{
 		return this.port;
 	}-*/;
 
-	public native void setPort(float value)
+	public final native void setPort(float value)
 	/*-{
 		this.port = value;
 	}-*/;
@@ -110,12 +110,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	 * @return Strip terminating null character when sending string data;
 	 *         default is false
 	 */
-	public native boolean getStripTerminator()
+	public final native boolean getStripTerminator()
 	/*-{
 		return this.stripTerminator;
 	}-*/;
 
-	public native void setStripTerminator(boolean value)
+	public final native void setStripTerminator(boolean value)
 	/*-{
 		this.stripTerminator = value;
 	}-*/;
@@ -123,7 +123,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Close the socket
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;
@@ -131,7 +131,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Connect the scocket to a tcp server
 	 */
-	public native void connect()
+	public final native void connect()
 	/*-{
 		return this.connect();
 	}-*/;
@@ -139,7 +139,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Set up the socket to receive connections
 	 */
-	public native void listen()
+	public final native void listen()
 	/*-{
 		return this.listen();
 	}-*/;
@@ -154,22 +154,22 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	 *            the socket reference to send the data to. Default is to send
 	 *            to all connected sockets
 	 */
-	public native void write(Object data, float sendTo)
+	public final native void write(Object data, float sendTo)
 	/*-{
 		return this.write(data, sendTo);
 	}-*/;
 
-	public native void addReadHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addReadHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addReadErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addReadErrorHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addWriteErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addWriteErrorHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('writeError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

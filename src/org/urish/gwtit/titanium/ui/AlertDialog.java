@@ -47,12 +47,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of button names as strings
 	 */
-	public native Object[] getButtonNames()
+	public final native Object[] getButtonNames()
 	/*-{
 		return this.buttonNames;
 	}-*/;
 
-	public native void setButtonNames(Object[] value)
+	public final native void setButtonNames(Object[] value)
 	/*-{
 		this.buttonNames = value;
 	}-*/;
@@ -60,12 +60,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return An index to indicate which button should be the cancel button
 	 */
-	public native float getCancel()
+	public final native float getCancel()
 	/*-{
 		return this.cancel;
 	}-*/;
 
-	public native void setCancel(float value)
+	public final native void setCancel(float value)
 	/*-{
 		this.cancel = value;
 	}-*/;
@@ -73,12 +73,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The message of the dialog
 	 */
-	public native String getMessage()
+	public final native String getMessage()
 	/*-{
 		return this.message;
 	}-*/;
 
-	public native void setMessage(String value)
+	public final native void setMessage(String value)
 	/*-{
 		this.message = value;
 	}-*/;
@@ -86,12 +86,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The key in the locale file to use for the message property
 	 */
-	public native String getMessageid()
+	public final native String getMessageid()
 	/*-{
 		return this.messageid;
 	}-*/;
 
-	public native void setMessageid(String value)
+	public final native void setMessageid(String value)
 	/*-{
 		this.messageid = value;
 	}-*/;
@@ -99,12 +99,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The title of the dialog
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -112,7 +112,7 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Cause the dialog to become hidden
 	 */
-	public native void hide()
+	public final native void hide()
 	/*-{
 		return this.hide();
 	}-*/;
@@ -120,12 +120,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Cause the dialog to become visible
 	 */
-	public native void show()
+	public final native void show()
 	/*-{
 		return this.show();
 	}-*/;
 
-	public native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

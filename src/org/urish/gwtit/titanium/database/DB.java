@@ -33,12 +33,12 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The last row identifier by the last insert query
 	 */
-	public native float getLastInsertRowId()
+	public final native float getLastInsertRowId()
 	/*-{
 		return this.lastInsertRowId;
 	}-*/;
 
-	public native void setLastInsertRowId(float value)
+	public final native void setLastInsertRowId(float value)
 	/*-{
 		this.lastInsertRowId = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The name of the database
 	 */
-	public native String getName()
+	public final native String getName()
 	/*-{
 		return this.name;
 	}-*/;
 
-	public native void setName(String value)
+	public final native void setName(String value)
 	/*-{
 		this.name = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of rows affected by the last query
 	 */
-	public native float getRowsAffected()
+	public final native float getRowsAffected()
 	/*-{
 		return this.rowsAffected;
 	}-*/;
 
-	public native void setRowsAffected(float value)
+	public final native void setRowsAffected(float value)
 	/*-{
 		this.rowsAffected = value;
 	}-*/;
@@ -73,7 +73,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 * Close the database and release resources from memory. once closed, this
 	 * instance is no longer valid and must no longer be used.
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;
@@ -88,7 +88,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 *            function or an array of objects to be replaced in the query
 	 *            using `?` substitution.
 	 */
-	public native Object execute(String sql)
+	public final native Object execute(String sql)
 	/*-{
 		return this.execute(sql);
 	}-*/;
@@ -103,7 +103,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 *            function or an array of objects to be replaced in the query
 	 *            using `?` substitution.
 	 */
-	public native Object execute(String sql, Object[] vararg)
+	public final native Object execute(String sql, Object[] vararg)
 	/*-{
 		return this.execute(sql, vararg);
 	}-*/;
@@ -113,7 +113,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 * destructive operation and cannot be reversed. all data in the database
 	 * will be lost upon calling this function. use with caution.
 	 */
-	public native void remove()
+	public final native void remove()
 	/*-{
 		return this.remove();
 	}-*/;

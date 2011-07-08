@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The top level contacts module. the contacts module is used accessing the
@@ -38,13 +36,33 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	protected Contacts() {
 	}
 
-	public static final Const CONTACTS_KIND_ORGANIZATION = new ConstImpl("Titanium.Contacts.CONTACTS_KIND_ORGANIZATION");
+	private static native final float value_CONTACTS_KIND_ORGANIZATION()
+	/*-{
+		return Titanium.Contacts.CONTACTS_KIND_ORGANIZATION;
+	}-*/;
 
-	public static final Const CONTACTS_KIND_PERSON = new ConstImpl("Titanium.Contacts.CONTACTS_KIND_PERSON");
+	public static final float CONTACTS_KIND_ORGANIZATION = value_CONTACTS_KIND_ORGANIZATION();
 
-	public static final Const CONTACTS_SORT_FIRST_NAME = new ConstImpl("Titanium.Contacts.CONTACTS_SORT_FIRST_NAME");
+	private static native final float value_CONTACTS_KIND_PERSON()
+	/*-{
+		return Titanium.Contacts.CONTACTS_KIND_PERSON;
+	}-*/;
 
-	public static final Const CONTACTS_SORT_LAST_NAME = new ConstImpl("Titanium.Contacts.CONTACTS_SORT_LAST_NAME");
+	public static final float CONTACTS_KIND_PERSON = value_CONTACTS_KIND_PERSON();
+
+	private static native final float value_CONTACTS_SORT_FIRST_NAME()
+	/*-{
+		return Titanium.Contacts.CONTACTS_SORT_FIRST_NAME;
+	}-*/;
+
+	public static final float CONTACTS_SORT_FIRST_NAME = value_CONTACTS_SORT_FIRST_NAME();
+
+	private static native final float value_CONTACTS_SORT_LAST_NAME()
+	/*-{
+		return Titanium.Contacts.CONTACTS_SORT_LAST_NAME;
+	}-*/;
+
+	public static final float CONTACTS_SORT_LAST_NAME = value_CONTACTS_SORT_LAST_NAME();
 
 	/**
 	 * Create and return an instance of titanium.contacts.group
@@ -197,6 +215,45 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 			boolean animated, String[] fields)
 	/*-{
 		return Titanium.Contacts.showContacts(cancel, selectedPerson, selectedProperty, animated, fields);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Contacts.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Contacts.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Contacts.fireEvent(name, event);
 	}-*/;
 
 }

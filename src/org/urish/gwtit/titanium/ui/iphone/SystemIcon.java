@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the system icon styles that can be used on a tab group
@@ -32,28 +30,88 @@ public class SystemIcon extends org.urish.gwtit.titanium.Proxy {
 	protected SystemIcon() {
 	}
 
-	public static final Const BOOKMARKS = new ConstImpl("Titanium.UI.iPhone.SystemIcon.BOOKMARKS");
+	private static native final float value_BOOKMARKS()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.BOOKMARKS;
+	}-*/;
 
-	public static final Const CONTACTS = new ConstImpl("Titanium.UI.iPhone.SystemIcon.CONTACTS");
+	public static final float BOOKMARKS = value_BOOKMARKS();
 
-	public static final Const DOWNLOADS = new ConstImpl("Titanium.UI.iPhone.SystemIcon.DOWNLOADS");
+	private static native final float value_CONTACTS()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.CONTACTS;
+	}-*/;
 
-	public static final Const FAVORITES = new ConstImpl("Titanium.UI.iPhone.SystemIcon.FAVORITES");
+	public static final float CONTACTS = value_CONTACTS();
 
-	public static final Const FEATURED = new ConstImpl("Titanium.UI.iPhone.SystemIcon.FEATURED");
+	private static native final float value_DOWNLOADS()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.DOWNLOADS;
+	}-*/;
 
-	public static final Const HISTORY = new ConstImpl("Titanium.UI.iPhone.SystemIcon.HISTORY");
+	public static final float DOWNLOADS = value_DOWNLOADS();
 
-	public static final Const MORE = new ConstImpl("Titanium.UI.iPhone.SystemIcon.MORE");
+	private static native final float value_FAVORITES()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.FAVORITES;
+	}-*/;
 
-	public static final Const MOST_RECENT = new ConstImpl("Titanium.UI.iPhone.SystemIcon.MOST_RECENT");
+	public static final float FAVORITES = value_FAVORITES();
 
-	public static final Const MOST_VIEWED = new ConstImpl("Titanium.UI.iPhone.SystemIcon.MOST_VIEWED");
+	private static native final float value_FEATURED()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.FEATURED;
+	}-*/;
 
-	public static final Const RECENTS = new ConstImpl("Titanium.UI.iPhone.SystemIcon.RECENTS");
+	public static final float FEATURED = value_FEATURED();
 
-	public static final Const SEARCH = new ConstImpl("Titanium.UI.iPhone.SystemIcon.SEARCH");
+	private static native final float value_HISTORY()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.HISTORY;
+	}-*/;
 
-	public static final Const TOP_RATED = new ConstImpl("Titanium.UI.iPhone.SystemIcon.TOP_RATED");
+	public static final float HISTORY = value_HISTORY();
+
+	private static native final float value_MORE()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.MORE;
+	}-*/;
+
+	public static final float MORE = value_MORE();
+
+	private static native final float value_MOST_RECENT()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.MOST_RECENT;
+	}-*/;
+
+	public static final float MOST_RECENT = value_MOST_RECENT();
+
+	private static native final float value_MOST_VIEWED()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.MOST_VIEWED;
+	}-*/;
+
+	public static final float MOST_VIEWED = value_MOST_VIEWED();
+
+	private static native final float value_RECENTS()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.RECENTS;
+	}-*/;
+
+	public static final float RECENTS = value_RECENTS();
+
+	private static native final float value_SEARCH()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.SEARCH;
+	}-*/;
+
+	public static final float SEARCH = value_SEARCH();
+
+	private static native final float value_TOP_RATED()
+	/*-{
+		return Titanium.UI.iPhone.SystemIcon.TOP_RATED;
+	}-*/;
+
+	public static final float TOP_RATED = value_TOP_RATED();
 
 }

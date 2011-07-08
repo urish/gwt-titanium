@@ -38,12 +38,12 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The badge value or `0` to remove the badge
 	 */
-	public native float getBadge()
+	public final native float getBadge()
 	/*-{
 		return this.badge;
 	}-*/;
 
-	public native void setBadge(float value)
+	public final native void setBadge(float value)
 	/*-{
 		this.badge = value;
 	}-*/;
@@ -52,12 +52,12 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	 * @return A boolean to indicate if this item can be deleted when it edit
 	 *         mode
 	 */
-	public native boolean getCanDelete()
+	public final native boolean getCanDelete()
 	/*-{
 		return this.canDelete;
 	}-*/;
 
-	public native void setCanDelete(boolean value)
+	public final native void setCanDelete(boolean value)
 	/*-{
 		this.canDelete = value;
 	}-*/;
@@ -65,12 +65,12 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The url to the image
 	 */
-	public native String getImage()
+	public final native String getImage()
 	/*-{
 		return this.image;
 	}-*/;
 
-	public native void setImage(String value)
+	public final native void setImage(String value)
 	/*-{
 		this.image = value;
 	}-*/;
@@ -79,27 +79,27 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	 * @return The url to the image to display when the item is depressed
 	 *         (clicked)
 	 */
-	public native String getSelectedImage()
+	public final native String getSelectedImage()
 	/*-{
 		return this.selectedImage;
 	}-*/;
 
-	public native void setSelectedImage(String value)
+	public final native void setSelectedImage(String value)
 	/*-{
 		this.selectedImage = value;
 	}-*/;
 
-	public native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addMoveHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addMoveHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

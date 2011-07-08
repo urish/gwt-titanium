@@ -38,12 +38,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         dialog. works for any dialog. (android)
 	 * @platforms android
 	 */
-	public native Object getAndroidView()
+	public final native Object getAndroidView()
 	/*-{
 		return this.androidView;
 	}-*/;
 
-	public native void setAndroidView(Object value)
+	public final native void setAndroidView(Object value)
 	/*-{
 		this.androidView = value;
 	}-*/;
@@ -53,12 +53,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         no button should be the cancel button, use -1. if there is a
 	 *         cancel button, it must be the last button for use on ipad.
 	 */
-	public native float getCancel()
+	public final native float getCancel()
 	/*-{
 		return this.cancel;
 	}-*/;
 
-	public native void setCancel(float value)
+	public final native void setCancel(float value)
 	/*-{
 		this.cancel = value;
 	}-*/;
@@ -66,12 +66,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The destructive button (indicated by a visual clue in the ui)
 	 */
-	public native float getDestructive()
+	public final native float getDestructive()
 	/*-{
 		return this.destructive;
 	}-*/;
 
-	public native void setDestructive(float value)
+	public final native void setDestructive(float value)
 	/*-{
 		this.destructive = value;
 	}-*/;
@@ -79,12 +79,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of button names as strings
 	 */
-	public native Object[] getOptions()
+	public final native Object[] getOptions()
 	/*-{
 		return this.options;
 	}-*/;
 
-	public native void setOptions(Object[] value)
+	public final native void setOptions(Object[] value)
 	/*-{
 		this.options = value;
 	}-*/;
@@ -94,12 +94,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         been specified. (android only)
 	 * @platforms android
 	 */
-	public native float getSelectedIndex()
+	public final native float getSelectedIndex()
 	/*-{
 		return this.selectedIndex;
 	}-*/;
 
-	public native void setSelectedIndex(float value)
+	public final native void setSelectedIndex(float value)
 	/*-{
 		this.selectedIndex = value;
 	}-*/;
@@ -107,12 +107,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The title of the dialog
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -120,12 +120,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The key in the locale file to use for the title property
 	 */
-	public native String getTitleid()
+	public final native String getTitleid()
 	/*-{
 		return this.titleid;
 	}-*/;
 
-	public native void setTitleid(String value)
+	public final native void setTitleid(String value)
 	/*-{
 		this.titleid = value;
 	}-*/;
@@ -133,12 +133,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Cause the dialog to become visible
 	 */
-	public native void show()
+	public final native void show()
 	/*-{
 		return this.show();
 	}-*/;
 
-	public native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

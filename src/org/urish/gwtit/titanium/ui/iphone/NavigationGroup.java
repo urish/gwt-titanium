@@ -48,7 +48,7 @@ public class NavigationGroup extends org.urish.gwtit.titanium.ui.View {
 	 *            `animated` which is a boolean to indicate if the window should
 	 *            be closed animated (default) or not.
 	 */
-	public native void close(Object window, Object properties)
+	public final native void close(Object window, Object properties)
 	/*-{
 		return this.close(window, properties);
 	}-*/;
@@ -63,7 +63,7 @@ public class NavigationGroup extends org.urish.gwtit.titanium.ui.View {
 	 *            `animated` which is a boolean to indicate if the window should
 	 *            be opened animated (default) or not.
 	 */
-	public native void open(Object window, Object properties)
+	public final native void open(Object window, Object properties)
 	/*-{
 		return this.open(window, properties);
 	}-*/;

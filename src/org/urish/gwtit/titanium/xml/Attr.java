@@ -13,21 +13,17 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.urish.gwtit.client;
 
-public class ConstImpl implements Const {
-	String value;
+/* Automatically generated code, don't edit ! */
 
-	public ConstImpl(String value) {
-		this.value = value;
+package org.urish.gwtit.titanium.xml;
+
+
+/**
+ * A proxy
+ */
+public class Attr extends org.urish.gwtit.titanium.Proxy {
+	protected Attr() {
 	}
 
-	public String value() {
-		return this.value;
-	}
-
-	@Override
-	public String toString() {
-		return this.value;
-	}
 }

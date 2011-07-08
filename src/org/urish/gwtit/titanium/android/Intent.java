@@ -33,12 +33,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return An action constant from {@link org.urish.gwtit.titanium.android}
 	 */
-	public native String getAction()
+	public final native String getAction()
 	/*-{
 		return this.action;
 	}-*/;
 
-	public native void setAction(String value)
+	public final native void setAction(String value)
 	/*-{
 		this.action = value;
 	}-*/;
@@ -47,12 +47,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @return The java class name of the activity (packagename must also be
 	 *         set)
 	 */
-	public native String getClassName()
+	public final native String getClassName()
 	/*-{
 		return this.className;
 	}-*/;
 
-	public native void setClassName(String value)
+	public final native void setClassName(String value)
 	/*-{
 		this.className = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 *         developer.android.com/reference/android/content
 	 *         /intent.html#setdata(android.net.uri))
 	 */
-	public native String getData()
+	public final native String getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public native void setData(String value)
+	public final native void setData(String value)
 	/*-{
 		this.data = value;
 	}-*/;
@@ -77,12 +77,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @return Intent flags. see the flags constants in
 	 *         {@link org.urish.gwtit.titanium.android}.
 	 */
-	public native float getFlags()
+	public final native float getFlags()
 	/*-{
 		return this.flags;
 	}-*/;
 
-	public native void setFlags(float value)
+	public final native void setFlags(float value)
 	/*-{
 		this.flags = value;
 	}-*/;
@@ -90,12 +90,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The fully-qualified java package name of the activity
 	 */
-	public native String getPackageName()
+	public final native String getPackageName()
 	/*-{
 		return this.packageName;
 	}-*/;
 
-	public native void setPackageName(String value)
+	public final native void setPackageName(String value)
 	/*-{
 		this.packageName = value;
 	}-*/;
@@ -106,12 +106,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 *         (http://developer.android.com/reference/android/content
 	 *         /intent.html#settype(java.lang.string))
 	 */
-	public native String getType()
+	public final native String getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(String value)
+	public final native void setType(String value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -119,12 +119,12 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The url to a titanium javascript activity
 	 */
-	public native String getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;
 
-	public native void setUrl(String value)
+	public final native void setUrl(String value)
 	/*-{
 		this.url = value;
 	}-*/;
@@ -137,7 +137,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 *            The category name. See the category constants in
 	 *            {@link org.urish.gwtit.titanium.Android}
 	 */
-	public native void addCategory(String name)
+	public final native void addCategory(String name)
 	/*-{
 		return this.addCategory(name);
 	}-*/;
@@ -148,7 +148,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param flags
 	 *            the flags to add to the existing set.
 	 */
-	public native void addFlags(float flags)
+	public final native void addFlags(float flags)
 	/*-{
 		return this.addFlags(flags);
 	}-*/;
@@ -159,7 +159,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            The boolean property to get
 	 */
-	public native boolean getBooleanExtra(String name)
+	public final native boolean getBooleanExtra(String name)
 	/*-{
 		return this.getBooleanExtra(name);
 	}-*/;
@@ -170,7 +170,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            The double property to get
 	 */
-	public native float getDoubleExtra(String name)
+	public final native float getDoubleExtra(String name)
 	/*-{
 		return this.getDoubleExtra(name);
 	}-*/;
@@ -181,7 +181,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            The int property to get
 	 */
-	public native float getIntExtra(String name)
+	public final native float getIntExtra(String name)
 	/*-{
 		return this.getIntExtra(name);
 	}-*/;
@@ -192,7 +192,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            The long property to get
 	 */
-	public native float getLongExtra(String name)
+	public final native float getLongExtra(String name)
 	/*-{
 		return this.getLongExtra(name);
 	}-*/;
@@ -203,7 +203,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            The string property to get
 	 */
-	public native String getStringExtra(String name)
+	public final native String getStringExtra(String name)
 	/*-{
 		return this.getStringExtra(name);
 	}-*/;
@@ -214,7 +214,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            The property name to check for
 	 */
-	public native boolean hasExtra(String name)
+	public final native boolean hasExtra(String name)
 	/*-{
 		return this.hasExtra(name);
 	}-*/;
@@ -227,7 +227,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The property value
 	 */
-	public native void putExtra(String name, Object value)
+	public final native void putExtra(String name, Object value)
 	/*-{
 		return this.putExtra(name, value);
 	}-*/;
@@ -241,7 +241,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The URI string
 	 */
-	public native void putExtraUri(String name, String value)
+	public final native void putExtraUri(String name, String value)
 	/*-{
 		return this.putExtraUri(name, value);
 	}-*/;

@@ -32,12 +32,12 @@ public class AcceptedCallbackArgs extends JavaScriptObject {
 	/**
 	 * @return Socket which received the connection
 	 */
-	public native org.urish.gwtit.titanium.network.socket.TCP getSocket()
+	public final native org.urish.gwtit.titanium.network.socket.TCP getSocket()
 	/*-{
 		return this.socket;
 	}-*/;
 
-	public native void setSocket(org.urish.gwtit.titanium.network.socket.TCP value)
+	public final native void setSocket(org.urish.gwtit.titanium.network.socket.TCP value)
 	/*-{
 		this.socket = value;
 	}-*/;
@@ -47,12 +47,12 @@ public class AcceptedCallbackArgs extends JavaScriptObject {
 	 *         considered a 'connected' socket and is created in the connected
 	 *         state
 	 */
-	public native org.urish.gwtit.titanium.network.socket.TCP getInbound()
+	public final native org.urish.gwtit.titanium.network.socket.TCP getInbound()
 	/*-{
 		return this.inbound;
 	}-*/;
 
-	public native void setInbound(org.urish.gwtit.titanium.network.socket.TCP value)
+	public final native void setInbound(org.urish.gwtit.titanium.network.socket.TCP value)
 	/*-{
 		this.inbound = value;
 	}-*/;

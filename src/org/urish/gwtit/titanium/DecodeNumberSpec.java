@@ -30,12 +30,12 @@ public class DecodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The buffer to decode
 	 */
-	public native org.urish.gwtit.titanium.Buffer getSource()
+	public final native org.urish.gwtit.titanium.Buffer getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public native void setSource(org.urish.gwtit.titanium.Buffer value)
+	public final native void setSource(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -49,12 +49,12 @@ public class DecodeNumberSpec extends JavaScriptObject {
 	 *         {@link org.urish.gwtit.titanium.codec.type_long}, or
 	 *         {@link org.urish.gwtit.titanium.codec.type_double}
 	 */
-	public native String getType()
+	public final native String getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(String value)
+	public final native void setType(String value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class DecodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The position in `source` to start at
 	 */
-	public native float getPosition()
+	public final native float getPosition()
 	/*-{
 		return this.position;
 	}-*/;
 
-	public native void setPosition(float value)
+	public final native void setPosition(float value)
 	/*-{
 		this.position = value;
 	}-*/;
@@ -75,12 +75,12 @@ public class DecodeNumberSpec extends JavaScriptObject {
 	/**
 	 * @return The byte order to decode with
 	 */
-	public native float getByteOrder()
+	public final native float getByteOrder()
 	/*-{
 		return this.byteOrder;
 	}-*/;
 
-	public native void setByteOrder(float value)
+	public final native void setByteOrder(float value)
 	/*-{
 		this.byteOrder = value;
 	}-*/;

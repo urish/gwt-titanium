@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the status bar style.
@@ -31,12 +29,32 @@ public class StatusBar extends org.urish.gwtit.titanium.Proxy {
 	protected StatusBar() {
 	}
 
-	public static final Const DEFAULT = new ConstImpl("Titanium.UI.iPhone.StatusBar.DEFAULT");
+	private static native final float value_DEFAULT()
+	/*-{
+		return Titanium.UI.iPhone.StatusBar.DEFAULT;
+	}-*/;
 
-	public static final Const GRAY = new ConstImpl("Titanium.UI.iPhone.StatusBar.GRAY");
+	public static final float DEFAULT = value_DEFAULT();
 
-	public static final Const OPAQUE_BLACK = new ConstImpl("Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK");
+	private static native final float value_GRAY()
+	/*-{
+		return Titanium.UI.iPhone.StatusBar.GRAY;
+	}-*/;
 
-	public static final Const TRANSLUCENT_BLACK = new ConstImpl("Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK");
+	public static final float GRAY = value_GRAY();
+
+	private static native final float value_OPAQUE_BLACK()
+	/*-{
+		return Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK;
+	}-*/;
+
+	public static final float OPAQUE_BLACK = value_OPAQUE_BLACK();
+
+	private static native final float value_TRANSLUCENT_BLACK()
+	/*-{
+		return Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
+	}-*/;
+
+	public static final float TRANSLUCENT_BLACK = value_TRANSLUCENT_BLACK();
 
 }

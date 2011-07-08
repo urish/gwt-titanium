@@ -31,12 +31,12 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of rows in the result set
 	 */
-	public native float getRowCount()
+	public final native float getRowCount()
 	/*-{
 		return this.rowCount;
 	}-*/;
 
-	public native void setRowCount(float value)
+	public final native void setRowCount(float value)
 	/*-{
 		this.rowCount = value;
 	}-*/;
@@ -44,12 +44,12 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns true if the current row is still valid
 	 */
-	public native boolean getValidRow()
+	public final native boolean getValidRow()
 	/*-{
 		return this.validRow;
 	}-*/;
 
-	public native void setValidRow(boolean value)
+	public final native void setValidRow(boolean value)
 	/*-{
 		this.validRow = value;
 	}-*/;
@@ -58,7 +58,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * Close the result set and release resources. once closed, this result set
 	 * must no longer be used
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;
@@ -75,7 +75,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public native Object field(float index)
+	public final native Object field(float index)
 	/*-{
 		return this.field(index);
 	}-*/;
@@ -92,7 +92,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public native Object field(float index, float type)
+	public final native Object field(float index, float type)
 	/*-{
 		return this.field(index, type);
 	}-*/;
@@ -109,7 +109,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public native Object fieldByName(String name)
+	public final native Object fieldByName(String name)
 	/*-{
 		return this.fieldByName(name);
 	}-*/;
@@ -126,7 +126,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public native Object fieldByName(String name, float type)
+	public final native Object fieldByName(String name, float type)
 	/*-{
 		return this.fieldByName(name, type);
 	}-*/;
@@ -134,7 +134,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the number of columns in the result set
 	 */
-	public native float fieldCount()
+	public final native float fieldCount()
 	/*-{
 		return this.fieldCount();
 	}-*/;
@@ -145,7 +145,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * @param index
 	 *            field name column index (which is zero based)
 	 */
-	public native String fieldName(float index)
+	public final native String fieldName(float index)
 	/*-{
 		return this.fieldName(index);
 	}-*/;
@@ -153,7 +153,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return true if the row is a valid row
 	 */
-	public native boolean isValidRow()
+	public final native boolean isValidRow()
 	/*-{
 		return this.isValidRow();
 	}-*/;
@@ -164,7 +164,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * @return If the next operation goes past the final row, this returns
 	 *         false. Else true.
 	 */
-	public native boolean next()
+	public final native boolean next()
 	/*-{
 		return this.next();
 	}-*/;

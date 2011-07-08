@@ -18,13 +18,14 @@
 
 package org.urish.gwtit.titanium;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The base for all module types
  * 
  * @since 0.1
  */
-public class Module extends org.urish.gwtit.client.TitaniumModule {
+public class Module extends JavaScriptObject {
 	protected Module() {
 	}
 

@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the bar styles used on the `style` property of
@@ -32,10 +30,25 @@ public class ProgressBarStyle extends org.urish.gwtit.titanium.Proxy {
 	protected ProgressBarStyle() {
 	}
 
-	public static final Const BAR = new ConstImpl("Titanium.UI.iPhone.ProgressBarStyle.BAR");
+	private static native final float value_BAR()
+	/*-{
+		return Titanium.UI.iPhone.ProgressBarStyle.BAR;
+	}-*/;
 
-	public static final Const DEFAULT = new ConstImpl("Titanium.UI.iPhone.ProgressBarStyle.DEFAULT");
+	public static final float BAR = value_BAR();
 
-	public static final Const PLAIN = new ConstImpl("Titanium.UI.iPhone.ProgressBarStyle.PLAIN");
+	private static native final float value_DEFAULT()
+	/*-{
+		return Titanium.UI.iPhone.ProgressBarStyle.DEFAULT;
+	}-*/;
+
+	public static final float DEFAULT = value_DEFAULT();
+
+	private static native final float value_PLAIN()
+	/*-{
+		return Titanium.UI.iPhone.ProgressBarStyle.PLAIN;
+	}-*/;
+
+	public static final float PLAIN = value_PLAIN();
 
 }

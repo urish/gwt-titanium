@@ -17,7 +17,7 @@
 <!-- Based on gwt-node by Chad Retz. -->
 
 <project name="gwt-titanium">
-	
+
 	<macrodef name="gwtitcompile">
 		<attribute name="module" />
 		<attribute name="modulename" />
@@ -32,8 +32,8 @@
 			<mkdir dir="@{workdir}/gwtittmp" />
 			<!-- compile JS -->
 			<java classpathref="@{classpathref}" classname="com.google.gwt.dev.Compiler" fork="true">
-                <arg value="-war" />
-                <arg value="@{workdir}/gwtittmp" />
+				<arg value="-war" />
+				<arg value="@{workdir}/gwtittmp" />
 				<extra-args />
 				<arg value="@{module}" />
 			</java>
@@ -43,17 +43,15 @@
 			</copy>
 		</sequential>
 	</macrodef>
-	
+
 	<target name="build">
-		<!-- compile the non emul stuff --> 
-        <delete dir="build" includeemptydirs="true" />
-        <mkdir dir="build/exploded" />
-        <javac srcdir="src" destdir="build/exploded">
-        	<exclude name="org/cretz/**/*" />
-        	<classpath>
-        		<fileset dir="lib" includes="*.jar" />
-        	</classpath>
-        </javac>
+		<delete dir="build" includeemptydirs="true" />
+		<mkdir dir="build/exploded" />
+		<javac srcdir="src" destdir="build/exploded">
+			<classpath>
+				<fileset dir="lib" includes="*.jar" />
+			</classpath>
+		</javac>
 		<!-- copy all the source over -->
 		<copy todir="build/exploded">
 			<fileset dir="src" includes="**/*" />
@@ -63,5 +61,5 @@
 			<fileset dir="build/exploded" includes="**/*" />
 		</jar>
 	</target>
-	
+
 </project>

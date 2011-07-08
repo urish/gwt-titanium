@@ -37,12 +37,12 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean for the state of the switch
 	 */
-	public native boolean getEnabled()
+	public final native boolean getEnabled()
 	/*-{
 		return this.enabled;
 	}-*/;
 
-	public native void setEnabled(boolean value)
+	public final native void setEnabled(boolean value)
 	/*-{
 		this.enabled = value;
 	}-*/;
@@ -52,12 +52,12 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	 *         ti.ui.android.switch_style_togglebutton (default). (android only)
 	 * @platforms android
 	 */
-	public native float getStyle()
+	public final native float getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(float value)
+	public final native void setStyle(float value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -67,12 +67,12 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	 *         ti.ui.android.switch_style_checkbox (android only)
 	 * @platforms android
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -82,12 +82,12 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	 *         ti.ui.android.switch_style_togglebutton (android only)
 	 * @platforms android
 	 */
-	public native String getTitleOff()
+	public final native String getTitleOff()
 	/*-{
 		return this.titleOff;
 	}-*/;
 
-	public native void setTitleOff(String value)
+	public final native void setTitleOff(String value)
 	/*-{
 		this.titleOff = value;
 	}-*/;
@@ -97,12 +97,12 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	 *         ti.ui.android.switch_style_togglebutton (android only)
 	 * @platforms android
 	 */
-	public native String getTitleOn()
+	public final native String getTitleOn()
 	/*-{
 		return this.titleOn;
 	}-*/;
 
-	public native void setTitleOn(String value)
+	public final native void setTitleOn(String value)
 	/*-{
 		this.titleOn = value;
 	}-*/;
@@ -111,17 +111,17 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean value of the switch where true is the switch is `on` and
 	 *         false the switch if `off`
 	 */
-	public native boolean getValue()
+	public final native boolean getValue()
 	/*-{
 		return this.value;
 	}-*/;
 
-	public native void setValue(boolean value)
+	public final native void setValue(boolean value)
 	/*-{
 		this.value = value;
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

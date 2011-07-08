@@ -47,12 +47,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of column values
 	 */
-	public native Object[] getColumns()
+	public final native Object[] getColumns()
 	/*-{
 		return this.columns;
 	}-*/;
 
-	public native void setColumns(Object[] value)
+	public final native void setColumns(Object[] value)
 	/*-{
 		this.columns = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         (note that titanium's android implementation does not support the
 	 *         countdown timer.)
 	 */
-	public native float getCountDownDuration()
+	public final native float getCountDownDuration()
 	/*-{
 		return this.countDownDuration;
 	}-*/;
 
-	public native void setCountDownDuration(float value)
+	public final native void setCountDownDuration(float value)
 	/*-{
 		this.countDownDuration = value;
 	}-*/;
@@ -83,12 +83,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         false), the default is false. for the spinner-style time picker,
 	 *         the default is true.
 	 */
-	public native boolean getFormat24()
+	public final native boolean getFormat24()
 	/*-{
 		return this.format24;
 	}-*/;
 
-	public native void setFormat24(boolean value)
+	public final native void setFormat24(boolean value)
 	/*-{
 		this.format24 = value;
 	}-*/;
@@ -96,12 +96,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The locale used for displaying date/time pickers values
 	 */
-	public native String getLocale()
+	public final native String getLocale()
 	/*-{
 		return this.locale;
 	}-*/;
 
-	public native void setLocale(String value)
+	public final native void setLocale(String value)
 	/*-{
 		this.locale = value;
 	}-*/;
@@ -109,12 +109,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The minimum date/time for value for date pickers
 	 */
-	public native java.util.Date getMinDate()
+	public final native java.util.Date getMinDate()
 	/*-{
 		return this.minDate;
 	}-*/;
 
-	public native void setMinDate(java.util.Date value)
+	public final native void setMinDate(java.util.Date value)
 	/*-{
 		this.minDate = value;
 	}-*/;
@@ -126,12 +126,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         minimum values are 1; the maximum value is 30. (not currently
 	 *         supported on android.)
 	 */
-	public native float getMinuteInterval()
+	public final native float getMinuteInterval()
 	/*-{
 		return this.minuteInterval;
 	}-*/;
 
-	public native void setMinuteInterval(float value)
+	public final native void setMinuteInterval(float value)
 	/*-{
 		this.minuteInterval = value;
 	}-*/;
@@ -141,12 +141,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         selection style is shown. on the iphone, this is a blue selected
 	 *         bar.
 	 */
-	public native boolean getSelectionIndicator()
+	public final native boolean getSelectionIndicator()
 	/*-{
 		return this.selectionIndicator;
 	}-*/;
 
-	public native void setSelectionIndicator(boolean value)
+	public final native void setSelectionIndicator(boolean value)
 	/*-{
 		this.selectionIndicator = value;
 	}-*/;
@@ -161,12 +161,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         (note that titanium's android implementation does not support the
 	 *         countdown timer or date+time varieties.)
 	 */
-	public native float getType()
+	public final native float getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(float value)
+	public final native void setType(float value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -183,12 +183,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         but definitely before `.add()`ing the picker to its parent.
 	 * @platforms android
 	 */
-	public native boolean getUseSpinner()
+	public final native boolean getUseSpinner()
 	/*-{
 		return this.useSpinner;
 	}-*/;
 
-	public native void setUseSpinner(boolean value)
+	public final native void setUseSpinner(boolean value)
 	/*-{
 		this.useSpinner = value;
 	}-*/;
@@ -196,12 +196,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The date/time value for date pickers
 	 */
-	public native java.util.Date getValue()
+	public final native java.util.Date getValue()
 	/*-{
 		return this.value;
 	}-*/;
 
-	public native void setValue(java.util.Date value)
+	public final native void setValue(java.util.Date value)
 	/*-{
 		this.value = value;
 	}-*/;
@@ -214,12 +214,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         above and below. you can set this to allow more (use an odd
 	 *         number to be sure the selected row is in the middle.)
 	 */
-	public native float getVisibleItems()
+	public final native float getVisibleItems()
 	/*-{
 		return this.visibleItems;
 	}-*/;
 
-	public native void setVisibleItems(float value)
+	public final native void setVisibleItems(float value)
 	/*-{
 		this.visibleItems = value;
 	}-*/;
@@ -230,7 +230,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 * @param data
 	 *            add an array of rows, a single row or a column to the picker
 	 */
-	public native void add(Object data)
+	public final native void add(Object data)
 	/*-{
 		return this.add(data);
 	}-*/;
@@ -242,7 +242,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *            for the column index, return the row object or nil if not
 	 *            found
 	 */
-	public native Object getSelectedRow(float index)
+	public final native Object getSelectedRow(float index)
 	/*-{
 		return this.getSelectedRow(index);
 	}-*/;
@@ -253,7 +253,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 * @param column
 	 *            new column to load
 	 */
-	public native void reloadColumn(Object column)
+	public final native void reloadColumn(Object column)
 	/*-{
 		return this.reloadColumn(column);
 	}-*/;
@@ -269,12 +269,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *            boolean to indicate if the selection should be animated
 	 *            (default) (optional)
 	 */
-	public native void setSelectedRow(float column, float row, boolean animated)
+	public final native void setSelectedRow(float column, float row, boolean animated)
 	/*-{
 		return this.setSelectedRow(column, row, animated);
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

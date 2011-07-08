@@ -30,12 +30,12 @@ public class DecodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The buffer to decode.
 	 */
-	public native org.urish.gwtit.titanium.Buffer getSource()
+	public final native org.urish.gwtit.titanium.Buffer getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public native void setSource(org.urish.gwtit.titanium.Buffer value)
+	public final native void setSource(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -43,12 +43,12 @@ public class DecodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The position to start decoding.
 	 */
-	public native float getPosition()
+	public final native float getPosition()
 	/*-{
 		return this.position;
 	}-*/;
 
-	public native void setPosition(float value)
+	public final native void setPosition(float value)
 	/*-{
 		this.position = value;
 	}-*/;
@@ -56,12 +56,12 @@ public class DecodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The number of bytes to decode.
 	 */
-	public native float getLength()
+	public final native float getLength()
 	/*-{
 		return this.length;
 	}-*/;
 
-	public native void setLength(float value)
+	public final native void setLength(float value)
 	/*-{
 		this.length = value;
 	}-*/;
@@ -69,12 +69,12 @@ public class DecodeStringSpec extends JavaScriptObject {
 	/**
 	 * @return The character set to use when encoding this string to bytes.
 	 */
-	public native String getCharset()
+	public final native String getCharset()
 	/*-{
 		return this.charset;
 	}-*/;
 
-	public native void setCharset(String value)
+	public final native void setCharset(String value)
 	/*-{
 		this.charset = value;
 	}-*/;

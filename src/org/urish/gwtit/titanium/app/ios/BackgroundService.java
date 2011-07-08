@@ -42,7 +42,7 @@ public class BackgroundService extends org.urish.gwtit.titanium.Proxy {
 	 * Stop the service from the current background session to conserve
 	 * resources
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;
@@ -50,7 +50,7 @@ public class BackgroundService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Unregister the background service
 	 */
-	public native void unregister()
+	public final native void unregister()
 	/*-{
 		return this.unregister();
 	}-*/;

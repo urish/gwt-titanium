@@ -29,12 +29,12 @@ public class CreateStreamArgs extends JavaScriptObject {
 	protected CreateStreamArgs() {
 	}
 
-	public native void setSource(org.urish.gwtit.titanium.Blob value)
+	public final native void setSource(org.urish.gwtit.titanium.Blob value)
 	/*-{
 		this.source = value;
 	}-*/;
 
-	public native void setSource(org.urish.gwtit.titanium.Buffer value)
+	public final native void setSource(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -42,7 +42,7 @@ public class CreateStreamArgs extends JavaScriptObject {
 	/**
 	 * @return Object to create stream around
 	 */
-	public native Object getSource()
+	public final native Object getSource()
 	/*-{
 		return this.source;
 	}-*/;
@@ -52,12 +52,12 @@ public class CreateStreamArgs extends JavaScriptObject {
 	 *         `titanium.stream.mode_read`, `titanium.stream.mode_write` or
 	 *         `titanium.stream.mode_append`
 	 */
-	public native float getMode()
+	public final native float getMode()
 	/*-{
 		return this.mode;
 	}-*/;
 
-	public native void setMode(float value)
+	public final native void setMode(float value)
 	/*-{
 		this.mode = value;
 	}-*/;

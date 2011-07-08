@@ -41,12 +41,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The active tab
 	 */
-	public native Object getActiveTab()
+	public final native Object getActiveTab()
 	/*-{
 		return this.activeTab;
 	}-*/;
 
-	public native void setActiveTab(Object value)
+	public final native void setActiveTab(Object value)
 	/*-{
 		this.activeTab = value;
 	}-*/;
@@ -56,12 +56,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	 *         'more' tab's edit functionality. iphone/ipad only
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getAllowUserCustomization()
+	public final native boolean getAllowUserCustomization()
 	/*-{
 		return this.allowUserCustomization;
 	}-*/;
 
-	public native void setAllowUserCustomization(boolean value)
+	public final native void setAllowUserCustomization(boolean value)
 	/*-{
 		this.allowUserCustomization = value;
 	}-*/;
@@ -69,12 +69,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The default navigation bar color (typically for the "more" tab)
 	 */
-	public native String getBarColor()
+	public final native String getBarColor()
 	/*-{
 		return this.barColor;
 	}-*/;
 
-	public native void setBarColor(String value)
+	public final native void setBarColor(String value)
 	/*-{
 		this.barColor = value;
 	}-*/;
@@ -83,12 +83,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	 * @return The title for the 'more' tab edit button. iphone/ipad only
 	 * @platforms iphone, ipad
 	 */
-	public native String getEditButtonTitle()
+	public final native String getEditButtonTitle()
 	/*-{
 		return this.editButtonTitle;
 	}-*/;
 
-	public native void setEditButtonTitle(String value)
+	public final native void setEditButtonTitle(String value)
 	/*-{
 		this.editButtonTitle = value;
 	}-*/;
@@ -96,12 +96,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Array of tab objects that are managed by the tab group
 	 */
-	public native Object[] getTabs()
+	public final native Object[] getTabs()
 	/*-{
 		return this.tabs;
 	}-*/;
 
-	public native void setTabs(Object[] value)
+	public final native void setTabs(Object[] value)
 	/*-{
 		this.tabs = value;
 	}-*/;
@@ -117,12 +117,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	 * 
 	 * @platforms android
 	 */
-	public native float getWindowSoftInputMode()
+	public final native float getWindowSoftInputMode()
 	/*-{
 		return this.windowSoftInputMode;
 	}-*/;
 
-	public native void setWindowSoftInputMode(float value)
+	public final native void setWindowSoftInputMode(float value)
 	/*-{
 		this.windowSoftInputMode = value;
 	}-*/;
@@ -133,7 +133,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	 * @param tab
 	 *            The tab to add
 	 */
-	public native void addTab(org.urish.gwtit.titanium.ui.Tab tab)
+	public final native void addTab(org.urish.gwtit.titanium.ui.Tab tab)
 	/*-{
 		return this.addTab(tab);
 	}-*/;
@@ -141,7 +141,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Close the tab group and remove it from the ui
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;
@@ -149,7 +149,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Open the tab group and make it visible
 	 */
-	public native void open()
+	public final native void open()
 	/*-{
 		return this.open();
 	}-*/;
@@ -157,27 +157,27 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Remove a tab from the tab group
 	 */
-	public native void removeTab()
+	public final native void removeTab()
 	/*-{
 		return this.removeTab();
 	}-*/;
 
-	public native void addBlurHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addBlurHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addCloseHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCloseHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addFocusHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addOpenHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addOpenHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

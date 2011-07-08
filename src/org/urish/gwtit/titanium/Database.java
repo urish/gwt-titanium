@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The top level database module. the database module is used for creating and
@@ -31,13 +29,33 @@ public class Database extends org.urish.gwtit.titanium.Module {
 	protected Database() {
 	}
 
-	public static final Const FIELD_TYPE_DOUBLE = new ConstImpl("Titanium.Database.FIELD_TYPE_DOUBLE");
+	private static native final float value_FIELD_TYPE_DOUBLE()
+	/*-{
+		return Titanium.Database.FIELD_TYPE_DOUBLE;
+	}-*/;
 
-	public static final Const FIELD_TYPE_FLOAT = new ConstImpl("Titanium.Database.FIELD_TYPE_FLOAT");
+	public static final float FIELD_TYPE_DOUBLE = value_FIELD_TYPE_DOUBLE();
 
-	public static final Const FIELD_TYPE_INT = new ConstImpl("Titanium.Database.FIELD_TYPE_INT");
+	private static native final float value_FIELD_TYPE_FLOAT()
+	/*-{
+		return Titanium.Database.FIELD_TYPE_FLOAT;
+	}-*/;
 
-	public static final Const FIELD_TYPE_STRING = new ConstImpl("Titanium.Database.FIELD_TYPE_STRING");
+	public static final float FIELD_TYPE_FLOAT = value_FIELD_TYPE_FLOAT();
+
+	private static native final float value_FIELD_TYPE_INT()
+	/*-{
+		return Titanium.Database.FIELD_TYPE_INT;
+	}-*/;
+
+	public static final float FIELD_TYPE_INT = value_FIELD_TYPE_INT();
+
+	private static native final float value_FIELD_TYPE_STRING()
+	/*-{
+		return Titanium.Database.FIELD_TYPE_STRING;
+	}-*/;
+
+	public static final float FIELD_TYPE_STRING = value_FIELD_TYPE_STRING();
 
 	public static native org.urish.gwtit.titanium.database.DB createDB()
 	/*-{
@@ -76,6 +94,45 @@ public class Database extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.database.DB open(String name)
 	/*-{
 		return Titanium.Database.open(name);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Database.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Database.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Database.fireEvent(name, event);
 	}-*/;
 
 }

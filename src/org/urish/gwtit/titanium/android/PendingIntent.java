@@ -56,12 +56,12 @@ public class PendingIntent extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.android.flag_one_shot}, and
 	 *         {@link org.urish.gwtit.titanium.android.flag_update_current}.
 	 */
-	public native float getFlags()
+	public final native float getFlags()
 	/*-{
 		return this.flags;
 	}-*/;
 
-	public native void setFlags(float value)
+	public final native void setFlags(float value)
 	/*-{
 		this.flags = value;
 	}-*/;
@@ -70,12 +70,12 @@ public class PendingIntent extends org.urish.gwtit.titanium.Proxy {
 	 * @return The intent data to pass to the activity launched by this
 	 *         pendingintent
 	 */
-	public native org.urish.gwtit.titanium.android.Intent getIntent()
+	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
 		return this.intent;
 	}-*/;
 
-	public native void setIntent(org.urish.gwtit.titanium.android.Intent value)
+	public final native void setIntent(org.urish.gwtit.titanium.android.Intent value)
 	/*-{
 		this.intent = value;
 	}-*/;

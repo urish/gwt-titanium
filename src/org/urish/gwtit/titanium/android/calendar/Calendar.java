@@ -34,12 +34,12 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether the calendar is hidden.
 	 */
-	public native boolean getHidden()
+	public final native boolean getHidden()
 	/*-{
 		return this.hidden;
 	}-*/;
 
-	public native void setHidden(boolean value)
+	public final native void setHidden(boolean value)
 	/*-{
 		this.hidden = value;
 	}-*/;
@@ -47,12 +47,12 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The id of the calendar.
 	 */
-	public native String getId()
+	public final native String getId()
 	/*-{
 		return this.id;
 	}-*/;
 
-	public native void setId(String value)
+	public final native void setId(String value)
 	/*-{
 		this.id = value;
 	}-*/;
@@ -60,12 +60,12 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The display name of the calendar.
 	 */
-	public native String getName()
+	public final native String getName()
 	/*-{
 		return this.name;
 	}-*/;
 
-	public native void setName(String value)
+	public final native void setName(String value)
 	/*-{
 		this.name = value;
 	}-*/;
@@ -73,12 +73,12 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether the calendar is selected.
 	 */
-	public native boolean getSelected()
+	public final native boolean getSelected()
 	/*-{
 		return this.selected;
 	}-*/;
 
-	public native void setSelected(boolean value)
+	public final native void setSelected(boolean value)
 	/*-{
 		this.selected = value;
 	}-*/;
@@ -92,7 +92,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 *            correspond to properties of
 	 *            {@link org.urish.gwtit.titanium.android.calendar.Event}.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Event createEvent(Object properties)
+	public final native org.urish.gwtit.titanium.android.calendar.Event createEvent(Object properties)
 	/*-{
 		return this.createEvent(properties);
 	}-*/;
@@ -104,7 +104,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 * @param id
 	 *            The integer id of the event to return.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Event getEventById(float id)
+	public final native org.urish.gwtit.titanium.android.calendar.Event getEventById(float id)
 	/*-{
 		return this.getEventById(id);
 	}-*/;
@@ -119,7 +119,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 * @param date2
 	 *            The end date.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Event[] getEventsBetweenDates(java.util.Date date1,
+	public final native org.urish.gwtit.titanium.android.calendar.Event[] getEventsBetweenDates(java.util.Date date1,
 			java.util.Date date2)
 	/*-{
 		return this.getEventsBetweenDates(date1, date2);
@@ -138,7 +138,8 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 * @param day
 	 *            The day for which events should be returned.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Event[] getEventsInDate(float year, float month, float day)
+	public final native org.urish.gwtit.titanium.android.calendar.Event[] getEventsInDate(float year, float month,
+			float day)
 	/*-{
 		return this.getEventsInDate(year, month, day);
 	}-*/;
@@ -154,7 +155,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 *            The month for which events should be returned. The month is
 	 *            zero-based, therefore January is 0 and December is 11.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Event[] getEventsInMonth(float year, float month)
+	public final native org.urish.gwtit.titanium.android.calendar.Event[] getEventsInMonth(float year, float month)
 	/*-{
 		return this.getEventsInMonth(year, month);
 	}-*/;
@@ -167,7 +168,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 * @param year
 	 *            The year for which all events should be returned.
 	 */
-	public native org.urish.gwtit.titanium.android.calendar.Event[] getEventsInYear(float year)
+	public final native org.urish.gwtit.titanium.android.calendar.Event[] getEventsInYear(float year)
 	/*-{
 		return this.getEventsInYear(year);
 	}-*/;

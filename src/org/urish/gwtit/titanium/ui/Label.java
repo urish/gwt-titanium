@@ -34,12 +34,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 *         clickable links for the specified type. (android only)
 	 * @platforms android
 	 */
-	public native float getAutoLink()
+	public final native float getAutoLink()
 	/*-{
 		return this.autoLink;
 	}-*/;
 
-	public native void setAutoLink(float value)
+	public final native void setAutoLink(float value)
 	/*-{
 		this.autoLink = value;
 	}-*/;
@@ -48,12 +48,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the bottom
 	 */
-	public native float getBackgroundPaddingBottom()
+	public final native float getBackgroundPaddingBottom()
 	/*-{
 		return this.backgroundPaddingBottom;
 	}-*/;
 
-	public native void setBackgroundPaddingBottom(float value)
+	public final native void setBackgroundPaddingBottom(float value)
 	/*-{
 		this.backgroundPaddingBottom = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the left
 	 */
-	public native float getBackgroundPaddingLeft()
+	public final native float getBackgroundPaddingLeft()
 	/*-{
 		return this.backgroundPaddingLeft;
 	}-*/;
 
-	public native void setBackgroundPaddingLeft(float value)
+	public final native void setBackgroundPaddingLeft(float value)
 	/*-{
 		this.backgroundPaddingLeft = value;
 	}-*/;
@@ -76,12 +76,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the right
 	 */
-	public native float getBackgroundPaddingRight()
+	public final native float getBackgroundPaddingRight()
 	/*-{
 		return this.backgroundPaddingRight;
 	}-*/;
 
-	public native void setBackgroundPaddingRight(float value)
+	public final native void setBackgroundPaddingRight(float value)
 	/*-{
 		this.backgroundPaddingRight = value;
 	}-*/;
@@ -90,12 +90,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the top
 	 */
-	public native float getBackgroundPaddingTop()
+	public final native float getBackgroundPaddingTop()
 	/*-{
 		return this.backgroundPaddingTop;
 	}-*/;
 
-	public native void setBackgroundPaddingTop(float value)
+	public final native void setBackgroundPaddingTop(float value)
 	/*-{
 		this.backgroundPaddingTop = value;
 	}-*/;
@@ -103,12 +103,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The color of the label
 	 */
-	public native String getColor()
+	public final native String getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public native void setColor(String value)
+	public final native void setColor(String value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -118,12 +118,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 *         the text is too large to fit. (android only, default false)
 	 * @platforms android
 	 */
-	public native boolean getEllipsize()
+	public final native boolean getEllipsize()
 	/*-{
 		return this.ellipsize;
 	}-*/;
 
-	public native void setEllipsize(boolean value)
+	public final native void setEllipsize(boolean value)
 	/*-{
 		this.ellipsize = value;
 	}-*/;
@@ -131,12 +131,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The label font object properties
 	 */
-	public native Object getFont()
+	public final native Object getFont()
 	/*-{
 		return this.font;
 	}-*/;
 
-	public native void setFont(Object value)
+	public final native void setFont(Object value)
 	/*-{
 		this.font = value;
 	}-*/;
@@ -144,12 +144,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The color of the label when in the highlighted state
 	 */
-	public native String getHighlightedColor()
+	public final native String getHighlightedColor()
 	/*-{
 		return this.highlightedColor;
 	}-*/;
 
-	public native void setHighlightedColor(String value)
+	public final native void setHighlightedColor(String value)
 	/*-{
 		this.highlightedColor = value;
 	}-*/;
@@ -158,12 +158,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return Simple html formatting. (android only)
 	 * @platforms android
 	 */
-	public native String getHtml()
+	public final native String getHtml()
 	/*-{
 		return this.html;
 	}-*/;
 
-	public native void setHtml(String value)
+	public final native void setHtml(String value)
 	/*-{
 		this.html = value;
 	}-*/;
@@ -173,12 +173,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 *         contents. enables font scaling to fit and forces the label
 	 *         content to be limited to a single line
 	 */
-	public native float getMinimumFontSize()
+	public final native float getMinimumFontSize()
 	/*-{
 		return this.minimumFontSize;
 	}-*/;
 
-	public native void setMinimumFontSize(float value)
+	public final native void setMinimumFontSize(float value)
 	/*-{
 		this.minimumFontSize = value;
 	}-*/;
@@ -186,12 +186,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The text shadow color
 	 */
-	public native String getShadowColor()
+	public final native String getShadowColor()
 	/*-{
 		return this.shadowColor;
 	}-*/;
 
-	public native void setShadowColor(String value)
+	public final native void setShadowColor(String value)
 	/*-{
 		this.shadowColor = value;
 	}-*/;
@@ -199,12 +199,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The shadow offset as a dictionary with the properties `x` and `y`
 	 */
-	public native Object getShadowOffset()
+	public final native Object getShadowOffset()
 	/*-{
 		return this.shadowOffset;
 	}-*/;
 
-	public native void setShadowOffset(Object value)
+	public final native void setShadowOffset(Object value)
 	/*-{
 		this.shadowOffset = value;
 	}-*/;
@@ -212,22 +212,22 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The text of the label
 	 */
-	public native String getText()
+	public final native String getText()
 	/*-{
 		return this.text;
 	}-*/;
 
-	public native void setText(String value)
+	public final native void setText(String value)
 	/*-{
 		this.text = value;
 	}-*/;
 
-	public native void setTextAlign(String value)
+	public final native void setTextAlign(String value)
 	/*-{
 		this.textAlign = value;
 	}-*/;
 
-	public native void setTextAlign(float value)
+	public final native void setTextAlign(float value)
 	/*-{
 		this.textAlign = value;
 	}-*/;
@@ -236,7 +236,7 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The alignment constant or string value such as `left`, `center`
 	 *         or `right`
 	 */
-	public native Object getTextAlign()
+	public final native Object getTextAlign()
 	/*-{
 		return this.textAlign;
 	}-*/;
@@ -244,12 +244,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The key in the locale file to use for the text property
 	 */
-	public native String getTextid()
+	public final native String getTextid()
 	/*-{
 		return this.textid;
 	}-*/;
 
-	public native void setTextid(String value)
+	public final native void setTextid(String value)
 	/*-{
 		this.textid = value;
 	}-*/;
@@ -259,12 +259,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 *         true)
 	 * @platforms android
 	 */
-	public native boolean getWordWrap()
+	public final native boolean getWordWrap()
 	/*-{
 		return this.wordWrap;
 	}-*/;
 
-	public native void setWordWrap(boolean value)
+	public final native void setWordWrap(boolean value)
 	/*-{
 		this.wordWrap = value;
 	}-*/;

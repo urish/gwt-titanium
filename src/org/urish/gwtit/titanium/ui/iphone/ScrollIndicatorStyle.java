@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the styles available for
@@ -32,10 +30,25 @@ public class ScrollIndicatorStyle extends org.urish.gwtit.titanium.Proxy {
 	protected ScrollIndicatorStyle() {
 	}
 
-	public static final Const BLACK = new ConstImpl("Titanium.UI.iPhone.ScrollIndicatorStyle.BLACK");
+	private static native final float value_BLACK()
+	/*-{
+		return Titanium.UI.iPhone.ScrollIndicatorStyle.BLACK;
+	}-*/;
 
-	public static final Const DEFAULT = new ConstImpl("Titanium.UI.iPhone.ScrollIndicatorStyle.DEFAULT");
+	public static final float BLACK = value_BLACK();
 
-	public static final Const WHITE = new ConstImpl("Titanium.UI.iPhone.ScrollIndicatorStyle.WHITE");
+	private static native final float value_DEFAULT()
+	/*-{
+		return Titanium.UI.iPhone.ScrollIndicatorStyle.DEFAULT;
+	}-*/;
+
+	public static final float DEFAULT = value_DEFAULT();
+
+	private static native final float value_WHITE()
+	/*-{
+		return Titanium.UI.iPhone.ScrollIndicatorStyle.WHITE;
+	}-*/;
+
+	public static final float WHITE = value_WHITE();
 
 }

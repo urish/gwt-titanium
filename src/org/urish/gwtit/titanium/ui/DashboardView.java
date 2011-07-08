@@ -40,12 +40,12 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An array of {@link org.urish.gwtit.titanium.ui.dashboarditem}
 	 *         objects to display in the view
 	 */
-	public native Object[] getData()
+	public final native Object[] getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public native void setData(Object[] value)
+	public final native void setData(Object[] value)
 	/*-{
 		this.data = value;
 	}-*/;
@@ -54,12 +54,12 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 	 * @return True (default) to wobble during edit, false to disable wobble
 	 *         effect
 	 */
-	public native boolean getWobble()
+	public final native boolean getWobble()
 	/*-{
 		return this.wobble;
 	}-*/;
 
-	public native void setWobble(boolean value)
+	public final native void setWobble(boolean value)
 	/*-{
 		this.wobble = value;
 	}-*/;
@@ -67,7 +67,7 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Put the dashboard in edit mode
 	 */
-	public native void startEditing()
+	public final native void startEditing()
 	/*-{
 		return this.startEditing();
 	}-*/;
@@ -75,27 +75,27 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Cancel editing
 	 */
-	public native void stopEditing()
+	public final native void stopEditing()
 	/*-{
 		return this.stopEditing();
 	}-*/;
 
-	public native void addCommitHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCommitHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('commit', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addEditHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addEditHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('edit', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addMoveHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addMoveHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

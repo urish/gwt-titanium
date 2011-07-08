@@ -44,7 +44,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	 *            The radius of the thumbnail's corners.
 	 * @return The image thumbnail in a blob.
 	 */
-	public native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size)
+	public final native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size)
 	/*-{
 		return this.imageAsThumbnail(size);
 	}-*/;
@@ -62,7 +62,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	 *            The radius of the thumbnail's corners.
 	 * @return The image thumbnail in a blob.
 	 */
-	public native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size, float borderSize)
+	public final native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size, float borderSize)
 	/*-{
 		return this.imageAsThumbnail(size, borderSize);
 	}-*/;
@@ -80,7 +80,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	 *            The radius of the thumbnail's corners.
 	 * @return The image thumbnail in a blob.
 	 */
-	public native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size, float borderSize, float cornerRadius)
+	public final native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size, float borderSize, float cornerRadius)
 	/*-{
 		return this.imageAsThumbnail(size, borderSize, cornerRadius);
 	}-*/;

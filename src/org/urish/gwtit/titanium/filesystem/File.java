@@ -31,7 +31,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Create a directory at the path for the file object
 	 */
-	public native boolean createDirectory()
+	public final native boolean createDirectory()
 	/*-{
 		return this.createDirectory();
 	}-*/;
@@ -39,7 +39,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Create a file path at the path for the file object
 	 */
-	public native boolean createFile()
+	public final native boolean createFile()
 	/*-{
 		return this.createFile();
 	}-*/;
@@ -47,7 +47,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the created timestamp for the file
 	 */
-	public native float createTimestamp()
+	public final native float createTimestamp()
 	/*-{
 		return this.createTimestamp();
 	}-*/;
@@ -59,7 +59,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	 *            pass true to recursively delete any contents. defaults to
 	 *            false
 	 */
-	public native boolean deleteDirectory(boolean recursive)
+	public final native boolean deleteDirectory(boolean recursive)
 	/*-{
 		return this.deleteDirectory(recursive);
 	}-*/;
@@ -67,7 +67,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Delete the file
 	 */
-	public native boolean deleteFile()
+	public final native boolean deleteFile()
 	/*-{
 		return this.deleteFile();
 	}-*/;
@@ -77,7 +77,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @return Returns true if file is executable.
 	 */
-	public native boolean executable()
+	public final native boolean executable()
 	/*-{
 		return this.executable();
 	}-*/;
@@ -85,7 +85,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the file or directory exists on the device
 	 */
-	public native boolean exists()
+	public final native boolean exists()
 	/*-{
 		return this.exists();
 	}-*/;
@@ -93,7 +93,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the file extension
 	 */
-	public native String extension()
+	public final native String extension()
 	/*-{
 		return this.extension();
 	}-*/;
@@ -101,7 +101,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return an array of paths in the directory of the file object
 	 */
-	public native String[] getDirectoryListing()
+	public final native String[] getDirectoryListing()
 	/*-{
 		return this.getDirectoryListing();
 	}-*/;
@@ -109,7 +109,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the file parent
 	 */
-	public native org.urish.gwtit.titanium.filesystem.File getParent()
+	public final native org.urish.gwtit.titanium.filesystem.File getParent()
 	/*-{
 		return this.getParent();
 	}-*/;
@@ -117,7 +117,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the file is hidden
 	 */
-	public native boolean hidden()
+	public final native boolean hidden()
 	/*-{
 		return this.hidden();
 	}-*/;
@@ -125,7 +125,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the last modification timestamp for the file
 	 */
-	public native float modificationTimestamp()
+	public final native float modificationTimestamp()
 	/*-{
 		return this.modificationTimestamp();
 	}-*/;
@@ -136,7 +136,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	 * @param newpath
 	 *            new location
 	 */
-	public native boolean move(Object newpath)
+	public final native boolean move(Object newpath)
 	/*-{
 		return this.move(newpath);
 	}-*/;
@@ -144,7 +144,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * The name of the file
 	 */
-	public native String name()
+	public final native String name()
 	/*-{
 		return this.name();
 	}-*/;
@@ -152,7 +152,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns the fully resolved native path
 	 */
-	public native String nativePath()
+	public final native String nativePath()
 	/*-{
 		return this.nativePath();
 	}-*/;
@@ -160,7 +160,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the contents of file as blob
 	 */
-	public native org.urish.gwtit.titanium.Blob read()
+	public final native org.urish.gwtit.titanium.Blob read()
 	/*-{
 		return this.read();
 	}-*/;
@@ -168,7 +168,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the file is readonly
 	 */
-	public native boolean readonly()
+	public final native boolean readonly()
 	/*-{
 		return this.readonly();
 	}-*/;
@@ -179,7 +179,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	 * @param newname
 	 *            new name
 	 */
-	public native boolean rename(String newname)
+	public final native boolean rename(String newname)
 	/*-{
 		return this.rename(newname);
 	}-*/;
@@ -187,7 +187,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Make the file executable
 	 */
-	public native void setExecutable()
+	public final native void setExecutable()
 	/*-{
 		return this.setExecutable();
 	}-*/;
@@ -195,7 +195,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Make the file hidden
 	 */
-	public native void setHidden()
+	public final native void setHidden()
 	/*-{
 		return this.setHidden();
 	}-*/;
@@ -203,7 +203,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Make the file readonly
 	 */
-	public native void setReadonly()
+	public final native void setReadonly()
 	/*-{
 		return this.setReadonly();
 	}-*/;
@@ -211,7 +211,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return boolean to indicate if the path has space available for storage
 	 */
-	public native boolean spaceAvailable()
+	public final native boolean spaceAvailable()
 	/*-{
 		return this.spaceAvailable();
 	}-*/;
@@ -219,7 +219,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the file points to a symbolic link
 	 */
-	public native boolean symbolicLink()
+	public final native boolean symbolicLink()
 	/*-{
 		return this.symbolicLink();
 	}-*/;
@@ -233,7 +233,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	 * @param append
 	 *            (optional) append the string to the end of the file.
 	 */
-	public native boolean write(Object contents, boolean append)
+	public final native boolean write(Object contents, boolean append)
 	/*-{
 		return this.write(contents, append);
 	}-*/;
@@ -241,7 +241,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the file is writeable
 	 */
-	public native boolean writeable()
+	public final native boolean writeable()
 	/*-{
 		return this.writeable();
 	}-*/;

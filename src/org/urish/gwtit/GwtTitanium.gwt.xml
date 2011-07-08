@@ -28,7 +28,7 @@
 	<define-linker name="titanium"
 		class="org.urish.gwtit.dev.linker.GwtTitaniumLinker" />
 	<add-linker name="titanium" />
-
+	
 	<replace-with class="org.urish.gwtit.client.RunnerImpl">
 		<when-type-is class="org.urish.gwtit.client.Runner" />
 	</replace-with>

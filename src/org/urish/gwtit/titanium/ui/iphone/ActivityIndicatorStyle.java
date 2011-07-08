@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the styles available for
@@ -32,10 +30,25 @@ public class ActivityIndicatorStyle extends org.urish.gwtit.titanium.Proxy {
 	protected ActivityIndicatorStyle() {
 	}
 
-	public static final Const BIG = new ConstImpl("Titanium.UI.iPhone.ActivityIndicatorStyle.BIG");
+	private static native final float value_BIG()
+	/*-{
+		return Titanium.UI.iPhone.ActivityIndicatorStyle.BIG;
+	}-*/;
 
-	public static final Const DARK = new ConstImpl("Titanium.UI.iPhone.ActivityIndicatorStyle.DARK");
+	public static final float BIG = value_BIG();
 
-	public static final Const PLAIN = new ConstImpl("Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN");
+	private static native final float value_DARK()
+	/*-{
+		return Titanium.UI.iPhone.ActivityIndicatorStyle.DARK;
+	}-*/;
+
+	public static final float DARK = value_DARK();
+
+	private static native final float value_PLAIN()
+	/*-{
+		return Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN;
+	}-*/;
+
+	public static final float PLAIN = value_PLAIN();
 
 }

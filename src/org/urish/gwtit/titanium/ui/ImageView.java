@@ -39,7 +39,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Readonly boolean to indicate if the animation is animating
 	 */
-	public native boolean getAnimating()
+	public final native boolean getAnimating()
 	/*-{
 		return this.animating;
 	}-*/;
@@ -47,12 +47,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Allow image to scale (android)
 	 */
-	public native boolean getCanScale()
+	public final native boolean getCanScale()
 	/*-{
 		return this.canScale;
 	}-*/;
 
-	public native void setCanScale(boolean value)
+	public final native void setCanScale(boolean value)
 	/*-{
 		this.canScale = value;
 	}-*/;
@@ -64,12 +64,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @platforms android
 	 * @since 1.7.0
 	 */
-	public native float getDecodeRetries()
+	public final native float getDecodeRetries()
 	/*-{
 		return this.decodeRetries;
 	}-*/;
 
-	public native void setDecodeRetries(float value)
+	public final native void setDecodeRetries(float value)
 	/*-{
 		this.decodeRetries = value;
 	}-*/;
@@ -77,12 +77,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Url to the default image to display while loading a remote image
 	 */
-	public native String getDefaultImage()
+	public final native String getDefaultImage()
 	/*-{
 		return this.defaultImage;
 	}-*/;
 
-	public native void setDefaultImage(String value)
+	public final native void setDefaultImage(String value)
 	/*-{
 		this.defaultImage = value;
 	}-*/;
@@ -90,12 +90,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Amount of time in milliseconds to animate one cycle
 	 */
-	public native float getDuration()
+	public final native float getDuration()
 	/*-{
 		return this.duration;
 	}-*/;
 
-	public native void setDuration(float value)
+	public final native void setDuration(float value)
 	/*-{
 		this.duration = value;
 	}-*/;
@@ -106,12 +106,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @platforms android
 	 * @since 1.3.0
 	 */
-	public native boolean getEnableZoomControls()
+	public final native boolean getEnableZoomControls()
 	/*-{
 		return this.enableZoomControls;
 	}-*/;
 
-	public native void setEnableZoomControls(boolean value)
+	public final native void setEnableZoomControls(boolean value)
 	/*-{
 		this.enableZoomControls = value;
 	}-*/;
@@ -121,12 +121,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 *         retina displays. use for remote images only. (ios)
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getHires()
+	public final native boolean getHires()
 	/*-{
 		return this.hires;
 	}-*/;
 
-	public native void setHires(boolean value)
+	public final native void setHires(boolean value)
 	/*-{
 		this.hires = value;
 	}-*/;
@@ -134,12 +134,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Image to display either as string url, blob or file
 	 */
-	public native Object getImage()
+	public final native Object getImage()
 	/*-{
 		return this.image;
 	}-*/;
 
-	public native void setImage(Object value)
+	public final native void setImage(Object value)
 	/*-{
 		this.image = value;
 	}-*/;
@@ -148,12 +148,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Array of images (either as string url, blob or file) to display
 	 *         in an animation
 	 */
-	public native Object[] getImages()
+	public final native Object[] getImages()
 	/*-{
 		return this.images;
 	}-*/;
 
-	public native void setImages(Object[] value)
+	public final native void setImages(Object[] value)
 	/*-{
 		this.images = value;
 	}-*/;
@@ -161,7 +161,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Readonly boolean to indicate if the animation is paused
 	 */
-	public native boolean getPaused()
+	public final native boolean getPaused()
 	/*-{
 		return this.paused;
 	}-*/;
@@ -170,12 +170,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the default image should be displaying
 	 *         while loading a remote image
 	 */
-	public native boolean getPreventDefaultImage()
+	public final native boolean getPreventDefaultImage()
 	/*-{
 		return this.preventDefaultImage;
 	}-*/;
 
-	public native void setPreventDefaultImage(boolean value)
+	public final native void setPreventDefaultImage(boolean value)
 	/*-{
 		this.preventDefaultImage = value;
 	}-*/;
@@ -183,12 +183,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Number of times to repeat the image animation
 	 */
-	public native float getRepeatCount()
+	public final native float getRepeatCount()
 	/*-{
 		return this.repeatCount;
 	}-*/;
 
-	public native void setRepeatCount(float value)
+	public final native void setRepeatCount(float value)
 	/*-{
 		this.repeatCount = value;
 	}-*/;
@@ -197,12 +197,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the animation should happen in reverse
 	 *         (from last to first)
 	 */
-	public native boolean getReverse()
+	public final native boolean getReverse()
 	/*-{
 		return this.reverse;
 	}-*/;
 
-	public native void setReverse(boolean value)
+	public final native void setReverse(boolean value)
 	/*-{
 		this.reverse = value;
 	}-*/;
@@ -211,12 +211,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Url to the image to display (note: this property is deprecated.
 	 *         use image instead)
 	 */
-	public native String getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;
 
-	public native void setUrl(String value)
+	public final native void setUrl(String value)
 	/*-{
 		this.url = value;
 	}-*/;
@@ -224,7 +224,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Pause a started animation.
 	 */
-	public native void pause()
+	public final native void pause()
 	/*-{
 		return this.pause();
 	}-*/;
@@ -233,7 +233,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * Start the image animation. this method only works if you set multiple
 	 * images
 	 */
-	public native void start()
+	public final native void start()
 	/*-{
 		return this.start();
 	}-*/;
@@ -241,7 +241,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Stop a started animation and reset the index to the first image
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;
@@ -249,27 +249,27 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Return the image as a blob object
 	 */
-	public native void toBlob()
+	public final native void toBlob()
 	/*-{
 		return this.toBlob();
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addLoadHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addLoadHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStopHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStopHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

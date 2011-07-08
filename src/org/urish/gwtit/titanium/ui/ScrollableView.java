@@ -42,12 +42,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 *         keep in mind that improved performance (larger cache) will lead
 	 *         to faster performance, but more memory usage. ios only.
 	 */
-	public native float getCacheSize()
+	public final native float getCacheSize()
 	/*-{
 		return this.cacheSize;
 	}-*/;
 
-	public native void setCacheSize(float value)
+	public final native void setCacheSize(float value)
 	/*-{
 		this.cacheSize = value;
 	}-*/;
@@ -55,12 +55,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The current page visible in the view
 	 */
-	public native float getCurrentPage()
+	public final native float getCurrentPage()
 	/*-{
 		return this.currentPage;
 	}-*/;
 
-	public native void setCurrentPage(float value)
+	public final native void setCurrentPage(float value)
 	/*-{
 		this.currentPage = value;
 	}-*/;
@@ -69,12 +69,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Disable view bouncing. ios only.
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getDisableBounce()
+	public final native boolean getDisableBounce()
 	/*-{
 		return this.disableBounce;
 	}-*/;
 
-	public native void setDisableBounce(boolean value)
+	public final native void setDisableBounce(boolean value)
 	/*-{
 		this.disableBounce = value;
 	}-*/;
@@ -83,12 +83,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The maximum zoom scale for the view
 	 * @platforms iphone, ipad
 	 */
-	public native float getMaxZoomScale()
+	public final native float getMaxZoomScale()
 	/*-{
 		return this.maxZoomScale;
 	}-*/;
 
-	public native void setMaxZoomScale(float value)
+	public final native void setMaxZoomScale(float value)
 	/*-{
 		this.maxZoomScale = value;
 	}-*/;
@@ -97,12 +97,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The minimum zoom scale for the view
 	 * @platforms iphone, ipad
 	 */
-	public native float getMinZoomScale()
+	public final native float getMinZoomScale()
 	/*-{
 		return this.minZoomScale;
 	}-*/;
 
-	public native void setMinZoomScale(float value)
+	public final native void setMinZoomScale(float value)
 	/*-{
 		this.minZoomScale = value;
 	}-*/;
@@ -110,12 +110,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The color of the paging control. defaults to black.
 	 */
-	public native String getPagingControlColor()
+	public final native String getPagingControlColor()
 	/*-{
 		return this.pagingControlColor;
 	}-*/;
 
-	public native void setPagingControlColor(String value)
+	public final native void setPagingControlColor(String value)
 	/*-{
 		this.pagingControlColor = value;
 	}-*/;
@@ -124,12 +124,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The height in pixels of the paging control, if visible. defaults
 	 *         to 20
 	 */
-	public native float getPagingControlHeight()
+	public final native float getPagingControlHeight()
 	/*-{
 		return this.pagingControlHeight;
 	}-*/;
 
-	public native void setPagingControlHeight(float value)
+	public final native void setPagingControlHeight(float value)
 	/*-{
 		this.pagingControlHeight = value;
 	}-*/;
@@ -137,12 +137,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean to indicate whether the paging control ui is visible
 	 */
-	public native boolean getShowPagingControl()
+	public final native boolean getShowPagingControl()
 	/*-{
 		return this.showPagingControl;
 	}-*/;
 
-	public native void setShowPagingControl(boolean value)
+	public final native void setShowPagingControl(boolean value)
 	/*-{
 		this.showPagingControl = value;
 	}-*/;
@@ -150,12 +150,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Array of view objects to place in the view
 	 */
-	public native Object[] getViews()
+	public final native Object[] getViews()
 	/*-{
 		return this.views;
 	}-*/;
 
-	public native void setViews(Object[] value)
+	public final native void setViews(Object[] value)
 	/*-{
 		this.views = value;
 	}-*/;
@@ -166,7 +166,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param view
 	 *            the view to add
 	 */
-	public native void addView(Object view)
+	public final native void addView(Object view)
 	/*-{
 		return this.addView(view);
 	}-*/;
@@ -177,7 +177,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param view
 	 *            the view to remove
 	 */
-	public native void removeView(Object view)
+	public final native void removeView(Object view)
 	/*-{
 		return this.removeView(view);
 	}-*/;
@@ -189,12 +189,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 *            either an integer index or the view object to bring into view
 	 *            as the currentPage
 	 */
-	public native void scrollToView(Object view)
+	public final native void scrollToView(Object view)
 	/*-{
 		return this.scrollToView(view);
 	}-*/;
 
-	public native void addScrollHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addScrollHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

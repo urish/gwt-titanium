@@ -46,12 +46,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	 * @platforms android
 	 * @since 1.3.0
 	 */
-	public native boolean getAllowBackground()
+	public final native boolean getAllowBackground()
 	/*-{
 		return this.allowBackground;
 	}-*/;
 
-	public native void setAllowBackground(boolean value)
+	public final native void setAllowBackground(boolean value)
 	/*-{
 		this.allowBackground = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The duration of the audio.
 	 */
-	public native float getDuration()
+	public final native float getDuration()
 	/*-{
 		return this.duration;
 	}-*/;
 
-	public native void setDuration(float value)
+	public final native void setDuration(float value)
 	/*-{
 		this.duration = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Boolean to indicate if the audio should loop upon completion
 	 */
-	public native boolean getLooping()
+	public final native boolean getLooping()
 	/*-{
 		return this.looping;
 	}-*/;
 
-	public native void setLooping(boolean value)
+	public final native void setLooping(boolean value)
 	/*-{
 		this.looping = value;
 	}-*/;
@@ -85,12 +85,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Boolean to indicate if the audio is paused
 	 */
-	public native boolean getPaused()
+	public final native boolean getPaused()
 	/*-{
 		return this.paused;
 	}-*/;
 
-	public native void setPaused(boolean value)
+	public final native void setPaused(boolean value)
 	/*-{
 		this.paused = value;
 	}-*/;
@@ -98,12 +98,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Boolean to indicate if the audio is playing
 	 */
-	public native boolean getPlaying()
+	public final native boolean getPlaying()
 	/*-{
 		return this.playing;
 	}-*/;
 
-	public native void setPlaying(boolean value)
+	public final native void setPlaying(boolean value)
 	/*-{
 		this.playing = value;
 	}-*/;
@@ -111,12 +111,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The time position of the audio.
 	 */
-	public native float getTime()
+	public final native float getTime()
 	/*-{
 		return this.time;
 	}-*/;
 
-	public native void setTime(float value)
+	public final native void setTime(float value)
 	/*-{
 		this.time = value;
 	}-*/;
@@ -124,12 +124,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Url to the audio
 	 */
-	public native String getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;
 
-	public native void setUrl(String value)
+	public final native void setUrl(String value)
 	/*-{
 		this.url = value;
 	}-*/;
@@ -138,12 +138,12 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	 * @return The volume of the audio. this volume only affects the media, not
 	 *         the device audio.
 	 */
-	public native float getVolume()
+	public final native float getVolume()
 	/*-{
 		return this.volume;
 	}-*/;
 
-	public native void setVolume(float value)
+	public final native void setVolume(float value)
 	/*-{
 		this.volume = value;
 	}-*/;
@@ -151,7 +151,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the audio will loop
 	 */
-	public native boolean isLooping()
+	public final native boolean isLooping()
 	/*-{
 		return this.isLooping();
 	}-*/;
@@ -159,7 +159,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the audio is paused
 	 */
-	public native boolean isPaused()
+	public final native boolean isPaused()
 	/*-{
 		return this.isPaused();
 	}-*/;
@@ -167,7 +167,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns true if the audio is playing
 	 */
-	public native boolean isPlaying()
+	public final native boolean isPlaying()
 	/*-{
 		return this.isPlaying();
 	}-*/;
@@ -175,7 +175,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Temporarily pause the audio. to resume, invoke `play`.
 	 */
-	public native void pause()
+	public final native void pause()
 	/*-{
 		return this.pause();
 	}-*/;
@@ -183,7 +183,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Starting playing the source. if paused, will resume.
 	 */
-	public native void play()
+	public final native void play()
 	/*-{
 		return this.play();
 	}-*/;
@@ -194,7 +194,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	 * and you would like to release all releases after your final play to
 	 * reduce memory.
 	 */
-	public native void release()
+	public final native void release()
 	/*-{
 		return this.release();
 	}-*/;
@@ -202,7 +202,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Reset the audio to the beginning.
 	 */
-	public native void reset()
+	public final native void reset()
 	/*-{
 		return this.reset();
 	}-*/;
@@ -210,27 +210,27 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Stop playing the audio and reset it to the beginning.
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;
 
-	public native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addErrorHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addInterruptedHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addInterruptedHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('interrupted', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addResumeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addResumeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

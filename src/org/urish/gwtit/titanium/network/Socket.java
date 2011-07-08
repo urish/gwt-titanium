@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.network;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * Socket module
@@ -30,15 +28,40 @@ public class Socket extends org.urish.gwtit.titanium.Module {
 	protected Socket() {
 	}
 
-	public static final Const INITIALIZED = new ConstImpl("Titanium.Network.Socket.INITIALIZED");
+	private static native final float value_INITIALIZED()
+	/*-{
+		return Titanium.Network.Socket.INITIALIZED;
+	}-*/;
 
-	public static final Const CONNECTED = new ConstImpl("Titanium.Network.Socket.CONNECTED");
+	public static final float INITIALIZED = value_INITIALIZED();
 
-	public static final Const LISTENING = new ConstImpl("Titanium.Network.Socket.LISTENING");
+	private static native final float value_CONNECTED()
+	/*-{
+		return Titanium.Network.Socket.CONNECTED;
+	}-*/;
 
-	public static final Const CLOSED = new ConstImpl("Titanium.Network.Socket.CLOSED");
+	public static final float CONNECTED = value_CONNECTED();
 
-	public static final Const ERROR = new ConstImpl("Titanium.Network.Socket.ERROR");
+	private static native final float value_LISTENING()
+	/*-{
+		return Titanium.Network.Socket.LISTENING;
+	}-*/;
+
+	public static final float LISTENING = value_LISTENING();
+
+	private static native final float value_CLOSED()
+	/*-{
+		return Titanium.Network.Socket.CLOSED;
+	}-*/;
+
+	public static final float CLOSED = value_CLOSED();
+
+	private static native final float value_ERROR()
+	/*-{
+		return Titanium.Network.Socket.ERROR;
+	}-*/;
+
+	public static final float ERROR = value_ERROR();
 
 	/**
 	 * Returns new tcp socket object, takes object containing properties list
@@ -53,6 +76,45 @@ public class Socket extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.network.socket.TCP createTCP(Object params)
 	/*-{
 		return Titanium.Network.Socket.createTCP(params);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Network.Socket.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Network.Socket.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Network.Socket.fireEvent(name, event);
 	}-*/;
 
 }

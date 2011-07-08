@@ -36,12 +36,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Set the enabled state of the item
 	 */
-	public native boolean getEnabled()
+	public final native boolean getEnabled()
 	/*-{
 		return this.enabled;
 	}-*/;
 
-	public native void setEnabled(boolean value)
+	public final native void setEnabled(boolean value)
 	/*-{
 		this.enabled = value;
 	}-*/;
@@ -49,12 +49,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Groupid for this item (read-only)
 	 */
-	public native float getGroupId()
+	public final native float getGroupId()
 	/*-{
 		return this.groupId;
 	}-*/;
 
-	public native void setGroupId(float value)
+	public final native void setGroupId(float value)
 	/*-{
 		this.groupId = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Itemid for this item (read-only)
 	 */
-	public native float getItemId()
+	public final native float getItemId()
 	/*-{
 		return this.itemId;
 	}-*/;
 
-	public native void setItemId(float value)
+	public final native void setItemId(float value)
 	/*-{
 		this.itemId = value;
 	}-*/;
@@ -75,12 +75,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Integer used for controlling sort order (read-only)
 	 */
-	public native float getOrder()
+	public final native float getOrder()
 	/*-{
 		return this.order;
 	}-*/;
 
-	public native void setOrder(float value)
+	public final native void setOrder(float value)
 	/*-{
 		this.order = value;
 	}-*/;
@@ -88,12 +88,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Item title
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -101,12 +101,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Condensed item title
 	 */
-	public native String getTitleCondensed()
+	public final native String getTitleCondensed()
 	/*-{
 		return this.titleCondensed;
 	}-*/;
 
-	public native void setTitleCondensed(String value)
+	public final native void setTitleCondensed(String value)
 	/*-{
 		this.titleCondensed = value;
 	}-*/;
@@ -114,12 +114,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Set the visible state of the item
 	 */
-	public native boolean getVisible()
+	public final native boolean getVisible()
 	/*-{
 		return this.visible;
 	}-*/;
 
-	public native void setVisible(boolean value)
+	public final native void setVisible(boolean value)
 	/*-{
 		this.visible = value;
 	}-*/;
@@ -127,7 +127,7 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Retrieve the enabled state of the menu
 	 */
-	public native boolean isEnabled()
+	public final native boolean isEnabled()
 	/*-{
 		return this.isEnabled();
 	}-*/;
@@ -135,7 +135,7 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Retrieve the visible state of the menu
 	 */
-	public native boolean isVisible()
+	public final native boolean isVisible()
 	/*-{
 		return this.isVisible();
 	}-*/;
@@ -146,12 +146,12 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	 * @param icon
 	 *            icon to use with the item
 	 */
-	public native void setIcon(Object icon)
+	public final native void setIcon(Object icon)
 	/*-{
 		return this.setIcon(icon);
 	}-*/;
 
-	public native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

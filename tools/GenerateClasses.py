@@ -17,6 +17,7 @@ import os
 import re
 import yaml
 from copy import copy
+from numpy.f2py.auxfuncs import issigned_array
 
 CLASS_TEMPLATE = """
 /*
@@ -40,8 +41,6 @@ CLASS_TEMPLATE = """
 package org.urish.gwtit.%(package)s;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 import org.urish.gwtit.client.EventCallback;
 
 /**
@@ -61,13 +60,13 @@ GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public native %(type)s get%(nameCapital)s() 
+	public final native %(type)s get%(nameCapital)s() 
 	/*-{
 		return this.%(name)s;
 	}-*/;
 """
 SETTER_TEMPLATE = """
-	public native void set%(nameCapital)s(%(type)s value) 
+	public final native void set%(nameCapital)s(%(type)s value) 
 	/*-{
 		this.%(name)s = value;
 	}-*/;
@@ -90,7 +89,12 @@ STATIC_SETTER_TEMPLATE = """
 """
 
 CONST_TEMPLATE = """
-	public static final Const %(name)s = new ConstImpl("%(module)s.%(name)s");
+	private static native final %(type)s value_%(name)s()
+	/*-{
+		return %(module)s.%(name)s;
+	}-*/;
+
+	public static final %(type)s %(name)s = value_%(name)s();
 """
 
 STATIC_METHOD_TEMPLATE = """
@@ -107,7 +111,7 @@ METHOD_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public native %(return)s %(name)s (%(params)s) 
+	public final native %(return)s %(name)s (%(params)s) 
 	/*-{
 		return this.%(name)s(%(paramNames)s);
 	}-*/;
@@ -121,7 +125,7 @@ CONSTRUCTOR_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public native void add%(nameCapital)sHandler(EventCallback<JavaScriptObject> handler) 
+	public final native void add%(nameCapital)sHandler(EventCallback<JavaScriptObject> handler) 
 	/*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -165,7 +169,17 @@ def mapTypes(s, withConsts = False):
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
 	print "==>", s
 	return "Object"
-	
+
+def findType(name, types):
+	for typeInfo in types:
+		if typeInfo['name'] == name:
+			return typeInfo
+
+def ancestors(type, types):
+	while 'extends' in type:
+		type = findType(type['extends'], types)
+		yield type
+
 def mapIdentifiers(s):
 	if s == "default":
 		return "_default"
@@ -183,7 +197,7 @@ def parseDocString(text):
 	text = re.sub("<(Titanium.[^>]+)>", docStringLink, text)
 	return re.sub("<[^>]+>", "", text)
 
-def generateProperties(type, isSingleton):
+def generateProperties(type, isSingleton, types):
 	result = ""
 	if isSingleton:
 		getterTemplate = STATIC_GETTER_TEMPLATE
@@ -198,6 +212,15 @@ def generateProperties(type, isSingleton):
 			getter = getterTemplate
 			setter = setterTemplate if not readonly else ""
 			if property['name'] != property['name'].upper():
+				foundInAncetors = False
+				if not isSingleton:
+					for ancestor in ancestors(type, types):
+						if 'properties' in ancestor:
+							for candidate in ancestor['properties']:
+								if property['name'] == candidate['name']:
+									foundInAncetors = True
+				if foundInAncetors:
+					continue
 				if isinstance(property['type'], list):
 					for option in property['type']:
 						result += setter % {
@@ -224,7 +247,7 @@ def generateProperties(type, isSingleton):
 					}
 			else:
 				result += CONST_TEMPLATE % {
-					'type': property['type'],
+					'type': mapTypes(property['type']),
 					'name': property['name'],
 					'module': type['name'],
 					'docString': docString,
@@ -288,9 +311,26 @@ def generateFactories(typeInfo, types):
 				}
 	return result
 
-def generateMethods(type, isSingleton):
+def methodPermutations(method):
+	params = []
+	paramNames = []
+	if 'parameters' in method:
+		for parameter in method['parameters']:
+			if 'optional' in parameter and parameter['optional']:
+				yield (copy(params), copy(paramNames))
+			name = mapIdentifiers(parameter['name'])
+			paramNames.append(name)
+			params.append("%s %s" % (mapTypes(parameter['type']),name))
+	yield (params, paramNames)
+
+def generateMethods(type, isSingleton, types):
 	result = ""
-	for method in type['methods']:
+	methods = type['methods']
+	if isSingleton:
+		for ancestor in ancestors(type, types):
+			if 'methods' in ancestor:
+				methods.extend(ancestor['methods'])
+	for method in methods:
 		duplicate = False
 		if 'properties' in type:
 			for property in type['properties']:
@@ -300,33 +340,32 @@ def generateMethods(type, isSingleton):
 		if duplicate:
 			continue
 		returnType = "void"
-		params = []
-		paramNames = []
-		permutations = []
 		if "returns" in method:
 			returnType = method['returns']["type"]
-		if 'parameters' in method:
-			for parameter in method['parameters']:
-				if 'optional' in parameter and parameter['optional']:
-					permutations.append((copy(params), copy(paramNames)))
-				name = mapIdentifiers(parameter['name'])
-				paramNames.append(name)
-				params.append("%s %s" % (mapTypes(parameter['type']),name))
-		permutations.append((params, paramNames))
 		if isSingleton:
 			template = STATIC_METHOD_TEMPLATE 
 		else:
 			template = METHOD_TEMPLATE
-		for params, paramNames in permutations:
-			result += template % {
-				'module': type['name'],
-				'name': mapMethodNames(method['name']),
-				'nativeName': method['name'],
-				'docString': generateMethodDoc(method),
-				'params': ", ".join(params),
-				'paramNames': ", ".join(paramNames),
-				'return': mapTypes(returnType),
-			}
+		for params, paramNames in methodPermutations(method):
+			foundInAncetors = False
+			if not isSingleton:
+				for ancestor in ancestors(type, types):
+					if 'methods' in ancestor:
+						for candidate in ancestor['methods']:
+							if method['name'] == candidate['name']:
+								for candidateParams, _ in methodPermutations(candidate):
+									if candidateParams == params:
+										foundInAncetors = True
+			if not foundInAncetors:
+				result += template % {
+					'module': type['name'],
+					'name': mapMethodNames(method['name']),
+					'nativeName': method['name'],
+					'docString': generateMethodDoc(method),
+					'params': ", ".join(params),
+					'paramNames': ", ".join(paramNames),
+					'return': mapTypes(returnType),
+				}
 	return result
 	
 def capitalEventName(eventName):
@@ -334,16 +373,24 @@ def capitalEventName(eventName):
 		return match.group(1).upper()
 	return re.sub(":(.)", capitalMatch, capitalFirst(eventName))
 	
-def generateEvents(typeInfo, isSingleton):
+def generateEvents(typeInfo, isSingleton, types):
 	result = ""
 	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
 	if 'events' in typeInfo:
 		for event in typeInfo['events']:
-			result += template % {
-				'name': event['name'],
-				'nameCapital': capitalEventName(event['name']),
-				'module': typeInfo['name'],
-			}
+			foundInAncetors = False
+			if not isSingleton:
+				for ancestor in ancestors(typeInfo, types):
+					if 'events' in ancestor:
+						for candidate in ancestor['events']:
+							if event['name'] == candidate['name']:
+								foundInAncetors = True
+			if not foundInAncetors: 
+				result += template % {
+					'name': event['name'],
+					'nameCapital': capitalEventName(event['name']),
+					'module': typeInfo['name'],
+				}
 	return result
 
 def generateClass(projectRoot, type, types):
@@ -352,20 +399,18 @@ def generateClass(projectRoot, type, types):
 	name = type['name'].split(".")
 	parentClass = "JavaScriptObject"
 	singleton = False
-	if 'extends' in type:
+	if ('extends' in type) and type['name'] != "Titanium.Module":
 		parentClass = mapTypes(type['extends'])
 		singleton = type['extends'] == 'Titanium.Module'
-	if type['name'] == "Titanium.Module":
-		parentClass = "org.urish.gwtit.client.TitaniumModule"
 	code = CLASS_TEMPLATE % {
 		'package': ".".join(["titanium"] + name[1:-1]).lower(),
 		'name': name[-1],
 		'parent': parentClass,
 		'docString': generateClassDoc(type),
-		'properties': generateProperties(type, singleton),
+		'properties': generateProperties(type, singleton, types),
 		'factories': generateFactories(type, types),
-		'methods': generateMethods(type, singleton) if ('methods' in type) else '',
-		'events': generateEvents(type, singleton),
+		'methods': generateMethods(type, singleton, types) if ('methods' in type) else '',
+		'events': generateEvents(type, singleton, types),
 	}
 	dir = os.path.join(projectRoot, r"src/org/urish/gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):

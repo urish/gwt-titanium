@@ -50,12 +50,12 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return View for the detail view section of the splitwindow
 	 */
-	public native Object getDetailView()
+	public final native Object getDetailView()
 	/*-{
 		return this.detailView;
 	}-*/;
 
-	public native void setDetailView(Object value)
+	public final native void setDetailView(Object value)
 	/*-{
 		this.detailView = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return View for the master view section of the splitwindow
 	 */
-	public native Object getMasterView()
+	public final native Object getMasterView()
 	/*-{
 		return this.masterView;
 	}-*/;
 
-	public native void setMasterView(Object value)
+	public final native void setMasterView(Object value)
 	/*-{
 		this.masterView = value;
 	}-*/;
@@ -78,17 +78,17 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	 *         'false'.
 	 * @since 1.7.2
 	 */
-	public native boolean getShowMasterInPortrait()
+	public final native boolean getShowMasterInPortrait()
 	/*-{
 		return this.showMasterInPortrait;
 	}-*/;
 
-	public native void setShowMasterInPortrait(boolean value)
+	public final native void setShowMasterInPortrait(boolean value)
 	/*-{
 		this.showMasterInPortrait = value;
 	}-*/;
 
-	public native void addVisibleHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addVisibleHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('visible', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

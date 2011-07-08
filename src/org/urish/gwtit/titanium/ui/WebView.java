@@ -45,12 +45,12 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return A data blob or file that is used to load the web document
 	 */
-	public native Object getData()
+	public final native Object getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public native void setData(Object value)
+	public final native void setData(Object value)
 	/*-{
 		this.data = value;
 	}-*/;
@@ -58,12 +58,12 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The html content of the web document
 	 */
-	public native String getHtml()
+	public final native String getHtml()
 	/*-{
 		return this.html;
 	}-*/;
 
-	public native void setHtml(String value)
+	public final native void setHtml(String value)
 	/*-{
 		this.html = value;
 	}-*/;
@@ -71,12 +71,12 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean indicating if the webview is loading content
 	 */
-	public native boolean getLoading()
+	public final native boolean getLoading()
 	/*-{
 		return this.loading;
 	}-*/;
 
-	public native void setLoading(boolean value)
+	public final native void setLoading(boolean value)
 	/*-{
 		this.loading = value;
 	}-*/;
@@ -84,12 +84,12 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Whether the webview should scale it's contents or not
 	 */
-	public native boolean getScalesPageToFit()
+	public final native boolean getScalesPageToFit()
 	/*-{
 		return this.scalesPageToFit;
 	}-*/;
 
-	public native void setScalesPageToFit(boolean value)
+	public final native void setScalesPageToFit(boolean value)
 	/*-{
 		this.scalesPageToFit = value;
 	}-*/;
@@ -99,12 +99,12 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	 *         content of the webview changes (such as from internal hyperlinks,
 	 *         etc)
 	 */
-	public native String getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;
 
-	public native void setUrl(String value)
+	public final native void setUrl(String value)
 	/*-{
 		this.url = value;
 	}-*/;
@@ -112,7 +112,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Returns true if the webview can go back in history
 	 */
-	public native boolean canGoBack()
+	public final native boolean canGoBack()
 	/*-{
 		return this.canGoBack();
 	}-*/;
@@ -120,7 +120,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Returns true if the webview can go forward in history
 	 */
-	public native boolean canGoForward()
+	public final native boolean canGoForward()
 	/*-{
 		return this.canGoForward();
 	}-*/;
@@ -133,7 +133,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	 *            JavaScript code as a string. The code will be evaluated inside
 	 *            the webview context.
 	 */
-	public native String evalJS(String content)
+	public final native String evalJS(String content)
 	/*-{
 		return this.evalJS(content);
 	}-*/;
@@ -141,7 +141,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Go back one entry in history to the previous page
 	 */
-	public native void goBack()
+	public final native void goBack()
 	/*-{
 		return this.goBack();
 	}-*/;
@@ -149,7 +149,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Go forward one entry in history to the page before the current page
 	 */
-	public native void goForward()
+	public final native void goForward()
 	/*-{
 		return this.goForward();
 	}-*/;
@@ -157,7 +157,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Reload the current webpage
 	 */
-	public native void reload()
+	public final native void reload()
 	/*-{
 		return this.reload();
 	}-*/;
@@ -165,7 +165,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Force the webview to repaint its contents
 	 */
-	public native void repaint()
+	public final native void repaint()
 	/*-{
 		return this.repaint();
 	}-*/;
@@ -179,7 +179,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	 * @param password
 	 *            the password
 	 */
-	public native void setBasicAuthentication(String username, String password)
+	public final native void setBasicAuthentication(String username, String password)
 	/*-{
 		return this.setBasicAuthentication(username, password);
 	}-*/;
@@ -187,22 +187,22 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * Stop loading a currently loading page
 	 */
-	public native void stopLoading()
+	public final native void stopLoading()
 	/*-{
 		return this.stopLoading();
 	}-*/;
 
-	public native void addBeforeloadHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addBeforeloadHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addErrorHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addLoadHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addLoadHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

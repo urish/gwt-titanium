@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the style that can be used for the button `style`
@@ -32,8 +30,18 @@ public class TableViewStyle extends org.urish.gwtit.titanium.Proxy {
 	protected TableViewStyle() {
 	}
 
-	public static final Const GROUPED = new ConstImpl("Titanium.UI.iPhone.TableViewStyle.GROUPED");
+	private static native final float value_GROUPED()
+	/*-{
+		return Titanium.UI.iPhone.TableViewStyle.GROUPED;
+	}-*/;
 
-	public static final Const PLAIN = new ConstImpl("Titanium.UI.iPhone.TableViewStyle.PLAIN");
+	public static final float GROUPED = value_GROUPED();
+
+	private static native final float value_PLAIN()
+	/*-{
+		return Titanium.UI.iPhone.TableViewStyle.PLAIN;
+	}-*/;
+
+	public static final float PLAIN = value_PLAIN();
 
 }

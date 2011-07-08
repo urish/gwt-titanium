@@ -35,12 +35,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider left track when in the disabled state
 	 */
-	public native String getDisabledLeftTrackImage()
+	public final native String getDisabledLeftTrackImage()
 	/*-{
 		return this.disabledLeftTrackImage;
 	}-*/;
 
-	public native void setDisabledLeftTrackImage(String value)
+	public final native void setDisabledLeftTrackImage(String value)
 	/*-{
 		this.disabledLeftTrackImage = value;
 	}-*/;
@@ -49,12 +49,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 * @return The image url of the slider right track when in the disabled
 	 *         state
 	 */
-	public native String getDisabledRightTrackImage()
+	public final native String getDisabledRightTrackImage()
 	/*-{
 		return this.disabledRightTrackImage;
 	}-*/;
 
-	public native void setDisabledRightTrackImage(String value)
+	public final native void setDisabledRightTrackImage(String value)
 	/*-{
 		this.disabledRightTrackImage = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider thumb when in the disabled state
 	 */
-	public native String getDisabledThumbImage()
+	public final native String getDisabledThumbImage()
 	/*-{
 		return this.disabledThumbImage;
 	}-*/;
 
-	public native void setDisabledThumbImage(String value)
+	public final native void setDisabledThumbImage(String value)
 	/*-{
 		this.disabledThumbImage = value;
 	}-*/;
@@ -75,12 +75,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean to indicate the enabled state of the slider
 	 */
-	public native boolean getEnabled()
+	public final native boolean getEnabled()
 	/*-{
 		return this.enabled;
 	}-*/;
 
-	public native void setEnabled(boolean value)
+	public final native void setEnabled(boolean value)
 	/*-{
 		this.enabled = value;
 	}-*/;
@@ -89,12 +89,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 * @return The image url of the slider left track when in the highlighted
 	 *         state
 	 */
-	public native String getHighlightedLeftTrackImage()
+	public final native String getHighlightedLeftTrackImage()
 	/*-{
 		return this.highlightedLeftTrackImage;
 	}-*/;
 
-	public native void setHighlightedLeftTrackImage(String value)
+	public final native void setHighlightedLeftTrackImage(String value)
 	/*-{
 		this.highlightedLeftTrackImage = value;
 	}-*/;
@@ -103,12 +103,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 * @return The image url of the slider right track when in the highlighted
 	 *         state
 	 */
-	public native String getHighlightedRightTrackImage()
+	public final native String getHighlightedRightTrackImage()
 	/*-{
 		return this.highlightedRightTrackImage;
 	}-*/;
 
-	public native void setHighlightedRightTrackImage(String value)
+	public final native void setHighlightedRightTrackImage(String value)
 	/*-{
 		this.highlightedRightTrackImage = value;
 	}-*/;
@@ -116,12 +116,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider thumb when in the highlighted state
 	 */
-	public native String getHighlightedThumbImage()
+	public final native String getHighlightedThumbImage()
 	/*-{
 		return this.highlightedThumbImage;
 	}-*/;
 
-	public native void setHighlightedThumbImage(String value)
+	public final native void setHighlightedThumbImage(String value)
 	/*-{
 		this.highlightedThumbImage = value;
 	}-*/;
@@ -129,12 +129,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider left track
 	 */
-	public native String getLeftTrackImage()
+	public final native String getLeftTrackImage()
 	/*-{
 		return this.leftTrackImage;
 	}-*/;
 
-	public native void setLeftTrackImage(String value)
+	public final native void setLeftTrackImage(String value)
 	/*-{
 		this.leftTrackImage = value;
 	}-*/;
@@ -142,12 +142,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The maximum slider value
 	 */
-	public native float getMax()
+	public final native float getMax()
 	/*-{
 		return this.max;
 	}-*/;
 
-	public native void setMax(float value)
+	public final native void setMax(float value)
 	/*-{
 		this.max = value;
 	}-*/;
@@ -157,12 +157,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 *         default. (android)
 	 * @platforms android
 	 */
-	public native float getMaxRange()
+	public final native float getMaxRange()
 	/*-{
 		return this.maxRange;
 	}-*/;
 
-	public native void setMaxRange(float value)
+	public final native void setMaxRange(float value)
 	/*-{
 		this.maxRange = value;
 	}-*/;
@@ -170,12 +170,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The minimum slider value
 	 */
-	public native float getMin()
+	public final native float getMin()
 	/*-{
 		return this.min;
 	}-*/;
 
-	public native void setMin(float value)
+	public final native void setMin(float value)
 	/*-{
 		this.min = value;
 	}-*/;
@@ -185,12 +185,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 *         default. (android)
 	 * @platforms android
 	 */
-	public native float getMinRange()
+	public final native float getMinRange()
 	/*-{
 		return this.minRange;
 	}-*/;
 
-	public native void setMinRange(float value)
+	public final native void setMinRange(float value)
 	/*-{
 		this.minRange = value;
 	}-*/;
@@ -198,12 +198,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider right track
 	 */
-	public native String getRightTrackImage()
+	public final native String getRightTrackImage()
 	/*-{
 		return this.rightTrackImage;
 	}-*/;
 
-	public native void setRightTrackImage(String value)
+	public final native void setRightTrackImage(String value)
 	/*-{
 		this.rightTrackImage = value;
 	}-*/;
@@ -211,12 +211,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider left track when in the selected state
 	 */
-	public native String getSelectedLeftTrackImage()
+	public final native String getSelectedLeftTrackImage()
 	/*-{
 		return this.selectedLeftTrackImage;
 	}-*/;
 
-	public native void setSelectedLeftTrackImage(String value)
+	public final native void setSelectedLeftTrackImage(String value)
 	/*-{
 		this.selectedLeftTrackImage = value;
 	}-*/;
@@ -225,12 +225,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 * @return The image url of the slider right track when in the selected
 	 *         state
 	 */
-	public native String getSelectedRightTrackImage()
+	public final native String getSelectedRightTrackImage()
 	/*-{
 		return this.selectedRightTrackImage;
 	}-*/;
 
-	public native void setSelectedRightTrackImage(String value)
+	public final native void setSelectedRightTrackImage(String value)
 	/*-{
 		this.selectedRightTrackImage = value;
 	}-*/;
@@ -238,12 +238,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url of the slider thumb when in the selected state
 	 */
-	public native String getSelectedThumbImage()
+	public final native String getSelectedThumbImage()
 	/*-{
 		return this.selectedThumbImage;
 	}-*/;
 
-	public native void setSelectedThumbImage(String value)
+	public final native void setSelectedThumbImage(String value)
 	/*-{
 		this.selectedThumbImage = value;
 	}-*/;
@@ -251,12 +251,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The image url to the slider thumb
 	 */
-	public native String getThumbImage()
+	public final native String getThumbImage()
 	/*-{
 		return this.thumbImage;
 	}-*/;
 
-	public native void setThumbImage(String value)
+	public final native void setThumbImage(String value)
 	/*-{
 		this.thumbImage = value;
 	}-*/;
@@ -264,17 +264,17 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The value of the slider
 	 */
-	public native String getValue()
+	public final native String getValue()
 	/*-{
 		return this.value;
 	}-*/;
 
-	public native void setValue(String value)
+	public final native void setValue(String value)
 	/*-{
 		this.value = value;
 	}-*/;
 
-	public native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

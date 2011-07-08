@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.network;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The httpclient instance returned from
@@ -32,25 +30,50 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	protected HTTPClient() {
 	}
 
-	public static final Const DONE = new ConstImpl("Titanium.Network.HTTPClient.DONE");
+	private static native final float value_DONE()
+	/*-{
+		return Titanium.Network.HTTPClient.DONE;
+	}-*/;
 
-	public static final Const HEADERS_RECEIVED = new ConstImpl("Titanium.Network.HTTPClient.HEADERS_RECEIVED");
+	public static final float DONE = value_DONE();
 
-	public static final Const LOADING = new ConstImpl("Titanium.Network.HTTPClient.LOADING");
+	private static native final float value_HEADERS_RECEIVED()
+	/*-{
+		return Titanium.Network.HTTPClient.HEADERS_RECEIVED;
+	}-*/;
 
-	public static final Const OPENED = new ConstImpl("Titanium.Network.HTTPClient.OPENED");
+	public static final float HEADERS_RECEIVED = value_HEADERS_RECEIVED();
 
-	public static final Const UNSENT = new ConstImpl("Titanium.Network.HTTPClient.UNSENT");
+	private static native final float value_LOADING()
+	/*-{
+		return Titanium.Network.HTTPClient.LOADING;
+	}-*/;
+
+	public static final float LOADING = value_LOADING();
+
+	private static native final float value_OPENED()
+	/*-{
+		return Titanium.Network.HTTPClient.OPENED;
+	}-*/;
+
+	public static final float OPENED = value_OPENED();
+
+	private static native final float value_UNSENT()
+	/*-{
+		return Titanium.Network.HTTPClient.UNSENT;
+	}-*/;
+
+	public static final float UNSENT = value_UNSENT();
 
 	/**
 	 * @return Boolean to indicate that the response was successful
 	 */
-	public native boolean getConnected()
+	public final native boolean getConnected()
 	/*-{
 		return this.connected;
 	}-*/;
 
-	public native void setConnected(boolean value)
+	public final native void setConnected(boolean value)
 	/*-{
 		this.connected = value;
 	}-*/;
@@ -58,12 +81,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The connection type, normally either `get` or `post`.
 	 */
-	public native String getConnectionType()
+	public final native String getConnectionType()
 	/*-{
 		return this.connectionType;
 	}-*/;
 
-	public native void setConnectionType(String value)
+	public final native void setConnectionType(String value)
 	/*-{
 		this.connectionType = value;
 	}-*/;
@@ -72,12 +95,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return File to download contents to. can only be set after calling open.
 	 *         ios only
 	 */
-	public native String getFile()
+	public final native String getFile()
 	/*-{
 		return this.file;
 	}-*/;
 
-	public native void setFile(String value)
+	public final native void setFile(String value)
 	/*-{
 		this.file = value;
 	}-*/;
@@ -85,12 +108,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The absolute url of the request
 	 */
-	public native String getLocation()
+	public final native String getLocation()
 	/*-{
 		return this.location;
 	}-*/;
 
-	public native void setLocation(String value)
+	public final native void setLocation(String value)
 	/*-{
 		this.location = value;
 	}-*/;
@@ -101,12 +124,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *         received. the `progress` property of the event will contain a
 	 *         value from 0.0-1.0 with the progress.
 	 */
-	public native Object getOndatastream()
+	public final native Object getOndatastream()
 	/*-{
 		return this.ondatastream;
 	}-*/;
 
-	public native void setOndatastream(Object value)
+	public final native void setOndatastream(Object value)
 	/*-{
 		this.ondatastream = value;
 	}-*/;
@@ -115,12 +138,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return Set this to a function before calling open to cause the function
 	 *         to be called upon a error response
 	 */
-	public native Object getOnerror()
+	public final native Object getOnerror()
 	/*-{
 		return this.onerror;
 	}-*/;
 
-	public native void setOnerror(Object value)
+	public final native void setOnerror(Object value)
 	/*-{
 		this.onerror = value;
 	}-*/;
@@ -129,12 +152,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return Set this to a function before calling open to cause the function
 	 *         to be called upon a successful response
 	 */
-	public native Object getOnload()
+	public final native Object getOnload()
 	/*-{
 		return this.onload;
 	}-*/;
 
-	public native void setOnload(Object value)
+	public final native void setOnload(Object value)
 	/*-{
 		this.onload = value;
 	}-*/;
@@ -143,12 +166,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return Set this to a function before calling open to cause the function
 	 *         to be called for each readystate change
 	 */
-	public native Object getOnreadystatechange()
+	public final native Object getOnreadystatechange()
 	/*-{
 		return this.onreadystatechange;
 	}-*/;
 
-	public native void setOnreadystatechange(Object value)
+	public final native void setOnreadystatechange(Object value)
 	/*-{
 		this.onreadystatechange = value;
 	}-*/;
@@ -159,12 +182,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *         transmitted. the `progress` property of the event will contain a
 	 *         value from 0.0-1.0 with the progress.
 	 */
-	public native Object getOnsendstream()
+	public final native Object getOnsendstream()
 	/*-{
 		return this.onsendstream;
 	}-*/;
 
-	public native void setOnsendstream(Object value)
+	public final native void setOnsendstream(Object value)
 	/*-{
 		this.onsendstream = value;
 	}-*/;
@@ -172,12 +195,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The readystate value
 	 */
-	public native float getReadyState()
+	public final native float getReadyState()
 	/*-{
 		return this.readyState;
 	}-*/;
 
-	public native void setReadyState(float value)
+	public final native void setReadyState(float value)
 	/*-{
 		this.readyState = value;
 	}-*/;
@@ -185,12 +208,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The response data as a blob object.
 	 */
-	public native Object getResponseData()
+	public final native Object getResponseData()
 	/*-{
 		return this.responseData;
 	}-*/;
 
-	public native void setResponseData(Object value)
+	public final native void setResponseData(Object value)
 	/*-{
 		this.responseData = value;
 	}-*/;
@@ -199,12 +222,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return The response as text or null if an error was received or no data
 	 *         was returned
 	 */
-	public native String getResponseText()
+	public final native String getResponseText()
 	/*-{
 		return this.responseText;
 	}-*/;
 
-	public native void setResponseText(String value)
+	public final native void setResponseText(String value)
 	/*-{
 		this.responseText = value;
 	}-*/;
@@ -214,12 +237,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *         the content type returned by the server was not xml or the
 	 *         content could not be parsed
 	 */
-	public native Object getResponseXML()
+	public final native Object getResponseXML()
 	/*-{
 		return this.responseXML;
 	}-*/;
 
-	public native void setResponseXML(Object value)
+	public final native void setResponseXML(Object value)
 	/*-{
 		this.responseXML = value;
 	}-*/;
@@ -227,12 +250,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The response http status code
 	 */
-	public native float getStatus()
+	public final native float getStatus()
 	/*-{
 		return this.status;
 	}-*/;
 
-	public native void setStatus(float value)
+	public final native void setStatus(float value)
 	/*-{
 		this.status = value;
 	}-*/;
@@ -240,12 +263,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Timeout is milliseconds when the connection should be aborted
 	 */
-	public native float getTimeout()
+	public final native float getTimeout()
 	/*-{
 		return this.timeout;
 	}-*/;
 
-	public native void setTimeout(float value)
+	public final native void setTimeout(float value)
 	/*-{
 		this.timeout = value;
 	}-*/;
@@ -255,12 +278,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *         on connection. defaults to false if in simulator or device
 	 *         testing and true if release for distribution mode.
 	 */
-	public native boolean getValidatesSecureCertificate()
+	public final native boolean getValidatesSecureCertificate()
 	/*-{
 		return this.validatesSecureCertificate;
 	}-*/;
 
-	public native void setValidatesSecureCertificate(boolean value)
+	public final native void setValidatesSecureCertificate(boolean value)
 	/*-{
 		this.validatesSecureCertificate = value;
 	}-*/;
@@ -268,7 +291,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Abort a pending request
 	 */
-	public native void abort()
+	public final native void abort()
 	/*-{
 		return this.abort();
 	}-*/;
@@ -279,7 +302,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            the header name
 	 */
-	public native String getResponseHeader(String name)
+	public final native String getResponseHeader(String name)
 	/*-{
 		return this.getResponseHeader(name);
 	}-*/;
@@ -294,7 +317,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @param async
 	 *            optional property to indicate if asynchronous (default) or not
 	 */
-	public native void open(String method, String url, boolean async)
+	public final native void open(String method, String url, boolean async)
 	/*-{
 		return this.open(method, url, async);
 	}-*/;
@@ -306,7 +329,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *            the data to send in the request. can either be null,
 	 *            dictionary, string, File object or Blob.
 	 */
-	public native void send(Object data)
+	public final native void send(Object data)
 	/*-{
 		return this.send(data);
 	}-*/;
@@ -320,7 +343,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *            value of the header. May be null to clearing out a property,
 	 *            such as X-Requested-With
 	 */
-	public native void setRequestHeader(String name, String value)
+	public final native void setRequestHeader(String name, String value)
 	/*-{
 		return this.setRequestHeader(name, value);
 	}-*/;

@@ -33,12 +33,12 @@ public class PickerRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return The font size when displaying the text. ignored when using a
 	 *         custom view
 	 */
-	public native float getFontSize()
+	public final native float getFontSize()
 	/*-{
 		return this.fontSize;
 	}-*/;
 
-	public native void setFontSize(float value)
+	public final native void setFontSize(float value)
 	/*-{
 		this.fontSize = value;
 	}-*/;
@@ -47,12 +47,12 @@ public class PickerRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return When used in the constructor, set the row to selected on initial
 	 *         display
 	 */
-	public native boolean getSelected()
+	public final native boolean getSelected()
 	/*-{
 		return this.selected;
 	}-*/;
 
-	public native void setSelected(boolean value)
+	public final native void setSelected(boolean value)
 	/*-{
 		this.selected = value;
 	}-*/;
@@ -60,12 +60,12 @@ public class PickerRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The display text
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;

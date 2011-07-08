@@ -42,12 +42,12 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	 * @return (read-only) the {@link org.urish.gwtit.titanium.android.intent}
 	 *         used to start or bind to the service.
 	 */
-	public native org.urish.gwtit.titanium.android.Intent getIntent()
+	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
 		return this.intent;
 	}-*/;
 
-	public native void setIntent(org.urish.gwtit.titanium.android.Intent value)
+	public final native void setIntent(org.urish.gwtit.titanium.android.Intent value)
 	/*-{
 		this.intent = value;
 	}-*/;
@@ -57,12 +57,12 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	 *         number (based on an incrementing integer) indicates which
 	 *         "start number" in the sequence the current service instance is.
 	 */
-	public native float getServiceInstanceId()
+	public final native float getServiceInstanceId()
 	/*-{
 		return this.serviceInstanceId;
 	}-*/;
 
-	public native void setServiceInstanceId(float value)
+	public final native void setServiceInstanceId(float value)
 	/*-{
 		this.serviceInstanceId = value;
 	}-*/;
@@ -72,7 +72,7 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	 * {@link org.urish.gwtit.titanium.android.service} was created with
 	 * {@link org.urish.gwtit.titanium.android.createservice}.
 	 */
-	public native void start()
+	public final native void start()
 	/*-{
 		return this.start();
 	}-*/;
@@ -80,27 +80,27 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Stop this running instance of the service.
 	 */
-	public native void stop()
+	public final native void stop()
 	/*-{
 		return this.stop();
 	}-*/;
 
-	public native void addPauseHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addPauseHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addResumeHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addResumeHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addStopHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addStopHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.android;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * The android.calendar module provides proxies and methods for accessing the
@@ -36,34 +34,103 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	protected Calendar() {
 	}
 
-	public static final Const METHOD_ALERT = new ConstImpl("Titanium.Android.Calendar.METHOD_ALERT");
+	private static native final float value_METHOD_ALERT()
+	/*-{
+		return Titanium.Android.Calendar.METHOD_ALERT;
+	}-*/;
 
-	public static final Const METHOD_DEFAULT = new ConstImpl("Titanium.Android.Calendar.METHOD_DEFAULT");
+	public static final float METHOD_ALERT = value_METHOD_ALERT();
 
-	public static final Const METHOD_EMAIL = new ConstImpl("Titanium.Android.Calendar.METHOD_EMAIL");
+	private static native final float value_METHOD_DEFAULT()
+	/*-{
+		return Titanium.Android.Calendar.METHOD_DEFAULT;
+	}-*/;
 
-	public static final Const METHOD_SMS = new ConstImpl("Titanium.Android.Calendar.METHOD_SMS");
+	public static final float METHOD_DEFAULT = value_METHOD_DEFAULT();
 
-	public static final Const STATE_DISMISSED = new ConstImpl("Titanium.Android.Calendar.STATE_DISMISSED");
+	private static native final float value_METHOD_EMAIL()
+	/*-{
+		return Titanium.Android.Calendar.METHOD_EMAIL;
+	}-*/;
 
-	public static final Const STATE_FIRED = new ConstImpl("Titanium.Android.Calendar.STATE_FIRED");
+	public static final float METHOD_EMAIL = value_METHOD_EMAIL();
 
-	public static final Const STATE_SCHEDULED = new ConstImpl("Titanium.Android.Calendar.STATE_SCHEDULED");
+	private static native final float value_METHOD_SMS()
+	/*-{
+		return Titanium.Android.Calendar.METHOD_SMS;
+	}-*/;
 
-	public static final Const STATUS_CANCELED = new ConstImpl("Titanium.Android.Calendar.STATUS_CANCELED");
+	public static final float METHOD_SMS = value_METHOD_SMS();
 
-	public static final Const STATUS_CONFIRMED = new ConstImpl("Titanium.Android.Calendar.STATUS_CONFIRMED");
+	private static native final float value_STATE_DISMISSED()
+	/*-{
+		return Titanium.Android.Calendar.STATE_DISMISSED;
+	}-*/;
 
-	public static final Const STATUS_TENTATIVE = new ConstImpl("Titanium.Android.Calendar.STATUS_TENTATIVE");
+	public static final float STATE_DISMISSED = value_STATE_DISMISSED();
 
-	public static final Const VISIBILITY_CONFIDENTIAL = new ConstImpl(
-			"Titanium.Android.Calendar.VISIBILITY_CONFIDENTIAL");
+	private static native final float value_STATE_FIRED()
+	/*-{
+		return Titanium.Android.Calendar.STATE_FIRED;
+	}-*/;
 
-	public static final Const VISIBILITY_DEFAULT = new ConstImpl("Titanium.Android.Calendar.VISIBILITY_DEFAULT");
+	public static final float STATE_FIRED = value_STATE_FIRED();
 
-	public static final Const VISIBILITY_PRIVATE = new ConstImpl("Titanium.Android.Calendar.VISIBILITY_PRIVATE");
+	private static native final float value_STATE_SCHEDULED()
+	/*-{
+		return Titanium.Android.Calendar.STATE_SCHEDULED;
+	}-*/;
 
-	public static final Const VISIBILITY_PUBLIC = new ConstImpl("Titanium.Android.Calendar.VISIBILITY_PUBLIC");
+	public static final float STATE_SCHEDULED = value_STATE_SCHEDULED();
+
+	private static native final float value_STATUS_CANCELED()
+	/*-{
+		return Titanium.Android.Calendar.STATUS_CANCELED;
+	}-*/;
+
+	public static final float STATUS_CANCELED = value_STATUS_CANCELED();
+
+	private static native final float value_STATUS_CONFIRMED()
+	/*-{
+		return Titanium.Android.Calendar.STATUS_CONFIRMED;
+	}-*/;
+
+	public static final float STATUS_CONFIRMED = value_STATUS_CONFIRMED();
+
+	private static native final float value_STATUS_TENTATIVE()
+	/*-{
+		return Titanium.Android.Calendar.STATUS_TENTATIVE;
+	}-*/;
+
+	public static final float STATUS_TENTATIVE = value_STATUS_TENTATIVE();
+
+	private static native final float value_VISIBILITY_CONFIDENTIAL()
+	/*-{
+		return Titanium.Android.Calendar.VISIBILITY_CONFIDENTIAL;
+	}-*/;
+
+	public static final float VISIBILITY_CONFIDENTIAL = value_VISIBILITY_CONFIDENTIAL();
+
+	private static native final float value_VISIBILITY_DEFAULT()
+	/*-{
+		return Titanium.Android.Calendar.VISIBILITY_DEFAULT;
+	}-*/;
+
+	public static final float VISIBILITY_DEFAULT = value_VISIBILITY_DEFAULT();
+
+	private static native final float value_VISIBILITY_PRIVATE()
+	/*-{
+		return Titanium.Android.Calendar.VISIBILITY_PRIVATE;
+	}-*/;
+
+	public static final float VISIBILITY_PRIVATE = value_VISIBILITY_PRIVATE();
+
+	private static native final float value_VISIBILITY_PUBLIC()
+	/*-{
+		return Titanium.Android.Calendar.VISIBILITY_PUBLIC;
+	}-*/;
+
+	public static final float VISIBILITY_PUBLIC = value_VISIBILITY_PUBLIC();
 
 	/**
 	 * @return Array of {@link org.urish.gwtit.titanium.android.calendar.alert}
@@ -144,6 +211,45 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.android.calendar.Calendar getCalendarById(float id)
 	/*-{
 		return Titanium.Android.Calendar.getCalendarById(id);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Android.Calendar.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Android.Calendar.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Android.Calendar.fireEvent(name, event);
 	}-*/;
 
 }

@@ -37,22 +37,22 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *         to the size of the new buffer. resizing the buffer via setting
 	 *         length should be used sparingly due to the associated overhead.
 	 */
-	public native float getLength()
+	public final native float getLength()
 	/*-{
 		return this.length;
 	}-*/;
 
-	public native void setLength(float value)
+	public final native void setLength(float value)
 	/*-{
 		this.length = value;
 	}-*/;
 
-	public native void setValue(float value)
+	public final native void setValue(float value)
 	/*-{
 		this.value = value;
 	}-*/;
 
-	public native void setValue(String value)
+	public final native void setValue(String value)
 	/*-{
 		this.value = value;
 	}-*/;
@@ -63,7 +63,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.codec.encodestring} or
 	 *         {@link org.urish.gwtit.titanium.codec.encodenumber}).
 	 */
-	public native Object getValue()
+	public final native Object getValue()
 	/*-{
 		return this.value;
 	}-*/;
@@ -74,12 +74,12 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.codec.charset_utf8} is the
 	 *         default.
 	 */
-	public native String getType()
+	public final native String getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public native void setType(String value)
+	public final native void setType(String value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -88,12 +88,12 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 * @return The byte order of this buffer. the os native byte order is used
 	 *         by default.
 	 */
-	public native float getByteOrder()
+	public final native float getByteOrder()
 	/*-{
 		return this.byteOrder;
 	}-*/;
 
-	public native void setByteOrder(float value)
+	public final native void setByteOrder(float value)
 	/*-{
 		this.byteOrder = value;
 	}-*/;
@@ -106,7 +106,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *            buffer to append to current buffer
 	 * @return The number of bytes appended.
 	 */
-	public native float append(org.urish.gwtit.titanium.Buffer sourceBuffer)
+	public final native float append(org.urish.gwtit.titanium.Buffer sourceBuffer)
 	/*-{
 		return this.append(sourceBuffer);
 	}-*/;
@@ -123,7 +123,8 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *            length of data to read from buffer
 	 * @return The number of bytes appended.
 	 */
-	public native float append(org.urish.gwtit.titanium.Buffer sourceBuffer, float sourceOffset, float sourceLength)
+	public final native float append(org.urish.gwtit.titanium.Buffer sourceBuffer, float sourceOffset,
+			float sourceLength)
 	/*-{
 		return this.append(sourceBuffer, sourceOffset, sourceLength);
 	}-*/;
@@ -138,7 +139,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *            offset to insert new buffer at
 	 * @return The number of bytes inserted.
 	 */
-	public native float insert(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset)
+	public final native float insert(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset)
 	/*-{
 		return this.insert(sourceBuffer, offset);
 	}-*/;
@@ -158,7 +159,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *            length of data from sourceBuffer to insert
 	 * @return The number of bytes inserted.
 	 */
-	public native float insert(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset, float sourceOffset,
+	public final native float insert(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset, float sourceOffset,
 			float sourceLength)
 	/*-{
 		return this.insert(sourceBuffer, offset, sourceOffset, sourceLength);
@@ -175,7 +176,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *            offset to copy new buffer at
 	 * @return The number of bytes copied.
 	 */
-	public native float copy(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset)
+	public final native float copy(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset)
 	/*-{
 		return this.copy(sourceBuffer, offset);
 	}-*/;
@@ -196,7 +197,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *            length of data from sourceBuffer to copy
 	 * @return The number of bytes copied.
 	 */
-	public native float copy(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset, float sourceOffset,
+	public final native float copy(org.urish.gwtit.titanium.Buffer sourceBuffer, float offset, float sourceOffset,
 			float sourceLength)
 	/*-{
 		return this.copy(sourceBuffer, offset, sourceOffset, sourceLength);
@@ -205,7 +206,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Create new copy of the current buffer
 	 */
-	public native org.urish.gwtit.titanium.Buffer clone()
+	public final native org.urish.gwtit.titanium.Buffer clone()
 	/*-{
 		return this.clone();
 	}-*/;
@@ -219,7 +220,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 * @param length
 	 *            length of buffer data starting at offset to clone
 	 */
-	public native org.urish.gwtit.titanium.Buffer clone(float offset, float length)
+	public final native org.urish.gwtit.titanium.Buffer clone(float offset, float length)
 	/*-{
 		return this.clone(offset, length);
 	}-*/;
@@ -230,7 +231,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 * @param fillByte
 	 *            byte to fill buffer with
 	 */
-	public native void fill(float fillByte)
+	public final native void fill(float fillByte)
 	/*-{
 		return this.fill(fillByte);
 	}-*/;
@@ -246,7 +247,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 * @param length
 	 *            number of bytes to fill
 	 */
-	public native void fill(float fillByte, float offset, float length)
+	public final native void fill(float fillByte, float offset, float length)
 	/*-{
 		return this.fill(fillByte, offset, length);
 	}-*/;
@@ -254,7 +255,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Clears buffer contents but does not change the size of the buffer
 	 */
-	public native void clear()
+	public final native void clear()
 	/*-{
 		return this.clear();
 	}-*/;
@@ -263,7 +264,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 * Releases the space allocated to the buffer, sets length to 0. this is
 	 * effectively the same as `buffer.length = 0`
 	 */
-	public native void release()
+	public final native void release()
 	/*-{
 		return this.release();
 	}-*/;
@@ -271,7 +272,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Converts this buffer to a string
 	 */
-	public native String toString_()
+	public final native String toString_()
 	/*-{
 		return this.toString_();
 	}-*/;
@@ -279,7 +280,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Converts this buffer to a {@link org.urish.gwtit.titanium.blob}
 	 */
-	public native org.urish.gwtit.titanium.Blob toBlob()
+	public final native org.urish.gwtit.titanium.Blob toBlob()
 	/*-{
 		return this.toBlob();
 	}-*/;

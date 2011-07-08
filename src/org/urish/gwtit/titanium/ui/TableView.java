@@ -36,12 +36,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return True if the rows can be selected
 	 */
-	public native boolean getAllowsSelection()
+	public final native boolean getAllowsSelection()
 	/*-{
 		return this.allowsSelection;
 	}-*/;
 
-	public native void setAllowsSelection(boolean value)
+	public final native void setAllowsSelection(boolean value)
 	/*-{
 		this.allowsSelection = value;
 	}-*/;
@@ -51,12 +51,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *         only)
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getAllowsSelectionDuringEditing()
+	public final native boolean getAllowsSelectionDuringEditing()
 	/*-{
 		return this.allowsSelectionDuringEditing;
 	}-*/;
 
-	public native void setAllowsSelectionDuringEditing(boolean value)
+	public final native void setAllowsSelectionDuringEditing(boolean value)
 	/*-{
 		this.allowsSelectionDuringEditing = value;
 	}-*/;
@@ -65,12 +65,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The data array of objects to be used for the rows of the table
 	 *         view
 	 */
-	public native Object[] getData()
+	public final native Object[] getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public native void setData(Object[] value)
+	public final native void setData(Object[] value)
 	/*-{
 		this.data = value;
 	}-*/;
@@ -80,12 +80,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *         swipe-to-delete) (ios only)
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getEditable()
+	public final native boolean getEditable()
 	/*-{
 		return this.editable;
 	}-*/;
 
-	public native void setEditable(boolean value)
+	public final native void setEditable(boolean value)
 	/*-{
 		this.editable = value;
 	}-*/;
@@ -94,12 +94,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to control the editing state of the table view (ios only)
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getEditing()
+	public final native boolean getEditing()
 	/*-{
 		return this.editing;
 	}-*/;
 
-	public native void setEditing(boolean value)
+	public final native void setEditing(boolean value)
 	/*-{
 		this.editing = value;
 	}-*/;
@@ -108,12 +108,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The filter attribute to be used when searching. this property
 	 *         maps to your data object or a property on the row object
 	 */
-	public native String getFilterAttribute()
+	public final native String getFilterAttribute()
 	/*-{
 		return this.filterAttribute;
 	}-*/;
 
-	public native void setFilterAttribute(String value)
+	public final native void setFilterAttribute(String value)
 	/*-{
 		this.filterAttribute = value;
 	}-*/;
@@ -122,12 +122,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Boolean to indicate if the search should be case sensitive or
 	 *         case insensitive (default)
 	 */
-	public native boolean getFilterCaseInsensitive()
+	public final native boolean getFilterCaseInsensitive()
 	/*-{
 		return this.filterCaseInsensitive;
 	}-*/;
 
-	public native void setFilterCaseInsensitive(boolean value)
+	public final native void setFilterCaseInsensitive(boolean value)
 	/*-{
 		this.filterCaseInsensitive = value;
 	}-*/;
@@ -135,12 +135,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The table view footer title
 	 */
-	public native String getFooterTitle()
+	public final native String getFooterTitle()
 	/*-{
 		return this.footerTitle;
 	}-*/;
 
-	public native void setFooterTitle(String value)
+	public final native void setFooterTitle(String value)
 	/*-{
 		this.footerTitle = value;
 	}-*/;
@@ -149,12 +149,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The table view footer as a view that will be rendered instead of
 	 *         a label
 	 */
-	public native Object getFooterView()
+	public final native Object getFooterView()
 	/*-{
 		return this.footerView;
 	}-*/;
 
-	public native void setFooterView(Object value)
+	public final native void setFooterView(Object value)
 	/*-{
 		this.footerView = value;
 	}-*/;
@@ -162,12 +162,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The table view header title
 	 */
-	public native String getHeaderTitle()
+	public final native String getHeaderTitle()
 	/*-{
 		return this.headerTitle;
 	}-*/;
 
-	public native void setHeaderTitle(String value)
+	public final native void setHeaderTitle(String value)
 	/*-{
 		this.headerTitle = value;
 	}-*/;
@@ -176,12 +176,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The table view header as a view that will be rendered instead of
 	 *         a label
 	 */
-	public native Object getHeaderView()
+	public final native Object getHeaderView()
 	/*-{
 		return this.headerView;
 	}-*/;
 
-	public native void setHeaderView(Object value)
+	public final native void setHeaderView(Object value)
 	/*-{
 		this.headerView = value;
 	}-*/;
@@ -190,12 +190,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An array of objects (with title and index properties) to control
 	 *         the table view index
 	 */
-	public native Object[] getIndex()
+	public final native Object[] getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public native void setIndex(Object[] value)
+	public final native void setIndex(Object[] value)
 	/*-{
 		this.index = value;
 	}-*/;
@@ -203,12 +203,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Max row height for table view rows
 	 */
-	public native float getMaxRowHeight()
+	public final native float getMaxRowHeight()
 	/*-{
 		return this.maxRowHeight;
 	}-*/;
 
-	public native void setMaxRowHeight(float value)
+	public final native void setMaxRowHeight(float value)
 	/*-{
 		this.maxRowHeight = value;
 	}-*/;
@@ -216,12 +216,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Min row height for table view rows
 	 */
-	public native float getMinRowHeight()
+	public final native float getMinRowHeight()
 	/*-{
 		return this.minRowHeight;
 	}-*/;
 
-	public native void setMinRowHeight(float value)
+	public final native void setMinRowHeight(float value)
 	/*-{
 		this.minRowHeight = value;
 	}-*/;
@@ -231,12 +231,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *         only)
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getMoving()
+	public final native boolean getMoving()
 	/*-{
 		return this.moving;
 	}-*/;
 
-	public native void setMoving(boolean value)
+	public final native void setMoving(boolean value)
 	/*-{
 		this.moving = value;
 	}-*/;
@@ -244,12 +244,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Default row height for table view rows
 	 */
-	public native float getRowHeight()
+	public final native float getRowHeight()
 	/*-{
 		return this.rowHeight;
 	}-*/;
 
-	public native void setRowHeight(float value)
+	public final native void setRowHeight(float value)
 	/*-{
 		this.rowHeight = value;
 	}-*/;
@@ -257,12 +257,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return True (default) if tableview can be scrolled
 	 */
-	public native boolean getScrollable()
+	public final native boolean getScrollable()
 	/*-{
 		return this.scrollable;
 	}-*/;
 
-	public native void setScrollable(boolean value)
+	public final native void setScrollable(boolean value)
 	/*-{
 		this.scrollable = value;
 	}-*/;
@@ -270,12 +270,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The search field to use for the table view
 	 */
-	public native Object getSearch()
+	public final native Object getSearch()
 	/*-{
 		return this.search;
 	}-*/;
 
-	public native void setSearch(Object value)
+	public final native void setSearch(Object value)
 	/*-{
 		this.search = value;
 	}-*/;
@@ -283,12 +283,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Boolean to control the visibility of the search field
 	 */
-	public native boolean getSearchHidden()
+	public final native boolean getSearchHidden()
 	/*-{
 		return this.searchHidden;
 	}-*/;
 
-	public native void setSearchHidden(boolean value)
+	public final native void setSearchHidden(boolean value)
 	/*-{
 		this.searchHidden = value;
 	}-*/;
@@ -296,12 +296,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The separator color color as a hex or named value
 	 */
-	public native String getSeparatorColor()
+	public final native String getSeparatorColor()
 	/*-{
 		return this.separatorColor;
 	}-*/;
 
-	public native void setSeparatorColor(String value)
+	public final native void setSeparatorColor(String value)
 	/*-{
 		this.separatorColor = value;
 	}-*/;
@@ -310,12 +310,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The separator style constant. for iphone,
 	 *         titanium.ui.iphone.tableviewseparatorstyle
 	 */
-	public native float getSeparatorStyle()
+	public final native float getSeparatorStyle()
 	/*-{
 		return this.separatorStyle;
 	}-*/;
 
-	public native void setSeparatorStyle(float value)
+	public final native void setSeparatorStyle(float value)
 	/*-{
 		this.separatorStyle = value;
 	}-*/;
@@ -324,12 +324,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Whether tableview displays vertical scroll indicator (ios only)
 	 * @platforms iphone, ipad
 	 */
-	public native boolean getShowVerticalScrollIndicator()
+	public final native boolean getShowVerticalScrollIndicator()
 	/*-{
 		return this.showVerticalScrollIndicator;
 	}-*/;
 
-	public native void setShowVerticalScrollIndicator(boolean value)
+	public final native void setShowVerticalScrollIndicator(boolean value)
 	/*-{
 		this.showVerticalScrollIndicator = value;
 	}-*/;
@@ -339,12 +339,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.ui.iphone.tableviewstyle}
 	 * @platforms iphone, ipad
 	 */
-	public native float getStyle()
+	public final native float getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public native void setStyle(float value)
+	public final native void setStyle(float value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -357,7 +357,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public native void appendRow(Object row, Object properties)
+	public final native void appendRow(Object row, Object properties)
 	/*-{
 		return this.appendRow(row, properties);
 	}-*/;
@@ -370,7 +370,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public native void deleteRow(float row, Object properties)
+	public final native void deleteRow(float row, Object properties)
 	/*-{
 		return this.deleteRow(row, properties);
 	}-*/;
@@ -381,7 +381,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param row
 	 *            row index to deselect
 	 */
-	public native void deselectRow(float row)
+	public final native void deselectRow(float row)
 	/*-{
 		return this.deselectRow(row);
 	}-*/;
@@ -396,7 +396,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public native void insertRowAfter(float index, Object row, Object properties)
+	public final native void insertRowAfter(float index, Object row, Object properties)
 	/*-{
 		return this.insertRowAfter(index, row, properties);
 	}-*/;
@@ -411,7 +411,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public native void insertRowBefore(float index, Object row, Object properties)
+	public final native void insertRowBefore(float index, Object row, Object properties)
 	/*-{
 		return this.insertRowBefore(index, row, properties);
 	}-*/;
@@ -426,7 +426,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *            position constant to use for position (on iPhone, use
 	 *            constants from Titanium.UI.iPhone.TableViewScrollPosition).
 	 */
-	public native void scrollToIndex(float index, Object properties)
+	public final native void scrollToIndex(float index, Object properties)
 	/*-{
 		return this.scrollToIndex(index, properties);
 	}-*/;
@@ -442,7 +442,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *            boolean to indicate if the scroll should be animated or
 	 *            immediate
 	 */
-	public native void scrollToTop(float top, Object properties)
+	public final native void scrollToTop(float top, Object properties)
 	/*-{
 		return this.scrollToTop(top, properties);
 	}-*/;
@@ -453,7 +453,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param row
 	 *            row index to select
 	 */
-	public native void selectRow(float row)
+	public final native void selectRow(float row)
 	/*-{
 		return this.selectRow(row);
 	}-*/;
@@ -466,27 +466,27 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public native void updateRow(Object row, Object properties)
+	public final native void updateRow(Object row, Object properties)
 	/*-{
 		return this.updateRow(row, properties);
 	}-*/;
 
-	public native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addMoveHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addMoveHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addScrollHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addScrollHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public native void addScrollEndHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addScrollEndHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

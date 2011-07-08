@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.android;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * Module to notify users of events that happen. it is a thin wrapper on
@@ -38,29 +36,82 @@ public class NotificationManager extends org.urish.gwtit.titanium.Module {
 	protected NotificationManager() {
 	}
 
-	public static final Const DEFAULT_ALL = new ConstImpl("Titanium.Android.NotificationManager.DEFAULT_ALL");
+	private static native final float value_DEFAULT_ALL()
+	/*-{
+		return Titanium.Android.NotificationManager.DEFAULT_ALL;
+	}-*/;
 
-	public static final Const DEFAULT_LIGHTS = new ConstImpl("Titanium.Android.NotificationManager.DEFAULT_LIGHTS");
+	public static final float DEFAULT_ALL = value_DEFAULT_ALL();
 
-	public static final Const DEFAULT_SOUND = new ConstImpl("Titanium.Android.NotificationManager.DEFAULT_SOUND");
+	private static native final float value_DEFAULT_LIGHTS()
+	/*-{
+		return Titanium.Android.NotificationManager.DEFAULT_LIGHTS;
+	}-*/;
 
-	public static final Const DEFAULT_VIBRATE = new ConstImpl("Titanium.Android.NotificationManager.DEFAULT_VIBRATE");
+	public static final float DEFAULT_LIGHTS = value_DEFAULT_LIGHTS();
 
-	public static final Const FLAG_AUTO_CANCEL = new ConstImpl("Titanium.Android.NotificationManager.FLAG_AUTO_CANCEL");
+	private static native final float value_DEFAULT_SOUND()
+	/*-{
+		return Titanium.Android.NotificationManager.DEFAULT_SOUND;
+	}-*/;
 
-	public static final Const FLAG_INSISTENT = new ConstImpl("Titanium.Android.NotificationManager.FLAG_INSISTENT");
+	public static final float DEFAULT_SOUND = value_DEFAULT_SOUND();
 
-	public static final Const FLAG_NO_CLEAR = new ConstImpl("Titanium.Android.NotificationManager.FLAG_NO_CLEAR");
+	private static native final float value_DEFAULT_VIBRATE()
+	/*-{
+		return Titanium.Android.NotificationManager.DEFAULT_VIBRATE;
+	}-*/;
 
-	public static final Const FLAG_ONGOING_EVENT = new ConstImpl(
-			"Titanium.Android.NotificationManager.FLAG_ONGOING_EVENT");
+	public static final float DEFAULT_VIBRATE = value_DEFAULT_VIBRATE();
 
-	public static final Const FLAG_ONLY_ALERT_ONCE = new ConstImpl(
-			"Titanium.Android.NotificationManager.FLAG_ONLY_ALERT_ONCE");
+	private static native final float value_FLAG_AUTO_CANCEL()
+	/*-{
+		return Titanium.Android.NotificationManager.FLAG_AUTO_CANCEL;
+	}-*/;
 
-	public static final Const FLAG_SHOW_LIGHTS = new ConstImpl("Titanium.Android.NotificationManager.FLAG_SHOW_LIGHTS");
+	public static final float FLAG_AUTO_CANCEL = value_FLAG_AUTO_CANCEL();
 
-	public static final Const STREAM_DEFAULT = new ConstImpl("Titanium.Android.NotificationManager.STREAM_DEFAULT");
+	private static native final float value_FLAG_INSISTENT()
+	/*-{
+		return Titanium.Android.NotificationManager.FLAG_INSISTENT;
+	}-*/;
+
+	public static final float FLAG_INSISTENT = value_FLAG_INSISTENT();
+
+	private static native final float value_FLAG_NO_CLEAR()
+	/*-{
+		return Titanium.Android.NotificationManager.FLAG_NO_CLEAR;
+	}-*/;
+
+	public static final float FLAG_NO_CLEAR = value_FLAG_NO_CLEAR();
+
+	private static native final float value_FLAG_ONGOING_EVENT()
+	/*-{
+		return Titanium.Android.NotificationManager.FLAG_ONGOING_EVENT;
+	}-*/;
+
+	public static final float FLAG_ONGOING_EVENT = value_FLAG_ONGOING_EVENT();
+
+	private static native final float value_FLAG_ONLY_ALERT_ONCE()
+	/*-{
+		return Titanium.Android.NotificationManager.FLAG_ONLY_ALERT_ONCE;
+	}-*/;
+
+	public static final float FLAG_ONLY_ALERT_ONCE = value_FLAG_ONLY_ALERT_ONCE();
+
+	private static native final float value_FLAG_SHOW_LIGHTS()
+	/*-{
+		return Titanium.Android.NotificationManager.FLAG_SHOW_LIGHTS;
+	}-*/;
+
+	public static final float FLAG_SHOW_LIGHTS = value_FLAG_SHOW_LIGHTS();
+
+	private static native final float value_STREAM_DEFAULT()
+	/*-{
+		return Titanium.Android.NotificationManager.STREAM_DEFAULT;
+	}-*/;
+
+	public static final float STREAM_DEFAULT = value_STREAM_DEFAULT();
 
 	/**
 	 * Cancel a previously shown notification.
@@ -95,6 +146,45 @@ public class NotificationManager extends org.urish.gwtit.titanium.Module {
 	public static native void notify(float id, org.urish.gwtit.titanium.android.Notification notification)
 	/*-{
 		return Titanium.Android.NotificationManager.notify(id, notification);
+	}-*/;
+
+	/**
+	 * Add an event listener for the instance to receive triggered events
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callback
+	 *            callback function to invoke when the event is fired
+	 */
+	public static native void addEventListener(String name, Object callback)
+	/*-{
+		return Titanium.Android.NotificationManager.addEventListener(name, callback);
+	}-*/;
+
+	/**
+	 * Remove a previously added event listener
+	 * 
+	 * @param name
+	 *            name of the event
+	 * @param callbac
+	 *            callback function passed in addEventListener
+	 */
+	public static native void removeEventListener(String name, Object callbac)
+	/*-{
+		return Titanium.Android.NotificationManager.removeEventListener(name, callbac);
+	}-*/;
+
+	/**
+	 * Fire a synthesized event to the views listener
+	 * 
+	 * @param name
+	 *            name of the event.
+	 * @param event
+	 *            event object
+	 */
+	public static native void fireEvent(String name, Object event)
+	/*-{
+		return Titanium.Android.NotificationManager.fireEvent(name, event);
 	}-*/;
 
 }

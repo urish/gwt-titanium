@@ -42,12 +42,12 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Return the arrow direction of the popover
 	 */
-	public native float getArrowDirection()
+	public final native float getArrowDirection()
 	/*-{
 		return this.arrowDirection;
 	}-*/;
 
-	public native void setArrowDirection(float value)
+	public final native void setArrowDirection(float value)
 	/*-{
 		this.arrowDirection = value;
 	}-*/;
@@ -55,12 +55,12 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The left button in the nav area of the popover
 	 */
-	public native Object getLeftNavButton()
+	public final native Object getLeftNavButton()
 	/*-{
 		return this.leftNavButton;
 	}-*/;
 
-	public native void setLeftNavButton(Object value)
+	public final native void setLeftNavButton(Object value)
 	/*-{
 		this.leftNavButton = value;
 	}-*/;
@@ -68,12 +68,12 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The title of the nav area of the popover
 	 */
-	public native String getTitle()
+	public final native String getTitle()
 	/*-{
 		return this.title;
 	}-*/;
 
-	public native void setTitle(String value)
+	public final native void setTitle(String value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -84,7 +84,7 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	 * @param height
 	 *            height of the popover
 	 */
-	public native void setHeight(Object height)
+	public final native void setHeight(Object height)
 	/*-{
 		return this.setHeight(height);
 	}-*/;
@@ -97,7 +97,7 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	 *            popover is open (i.e. clicking on these views will interact
 	 *            with these views, and not dismiss the popover).
 	 */
-	public native void setPassthroughViews(Object[] passthroughViews)
+	public final native void setPassthroughViews(Object[] passthroughViews)
 	/*-{
 		return this.setPassthroughViews(passthroughViews);
 	}-*/;
@@ -108,12 +108,12 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	 * @param width
 	 *            width of the popover
 	 */
-	public native void setWidth(Object width)
+	public final native void setWidth(Object width)
 	/*-{
 		return this.setWidth(width);
 	}-*/;
 
-	public native void addHideHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addHideHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('hide', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

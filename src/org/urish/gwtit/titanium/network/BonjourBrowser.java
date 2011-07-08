@@ -50,12 +50,12 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The domain the browser is searching in
 	 */
-	public native String getDomain()
+	public final native String getDomain()
 	/*-{
 		return this.domain;
 	}-*/;
 
-	public native void setDomain(String value)
+	public final native void setDomain(String value)
 	/*-{
 		this.domain = value;
 	}-*/;
@@ -63,12 +63,12 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Whether or not the browser is currently searching
 	 */
-	public native boolean getIsSearching()
+	public final native boolean getIsSearching()
 	/*-{
 		return this.isSearching;
 	}-*/;
 
-	public native void setIsSearching(boolean value)
+	public final native void setIsSearching(boolean value)
 	/*-{
 		this.isSearching = value;
 	}-*/;
@@ -76,12 +76,12 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The type of the service the browser searches for
 	 */
-	public native String getServiceType()
+	public final native String getServiceType()
 	/*-{
 		return this.serviceType;
 	}-*/;
 
-	public native void setServiceType(String value)
+	public final native void setServiceType(String value)
 	/*-{
 		this.serviceType = value;
 	}-*/;
@@ -90,7 +90,7 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 	 * Conduct a search for bonjour services matching the type and domain
 	 * specified during creation
 	 */
-	public native void search()
+	public final native void search()
 	/*-{
 		return this.search();
 	}-*/;
@@ -98,12 +98,12 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Halt an ongoing search
 	 */
-	public native void stopSearch()
+	public final native void stopSearch()
 	/*-{
 		return this.stopSearch();
 	}-*/;
 
-	public native void addUpdatedServicesHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addUpdatedServicesHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('updatedServices', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

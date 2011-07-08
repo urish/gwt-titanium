@@ -33,12 +33,12 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of {@link org.urish.gwtit.titanium.android.menuitem}
 	 */
-	public native Object[] getItems()
+	public final native Object[] getItems()
 	/*-{
 		return this.items;
 	}-*/;
 
-	public native void setItems(Object[] value)
+	public final native void setItems(Object[] value)
 	/*-{
 		this.items = value;
 	}-*/;
@@ -51,7 +51,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 *            creation options. Supported options are itemId, groupId,
 	 *            title, and order.
 	 */
-	public native org.urish.gwtit.titanium.android.MenuItem add(Object options)
+	public final native org.urish.gwtit.titanium.android.MenuItem add(Object options)
 	/*-{
 		return this.add(options);
 	}-*/;
@@ -61,7 +61,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 * retained to {@link org.urish.gwtit.titanium.android.menuitem} previously
 	 * created.
 	 */
-	public native void clear()
+	public final native void clear()
 	/*-{
 		return this.clear();
 	}-*/;
@@ -69,7 +69,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Close the menu if visible
 	 */
-	public native void close()
+	public final native void close()
 	/*-{
 		return this.close();
 	}-*/;
@@ -81,7 +81,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 *            integer itemId or
 	 *            {@link org.urish.gwtit.titanium.android.MenuItem}
 	 */
-	public native org.urish.gwtit.titanium.android.MenuItem findItem(Object item)
+	public final native org.urish.gwtit.titanium.android.MenuItem findItem(Object item)
 	/*-{
 		return this.findItem(item);
 	}-*/;
@@ -93,7 +93,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 * @param index
 	 *            item at index where index < size()
 	 */
-	public native org.urish.gwtit.titanium.android.MenuItem getItem(float index)
+	public final native org.urish.gwtit.titanium.android.MenuItem getItem(float index)
 	/*-{
 		return this.getItem(index);
 	}-*/;
@@ -101,7 +101,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Query for any visible menu items
 	 */
-	public native boolean hasVisibleItems()
+	public final native boolean hasVisibleItems()
 	/*-{
 		return this.hasVisibleItems();
 	}-*/;
@@ -113,7 +113,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 * @param groupId
 	 *            groupId of items to remove.
 	 */
-	public native void removeGroup(float groupId)
+	public final native void removeGroup(float groupId)
 	/*-{
 		return this.removeGroup(groupId);
 	}-*/;
@@ -125,7 +125,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 * @param itemId
 	 *            itemId of item to remove.
 	 */
-	public native void removeItem(float itemId)
+	public final native void removeItem(float itemId)
 	/*-{
 		return this.removeItem(itemId);
 	}-*/;
@@ -139,7 +139,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 * @param enabled
 	 *            true to enable, false to disable.
 	 */
-	public native void setGroupEnabled(float groupId, boolean enabled)
+	public final native void setGroupEnabled(float groupId, boolean enabled)
 	/*-{
 		return this.setGroupEnabled(groupId, enabled);
 	}-*/;
@@ -153,7 +153,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 * @param visible
 	 *            true to show, false to hide
 	 */
-	public native void setGroupVisible(float groupId, boolean visible)
+	public final native void setGroupVisible(float groupId, boolean visible)
 	/*-{
 		return this.setGroupVisible(groupId, visible);
 	}-*/;
@@ -161,7 +161,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Number of {@link org.urish.gwtit.titanium.android.menuitem} in this menu
 	 */
-	public native float size()
+	public final native float size()
 	/*-{
 		return this.size();
 	}-*/;

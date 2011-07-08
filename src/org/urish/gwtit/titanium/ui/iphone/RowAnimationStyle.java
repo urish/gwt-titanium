@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 
 /**
  * A set of constants for the animation styles used for transition on table view
@@ -32,16 +30,46 @@ public class RowAnimationStyle extends org.urish.gwtit.titanium.Proxy {
 	protected RowAnimationStyle() {
 	}
 
-	public static final Const BOTTOM = new ConstImpl("Titanium.UI.iPhone.RowAnimationStyle.BOTTOM");
+	private static native final float value_BOTTOM()
+	/*-{
+		return Titanium.UI.iPhone.RowAnimationStyle.BOTTOM;
+	}-*/;
 
-	public static final Const FADE = new ConstImpl("Titanium.UI.iPhone.RowAnimationStyle.FADE");
+	public static final float BOTTOM = value_BOTTOM();
 
-	public static final Const LEFT = new ConstImpl("Titanium.UI.iPhone.RowAnimationStyle.LEFT");
+	private static native final float value_FADE()
+	/*-{
+		return Titanium.UI.iPhone.RowAnimationStyle.FADE;
+	}-*/;
 
-	public static final Const NONE = new ConstImpl("Titanium.UI.iPhone.RowAnimationStyle.NONE");
+	public static final float FADE = value_FADE();
 
-	public static final Const RIGHT = new ConstImpl("Titanium.UI.iPhone.RowAnimationStyle.RIGHT");
+	private static native final float value_LEFT()
+	/*-{
+		return Titanium.UI.iPhone.RowAnimationStyle.LEFT;
+	}-*/;
 
-	public static final Const TOP = new ConstImpl("Titanium.UI.iPhone.RowAnimationStyle.TOP");
+	public static final float LEFT = value_LEFT();
+
+	private static native final float value_NONE()
+	/*-{
+		return Titanium.UI.iPhone.RowAnimationStyle.NONE;
+	}-*/;
+
+	public static final float NONE = value_NONE();
+
+	private static native final float value_RIGHT()
+	/*-{
+		return Titanium.UI.iPhone.RowAnimationStyle.RIGHT;
+	}-*/;
+
+	public static final float RIGHT = value_RIGHT();
+
+	private static native final float value_TOP()
+	/*-{
+		return Titanium.UI.iPhone.RowAnimationStyle.TOP;
+	}-*/;
+
+	public static final float TOP = value_TOP();
 
 }

@@ -18,8 +18,6 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.Const;
-import org.urish.gwtit.client.ConstImpl;
 import org.urish.gwtit.client.EventCallback;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -37,23 +35,43 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	protected EmailDialog() {
 	}
 
-	public static final Const CANCELLED = new ConstImpl("Titanium.UI.EmailDialog.CANCELLED");
+	private static native final float value_CANCELLED()
+	/*-{
+		return Titanium.UI.EmailDialog.CANCELLED;
+	}-*/;
 
-	public static final Const FAILED = new ConstImpl("Titanium.UI.EmailDialog.FAILED");
+	public static final float CANCELLED = value_CANCELLED();
 
-	public static final Const SAVED = new ConstImpl("Titanium.UI.EmailDialog.SAVED");
+	private static native final float value_FAILED()
+	/*-{
+		return Titanium.UI.EmailDialog.FAILED;
+	}-*/;
 
-	public static final Const SENT = new ConstImpl("Titanium.UI.EmailDialog.SENT");
+	public static final float FAILED = value_FAILED();
+
+	private static native final float value_SAVED()
+	/*-{
+		return Titanium.UI.EmailDialog.SAVED;
+	}-*/;
+
+	public static final float SAVED = value_SAVED();
+
+	private static native final float value_SENT()
+	/*-{
+		return Titanium.UI.EmailDialog.SENT;
+	}-*/;
+
+	public static final float SENT = value_SENT();
 
 	/**
 	 * @return The bar color of the email dialog window when opened
 	 */
-	public native String getBarColor()
+	public final native String getBarColor()
 	/*-{
 		return this.barColor;
 	}-*/;
 
-	public native void setBarColor(String value)
+	public final native void setBarColor(String value)
 	/*-{
 		this.barColor = value;
 	}-*/;
@@ -61,12 +79,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email bcc: recipients
 	 */
-	public native Object[] getBccRecipients()
+	public final native Object[] getBccRecipients()
 	/*-{
 		return this.bccRecipients;
 	}-*/;
 
-	public native void setBccRecipients(Object[] value)
+	public final native void setBccRecipients(Object[] value)
 	/*-{
 		this.bccRecipients = value;
 	}-*/;
@@ -74,12 +92,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email cc: recipients
 	 */
-	public native Object[] getCcRecipients()
+	public final native Object[] getCcRecipients()
 	/*-{
 		return this.ccRecipients;
 	}-*/;
 
-	public native void setCcRecipients(Object[] value)
+	public final native void setCcRecipients(Object[] value)
 	/*-{
 		this.ccRecipients = value;
 	}-*/;
@@ -89,12 +107,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         as html content type. defaults to false. (android note: you
 	 *         should not use html messages in 1.6: after that is okay.)
 	 */
-	public native boolean getHtml()
+	public final native boolean getHtml()
 	/*-{
 		return this.html;
 	}-*/;
 
-	public native void setHtml(boolean value)
+	public final native void setHtml(boolean value)
 	/*-{
 		this.html = value;
 	}-*/;
@@ -102,12 +120,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The email message body
 	 */
-	public native String getMessageBody()
+	public final native String getMessageBody()
 	/*-{
 		return this.messageBody;
 	}-*/;
 
-	public native void setMessageBody(String value)
+	public final native void setMessageBody(String value)
 	/*-{
 		this.messageBody = value;
 	}-*/;
@@ -115,12 +133,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The subject line for the email
 	 */
-	public native String getSubject()
+	public final native String getSubject()
 	/*-{
 		return this.subject;
 	}-*/;
 
-	public native void setSubject(String value)
+	public final native void setSubject(String value)
 	/*-{
 		this.subject = value;
 	}-*/;
@@ -128,12 +146,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email recipients
 	 */
-	public native Object[] getToRecipients()
+	public final native Object[] getToRecipients()
 	/*-{
 		return this.toRecipients;
 	}-*/;
 
-	public native void setToRecipients(Object[] value)
+	public final native void setToRecipients(Object[] value)
 	/*-{
 		this.toRecipients = value;
 	}-*/;
@@ -151,7 +169,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	 * @param attachment
 	 *            attachment object as either a Blob or File object
 	 */
-	public native void addAttachment(Object attachment)
+	public final native void addAttachment(Object attachment)
 	/*-{
 		return this.addAttachment(attachment);
 	}-*/;
@@ -159,7 +177,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return whether or not sending email is supported
 	 */
-	public native void isSupported()
+	public final native void isSupported()
 	/*-{
 		return this.isSupported();
 	}-*/;
@@ -171,12 +189,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	 *            object of animation properties. pass `animated` property (as
 	 *            boolean) to indicate if the dialog should be animated on open.
 	 */
-	public native void open(Object properties)
+	public final native void open(Object properties)
 	/*-{
 		return this.open(properties);
 	}-*/;
 
-	public native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
