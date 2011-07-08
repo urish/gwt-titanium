@@ -19,15 +19,15 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 public class AbstractTitaniumEventable extends JavaScriptObject implements TitaniumEventable<JavaScriptObject> {
 	public native void addEventListener(String name, EventCallback<JavaScriptObject> callback) /*-{
-		return this.addEventListener(name, callback.@org.urish.gwtit.client.EventCallback::onEvent(Ljava/lang/Object;));
-	}-*/;
+																								return this.addEventListener(name, callback.@org.urish.gwtit.client.EventCallback::onEvent(Ljava/lang/Object;));
+																								}-*/;
 
 	public native void fireEvent(String name, JavaScriptObject event) /*-{
-		return this.fireEvent(name, event);
-	}-*/;
+																		return this.fireEvent(name, event);
+																		}-*/;
 
 	public native void removeEventListener(String name, EventCallback<JavaScriptObject> callback) /*-{
-		return this.removeEventListener(name, callback.@org.urish.gwtit.client.EventCallback::onEvent(Ljava/lang/Object;));
-	}-*/;
+																									return this.removeEventListener(name, callback.@org.urish.gwtit.client.EventCallback::onEvent(Ljava/lang/Object;));
+																									}-*/;
 
 }

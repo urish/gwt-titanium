@@ -60,12 +60,14 @@ GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public native %(type)s get%(nameCapital)s() /*-{
+	public native %(type)s get%(nameCapital)s() 
+	/*-{
 		return this.%(name)s;
 	}-*/;
 """
 SETTER_TEMPLATE = """
-	public native void set%(nameCapital)s(%(type)s value) /*-{
+	public native void set%(nameCapital)s(%(type)s value) 
+	/*-{
 		this.%(name)s = value;
 	}-*/;
 """
@@ -74,12 +76,14 @@ STATIC_GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public static native %(type)s get%(nameCapital)s() /*-{
+	public static native %(type)s get%(nameCapital)s() 
+	/*-{
 		return %(module)s.%(name)s;
 	}-*/;
 """
 STATIC_SETTER_TEMPLATE = """
-	public static native void set%(nameCapital)s(%(type)s value) /*-{
+	public static native void set%(nameCapital)s(%(type)s value) 
+	/*-{
 		%(module)s.%(name)s = value;
 	}-*/;
 """
@@ -92,7 +96,8 @@ STATIC_METHOD_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public static native %(return)s %(name)s (%(params)s) /*-{
+	public static native %(return)s %(name)s (%(params)s) 
+	/*-{
 		return %(module)s.%(name)s(%(paramNames)s);
 	}-*/;
 """
@@ -101,25 +106,29 @@ METHOD_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public native %(return)s %(name)s (%(params)s) /*-{
+	public native %(return)s %(name)s (%(params)s) 
+	/*-{
 		return this.%(name)s(%(paramNames)s);
 	}-*/;
 """
 
 CONSTRUCTOR_TEMPLATE = """
-	public static native %(return)s %(name)s () /*-{
+	public static native %(return)s %(name)s () 
+	/*-{
 		return %(type)s.%(name)s();
 	}-*/;
 """
 
 EVENT_TEMPLATE = """
-	public native void add%(nameCapital)sHandler(EventCallback handler) /*-{
+	public native void add%(nameCapital)sHandler(EventCallback handler) 
+	/*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public static native void add%(nameCapital)sHandler(EventCallback handler) /*-{
+	public static native void add%(nameCapital)sHandler(EventCallback handler) 
+	/*-{
 		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
@@ -143,12 +152,17 @@ def mapTypes(s, withConsts = False):
 		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
 	if s == "Object":
 		return "Object"
+	if s == "Date":
+		return "java.util.Date"
+	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", "EncodeStringSpec"]:
+		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):
 		path = s.split(".")
 		if withConsts and path[-1].upper() == path[-1]:
 			# Constant
 			return "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
+	print "==>", s
 	return "Object"
 	
 def mapIdentifiers(s):
@@ -326,7 +340,7 @@ def generateEvents(typeInfo, isSingleton):
 			}
 	return result
 
-def generateClass(type, types):
+def generateClass(projectRoot, type, types):
 	print type['name']
 	type['name'] = re.sub(r"(^|\.)(\d)", r"\1_\2", type['name'])
 	name = type['name'].split(".")
@@ -345,23 +359,34 @@ def generateClass(type, types):
 		'methods': generateMethods(type, singleton) if ('methods' in type) else '',
 		'events': generateEvents(type, singleton),
 	}
-	dir = os.path.join(r"C:\Projects\gwt-titanium\src\org\urish\gwtit", "/".join(["titanium"] + name[1:-1]).lower())
+	dir = os.path.join(projectRoot, r"src/org/urish/gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):
 		os.makedirs(dir)
-	file(os.path.join(dir, name[-1] + ".java"), "w").write(code.lstrip())
+	classFile = os.path.join(dir, name[-1] + ".java")
+	file(classFile, "w").write(code.lstrip())
+	return classFile
 
 def getTypes(path):
 	with open(path, 'r') as f:
 		return list(yaml.load_all(f))
 
-def processDir(dir):
+def chunks(l, n):
+    """ Yield successive n-sized chunks from l."""
+    for i in xrange(0, len(l), n):
+        yield l[i:i+n]
+
+def processDir(inputDir, projectDir):
 	types = []
-	for root, dirs, files in os.walk(os.path.abspath(dir)):
+	for root, dirs, files in os.walk(os.path.abspath(inputDir)):
 		for name in files:
 			if name.endswith('.yml'):
 				types.extend(getTypes(os.path.join(root, name)))
+	classes = []
 	for type in types:
-		generateClass(type, types)
+		classes.append(generateClass(projectDir, type, types))
+	# Format code
+	for someClasses in chunks(classes, 16):
+		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
-processDir(r"C:\projects\titanium_mobile\apidoc")
-
+if __name__ == "__main__":
+	processDir(r"C:\projects\titanium_mobile\apidoc", "C:\Projects\gwt-titanium")
