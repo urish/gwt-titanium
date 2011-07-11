@@ -16,3 +16,7 @@ Implementation of Titanium Mobile SDK 1.7.0 in GWT.
 
  - Most of the API is still untested
  - No direct Java debugging
+
+## Building gwt-titanium
+
+In order to build gwt-titanium, simply run ant build in the main directory. This will build the GWT module as a jar file named gwt-titanium.jar in the build/ folder.
