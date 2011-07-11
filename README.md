@@ -2,6 +2,8 @@
 
 Implementation of Titanium Mobile SDK 1.7.0 in GWT.
 
+[Homepage](http://www.iPhoneJava.org/ "The iPhoneJava Project Homepage")
+
 ### Features
 
  - Custom linker to limit GWT bloat
@@ -19,4 +21,6 @@ Implementation of Titanium Mobile SDK 1.7.0 in GWT.
 
 ## Building gwt-titanium
 
-In order to build gwt-titanium, simply run ant build in the main directory. This will build the GWT module as a jar file named gwt-titanium.jar in the build/ folder.
+In order to build gwt-titanium, first copy gwt-dev.jar and gwt-user.jar from the GWT distribution into the lib directory.  
+then run ant build in the main directory. This will build the GWT module as a jar file named gwt-titanium.jar in the build/ folder.
+
