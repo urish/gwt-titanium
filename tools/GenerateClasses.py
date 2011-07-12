@@ -265,9 +265,9 @@ def generatePropertyDoc(property):
 	return "\n * ".join(parts)
 
 def generateMethodDoc(method):
-	parts = [
-		parseDocString(method['description']).capitalize()
-	]
+	parts = []
+	if 'description' in method:
+		parts.append(parseDocString(method['description']).capitalize())
 	if 'platforms' in method:
 		parts += ["@platforms " + ", ".join(method['platforms'])]
 	if 'parameters' in method:

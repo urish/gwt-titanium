@@ -20,10 +20,59 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A proxy
+ * This interface represents an entity, either parsed or unparsed, in an xml
+ * document. note that this models the entity itself not the entity declaration.
+ * the nodename attribute that is inherited from node contains the name of the
+ * entity. an entity node does not have any parent. this conforms to the [dom
+ * level 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
+ * entity.
+ * 
+ * @since 0.9
  */
-public class Entity extends org.urish.gwtit.titanium.Proxy {
+public class Entity extends org.urish.gwtit.titanium.xml.Node {
 	protected Entity() {
 	}
+
+	/**
+	 * @return For unparsed entities, the name of the notation for the entity.
+	 *         for parsed entities, this is `null`.
+	 */
+	public final native String getNotationName()
+	/*-{
+		return this.notationName;
+	}-*/;
+
+	public final native void setNotationName(String value)
+	/*-{
+		this.notationName = value;
+	}-*/;
+
+	/**
+	 * @return The public identifier associated with the entity, if specified.
+	 *         if the public identifier was not specified, this is `null`.
+	 */
+	public final native String getPublicId()
+	/*-{
+		return this.publicId;
+	}-*/;
+
+	public final native void setPublicId(String value)
+	/*-{
+		this.publicId = value;
+	}-*/;
+
+	/**
+	 * @return The system identifier associated with the entity, if specified.
+	 *         if the system identifier was not specified, this is null.
+	 */
+	public final native String getSystemId()
+	/*-{
+		return this.systemId;
+	}-*/;
+
+	public final native void setSystemId(String value)
+	/*-{
+		this.systemId = value;
+	}-*/;
 
 }

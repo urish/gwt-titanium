@@ -20,10 +20,42 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A proxy
+ * Represents a notation declared in the dtd. see [dom level 2
+ * spec](http://www.w3
+ * .org/tr/2000/rec-dom-level-2-core-20001113/core.html#id-5431d1b9)
+ * 
+ * @since 0.9
  */
 public class Notation extends org.urish.gwtit.titanium.Proxy {
 	protected Notation() {
 	}
+
+	/**
+	 * @return The public identifier of this notation. if the public identifier
+	 *         was not specified, this is `null`.
+	 */
+	public final native String getPublicId()
+	/*-{
+		return this.publicId;
+	}-*/;
+
+	public final native void setPublicId(String value)
+	/*-{
+		this.publicId = value;
+	}-*/;
+
+	/**
+	 * @return The system identifier of this notation. if the system identifier
+	 *         was not specified, this is `null`.
+	 */
+	public final native String getSystemId()
+	/*-{
+		return this.systemId;
+	}-*/;
+
+	public final native void setSystemId(String value)
+	/*-{
+		this.systemId = value;
+	}-*/;
 
 }

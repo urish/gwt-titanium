@@ -20,10 +20,103 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A proxy
+ * Each {@link org.urish.gwtit.titanium.xml.document} has a `doctype` attribute
+ * whose value is either 'null' or a
+ * {@link org.urish.gwtit.titanium.xml.documenttype} object. this provides an
+ * interface to the list of entities that are defined for the document. this
+ * conforms to the [dom level
+ * 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
+ * documenttype.
+ * 
+ * @since 0.9
  */
-public class DocumentType extends org.urish.gwtit.titanium.Proxy {
+public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 	protected DocumentType() {
 	}
+
+	/**
+	 * @return A {@link org.urish.gwtit.titanium.xml.namednodemap} containing
+	 *         the general entities, both external and internal, declared in the
+	 *         dtd. parameter entities are not contained. duplicates are
+	 *         discarded.
+	 */
+	public final native org.urish.gwtit.titanium.xml.NamedNodeMap getEntities()
+	/*-{
+		return this.entities;
+	}-*/;
+
+	public final native void setEntities(org.urish.gwtit.titanium.xml.NamedNodeMap value)
+	/*-{
+		this.entities = value;
+	}-*/;
+
+	/**
+	 * @return The internal subset as a string.
+	 */
+	public final native String getInternalSubset()
+	/*-{
+		return this.internalSubset;
+	}-*/;
+
+	public final native void setInternalSubset(String value)
+	/*-{
+		this.internalSubset = value;
+	}-*/;
+
+	/**
+	 * @return The name of dtd; i.e., the name immediately following the
+	 *         `doctype` keyword.
+	 */
+	public final native String getName()
+	/*-{
+		return this.name;
+	}-*/;
+
+	public final native void setName(String value)
+	/*-{
+		this.name = value;
+	}-*/;
+
+	/**
+	 * @return A {@link org.urish.gwtit.titanium.xml.namednodemap} containing
+	 *         the notations declared in the dtd. duplicates are discarded.
+	 *         every node in this map also implements the
+	 *         {@link org.urish.gwtit.titanium.xml.notation} interface.
+	 */
+	public final native org.urish.gwtit.titanium.xml.NamedNodeMap getNotations()
+	/*-{
+		return this.notations;
+	}-*/;
+
+	public final native void setNotations(org.urish.gwtit.titanium.xml.NamedNodeMap value)
+	/*-{
+		this.notations = value;
+	}-*/;
+
+	/**
+	 * @return The public identifier of the external subset.
+	 */
+	public final native String getPublicId()
+	/*-{
+		return this.publicId;
+	}-*/;
+
+	public final native void setPublicId(String value)
+	/*-{
+		this.publicId = value;
+	}-*/;
+
+	/**
+	 * @return The system identifier of the external subset.
+	 */
+	public final native String getSystemId()
+	/*-{
+		return this.systemId;
+	}-*/;
+
+	public final native void setSystemId(String value)
+	/*-{
+		this.systemId = value;
+	}-*/;
 
 }

@@ -20,10 +20,67 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A proxy
+ * Proxy representing an attribute of an [element](titanium.xml.element), as
+ * defined in the [dom level 2
+ * specification](http://www.w3.org/tr/2000/rec-dom-level
+ * -2-core-20001113/core.html#id-637646024).
  */
-public class Attr extends org.urish.gwtit.titanium.Proxy {
+public class Attr extends org.urish.gwtit.titanium.xml.Node {
 	protected Attr() {
 	}
+
+	/**
+	 * @return Attribute name
+	 */
+	public final native String getName()
+	/*-{
+		return this.name;
+	}-*/;
+
+	public final native void setName(String value)
+	/*-{
+		this.name = value;
+	}-*/;
+
+	/**
+	 * @return The {@link org.urish.gwtit.titanium.xml.element} to which the
+	 *         attribute belongs.
+	 */
+	public final native org.urish.gwtit.titanium.xml.Element getOwnerElement()
+	/*-{
+		return this.ownerElement;
+	}-*/;
+
+	public final native void setOwnerElement(org.urish.gwtit.titanium.xml.Element value)
+	/*-{
+		this.ownerElement = value;
+	}-*/;
+
+	/**
+	 * @return True if this attribute was explicitly given a value in the
+	 *         instance document, false otherwise.
+	 */
+	public final native boolean getSpecified()
+	/*-{
+		return this.specified;
+	}-*/;
+
+	public final native void setSpecified(boolean value)
+	/*-{
+		this.specified = value;
+	}-*/;
+
+	/**
+	 * @return The attribute value as a string.
+	 */
+	public final native String getValue()
+	/*-{
+		return this.value;
+	}-*/;
+
+	public final native void setValue(String value)
+	/*-{
+		this.value = value;
+	}-*/;
 
 }

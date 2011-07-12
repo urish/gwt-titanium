@@ -175,6 +175,19 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return True (default) if textarea can be scrolled
+	 */
+	public final native boolean getScrollable()
+	/*-{
+		return this.scrollable;
+	}-*/;
+
+	public final native void setScrollable(boolean value)
+	/*-{
+		this.scrollable = value;
+	}-*/;
+
+	/**
 	 * Force the field to lose focus
 	 */
 	public final native void blur()

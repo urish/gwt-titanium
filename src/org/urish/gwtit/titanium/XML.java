@@ -95,23 +95,25 @@ public class XML extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Parse an xml string into a domdocument
+	 * Parses an xml string into a {@link org.urish.gwtit.titanium.xml.document}
+	 * object.
 	 * 
 	 * @param xml
 	 *            the XML content as a string
 	 */
-	public static native Object parseString(String xml)
+	public static native org.urish.gwtit.titanium.xml.Document parseString(String xml)
 	/*-{
 		return Titanium.XML.parseString(xml);
 	}-*/;
 
 	/**
-	 * Serialize a domdocument or domnode and its descendants into an xml string
+	 * Serializes a {@link org.urish.gwtit.titanium.xml.document} object into a
+	 * string.
 	 * 
 	 * @param node
-	 *            the XML DOMNode or DOMDocument to serialize
+	 *            The XML DOMNode or DOMDocument to serialize
 	 */
-	public static native String serializeToString(Object node)
+	public static native String serializeToString(org.urish.gwtit.titanium.xml.Node node)
 	/*-{
 		return Titanium.XML.serializeToString(node);
 	}-*/;
