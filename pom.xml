@@ -5,7 +5,17 @@
 	<artifactId>gwt-titanium</artifactId>
 	<version>0.1.0</version>
 	<packaging>jar</packaging>
-	<name>CrossFire iOS Application</name>
+	<name>Titanium Module for Google Web Toolkit</name>
+
+	<developers>
+		<developer>
+			<name>Uri Shaked</name>
+			<roles>
+				<role>Lead Programmer</role>
+			</roles>
+			<email>uri@salsa4fun.co.il</email>
+		</developer>
+	</developers>
 
 	<properties>
 		<gwt.version>2.3.0</gwt.version>
