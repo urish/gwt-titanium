@@ -47,14 +47,14 @@
 	<target name="build">
 		<delete dir="build" includeemptydirs="true" />
 		<mkdir dir="build/exploded" />
-		<javac srcdir="src" destdir="build/exploded">
+		<javac dir="src/main/java" destdir="build/exploded">
 			<classpath>
 				<fileset dir="lib" includes="*.jar" />
 			</classpath>
 		</javac>
 		<!-- copy all the source over -->
 		<copy todir="build/exploded">
-			<fileset dir="src" includes="**/*" />
+			<fileset dir="src/main/java" includes="**/*" />
 		</copy>
 		<!-- jar it up -->
 		<jar destfile="build/gwt-titanium.jar">
