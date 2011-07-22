@@ -412,7 +412,7 @@ def generateClass(projectRoot, type, types):
 		'methods': generateMethods(type, singleton, types) if ('methods' in type) else '',
 		'events': generateEvents(type, singleton, types),
 	}
-	dir = os.path.join(projectRoot, r"src/org/urish/gwtit", "/".join(["titanium"] + name[1:-1]).lower())
+	dir = os.path.join(projectRoot, r"src/main/java/org/urish/gwtit", "/".join(["titanium"] + name[1:-1]).lower())
 	if not os.path.exists(dir):
 		os.makedirs(dir)
 	classFile = os.path.join(dir, name[-1] + ".java")
