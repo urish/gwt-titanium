@@ -85,4 +85,12 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 		return this.imageAsThumbnail(size, borderSize, cornerRadius);
 	}-*/;
 
+	/**
+	 * Converts this blob to a string
+	 */
+	public final native String toString_()
+	/*-{
+		return this.toString_();
+	}-*/;
+
 }
