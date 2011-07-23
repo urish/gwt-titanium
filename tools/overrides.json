@@ -1,4 +1,19 @@
 {
+	"Titanium.UI.ActivityIndicator": {
+		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.Button": {
+		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.Label": {
+		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.PickerRow": {
+		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.ProgressBar": {
+		"properties[name='font'] type": "Font"
+	},
 	"Titanium.XML.Document": {
 		"methods[name='createCDATASection']     returns type": "Object",
 		"methods[name='createComment']          returns type": "Object",

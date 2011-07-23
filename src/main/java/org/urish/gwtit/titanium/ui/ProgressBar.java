@@ -48,12 +48,12 @@ public class ProgressBar extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The font object for the progress bar text
 	 */
-	public final native Object getFont()
+	public final native org.urish.gwtit.client.font.Font getFont()
 	/*-{
 		return this.font;
 	}-*/;
 
-	public final native void setFont(Object value)
+	public final native void setFont(org.urish.gwtit.client.font.Font value)
 	/*-{
 		this.font = value;
 	}-*/;

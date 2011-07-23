@@ -143,23 +143,22 @@ def capitalFirst(s):
 	return s[0].upper() + s[1:]
 
 def mapTypes(s, withConsts = False):
-	if s == "String":
-		return "String"
-	if s == "Number":
-		return "float"
-	if s == "Boolean":
-		return "boolean"
-	if s == "void":
-		return "void"
+	TYPE_MAP = {
+		"String": "String",
+		"Number": "float",
+		"Boolean": "boolean",
+		"void": "void",
+		"Object": "Object",
+		"Date": "java.util.Date",
+		"Font": "org.urish.gwtit.client.font.Font",
+	}
+	if s in TYPE_MAP.keys():
+		return TYPE_MAP[s]
 	if type(s) == list:
 		return "Object"
 	arrayMatch = re.match("^Array<(.+)>$", s)
 	if arrayMatch:
 		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
-	if s == "Object":
-		return "Object"
-	if s == "Date":
-		return "java.util.Date"
 	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", "EncodeStringSpec"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):

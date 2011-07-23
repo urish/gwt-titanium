@@ -131,12 +131,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The label font object properties
 	 */
-	public final native Object getFont()
+	public final native org.urish.gwtit.client.font.Font getFont()
 	/*-{
 		return this.font;
 	}-*/;
 
-	public final native void setFont(Object value)
+	public final native void setFont(org.urish.gwtit.client.font.Font value)
 	/*-{
 		this.font = value;
 	}-*/;
