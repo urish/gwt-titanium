@@ -90,7 +90,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native String toString_()
 	/*-{
-		return this.toString_();
+		return this.toString();
 	}-*/;
 
 }

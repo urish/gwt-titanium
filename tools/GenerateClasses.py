@@ -104,7 +104,7 @@ STATIC_METHOD_TEMPLATE = """
 	 */
 	public static native %(return)s %(name)s (%(params)s) 
 	/*-{
-		return %(module)s.%(name)s(%(paramNames)s);
+		return %(module)s.%(nativeName)s(%(paramNames)s);
 	}-*/;
 """
 
@@ -114,7 +114,7 @@ METHOD_TEMPLATE = """
 	 */
 	public final native %(return)s %(name)s (%(params)s) 
 	/*-{
-		return this.%(name)s(%(paramNames)s);
+		return this.%(nativeName)s(%(paramNames)s);
 	}-*/;
 """
 
