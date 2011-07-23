@@ -44,6 +44,12 @@
 		</license>
 	</licenses>
 
+	<scm>
+		<connection>scm:git:git@github.com:urish/gwt-titanium.git</connection>
+		<developerConnection>scm:git:git@github.com:urish/gwt-titanium.git</developerConnection>
+		<url>git@github.com:urish/gwt-titanium.git</url>
+	</scm>
+
 	<properties>
 		<gwt.version>2.3.0</gwt.version>
 	</properties>
