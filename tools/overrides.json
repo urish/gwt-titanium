@@ -1,0 +1,8 @@
+{
+	"Titanium.XML.Document": {
+		"methods[name='createCDATASection']     returns type": "Object",
+		"methods[name='createComment']          returns type": "Object",
+		"methods[name='createDocumentFragment'] returns type": "Object",
+		"methods[name='createEntityReference']  returns type": "Object"
+	}
+}

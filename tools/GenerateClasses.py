@@ -16,6 +16,7 @@
 import os
 import re
 import yaml
+import json
 from copy import copy
 from numpy.f2py.auxfuncs import issigned_array
 
@@ -427,6 +428,22 @@ def chunks(l, n):
     """ Yield successive n-sized chunks from l."""
     for i in xrange(0, len(l), n):
         yield l[i:i+n]
+	
+def processOverrides(typeInfo, overrides):
+	for key, item in overrides.items():
+		key = re.sub("\s+", " ", key)
+		chain = key.split(" ")
+		subject = typeInfo
+		for selector in chain[:-1]:
+			match = re.match(r"^([^[]+)\[([^=]+)='([^']+)'\]$", selector)
+			if match:
+				realKey, searchKey, searchValue = match.groups()
+				for subItem in typeInfo[realKey]:
+					if subItem[searchKey] == searchValue:
+						subject = subItem
+			else:
+				subject = subject[selector]
+		subject[chain[-1]] = item
 
 def processDir(inputDir, projectDir):
 	types = []
@@ -434,9 +451,12 @@ def processDir(inputDir, projectDir):
 		for name in files:
 			if name.endswith('.yml'):
 				types.extend(getTypes(os.path.join(root, name)))
+	overrides = json.load(file("overrides.json", "r"))
 	classes = []
-	for type in types:
-		classes.append(generateClass(projectDir, type, types))
+	for typeInfo in types:
+		if typeInfo['name'] in overrides:
+			processOverrides(typeInfo, overrides[typeInfo['name']])
+		classes.append(generateClass(projectDir, typeInfo, types))
 	# Format code
 	for someClasses in chunks(classes, 32):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
