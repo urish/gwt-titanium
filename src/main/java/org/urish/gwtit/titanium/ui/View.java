@@ -612,6 +612,16 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
+	public final native void addLongclickHandler(EventCallback<JavaScriptObject> handler)
+	/*-{
+		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+	}-*/;
+
+	public final native void addLongpressHandler(EventCallback<JavaScriptObject> handler)
+	/*-{
+		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+	}-*/;
+
 	public final native void addSingletapHandler(EventCallback<JavaScriptObject> handler)
 	/*-{
 		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );

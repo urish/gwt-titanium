@@ -96,7 +96,8 @@ public class XML extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Parses an xml string into a {@link org.urish.gwtit.titanium.xml.document}
-	 * object.
+	 * object. throws an exception if the string is unable to be parsed into a
+	 * valid document.
 	 * 
 	 * @param xml
 	 *            the XML content as a string

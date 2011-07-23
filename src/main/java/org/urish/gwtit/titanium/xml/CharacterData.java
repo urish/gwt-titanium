@@ -80,42 +80,70 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 	 * reflect the change. throws an exception if this node is readonly, if
 	 * offset is negative, offset is beyond the data's length, or if count is
 	 * negative.
+	 * 
+	 * @param offset
+	 *            The offset from which to start removing.
+	 * @param count
+	 *            The number of characters to delete. If the sum of offset and
+	 *            count exceeds length then all characters from offset to the
+	 *            end of the data are deleted.
 	 */
-	public final native void deleteData()
+	public final native void deleteData(float offset, float count)
 	/*-{
-		return this.deleteData();
+		return this.deleteData(offset, count);
 	}-*/;
 
 	/**
 	 * Insert a string at the specified offset. throws an exception if this node
 	 * is readonly, if offset is negative, or if offset is beyond the data's
 	 * length.
+	 * 
+	 * @param offset
+	 *            The character offset at which to insert.
+	 * @param arg
+	 *            The string to insert.
 	 */
-	public final native void insertData()
+	public final native void insertData(float offset, String arg)
 	/*-{
-		return this.insertData();
+		return this.insertData(offset, arg);
 	}-*/;
 
 	/**
 	 * Replace the characters starting at the specified offset with the
 	 * specified string. throws an exception if this node is readonly, if offset
 	 * is negative, offset is beyond the data's length, or if count is negative.
+	 * 
+	 * @param offset
+	 *            The offset from which to start replacing.
+	 * @param count
+	 *            The number of characters to replace. If the sum of offset and
+	 *            count exceeds length, then all characters to the end of the
+	 *            data are replaced; (i.e., the effect is the same as a remove
+	 *            method call with the same range, followed by an append method
+	 *            invocation).
+	 * @param arg
+	 *            The string with which the range must be replaced.
 	 */
-	public final native void replaceData()
+	public final native void replaceData(float offset, float count, String arg)
 	/*-{
-		return this.replaceData();
+		return this.replaceData(offset, count, arg);
 	}-*/;
 
 	/**
 	 * Extracts a range of data from the node. throws an exception if offset is
 	 * negative, offset is beyond the data's length, or if count is negative.
 	 * 
+	 * @param offset
+	 *            Start offset of substring to extract.
+	 * @param count
+	 *            The number of characters units to extract.
 	 * @return The specified substring. If the sum of offset and count exceeds
-	 *         the length
+	 *         the length, then all 16-bit units to the end of the data are
+	 *         returned.
 	 */
-	public final native String substringData()
+	public final native String substringData(float offset, float count)
 	/*-{
-		return this.substringData();
+		return this.substringData(offset, count);
 	}-*/;
 
 }
