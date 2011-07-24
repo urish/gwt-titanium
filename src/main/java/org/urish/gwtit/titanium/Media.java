@@ -1116,8 +1116,11 @@ public class Media extends org.urish.gwtit.titanium.Module {
 		return Titanium.Media.fireEvent(name, event);
 	}-*/;
 
-	public final class LinechangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LinechangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "linechange";
+
+		protected LinechangeEvent() {
+		}
 
 	}
 
@@ -1126,8 +1129,11 @@ public class Media extends org.urish.gwtit.titanium.Module {
 		return Titanium.Media.addEventListener('linechange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class RecordinginputEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class RecordinginputEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "recordinginput";
+
+		protected RecordinginputEvent() {
+		}
 
 		/**
 		 * bool indicating availability of recording device
@@ -1144,8 +1150,11 @@ public class Media extends org.urish.gwtit.titanium.Module {
 		return Titanium.Media.addEventListener('recordinginput', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class VolumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class VolumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "volume";
+
+		protected VolumeEvent() {
+		}
 
 		/**
 		 * float of the new volume in dB

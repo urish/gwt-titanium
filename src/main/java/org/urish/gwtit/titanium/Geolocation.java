@@ -363,8 +363,11 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		return Titanium.Geolocation.fireEvent(name, event);
 	}-*/;
 
-	public final class CalibrationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CalibrationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "calibration";
+
+		protected CalibrationEvent() {
+		}
 
 	}
 
@@ -373,8 +376,11 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class HeadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class HeadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "heading";
+
+		protected HeadingEvent() {
+		}
 
 		/**
 		 * if success is false, the error code if available (iOS only)
@@ -418,8 +424,11 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LocationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LocationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "location";
+
+		protected LocationEvent() {
+		}
 
 		/**
 		 * if success is false, the error code if available (iOS only)

@@ -111,8 +111,11 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 		return this.setWidth(width);
 	}-*/;
 
-	public final class HideEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class HideEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "hide";
+
+		protected HideEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

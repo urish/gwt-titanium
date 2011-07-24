@@ -469,8 +469,11 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.updateRow(row, properties);
 	}-*/;
 
-	public final class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "delete";
+
+		protected DeleteEvent() {
+		}
 
 		/**
 		 * table view row index
@@ -552,8 +555,11 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "move";
+
+		protected MoveEvent() {
+		}
 
 		/**
 		 * table view row index
@@ -635,8 +641,11 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "scroll";
+
+		protected ScrollEvent() {
+		}
 
 		/**
 		 * the row index of the topmost visible row in the view (Android only)
@@ -722,8 +731,11 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ScrollEndEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ScrollEndEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "scrollEnd";
+
+		protected ScrollEndEvent() {
+		}
 
 		/**
 		 * dictionary with `x` and `y` properties containing the content offset

@@ -192,8 +192,11 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.open(properties);
 	}-*/;
 
-	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "complete";
+
+		protected CompleteEvent() {
+		}
 
 		/**
 		 * result status either as SENT, SAVED, CANCELLED or FAILED. (Note:

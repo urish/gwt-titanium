@@ -595,8 +595,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.toImage(f);
 	}-*/;
 
-	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "click";
+
+		protected ClickEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -630,8 +633,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class DblclickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DblclickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "dblclick";
+
+		protected DblclickEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -665,8 +671,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class DoubletapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DoubletapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "doubletap";
+
+		protected DoubletapEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -700,8 +709,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LongclickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LongclickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "longclick";
+
+		protected LongclickEvent() {
+		}
 
 	}
 
@@ -710,8 +722,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LongpressEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LongpressEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "longpress";
+
+		protected LongpressEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -736,8 +751,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class SingletapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class SingletapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "singletap";
+
+		protected SingletapEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -771,8 +789,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class SwipeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class SwipeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "swipe";
+
+		protected SwipeEvent() {
+		}
 
 		/**
 		 * direction of the swipe - either left or right
@@ -814,8 +835,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class TouchcancelEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class TouchcancelEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "touchcancel";
+
+		protected TouchcancelEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -849,8 +873,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class TouchendEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class TouchendEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "touchend";
+
+		protected TouchendEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -884,8 +911,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class TouchmoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class TouchmoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "touchmove";
+
+		protected TouchmoveEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -919,8 +949,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class TouchstartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class TouchstartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "touchstart";
+
+		protected TouchstartEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -954,8 +987,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class TwofingertapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class TwofingertapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "twofingertap";
+
+		protected TwofingertapEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

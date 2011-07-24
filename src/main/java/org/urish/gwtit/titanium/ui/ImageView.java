@@ -252,8 +252,11 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.toBlob();
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * the index of the image frame being displayed
@@ -295,8 +298,11 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "load";
+
+		protected LoadEvent() {
+		}
 
 		/**
 		 * either `url` to indicate the url property is loaded or `images` when
@@ -339,8 +345,11 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "start";
+
+		protected StartEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -374,8 +383,11 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "stop";
+
+		protected StopEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

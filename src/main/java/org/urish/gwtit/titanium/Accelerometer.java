@@ -37,8 +37,11 @@ public class Accelerometer extends org.urish.gwtit.titanium.Module {
 	protected Accelerometer() {
 	}
 
-	public final class UpdateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class UpdateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "update";
+
+		protected UpdateEvent() {
+		}
 
 		/**
 		 * reference timestamp since the previous change. this is not a valid

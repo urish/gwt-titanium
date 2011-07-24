@@ -272,8 +272,11 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 		return this.setSelectedRow(column, row, animated);
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * the selected column index

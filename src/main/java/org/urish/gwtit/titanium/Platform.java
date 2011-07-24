@@ -382,8 +382,11 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 		return Titanium.Platform.fireEvent(name, event);
 	}-*/;
 
-	public final class BatteryEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class BatteryEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "battery";
+
+		protected BatteryEvent() {
+		}
 
 		/**
 		 * the new battery state

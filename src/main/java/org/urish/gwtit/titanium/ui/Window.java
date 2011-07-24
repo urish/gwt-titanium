@@ -565,8 +565,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.open(options);
 	}-*/;
 
-	public final class AndroidBackEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class AndroidBackEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "android:back";
+
+		protected AndroidBackEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -600,8 +603,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class AndroidCameraEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class AndroidCameraEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "android:camera";
+
+		protected AndroidCameraEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -635,8 +641,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class AndroidFocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class AndroidFocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "android:focus";
+
+		protected AndroidFocusEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -670,8 +679,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class AndroidSearchEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class AndroidSearchEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "android:search";
+
+		protected AndroidSearchEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -705,8 +717,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class AndroidVoldownEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class AndroidVoldownEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "android:voldown";
+
+		protected AndroidVoldownEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -740,8 +755,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class AndroidVolupEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class AndroidVolupEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "android:volup";
+
+		protected AndroidVolupEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -775,8 +793,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "blur";
+
+		protected BlurEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -810,8 +831,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "close";
+
+		protected CloseEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -845,8 +869,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "focus";
+
+		protected FocusEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -880,8 +907,11 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "open";
+
+		protected OpenEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

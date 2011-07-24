@@ -460,8 +460,11 @@ public class Network extends org.urish.gwtit.titanium.Module {
 		return Titanium.Network.fireEvent(name, event);
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * the new network type as a string

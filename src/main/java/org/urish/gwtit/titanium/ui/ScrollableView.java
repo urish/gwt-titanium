@@ -192,8 +192,11 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollToView(view);
 	}-*/;
 
-	public final class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "scroll";
+
+		protected ScrollEvent() {
+		}
 
 		/**
 		 * the current page index

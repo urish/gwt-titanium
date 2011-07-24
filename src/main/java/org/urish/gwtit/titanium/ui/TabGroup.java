@@ -160,8 +160,11 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.removeTab();
 	}-*/;
 
-	public final class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "blur";
+
+		protected BlurEvent() {
+		}
 
 		/**
 		 * the tab index
@@ -227,8 +230,11 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "close";
+
+		protected CloseEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -262,8 +268,11 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "focus";
+
+		protected FocusEvent() {
+		}
 
 		/**
 		 * the tab index
@@ -329,8 +338,11 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "open";
+
+		protected OpenEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

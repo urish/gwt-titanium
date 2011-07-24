@@ -78,8 +78,11 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.stopEditing();
 	}-*/;
 
-	public final class CommitEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CommitEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "commit";
+
+		protected CommitEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -113,8 +116,11 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('commit', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "delete";
+
+		protected DeleteEvent() {
+		}
 
 		/**
 		 * the <Titanium.UI.DashboardItem> that was deleted
@@ -156,8 +162,11 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class EditEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class EditEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "edit";
+
+		protected EditEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -191,8 +200,11 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('edit', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "move";
+
+		protected MoveEvent() {
+		}
 
 		/**
 		 * the <Titanium.UI.DashboardItem> that was moved

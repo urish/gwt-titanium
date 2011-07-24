@@ -272,8 +272,11 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 		this.value = value;
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * the new value of the slider

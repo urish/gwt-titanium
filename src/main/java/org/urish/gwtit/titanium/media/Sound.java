@@ -213,8 +213,11 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "complete";
+
+		protected CompleteEvent() {
+		}
 
 		/**
 		 * boolean to indicate if the sound was successfully played
@@ -231,8 +234,11 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "error";
+
+		protected ErrorEvent() {
+		}
 
 		/**
 		 * error message
@@ -249,8 +255,11 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class InterruptedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class InterruptedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "interrupted";
+
+		protected InterruptedEvent() {
+		}
 
 	}
 
@@ -259,8 +268,11 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('interrupted', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "resume";
+
+		protected ResumeEvent() {
+		}
 
 		/**
 		 * boolean to indicate if the resume was from an interruption

@@ -70,8 +70,11 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 		return this.cancelAction();
 	}-*/;
 
-	public final class ActionEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ActionEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "action";
+
+		protected ActionEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -105,8 +108,11 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('action', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "error";
+
+		protected ErrorEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -148,8 +154,11 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "load";
+
+		protected LoadEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

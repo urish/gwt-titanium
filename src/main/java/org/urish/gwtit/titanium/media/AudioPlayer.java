@@ -260,8 +260,11 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * current state of playback
@@ -286,8 +289,11 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ProgressEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ProgressEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "progress";
+
+		protected ProgressEvent() {
+		}
 
 		/**
 		 * current progress value

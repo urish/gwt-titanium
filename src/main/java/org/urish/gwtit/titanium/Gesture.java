@@ -30,8 +30,11 @@ public class Gesture extends org.urish.gwtit.titanium.Module {
 	protected Gesture() {
 	}
 
-	public final class OrientationchangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class OrientationchangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "orientationchange";
+
+		protected OrientationchangeEvent() {
+		}
 
 		/**
 		 * the orientation constant
@@ -48,8 +51,11 @@ public class Gesture extends org.urish.gwtit.titanium.Module {
 		return Titanium.Gesture.addEventListener('orientationchange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ShakeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ShakeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "shake";
+
+		protected ShakeEvent() {
+		}
 
 		/**
 		 * timestamp reference since previous shake

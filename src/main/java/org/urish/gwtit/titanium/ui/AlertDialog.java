@@ -123,8 +123,11 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.show();
 	}-*/;
 
-	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "click";
+
+		protected ClickEvent() {
+		}
 
 		/**
 		 * boolean to indicate if the cancel button was pressed

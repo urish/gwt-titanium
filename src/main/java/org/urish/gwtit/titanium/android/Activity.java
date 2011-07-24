@@ -181,8 +181,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.startActivityForResult(intent, callback);
 	}-*/;
 
-	public final class CreateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CreateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "create";
+
+		protected CreateEvent() {
+		}
 
 	}
 
@@ -191,8 +194,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class DestroyEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DestroyEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "destroy";
+
+		protected DestroyEvent() {
+		}
 
 	}
 
@@ -201,8 +207,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class NewIntentEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class NewIntentEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "newIntent";
+
+		protected NewIntentEvent() {
+		}
 
 		/**
 		 * the <Titanium.Android.Intent> passed to the native `onNewIntent`
@@ -220,8 +229,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "pause";
+
+		protected PauseEvent() {
+		}
 
 	}
 
@@ -230,8 +242,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "resume";
+
+		protected ResumeEvent() {
+		}
 
 	}
 
@@ -240,8 +255,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "start";
+
+		protected StartEvent() {
+		}
 
 	}
 
@@ -250,8 +268,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "stop";
+
+		protected StopEvent() {
+		}
 
 	}
 

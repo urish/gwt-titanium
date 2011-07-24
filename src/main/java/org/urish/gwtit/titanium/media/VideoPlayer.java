@@ -426,8 +426,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.thumbnailImageAtTime(time, option);
 	}-*/;
 
-	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "complete";
+
+		protected CompleteEvent() {
+		}
 
 		/**
 		 * the completion reason. One of
@@ -472,8 +475,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class DurationAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DurationAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "durationAvailable";
+
+		protected DurationAvailableEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -515,8 +521,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('durationAvailable', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "error";
+
+		protected ErrorEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -558,8 +567,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class FullscreenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class FullscreenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "fullscreen";
+
+		protected FullscreenEvent() {
+		}
 
 		/**
 		 * true to indicate entering fullscreen, false to indicate leaving
@@ -602,8 +614,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('fullscreen', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "load";
+
+		protected LoadEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -637,8 +652,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LoadstateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LoadstateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "loadstate";
+
+		protected LoadstateEvent() {
+		}
 
 		/**
 		 * loadState
@@ -680,8 +698,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('loadstate', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class MediaTypesAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class MediaTypesAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "mediaTypesAvailable";
+
+		protected MediaTypesAvailableEvent() {
+		}
 
 		/**
 		 * media types
@@ -723,8 +744,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('mediaTypesAvailable', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class NaturalSizeAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class NaturalSizeAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "naturalSizeAvailable";
+
+		protected NaturalSizeAvailableEvent() {
+		}
 
 		/**
 		 * natural size as a dictionary. see `naturalSize` property.
@@ -766,8 +790,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('naturalSizeAvailable', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class PlaybackStateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class PlaybackStateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "playbackState";
+
+		protected PlaybackStateEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -809,8 +836,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('playbackState', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class PlayingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class PlayingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "playing";
+
+		protected PlayingEvent() {
+		}
 
 		/**
 		 * url of the media
@@ -852,8 +882,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('playing', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class PreloadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class PreloadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "preload";
+
+		protected PreloadEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -887,8 +920,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('preload', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ResizeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ResizeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "resize";
+
+		protected ResizeEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -922,8 +958,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('resize', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class SourceChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class SourceChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "sourceChange";
+
+		protected SourceChangeEvent() {
+		}
 
 		/**
 		 * the new sourceType
@@ -965,8 +1004,11 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('sourceChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ThumbnailEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ThumbnailEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "thumbnail";
+
+		protected ThumbnailEvent() {
+		}
 
 		/**
 		 * boolean to indicate success or failure

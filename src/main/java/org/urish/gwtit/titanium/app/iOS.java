@@ -134,8 +134,11 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 		return Titanium.App.iOS.fireEvent(name, event);
 	}-*/;
 
-	public final class NotificationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class NotificationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "notification";
+
+		protected NotificationEvent() {
+		}
 
 	}
 

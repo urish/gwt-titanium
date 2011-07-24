@@ -126,9 +126,11 @@ CONSTRUCTOR_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public final class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
-	{
+	public final static class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
+	{	
 		public final static String EVENT_NAME = "%(name)s";
+		
+		protected %(nameCapital)sEvent() {}
 
 		%(eventProperties)s		
 	} 
@@ -140,9 +142,11 @@ EVENT_TEMPLATE = """
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public final class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
+	public final static class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
 	{
 		public final static String EVENT_NAME = "%(name)s";
+
+		protected %(nameCapital)sEvent() {}
 	
 		%(eventProperties)s
 	} 

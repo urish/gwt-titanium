@@ -83,8 +83,11 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "pause";
+
+		protected PauseEvent() {
+		}
 
 		/**
 		 * incrementing integer indicating which iteration of an interval-based
@@ -105,8 +108,11 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "resume";
+
+		protected ResumeEvent() {
+		}
 
 		/**
 		 * incrementing integer indicating which iteration of an interval-based
@@ -127,8 +133,11 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "start";
+
+		protected StartEvent() {
+		}
 
 	}
 
@@ -137,8 +146,11 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "stop";
+
+		protected StopEvent() {
+		}
 
 	}
 

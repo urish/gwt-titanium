@@ -86,8 +86,11 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 		this.showMasterInPortrait = value;
 	}-*/;
 
-	public final class VisibleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class VisibleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "visible";
+
+		protected VisibleEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

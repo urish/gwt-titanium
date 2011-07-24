@@ -136,8 +136,11 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.show();
 	}-*/;
 
-	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "click";
+
+		protected ClickEvent() {
+		}
 
 		/**
 		 * the button index that was pressed

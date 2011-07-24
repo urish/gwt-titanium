@@ -282,8 +282,11 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 		return Titanium.Facebook.fireEvent(name, event);
 	}-*/;
 
-	public final class LoginEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LoginEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "login";
+
+		protected LoginEvent() {
+		}
 
 		/**
 		 * the user id returned by Facebook if the login was successful.
@@ -334,8 +337,11 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 		return Titanium.Facebook.addEventListener('login', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LogoutEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LogoutEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "logout";
+
+		protected LogoutEvent() {
+		}
 
 	}
 

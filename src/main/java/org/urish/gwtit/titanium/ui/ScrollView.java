@@ -233,8 +233,11 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollTo(x, y);
 	}-*/;
 
-	public final class ScaleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ScaleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "scale";
+
+		protected ScaleEvent() {
+		}
 
 		/**
 		 * the new scale as a float
@@ -276,8 +279,11 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "scroll";
+
+		protected ScrollEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

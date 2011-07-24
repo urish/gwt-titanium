@@ -3,6 +3,10 @@ package org.urish.gwtit.client.event;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public abstract class AbstractTitaniumEvent extends JavaScriptObject implements TitaniumEvent {
+	/* GWT requires the constructor to be protected */
+	protected AbstractTitaniumEvent() {
+	}
+
 	/**
 	 * the source object that fired the event
 	 */

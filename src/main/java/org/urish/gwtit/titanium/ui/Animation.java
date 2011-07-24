@@ -296,8 +296,11 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 		this.zIndex = value;
 	}-*/;
 
-	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "complete";
+
+		protected CompleteEvent() {
+		}
 
 	}
 
@@ -306,8 +309,11 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "start";
+
+		protected StartEvent() {
+		}
 
 	}
 

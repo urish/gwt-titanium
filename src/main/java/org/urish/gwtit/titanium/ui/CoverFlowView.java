@@ -78,8 +78,11 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 		return this.setImage(index, image);
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * the index of the image that is now visible

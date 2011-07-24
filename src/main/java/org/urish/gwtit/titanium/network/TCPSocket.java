@@ -157,8 +157,11 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 		return this.write(data, sendTo);
 	}-*/;
 
-	public final class ReadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ReadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "read";
+
+		protected ReadEvent() {
+		}
 
 		/**
 		 * the reference for the socket that data was retrieved from
@@ -183,8 +186,11 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ReadErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ReadErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "readError";
+
+		protected ReadErrorEvent() {
+		}
 
 		/**
 		 * the BSD socket error code
@@ -209,8 +215,11 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class WriteErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class WriteErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "writeError";
+
+		protected WriteErrorEvent() {
+		}
 
 		/**
 		 * the BSD socket error code

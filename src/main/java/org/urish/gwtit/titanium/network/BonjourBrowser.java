@@ -101,8 +101,11 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 		return this.stopSearch();
 	}-*/;
 
-	public final class UpdatedServicesEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class UpdatedServicesEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "updatedServices";
+
+		protected UpdatedServicesEvent() {
+		}
 
 		/**
 		 * An array of BonjourService objects corresponding to currently

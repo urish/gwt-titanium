@@ -149,8 +149,11 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 		return this.setIcon(icon);
 	}-*/;
 
-	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "click";
+
+		protected ClickEvent() {
+		}
 
 	}
 

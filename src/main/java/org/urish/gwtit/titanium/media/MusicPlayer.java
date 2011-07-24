@@ -218,8 +218,11 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.stopSeeking();
 	}-*/;
 
-	public final class PlayingChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class PlayingChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "playingChange";
+
+		protected PlayingChangeEvent() {
+		}
 
 	}
 
@@ -228,8 +231,11 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('playingChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class StateChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class StateChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "stateChange";
+
+		protected StateChangeEvent() {
+		}
 
 	}
 
@@ -238,8 +244,11 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('stateChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class VolumeChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class VolumeChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "volumeChange";
+
+		protected VolumeChangeEvent() {
+		}
 
 	}
 

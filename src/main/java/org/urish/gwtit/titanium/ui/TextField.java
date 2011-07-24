@@ -373,8 +373,11 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.hasText();
 	}-*/;
 
-	public final class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "blur";
+
+		protected BlurEvent() {
+		}
 
 		/**
 		 * the value of the field upon blur
@@ -416,8 +419,11 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "change";
+
+		protected ChangeEvent() {
+		}
 
 		/**
 		 * the value of the field upon change
@@ -459,8 +465,11 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "focus";
+
+		protected FocusEvent() {
+		}
 
 		/**
 		 * the value of the field upon focus
@@ -502,8 +511,11 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ReturnEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ReturnEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "return";
+
+		protected ReturnEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates

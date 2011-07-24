@@ -238,8 +238,11 @@ public class App extends org.urish.gwtit.titanium.Module {
 		return Titanium.App.fireEvent(name, event);
 	}-*/;
 
-	public final class ProximityEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ProximityEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "proximity";
+
+		protected ProximityEvent() {
+		}
 
 		/**
 		 * the proximity state value

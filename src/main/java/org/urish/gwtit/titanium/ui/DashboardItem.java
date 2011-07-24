@@ -87,8 +87,11 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		this.selectedImage = value;
 	}-*/;
 
-	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "click";
+
+		protected ClickEvent() {
+		}
 
 		/**
 		 * the location object with the properties `x` and `y` of where in the
@@ -114,8 +117,11 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "delete";
+
+		protected DeleteEvent() {
+		}
 
 		/**
 		 * the <Titanium.UI.DashboardItem> that was deleted
@@ -132,8 +138,11 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "move";
+
+		protected MoveEvent() {
+		}
 
 		/**
 		 * the pending data array in the new order (uncommitted)

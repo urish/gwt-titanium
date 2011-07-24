@@ -252,8 +252,11 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 		return this.zoom(level);
 	}-*/;
 
-	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "complete";
+
+		protected CompleteEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -287,8 +290,11 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "error";
+
+		protected ErrorEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -330,8 +336,11 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class LoadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class LoadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "loading";
+
+		protected LoadingEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
@@ -365,8 +374,11 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final class RegionChangedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+	public final static class RegionChangedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
 		public final static String EVENT_NAME = "regionChanged";
+
+		protected RegionChangedEvent() {
+		}
 
 		/**
 		 * the y point of the event, in receiving view coordinates
