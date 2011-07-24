@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.android;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The titanium binding of an [android
  * service](http://developer.android.com/reference/android/app/service.html).
@@ -85,22 +83,66 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final native void addPauseHandler(EventCallback<JavaScriptObject> handler)
+	public final class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "pause";
+
+		/**
+		 * incrementing integer indicating which iteration of an interval-based
+		 * Service is pausing. For example, if you have an interval-based
+		 * Service running every 10 seconds, iteration 3 would occur at about 30
+		 * seconds after you start the instance (assuming your service code runs
+		 * quickly.)
+		 */
+		public final native Object getIteration()
+		/*-{
+			return this.iteration;
+		}-*/;
+
+	}
+
+	public final native void addPauseHandler(EventCallback<PauseEvent> handler)
 	/*-{
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addResumeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "resume";
+
+		/**
+		 * incrementing integer indicating which iteration of an interval-based
+		 * Service is resuming. For example, if you have an interval-based
+		 * Service running every 10 seconds, iteration 3 would occur at about 30
+		 * seconds after you start the instance (assuming your service code runs
+		 * quickly.)
+		 */
+		public final native Object getIteration()
+		/*-{
+			return this.iteration;
+		}-*/;
+
+	}
+
+	public final native void addResumeHandler(EventCallback<ResumeEvent> handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "start";
+
+	}
+
+	public final native void addStartHandler(EventCallback<StartEvent> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStopHandler(EventCallback<JavaScriptObject> handler)
+	public final class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "stop";
+
+	}
+
+	public final native void addStopHandler(EventCallback<StopEvent> handler)
 	/*-{
 		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.android;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The titanium binding of an [android
  * activity](http://developer.android.com/reference/android/app/activity.html)
@@ -183,37 +181,81 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.startActivityForResult(intent, callback);
 	}-*/;
 
-	public final native void addCreateHandler(EventCallback<JavaScriptObject> handler)
+	public final class CreateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "create";
+
+	}
+
+	public final native void addCreateHandler(EventCallback<CreateEvent> handler)
 	/*-{
 		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addDestroyHandler(EventCallback<JavaScriptObject> handler)
+	public final class DestroyEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "destroy";
+
+	}
+
+	public final native void addDestroyHandler(EventCallback<DestroyEvent> handler)
 	/*-{
 		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addNewIntentHandler(EventCallback<JavaScriptObject> handler)
+	public final class NewIntentEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "newIntent";
+
+		/**
+		 * the <Titanium.Android.Intent> passed to the native `onNewIntent`
+		 * method.
+		 */
+		public final native Object getIntent()
+		/*-{
+			return this.intent;
+		}-*/;
+
+	}
+
+	public final native void addNewIntentHandler(EventCallback<NewIntentEvent> handler)
 	/*-{
 		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addPauseHandler(EventCallback<JavaScriptObject> handler)
+	public final class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "pause";
+
+	}
+
+	public final native void addPauseHandler(EventCallback<PauseEvent> handler)
 	/*-{
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addResumeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "resume";
+
+	}
+
+	public final native void addResumeHandler(EventCallback<ResumeEvent> handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "start";
+
+	}
+
+	public final native void addStartHandler(EventCallback<StartEvent> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStopHandler(EventCallback<JavaScriptObject> handler)
+	public final class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "stop";
+
+	}
+
+	public final native void addStopHandler(EventCallback<StopEvent> handler)
 	/*-{
 		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

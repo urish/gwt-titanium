@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The view is an empty drawing surface or container. the view is created by the
  * method {@link org.urish.gwtit.titanium.ui.createview}.
@@ -597,62 +595,396 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.toImage(f);
 	}-*/;
 
-	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "click";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addClickHandler(EventCallback<ClickEvent> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addDblclickHandler(EventCallback<JavaScriptObject> handler)
+	public final class DblclickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "dblclick";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addDblclickHandler(EventCallback<DblclickEvent> handler)
 	/*-{
 		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addDoubletapHandler(EventCallback<JavaScriptObject> handler)
+	public final class DoubletapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "doubletap";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addDoubletapHandler(EventCallback<DoubletapEvent> handler)
 	/*-{
 		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addLongclickHandler(EventCallback<JavaScriptObject> handler)
+	public final class LongclickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "longclick";
+
+	}
+
+	public final native void addLongclickHandler(EventCallback<LongclickEvent> handler)
 	/*-{
 		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addLongpressHandler(EventCallback<JavaScriptObject> handler)
+	public final class LongpressEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "longpress";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addLongpressHandler(EventCallback<LongpressEvent> handler)
 	/*-{
 		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addSingletapHandler(EventCallback<JavaScriptObject> handler)
+	public final class SingletapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "singletap";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addSingletapHandler(EventCallback<SingletapEvent> handler)
 	/*-{
 		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addSwipeHandler(EventCallback<JavaScriptObject> handler)
+	public final class SwipeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "swipe";
+
+		/**
+		 * direction of the swipe - either left or right
+		 */
+		public final native Object getDirection()
+		/*-{
+			return this.direction;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addSwipeHandler(EventCallback<SwipeEvent> handler)
 	/*-{
 		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addTouchcancelHandler(EventCallback<JavaScriptObject> handler)
+	public final class TouchcancelEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "touchcancel";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addTouchcancelHandler(EventCallback<TouchcancelEvent> handler)
 	/*-{
 		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addTouchendHandler(EventCallback<JavaScriptObject> handler)
+	public final class TouchendEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "touchend";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addTouchendHandler(EventCallback<TouchendEvent> handler)
 	/*-{
 		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addTouchmoveHandler(EventCallback<JavaScriptObject> handler)
+	public final class TouchmoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "touchmove";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addTouchmoveHandler(EventCallback<TouchmoveEvent> handler)
 	/*-{
 		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addTouchstartHandler(EventCallback<JavaScriptObject> handler)
+	public final class TouchstartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "touchstart";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addTouchstartHandler(EventCallback<TouchstartEvent> handler)
 	/*-{
 		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addTwofingertapHandler(EventCallback<JavaScriptObject> handler)
+	public final class TwofingertapEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "twofingertap";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordinates
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addTwofingertapHandler(EventCallback<TwofingertapEvent> handler)
 	/*-{
 		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

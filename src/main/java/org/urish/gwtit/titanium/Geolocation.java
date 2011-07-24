@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level geolocation module. the geolocation module is used for
  * accessing device location based information.
@@ -365,17 +363,111 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		return Titanium.Geolocation.fireEvent(name, event);
 	}-*/;
 
-	public static native void addCalibrationHandler(EventCallback<JavaScriptObject> handler)
+	public final class CalibrationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "calibration";
+
+	}
+
+	public static native void addCalibrationHandler(EventCallback<CalibrationEvent> handler)
 	/*-{
 		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public static native void addHeadingHandler(EventCallback<JavaScriptObject> handler)
+	public final class HeadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "heading";
+
+		/**
+		 * if success is false, the error code if available (iOS only)
+		 */
+		public final native Object getCode()
+		/*-{
+			return this.code;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the heading event was successfully received or
+		 * an error occurred
+		 */
+		public final native Object getSuccess()
+		/*-{
+			return this.success;
+		}-*/;
+
+		/**
+		 * if success is false, returns a string of the error description
+		 */
+		public final native Object getError()
+		/*-{
+			return this.error;
+		}-*/;
+
+		/**
+		 * heading results dictionary with the following sub-properties:
+		 * `magneticHeading`, `trueHeading`, `accuracy`, `x`, `y`, `z`,
+		 * `timestamp`.
+		 */
+		public final native Object getHeading()
+		/*-{
+			return this.heading;
+		}-*/;
+
+	}
+
+	public static native void addHeadingHandler(EventCallback<HeadingEvent> handler)
 	/*-{
 		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public static native void addLocationHandler(EventCallback<JavaScriptObject> handler)
+	public final class LocationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "location";
+
+		/**
+		 * if success is false, the error code if available (iOS only)
+		 */
+		public final native Object getCode()
+		/*-{
+			return this.code;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the location event was successfully received
+		 * or an error occurred
+		 */
+		public final native Object getSuccess()
+		/*-{
+			return this.success;
+		}-*/;
+
+		/**
+		 * (Android only) location provider dictionary with the following
+		 * sub-properties: `name`, `accuracy`, `power`, and `provider`.
+		 */
+		public final native Object getProvider()
+		/*-{
+			return this.provider;
+		}-*/;
+
+		/**
+		 * location coordinates dictionary with the following sub-properties:
+		 * `latitude`, `longitude`, `altitude`, `accuracy`, `altitudeAccuracy`,
+		 * `heading`, `speed`, `timestamp`.
+		 */
+		public final native Object getCoords()
+		/*-{
+			return this.coords;
+		}-*/;
+
+		/**
+		 * if success is false, returns a string of the error description
+		 */
+		public final native Object getError()
+		/*-{
+			return this.error;
+		}-*/;
+
+	}
+
+	public static native void addLocationHandler(EventCallback<LocationEvent> handler)
 	/*-{
 		return Titanium.Geolocation.addEventListener('location', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

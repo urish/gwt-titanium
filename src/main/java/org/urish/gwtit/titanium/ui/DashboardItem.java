@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * An item that represents a visual icon in the
  * {@link org.urish.gwtit.titanium.ui.dashboardview}. the dashboard item is
@@ -89,17 +87,73 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		this.selectedImage = value;
 	}-*/;
 
-	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "click";
+
+		/**
+		 * the location object with the properties `x` and `y` of where in the
+		 * parent view the click was
+		 */
+		public final native Object getLocation()
+		/*-{
+			return this.location;
+		}-*/;
+
+		/**
+		 * the <Titanium.UI.DashboardItem> that was clicked
+		 */
+		public final native Object getItem()
+		/*-{
+			return this.item;
+		}-*/;
+
+	}
+
+	public final native void addClickHandler(EventCallback<ClickEvent> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
+	public final class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "delete";
+
+		/**
+		 * the <Titanium.UI.DashboardItem> that was deleted
+		 */
+		public final native Object getItem()
+		/*-{
+			return this.item;
+		}-*/;
+
+	}
+
+	public final native void addDeleteHandler(EventCallback<DeleteEvent> handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addMoveHandler(EventCallback<JavaScriptObject> handler)
+	public final class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "move";
+
+		/**
+		 * the pending data array in the new order (uncommitted)
+		 */
+		public final native Object getItems()
+		/*-{
+			return this.items;
+		}-*/;
+
+		/**
+		 * the <Titanium.UI.DashboardItem> that was moved
+		 */
+		public final native Object getItem()
+		/*-{
+			return this.item;
+		}-*/;
+
+	}
+
+	public final native void addMoveHandler(EventCallback<MoveEvent> handler)
 	/*-{
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

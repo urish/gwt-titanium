@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * An image view is used to display an image or a series of images in an
  * animation. the image view is created by the method
@@ -254,22 +252,159 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.toBlob();
 	}-*/;
 
-	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "change";
+
+		/**
+		 * the index of the image frame being displayed
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addLoadHandler(EventCallback<JavaScriptObject> handler)
+	public final class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "load";
+
+		/**
+		 * either `url` to indicate the url property is loaded or `images` when
+		 * all the images are loaded
+		 */
+		public final native Object getState()
+		/*-{
+			return this.state;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addLoadHandler(EventCallback<LoadEvent> handler)
 	/*-{
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "start";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addStartHandler(EventCallback<StartEvent> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStopHandler(EventCallback<JavaScriptObject> handler)
+	public final class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "stop";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addStopHandler(EventCallback<StopEvent> handler)
 	/*-{
 		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

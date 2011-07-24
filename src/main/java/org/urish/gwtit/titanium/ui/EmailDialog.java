@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The email dialog is created by
  * {@link org.urish.gwtit.titanium.ui.createemaildialog} and allows you to send
@@ -194,7 +192,38 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.open(properties);
 	}-*/;
 
-	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "complete";
+
+		/**
+		 * result status either as SENT, SAVED, CANCELLED or FAILED. (Note:
+		 * Android result will be SENT even if user discards or saves the
+		 * message. SAVED and CANCELLED are not supported on Android.)
+		 */
+		public final native Object getResult()
+		/*-{
+			return this.result;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the email was successfully sent
+		 */
+		public final native Object getSuccess()
+		/*-{
+			return this.success;
+		}-*/;
+
+		/**
+		 * string message of the error or null if successfully sent
+		 */
+		public final native Object getError()
+		/*-{
+			return this.error;
+		}-*/;
+
+	}
+
+	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The window is an empty drawing surface or container. the window is created by
  * the method {@link org.urish.gwtit.titanium.ui.createwindow}. unlike
@@ -567,52 +565,352 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.open(options);
 	}-*/;
 
-	public final native void addAndroidBackHandler(EventCallback<JavaScriptObject> handler)
+	public final class AndroidBackEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "android:back";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addAndroidBackHandler(EventCallback<AndroidBackEvent> handler)
 	/*-{
 		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addAndroidCameraHandler(EventCallback<JavaScriptObject> handler)
+	public final class AndroidCameraEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "android:camera";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addAndroidCameraHandler(EventCallback<AndroidCameraEvent> handler)
 	/*-{
 		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addAndroidFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final class AndroidFocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "android:focus";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addAndroidFocusHandler(EventCallback<AndroidFocusEvent> handler)
 	/*-{
 		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addAndroidSearchHandler(EventCallback<JavaScriptObject> handler)
+	public final class AndroidSearchEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "android:search";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addAndroidSearchHandler(EventCallback<AndroidSearchEvent> handler)
 	/*-{
 		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addAndroidVoldownHandler(EventCallback<JavaScriptObject> handler)
+	public final class AndroidVoldownEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "android:voldown";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addAndroidVoldownHandler(EventCallback<AndroidVoldownEvent> handler)
 	/*-{
 		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addAndroidVolupHandler(EventCallback<JavaScriptObject> handler)
+	public final class AndroidVolupEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "android:volup";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addAndroidVolupHandler(EventCallback<AndroidVolupEvent> handler)
 	/*-{
 		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addBlurHandler(EventCallback<JavaScriptObject> handler)
+	public final class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "blur";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addBlurHandler(EventCallback<BlurEvent> handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addCloseHandler(EventCallback<JavaScriptObject> handler)
+	public final class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "close";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addCloseHandler(EventCallback<CloseEvent> handler)
 	/*-{
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "focus";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addFocusHandler(EventCallback<FocusEvent> handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addOpenHandler(EventCallback<JavaScriptObject> handler)
+	public final class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "open";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addOpenHandler(EventCallback<OpenEvent> handler)
 	/*-{
 		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

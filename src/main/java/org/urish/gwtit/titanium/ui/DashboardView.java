@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The dashboard view provides a view that supports the ability to have
  * springboard-like view of icons which can be reordered by dragging and can
@@ -80,22 +78,166 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.stopEditing();
 	}-*/;
 
-	public final native void addCommitHandler(EventCallback<JavaScriptObject> handler)
+	public final class CommitEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "commit";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addCommitHandler(EventCallback<CommitEvent> handler)
 	/*-{
 		return this.addEventListener('commit', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
+	public final class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "delete";
+
+		/**
+		 * the <Titanium.UI.DashboardItem> that was deleted
+		 */
+		public final native Object getItem()
+		/*-{
+			return this.item;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addDeleteHandler(EventCallback<DeleteEvent> handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addEditHandler(EventCallback<JavaScriptObject> handler)
+	public final class EditEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "edit";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addEditHandler(EventCallback<EditEvent> handler)
 	/*-{
 		return this.addEventListener('edit', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addMoveHandler(EventCallback<JavaScriptObject> handler)
+	public final class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "move";
+
+		/**
+		 * the <Titanium.UI.DashboardItem> that was moved
+		 */
+		public final native Object getItem()
+		/*-{
+			return this.item;
+		}-*/;
+
+		/**
+		 * the pending data array in the new order (uncommitted)
+		 */
+		public final native Object getItems()
+		/*-{
+			return this.items;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addMoveHandler(EventCallback<MoveEvent> handler)
 	/*-{
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

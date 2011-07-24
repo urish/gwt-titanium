@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.app;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level app ios module. the app ios module is only available on ios
  * based devices.
@@ -136,7 +134,12 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 		return Titanium.App.iOS.fireEvent(name, event);
 	}-*/;
 
-	public static native void addNotificationHandler(EventCallback<JavaScriptObject> handler)
+	public final class NotificationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "notification";
+
+	}
+
+	public static native void addNotificationHandler(EventCallback<NotificationEvent> handler)
 	/*-{
 		return Titanium.App.iOS.addEventListener('notification', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

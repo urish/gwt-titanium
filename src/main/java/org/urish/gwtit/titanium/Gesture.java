@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level gestures module. the gesture module is responsible for high
  * level device gestures that are device-wide.
@@ -32,12 +30,38 @@ public class Gesture extends org.urish.gwtit.titanium.Module {
 	protected Gesture() {
 	}
 
-	public static native void addOrientationchangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class OrientationchangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "orientationchange";
+
+		/**
+		 * the orientation constant
+		 */
+		public final native Object getOrientation()
+		/*-{
+			return this.orientation;
+		}-*/;
+
+	}
+
+	public static native void addOrientationchangeHandler(EventCallback<OrientationchangeEvent> handler)
 	/*-{
 		return Titanium.Gesture.addEventListener('orientationchange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public static native void addShakeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ShakeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "shake";
+
+		/**
+		 * timestamp reference since previous shake
+		 */
+		public final native Object getTimestamp()
+		/*-{
+			return this.timestamp;
+		}-*/;
+
+	}
+
+	public static native void addShakeHandler(EventCallback<ShakeEvent> handler)
 	/*-{
 		return Titanium.Gesture.addEventListener('shake', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

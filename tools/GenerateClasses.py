@@ -126,14 +126,28 @@ CONSTRUCTOR_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public final native void add%(nameCapital)sHandler(EventCallback<JavaScriptObject> handler) 
+	public final class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
+	{
+		public final static String EVENT_NAME = "%(name)s";
+
+		%(eventProperties)s		
+	} 
+
+	public final native void add%(nameCapital)sHandler(EventCallback<%(nameCapital)sEvent> handler) 
 	/*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public static native void add%(nameCapital)sHandler(EventCallback<JavaScriptObject> handler) 
+	public final class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
+	{
+		public final static String EVENT_NAME = "%(name)s";
+	
+		%(eventProperties)s
+	} 
+
+	public static native void add%(nameCapital)sHandler(EventCallback<%(nameCapital)sEvent> handler) 
 	/*-{
 		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -376,9 +390,20 @@ def capitalEventName(eventName):
 def generateEvents(typeInfo, isSingleton, types):
 	result = ""
 	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
+	AUTO_EVENT_PROPERTIES = ["source", "type"]
 	if 'events' in typeInfo:
 		for event in typeInfo['events']:
 			foundInAncetors = False
+			eventProperties = ""
+			for propertyInfo in event['properties']:
+				if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
+					continue
+				eventProperties += GETTER_TEMPLATE % {
+					'docString': propertyInfo['description'],
+					'type': "Object",
+					'name': propertyInfo['name'],
+					'nameCapital': capitalFirst(propertyInfo['name']),
+				}
 			if not isSingleton:
 				for ancestor in ancestors(typeInfo, types):
 					if 'events' in ancestor:
@@ -390,6 +415,7 @@ def generateEvents(typeInfo, isSingleton, types):
 					'name': event['name'],
 					'nameCapital': capitalEventName(event['name']),
 					'module': typeInfo['name'],
+					'eventProperties': eventProperties,
 				}
 	return result
 
@@ -461,4 +487,4 @@ def processDir(inputDir, projectDir):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
 if __name__ == "__main__":
-	processDir(r"C:\projects\titanium_mobile\apidoc", "C:\Projects\gwt-titanium")
+	processDir(r"C:\projects\titanium_mobile\apidoc\titanium", "C:\Projects\gwt-titanium")

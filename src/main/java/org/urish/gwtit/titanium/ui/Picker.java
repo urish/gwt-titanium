@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * A picker is created by the method
  * [titanium.ui.createpicker](titanium.ui.createpicker). a picker can be used to
@@ -274,7 +272,61 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 		return this.setSelectedRow(column, row, animated);
 	}-*/;
 
-	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "change";
+
+		/**
+		 * the selected column index
+		 */
+		public final native Object getColumnIndex()
+		/*-{
+			return this.columnIndex;
+		}-*/;
+
+		/**
+		 * the selected row index
+		 */
+		public final native Object getRowIndex()
+		/*-{
+			return this.rowIndex;
+		}-*/;
+
+		/**
+		 * the column object
+		 */
+		public final native Object getColumn()
+		/*-{
+			return this.column;
+		}-*/;
+
+		/**
+		 * (date/time pickers only) the selected date/time value.
+		 */
+		public final native Object getValue()
+		/*-{
+			return this.value;
+		}-*/;
+
+		/**
+		 * the row object
+		 */
+		public final native Object getRow()
+		/*-{
+			return this.row;
+		}-*/;
+
+		/**
+		 * (plain picker only) the array of selected values, one element per
+		 * column in the picker.
+		 */
+		public final native Object getSelectedValue()
+		/*-{
+			return this.selectedValue;
+		}-*/;
+
+	}
+
+	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

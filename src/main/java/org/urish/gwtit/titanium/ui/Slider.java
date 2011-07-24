@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * A slider is created by the method
  * {@link org.urish.gwtit.titanium.ui.createslider}.
@@ -274,7 +272,63 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 		this.value = value;
 	}-*/;
 
-	public final native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "change";
+
+		/**
+		 * the new value of the slider
+		 */
+		public final native Object getValue()
+		/*-{
+			return this.value;
+		}-*/;
+
+		/**
+		 * a dictionary with properties width and height of the size of the
+		 * thumb. Available with custom thumb image. (Android)
+		 */
+		public final native Object getThumbSize()
+		/*-{
+			return this.thumbSize;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y of the thumbs left-top corner in
+		 * the control Available with custom thumb image. (Android)
+		 */
+		public final native Object getThumbOffset()
+		/*-{
+			return this.thumbOffset;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The option dialog is created by
  * {@link org.urish.gwtit.titanium.ui.createoptiondialog} and allows you to show
@@ -138,7 +136,45 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.show();
 	}-*/;
 
-	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "click";
+
+		/**
+		 * the button index that was pressed
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+		/**
+		 * boolean to indicate that the index refers to a button on the dialog
+		 * and not an item. (Android)
+		 */
+		public final native Object getButton()
+		/*-{
+			return this.button;
+		}-*/;
+
+		/**
+		 * the index of the cancel button
+		 */
+		public final native Object getCancel()
+		/*-{
+			return this.cancel;
+		}-*/;
+
+		/**
+		 * the index of the destructive button
+		 */
+		public final native Object getDestructive()
+		/*-{
+			return this.destructive;
+		}-*/;
+
+	}
+
+	public final native void addClickHandler(EventCallback<ClickEvent> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The alert dialog is created by
  * {@link org.urish.gwtit.titanium.ui.createalertdialog} and allows you to show
@@ -125,7 +123,28 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.show();
 	}-*/;
 
-	public final native void addClickHandler(EventCallback<JavaScriptObject> handler)
+	public final class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "click";
+
+		/**
+		 * boolean to indicate if the cancel button was pressed
+		 */
+		public final native Object getCancel()
+		/*-{
+			return this.cancel;
+		}-*/;
+
+		/**
+		 * the button index that was pressed
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+	}
+
+	public final native void addClickHandler(EventCallback<ClickEvent> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

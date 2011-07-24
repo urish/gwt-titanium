@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level app module. the app module is mainly used for accessing
  * information about the application at runtime.
@@ -240,7 +238,20 @@ public class App extends org.urish.gwtit.titanium.Module {
 		return Titanium.App.fireEvent(name, event);
 	}-*/;
 
-	public static native void addProximityHandler(EventCallback<JavaScriptObject> handler)
+	public final class ProximityEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "proximity";
+
+		/**
+		 * the proximity state value
+		 */
+		public final native Object getState()
+		/*-{
+			return this.state;
+		}-*/;
+
+	}
+
+	public static native void addProximityHandler(EventCallback<ProximityEvent> handler)
 	/*-{
 		return Titanium.App.addEventListener('proximity', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

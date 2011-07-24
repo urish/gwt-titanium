@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The tab group allows you to manage a tabbed ui of one or more windows. the
  * tab group is created by the method
@@ -162,22 +160,206 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.removeTab();
 	}-*/;
 
-	public final native void addBlurHandler(EventCallback<JavaScriptObject> handler)
+	public final class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "blur";
+
+		/**
+		 * the tab index
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+		/**
+		 * the previous tab index
+		 */
+		public final native Object getPreviousIndex()
+		/*-{
+			return this.previousIndex;
+		}-*/;
+
+		/**
+		 * the tab object
+		 */
+		public final native Object getTab()
+		/*-{
+			return this.tab;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the previous tab object
+		 */
+		public final native Object getPreviousTab()
+		/*-{
+			return this.previousTab;
+		}-*/;
+
+	}
+
+	public final native void addBlurHandler(EventCallback<BlurEvent> handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addCloseHandler(EventCallback<JavaScriptObject> handler)
+	public final class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "close";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addCloseHandler(EventCallback<CloseEvent> handler)
 	/*-{
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(EventCallback<JavaScriptObject> handler)
+	public final class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "focus";
+
+		/**
+		 * the tab index
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+		/**
+		 * the previous tab index
+		 */
+		public final native Object getPreviousIndex()
+		/*-{
+			return this.previousIndex;
+		}-*/;
+
+		/**
+		 * the tab object
+		 */
+		public final native Object getTab()
+		/*-{
+			return this.tab;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the previous tab object
+		 */
+		public final native Object getPreviousTab()
+		/*-{
+			return this.previousTab;
+		}-*/;
+
+	}
+
+	public final native void addFocusHandler(EventCallback<FocusEvent> handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addOpenHandler(EventCallback<JavaScriptObject> handler)
+	public final class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "open";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addOpenHandler(EventCallback<OpenEvent> handler)
 	/*-{
 		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

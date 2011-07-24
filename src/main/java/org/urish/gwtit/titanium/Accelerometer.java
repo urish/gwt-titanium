@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level accelerometer module. the accelerometer modules contains
  * methods and properties for using the device accelerometer.
@@ -39,7 +37,46 @@ public class Accelerometer extends org.urish.gwtit.titanium.Module {
 	protected Accelerometer() {
 	}
 
-	public static native void addUpdateHandler(EventCallback<JavaScriptObject> handler)
+	public final class UpdateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "update";
+
+		/**
+		 * reference timestamp since the previous change. this is not a valid
+		 * timestamp and should simply be used to determine the time between
+		 * events and not an exact timestamp.
+		 */
+		public final native Object getTimestamp()
+		/*-{
+			return this.timestamp;
+		}-*/;
+
+		/**
+		 * the y axis of the device
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x axis of the device
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * the z axis of the device
+		 */
+		public final native Object getZ()
+		/*-{
+			return this.z;
+		}-*/;
+
+	}
+
+	public static native void addUpdateHandler(EventCallback<UpdateEvent> handler)
 	/*-{
 		return Titanium.Accelerometer.addEventListener('update', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

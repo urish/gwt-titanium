@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.network;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * Deprecated: use {@link org.urish.gwtit.titanium.network.socket.tcp} where
  * possible. the tcpsocket instance returned from
@@ -159,17 +157,80 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 		return this.write(data, sendTo);
 	}-*/;
 
-	public final native void addReadHandler(EventCallback<JavaScriptObject> handler)
+	public final class ReadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "read";
+
+		/**
+		 * the reference for the socket that data was retrieved from
+		 */
+		public final native Object getFrom()
+		/*-{
+			return this.from;
+		}-*/;
+
+		/**
+		 * a blob representing the data read, can be interpreted via toString
+		 */
+		public final native Object getData()
+		/*-{
+			return this.data;
+		}-*/;
+
+	}
+
+	public final native void addReadHandler(EventCallback<ReadEvent> handler)
 	/*-{
 		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addReadErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final class ReadErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "readError";
+
+		/**
+		 * the BSD socket error code
+		 */
+		public final native Object getCode()
+		/*-{
+			return this.code;
+		}-*/;
+
+		/**
+		 * a description of the error
+		 */
+		public final native Object getError()
+		/*-{
+			return this.error;
+		}-*/;
+
+	}
+
+	public final native void addReadErrorHandler(EventCallback<ReadErrorEvent> handler)
 	/*-{
 		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addWriteErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final class WriteErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "writeError";
+
+		/**
+		 * the BSD socket error code
+		 */
+		public final native Object getCode()
+		/*-{
+			return this.code;
+		}-*/;
+
+		/**
+		 * a description of the error
+		 */
+		public final native Object getError()
+		/*-{
+			return this.error;
+		}-*/;
+
+	}
+
+	public final native void addWriteErrorHandler(EventCallback<WriteErrorEvent> handler)
 	/*-{
 		return this.addEventListener('writeError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

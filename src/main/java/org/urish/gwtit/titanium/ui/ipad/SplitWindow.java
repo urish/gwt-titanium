@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui.ipad;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * A splitwindow is a window that manages the presentation of two side-by-side
  * view controllers. you use this class to implement a master-detail interface,
@@ -88,7 +86,63 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 		this.showMasterInPortrait = value;
 	}-*/;
 
-	public final native void addVisibleHandler(EventCallback<JavaScriptObject> handler)
+	public final class VisibleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "visible";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * for `view` view type, the button that is automatically wired to
+		 * control the master view popover
+		 */
+		public final native Object getButton()
+		/*-{
+			return this.button;
+		}-*/;
+
+		/**
+		 * for either `popover` or `detail` view types, the popover instance
+		 */
+		public final native Object getPopover()
+		/*-{
+			return this.popover;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the type of view becoming visible. either `master`, `popover` or
+		 * `detail`.
+		 */
+		public final native Object getView()
+		/*-{
+			return this.view;
+		}-*/;
+
+	}
+
+	public final native void addVisibleHandler(EventCallback<VisibleEvent> handler)
 	/*-{
 		return this.addEventListener('visible', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

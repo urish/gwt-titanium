@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level media module. the media module is used accessing the device's
  * media related functionality such as playing audio or recording video.
@@ -1118,17 +1116,48 @@ public class Media extends org.urish.gwtit.titanium.Module {
 		return Titanium.Media.fireEvent(name, event);
 	}-*/;
 
-	public static native void addLinechangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class LinechangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "linechange";
+
+	}
+
+	public static native void addLinechangeHandler(EventCallback<LinechangeEvent> handler)
 	/*-{
 		return Titanium.Media.addEventListener('linechange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public static native void addRecordinginputHandler(EventCallback<JavaScriptObject> handler)
+	public final class RecordinginputEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "recordinginput";
+
+		/**
+		 * bool indicating availability of recording device
+		 */
+		public final native Object getAvailable()
+		/*-{
+			return this.available;
+		}-*/;
+
+	}
+
+	public static native void addRecordinginputHandler(EventCallback<RecordinginputEvent> handler)
 	/*-{
 		return Titanium.Media.addEventListener('recordinginput', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public static native void addVolumeHandler(EventCallback<JavaScriptObject> handler)
+	public final class VolumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "volume";
+
+		/**
+		 * float of the new volume in dB
+		 */
+		public final native Object getVolume()
+		/*-{
+			return this.volume;
+		}-*/;
+
+	}
+
+	public static native void addVolumeHandler(EventCallback<VolumeEvent> handler)
 	/*-{
 		return Titanium.Media.addEventListener('volume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

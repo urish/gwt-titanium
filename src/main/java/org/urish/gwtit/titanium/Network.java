@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level network module. the network module is used accessing networking
  * related functionality, including
@@ -462,7 +460,36 @@ public class Network extends org.urish.gwtit.titanium.Module {
 		return Titanium.Network.fireEvent(name, event);
 	}-*/;
 
-	public static native void addChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "change";
+
+		/**
+		 * the new network type as a string
+		 */
+		public final native Object getNetworkTypeName()
+		/*-{
+			return this.networkTypeName;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the network is online
+		 */
+		public final native Object getOnline()
+		/*-{
+			return this.online;
+		}-*/;
+
+		/**
+		 * the new network type
+		 */
+		public final native Object getNetworkType()
+		/*-{
+			return this.networkType;
+		}-*/;
+
+	}
+
+	public static native void addChangeHandler(EventCallback<ChangeEvent> handler)
 	/*-{
 		return Titanium.Network.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

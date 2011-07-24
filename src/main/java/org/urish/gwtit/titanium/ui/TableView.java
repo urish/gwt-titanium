@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * A table view allows you to create a scrollable table of content in a
  * list-based fashion. the table view is created by the method
@@ -471,22 +469,318 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.updateRow(row, properties);
 	}-*/;
 
-	public final native void addDeleteHandler(EventCallback<JavaScriptObject> handler)
+	public final class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "delete";
+
+		/**
+		 * table view row index
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+		/**
+		 * table view section object
+		 */
+		public final native Object getSection()
+		/*-{
+			return this.section;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the right area was clicked
+		 */
+		public final native Object getDetail()
+		/*-{
+			return this.detail;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the table is in search mode
+		 */
+		public final native Object getSearchMode()
+		/*-{
+			return this.searchMode;
+		}-*/;
+
+		/**
+		 * table view row data object
+		 */
+		public final native Object getRowData()
+		/*-{
+			return this.rowData;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * table view row object
+		 */
+		public final native Object getRow()
+		/*-{
+			return this.row;
+		}-*/;
+
+	}
+
+	public final native void addDeleteHandler(EventCallback<DeleteEvent> handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addMoveHandler(EventCallback<JavaScriptObject> handler)
+	public final class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "move";
+
+		/**
+		 * table view row index
+		 */
+		public final native Object getIndex()
+		/*-{
+			return this.index;
+		}-*/;
+
+		/**
+		 * table view section object
+		 */
+		public final native Object getSection()
+		/*-{
+			return this.section;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the right area was clicked
+		 */
+		public final native Object getDetail()
+		/*-{
+			return this.detail;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the table is in search mode
+		 */
+		public final native Object getSearchMode()
+		/*-{
+			return this.searchMode;
+		}-*/;
+
+		/**
+		 * table view row data object
+		 */
+		public final native Object getRowData()
+		/*-{
+			return this.rowData;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * table view row object
+		 */
+		public final native Object getRow()
+		/*-{
+			return this.row;
+		}-*/;
+
+	}
+
+	public final native void addMoveHandler(EventCallback<MoveEvent> handler)
 	/*-{
 		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addScrollHandler(EventCallback<JavaScriptObject> handler)
+	public final class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "scroll";
+
+		/**
+		 * the row index of the topmost visible row in the view (Android only)
+		 */
+		public final native Object getFirstVisibleItem()
+		/*-{
+			return this.firstVisibleItem;
+		}-*/;
+
+		/**
+		 * the number of rows currently visible in the view (Android only)
+		 */
+		public final native Object getVisibleItemCount()
+		/*-{
+			return this.visibleItemCount;
+		}-*/;
+
+		/**
+		 * dictionary with `x` and `y` properties containing the content offset
+		 * (iOS only)
+		 */
+		public final native Object getContentOffset()
+		/*-{
+			return this.contentOffset;
+		}-*/;
+
+		/**
+		 * the total number of rows in the view (Android only)
+		 */
+		public final native Object getTotalItemCount()
+		/*-{
+			return this.totalItemCount;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * dictionary with `width` and `height` properties containing the size
+		 * of the content (regardless of the display size in the case of
+		 * scrolling) (iOS only)
+		 */
+		public final native Object getContentSize()
+		/*-{
+			return this.contentSize;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * dictionary with `width` and `height` properties containing the size
+		 * of the visible table view
+		 */
+		public final native Object getSize()
+		/*-{
+			return this.size;
+		}-*/;
+
+	}
+
+	public final native void addScrollHandler(EventCallback<ScrollEvent> handler)
 	/*-{
 		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addScrollEndHandler(EventCallback<JavaScriptObject> handler)
+	public final class ScrollEndEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "scrollEnd";
+
+		/**
+		 * dictionary with `x` and `y` properties containing the content offset
+		 * (iOS only)
+		 */
+		public final native Object getContentOffset()
+		/*-{
+			return this.contentOffset;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * dictionary with `width` and `height` properties containing the size
+		 * of the content (regardless of the display size in the case of
+		 * scrolling) (iOS only)
+		 */
+		public final native Object getContentSize()
+		/*-{
+			return this.contentSize;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * dictionary with `width` and `height` properties containing the size
+		 * of the visible table view
+		 */
+		public final native Object getSize()
+		/*-{
+			return this.size;
+		}-*/;
+
+	}
+
+	public final native void addScrollEndHandler(EventCallback<ScrollEndEvent> handler)
 	/*-{
 		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

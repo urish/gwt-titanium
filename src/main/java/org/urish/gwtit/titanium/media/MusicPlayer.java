@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.media;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The musicplayer instance returned from
  * {@link org.urish.gwtit.titanium.media.createmusicplayer}. this object
@@ -220,17 +218,32 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.stopSeeking();
 	}-*/;
 
-	public final native void addPlayingChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class PlayingChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "playingChange";
+
+	}
+
+	public final native void addPlayingChangeHandler(EventCallback<PlayingChangeEvent> handler)
 	/*-{
 		return this.addEventListener('playingChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStateChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class StateChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "stateChange";
+
+	}
+
+	public final native void addStateChangeHandler(EventCallback<StateChangeEvent> handler)
 	/*-{
 		return this.addEventListener('stateChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addVolumeChangeHandler(EventCallback<JavaScriptObject> handler)
+	public final class VolumeChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "volumeChange";
+
+	}
+
+	public final native void addVolumeChangeHandler(EventCallback<VolumeChangeEvent> handler)
 	/*-{
 		return this.addEventListener('volumeChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

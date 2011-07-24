@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui.ipad;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * A popover is used to manage the presentation of content in a popover. you use
  * popovers to present information temporarily but in a way that does not take
@@ -113,7 +111,37 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 		return this.setWidth(width);
 	}-*/;
 
-	public final native void addHideHandler(EventCallback<JavaScriptObject> handler)
+	public final class HideEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "hide";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+	}
+
+	public final native void addHideHandler(EventCallback<HideEvent> handler)
 	/*-{
 		return this.addEventListener('hide', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

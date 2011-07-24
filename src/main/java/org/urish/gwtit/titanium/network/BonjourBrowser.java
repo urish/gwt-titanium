@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.network;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The bonjourbrowser instance returned from
  * {@link org.urish.gwtit.titanium.network.createbonjourbrowser}. this object is
@@ -103,7 +101,23 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 		return this.stopSearch();
 	}-*/;
 
-	public final native void addUpdatedServicesHandler(EventCallback<JavaScriptObject> handler)
+	public final class UpdatedServicesEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "updatedServices";
+
+		/**
+		 * An array of BonjourService objects corresponding to currently
+		 * available services. If you cache this value, including using it as
+		 * table data, be aware that it could become out of date at any time due
+		 * to the asynchronous nature of Bonjour service discovery.
+		 */
+		public final native Object getServices()
+		/*-{
+			return this.services;
+		}-*/;
+
+	}
+
+	public final native void addUpdatedServicesHandler(EventCallback<UpdatedServicesEvent> handler)
 	/*-{
 		return this.addEventListener('updatedServices', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

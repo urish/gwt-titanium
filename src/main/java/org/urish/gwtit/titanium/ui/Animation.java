@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The animation object is used for specifying lower-level animation properties
  * and more low-level control of events during an animation. the animation is
@@ -298,12 +296,22 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 		this.zIndex = value;
 	}-*/;
 
-	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "complete";
+
+	}
+
+	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addStartHandler(EventCallback<JavaScriptObject> handler)
+	public final class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "start";
+
+	}
+
+	public final native void addStartHandler(EventCallback<StartEvent> handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

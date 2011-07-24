@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.media;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The sound object is returned by
  * {@link org.urish.gwtit.titanium.media.createsound} and is useful for playing
@@ -215,22 +213,66 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final native void addCompleteHandler(EventCallback<JavaScriptObject> handler)
+	public final class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "complete";
+
+		/**
+		 * boolean to indicate if the sound was successfully played
+		 */
+		public final native Object getSuccess()
+		/*-{
+			return this.success;
+		}-*/;
+
+	}
+
+	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addErrorHandler(EventCallback<JavaScriptObject> handler)
+	public final class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "error";
+
+		/**
+		 * error message
+		 */
+		public final native Object getMessage()
+		/*-{
+			return this.message;
+		}-*/;
+
+	}
+
+	public final native void addErrorHandler(EventCallback<ErrorEvent> handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addInterruptedHandler(EventCallback<JavaScriptObject> handler)
+	public final class InterruptedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "interrupted";
+
+	}
+
+	public final native void addInterruptedHandler(EventCallback<InterruptedEvent> handler)
 	/*-{
 		return this.addEventListener('interrupted', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addResumeHandler(EventCallback<JavaScriptObject> handler)
+	public final class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "resume";
+
+		/**
+		 * boolean to indicate if the resume was from an interruption
+		 */
+		public final native Object getInterruption()
+		/*-{
+			return this.interruption;
+		}-*/;
+
+	}
+
+	public final native void addResumeHandler(EventCallback<ResumeEvent> handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

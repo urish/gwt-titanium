@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * The top level platform module. the platform module is used accessing the
  * device's platform related functionality.
@@ -384,7 +382,28 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 		return Titanium.Platform.fireEvent(name, event);
 	}-*/;
 
-	public static native void addBatteryHandler(EventCallback<JavaScriptObject> handler)
+	public final class BatteryEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "battery";
+
+		/**
+		 * the new battery state
+		 */
+		public final native Object getState()
+		/*-{
+			return this.state;
+		}-*/;
+
+		/**
+		 * the new battery level
+		 */
+		public final native Object getLevel()
+		/*-{
+			return this.level;
+		}-*/;
+
+	}
+
+	public static native void addBatteryHandler(EventCallback<BatteryEvent> handler)
 	/*-{
 		return Titanium.Platform.addEventListener('battery', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;

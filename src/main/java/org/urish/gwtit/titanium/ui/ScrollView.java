@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * A scroll view is used to create a scrollable region of content. views added
  * to the scroll view will be scrolled based on the content size of the scroll
@@ -235,12 +233,96 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollTo(x, y);
 	}-*/;
 
-	public final native void addScaleHandler(EventCallback<JavaScriptObject> handler)
+	public final class ScaleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "scale";
+
+		/**
+		 * the new scale as a float
+		 */
+		public final native Object getScale()
+		/*-{
+			return this.scale;
+		}-*/;
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+	}
+
+	public final native void addScaleHandler(EventCallback<ScaleEvent> handler)
 	/*-{
 		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
-	public final native void addScrollHandler(EventCallback<JavaScriptObject> handler)
+	public final class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "scroll";
+
+		/**
+		 * the y point of the event, in receiving view coordinates
+		 */
+		public final native Object getY()
+		/*-{
+			return this.y;
+		}-*/;
+
+		/**
+		 * the x point of the event in receiving view coordiantes
+		 */
+		public final native Object getX()
+		/*-{
+			return this.x;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the scroll is based on a dragging gesture
+		 */
+		public final native Object getDragging()
+		/*-{
+			return this.dragging;
+		}-*/;
+
+		/**
+		 * a dictionary with properties x and y describing the point of the
+		 * event in screen coordinates
+		 */
+		public final native Object getGlobalPoint()
+		/*-{
+			return this.globalPoint;
+		}-*/;
+
+		/**
+		 * boolean to indicate if the scroll is decelerating
+		 */
+		public final native Object getDecelerating()
+		/*-{
+			return this.decelerating;
+		}-*/;
+
+	}
+
+	public final native void addScrollHandler(EventCallback<ScrollEvent> handler)
 	/*-{
 		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
