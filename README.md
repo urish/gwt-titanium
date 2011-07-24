@@ -32,3 +32,11 @@ If you are using eclipse, you can also have maven automatically generate an ecli
 file for you. Execute the following command:
 
 	mvn eclipse:eclipse
+
+## Use in your maven project
+
+Follow the tutorial on our blog:
+
+[Step by step tutorial for creating a gwt-titanium project with Apache Maven](http://www.iphonejava.org/2011/07/iphonejava-goes-with-maven/ iPhone Java goes with Maven)
+
+	
