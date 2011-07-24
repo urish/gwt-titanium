@@ -37,6 +37,6 @@ file for you. Execute the following command:
 
 Follow the tutorial on our blog:
 
-[Step by step tutorial for creating a gwt-titanium project with Apache Maven](http://www.iphonejava.org/2011/07/iphonejava-goes-with-maven/ iPhone Java goes with Maven)
+[Step by step tutorial for creating a gwt-titanium project with Apache Maven](http://www.iphonejava.org/2011/07/iphonejava-goes-with-maven/)
 
 	
