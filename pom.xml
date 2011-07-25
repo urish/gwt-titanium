@@ -44,6 +44,12 @@
 		</license>
 	</licenses>
 
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
+
 	<scm>
 		<connection>scm:git:git@github.com:urish/gwt-titanium.git</connection>
 		<developerConnection>scm:git:git@github.com:urish/gwt-titanium.git</developerConnection>
@@ -62,6 +68,9 @@
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
+					<excludes>
+						<value>**/emul/**/*.java</value>
+					</excludes>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -74,7 +83,10 @@
 					<additionalbuildcommands>
 						<buildcommand>org.maven.ide.eclipse.maven2Builder</buildcommand>
 					</additionalbuildcommands>
-				</configuration>
+					<sourceExcludes>
+						<sourceExclude>**/emul/**/*.java</sourceExclude>
+					</sourceExcludes>
+                </configuration>
 			</plugin>
 		</plugins>
 		<resources>
@@ -82,6 +94,7 @@
 				<directory>src/main/java</directory>
 				<includes>
 					<include>**/client/**</include>
+					<include>**/emul/**</include>
 					<include>**/titanium/**</include>
 					<include>**/*.gwt.xml</include>
 				</includes>

@@ -269,8 +269,9 @@ public class Titanium extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param params
 	 *            creation arguments
+	 * @return The new buffer.
 	 */
-	public static native void createBuffer(org.urish.gwtit.titanium.CreateBufferArgs params)
+	public static native org.urish.gwtit.titanium.Buffer createBuffer(org.urish.gwtit.titanium.CreateBufferArgs params)
 	/*-{
 		return Titanium.createBuffer(params);
 	}-*/;

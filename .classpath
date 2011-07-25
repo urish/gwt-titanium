@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/main/java"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0.jar"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="**/emul/**" kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/java/org/urish/gwtit/emul"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-dev/2.3.0/gwt-dev-2.3.0.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/google/gwt/gwt-user/2.3.0/gwt-user-2.3.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
