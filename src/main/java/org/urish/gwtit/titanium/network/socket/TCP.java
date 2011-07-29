@@ -94,12 +94,14 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> getConnected()
 	/*-{
-		return this.connected;
+		return this.connected._javaObj;
 	}-*/;
 
 	public final native void setConnected(EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> value)
 	/*-{
-		this.connected = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.connected = callback;
 	}-*/;
 
 	/**
@@ -107,12 +109,14 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
-		return this.error;
+		return this.error._javaObj;
 	}-*/;
 
 	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
-		this.error = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.error = callback;
 	}-*/;
 
 	/**
@@ -120,12 +124,14 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> getAccepted()
 	/*-{
-		return this.accepted;
+		return this.accepted._javaObj;
 	}-*/;
 
 	public final native void setAccepted(EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> value)
 	/*-{
-		this.accepted = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.accepted = callback;
 	}-*/;
 
 	/**

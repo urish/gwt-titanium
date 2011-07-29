@@ -129,12 +129,14 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<JavaScriptObject> getOndatastream()
 	/*-{
-		return this.ondatastream;
+		return this.ondatastream._javaObj;
 	}-*/;
 
 	public final native void setOndatastream(EventCallback<JavaScriptObject> value)
 	/*-{
-		this.ondatastream = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.ondatastream = callback;
 	}-*/;
 
 	/**
@@ -143,12 +145,14 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<JavaScriptObject> getOnerror()
 	/*-{
-		return this.onerror;
+		return this.onerror._javaObj;
 	}-*/;
 
 	public final native void setOnerror(EventCallback<JavaScriptObject> value)
 	/*-{
-		this.onerror = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.onerror = callback;
 	}-*/;
 
 	/**
@@ -157,12 +161,14 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<JavaScriptObject> getOnload()
 	/*-{
-		return this.onload;
+		return this.onload._javaObj;
 	}-*/;
 
 	public final native void setOnload(EventCallback<JavaScriptObject> value)
 	/*-{
-		this.onload = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.onload = callback;
 	}-*/;
 
 	/**
@@ -171,12 +177,14 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<JavaScriptObject> getOnreadystatechange()
 	/*-{
-		return this.onreadystatechange;
+		return this.onreadystatechange._javaObj;
 	}-*/;
 
 	public final native void setOnreadystatechange(EventCallback<JavaScriptObject> value)
 	/*-{
-		this.onreadystatechange = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.onreadystatechange = callback;
 	}-*/;
 
 	/**
@@ -187,12 +195,14 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native EventCallback<JavaScriptObject> getOnsendstream()
 	/*-{
-		return this.onsendstream;
+		return this.onsendstream._javaObj;
 	}-*/;
 
 	public final native void setOnsendstream(EventCallback<JavaScriptObject> value)
 	/*-{
-		this.onsendstream = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.onsendstream = callback;
 	}-*/;
 
 	/**

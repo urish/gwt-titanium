@@ -50,12 +50,14 @@ public class AcceptParams extends JavaScriptObject {
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
-		return this.error;
+		return this.error._javaObj;
 	}-*/;
 
 	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
-		this.error = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.error = callback;
 	}-*/;
 
 }

@@ -73,6 +73,25 @@ SETTER_TEMPLATE = """
 	}-*/;
 """
 
+CALLBACK_GETTER_TEMPLATE = """
+	/**
+	 * %(docString)s
+	 */
+	public final native %(type)s get%(nameCapital)s() 
+	/*-{
+		return this.%(name)s._javaObj;
+	}-*/;
+"""
+
+CALLBACK_SETTER_TEMPLATE = """
+	public final native void set%(nameCapital)s(%(type)s value) 
+	/*-{
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.%(name)s = callback;
+	}-*/;
+"""
+
 STATIC_GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
@@ -82,10 +101,30 @@ STATIC_GETTER_TEMPLATE = """
 		return %(module)s.%(name)s;
 	}-*/;
 """
+
 STATIC_SETTER_TEMPLATE = """
 	public static native void set%(nameCapital)s(%(type)s value) 
 	/*-{
 		%(module)s.%(name)s = value;
+	}-*/;
+"""
+
+STATIC_CALLBACK_GETTER_TEMPLATE = """
+	/**
+	 * %(docString)s
+	 */
+	public static native %(type)s get%(nameCapital)s() 
+	/*-{
+		return %(module)s.%(name)s._javaObj;
+	}-*/;
+"""
+
+STATIC_CALLBACK_SETTER_TEMPLATE = """
+	public static native void set%(nameCapital)s(%(type)s value) 
+	/*-{
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		%(module)s.%(name)s = callback;
 	}-*/;
 """
 
@@ -273,10 +312,14 @@ def generateProperties(type, isSingleton, types):
 						'docString': docString,
 					}
 				else:
+					mappedType = mapTypes(property['type'])
+					if mappedType.startswith("EventCallback<"):
+						getter = STATIC_CALLBACK_GETTER_TEMPLATE if isSingleton else CALLBACK_GETTER_TEMPLATE
+						setter = STATIC_CALLBACK_SETTER_TEMPLATE if isSingleton else CALLBACK_SETTER_TEMPLATE
 					result += (getter + setter) % {
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
-						'type': mapTypes(property['type']),
+						'type': mappedType,
 						'module': type['name'],
 						'docString': docString,
 					}
