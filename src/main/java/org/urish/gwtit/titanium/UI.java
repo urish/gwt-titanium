@@ -816,11 +816,6 @@ public class UI extends org.urish.gwtit.titanium.Module {
 		return Titanium.UI.create_2DMatrix();
 	}-*/;
 
-	public static native org.urish.gwtit.titanium.ui._3DMatrix create_3DMatrix()
-	/*-{
-		return Titanium.UI.create_3DMatrix();
-	}-*/;
-
 	public static native org.urish.gwtit.titanium.ui.ActivityIndicator createActivityIndicator()
 	/*-{
 		return Titanium.UI.createActivityIndicator();

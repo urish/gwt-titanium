@@ -230,7 +230,7 @@ def mapTypes(s, withConsts = False):
 	dictionaryMatch = re.match("^Dictionary<(.+)>$", s)
 	if dictionaryMatch:
 		return mapTypes(dictionaryMatch.group(1), withConsts)
-	callbackMatch = re.match("^Callback<(.+)>$", s)
+	callbackMatch = re.match("^(?:Callback|Object)<(.+)>$", s)
 	if callbackMatch:
 		innerType = mapTypes(callbackMatch.group(1), withConsts)
 		if innerType == 'Object':
@@ -241,7 +241,8 @@ def mapTypes(s, withConsts = False):
 		innerType, eventName = eventMatch.groups()
 		innerType = mapTypes(innerType, withConsts)
 		return "%s.%sEvent" % (innerType, capitalFirst(eventName))
-	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", "EncodeStringSpec"]:
+	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", 
+			"EncodeStringSpec", "MediaItemType", "MediaQueryInfoType", "MediaQueryType"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):
 		path = s.split(".")

@@ -82,6 +82,11 @@ public class iPad extends org.urish.gwtit.titanium.Module {
 
 	public static final float POPOVER_ARROW_DIRECTION_UP = value_POPOVER_ARROW_DIRECTION_UP();
 
+	public static native org.urish.gwtit.titanium.ui.ipad.DocumentViewer createDocumentViewer()
+	/*-{
+		return Titanium.UI.iPad.createDocumentViewer();
+	}-*/;
+
 	public static native org.urish.gwtit.titanium.ui.ipad.Popover createPopover()
 	/*-{
 		return Titanium.UI.iPad.createPopover();
