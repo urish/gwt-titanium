@@ -293,7 +293,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *            {@link org.urish.gwtit.titanium.network.BonjourBrowser}
 	 */
 	public static native org.urish.gwtit.titanium.network.BonjourBrowser createBonjourBrowser(String serviceType,
-			String domain, Object parameters)
+			String domain, org.urish.gwtit.titanium.network.BonjourBrowser parameters)
 	/*-{
 		return Titanium.Network.createBonjourBrowser(serviceType, domain, parameters);
 	}-*/;
@@ -341,7 +341,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *            {@link org.urish.gwtit.titanium.network.BonjourService}
 	 */
 	public static native org.urish.gwtit.titanium.network.BonjourService createBonjourService(String name, String type,
-			String domain, Object parameters)
+			String domain, org.urish.gwtit.titanium.network.BonjourService parameters)
 	/*-{
 		return Titanium.Network.createBonjourService(name, type, domain, parameters);
 	}-*/;

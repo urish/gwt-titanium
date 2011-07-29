@@ -149,7 +149,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 *            encodeNumber named options
 	 * @return The position after the encoded number in `dest`.
 	 */
-	public static native float encodeNumber(Object options)
+	public static native float encodeNumber(org.urish.gwtit.titanium.EncodeNumberSpec options)
 	/*-{
 		return Titanium.Codec.encodeNumber(options);
 	}-*/;
@@ -194,7 +194,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 *            decodeString named options
 	 * @return The decoded string
 	 */
-	public static native String decodeString(Object options)
+	public static native String decodeString(org.urish.gwtit.titanium.DecodeStringSpec options)
 	/*-{
 		return Titanium.Codec.decodeString(options);
 	}-*/;

@@ -177,6 +177,9 @@ def mapTypes(s, withConsts = False):
 	arrayMatch = re.match("^Array<(.+)>$", s)
 	if arrayMatch:
 		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
+	dictionaryMatch = re.match("^Dictionary<(.+)>$", s)
+	if dictionaryMatch:
+		return mapTypes(dictionaryMatch.group(1), withConsts)
 	callbackMatch = re.match("^Callback<(.+)>$", s)
 	if callbackMatch:
 		innerType = mapTypes(callbackMatch.group(1), withConsts)
@@ -196,7 +199,9 @@ def mapTypes(s, withConsts = False):
 			# Constant
 			return "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
-	print "==>", s
+	if s.endswith("CallbackArgs") or s in ['EncodeNumberSpec', 'DecodeStringSpec']:
+		return "org.urish.gwtit.titanium." + s
+	print "!!!WARN!!! unknown type detected: ", s
 	return "Object"
 
 def findType(name, types):

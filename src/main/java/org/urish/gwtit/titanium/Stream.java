@@ -77,7 +77,8 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            called with result of the read operation
 	 */
 	public static native void read(org.urish.gwtit.titanium.IOStream sourceStream,
-			org.urish.gwtit.titanium.Buffer buffer, EventCallback<JavaScriptObject> resultsCallback)
+			org.urish.gwtit.titanium.Buffer buffer,
+			EventCallback<org.urish.gwtit.titanium.ReadCallbackArgs> resultsCallback)
 	/*-{
 		return Titanium.Stream.read(sourceStream, buffer, function(e) { resultsCallback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -98,7 +99,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 */
 	public static native void read(org.urish.gwtit.titanium.IOStream sourceStream,
 			org.urish.gwtit.titanium.Buffer buffer, float offset, float length,
-			EventCallback<JavaScriptObject> resultsCallback)
+			EventCallback<org.urish.gwtit.titanium.ReadCallbackArgs> resultsCallback)
 	/*-{
 		return Titanium.Stream.read(sourceStream, buffer, offset, length, function(e) { resultsCallback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -125,7 +126,8 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            called with result of the read operation
 	 */
 	public static native void readAll(org.urish.gwtit.titanium.IOStream sourceStream,
-			org.urish.gwtit.titanium.Buffer buffer, EventCallback<JavaScriptObject> resultsCallback)
+			org.urish.gwtit.titanium.Buffer buffer,
+			EventCallback<org.urish.gwtit.titanium.ReadCallbackArgs> resultsCallback)
 	/*-{
 		return Titanium.Stream.readAll(sourceStream, buffer, function(e) { resultsCallback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -141,7 +143,8 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            called with result of the write operation
 	 */
 	public static native void write(org.urish.gwtit.titanium.IOStream outputStream,
-			org.urish.gwtit.titanium.Buffer buffer, EventCallback<JavaScriptObject> resultsCallback)
+			org.urish.gwtit.titanium.Buffer buffer,
+			EventCallback<org.urish.gwtit.titanium.WriteCallbackArgs> resultsCallback)
 	/*-{
 		return Titanium.Stream.write(outputStream, buffer, function(e) { resultsCallback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -163,7 +166,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 */
 	public static native void write(org.urish.gwtit.titanium.IOStream outputStream,
 			org.urish.gwtit.titanium.Buffer buffer, float offset, float length,
-			EventCallback<JavaScriptObject> resultsCallback)
+			EventCallback<org.urish.gwtit.titanium.WriteCallbackArgs> resultsCallback)
 	/*-{
 		return Titanium.Stream.write(outputStream, buffer, offset, length, function(e) { resultsCallback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -201,7 +204,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 */
 	public static native void writeStream(org.urish.gwtit.titanium.IOStream inputStream,
 			org.urish.gwtit.titanium.IOStream outputStream, float maxChunkSize,
-			EventCallback<JavaScriptObject> resultsCallback)
+			EventCallback<org.urish.gwtit.titanium.WriteStreamCallbackArgs> resultsCallback)
 	/*-{
 		return Titanium.Stream.writeStream(inputStream, outputStream, maxChunkSize, function(e) { resultsCallback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -218,7 +221,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            method at once
 	 */
 	public static native void pump(org.urish.gwtit.titanium.IOStream inputStream,
-			EventCallback<JavaScriptObject> handler, float maxChunkSize)
+			EventCallback<org.urish.gwtit.titanium.PumpCallbackArgs> handler, float maxChunkSize)
 	/*-{
 		return Titanium.Stream.pump(inputStream, function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }, maxChunkSize);
 	}-*/;
@@ -237,7 +240,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            true is pump operation should be async, false is not
 	 */
 	public static native void pump(org.urish.gwtit.titanium.IOStream inputStream,
-			EventCallback<JavaScriptObject> handler, float maxChunkSize, boolean isAsync)
+			EventCallback<org.urish.gwtit.titanium.PumpCallbackArgs> handler, float maxChunkSize, boolean isAsync)
 	/*-{
 		return Titanium.Stream.pump(inputStream, function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }, maxChunkSize, isAsync);
 	}-*/;

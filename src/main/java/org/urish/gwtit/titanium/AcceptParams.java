@@ -48,12 +48,12 @@ public class AcceptParams extends JavaScriptObject {
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public final native EventCallback<JavaScriptObject> getError()
+	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public final native void setError(EventCallback<JavaScriptObject> value)
+	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
 		this.error = value;
 	}-*/;

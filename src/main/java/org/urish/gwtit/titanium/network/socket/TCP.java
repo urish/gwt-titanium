@@ -20,8 +20,6 @@ package org.urish.gwtit.titanium.network.socket;
 
 import org.urish.gwtit.client.EventCallback;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * Tcp socket that implements the `titanium.iostream` interface. created by
  * `titanium.network.socket.createtcp`
@@ -94,12 +92,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The callback to be fired after the socket enters the "connected"
 	 *         state. only invoked following a successful connect() call
 	 */
-	public final native EventCallback<JavaScriptObject> getConnected()
+	public final native EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> getConnected()
 	/*-{
 		return this.connected;
 	}-*/;
 
-	public final native void setConnected(EventCallback<JavaScriptObject> value)
+	public final native void setConnected(EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> value)
 	/*-{
 		this.connected = value;
 	}-*/;
@@ -107,12 +105,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public final native EventCallback<JavaScriptObject> getError()
+	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public final native void setError(EventCallback<JavaScriptObject> value)
+	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
 		this.error = value;
 	}-*/;
@@ -120,12 +118,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The callback to be fired when a listener accepts a connection
 	 */
-	public final native EventCallback<JavaScriptObject> getAccepted()
+	public final native EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> getAccepted()
 	/*-{
 		return this.accepted;
 	}-*/;
 
-	public final native void setAccepted(EventCallback<JavaScriptObject> value)
+	public final native void setAccepted(EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> value)
 	/*-{
 		this.accepted = value;
 	}-*/;
