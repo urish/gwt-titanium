@@ -1,4 +1,19 @@
 {
+	"AcceptParams": {
+		"needsConstructor": true
+	},
+	"CreateBufferArgs": {
+		"needsConstructor": true
+	},
+	"CreateStreamArgs": {
+		"needsConstructor": true
+	},
+	"DecodeNumberSpec": {
+		"needsConstructor": true
+	},
+	"EncodeNumberSpec": {
+		"needsConstructor": true
+	},
 	"Titanium.Facebook": {
 		"methods[name='dialog'] parameters[name='callback'] type": "Callback<Titanium.Facebook.DialogCallbackParams>",
 		"methods[name='request'] parameters[name='callback'] type": "Callback<Titanium.Facebook.RequestCallbackParams>",

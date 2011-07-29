@@ -50,11 +50,22 @@ import org.urish.gwtit.client.EventCallback;
 public class %(name)s extends %(parent)s {
 	protected %(name)s() {}
 
+	%(constructors)s
 	%(properties)s
 	%(factories)s
 	%(methods)s
 	%(events)s
 }
+"""
+
+CONSTRUCTOR_TEMPLATE = """
+	/**
+	 * Creates a new, empty instance of %(name)s
+	 */
+	public static final native %(name)s create%(name)s()
+	/*-{
+		return {};
+	}-*/;
 """
 
 GETTER_TEMPLATE = """
@@ -157,7 +168,7 @@ METHOD_TEMPLATE = """
 	}-*/;
 """
 
-CONSTRUCTOR_TEMPLATE = """
+FACTORY_TEMPLATE = """
 	public static native %(return)s %(name)s () 
 	/*-{
 		return %(type)s.%(name)s();
@@ -369,6 +380,14 @@ def generateClassDoc(typeInfo):
 		parts += ["@since " + typeInfo['since']]
 	return "\n * ".join(parts)
 
+def generateConstructors(typeInfo):
+	if 'needsConstructor' in typeInfo and typeInfo['needsConstructor']:
+		return CONSTRUCTOR_TEMPLATE % {
+			'name': typeInfo['name'].split(".")[-1],
+			'return': mapTypes(typeInfo['name'])				
+		}
+	return ""
+
 def generateFactories(typeInfo, types):
 	typeName = typeInfo['name']
 	result = ""
@@ -383,7 +402,7 @@ def generateFactories(typeInfo, types):
 					if method['name'] == factoryName:
 						duplicate = True
 			if not duplicate and not readonly:
-				result += CONSTRUCTOR_TEMPLATE % {
+				result += FACTORY_TEMPLATE % {
 					'type': typeName,
 					'name': factoryName,
 					'return': mapTypes(candidate['name']),
@@ -504,6 +523,7 @@ def generateClass(projectRoot, type, types):
 		'parent': parentClass,
 		'docString': generateClassDoc(type),
 		'properties': generateProperties(type, singleton, types),
+		'constructors': generateConstructors(type),
 		'factories': generateFactories(type, types),
 		'methods': generateMethods(type, singleton, types) if ('methods' in type) else '',
 		'events': generateEvents(type, singleton, types),

@@ -32,6 +32,14 @@ public class AcceptParams extends JavaScriptObject {
 	}
 
 	/**
+	 * Creates a new, empty instance of AcceptParams
+	 */
+	public static final native AcceptParams createAcceptParams()
+	/*-{
+		return {};
+	}-*/;
+
+	/**
 	 * @return The timeout for connect() and all i/o write() operations. cannot
 	 *         be modified when not in the initialized state
 	 */

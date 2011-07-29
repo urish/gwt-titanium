@@ -29,6 +29,14 @@ public class CreateBufferArgs extends JavaScriptObject {
 	protected CreateBufferArgs() {
 	}
 
+	/**
+	 * Creates a new, empty instance of CreateBufferArgs
+	 */
+	public static final native CreateBufferArgs createCreateBufferArgs()
+	/*-{
+		return {};
+	}-*/;
+
 	public final native void setValue(String value)
 	/*-{
 		this.value = value;
