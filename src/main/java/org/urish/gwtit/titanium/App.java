@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The top level app module. the app module is mainly used for accessing
  * information about the application at runtime.
@@ -207,9 +209,9 @@ public class App extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.App.addEventListener(name, callback);
+		return Titanium.App.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -220,9 +222,9 @@ public class App extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.App.removeEventListener(name, callbac);
+		return Titanium.App.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -257,6 +259,45 @@ public class App extends org.urish.gwtit.titanium.Module {
 	public static native void addProximityHandler(EventCallback<ProximityEvent> handler)
 	/*-{
 		return Titanium.App.addEventListener('proximity', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+	}-*/;
+
+	public final static class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "resume";
+
+		protected ResumeEvent() {
+		}
+
+	}
+
+	public static native void addResumeHandler(EventCallback<ResumeEvent> handler)
+	/*-{
+		return Titanium.App.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+	}-*/;
+
+	public final static class ResumedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "resumed";
+
+		protected ResumedEvent() {
+		}
+
+	}
+
+	public static native void addResumedHandler(EventCallback<ResumedEvent> handler)
+	/*-{
+		return Titanium.App.addEventListener('resumed', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+	}-*/;
+
+	public final static class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
+		public final static String EVENT_NAME = "pause";
+
+		protected PauseEvent() {
+		}
+
+	}
+
+	public static native void addPauseHandler(EventCallback<PauseEvent> handler)
+	/*-{
+		return Titanium.App.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
 
 }

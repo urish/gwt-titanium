@@ -1,6 +1,6 @@
 # gwt-titanium
 
-Implementation of Titanium Mobile SDK 1.7.0 in GWT.
+Implementation of Titanium Mobile SDK 1.7.2 in GWT.
 
 [Homepage](http://www.iPhoneJava.org/ "The iPhoneJava Project Homepage")
 

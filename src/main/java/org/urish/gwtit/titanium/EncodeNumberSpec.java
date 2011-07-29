@@ -28,6 +28,14 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	}
 
 	/**
+	 * Creates a new, empty instance of EncodeNumberSpec
+	 */
+	public static final native EncodeNumberSpec createEncodeNumberSpec()
+	/*-{
+		return {};
+	}-*/;
+
+	/**
 	 * @return The source number to encode
 	 */
 	public final native float getSource()

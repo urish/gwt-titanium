@@ -28,6 +28,14 @@ public class DecodeNumberSpec extends JavaScriptObject {
 	}
 
 	/**
+	 * Creates a new, empty instance of DecodeNumberSpec
+	 */
+	public static final native DecodeNumberSpec createDecodeNumberSpec()
+	/*-{
+		return {};
+	}-*/;
+
+	/**
 	 * @return The buffer to decode
 	 */
 	public final native org.urish.gwtit.titanium.Buffer getSource()

@@ -92,7 +92,8 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	 *            correspond to properties of
 	 *            {@link org.urish.gwtit.titanium.android.calendar.Event}.
 	 */
-	public final native org.urish.gwtit.titanium.android.calendar.Event createEvent(Object properties)
+	public final native org.urish.gwtit.titanium.android.calendar.Event createEvent(
+			org.urish.gwtit.titanium.android.calendar.Event properties)
 	/*-{
 		return this.createEvent(properties);
 	}-*/;

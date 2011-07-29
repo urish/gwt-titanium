@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The top level facebook module. the facebook module is used for connecting
  * your application with facebook through the [facebook graph
@@ -179,9 +181,10 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 *            the error message), "cancelled" (set to true if user
 	 *            cancelled) and "result" (the data returned by Facebook.)
 	 */
-	public static native void dialog(String action, Object params, Object callback)
+	public static native void dialog(String action, Object params,
+			EventCallback<org.urish.gwtit.titanium.facebook.DialogCallbackParams> callback)
 	/*-{
-		return Titanium.Facebook.dialog(action, params, callback);
+		return Titanium.Facebook.dialog(action, params, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -209,9 +212,10 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 *            the error message), "method" (the REST method call you
 	 *            specified), "result" (the data returned by Facebook.)
 	 */
-	public static native void request(String method, Object params, Object callback)
+	public static native void request(String method, Object params,
+			EventCallback<org.urish.gwtit.titanium.facebook.RequestCallbackParams> callback)
 	/*-{
-		return Titanium.Facebook.request(method, params, callback);
+		return Titanium.Facebook.request(method, params, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -238,9 +242,10 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 *            the error message), "path" (the graph call path you
 	 *            specified), "result" (the JSON returned by Facebook.)
 	 */
-	public static native void requestWithGraphPath(String path, Object params, String httpMethod, Object callback)
+	public static native void requestWithGraphPath(String path, Object params, String httpMethod,
+			EventCallback<org.urish.gwtit.titanium.facebook.GraphRequestCallbackParams> callback)
 	/*-{
-		return Titanium.Facebook.requestWithGraphPath(path, params, httpMethod, callback);
+		return Titanium.Facebook.requestWithGraphPath(path, params, httpMethod, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -251,9 +256,9 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Facebook.addEventListener(name, callback);
+		return Titanium.Facebook.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -264,9 +269,9 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Facebook.removeEventListener(name, callbac);
+		return Titanium.Facebook.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

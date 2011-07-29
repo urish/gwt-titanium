@@ -18,6 +18,8 @@
 
 package org.urish.gwtit.titanium;
 
+import org.urish.gwtit.client.EventCallback;
+
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -37,9 +39,9 @@ public class Proxy extends JavaScriptObject {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public final native void addEventListener(String name, Object callback)
+	public final native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return this.addEventListener(name, callback);
+		return this.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -50,9 +52,9 @@ public class Proxy extends JavaScriptObject {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public final native void removeEventListener(String name, Object callbac)
+	public final native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return this.removeEventListener(name, callbac);
+		return this.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

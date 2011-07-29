@@ -50,11 +50,22 @@ import org.urish.gwtit.client.EventCallback;
 public class %(name)s extends %(parent)s {
 	protected %(name)s() {}
 
+	%(constructors)s
 	%(properties)s
 	%(factories)s
 	%(methods)s
 	%(events)s
 }
+"""
+
+CONSTRUCTOR_TEMPLATE = """
+	/**
+	 * Creates a new, empty instance of %(name)s
+	 */
+	public static final native %(name)s create%(name)s()
+	/*-{
+		return {};
+	}-*/;
 """
 
 GETTER_TEMPLATE = """
@@ -73,6 +84,25 @@ SETTER_TEMPLATE = """
 	}-*/;
 """
 
+CALLBACK_GETTER_TEMPLATE = """
+	/**
+	 * %(docString)s
+	 */
+	public final native %(type)s get%(nameCapital)s() 
+	/*-{
+		return this.%(name)s._javaObj;
+	}-*/;
+"""
+
+CALLBACK_SETTER_TEMPLATE = """
+	public final native void set%(nameCapital)s(%(type)s value) 
+	/*-{
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.%(name)s = callback;
+	}-*/;
+"""
+
 STATIC_GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
@@ -82,10 +112,30 @@ STATIC_GETTER_TEMPLATE = """
 		return %(module)s.%(name)s;
 	}-*/;
 """
+
 STATIC_SETTER_TEMPLATE = """
 	public static native void set%(nameCapital)s(%(type)s value) 
 	/*-{
 		%(module)s.%(name)s = value;
+	}-*/;
+"""
+
+STATIC_CALLBACK_GETTER_TEMPLATE = """
+	/**
+	 * %(docString)s
+	 */
+	public static native %(type)s get%(nameCapital)s() 
+	/*-{
+		return %(module)s.%(name)s._javaObj;
+	}-*/;
+"""
+
+STATIC_CALLBACK_SETTER_TEMPLATE = """
+	public static native void set%(nameCapital)s(%(type)s value) 
+	/*-{
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		%(module)s.%(name)s = callback;
 	}-*/;
 """
 
@@ -118,7 +168,7 @@ METHOD_TEMPLATE = """
 	}-*/;
 """
 
-CONSTRUCTOR_TEMPLATE = """
+FACTORY_TEMPLATE = """
 	public static native %(return)s %(name)s () 
 	/*-{
 		return %(type)s.%(name)s();
@@ -177,7 +227,22 @@ def mapTypes(s, withConsts = False):
 	arrayMatch = re.match("^Array<(.+)>$", s)
 	if arrayMatch:
 		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
-	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", "EncodeStringSpec"]:
+	dictionaryMatch = re.match("^Dictionary<(.+)>$", s)
+	if dictionaryMatch:
+		return mapTypes(dictionaryMatch.group(1), withConsts)
+	callbackMatch = re.match("^(?:Callback|Object)<(.+)>$", s)
+	if callbackMatch:
+		innerType = mapTypes(callbackMatch.group(1), withConsts)
+		if innerType == 'Object':
+			innerType = "JavaScriptObject" 
+		return "EventCallback<%s>" % innerType
+	eventMatch = re.match("^Event<(.+)\.([^.]+)>$", s)
+	if eventMatch:
+		innerType, eventName = eventMatch.groups()
+		innerType = mapTypes(innerType, withConsts)
+		return "%s.%sEvent" % (innerType, capitalFirst(eventName))
+	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", 
+			"EncodeStringSpec", "MediaItemType", "MediaQueryInfoType", "MediaQueryType"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):
 		path = s.split(".")
@@ -185,7 +250,9 @@ def mapTypes(s, withConsts = False):
 			# Constant
 			return "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
 		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
-	print "==>", s
+	if s.endswith("CallbackArgs") or s in ['EncodeNumberSpec', 'DecodeStringSpec']:
+		return "org.urish.gwtit.titanium." + s
+	print "!!!WARN!!! unknown type detected: ", s
 	return "Object"
 
 def findType(name, types):
@@ -224,8 +291,9 @@ def generateProperties(type, isSingleton, types):
 		getterTemplate = GETTER_TEMPLATE
 		setterTemplate = SETTER_TEMPLATE		
 	if 'properties' in type:
+		allReadOnly = 'readonly' in type and type['readonly']
 		for property in type['properties']:
-			readonly = property['description'] and property['description'].lower().strip().startswith("readonly")
+			readonly = allReadOnly or (property['description'] and property['description'].lower().strip().startswith("readonly"))
 			docString = generatePropertyDoc(property)
 			getter = getterTemplate
 			setter = setterTemplate if not readonly else ""
@@ -256,10 +324,14 @@ def generateProperties(type, isSingleton, types):
 						'docString': docString,
 					}
 				else:
+					mappedType = mapTypes(property['type'])
+					if mappedType.startswith("EventCallback<"):
+						getter = STATIC_CALLBACK_GETTER_TEMPLATE if isSingleton else CALLBACK_GETTER_TEMPLATE
+						setter = STATIC_CALLBACK_SETTER_TEMPLATE if isSingleton else CALLBACK_SETTER_TEMPLATE
 					result += (getter + setter) % {
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
-						'type': mapTypes(property['type']),
+						'type': mappedType,
 						'module': type['name'],
 						'docString': docString,
 					}
@@ -274,7 +346,7 @@ def generateProperties(type, isSingleton, types):
 
 def generatePropertyDoc(property):
 	parts = []
-	if property['description']:
+	if 'description' in property and property['description']:
 		parts.append("@return " + parseDocString(property['description']).capitalize())
 	if 'platforms' in property:
 		parts += ["@platforms " + ", ".join(property['platforms'])]
@@ -309,6 +381,14 @@ def generateClassDoc(typeInfo):
 		parts += ["@since " + typeInfo['since']]
 	return "\n * ".join(parts)
 
+def generateConstructors(typeInfo):
+	if 'needsConstructor' in typeInfo and typeInfo['needsConstructor']:
+		return CONSTRUCTOR_TEMPLATE % {
+			'name': typeInfo['name'].split(".")[-1],
+			'return': mapTypes(typeInfo['name'])				
+		}
+	return ""
+
 def generateFactories(typeInfo, types):
 	typeName = typeInfo['name']
 	result = ""
@@ -317,12 +397,13 @@ def generateFactories(typeInfo, types):
 			len(candidate['name'].split(".")) == len(typeName.split(".")) + 1):
 			factoryName = 'create' + candidate['name'].split(".")[-1]
 			duplicate = False
+			readonly = 'readonly' in candidate and candidate['readonly'] 
 			if 'methods' in typeInfo:
 				for method in typeInfo['methods']:
 					if method['name'] == factoryName:
 						duplicate = True
-			if not duplicate:
-				result += CONSTRUCTOR_TEMPLATE % {
+			if not duplicate and not readonly:
+				result += FACTORY_TEMPLATE % {
 					'type': typeName,
 					'name': factoryName,
 					'return': mapTypes(candidate['name']),
@@ -337,8 +418,12 @@ def methodPermutations(method):
 			if 'optional' in parameter and parameter['optional']:
 				yield (copy(params), copy(paramNames))
 			name = mapIdentifiers(parameter['name'])
-			paramNames.append(name)
-			params.append("%s %s" % (mapTypes(parameter['type']),name))
+			paramType = mapTypes(parameter['type'])
+			paramGetter = name
+			if paramType.startswith("EventCallback<"):
+				paramGetter = "function(e) { %s.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }" % name
+			paramNames.append(paramGetter)
+			params.append("%s %s" % (paramType, name))
 	yield (params, paramNames)
 
 def generateMethods(type, isSingleton, types):
@@ -402,9 +487,10 @@ def generateEvents(typeInfo, isSingleton, types):
 			for propertyInfo in event['properties']:
 				if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
 					continue
+				eventType = propertyInfo['type'] if 'type' in propertyInfo else "Object"
 				eventProperties += GETTER_TEMPLATE % {
 					'docString': propertyInfo['description'],
-					'type': "Object",
+					'type': mapTypes(eventType),
 					'name': propertyInfo['name'],
 					'nameCapital': capitalFirst(propertyInfo['name']),
 				}
@@ -438,6 +524,7 @@ def generateClass(projectRoot, type, types):
 		'parent': parentClass,
 		'docString': generateClassDoc(type),
 		'properties': generateProperties(type, singleton, types),
+		'constructors': generateConstructors(type),
 		'factories': generateFactories(type, types),
 		'methods': generateMethods(type, singleton, types) if ('methods' in type) else '',
 		'events': generateEvents(type, singleton, types),
@@ -467,7 +554,7 @@ def processOverrides(typeInfo, overrides):
 			match = re.match(r"^([^[]+)\[([^=]+)='([^']+)'\]$", selector)
 			if match:
 				realKey, searchKey, searchValue = match.groups()
-				for subItem in typeInfo[realKey]:
+				for subItem in subject[realKey]:
 					if subItem[searchKey] == searchValue:
 						subject = subItem
 			else:
@@ -482,6 +569,10 @@ def processDir(inputDir, projectDir):
 				types.extend(getTypes(os.path.join(root, name)))
 	overrides = json.load(file("overrides.json", "r"))
 	classes = []
+	for typeName, typeInfo in overrides.items():
+		if typeName[0] == "+":
+			typeInfo['name'] = typeName[1:]
+			types.append(typeInfo)
 	for typeInfo in types:
 		if typeInfo['name'] in overrides:
 			processOverrides(typeInfo, overrides[typeInfo['name']])

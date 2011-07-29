@@ -233,7 +233,8 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *            Properties for the new alert, corresponding to properties of
 	 *            {@link org.urish.gwtit.titanium.android.calendar.Alert}.
 	 */
-	public final native org.urish.gwtit.titanium.android.calendar.Alert createAlert(Object data)
+	public final native org.urish.gwtit.titanium.android.calendar.Alert createAlert(
+			org.urish.gwtit.titanium.android.calendar.Alert data)
 	/*-{
 		return this.createAlert(data);
 	}-*/;
@@ -248,7 +249,8 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	 *            Properties for the new reminder, corresponding to properties
 	 *            of {@link org.urish.gwtit.titanium.android.calendar.Reminder}.
 	 */
-	public final native org.urish.gwtit.titanium.android.calendar.Reminder createReminder(Object data)
+	public final native org.urish.gwtit.titanium.android.calendar.Reminder createReminder(
+			org.urish.gwtit.titanium.android.calendar.Reminder data)
 	/*-{
 		return this.createReminder(data);
 	}-*/;

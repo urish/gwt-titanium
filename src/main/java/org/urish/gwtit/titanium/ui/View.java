@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The view is an empty drawing surface or container. the view is created by the
  * method {@link org.urish.gwtit.titanium.ui.createview}.
@@ -537,9 +539,9 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param callback
 	 *            function to be invoked upon completion of the animation
 	 */
-	public final native void animate(Object obj, Object callback)
+	public final native void animate(Object obj, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return this.animate(obj, callback);
+		return this.animate(obj, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -590,9 +592,9 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *            method will be performed asynchronously. if null, it will be
 	 *            performed immediately
 	 */
-	public final native Object toImage(Object f)
+	public final native Object toImage(EventCallback<JavaScriptObject> f)
 	/*-{
-		return this.toImage(f);
+		return this.toImage(function(e) { f.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {

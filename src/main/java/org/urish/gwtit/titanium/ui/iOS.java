@@ -30,6 +30,11 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 	protected iOS() {
 	}
 
+	public static native org.urish.gwtit.titanium.ui.ios._3DMatrix create_3DMatrix()
+	/*-{
+		return Titanium.UI.iOS.create_3DMatrix();
+	}-*/;
+
 	public static native org.urish.gwtit.titanium.ui.ios.AdView createAdView()
 	/*-{
 		return Titanium.UI.iOS.createAdView();

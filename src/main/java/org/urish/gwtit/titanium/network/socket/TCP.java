@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.network.socket;
 
+import org.urish.gwtit.client.EventCallback;
 
 /**
  * Tcp socket that implements the `titanium.iostream` interface. created by
@@ -91,40 +92,46 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The callback to be fired after the socket enters the "connected"
 	 *         state. only invoked following a successful connect() call
 	 */
-	public final native Object getConnected()
+	public final native EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> getConnected()
 	/*-{
-		return this.connected;
+		return this.connected._javaObj;
 	}-*/;
 
-	public final native void setConnected(Object value)
+	public final native void setConnected(EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> value)
 	/*-{
-		this.connected = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.connected = callback;
 	}-*/;
 
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public final native Object getError()
+	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
-		return this.error;
+		return this.error._javaObj;
 	}-*/;
 
-	public final native void setError(Object value)
+	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
-		this.error = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.error = callback;
 	}-*/;
 
 	/**
 	 * @return The callback to be fired when a listener accepts a connection
 	 */
-	public final native Object getAccepted()
+	public final native EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> getAccepted()
 	/*-{
-		return this.accepted;
+		return this.accepted._javaObj;
 	}-*/;
 
-	public final native void setAccepted(Object value)
+	public final native void setAccepted(EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> value)
 	/*-{
-		this.accepted = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.accepted = callback;
 	}-*/;
 
 	/**

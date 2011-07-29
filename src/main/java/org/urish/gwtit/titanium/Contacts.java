@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The top level contacts module. the contacts module is used accessing the
@@ -211,10 +214,11 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 *            A list of field names to show when selecting properties,
 	 *            default is to show all available
 	 */
-	public static native void showContacts(Object cancel, Object selectedPerson, Object selectedProperty,
+	public static native void showContacts(EventCallback<JavaScriptObject> cancel,
+			EventCallback<JavaScriptObject> selectedPerson, EventCallback<JavaScriptObject> selectedProperty,
 			boolean animated, String[] fields)
 	/*-{
-		return Titanium.Contacts.showContacts(cancel, selectedPerson, selectedProperty, animated, fields);
+		return Titanium.Contacts.showContacts(function(e) { cancel.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }, function(e) { selectedPerson.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }, function(e) { selectedProperty.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }, animated, fields);
 	}-*/;
 
 	/**
@@ -225,9 +229,9 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Contacts.addEventListener(name, callback);
+		return Titanium.Contacts.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -238,9 +242,9 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Contacts.removeEventListener(name, callbac);
+		return Titanium.Contacts.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

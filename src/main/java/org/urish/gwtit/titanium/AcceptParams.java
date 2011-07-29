@@ -18,6 +18,8 @@
 
 package org.urish.gwtit.titanium;
 
+import org.urish.gwtit.client.EventCallback;
+
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
@@ -28,6 +30,14 @@ import com.google.gwt.core.client.JavaScriptObject;
 public class AcceptParams extends JavaScriptObject {
 	protected AcceptParams() {
 	}
+
+	/**
+	 * Creates a new, empty instance of AcceptParams
+	 */
+	public static final native AcceptParams createAcceptParams()
+	/*-{
+		return {};
+	}-*/;
 
 	/**
 	 * @return The timeout for connect() and all i/o write() operations. cannot
@@ -46,14 +56,16 @@ public class AcceptParams extends JavaScriptObject {
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public final native Object getError()
+	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
-		return this.error;
+		return this.error._javaObj;
 	}-*/;
 
-	public final native void setError(Object value)
+	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
-		this.error = value;
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		callback._javaObj = value;
+		this.error = callback;
 	}-*/;
 
 }

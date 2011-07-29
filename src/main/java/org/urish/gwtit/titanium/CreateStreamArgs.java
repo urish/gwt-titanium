@@ -29,6 +29,14 @@ public class CreateStreamArgs extends JavaScriptObject {
 	protected CreateStreamArgs() {
 	}
 
+	/**
+	 * Creates a new, empty instance of CreateStreamArgs
+	 */
+	public static final native CreateStreamArgs createCreateStreamArgs()
+	/*-{
+		return {};
+	}-*/;
+
 	public final native void setSource(org.urish.gwtit.titanium.Blob value)
 	/*-{
 		this.source = value;

@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The top level media module. the media module is used accessing the device's
  * media related functionality such as playing audio or recording video.
@@ -302,6 +304,62 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	public static final float MUSIC_MEDIA_TYPE_PODCAST = value_MUSIC_MEDIA_TYPE_PODCAST();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_TITLE()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_TITLE;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_TITLE = value_MUSIC_MEDIA_GROUP_TITLE();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_ALBUM()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_ALBUM;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_ALBUM = value_MUSIC_MEDIA_GROUP_ALBUM();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_ARTIST()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_ARTIST;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_ARTIST = value_MUSIC_MEDIA_GROUP_ARTIST();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_ALBUM_ARTIST()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_ALBUM_ARTIST;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_ALBUM_ARTIST = value_MUSIC_MEDIA_GROUP_ALBUM_ARTIST();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_COMPOSER()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_COMPOSER;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_COMPOSER = value_MUSIC_MEDIA_GROUP_COMPOSER();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_GENRE()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_GENRE;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_GENRE = value_MUSIC_MEDIA_GROUP_GENRE();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_PLAYLIST()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_PLAYLIST;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_PLAYLIST = value_MUSIC_MEDIA_GROUP_PLAYLIST();
+
+	private static native final float value_MUSIC_MEDIA_GROUP_PODCAST_TITLE()
+	/*-{
+		return Titanium.Media.MUSIC_MEDIA_GROUP_PODCAST_TITLE;
+	}-*/;
+
+	public static final float MUSIC_MEDIA_GROUP_PODCAST_TITLE = value_MUSIC_MEDIA_GROUP_PODCAST_TITLE();
 
 	private static native final float value_MUSIC_PLAYER_REPEAT_ALL()
 	/*-{
@@ -1031,6 +1089,20 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
+	 * Run a search for music library items matching the specified search
+	 * predicates.
+	 * 
+	 * @platforms iphone, ipad
+	 * @param query
+	 *            The query object to extract information from.
+	 */
+	public static native org.urish.gwtit.titanium.MediaItemType[] queryMusicLibrary(
+			org.urish.gwtit.titanium.MediaQueryType query)
+	/*-{
+		return Titanium.Media.queryMusicLibrary(query);
+	}-*/;
+
+	/**
 	 * Start the monitoring of microphone sound level
 	 */
 	public static native void startMicrophoneMonitor()
@@ -1064,9 +1136,10 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 *            function that will be called upon capture. the event property
 	 *            `media` will contain an image Blob object of the screenshot
 	 */
-	public static native void takeScreenshot(Object callback)
+	public static native void takeScreenshot(
+			EventCallback<org.urish.gwtit.titanium.media.ScreenshotCallbackParams> callback)
 	/*-{
-		return Titanium.Media.takeScreenshot(callback);
+		return Titanium.Media.takeScreenshot(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -1085,9 +1158,9 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Media.addEventListener(name, callback);
+		return Titanium.Media.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -1098,9 +1171,9 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Media.removeEventListener(name, callbac);
+		return Titanium.Media.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

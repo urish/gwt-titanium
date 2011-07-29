@@ -1,4 +1,141 @@
 {
+	"AcceptParams": {
+		"needsConstructor": true
+	},
+	"CreateBufferArgs": {
+		"needsConstructor": true
+	},
+	"CreateStreamArgs": {
+		"needsConstructor": true
+	},
+	"DecodeNumberSpec": {
+		"needsConstructor": true
+	},
+	"EncodeNumberSpec": {
+		"needsConstructor": true
+	},
+	"Titanium.Facebook": {
+		"methods[name='dialog'] parameters[name='callback'] type": "Callback<Titanium.Facebook.DialogCallbackParams>",
+		"methods[name='request'] parameters[name='callback'] type": "Callback<Titanium.Facebook.RequestCallbackParams>",
+		"methods[name='requestWithGraphPath'] parameters[name='callback'] type": "Callback<Titanium.Facebook.GraphRequestCallbackParams>"
+	},
+	"+Titanium.Facebook.DialogCallbackParams": {
+		"readonly": true,
+		"description": "A callback for when dialog is completed/cancelled",
+		"properties": [
+			{"name": "success", "type": "Boolean"},
+			{"name": "error", "type": "String"},
+			{"name": "cancelled", "type": "Boolean"},
+			{"name": "result", "type": "String", "description": "the data returned by Facebook"}
+		]
+	},
+	"+Titanium.Facebook.GraphRequestCallbackParams": {
+		"readonly": true,
+		"description": "A callback for when dialog is completed/cancelled",
+		"properties": [
+			{"name": "success", "type": "Boolean"},
+			{"name": "error", "type": "String"},
+			{"name": "path", "type": "String", "description": "the graph call path you specified"},
+			{"name": "result", "type": "String", "description": "the data returned by Facebook"}
+		]
+	},
+	"+Titanium.Facebook.RequestCallbackParams": {
+		"readonly": true,
+		"description": "A callback for when dialog is completed/cancelled",
+		"properties": [
+			{"name": "success", "type": "Boolean"},
+			{"name": "error", "type": "String"},
+			{"name": "method", "type": "String", "description": "the REST method call you specified"},
+			{"name": "result", "type": "String", "description": "the data returned by Facebook"}
+		]
+	},
+	"Titanium.Geolocation": {
+		"methods[name='forwardGeocoder'] parameters[name='callback'] type": "Callback<Titanium.Geolocation.Place>",
+		"methods[name='getCurrentHeading'] parameters[name='callback'] type": "Callback<Event<Titanium.Geolocation.heading>>",
+		"methods[name='getCurrentPosition'] parameters[name='callback'] type": "Callback<Event<Titanium.Geolocation.location>>",
+		"methods[name='reverseGeocoder'] parameters[name='callback'] type": "Callback<Titanium.Geolocation.ReverseGeocoderResult>",
+		"events[name='heading'] properties[name='code'] type": "Number",	
+		"events[name='heading'] properties[name='error'] type": "String",	
+		"events[name='heading'] properties[name='success'] type": "Boolean",	
+		"events[name='heading'] properties[name='heading'] type": "Titanium.Geolocation.HeadingInfo",	
+		"events[name='location'] properties[name='code'] type": "Number",	
+		"events[name='location'] properties[name='success'] type": "Boolean",	
+		"events[name='location'] properties[name='provider'] type": "Titanium.Geolocation.LocationProviderInfo",	
+		"events[name='location'] properties[name='coords'] type": "Titanium.Geolocation.Coords",	
+		"events[name='location'] properties[name='error'] type": "String"
+	},
+	"+Titanium.Geolocation.Coords": {
+		"readonly": true,
+		"description": "A callback for when dialog is completed/cancelled",
+		"properties": [
+			{"name": "latitude", "type": "Number"},
+			{"name": "longitude", "type": "Number"},
+			{"name": "altitude", "type": "Number"},
+			{"name": "accuracy", "type": "Number"},
+			{"name": "altitudeAccuracy", "type": "Number"},
+			{"name": "heading", "type": "Number"},
+			{"name": "speed", "type": "Number"},
+			{"name": "timestamp", "type": "Date"}
+		]
+	},
+	"+Titanium.Geolocation.HeadingInfo": {
+		"readonly": true,
+		"description": "A callback for when dialog is completed/cancelled",
+		"properties": [
+			{"name": "magneticHeading", "type": "Object"},
+			{"name": "trueHeading", "type": "Object"},
+			{"name": "accuracy", "type": "Number"},
+			{"name": "x", "type": "Number"},
+			{"name": "y", "type": "Number"},
+			{"name": "z", "type": "Number"},
+			{"name": "timestamp", "type": "Date"}
+		]
+	},
+	"+Titanium.Geolocation.LocationProviderInfo": {
+		"readonly": true,
+		"description": "A callback for when dialog is completed/cancelled",
+		"properties": [
+			{"name": "name", "type": "String"},
+			{"name": "accuracy", "type": "Number"},
+			{"name": "power", "type": "Object"},
+			{"name": "provider", "type": "Object"}
+		]
+	},
+	"+Titanium.Geolocation.Place": {
+		"readonly": true,
+		"description": "",
+		"properties": [
+			{"name": "street", "type": "String"},
+			{"name": "street1", "type": "String"},
+			{"name": "city", "type": "String"},
+			{"name": "region1", "type": "String"},
+			{"name": "region2", "type": "String"},
+			{"name": "postalCode", "type": "String"},
+			{"name": "country", "type": "String"},
+			{"name": "countryCode", "type": "String"},
+			{"name": "longitude", "type": "Number"},
+			{"name": "latitude", "type": "Number"},
+			{"name": "displayAddress", "type": "String"},
+			{"name": "address", "type": "String"}
+		]
+	},
+	"+Titanium.Geolocation.ReverseGeocoderResult": {
+		"readonly": true,
+		"description": "Reverse Geocoder result",
+		"properties": [
+			{"name": "places", "type": "Array<Titanium.Geolocation.Place>"}
+		]
+	},
+	"Titanium.Media": {
+		"methods[name='takeScreenshot'] parameters[name='callback'] type": "Callback<Titanium.Media.ScreenshotCallbackParams>"
+	},
+	"+Titanium.Media.ScreenshotCallbackParams": {
+		"readonly": true,
+		"description": "Contains screenshot data",
+		"properties": [
+			{"name": "media", "type": "Titanium.Blob"}
+		]
+	},
 	"Titanium.UI.ActivityIndicator": {
 		"properties[name='font'] type": "Font"
 	},
