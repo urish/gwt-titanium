@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The top level network module. the network module is used accessing networking
  * related functionality, including
@@ -249,9 +251,9 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke upon network connectivity changes
 	 */
-	public static native void addConnectivityListener(Object callback)
+	public static native void addConnectivityListener(EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Network.addConnectivityListener(callback);
+		return Titanium.Network.addConnectivityListener(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -416,9 +418,9 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to remove
 	 */
-	public static native void removeConnectivityListener(Object callback)
+	public static native void removeConnectivityListener(EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Network.removeConnectivityListener(callback);
+		return Titanium.Network.removeConnectivityListener(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -429,9 +431,9 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Network.addEventListener(name, callback);
+		return Titanium.Network.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -442,9 +444,9 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Network.removeEventListener(name, callbac);
+		return Titanium.Network.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

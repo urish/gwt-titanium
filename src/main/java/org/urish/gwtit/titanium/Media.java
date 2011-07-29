@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The top level media module. the media module is used accessing the device's
  * media related functionality such as playing audio or recording video.
@@ -1064,9 +1066,10 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 *            function that will be called upon capture. the event property
 	 *            `media` will contain an image Blob object of the screenshot
 	 */
-	public static native void takeScreenshot(Object callback)
+	public static native void takeScreenshot(
+			EventCallback<org.urish.gwtit.titanium.media.ScreenshotCallbackParams> callback)
 	/*-{
-		return Titanium.Media.takeScreenshot(callback);
+		return Titanium.Media.takeScreenshot(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -1085,9 +1088,9 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Media.addEventListener(name, callback);
+		return Titanium.Media.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -1098,9 +1101,9 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Media.removeEventListener(name, callbac);
+		return Titanium.Media.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

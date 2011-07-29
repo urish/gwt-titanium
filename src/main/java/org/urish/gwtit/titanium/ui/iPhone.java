@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The iphone/ipad specific ui capabilities. all properties, methods and events
@@ -244,9 +247,9 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.UI.iPhone.addEventListener(name, callback);
+		return Titanium.UI.iPhone.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -257,9 +260,9 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.UI.iPhone.removeEventListener(name, callbac);
+		return Titanium.UI.iPhone.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

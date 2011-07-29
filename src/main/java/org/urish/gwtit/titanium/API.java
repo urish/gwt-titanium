@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The top level api module. the api module is mainly used for logging.
@@ -93,9 +96,9 @@ public class API extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.API.addEventListener(name, callback);
+		return Titanium.API.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -106,9 +109,9 @@ public class API extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.API.removeEventListener(name, callbac);
+		return Titanium.API.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

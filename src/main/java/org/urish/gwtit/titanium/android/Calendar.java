@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium.android;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The android.calendar module provides proxies and methods for accessing the
@@ -221,9 +224,9 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Android.Calendar.addEventListener(name, callback);
+		return Titanium.Android.Calendar.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -234,9 +237,9 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Android.Calendar.removeEventListener(name, callbac);
+		return Titanium.Android.Calendar.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

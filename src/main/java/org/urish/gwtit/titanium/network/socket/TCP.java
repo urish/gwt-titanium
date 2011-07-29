@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium.network.socket;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Tcp socket that implements the `titanium.iostream` interface. created by
@@ -91,12 +94,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * @return The callback to be fired after the socket enters the "connected"
 	 *         state. only invoked following a successful connect() call
 	 */
-	public final native Object getConnected()
+	public final native EventCallback<JavaScriptObject> getConnected()
 	/*-{
 		return this.connected;
 	}-*/;
 
-	public final native void setConnected(Object value)
+	public final native void setConnected(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.connected = value;
 	}-*/;
@@ -104,12 +107,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The callback to be fired after the socket enters the error state
 	 */
-	public final native Object getError()
+	public final native EventCallback<JavaScriptObject> getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public final native void setError(Object value)
+	public final native void setError(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.error = value;
 	}-*/;
@@ -117,12 +120,12 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The callback to be fired when a listener accepts a connection
 	 */
-	public final native Object getAccepted()
+	public final native EventCallback<JavaScriptObject> getAccepted()
 	/*-{
 		return this.accepted;
 	}-*/;
 
-	public final native void setAccepted(Object value)
+	public final native void setAccepted(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.accepted = value;
 	}-*/;

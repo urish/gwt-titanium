@@ -16,46 +16,47 @@
 
 /* Automatically generated code, don't edit ! */
 
-package org.urish.gwtit.titanium;
-
-import org.urish.gwtit.client.EventCallback;
+package org.urish.gwtit.titanium.geolocation;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Parameters that contain callbacks to be set on next accepted socket.
- * 
- * @since 1.7
+ * A callback for when dialog is completed/cancelled
  */
-public class AcceptParams extends JavaScriptObject {
-	protected AcceptParams() {
+public class LocationProviderInfo extends JavaScriptObject {
+	protected LocationProviderInfo() {
 	}
 
 	/**
-	 * @return The timeout for connect() and all i/o write() operations. cannot
-	 *         be modified when not in the initialized state
+	 * 
 	 */
-	public final native float getTimeout()
+	public final native String getName()
 	/*-{
-		return this.timeout;
-	}-*/;
-
-	public final native void setTimeout(float value)
-	/*-{
-		this.timeout = value;
+		return this.name;
 	}-*/;
 
 	/**
-	 * @return The callback to be fired after the socket enters the error state
+	 * 
 	 */
-	public final native EventCallback<JavaScriptObject> getError()
+	public final native float getAccuracy()
 	/*-{
-		return this.error;
+		return this.accuracy;
 	}-*/;
 
-	public final native void setError(EventCallback<JavaScriptObject> value)
+	/**
+	 * 
+	 */
+	public final native Object getPower()
 	/*-{
-		this.error = value;
+		return this.power;
+	}-*/;
+
+	/**
+	 * 
+	 */
+	public final native Object getProvider()
+	/*-{
+		return this.provider;
 	}-*/;
 
 }

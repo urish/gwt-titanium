@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.android;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The titanium binding of an [android
  * activity](http://developer.android.com/reference/android/app/activity.html)
@@ -52,12 +54,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *         menu button. see the menu examples in
 	 *         {@link org.urish.gwtit.titanium.android.menu}
 	 */
-	public final native Object getOnCreateOptionsMenu()
+	public final native EventCallback<JavaScriptObject> getOnCreateOptionsMenu()
 	/*-{
 		return this.onCreateOptionsMenu;
 	}-*/;
 
-	public final native void setOnCreateOptionsMenu(Object value)
+	public final native void setOnCreateOptionsMenu(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.onCreateOptionsMenu = value;
 	}-*/;
@@ -70,12 +72,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *         button. see the menu examples in
 	 *         {@link org.urish.gwtit.titanium.android.menu}
 	 */
-	public final native Object getOnPrepareOptionsMenu()
+	public final native EventCallback<JavaScriptObject> getOnPrepareOptionsMenu()
 	/*-{
 		return this.onPrepareOptionsMenu;
 	}-*/;
 
-	public final native void setOnPrepareOptionsMenu(Object value)
+	public final native void setOnPrepareOptionsMenu(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.onPrepareOptionsMenu = value;
 	}-*/;
@@ -176,9 +178,10 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 *            it's result. See example in
 	 *            {@link org.urish.gwtit.titanium.android.Activity}.
 	 */
-	public final native void startActivityForResult(org.urish.gwtit.titanium.android.Intent intent, Object callback)
+	public final native void startActivityForResult(org.urish.gwtit.titanium.android.Intent intent,
+			EventCallback<JavaScriptObject> callback)
 	/*-{
-		return this.startActivityForResult(intent, callback);
+		return this.startActivityForResult(intent, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	public final static class CreateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {

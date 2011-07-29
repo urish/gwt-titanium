@@ -177,6 +177,17 @@ def mapTypes(s, withConsts = False):
 	arrayMatch = re.match("^Array<(.+)>$", s)
 	if arrayMatch:
 		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
+	callbackMatch = re.match("^Callback<(.+)>$", s)
+	if callbackMatch:
+		innerType = mapTypes(callbackMatch.group(1), withConsts)
+		if innerType == 'Object':
+			innerType = "JavaScriptObject" 
+		return "EventCallback<%s>" % innerType
+	eventMatch = re.match("^Event<(.+)\.([^.]+)>$", s)
+	if eventMatch:
+		innerType, eventName = eventMatch.groups()
+		innerType = mapTypes(innerType, withConsts)
+		return "%s.%sEvent" % (innerType, capitalFirst(eventName))
 	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", "EncodeStringSpec"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):
@@ -224,8 +235,9 @@ def generateProperties(type, isSingleton, types):
 		getterTemplate = GETTER_TEMPLATE
 		setterTemplate = SETTER_TEMPLATE		
 	if 'properties' in type:
+		allReadOnly = 'readonly' in type and type['readonly']
 		for property in type['properties']:
-			readonly = property['description'] and property['description'].lower().strip().startswith("readonly")
+			readonly = allReadOnly or (property['description'] and property['description'].lower().strip().startswith("readonly"))
 			docString = generatePropertyDoc(property)
 			getter = getterTemplate
 			setter = setterTemplate if not readonly else ""
@@ -274,7 +286,7 @@ def generateProperties(type, isSingleton, types):
 
 def generatePropertyDoc(property):
 	parts = []
-	if property['description']:
+	if 'description' in property and property['description']:
 		parts.append("@return " + parseDocString(property['description']).capitalize())
 	if 'platforms' in property:
 		parts += ["@platforms " + ", ".join(property['platforms'])]
@@ -317,11 +329,12 @@ def generateFactories(typeInfo, types):
 			len(candidate['name'].split(".")) == len(typeName.split(".")) + 1):
 			factoryName = 'create' + candidate['name'].split(".")[-1]
 			duplicate = False
+			readonly = 'readonly' in candidate and candidate['readonly'] 
 			if 'methods' in typeInfo:
 				for method in typeInfo['methods']:
 					if method['name'] == factoryName:
 						duplicate = True
-			if not duplicate:
+			if not duplicate and not readonly:
 				result += CONSTRUCTOR_TEMPLATE % {
 					'type': typeName,
 					'name': factoryName,
@@ -337,8 +350,12 @@ def methodPermutations(method):
 			if 'optional' in parameter and parameter['optional']:
 				yield (copy(params), copy(paramNames))
 			name = mapIdentifiers(parameter['name'])
-			paramNames.append(name)
-			params.append("%s %s" % (mapTypes(parameter['type']),name))
+			paramType = mapTypes(parameter['type'])
+			paramGetter = name
+			if paramType.startswith("EventCallback<"):
+				paramGetter = "function(e) { %s.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); }" % name
+			paramNames.append(paramGetter)
+			params.append("%s %s" % (paramType, name))
 	yield (params, paramNames)
 
 def generateMethods(type, isSingleton, types):
@@ -402,9 +419,10 @@ def generateEvents(typeInfo, isSingleton, types):
 			for propertyInfo in event['properties']:
 				if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
 					continue
+				eventType = propertyInfo['type'] if 'type' in propertyInfo else "Object"
 				eventProperties += GETTER_TEMPLATE % {
 					'docString': propertyInfo['description'],
-					'type': "Object",
+					'type': mapTypes(eventType),
 					'name': propertyInfo['name'],
 					'nameCapital': capitalFirst(propertyInfo['name']),
 				}
@@ -467,7 +485,7 @@ def processOverrides(typeInfo, overrides):
 			match = re.match(r"^([^[]+)\[([^=]+)='([^']+)'\]$", selector)
 			if match:
 				realKey, searchKey, searchValue = match.groups()
-				for subItem in typeInfo[realKey]:
+				for subItem in subject[realKey]:
 					if subItem[searchKey] == searchValue:
 						subject = subItem
 			else:
@@ -482,6 +500,10 @@ def processDir(inputDir, projectDir):
 				types.extend(getTypes(os.path.join(root, name)))
 	overrides = json.load(file("overrides.json", "r"))
 	classes = []
+	for typeName, typeInfo in overrides.items():
+		if typeName[0] == "+":
+			typeInfo['name'] = typeName[1:]
+			types.append(typeInfo)
 	for typeInfo in types:
 		if typeInfo['name'] in overrides:
 			processOverrides(typeInfo, overrides[typeInfo['name']])

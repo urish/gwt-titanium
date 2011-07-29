@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A module for converting numbers and strings to and from a
@@ -204,9 +207,9 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Codec.addEventListener(name, callback);
+		return Titanium.Codec.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -217,9 +220,9 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Codec.removeEventListener(name, callbac);
+		return Titanium.Codec.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

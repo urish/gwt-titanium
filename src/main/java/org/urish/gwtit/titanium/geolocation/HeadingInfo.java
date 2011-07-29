@@ -16,46 +16,71 @@
 
 /* Automatically generated code, don't edit ! */
 
-package org.urish.gwtit.titanium;
-
-import org.urish.gwtit.client.EventCallback;
+package org.urish.gwtit.titanium.geolocation;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Parameters that contain callbacks to be set on next accepted socket.
- * 
- * @since 1.7
+ * A callback for when dialog is completed/cancelled
  */
-public class AcceptParams extends JavaScriptObject {
-	protected AcceptParams() {
+public class HeadingInfo extends JavaScriptObject {
+	protected HeadingInfo() {
 	}
 
 	/**
-	 * @return The timeout for connect() and all i/o write() operations. cannot
-	 *         be modified when not in the initialized state
+	 * 
 	 */
-	public final native float getTimeout()
+	public final native Object getMagneticHeading()
 	/*-{
-		return this.timeout;
-	}-*/;
-
-	public final native void setTimeout(float value)
-	/*-{
-		this.timeout = value;
+		return this.magneticHeading;
 	}-*/;
 
 	/**
-	 * @return The callback to be fired after the socket enters the error state
+	 * 
 	 */
-	public final native EventCallback<JavaScriptObject> getError()
+	public final native Object getTrueHeading()
 	/*-{
-		return this.error;
+		return this.trueHeading;
 	}-*/;
 
-	public final native void setError(EventCallback<JavaScriptObject> value)
+	/**
+	 * 
+	 */
+	public final native float getAccuracy()
 	/*-{
-		this.error = value;
+		return this.accuracy;
+	}-*/;
+
+	/**
+	 * 
+	 */
+	public final native float getX()
+	/*-{
+		return this.x;
+	}-*/;
+
+	/**
+	 * 
+	 */
+	public final native float getY()
+	/*-{
+		return this.y;
+	}-*/;
+
+	/**
+	 * 
+	 */
+	public final native float getZ()
+	/*-{
+		return this.z;
+	}-*/;
+
+	/**
+	 * 
+	 */
+	public final native java.util.Date getTimestamp()
+	/*-{
+		return this.timestamp;
 	}-*/;
 
 }

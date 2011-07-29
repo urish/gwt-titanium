@@ -18,6 +18,9 @@
 
 package org.urish.gwtit.titanium.network;
 
+import org.urish.gwtit.client.EventCallback;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The httpclient instance returned from
@@ -124,12 +127,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *         received. the `progress` property of the event will contain a
 	 *         value from 0.0-1.0 with the progress.
 	 */
-	public final native Object getOndatastream()
+	public final native EventCallback<JavaScriptObject> getOndatastream()
 	/*-{
 		return this.ondatastream;
 	}-*/;
 
-	public final native void setOndatastream(Object value)
+	public final native void setOndatastream(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.ondatastream = value;
 	}-*/;
@@ -138,12 +141,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return Set this to a function before calling open to cause the function
 	 *         to be called upon a error response
 	 */
-	public final native Object getOnerror()
+	public final native EventCallback<JavaScriptObject> getOnerror()
 	/*-{
 		return this.onerror;
 	}-*/;
 
-	public final native void setOnerror(Object value)
+	public final native void setOnerror(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.onerror = value;
 	}-*/;
@@ -152,12 +155,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return Set this to a function before calling open to cause the function
 	 *         to be called upon a successful response
 	 */
-	public final native Object getOnload()
+	public final native EventCallback<JavaScriptObject> getOnload()
 	/*-{
 		return this.onload;
 	}-*/;
 
-	public final native void setOnload(Object value)
+	public final native void setOnload(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.onload = value;
 	}-*/;
@@ -166,12 +169,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 * @return Set this to a function before calling open to cause the function
 	 *         to be called for each readystate change
 	 */
-	public final native Object getOnreadystatechange()
+	public final native EventCallback<JavaScriptObject> getOnreadystatechange()
 	/*-{
 		return this.onreadystatechange;
 	}-*/;
 
-	public final native void setOnreadystatechange(Object value)
+	public final native void setOnreadystatechange(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.onreadystatechange = value;
 	}-*/;
@@ -182,12 +185,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *         transmitted. the `progress` property of the event will contain a
 	 *         value from 0.0-1.0 with the progress.
 	 */
-	public final native Object getOnsendstream()
+	public final native EventCallback<JavaScriptObject> getOnsendstream()
 	/*-{
 		return this.onsendstream;
 	}-*/;
 
-	public final native void setOnsendstream(Object value)
+	public final native void setOnsendstream(EventCallback<JavaScriptObject> value)
 	/*-{
 		this.onsendstream = value;
 	}-*/;

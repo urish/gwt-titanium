@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The top level geolocation module. the geolocation module is used for
  * accessing device location based information.
@@ -271,9 +273,10 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *            contains the properties described as the `place` dictionary in
 	 *            {@link org.urish.gwtit.titanium.geolocation.reverseGeocoder}.
 	 */
-	public static native void forwardGeocoder(String address, Object callback)
+	public static native void forwardGeocoder(String address,
+			EventCallback<org.urish.gwtit.titanium.geolocation.Place> callback)
 	/*-{
-		return Titanium.Geolocation.forwardGeocoder(address, callback);
+		return Titanium.Geolocation.forwardGeocoder(address, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -284,9 +287,10 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *            current heading. See heading event in
 	 *            {@link org.urish.gwtit.titanium.Geolocation}.
 	 */
-	public static native void getCurrentHeading(Object callback)
+	public static native void getCurrentHeading(
+			EventCallback<org.urish.gwtit.titanium.Geolocation.HeadingEvent> callback)
 	/*-{
-		return Titanium.Geolocation.getCurrentHeading(callback);
+		return Titanium.Geolocation.getCurrentHeading(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -299,9 +303,10 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *            current location. See location event in
 	 *            {@link org.urish.gwtit.titanium.Geolocation}.
 	 */
-	public static native void getCurrentPosition(Object callback)
+	public static native void getCurrentPosition(
+			EventCallback<org.urish.gwtit.titanium.Geolocation.LocationEvent> callback)
 	/*-{
-		return Titanium.Geolocation.getCurrentPosition(callback);
+		return Titanium.Geolocation.getCurrentPosition(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -319,9 +324,10 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *            `postalCode`, `country`, `countryCode`, `longitude`,
 	 *            `latitude`, `displayAddress`, `address`.
 	 */
-	public static native void reverseGeocoder(float latitude, float longitude, Object callback)
+	public static native void reverseGeocoder(float latitude, float longitude,
+			EventCallback<org.urish.gwtit.titanium.geolocation.ReverseGeocoderResult> callback)
 	/*-{
-		return Titanium.Geolocation.reverseGeocoder(latitude, longitude, callback);
+		return Titanium.Geolocation.reverseGeocoder(latitude, longitude, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -332,9 +338,9 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * @param callback
 	 *            callback function to invoke when the event is fired
 	 */
-	public static native void addEventListener(String name, Object callback)
+	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Geolocation.addEventListener(name, callback);
+		return Titanium.Geolocation.addEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -345,9 +351,9 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * @param callbac
 	 *            callback function passed in addEventListener
 	 */
-	public static native void removeEventListener(String name, Object callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
-		return Titanium.Geolocation.removeEventListener(name, callbac);
+		return Titanium.Geolocation.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**
@@ -385,7 +391,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		/**
 		 * if success is false, the error code if available (iOS only)
 		 */
-		public final native Object getCode()
+		public final native float getCode()
 		/*-{
 			return this.code;
 		}-*/;
@@ -394,7 +400,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		 * boolean to indicate if the heading event was successfully received or
 		 * an error occurred
 		 */
-		public final native Object getSuccess()
+		public final native boolean getSuccess()
 		/*-{
 			return this.success;
 		}-*/;
@@ -402,7 +408,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		/**
 		 * if success is false, returns a string of the error description
 		 */
-		public final native Object getError()
+		public final native String getError()
 		/*-{
 			return this.error;
 		}-*/;
@@ -412,7 +418,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		 * `magneticHeading`, `trueHeading`, `accuracy`, `x`, `y`, `z`,
 		 * `timestamp`.
 		 */
-		public final native Object getHeading()
+		public final native org.urish.gwtit.titanium.geolocation.HeadingInfo getHeading()
 		/*-{
 			return this.heading;
 		}-*/;
@@ -433,7 +439,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		/**
 		 * if success is false, the error code if available (iOS only)
 		 */
-		public final native Object getCode()
+		public final native float getCode()
 		/*-{
 			return this.code;
 		}-*/;
@@ -442,7 +448,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		 * boolean to indicate if the location event was successfully received
 		 * or an error occurred
 		 */
-		public final native Object getSuccess()
+		public final native boolean getSuccess()
 		/*-{
 			return this.success;
 		}-*/;
@@ -451,7 +457,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		 * (Android only) location provider dictionary with the following
 		 * sub-properties: `name`, `accuracy`, `power`, and `provider`.
 		 */
-		public final native Object getProvider()
+		public final native org.urish.gwtit.titanium.geolocation.LocationProviderInfo getProvider()
 		/*-{
 			return this.provider;
 		}-*/;
@@ -461,7 +467,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		 * `latitude`, `longitude`, `altitude`, `accuracy`, `altitudeAccuracy`,
 		 * `heading`, `speed`, `timestamp`.
 		 */
-		public final native Object getCoords()
+		public final native org.urish.gwtit.titanium.geolocation.Coords getCoords()
 		/*-{
 			return this.coords;
 		}-*/;
@@ -469,7 +475,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		/**
 		 * if success is false, returns a string of the error description
 		 */
-		public final native Object getError()
+		public final native String getError()
 		/*-{
 			return this.error;
 		}-*/;

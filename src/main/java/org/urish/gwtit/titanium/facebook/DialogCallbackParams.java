@@ -16,46 +16,47 @@
 
 /* Automatically generated code, don't edit ! */
 
-package org.urish.gwtit.titanium;
-
-import org.urish.gwtit.client.EventCallback;
+package org.urish.gwtit.titanium.facebook;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Parameters that contain callbacks to be set on next accepted socket.
- * 
- * @since 1.7
+ * A callback for when dialog is completed/cancelled
  */
-public class AcceptParams extends JavaScriptObject {
-	protected AcceptParams() {
+public class DialogCallbackParams extends JavaScriptObject {
+	protected DialogCallbackParams() {
 	}
 
 	/**
-	 * @return The timeout for connect() and all i/o write() operations. cannot
-	 *         be modified when not in the initialized state
+	 * 
 	 */
-	public final native float getTimeout()
+	public final native boolean getSuccess()
 	/*-{
-		return this.timeout;
-	}-*/;
-
-	public final native void setTimeout(float value)
-	/*-{
-		this.timeout = value;
+		return this.success;
 	}-*/;
 
 	/**
-	 * @return The callback to be fired after the socket enters the error state
+	 * 
 	 */
-	public final native EventCallback<JavaScriptObject> getError()
+	public final native String getError()
 	/*-{
 		return this.error;
 	}-*/;
 
-	public final native void setError(EventCallback<JavaScriptObject> value)
+	/**
+	 * 
+	 */
+	public final native boolean getCancelled()
 	/*-{
-		this.error = value;
+		return this.cancelled;
+	}-*/;
+
+	/**
+	 * @return The data returned by facebook
+	 */
+	public final native String getResult()
+	/*-{
+		return this.result;
 	}-*/;
 
 }
