@@ -50,6 +50,10 @@ public class GwtTitaniumLinker extends AbstractLinker {
 		out.newline();
 		// grab compilation result
 		Set<CompilationResult> results = artifacts.find(CompilationResult.class);
+		if (results.size() == 0) {
+			logger.log(TreeLogger.WARN, "Requested 0 permutations");
+			return toReturn;
+		}
 		if (results.size() != 1) {
 			logger.log(TreeLogger.ERROR, "The module must have exactly one distinct" + " permutation when using the "
 					+ getDescription() + " Linker.", null);
