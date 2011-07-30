@@ -50,12 +50,12 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Index to make selected
 	 */
-	public final native float getSelected()
+	public final native int getSelected()
 	/*-{
 		return this.selected;
 	}-*/;
 
-	public final native void setSelected(float value)
+	public final native void setSelected(int value)
 	/*-{
 		this.selected = value;
 	}-*/;
@@ -73,7 +73,7 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	 *            at that size). If passed as a TiFile or URL, will perform a
 	 *            check for '@2x' on Retina displays
 	 */
-	public final native void setImage(float index, Object image)
+	public final native void setImage(int index, Object image)
 	/*-{
 		return this.setImage(index, image);
 	}-*/;

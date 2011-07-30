@@ -60,12 +60,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         (note that titanium's android implementation does not support the
 	 *         countdown timer.)
 	 */
-	public final native float getCountDownDuration()
+	public final native double getCountDownDuration()
 	/*-{
 		return this.countDownDuration;
 	}-*/;
 
-	public final native void setCountDownDuration(float value)
+	public final native void setCountDownDuration(double value)
 	/*-{
 		this.countDownDuration = value;
 	}-*/;
@@ -124,12 +124,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         minimum values are 1; the maximum value is 30. (not currently
 	 *         supported on android.)
 	 */
-	public final native float getMinuteInterval()
+	public final native int getMinuteInterval()
 	/*-{
 		return this.minuteInterval;
 	}-*/;
 
-	public final native void setMinuteInterval(float value)
+	public final native void setMinuteInterval(int value)
 	/*-{
 		this.minuteInterval = value;
 	}-*/;
@@ -159,12 +159,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         (note that titanium's android implementation does not support the
 	 *         countdown timer or date+time varieties.)
 	 */
-	public final native float getType()
+	public final native int getType()
 	/*-{
 		return this.type;
 	}-*/;
 
-	public final native void setType(float value)
+	public final native void setType(int value)
 	/*-{
 		this.type = value;
 	}-*/;
@@ -212,12 +212,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         above and below. you can set this to allow more (use an odd
 	 *         number to be sure the selected row is in the middle.)
 	 */
-	public final native float getVisibleItems()
+	public final native int getVisibleItems()
 	/*-{
 		return this.visibleItems;
 	}-*/;
 
-	public final native void setVisibleItems(float value)
+	public final native void setVisibleItems(int value)
 	/*-{
 		this.visibleItems = value;
 	}-*/;
@@ -240,7 +240,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *            for the column index, return the row object or nil if not
 	 *            found
 	 */
-	public final native Object getSelectedRow(float index)
+	public final native Object getSelectedRow(int index)
 	/*-{
 		return this.getSelectedRow(index);
 	}-*/;
@@ -267,7 +267,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *            boolean to indicate if the selection should be animated
 	 *            (default) (optional)
 	 */
-	public final native void setSelectedRow(float column, float row, boolean animated)
+	public final native void setSelectedRow(int column, int row, boolean animated)
 	/*-{
 		return this.setSelectedRow(column, row, animated);
 	}-*/;

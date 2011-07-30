@@ -114,12 +114,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The indention level for the cell (defaults to 0)
 	 */
-	public final native float getIndentionLevel()
+	public final native int getIndentionLevel()
 	/*-{
 		return this.indentionLevel;
 	}-*/;
 
-	public final native void setIndentionLevel(float value)
+	public final native void setIndentionLevel(int value)
 	/*-{
 		this.indentionLevel = value;
 	}-*/;
@@ -208,12 +208,12 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	 *         iphone, use the constants from
 	 *         titanium.ui.iphone.tableviewcellselectionstyle
 	 */
-	public final native float getSelectionStyle()
+	public final native int getSelectionStyle()
 	/*-{
 		return this.selectionStyle;
 	}-*/;
 
-	public final native void setSelectionStyle(float value)
+	public final native void setSelectionStyle(int value)
 	/*-{
 		this.selectionStyle = value;
 	}-*/;

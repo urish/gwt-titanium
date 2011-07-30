@@ -211,12 +211,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.contacts.contacts_kind_person} or
 	 *         {@link org.urish.gwtit.titanium.contacts.contacts_kind_organization}
 	 */
-	public final native float getKind()
+	public final native int getKind()
 	/*-{
 		return this.kind;
 	}-*/;
 
-	public final native void setKind(float value)
+	public final native void setKind(int value)
 	/*-{
 		this.kind = value;
 	}-*/;

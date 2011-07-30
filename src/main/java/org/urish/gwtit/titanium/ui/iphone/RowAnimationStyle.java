@@ -30,46 +30,46 @@ public class RowAnimationStyle extends org.urish.gwtit.titanium.Proxy {
 	protected RowAnimationStyle() {
 	}
 
-	private static native final float value_BOTTOM()
+	private static native final int value_BOTTOM()
 	/*-{
 		return Titanium.UI.iPhone.RowAnimationStyle.BOTTOM;
 	}-*/;
 
-	public static final float BOTTOM = value_BOTTOM();
+	public static final int BOTTOM = value_BOTTOM();
 
-	private static native final float value_FADE()
+	private static native final int value_FADE()
 	/*-{
 		return Titanium.UI.iPhone.RowAnimationStyle.FADE;
 	}-*/;
 
-	public static final float FADE = value_FADE();
+	public static final int FADE = value_FADE();
 
-	private static native final float value_LEFT()
+	private static native final int value_LEFT()
 	/*-{
 		return Titanium.UI.iPhone.RowAnimationStyle.LEFT;
 	}-*/;
 
-	public static final float LEFT = value_LEFT();
+	public static final int LEFT = value_LEFT();
 
-	private static native final float value_NONE()
+	private static native final int value_NONE()
 	/*-{
 		return Titanium.UI.iPhone.RowAnimationStyle.NONE;
 	}-*/;
 
-	public static final float NONE = value_NONE();
+	public static final int NONE = value_NONE();
 
-	private static native final float value_RIGHT()
+	private static native final int value_RIGHT()
 	/*-{
 		return Titanium.UI.iPhone.RowAnimationStyle.RIGHT;
 	}-*/;
 
-	public static final float RIGHT = value_RIGHT();
+	public static final int RIGHT = value_RIGHT();
 
-	private static native final float value_TOP()
+	private static native final int value_TOP()
 	/*-{
 		return Titanium.UI.iPhone.RowAnimationStyle.TOP;
 	}-*/;
 
-	public static final float TOP = value_TOP();
+	public static final int TOP = value_TOP();
 
 }

@@ -35,12 +35,12 @@ public class ButtonBar extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The selected index
 	 */
-	public final native float getIndex()
+	public final native int getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public final native void setIndex(float value)
+	public final native void setIndex(int value)
 	/*-{
 		this.index = value;
 	}-*/;

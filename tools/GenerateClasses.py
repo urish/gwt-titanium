@@ -213,6 +213,10 @@ def capitalFirst(s):
 def mapTypes(s, withConsts = False):
 	TYPE_MAP = {
 		"String": "String",
+		"int": "int",
+		"long": "long",
+		"float": "float",
+		"double": "double",
 		"Number": "float",
 		"Boolean": "boolean",
 		"void": "void",
@@ -570,7 +574,12 @@ def processDir(inputDir, projectDir):
 		for name in files:
 			if name.endswith('.yml'):
 				types.extend(getTypes(os.path.join(root, name)))
-	overrides = json.load(file("overrides.json", "r"))
+	overrides = json.load(file("overrides_number.json", "r"))
+	for typeName, value in json.load(file("overrides.json", "r")).items():
+		if typeName in overrides:
+			overrides[typeName].update(value)
+		else:
+			overrides[typeName] = value
 	classes = []
 	for typeName, typeInfo in overrides.items():
 		if typeName[0] == "+":

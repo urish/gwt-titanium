@@ -51,12 +51,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         no button should be the cancel button, use -1. if there is a
 	 *         cancel button, it must be the last button for use on ipad.
 	 */
-	public final native float getCancel()
+	public final native int getCancel()
 	/*-{
 		return this.cancel;
 	}-*/;
 
-	public final native void setCancel(float value)
+	public final native void setCancel(int value)
 	/*-{
 		this.cancel = value;
 	}-*/;
@@ -64,12 +64,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The destructive button (indicated by a visual clue in the ui)
 	 */
-	public final native float getDestructive()
+	public final native int getDestructive()
 	/*-{
 		return this.destructive;
 	}-*/;
 
-	public final native void setDestructive(float value)
+	public final native void setDestructive(int value)
 	/*-{
 		this.destructive = value;
 	}-*/;
@@ -92,12 +92,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         been specified. (android only)
 	 * @platforms android
 	 */
-	public final native float getSelectedIndex()
+	public final native int getSelectedIndex()
 	/*-{
 		return this.selectedIndex;
 	}-*/;
 
-	public final native void setSelectedIndex(float value)
+	public final native void setSelectedIndex(int value)
 	/*-{
 		this.selectedIndex = value;
 	}-*/;

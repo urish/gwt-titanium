@@ -83,7 +83,7 @@ public class Group extends org.urish.gwtit.titanium.Proxy {
 	 *            or
 	 *            {@link org.urish.gwtit.titanium.Contacts.CONTACTS_SORT_LAST_NAME}
 	 */
-	public final native void sortedMembers(float sortBy)
+	public final native void sortedMembers(int sortBy)
 	/*-{
 		return this.sortedMembers(sortBy);
 	}-*/;

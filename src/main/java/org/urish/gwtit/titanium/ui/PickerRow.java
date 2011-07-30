@@ -33,12 +33,12 @@ public class PickerRow extends org.urish.gwtit.titanium.ui.View {
 	 * @return The font size when displaying the text. ignored when using a
 	 *         custom view
 	 */
-	public final native float getFontSize()
+	public final native int getFontSize()
 	/*-{
 		return this.fontSize;
 	}-*/;
 
-	public final native void setFontSize(float value)
+	public final native void setFontSize(int value)
 	/*-{
 		this.fontSize = value;
 	}-*/;

@@ -102,12 +102,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The curve of the animation
 	 */
-	public final native float getCurve()
+	public final native int getCurve()
 	/*-{
 		return this.curve;
 	}-*/;
 
-	public final native void setCurve(float value)
+	public final native void setCurve(int value)
 	/*-{
 		this.curve = value;
 	}-*/;
@@ -194,12 +194,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of times the animation should be performed
 	 */
-	public final native float getRepeat()
+	public final native int getRepeat()
 	/*-{
 		return this.repeat;
 	}-*/;
 
-	public final native void setRepeat(float value)
+	public final native void setRepeat(int value)
 	/*-{
 		this.repeat = value;
 	}-*/;
@@ -247,12 +247,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	 * @return During a transition animation, this is the constant to the type
 	 *         of transition to use
 	 */
-	public final native float getTransition()
+	public final native int getTransition()
 	/*-{
 		return this.transition;
 	}-*/;
 
-	public final native void setTransition(float value)
+	public final native void setTransition(int value)
 	/*-{
 		this.transition = value;
 	}-*/;
@@ -286,12 +286,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the zindex property to change during animation
 	 */
-	public final native float getZIndex()
+	public final native int getZIndex()
 	/*-{
 		return this.zIndex;
 	}-*/;
 
-	public final native void setZIndex(float value)
+	public final native void setZIndex(int value)
 	/*-{
 		this.zIndex = value;
 	}-*/;

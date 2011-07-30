@@ -29,32 +29,32 @@ public class StatusBar extends org.urish.gwtit.titanium.Proxy {
 	protected StatusBar() {
 	}
 
-	private static native final float value_DEFAULT()
+	private static native final int value_DEFAULT()
 	/*-{
 		return Titanium.UI.iPhone.StatusBar.DEFAULT;
 	}-*/;
 
-	public static final float DEFAULT = value_DEFAULT();
+	public static final int DEFAULT = value_DEFAULT();
 
-	private static native final float value_GRAY()
+	private static native final int value_GRAY()
 	/*-{
 		return Titanium.UI.iPhone.StatusBar.GRAY;
 	}-*/;
 
-	public static final float GRAY = value_GRAY();
+	public static final int GRAY = value_GRAY();
 
-	private static native final float value_OPAQUE_BLACK()
+	private static native final int value_OPAQUE_BLACK()
 	/*-{
 		return Titanium.UI.iPhone.StatusBar.OPAQUE_BLACK;
 	}-*/;
 
-	public static final float OPAQUE_BLACK = value_OPAQUE_BLACK();
+	public static final int OPAQUE_BLACK = value_OPAQUE_BLACK();
 
-	private static native final float value_TRANSLUCENT_BLACK()
+	private static native final int value_TRANSLUCENT_BLACK()
 	/*-{
 		return Titanium.UI.iPhone.StatusBar.TRANSLUCENT_BLACK;
 	}-*/;
 
-	public static final float TRANSLUCENT_BLACK = value_TRANSLUCENT_BLACK();
+	public static final int TRANSLUCENT_BLACK = value_TRANSLUCENT_BLACK();
 
 }

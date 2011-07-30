@@ -36,12 +36,12 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The badge value or `0` to remove the badge
 	 */
-	public final native float getBadge()
+	public final native int getBadge()
 	/*-{
 		return this.badge;
 	}-*/;
 
-	public final native void setBadge(float value)
+	public final native void setBadge(int value)
 	/*-{
 		this.badge = value;
 	}-*/;

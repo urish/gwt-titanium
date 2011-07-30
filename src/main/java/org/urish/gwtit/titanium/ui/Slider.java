@@ -155,12 +155,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 *         default. (android)
 	 * @platforms android
 	 */
-	public final native float getMaxRange()
+	public final native int getMaxRange()
 	/*-{
 		return this.maxRange;
 	}-*/;
 
-	public final native void setMaxRange(float value)
+	public final native void setMaxRange(int value)
 	/*-{
 		this.maxRange = value;
 	}-*/;
@@ -183,12 +183,12 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	 *         default. (android)
 	 * @platforms android
 	 */
-	public final native float getMinRange()
+	public final native int getMinRange()
 	/*-{
 		return this.minRange;
 	}-*/;
 
-	public final native void setMinRange(float value)
+	public final native void setMinRange(int value)
 	/*-{
 		this.minRange = value;
 	}-*/;

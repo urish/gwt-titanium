@@ -33,12 +33,12 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The last row identifier by the last insert query
 	 */
-	public final native float getLastInsertRowId()
+	public final native int getLastInsertRowId()
 	/*-{
 		return this.lastInsertRowId;
 	}-*/;
 
-	public final native void setLastInsertRowId(float value)
+	public final native void setLastInsertRowId(int value)
 	/*-{
 		this.lastInsertRowId = value;
 	}-*/;
@@ -59,12 +59,12 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of rows affected by the last query
 	 */
-	public final native float getRowsAffected()
+	public final native int getRowsAffected()
 	/*-{
 		return this.rowsAffected;
 	}-*/;
 
-	public final native void setRowsAffected(float value)
+	public final native void setRowsAffected(int value)
 	/*-{
 		this.rowsAffected = value;
 	}-*/;

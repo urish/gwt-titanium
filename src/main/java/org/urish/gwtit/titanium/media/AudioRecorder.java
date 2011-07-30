@@ -33,12 +33,12 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Audio compression constant to be used for the recording
 	 */
-	public final native float getCompression()
+	public final native int getCompression()
 	/*-{
 		return this.compression;
 	}-*/;
 
-	public final native void setCompression(float value)
+	public final native void setCompression(int value)
 	/*-{
 		this.compression = value;
 	}-*/;
@@ -46,12 +46,12 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Audio format constant for used for the recording
 	 */
-	public final native float getFormat()
+	public final native int getFormat()
 	/*-{
 		return this.format;
 	}-*/;
 
-	public final native void setFormat(float value)
+	public final native void setFormat(int value)
 	/*-{
 		this.format = value;
 	}-*/;

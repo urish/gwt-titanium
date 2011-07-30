@@ -30,88 +30,88 @@ public class SystemIcon extends org.urish.gwtit.titanium.Proxy {
 	protected SystemIcon() {
 	}
 
-	private static native final float value_BOOKMARKS()
+	private static native final int value_BOOKMARKS()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.BOOKMARKS;
 	}-*/;
 
-	public static final float BOOKMARKS = value_BOOKMARKS();
+	public static final int BOOKMARKS = value_BOOKMARKS();
 
-	private static native final float value_CONTACTS()
+	private static native final int value_CONTACTS()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.CONTACTS;
 	}-*/;
 
-	public static final float CONTACTS = value_CONTACTS();
+	public static final int CONTACTS = value_CONTACTS();
 
-	private static native final float value_DOWNLOADS()
+	private static native final int value_DOWNLOADS()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.DOWNLOADS;
 	}-*/;
 
-	public static final float DOWNLOADS = value_DOWNLOADS();
+	public static final int DOWNLOADS = value_DOWNLOADS();
 
-	private static native final float value_FAVORITES()
+	private static native final int value_FAVORITES()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.FAVORITES;
 	}-*/;
 
-	public static final float FAVORITES = value_FAVORITES();
+	public static final int FAVORITES = value_FAVORITES();
 
-	private static native final float value_FEATURED()
+	private static native final int value_FEATURED()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.FEATURED;
 	}-*/;
 
-	public static final float FEATURED = value_FEATURED();
+	public static final int FEATURED = value_FEATURED();
 
-	private static native final float value_HISTORY()
+	private static native final int value_HISTORY()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.HISTORY;
 	}-*/;
 
-	public static final float HISTORY = value_HISTORY();
+	public static final int HISTORY = value_HISTORY();
 
-	private static native final float value_MORE()
+	private static native final int value_MORE()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.MORE;
 	}-*/;
 
-	public static final float MORE = value_MORE();
+	public static final int MORE = value_MORE();
 
-	private static native final float value_MOST_RECENT()
+	private static native final int value_MOST_RECENT()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.MOST_RECENT;
 	}-*/;
 
-	public static final float MOST_RECENT = value_MOST_RECENT();
+	public static final int MOST_RECENT = value_MOST_RECENT();
 
-	private static native final float value_MOST_VIEWED()
+	private static native final int value_MOST_VIEWED()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.MOST_VIEWED;
 	}-*/;
 
-	public static final float MOST_VIEWED = value_MOST_VIEWED();
+	public static final int MOST_VIEWED = value_MOST_VIEWED();
 
-	private static native final float value_RECENTS()
+	private static native final int value_RECENTS()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.RECENTS;
 	}-*/;
 
-	public static final float RECENTS = value_RECENTS();
+	public static final int RECENTS = value_RECENTS();
 
-	private static native final float value_SEARCH()
+	private static native final int value_SEARCH()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.SEARCH;
 	}-*/;
 
-	public static final float SEARCH = value_SEARCH();
+	public static final int SEARCH = value_SEARCH();
 
-	private static native final float value_TOP_RATED()
+	private static native final int value_TOP_RATED()
 	/*-{
 		return Titanium.UI.iPhone.SystemIcon.TOP_RATED;
 	}-*/;
 
-	public static final float TOP_RATED = value_TOP_RATED();
+	public static final int TOP_RATED = value_TOP_RATED();
 
 }

@@ -32,33 +32,33 @@ public class Database extends org.urish.gwtit.titanium.Module {
 	protected Database() {
 	}
 
-	private static native final float value_FIELD_TYPE_DOUBLE()
+	private static native final int value_FIELD_TYPE_DOUBLE()
 	/*-{
 		return Titanium.Database.FIELD_TYPE_DOUBLE;
 	}-*/;
 
-	public static final float FIELD_TYPE_DOUBLE = value_FIELD_TYPE_DOUBLE();
+	public static final int FIELD_TYPE_DOUBLE = value_FIELD_TYPE_DOUBLE();
 
-	private static native final float value_FIELD_TYPE_FLOAT()
+	private static native final int value_FIELD_TYPE_FLOAT()
 	/*-{
 		return Titanium.Database.FIELD_TYPE_FLOAT;
 	}-*/;
 
-	public static final float FIELD_TYPE_FLOAT = value_FIELD_TYPE_FLOAT();
+	public static final int FIELD_TYPE_FLOAT = value_FIELD_TYPE_FLOAT();
 
-	private static native final float value_FIELD_TYPE_INT()
+	private static native final int value_FIELD_TYPE_INT()
 	/*-{
 		return Titanium.Database.FIELD_TYPE_INT;
 	}-*/;
 
-	public static final float FIELD_TYPE_INT = value_FIELD_TYPE_INT();
+	public static final int FIELD_TYPE_INT = value_FIELD_TYPE_INT();
 
-	private static native final float value_FIELD_TYPE_STRING()
+	private static native final int value_FIELD_TYPE_STRING()
 	/*-{
 		return Titanium.Database.FIELD_TYPE_STRING;
 	}-*/;
 
-	public static final float FIELD_TYPE_STRING = value_FIELD_TYPE_STRING();
+	public static final int FIELD_TYPE_STRING = value_FIELD_TYPE_STRING();
 
 	public static native org.urish.gwtit.titanium.database.DB createDB()
 	/*-{

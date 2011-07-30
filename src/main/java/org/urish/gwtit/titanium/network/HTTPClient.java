@@ -33,40 +33,40 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	protected HTTPClient() {
 	}
 
-	private static native final float value_DONE()
+	private static native final int value_DONE()
 	/*-{
 		return Titanium.Network.HTTPClient.DONE;
 	}-*/;
 
-	public static final float DONE = value_DONE();
+	public static final int DONE = value_DONE();
 
-	private static native final float value_HEADERS_RECEIVED()
+	private static native final int value_HEADERS_RECEIVED()
 	/*-{
 		return Titanium.Network.HTTPClient.HEADERS_RECEIVED;
 	}-*/;
 
-	public static final float HEADERS_RECEIVED = value_HEADERS_RECEIVED();
+	public static final int HEADERS_RECEIVED = value_HEADERS_RECEIVED();
 
-	private static native final float value_LOADING()
+	private static native final int value_LOADING()
 	/*-{
 		return Titanium.Network.HTTPClient.LOADING;
 	}-*/;
 
-	public static final float LOADING = value_LOADING();
+	public static final int LOADING = value_LOADING();
 
-	private static native final float value_OPENED()
+	private static native final int value_OPENED()
 	/*-{
 		return Titanium.Network.HTTPClient.OPENED;
 	}-*/;
 
-	public static final float OPENED = value_OPENED();
+	public static final int OPENED = value_OPENED();
 
-	private static native final float value_UNSENT()
+	private static native final int value_UNSENT()
 	/*-{
 		return Titanium.Network.HTTPClient.UNSENT;
 	}-*/;
 
-	public static final float UNSENT = value_UNSENT();
+	public static final int UNSENT = value_UNSENT();
 
 	/**
 	 * @return Boolean to indicate that the response was successful
@@ -208,12 +208,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The readystate value
 	 */
-	public final native float getReadyState()
+	public final native int getReadyState()
 	/*-{
 		return this.readyState;
 	}-*/;
 
-	public final native void setReadyState(float value)
+	public final native void setReadyState(int value)
 	/*-{
 		this.readyState = value;
 	}-*/;
@@ -263,12 +263,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The response http status code
 	 */
-	public final native float getStatus()
+	public final native int getStatus()
 	/*-{
 		return this.status;
 	}-*/;
 
-	public final native void setStatus(float value)
+	public final native void setStatus(int value)
 	/*-{
 		this.status = value;
 	}-*/;
@@ -276,12 +276,12 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Timeout is milliseconds when the connection should be aborted
 	 */
-	public final native float getTimeout()
+	public final native int getTimeout()
 	/*-{
 		return this.timeout;
 	}-*/;
 
-	public final native void setTimeout(float value)
+	public final native void setTimeout(int value)
 	/*-{
 		this.timeout = value;
 	}-*/;

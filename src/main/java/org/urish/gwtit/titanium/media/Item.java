@@ -59,12 +59,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of tracks for the album of the item
 	 */
-	public final native float getAlbumTrackCount()
+	public final native int getAlbumTrackCount()
 	/*-{
 		return this.albumTrackCount;
 	}-*/;
 
-	public final native void setAlbumTrackCount(float value)
+	public final native void setAlbumTrackCount(int value)
 	/*-{
 		this.albumTrackCount = value;
 	}-*/;
@@ -72,12 +72,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The track number of the item
 	 */
-	public final native float getAlbumTrackNumber()
+	public final native int getAlbumTrackNumber()
 	/*-{
 		return this.albumTrackNumber;
 	}-*/;
 
-	public final native void setAlbumTrackNumber(float value)
+	public final native void setAlbumTrackNumber(int value)
 	/*-{
 		this.albumTrackNumber = value;
 	}-*/;
@@ -125,12 +125,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The total number of discs of the item
 	 */
-	public final native float getDiscCount()
+	public final native int getDiscCount()
 	/*-{
 		return this.discCount;
 	}-*/;
 
-	public final native void setDiscCount(float value)
+	public final native void setDiscCount(int value)
 	/*-{
 		this.discCount = value;
 	}-*/;
@@ -138,12 +138,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The disc number of the item
 	 */
-	public final native float getDiscNumber()
+	public final native int getDiscNumber()
 	/*-{
 		return this.discNumber;
 	}-*/;
 
-	public final native void setDiscNumber(float value)
+	public final native void setDiscNumber(int value)
 	/*-{
 		this.discNumber = value;
 	}-*/;
@@ -190,12 +190,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The type of the item
 	 */
-	public final native float getMediaType()
+	public final native int getMediaType()
 	/*-{
 		return this.mediaType;
 	}-*/;
 
-	public final native void setMediaType(float value)
+	public final native void setMediaType(int value)
 	/*-{
 		this.mediaType = value;
 	}-*/;
@@ -203,12 +203,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of times the item has been played
 	 */
-	public final native float getPlayCount()
+	public final native int getPlayCount()
 	/*-{
 		return this.playCount;
 	}-*/;
 
-	public final native void setPlayCount(float value)
+	public final native void setPlayCount(int value)
 	/*-{
 		this.playCount = value;
 	}-*/;
@@ -216,12 +216,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The length (in seconds) of the item
 	 */
-	public final native float getPlaybackDuration()
+	public final native double getPlaybackDuration()
 	/*-{
 		return this.playbackDuration;
 	}-*/;
 
-	public final native void setPlaybackDuration(float value)
+	public final native void setPlaybackDuration(double value)
 	/*-{
 		this.playbackDuration = value;
 	}-*/;
@@ -243,12 +243,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The rating of the item
 	 */
-	public final native float getRating()
+	public final native int getRating()
 	/*-{
 		return this.rating;
 	}-*/;
 
-	public final native void setRating(float value)
+	public final native void setRating(int value)
 	/*-{
 		this.rating = value;
 	}-*/;
@@ -256,12 +256,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of times the item has been skipped
 	 */
-	public final native float getSkipCount()
+	public final native int getSkipCount()
 	/*-{
 		return this.skipCount;
 	}-*/;
 
-	public final native void setSkipCount(float value)
+	public final native void setSkipCount(int value)
 	/*-{
 		this.skipCount = value;
 	}-*/;

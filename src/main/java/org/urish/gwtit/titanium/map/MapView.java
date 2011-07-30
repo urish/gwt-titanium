@@ -70,12 +70,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.map.satellite_type} or
 	 *         {@link org.urish.gwtit.titanium.map.hybrid_type}.
 	 */
-	public final native float getMapType()
+	public final native int getMapType()
 	/*-{
 		return this.mapType;
 	}-*/;
 
-	public final native void setMapType(float value)
+	public final native void setMapType(int value)
 	/*-{
 		this.mapType = value;
 	}-*/;
@@ -247,7 +247,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 * @param level
 	 *            zoom level (can be positive or negative)
 	 */
-	public final native void zoom(float level)
+	public final native void zoom(double level)
 	/*-{
 		return this.zoom(level);
 	}-*/;

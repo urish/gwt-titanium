@@ -30,25 +30,25 @@ public class ProgressBarStyle extends org.urish.gwtit.titanium.Proxy {
 	protected ProgressBarStyle() {
 	}
 
-	private static native final float value_BAR()
+	private static native final int value_BAR()
 	/*-{
 		return Titanium.UI.iPhone.ProgressBarStyle.BAR;
 	}-*/;
 
-	public static final float BAR = value_BAR();
+	public static final int BAR = value_BAR();
 
-	private static native final float value_DEFAULT()
+	private static native final int value_DEFAULT()
 	/*-{
 		return Titanium.UI.iPhone.ProgressBarStyle.DEFAULT;
 	}-*/;
 
-	public static final float DEFAULT = value_DEFAULT();
+	public static final int DEFAULT = value_DEFAULT();
 
-	private static native final float value_PLAIN()
+	private static native final int value_PLAIN()
 	/*-{
 		return Titanium.UI.iPhone.ProgressBarStyle.PLAIN;
 	}-*/;
 
-	public static final float PLAIN = value_PLAIN();
+	public static final int PLAIN = value_PLAIN();
 
 }

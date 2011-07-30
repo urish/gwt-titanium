@@ -30,18 +30,18 @@ public class TableViewSeparatorStyle extends org.urish.gwtit.titanium.Proxy {
 	protected TableViewSeparatorStyle() {
 	}
 
-	private static native final float value_NONE()
+	private static native final int value_NONE()
 	/*-{
 		return Titanium.UI.iPhone.TableViewSeparatorStyle.NONE;
 	}-*/;
 
-	public static final float NONE = value_NONE();
+	public static final int NONE = value_NONE();
 
-	private static native final float value_SINGLE_LINE()
+	private static native final int value_SINGLE_LINE()
 	/*-{
 		return Titanium.UI.iPhone.TableViewSeparatorStyle.SINGLE_LINE;
 	}-*/;
 
-	public static final float SINGLE_LINE = value_SINGLE_LINE();
+	public static final int SINGLE_LINE = value_SINGLE_LINE();
 
 }

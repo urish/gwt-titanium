@@ -110,12 +110,12 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.map.annotation_green} or
 	 *         {@link org.urish.gwtit.titanium.map.annotation_purple}.
 	 */
-	public final native float getPincolor()
+	public final native int getPincolor()
 	/*-{
 		return this.pincolor;
 	}-*/;
 
-	public final native void setPincolor(float value)
+	public final native void setPincolor(int value)
 	/*-{
 		this.pincolor = value;
 	}-*/;

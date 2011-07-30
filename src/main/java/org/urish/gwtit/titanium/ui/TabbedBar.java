@@ -39,12 +39,12 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The selected index
 	 */
-	public final native float getIndex()
+	public final native int getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public final native void setIndex(float value)
+	public final native void setIndex(int value)
 	/*-{
 		this.index = value;
 	}-*/;
@@ -66,12 +66,12 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The style of the tabbed bar
 	 */
-	public final native float getStyle()
+	public final native int getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public final native void setStyle(float value)
+	public final native void setStyle(int value)
 	/*-{
 		this.style = value;
 	}-*/;

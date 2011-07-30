@@ -40,127 +40,127 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	public static final String INADDR_ANY = value_INADDR_ANY();
 
-	private static native final float value_NETWORK_LAN()
+	private static native final int value_NETWORK_LAN()
 	/*-{
 		return Titanium.Network.NETWORK_LAN;
 	}-*/;
 
-	public static final float NETWORK_LAN = value_NETWORK_LAN();
+	public static final int NETWORK_LAN = value_NETWORK_LAN();
 
-	private static native final float value_NETWORK_MOBILE()
+	private static native final int value_NETWORK_MOBILE()
 	/*-{
 		return Titanium.Network.NETWORK_MOBILE;
 	}-*/;
 
-	public static final float NETWORK_MOBILE = value_NETWORK_MOBILE();
+	public static final int NETWORK_MOBILE = value_NETWORK_MOBILE();
 
-	private static native final float value_NETWORK_NONE()
+	private static native final int value_NETWORK_NONE()
 	/*-{
 		return Titanium.Network.NETWORK_NONE;
 	}-*/;
 
-	public static final float NETWORK_NONE = value_NETWORK_NONE();
+	public static final int NETWORK_NONE = value_NETWORK_NONE();
 
-	private static native final float value_NETWORK_UNKNOWN()
+	private static native final int value_NETWORK_UNKNOWN()
 	/*-{
 		return Titanium.Network.NETWORK_UNKNOWN;
 	}-*/;
 
-	public static final float NETWORK_UNKNOWN = value_NETWORK_UNKNOWN();
+	public static final int NETWORK_UNKNOWN = value_NETWORK_UNKNOWN();
 
-	private static native final float value_NETWORK_WIFI()
+	private static native final int value_NETWORK_WIFI()
 	/*-{
 		return Titanium.Network.NETWORK_WIFI;
 	}-*/;
 
-	public static final float NETWORK_WIFI = value_NETWORK_WIFI();
+	public static final int NETWORK_WIFI = value_NETWORK_WIFI();
 
-	private static native final float value_NOTIFICATION_TYPE_ALERT()
+	private static native final int value_NOTIFICATION_TYPE_ALERT()
 	/*-{
 		return Titanium.Network.NOTIFICATION_TYPE_ALERT;
 	}-*/;
 
-	public static final float NOTIFICATION_TYPE_ALERT = value_NOTIFICATION_TYPE_ALERT();
+	public static final int NOTIFICATION_TYPE_ALERT = value_NOTIFICATION_TYPE_ALERT();
 
-	private static native final float value_NOTIFICATION_TYPE_BADGE()
+	private static native final int value_NOTIFICATION_TYPE_BADGE()
 	/*-{
 		return Titanium.Network.NOTIFICATION_TYPE_BADGE;
 	}-*/;
 
-	public static final float NOTIFICATION_TYPE_BADGE = value_NOTIFICATION_TYPE_BADGE();
+	public static final int NOTIFICATION_TYPE_BADGE = value_NOTIFICATION_TYPE_BADGE();
 
-	private static native final float value_NOTIFICATION_TYPE_SOUND()
+	private static native final int value_NOTIFICATION_TYPE_SOUND()
 	/*-{
 		return Titanium.Network.NOTIFICATION_TYPE_SOUND;
 	}-*/;
 
-	public static final float NOTIFICATION_TYPE_SOUND = value_NOTIFICATION_TYPE_SOUND();
+	public static final int NOTIFICATION_TYPE_SOUND = value_NOTIFICATION_TYPE_SOUND();
 
-	private static native final float value_READ_MODE()
+	private static native final int value_READ_MODE()
 	/*-{
 		return Titanium.Network.READ_MODE;
 	}-*/;
 
-	public static final float READ_MODE = value_READ_MODE();
+	public static final int READ_MODE = value_READ_MODE();
 
-	private static native final float value_READ_WRITE_MODE()
+	private static native final int value_READ_WRITE_MODE()
 	/*-{
 		return Titanium.Network.READ_WRITE_MODE;
 	}-*/;
 
-	public static final float READ_WRITE_MODE = value_READ_WRITE_MODE();
+	public static final int READ_WRITE_MODE = value_READ_WRITE_MODE();
 
-	private static native final float value_SOCKET_CLOSED()
+	private static native final int value_SOCKET_CLOSED()
 	/*-{
 		return Titanium.Network.SOCKET_CLOSED;
 	}-*/;
 
-	public static final float SOCKET_CLOSED = value_SOCKET_CLOSED();
+	public static final int SOCKET_CLOSED = value_SOCKET_CLOSED();
 
-	private static native final float value_SOCKET_CONNECTED()
+	private static native final int value_SOCKET_CONNECTED()
 	/*-{
 		return Titanium.Network.SOCKET_CONNECTED;
 	}-*/;
 
-	public static final float SOCKET_CONNECTED = value_SOCKET_CONNECTED();
+	public static final int SOCKET_CONNECTED = value_SOCKET_CONNECTED();
 
-	private static native final float value_SOCKET_ERROR()
+	private static native final int value_SOCKET_ERROR()
 	/*-{
 		return Titanium.Network.SOCKET_ERROR;
 	}-*/;
 
-	public static final float SOCKET_ERROR = value_SOCKET_ERROR();
+	public static final int SOCKET_ERROR = value_SOCKET_ERROR();
 
-	private static native final float value_SOCKET_INITIALIZED()
+	private static native final int value_SOCKET_INITIALIZED()
 	/*-{
 		return Titanium.Network.SOCKET_INITIALIZED;
 	}-*/;
 
-	public static final float SOCKET_INITIALIZED = value_SOCKET_INITIALIZED();
+	public static final int SOCKET_INITIALIZED = value_SOCKET_INITIALIZED();
 
-	private static native final float value_SOCKET_LISTENING()
+	private static native final int value_SOCKET_LISTENING()
 	/*-{
 		return Titanium.Network.SOCKET_LISTENING;
 	}-*/;
 
-	public static final float SOCKET_LISTENING = value_SOCKET_LISTENING();
+	public static final int SOCKET_LISTENING = value_SOCKET_LISTENING();
 
-	private static native final float value_WRITE_MODE()
+	private static native final int value_WRITE_MODE()
 	/*-{
 		return Titanium.Network.WRITE_MODE;
 	}-*/;
 
-	public static final float WRITE_MODE = value_WRITE_MODE();
+	public static final int WRITE_MODE = value_WRITE_MODE();
 
 	/**
 	 * @return The network type value as a constant.
 	 */
-	public static native float getNetworkType()
+	public static native int getNetworkType()
 	/*-{
 		return Titanium.Network.networkType;
 	}-*/;
 
-	public static native void setNetworkType(float value)
+	public static native void setNetworkType(int value)
 	/*-{
 		Titanium.Network.networkType = value;
 	}-*/;
@@ -386,8 +386,8 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *            A dictionary object with properties defined in
 	 *            {@link org.urish.gwtit.titanium.network.TCPSocket}
 	 */
-	public static native org.urish.gwtit.titanium.network.TCPSocket createTCPSocket(String hostName, float port,
-			float mode, Object parameters)
+	public static native org.urish.gwtit.titanium.network.TCPSocket createTCPSocket(String hostName, int port,
+			int mode, Object parameters)
 	/*-{
 		return Titanium.Network.createTCPSocket(hostName, port, mode, parameters);
 	}-*/;

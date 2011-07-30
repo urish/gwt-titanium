@@ -33,61 +33,61 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	protected iPhone() {
 	}
 
-	private static native final float value_MODAL_PRESENTATION_CURRENT_CONTEXT()
+	private static native final int value_MODAL_PRESENTATION_CURRENT_CONTEXT()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_PRESENTATION_CURRENT_CONTEXT;
 	}-*/;
 
-	public static final float MODAL_PRESENTATION_CURRENT_CONTEXT = value_MODAL_PRESENTATION_CURRENT_CONTEXT();
+	public static final int MODAL_PRESENTATION_CURRENT_CONTEXT = value_MODAL_PRESENTATION_CURRENT_CONTEXT();
 
-	private static native final float value_MODAL_PRESENTATION_FORMSHEET()
+	private static native final int value_MODAL_PRESENTATION_FORMSHEET()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_PRESENTATION_FORMSHEET;
 	}-*/;
 
-	public static final float MODAL_PRESENTATION_FORMSHEET = value_MODAL_PRESENTATION_FORMSHEET();
+	public static final int MODAL_PRESENTATION_FORMSHEET = value_MODAL_PRESENTATION_FORMSHEET();
 
-	private static native final float value_MODAL_PRESENTATION_FULLSCREEN()
+	private static native final int value_MODAL_PRESENTATION_FULLSCREEN()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_PRESENTATION_FULLSCREEN;
 	}-*/;
 
-	public static final float MODAL_PRESENTATION_FULLSCREEN = value_MODAL_PRESENTATION_FULLSCREEN();
+	public static final int MODAL_PRESENTATION_FULLSCREEN = value_MODAL_PRESENTATION_FULLSCREEN();
 
-	private static native final float value_MODAL_PRESENTATION_PAGESHEET()
+	private static native final int value_MODAL_PRESENTATION_PAGESHEET()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_PRESENTATION_PAGESHEET;
 	}-*/;
 
-	public static final float MODAL_PRESENTATION_PAGESHEET = value_MODAL_PRESENTATION_PAGESHEET();
+	public static final int MODAL_PRESENTATION_PAGESHEET = value_MODAL_PRESENTATION_PAGESHEET();
 
-	private static native final float value_MODAL_TRANSITION_STYLE_COVER_VERTICAL()
+	private static native final int value_MODAL_TRANSITION_STYLE_COVER_VERTICAL()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_COVER_VERTICAL;
 	}-*/;
 
-	public static final float MODAL_TRANSITION_STYLE_COVER_VERTICAL = value_MODAL_TRANSITION_STYLE_COVER_VERTICAL();
+	public static final int MODAL_TRANSITION_STYLE_COVER_VERTICAL = value_MODAL_TRANSITION_STYLE_COVER_VERTICAL();
 
-	private static native final float value_MODAL_TRANSITION_STYLE_CROSS_DISSOLVE()
+	private static native final int value_MODAL_TRANSITION_STYLE_CROSS_DISSOLVE()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_CROSS_DISSOLVE;
 	}-*/;
 
-	public static final float MODAL_TRANSITION_STYLE_CROSS_DISSOLVE = value_MODAL_TRANSITION_STYLE_CROSS_DISSOLVE();
+	public static final int MODAL_TRANSITION_STYLE_CROSS_DISSOLVE = value_MODAL_TRANSITION_STYLE_CROSS_DISSOLVE();
 
-	private static native final float value_MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL()
+	private static native final int value_MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL;
 	}-*/;
 
-	public static final float MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL = value_MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL();
+	public static final int MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL = value_MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL();
 
-	private static native final float value_MODAL_TRANSITION_STYLE_PARTIAL_CURL()
+	private static native final int value_MODAL_TRANSITION_STYLE_PARTIAL_CURL()
 	/*-{
 		return Titanium.UI.iPhone.MODAL_TRANSITION_STYLE_PARTIAL_CURL;
 	}-*/;
 
-	public static final float MODAL_TRANSITION_STYLE_PARTIAL_CURL = value_MODAL_TRANSITION_STYLE_PARTIAL_CURL();
+	public static final int MODAL_TRANSITION_STYLE_PARTIAL_CURL = value_MODAL_TRANSITION_STYLE_PARTIAL_CURL();
 
 	/**
 	 * @return Set the application badge for the application's icon in the
@@ -133,12 +133,12 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return Constant that controls the status bar color style
 	 */
-	public static native float getStatusBarStyle()
+	public static native int getStatusBarStyle()
 	/*-{
 		return Titanium.UI.iPhone.statusBarStyle;
 	}-*/;
 
-	public static native void setStatusBarStyle(float value)
+	public static native void setStatusBarStyle(int value)
 	/*-{
 		Titanium.UI.iPhone.statusBarStyle = value;
 	}-*/;
@@ -221,7 +221,7 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	 * @param animationStyle
 	 *            the animation style
 	 */
-	public static native void hideStatusBar(boolean animated, float animationStyle)
+	public static native void hideStatusBar(boolean animated, int animationStyle)
 	/*-{
 		return Titanium.UI.iPhone.hideStatusBar(animated, animationStyle);
 	}-*/;
@@ -234,7 +234,7 @@ public class iPhone extends org.urish.gwtit.titanium.Module {
 	 * @param animationStyle
 	 *            the animation style
 	 */
-	public static native void showStatusBar(boolean animated, float animationStyle)
+	public static native void showStatusBar(boolean animated, int animationStyle)
 	/*-{
 		return Titanium.UI.iPhone.showStatusBar(animated, animationStyle);
 	}-*/;

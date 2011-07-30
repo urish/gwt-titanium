@@ -50,12 +50,12 @@ public class DisplayCaps extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The dpi of the display device.
 	 */
-	public final native float getDpi()
+	public final native int getDpi()
 	/*-{
 		return this.dpi;
 	}-*/;
 
-	public final native void setDpi(float value)
+	public final native void setDpi(int value)
 	/*-{
 		this.dpi = value;
 	}-*/;

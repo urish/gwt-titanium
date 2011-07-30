@@ -417,12 +417,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         titanium.ui.android.soft_keyboard_show_on_focus. (android only)
 	 * @platforms android
 	 */
-	public final native float getSoftKeyboardOnFocus()
+	public final native int getSoftKeyboardOnFocus()
 	/*-{
 		return this.softKeyboardOnFocus;
 	}-*/;
 
-	public final native void setSoftKeyboardOnFocus(float value)
+	public final native void setSoftKeyboardOnFocus(int value)
 	/*-{
 		this.softKeyboardOnFocus = value;
 	}-*/;
@@ -509,12 +509,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The z index position relative to other sibling views
 	 */
-	public final native float getZIndex()
+	public final native int getZIndex()
 	/*-{
 		return this.zIndex;
 	}-*/;
 
-	public final native void setZIndex(float value)
+	public final native void setZIndex(int value)
 	/*-{
 		this.zIndex = value;
 	}-*/;

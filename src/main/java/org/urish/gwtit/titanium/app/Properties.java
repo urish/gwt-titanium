@@ -49,7 +49,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param property
 	 *            return a double value for property
 	 */
-	public static native float getDouble(String property, float _default)
+	public static native double getDouble(String property, double _default)
 	/*-{
 		return Titanium.App.Properties.getDouble(property, _default);
 	}-*/;
@@ -60,7 +60,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param property
 	 *            return a integer value for property
 	 */
-	public static native float getInt(String property, float _default)
+	public static native int getInt(String property, int _default)
 	/*-{
 		return Titanium.App.Properties.getInt(property, _default);
 	}-*/;
@@ -138,7 +138,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param value
 	 *            value
 	 */
-	public static native void setDouble(String property, float value)
+	public static native void setDouble(String property, double value)
 	/*-{
 		return Titanium.App.Properties.setDouble(property, value);
 	}-*/;
@@ -151,7 +151,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param value
 	 *            value
 	 */
-	public static native void setInt(String property, float value)
+	public static native void setInt(String property, int value)
 	/*-{
 		return Titanium.App.Properties.setInt(property, value);
 	}-*/;

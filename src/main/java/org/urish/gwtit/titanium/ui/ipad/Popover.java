@@ -40,12 +40,12 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Return the arrow direction of the popover
 	 */
-	public final native float getArrowDirection()
+	public final native int getArrowDirection()
 	/*-{
 		return this.arrowDirection;
 	}-*/;
 
-	public final native void setArrowDirection(float value)
+	public final native void setArrowDirection(int value)
 	/*-{
 		this.arrowDirection = value;
 	}-*/;

@@ -35,12 +35,12 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The current point in song playback
 	 */
-	public final native float getCurrentPlaybackTime()
+	public final native double getCurrentPlaybackTime()
 	/*-{
 		return this.currentPlaybackTime;
 	}-*/;
 
-	public final native void setCurrentPlaybackTime(float value)
+	public final native void setCurrentPlaybackTime(double value)
 	/*-{
 		this.currentPlaybackTime = value;
 	}-*/;
@@ -71,12 +71,12 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	 *         ,
 	 *         {@link org.urish.gwtit.titanium.media.music_player_state_seek_backward}
 	 */
-	public final native float getPlaybackState()
+	public final native int getPlaybackState()
 	/*-{
 		return this.playbackState;
 	}-*/;
 
-	public final native void setPlaybackState(float value)
+	public final native void setPlaybackState(int value)
 	/*-{
 		this.playbackState = value;
 	}-*/;
@@ -88,12 +88,12 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	 *         , {@link org.urish.gwtit.titanium.media.music_player_repeat_one},
 	 *         {@link org.urish.gwtit.titanium.media.music_player_repeat_all}
 	 */
-	public final native float getRepeatMode()
+	public final native int getRepeatMode()
 	/*-{
 		return this.repeatMode;
 	}-*/;
 
-	public final native void setRepeatMode(float value)
+	public final native void setRepeatMode(int value)
 	/*-{
 		this.repeatMode = value;
 	}-*/;
@@ -107,12 +107,12 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	 *         ,
 	 *         {@link org.urish.gwtit.titanium.media.music_player_shuffle_albums}
 	 */
-	public final native float getShuffleMode()
+	public final native int getShuffleMode()
 	/*-{
 		return this.shuffleMode;
 	}-*/;
 
-	public final native void setShuffleMode(float value)
+	public final native void setShuffleMode(int value)
 	/*-{
 		this.shuffleMode = value;
 	}-*/;

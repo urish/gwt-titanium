@@ -47,12 +47,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 *         links. ios only.
 	 * @platforms iphone, ipad
 	 */
-	public final native float getAutoLink()
+	public final native int getAutoLink()
 	/*-{
 		return this.autoLink;
 	}-*/;
 
-	public final native void setAutoLink(float value)
+	public final native void setAutoLink(int value)
 	/*-{
 		this.autoLink = value;
 	}-*/;
@@ -69,12 +69,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 *         (only android)
 	 * @platforms android
 	 */
-	public final native float getAutocapitalization()
+	public final native int getAutocapitalization()
 	/*-{
 		return this.autocapitalization;
 	}-*/;
 
-	public final native void setAutocapitalization(float value)
+	public final native void setAutocapitalization(int value)
 	/*-{
 		this.autocapitalization = value;
 	}-*/;

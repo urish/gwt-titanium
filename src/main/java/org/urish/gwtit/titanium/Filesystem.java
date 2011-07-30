@@ -32,26 +32,26 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	protected Filesystem() {
 	}
 
-	private static native final float value_MODE_APPEND()
+	private static native final int value_MODE_APPEND()
 	/*-{
 		return Titanium.Filesystem.MODE_APPEND;
 	}-*/;
 
-	public static final float MODE_APPEND = value_MODE_APPEND();
+	public static final int MODE_APPEND = value_MODE_APPEND();
 
-	private static native final float value_MODE_READ()
+	private static native final int value_MODE_READ()
 	/*-{
 		return Titanium.Filesystem.MODE_READ;
 	}-*/;
 
-	public static final float MODE_READ = value_MODE_READ();
+	public static final int MODE_READ = value_MODE_READ();
 
-	private static native final float value_MODE_WRITE()
+	private static native final int value_MODE_WRITE()
 	/*-{
 		return Titanium.Filesystem.MODE_WRITE;
 	}-*/;
 
-	public static final float MODE_WRITE = value_MODE_WRITE();
+	public static final int MODE_WRITE = value_MODE_WRITE();
 
 	/**
 	 * @return Readonly constant where your application data directory is

@@ -55,12 +55,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_all}
 	 *         to indicate how the field should be capitalized during typing.
 	 */
-	public final native float getAutocapitalization()
+	public final native int getAutocapitalization()
 	/*-{
 		return this.autocapitalization;
 	}-*/;
 
-	public final native void setAutocapitalization(float value)
+	public final native void setAutocapitalization(int value)
 	/*-{
 		this.autocapitalization = value;
 	}-*/;
@@ -68,12 +68,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The border style constant for the field
 	 */
-	public final native float getBorderStyle()
+	public final native int getBorderStyle()
 	/*-{
 		return this.borderStyle;
 	}-*/;
 
-	public final native void setBorderStyle(float value)
+	public final native void setBorderStyle(int value)
 	/*-{
 		this.borderStyle = value;
 	}-*/;
@@ -81,12 +81,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The mode constant for how to handle displaying the clear button
 	 */
-	public final native float getClearButtonMode()
+	public final native int getClearButtonMode()
 	/*-{
 		return this.clearButtonMode;
 	}-*/;
 
-	public final native void setClearButtonMode(float value)
+	public final native void setClearButtonMode(int value)
 	/*-{
 		this.clearButtonMode = value;
 	}-*/;
@@ -200,12 +200,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The mode of the left button view
 	 */
-	public final native float getLeftButtonMode()
+	public final native int getLeftButtonMode()
 	/*-{
 		return this.leftButtonMode;
 	}-*/;
 
-	public final native void setLeftButtonMode(float value)
+	public final native void setLeftButtonMode(int value)
 	/*-{
 		this.leftButtonMode = value;
 	}-*/;
@@ -228,12 +228,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return The minimum size of the font when the font is sized based on the
 	 *         contents. enables font scaling to fit
 	 */
-	public final native float getMinimumFontSize()
+	public final native int getMinimumFontSize()
 	/*-{
 		return this.minimumFontSize;
 	}-*/;
 
-	public final native void setMinimumFontSize(float value)
+	public final native void setMinimumFontSize(int value)
 	/*-{
 		this.minimumFontSize = value;
 	}-*/;
@@ -280,12 +280,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The mode of the right button view
 	 */
-	public final native float getRightButtonMode()
+	public final native int getRightButtonMode()
 	/*-{
 		return this.rightButtonMode;
 	}-*/;
 
-	public final native void setRightButtonMode(float value)
+	public final native void setRightButtonMode(int value)
 	/*-{
 		this.rightButtonMode = value;
 	}-*/;

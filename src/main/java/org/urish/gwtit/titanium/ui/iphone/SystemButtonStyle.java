@@ -30,32 +30,32 @@ public class SystemButtonStyle extends org.urish.gwtit.titanium.Proxy {
 	protected SystemButtonStyle() {
 	}
 
-	private static native final float value_BAR()
+	private static native final int value_BAR()
 	/*-{
 		return Titanium.UI.iPhone.SystemButtonStyle.BAR;
 	}-*/;
 
-	public static final float BAR = value_BAR();
+	public static final int BAR = value_BAR();
 
-	private static native final float value_BORDERED()
+	private static native final int value_BORDERED()
 	/*-{
 		return Titanium.UI.iPhone.SystemButtonStyle.BORDERED;
 	}-*/;
 
-	public static final float BORDERED = value_BORDERED();
+	public static final int BORDERED = value_BORDERED();
 
-	private static native final float value_DONE()
+	private static native final int value_DONE()
 	/*-{
 		return Titanium.UI.iPhone.SystemButtonStyle.DONE;
 	}-*/;
 
-	public static final float DONE = value_DONE();
+	public static final int DONE = value_DONE();
 
-	private static native final float value_PLAIN()
+	private static native final int value_PLAIN()
 	/*-{
 		return Titanium.UI.iPhone.SystemButtonStyle.PLAIN;
 	}-*/;
 
-	public static final float PLAIN = value_PLAIN();
+	public static final int PLAIN = value_PLAIN();
 
 }

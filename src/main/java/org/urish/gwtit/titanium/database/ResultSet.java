@@ -31,12 +31,12 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The number of rows in the result set
 	 */
-	public final native float getRowCount()
+	public final native int getRowCount()
 	/*-{
 		return this.rowCount;
 	}-*/;
 
-	public final native void setRowCount(float value)
+	public final native void setRowCount(int value)
 	/*-{
 		this.rowCount = value;
 	}-*/;
@@ -69,7 +69,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * @param index
 	 *            column index (which is zero based)
 	 */
-	public final native Object field(float index)
+	public final native Object field(int index)
 	/*-{
 		return this.field(index);
 	}-*/;
@@ -86,7 +86,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public final native Object field(float index, float type)
+	public final native Object field(int index, int type)
 	/*-{
 		return this.field(index, type);
 	}-*/;
@@ -114,7 +114,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public final native Object fieldByName(String name, float type)
+	public final native Object fieldByName(String name, int type)
 	/*-{
 		return this.fieldByName(name, type);
 	}-*/;
@@ -122,7 +122,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the number of columns in the result set
 	 */
-	public final native float fieldCount()
+	public final native int fieldCount()
 	/*-{
 		return this.fieldCount();
 	}-*/;
@@ -133,7 +133,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * @param index
 	 *            field name column index (which is zero based)
 	 */
-	public final native String fieldName(float index)
+	public final native String fieldName(int index)
 	/*-{
 		return this.fieldName(index);
 	}-*/;

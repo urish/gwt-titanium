@@ -34,12 +34,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 *         clickable links for the specified type. (android only)
 	 * @platforms android
 	 */
-	public final native float getAutoLink()
+	public final native int getAutoLink()
 	/*-{
 		return this.autoLink;
 	}-*/;
 
-	public final native void setAutoLink(float value)
+	public final native void setAutoLink(int value)
 	/*-{
 		this.autoLink = value;
 	}-*/;
@@ -48,12 +48,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the bottom
 	 */
-	public final native float getBackgroundPaddingBottom()
+	public final native int getBackgroundPaddingBottom()
 	/*-{
 		return this.backgroundPaddingBottom;
 	}-*/;
 
-	public final native void setBackgroundPaddingBottom(float value)
+	public final native void setBackgroundPaddingBottom(int value)
 	/*-{
 		this.backgroundPaddingBottom = value;
 	}-*/;
@@ -62,12 +62,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the left
 	 */
-	public final native float getBackgroundPaddingLeft()
+	public final native int getBackgroundPaddingLeft()
 	/*-{
 		return this.backgroundPaddingLeft;
 	}-*/;
 
-	public final native void setBackgroundPaddingLeft(float value)
+	public final native void setBackgroundPaddingLeft(int value)
 	/*-{
 		this.backgroundPaddingLeft = value;
 	}-*/;
@@ -76,12 +76,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the right
 	 */
-	public final native float getBackgroundPaddingRight()
+	public final native int getBackgroundPaddingRight()
 	/*-{
 		return this.backgroundPaddingRight;
 	}-*/;
 
-	public final native void setBackgroundPaddingRight(float value)
+	public final native void setBackgroundPaddingRight(int value)
 	/*-{
 		this.backgroundPaddingRight = value;
 	}-*/;
@@ -90,12 +90,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The number of pixels to extend the background image past the
 	 *         label on the top
 	 */
-	public final native float getBackgroundPaddingTop()
+	public final native int getBackgroundPaddingTop()
 	/*-{
 		return this.backgroundPaddingTop;
 	}-*/;
 
-	public final native void setBackgroundPaddingTop(float value)
+	public final native void setBackgroundPaddingTop(int value)
 	/*-{
 		this.backgroundPaddingTop = value;
 	}-*/;
@@ -173,12 +173,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 *         contents. enables font scaling to fit and forces the label
 	 *         content to be limited to a single line
 	 */
-	public final native float getMinimumFontSize()
+	public final native int getMinimumFontSize()
 	/*-{
 		return this.minimumFontSize;
 	}-*/;
 
-	public final native void setMinimumFontSize(float value)
+	public final native void setMinimumFontSize(int value)
 	/*-{
 		this.minimumFontSize = value;
 	}-*/;

@@ -81,12 +81,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The socket's mode
 	 */
-	public final native float getMode()
+	public final native int getMode()
 	/*-{
 		return this.mode;
 	}-*/;
 
-	public final native void setMode(float value)
+	public final native void setMode(int value)
 	/*-{
 		this.mode = value;
 	}-*/;
@@ -94,12 +94,12 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The port to connect/listen on
 	 */
-	public final native float getPort()
+	public final native int getPort()
 	/*-{
 		return this.port;
 	}-*/;
 
-	public final native void setPort(float value)
+	public final native void setPort(int value)
 	/*-{
 		this.port = value;
 	}-*/;
@@ -152,7 +152,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	 *            the socket reference to send the data to. Default is to send
 	 *            to all connected sockets
 	 */
-	public final native void write(Object data, float sendTo)
+	public final native void write(Object data, int sendTo)
 	/*-{
 		return this.write(data, sendTo);
 	}-*/;

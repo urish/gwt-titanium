@@ -30,25 +30,25 @@ public class ActivityIndicatorStyle extends org.urish.gwtit.titanium.Proxy {
 	protected ActivityIndicatorStyle() {
 	}
 
-	private static native final float value_BIG()
+	private static native final int value_BIG()
 	/*-{
 		return Titanium.UI.iPhone.ActivityIndicatorStyle.BIG;
 	}-*/;
 
-	public static final float BIG = value_BIG();
+	public static final int BIG = value_BIG();
 
-	private static native final float value_DARK()
+	private static native final int value_DARK()
 	/*-{
 		return Titanium.UI.iPhone.ActivityIndicatorStyle.DARK;
 	}-*/;
 
-	public static final float DARK = value_DARK();
+	public static final int DARK = value_DARK();
 
-	private static native final float value_PLAIN()
+	private static native final int value_PLAIN()
 	/*-{
 		return Titanium.UI.iPhone.ActivityIndicatorStyle.PLAIN;
 	}-*/;
 
-	public static final float PLAIN = value_PLAIN();
+	public static final int PLAIN = value_PLAIN();
 
 }

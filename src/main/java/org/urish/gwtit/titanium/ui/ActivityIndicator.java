@@ -89,12 +89,12 @@ public class ActivityIndicator extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The style constant of the activity indicator
 	 */
-	public final native float getStyle()
+	public final native int getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public final native void setStyle(float value)
+	public final native void setStyle(int value)
 	/*-{
 		this.style = value;
 	}-*/;

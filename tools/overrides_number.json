@@ -1,0 +1,728 @@
+{
+	"Titanium.Map": {
+		"properties[name='HYBRID_TYPE'] type": "int",
+		"properties[name='SATELLITE_TYPE'] type": "int",
+		"properties[name='STANDARD_TYPE'] type": "int"
+	},
+	"Titanium.Media.AudioPlayer": {
+		"properties[name='STATE_BUFFERING'] type": "int",
+		"properties[name='STATE_INITIALIZED'] type": "int",
+		"properties[name='STATE_PAUSED'] type": "int",
+		"properties[name='STATE_PLAYING'] type": "int",
+		"properties[name='STATE_STARTING'] type": "int",
+		"properties[name='STATE_STOPPED'] type": "int",
+		"properties[name='STATE_STOPPING'] type": "int",
+		"properties[name='STATE_WAITING_FOR_DATA'] type": "int",
+		"properties[name='STATE_WAITING_FOR_QUEUE'] type": "int",
+		"properties[name='bitRate'] type": "double",
+		"properties[name='progress'] type": "double",
+		"properties[name='state'] type": "int"
+	},
+	"Titanium.UI.iPad": {
+		"properties[name='POPOVER_ARROW_DIRECTION_ANY'] type": "int",
+		"properties[name='POPOVER_ARROW_DIRECTION_DOWN'] type": "int",
+		"properties[name='POPOVER_ARROW_DIRECTION_LEFT'] type": "int",
+		"properties[name='POPOVER_ARROW_DIRECTION_RIGHT'] type": "int",
+		"properties[name='POPOVER_ARROW_DIRECTION_UNKNOWN'] type": "int",
+		"properties[name='POPOVER_ARROW_DIRECTION_UP'] type": "int"
+	},
+	"Titanium.UI.EmailDialog": {
+		"properties[name='CANCELLED'] type": "int",
+		"properties[name='FAILED'] type": "int",
+		"properties[name='SAVED'] type": "int",
+		"properties[name='SENT'] type": "int"
+	},
+	"Titanium.Filesystem": {
+		"properties[name='MODE_APPEND'] type": "int",
+		"properties[name='MODE_READ'] type": "int",
+		"properties[name='MODE_WRITE'] type": "int"
+	},
+	"Titanium.UI.CoverFlowView": {
+		"methods[name='setImage'] parameters[name='index'] type": "int",
+		"properties[name='selected'] type": "int"
+	},
+	"Titanium.UI.ScrollableView": {
+		"properties[name='cacheSize'] type": "int",
+		"properties[name='currentPage'] type": "int",
+		"properties[name='maxZoomScale'] type": "float",
+		"properties[name='minZoomScale'] type": "float",
+		"properties[name='pagingControlHeight'] type": "float"
+	},
+	"Titanium.Media.VideoPlayer": {
+		"methods[name='requestThumbnailImagesAtTimes'] parameters[name='option'] type": "int",
+		"methods[name='thumbnailImageAtTime'] parameters[name='time'] type": "double",
+		"methods[name='thumbnailImageAtTime'] parameters[name='option'] type": "int",
+		"properties[name='duration'] type": "double",
+		"properties[name='endPlaybackTime'] type": "double",
+		"properties[name='initialPlaybackTime'] type": "double",
+		"properties[name='loadState'] type": "int",
+		"properties[name='mediaControlStyle'] type": "int",
+		"properties[name='mediaTypes'] type": "int",
+		"properties[name='movieControlMode'] type": "int",
+		"properties[name='playableDuration'] type": "double",
+		"properties[name='playbackState'] type": "int",
+		"properties[name='repeatMode'] type": "int",
+		"properties[name='scalingMode'] type": "int",
+		"properties[name='sourceType'] type": "int"
+	},
+	"Titanium.UI.iPhone.ActivityIndicatorStyle": {
+		"properties[name='BIG'] type": "int",
+		"properties[name='DARK'] type": "int",
+		"properties[name='PLAIN'] type": "int"
+	},
+	"Titanium.UI.ImageView": {
+		"properties[name='decodeRetries'] type": "int",
+		"properties[name='duration'] type": "float",
+		"properties[name='repeatCount'] type": "int"
+	},
+	"Titanium.UI.iPhone.StatusBar": {
+		"properties[name='DEFAULT'] type": "int",
+		"properties[name='GRAY'] type": "int",
+		"properties[name='OPAQUE_BLACK'] type": "int",
+		"properties[name='TRANSLUCENT_BLACK'] type": "int"
+	},
+	"Titanium.UI.iPhone.ScrollIndicatorStyle": {
+		"properties[name='BLACK'] type": "int",
+		"properties[name='DEFAULT'] type": "int",
+		"properties[name='WHITE'] type": "int"
+	},
+	"Titanium.UI.ProgressBar": {
+		"properties[name='max'] type": "float",
+		"properties[name='min'] type": "float",
+		"properties[name='style'] type": "int",
+		"properties[name='value'] type": "float"
+	},
+	"Titanium.UI.iPhone.TableViewScrollPosition": {
+		"properties[name='BOTTOM'] type": "int",
+		"properties[name='MIDDLE'] type": "int",
+		"properties[name='NONE'] type": "int",
+		"properties[name='TOP'] type": "int"
+	},
+	"Titanium.UI.TextField": {
+		"properties[name='autocapitalization'] type": "int",
+		"properties[name='borderStyle'] type": "int",
+		"properties[name='clearButtonMode'] type": "int",
+		"properties[name='keyboardToolbarHeight'] type": "float",
+		"properties[name='leftButtonMode'] type": "int",
+		"properties[name='leftButtonPadding'] type": "float",
+		"properties[name='minimumFontSize'] type": "int",
+		"properties[name='paddingLeft'] type": "float",
+		"properties[name='paddingRight'] type": "float",
+		"properties[name='rightButtonMode'] type": "int",
+		"properties[name='rightButtonPadding'] type": "float"
+	},
+	"Titanium.Network.BonjourService": {
+		"methods[name='resolve'] parameters[name='timeout'] type": "double"
+	},
+	"Titanium.Network.TCPSocket": {
+		"methods[name='write'] parameters[name='sendTo'] type": "int",
+		"properties[name='mode'] type": "int",
+		"properties[name='port'] type": "int"
+	},
+	"Titanium.UI.Label": {
+		"properties[name='autoLink'] type": "int",
+		"properties[name='backgroundPaddingBottom'] type": "int",
+		"properties[name='backgroundPaddingLeft'] type": "int",
+		"properties[name='backgroundPaddingRight'] type": "int",
+		"properties[name='backgroundPaddingTop'] type": "int",
+		"properties[name='minimumFontSize'] type": "int"
+	},
+	"Titanium.UI.TextArea": {
+		"properties[name='autoLink'] type": "int",
+		"properties[name='autocapitalization'] type": "int",
+		"properties[name='keyboardToolbarHeight'] type": "float"
+	},
+	"Titanium.UI._3DMatrix": {
+		"methods[name='rotate'] parameters[name='angle'] type": "float",
+		"methods[name='rotate'] parameters[name='x'] type": "float",
+		"methods[name='rotate'] parameters[name='y'] type": "float",
+		"methods[name='rotate'] parameters[name='z'] type": "float",
+		"methods[name='scale'] parameters[name='sx'] type": "float",
+		"methods[name='scale'] parameters[name='sy'] type": "float",
+		"methods[name='scale'] parameters[name='sz'] type": "float",
+		"methods[name='translate'] parameters[name='tx'] type": "float",
+		"methods[name='translate'] parameters[name='ty'] type": "float",
+		"methods[name='translate'] parameters[name='tz'] type": "float"
+	},
+	"Titanium.UI": {
+		"properties[name='ANIMATION_CURVE_EASE_IN'] type": "int",
+		"properties[name='ANIMATION_CURVE_EASE_IN_OUT'] type": "int",
+		"properties[name='ANIMATION_CURVE_EASE_OUT'] type": "int",
+		"properties[name='ANIMATION_CURVE_LINEAR'] type": "int",
+		"properties[name='AUTODETECT_ADDRESS'] type": "int",
+		"properties[name='AUTODETECT_ALL'] type": "int",
+		"properties[name='AUTODETECT_CALENDAR'] type": "int",
+		"properties[name='AUTODETECT_LINK'] type": "int",
+		"properties[name='AUTODETECT_NONE'] type": "int",
+		"properties[name='AUTODETECT_PHONE'] type": "int",
+		"properties[name='BLEND_MODE_CLEAR'] type": "int",
+		"properties[name='BLEND_MODE_COLOR'] type": "int",
+		"properties[name='BLEND_MODE_COLOR_BURN'] type": "int",
+		"properties[name='BLEND_MODE_COLOR_DODGE'] type": "int",
+		"properties[name='BLEND_MODE_COPY'] type": "int",
+		"properties[name='BLEND_MODE_DARKEN'] type": "int",
+		"properties[name='BLEND_MODE_DESTINATION_ATOP'] type": "int",
+		"properties[name='BLEND_MODE_DESTINATION_IN'] type": "int",
+		"properties[name='BLEND_MODE_DESTINATION_OUT'] type": "int",
+		"properties[name='BLEND_MODE_DESTINATION_OVER'] type": "int",
+		"properties[name='BLEND_MODE_DIFFERENCE'] type": "int",
+		"properties[name='BLEND_MODE_EXCLUSION'] type": "int",
+		"properties[name='BLEND_MODE_HARD_LIGHT'] type": "int",
+		"properties[name='BLEND_MODE_HUE'] type": "int",
+		"properties[name='BLEND_MODE_LIGHTEN'] type": "int",
+		"properties[name='BLEND_MODE_LUMINOSITY'] type": "int",
+		"properties[name='BLEND_MODE_MULTIPLY'] type": "int",
+		"properties[name='BLEND_MODE_NORMAL'] type": "int",
+		"properties[name='BLEND_MODE_OVERLAY'] type": "int",
+		"properties[name='BLEND_MODE_PLUS_DARKER'] type": "int",
+		"properties[name='BLEND_MODE_PLUS_LIGHTER'] type": "int",
+		"properties[name='BLEND_MODE_SATURATION'] type": "int",
+		"properties[name='BLEND_MODE_SCREEN'] type": "int",
+		"properties[name='BLEND_MODE_SOFT_LIGHT'] type": "int",
+		"properties[name='BLEND_MODE_SOURCE_ATOP'] type": "int",
+		"properties[name='BLEND_MODE_SOURCE_IN'] type": "int",
+		"properties[name='BLEND_MODE_SOURCE_OUT'] type": "int",
+		"properties[name='BLEND_MODE_XOR'] type": "int",
+		"properties[name='FACE_DOWN'] type": "int",
+		"properties[name='FACE_UP'] type": "int",
+		"properties[name='INPUT_BORDERSTYLE_BEZEL'] type": "int",
+		"properties[name='INPUT_BORDERSTYLE_LINE'] type": "int",
+		"properties[name='INPUT_BORDERSTYLE_NONE'] type": "int",
+		"properties[name='INPUT_BORDERSTYLE_ROUNDED'] type": "int",
+		"properties[name='INPUT_BUTTONMODE_ALWAYS'] type": "int",
+		"properties[name='INPUT_BUTTONMODE_NEVER'] type": "int",
+		"properties[name='INPUT_BUTTONMODE_ONBLUR'] type": "int",
+		"properties[name='INPUT_BUTTONMODE_ONFOCUS'] type": "int",
+		"properties[name='KEYBOARD_APPEARANCE_ALERT'] type": "int",
+		"properties[name='KEYBOARD_APPEARANCE_DEFAULT'] type": "int",
+		"properties[name='KEYBOARD_ASCII'] type": "int",
+		"properties[name='KEYBOARD_DEFAULT'] type": "int",
+		"properties[name='KEYBOARD_EMAIL'] type": "int",
+		"properties[name='KEYBOARD_NAMEPHONE_PAD'] type": "int",
+		"properties[name='KEYBOARD_NUMBERS_PUNCTUATION'] type": "int",
+		"properties[name='KEYBOARD_NUMBER_PAD'] type": "int",
+		"properties[name='KEYBOARD_PHONE_PAD'] type": "int",
+		"properties[name='KEYBOARD_URL'] type": "int",
+		"properties[name='LANDSCAPE_LEFT'] type": "int",
+		"properties[name='LANDSCAPE_RIGHT'] type": "int",
+		"properties[name='NOTIFICATION_DURATION_LONG'] type": "int",
+		"properties[name='NOTIFICATION_DURATION_SHORT'] type": "int",
+		"properties[name='PICKER_TYPE_COUNT_DOWN_TIMER'] type": "int",
+		"properties[name='PICKER_TYPE_DATE'] type": "int",
+		"properties[name='PICKER_TYPE_DATE_AND_TIME'] type": "int",
+		"properties[name='PICKER_TYPE_PLAIN'] type": "int",
+		"properties[name='PICKER_TYPE_TIME'] type": "int",
+		"properties[name='PORTRAIT'] type": "int",
+		"properties[name='RETURNKEY_DEFAULT'] type": "int",
+		"properties[name='RETURNKEY_DONE'] type": "int",
+		"properties[name='RETURNKEY_EMERGENCY_CALL'] type": "int",
+		"properties[name='RETURNKEY_GO'] type": "int",
+		"properties[name='RETURNKEY_GOOGLE'] type": "int",
+		"properties[name='RETURNKEY_JOIN'] type": "int",
+		"properties[name='RETURNKEY_NEXT'] type": "int",
+		"properties[name='RETURNKEY_ROUTE'] type": "int",
+		"properties[name='RETURNKEY_SEARCH'] type": "int",
+		"properties[name='RETURNKEY_SEND'] type": "int",
+		"properties[name='RETURNKEY_YAHOO'] type": "int",
+		"properties[name='TEXT_ALIGNMENT_CENTER'] type": "int",
+		"properties[name='TEXT_ALIGNMENT_LEFT'] type": "int",
+		"properties[name='TEXT_ALIGNMENT_RIGHT'] type": "int",
+		"properties[name='TEXT_AUTOCAPITALIZATION_ALL'] type": "int",
+		"properties[name='TEXT_AUTOCAPITALIZATION_NONE'] type": "int",
+		"properties[name='TEXT_AUTOCAPITALIZATION_SENTENCES'] type": "int",
+		"properties[name='TEXT_AUTOCAPITALIZATION_WORDS'] type": "int",
+		"properties[name='TEXT_VERTICAL_ALIGNMENT_BOTTOM'] type": "int",
+		"properties[name='TEXT_VERTICAL_ALIGNMENT_CENTER'] type": "int",
+		"properties[name='TEXT_VERTICAL_ALIGNMENT_TOP'] type": "int",
+		"properties[name='UNKNOWN'] type": "int",
+		"properties[name='UPSIDE_PORTRAIT'] type": "int"
+	},
+	"Titanium.UI.Switch": {
+		"properties[name='style'] type": "int"
+	},
+	"Titanium.UI.iPhone.SystemButtonStyle": {
+		"properties[name='BAR'] type": "int",
+		"properties[name='BORDERED'] type": "int",
+		"properties[name='DONE'] type": "int",
+		"properties[name='PLAIN'] type": "int"
+	},
+	"Titanium.Map.MapView": {
+		"methods[name='setMapType'] parameters[name='mapType'] type": "int",
+		"methods[name='zoom'] parameters[name='level'] type": "double",
+		"properties[name='mapType'] type": "int"
+	},
+	"Titanium.UI.iPhone.SystemButton": {
+		"properties[name='ACTION'] type": "int",
+		"properties[name='ACTIVITY'] type": "int",
+		"properties[name='ADD'] type": "int",
+		"properties[name='BOOKMARKS'] type": "int",
+		"properties[name='CAMERA'] type": "int",
+		"properties[name='CANCEL'] type": "int",
+		"properties[name='COMPOSE'] type": "int",
+		"properties[name='CONTACT_ADD'] type": "int",
+		"properties[name='DISCLOSURE'] type": "int",
+		"properties[name='DONE'] type": "int",
+		"properties[name='EDIT'] type": "int",
+		"properties[name='FAST_FORWARD'] type": "int",
+		"properties[name='FIXED_SPACE'] type": "int",
+		"properties[name='FLEXIBLE_SPACE'] type": "int",
+		"properties[name='INFO_DARK'] type": "int",
+		"properties[name='INFO_LIGHT'] type": "int",
+		"properties[name='ORGANIZE'] type": "int",
+		"properties[name='PAUSE'] type": "int",
+		"properties[name='PLAY'] type": "int",
+		"properties[name='REFRESH'] type": "int",
+		"properties[name='REPLY'] type": "int",
+		"properties[name='REWIND'] type": "int",
+		"properties[name='SAVE'] type": "int",
+		"properties[name='SPINNER'] type": "int",
+		"properties[name='STOP'] type": "int",
+		"properties[name='TRASH'] type": "int"
+	},
+	"Titanium.App": {
+		"properties[name='proximityState'] type": "int"
+	},
+	"Titanium.UI.DashboardItem": {
+		"properties[name='badge'] type": "int"
+	},
+	"Titanium.UI.iPhone.TableViewCellSelectionStyle": {
+		"properties[name='BLUE'] type": "int",
+		"properties[name='GRAY'] type": "int",
+		"properties[name='NONE'] type": "int"
+	},
+	"Titanium.UI.TableViewRow": {
+		"properties[name='indentionLevel'] type": "int",
+		"properties[name='selectionStyle'] type": "int"
+	},
+	"Titanium.Map.Annotation": {
+		"properties[name='pincolor'] type": "int"
+	},
+	"Titanium.UI.SearchBar": {
+		"properties[name='autocapitalization'] type": "int",
+		"properties[name='keyboardType'] type": "int"
+	},
+	"Titanium.UI.PickerRow": {
+		"properties[name='fontSize'] type": "int"
+	},
+	"Titanium.Database.ResultSet": {
+		"methods[name='field'] parameters[name='index'] type": "int",
+		"methods[name='field'] parameters[name='type'] type": "int",
+		"methods[name='fieldByName'] parameters[name='type'] type": "int",
+		"methods[name='fieldCount'] returns type": "int",
+		"methods[name='fieldName'] parameters[name='index'] type": "int",
+		"properties[name='rowCount'] type": "int"
+	},
+	"Titanium.UI.iPhone.ProgressBarStyle": {
+		"properties[name='BAR'] type": "int",
+		"properties[name='DEFAULT'] type": "int",
+		"properties[name='PLAIN'] type": "int"
+	},
+	"Titanium.UI.ButtonBar": {
+		"properties[name='index'] type": "int"
+	},
+	"Titanium.UI.ScrollView": {
+		"methods[name='scrollTo'] parameters[name='x'] type": "float",
+		"methods[name='scrollTo'] parameters[name='y'] type": "float",
+		"properties[name='contentHeight'] type": "float",
+		"properties[name='contentWidth'] type": "float",
+		"properties[name='maxZoomScale'] type": "float",
+		"properties[name='minZoomScale'] type": "float",
+		"properties[name='zoomScale'] type": "float"
+	},
+	"Titanium.UI.Slider": {
+		"properties[name='max'] type": "float",
+		"properties[name='maxRange'] type": "int",
+		"properties[name='min'] type": "float",
+		"properties[name='minRange'] type": "int"
+	},
+	"Titanium.UI.iPhone.TableViewStyle": {
+		"properties[name='GROUPED'] type": "int",
+		"properties[name='PLAIN'] type": "int"
+	},
+	"Titanium.UI.iPhone.TableViewSeparatorStyle": {
+		"properties[name='NONE'] type": "int",
+		"properties[name='SINGLE_LINE'] type": "int"
+	},
+	"Titanium.UI.TableViewSection": {
+		"properties[name='rowCount'] type": "int"
+	},
+	"Titanium.UI.View": {
+		"properties[name='backgroundLeftCap'] type": "float",
+		"properties[name='backgroundTopCap'] type": "float",
+		"properties[name='borderRadius'] type": "float",
+		"properties[name='borderWidth'] type": "float",
+		"properties[name='opacity'] type": "float",
+		"properties[name='softKeyboardOnFocus'] type": "int",
+		"properties[name='zIndex'] type": "int"
+	},
+	"Titanium.Media.Item": {
+		"properties[name='albumTrackCount'] type": "int",
+		"properties[name='albumTrackNumber'] type": "int",
+		"properties[name='discCount'] type": "int",
+		"properties[name='discNumber'] type": "int",
+		"properties[name='mediaType'] type": "int",
+		"properties[name='playCount'] type": "int",
+		"properties[name='playbackDuration'] type": "double",
+		"properties[name='rating'] type": "int",
+		"properties[name='skipCount'] type": "int"
+	},
+	"Titanium.Media.AudioRecorder": {
+		"properties[name='compression'] type": "int",
+		"properties[name='format'] type": "int"
+	},
+	"Titanium.Database": {
+		"properties[name='FIELD_TYPE_DOUBLE'] type": "int",
+		"properties[name='FIELD_TYPE_FLOAT'] type": "int",
+		"properties[name='FIELD_TYPE_INT'] type": "int",
+		"properties[name='FIELD_TYPE_STRING'] type": "int"
+	},
+	"Titanium.UI.iPhone.RowAnimationStyle": {
+		"properties[name='BOTTOM'] type": "int",
+		"properties[name='FADE'] type": "int",
+		"properties[name='LEFT'] type": "int",
+		"properties[name='NONE'] type": "int",
+		"properties[name='RIGHT'] type": "int",
+		"properties[name='TOP'] type": "int"
+	},
+	"Titanium.UI.TabGroup": {
+		"properties[name='windowSoftInputMode'] type": "int"
+	},
+	"Titanium.Database.DB": {
+		"properties[name='lastInsertRowId'] type": "int",
+		"properties[name='rowsAffected'] type": "int"
+	},
+	"Titanium.UI.TableView": {
+		"methods[name='deleteRow'] parameters[name='row'] type": "int",
+		"methods[name='deselectRow'] parameters[name='row'] type": "int",
+		"methods[name='insertRowAfter'] parameters[name='index'] type": "int",
+		"methods[name='insertRowBefore'] parameters[name='index'] type": "int",
+		"methods[name='scrollToIndex'] parameters[name='index'] type": "int",
+		"methods[name='scrollToTop'] parameters[name='top'] type": "float",
+		"methods[name='selectRow'] parameters[name='row'] type": "int",
+		"properties[name='maxRowHeight'] type": "float",
+		"properties[name='minRowHeight'] type": "float",
+		"properties[name='rowHeight'] type": "float",
+		"properties[name='separatorStyle'] type": "int",
+		"properties[name='style'] type": "int"
+	},
+	"Titanium.Media.Sound": {
+		"methods[name='getTime'] returns type": "double",
+		"methods[name='getVolume'] returns type": "float",
+		"properties[name='duration'] type": "float",
+		"properties[name='time'] type": "float",
+		"properties[name='volume'] type": "float"
+	},
+	"Titanium.UI.AlertDialog": {
+		"properties[name='cancel'] type": "int"
+	},
+	"Titanium.Geolocation": {
+		"methods[name='reverseGeocoder'] parameters[name='latitude'] type": "double",
+		"methods[name='reverseGeocoder'] parameters[name='longitude'] type": "double",
+		"properties[name='ACCURACY_BEST'] type": "int",
+		"properties[name='ACCURACY_HUNDRED_METERS'] type": "int",
+		"properties[name='ACCURACY_KILOMETER'] type": "int",
+		"properties[name='ACCURACY_NEAREST_TEN_METERS'] type": "int",
+		"properties[name='ACCURACY_THREE_KILOMETERS'] type": "int",
+		"properties[name='AUTHORIZATION_AUTHORIZED'] type": "int",
+		"properties[name='AUTHORIZATION_DENIED'] type": "int",
+		"properties[name='AUTHORIZATION_RESTRICTED'] type": "int",
+		"properties[name='AUTHORIZATION_UNKNOWN'] type": "int",
+		"properties[name='ERROR_DENIED'] type": "int",
+		"properties[name='ERROR_HEADING_FAILURE'] type": "int",
+		"properties[name='ERROR_LOCATION_UNKNOWN'] type": "int",
+		"properties[name='ERROR_NETWORK'] type": "int",
+		"properties[name='ERROR_REGION_MONITORING_DELAYED'] type": "int",
+		"properties[name='ERROR_REGION_MONITORING_DENIED'] type": "int",
+		"properties[name='ERROR_REGION_MONITORING_FAILURE'] type": "int",
+		"properties[name='distanceFilter'] type": "double",
+		"properties[name='headingFilter'] type": "double",
+		"properties[name='locationServicesAuthorization'] type": "int"
+	},
+	"Titanium.UI.Button": {
+		"properties[name='style'] type": "int"
+	},
+	"Titanium.UI.Animation": {
+		"properties[name='bottom'] type": "float",
+		"properties[name='curve'] type": "int",
+		"properties[name='delay'] type": "float",
+		"properties[name='duration'] type": "float",
+		"properties[name='height'] type": "float",
+		"properties[name='left'] type": "float",
+		"properties[name='opacity'] type": "float",
+		"properties[name='repeat'] type": "int",
+		"properties[name='right'] type": "float",
+		"properties[name='top'] type": "float",
+		"properties[name='transition'] type": "int",
+		"properties[name='width'] type": "float",
+		"properties[name='zIndex'] type": "int"
+	},
+	"Titanium.UI.OptionDialog": {
+		"properties[name='cancel'] type": "int",
+		"properties[name='destructive'] type": "int",
+		"properties[name='selectedIndex'] type": "int"
+	},
+	"Titanium.UI._2DMatrix": {
+		"methods[name='rotate'] parameters[name='angle'] type": "float",
+		"methods[name='scale'] parameters[name='sx'] type": "float",
+		"methods[name='scale'] parameters[name='sy'] type": "float",
+		"methods[name='translate'] parameters[name='tx'] type": "float",
+		"methods[name='translate'] parameters[name='ty'] type": "float"
+	},
+	"Titanium.Filesystem.File": {
+		"methods[name='createTimestamp'] returns type": "long",
+		"methods[name='modificationTimestamp'] returns type": "long"
+	},
+	"Titanium.UI.iPhone": {
+		"methods[name='hideStatusBar'] parameters[name='animationStyle'] type": "int",
+		"methods[name='showStatusBar'] parameters[name='animationStyle'] type": "int",
+		"properties[name='MODAL_PRESENTATION_CURRENT_CONTEXT'] type": "int",
+		"properties[name='MODAL_PRESENTATION_FORMSHEET'] type": "int",
+		"properties[name='MODAL_PRESENTATION_FULLSCREEN'] type": "int",
+		"properties[name='MODAL_PRESENTATION_PAGESHEET'] type": "int",
+		"properties[name='MODAL_TRANSITION_STYLE_COVER_VERTICAL'] type": "int",
+		"properties[name='MODAL_TRANSITION_STYLE_CROSS_DISSOLVE'] type": "int",
+		"properties[name='MODAL_TRANSITION_STYLE_FLIP_HORIZONTAL'] type": "int",
+		"properties[name='MODAL_TRANSITION_STYLE_PARTIAL_CURL'] type": "int",
+		"properties[name='statusBarStyle'] type": "int"
+	},
+	"Titanium.Contacts": {
+		"methods[name='getGroupByID'] parameters[name='id'] type": "int",
+		"methods[name='getPersonByID'] parameters[name='id'] type": "int",
+		"properties[name='CONTACTS_KIND_ORGANIZATION'] type": "int",
+		"properties[name='CONTACTS_KIND_PERSON'] type": "int",
+		"properties[name='CONTACTS_SORT_FIRST_NAME'] type": "int",
+		"properties[name='CONTACTS_SORT_LAST_NAME'] type": "int"
+	},
+	"Titanium.UI.iPhone.AnimationStyle": {
+		"properties[name='CURL_DOWN'] type": "int",
+		"properties[name='CURL_UP'] type": "int",
+		"properties[name='FLIP_FROM_LEFT'] type": "int",
+		"properties[name='FLIP_FROM_RIGHT'] type": "int",
+		"properties[name='NONE'] type": "int"
+	},
+	"Titanium.Network": {
+		"methods[name='createTCPSocket'] parameters[name='port'] type": "int",
+		"methods[name='createTCPSocket'] parameters[name='mode'] type": "int",
+		"properties[name='NETWORK_LAN'] type": "int",
+		"properties[name='NETWORK_MOBILE'] type": "int",
+		"properties[name='NETWORK_NONE'] type": "int",
+		"properties[name='NETWORK_UNKNOWN'] type": "int",
+		"properties[name='NETWORK_WIFI'] type": "int",
+		"properties[name='NOTIFICATION_TYPE_ALERT'] type": "int",
+		"properties[name='NOTIFICATION_TYPE_BADGE'] type": "int",
+		"properties[name='NOTIFICATION_TYPE_SOUND'] type": "int",
+		"properties[name='READ_MODE'] type": "int",
+		"properties[name='READ_WRITE_MODE'] type": "int",
+		"properties[name='SOCKET_CLOSED'] type": "int",
+		"properties[name='SOCKET_CONNECTED'] type": "int",
+		"properties[name='SOCKET_ERROR'] type": "int",
+		"properties[name='SOCKET_INITIALIZED'] type": "int",
+		"properties[name='SOCKET_LISTENING'] type": "int",
+		"properties[name='WRITE_MODE'] type": "int",
+		"properties[name='networkType'] type": "int"
+	},
+	"Titanium.Network.HTTPClient": {
+		"methods[name='setTimeout'] parameters[name='timeout'] type": "double",
+		"properties[name='DONE'] type": "int",
+		"properties[name='HEADERS_RECEIVED'] type": "int",
+		"properties[name='LOADING'] type": "int",
+		"properties[name='OPENED'] type": "int",
+		"properties[name='UNSENT'] type": "int",
+		"properties[name='readyState'] type": "int",
+		"properties[name='status'] type": "int",
+		"properties[name='timeout'] type": "int"
+	},
+	"Titanium.UI.Picker": {
+		"methods[name='getSelectedRow'] parameters[name='index'] type": "int",
+		"methods[name='setSelectedRow'] parameters[name='column'] type": "int",
+		"methods[name='setSelectedRow'] parameters[name='row'] type": "int",
+		"properties[name='countDownDuration'] type": "double",
+		"properties[name='minuteInterval'] type": "int",
+		"properties[name='type'] type": "int",
+		"properties[name='visibleItems'] type": "int"
+	},
+	"Titanium.UI.TabbedBar": {
+		"properties[name='index'] type": "int",
+		"properties[name='style'] type": "int"
+	},
+	"Titanium.Contacts.Group": {
+		"methods[name='sortedMembers'] parameters[name='sortBy'] type": "int"
+	},
+	"Titanium.UI.iPhone.SystemIcon": {
+		"properties[name='BOOKMARKS'] type": "int",
+		"properties[name='CONTACTS'] type": "int",
+		"properties[name='DOWNLOADS'] type": "int",
+		"properties[name='FAVORITES'] type": "int",
+		"properties[name='FEATURED'] type": "int",
+		"properties[name='HISTORY'] type": "int",
+		"properties[name='MORE'] type": "int",
+		"properties[name='MOST_RECENT'] type": "int",
+		"properties[name='MOST_VIEWED'] type": "int",
+		"properties[name='RECENTS'] type": "int",
+		"properties[name='SEARCH'] type": "int",
+		"properties[name='TOP_RATED'] type": "int"
+	},
+	"Titanium.Platform": {
+		"properties[name='BATTERY_STATE_CHARGING'] type": "int",
+		"properties[name='BATTERY_STATE_FULL'] type": "int",
+		"properties[name='BATTERY_STATE_UNKNOWN'] type": "int",
+		"properties[name='BATTERY_STATE_UNPLUGGED'] type": "int",
+		"properties[name='availableMemory'] type": "double",
+		"properties[name='batteryLevel'] type": "float",
+		"properties[name='batteryState'] type": "int",
+		"properties[name='processorCount'] type": "int"
+	},
+	"Titanium.Media": {
+		"properties[name='AUDIO_FILEFORMAT_3GP2'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_3GPP'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_AIFF'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_AMR'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_CAF'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_MP3'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_MP4'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_MP4A'] type": "int",
+		"properties[name='AUDIO_FILEFORMAT_WAVE'] type": "int",
+		"properties[name='AUDIO_FORMAT_AAC'] type": "int",
+		"properties[name='AUDIO_FORMAT_ALAW'] type": "int",
+		"properties[name='AUDIO_FORMAT_APPLE_LOSSLESS'] type": "int",
+		"properties[name='AUDIO_FORMAT_ILBC'] type": "int",
+		"properties[name='AUDIO_FORMAT_IMA4'] type": "int",
+		"properties[name='AUDIO_FORMAT_LINEAR_PCM'] type": "int",
+		"properties[name='AUDIO_FORMAT_ULAW'] type": "int",
+		"properties[name='AUDIO_HEADPHONES'] type": "int",
+		"properties[name='AUDIO_HEADPHONES_AND_MIC'] type": "int",
+		"properties[name='AUDIO_HEADSET_INOUT'] type": "int",
+		"properties[name='AUDIO_LINEOUT'] type": "int",
+		"properties[name='AUDIO_MICROPHONE'] type": "int",
+		"properties[name='AUDIO_MUTED'] type": "int",
+		"properties[name='AUDIO_RECEIVER_AND_MIC'] type": "int",
+		"properties[name='AUDIO_SESSION_MODE_AMBIENT'] type": "int",
+		"properties[name='AUDIO_SESSION_MODE_PLAYBACK'] type": "int",
+		"properties[name='AUDIO_SESSION_MODE_PLAY_AND_RECORD'] type": "int",
+		"properties[name='AUDIO_SESSION_MODE_RECORD'] type": "int",
+		"properties[name='AUDIO_SESSION_MODE_SOLO_AMBIENT'] type": "int",
+		"properties[name='AUDIO_SPEAKER'] type": "int",
+		"properties[name='AUDIO_UNAVAILABLE'] type": "int",
+		"properties[name='AUDIO_UNKNOWN'] type": "int",
+		"properties[name='DEVICE_BUSY'] type": "int",
+		"properties[name='MEDIA_TYPE_PHOTO'] type": "int",
+		"properties[name='MEDIA_TYPE_VIDEO'] type": "int",
+		"properties[name='MUSIC_MEDIA_TYPE_ALL'] type": "int",
+		"properties[name='MUSIC_MEDIA_TYPE_ANY_AUDIO'] type": "int",
+		"properties[name='MUSIC_MEDIA_TYPE_AUDIOBOOK'] type": "int",
+		"properties[name='MUSIC_MEDIA_TYPE_MUSIC'] type": "int",
+		"properties[name='MUSIC_MEDIA_TYPE_PODCAST'] type": "int",
+		"properties[name='MUSIC_PLAYER_REPEAT_ALL'] type": "int",
+		"properties[name='MUSIC_PLAYER_REPEAT_DEFAULT'] type": "int",
+		"properties[name='MUSIC_PLAYER_REPEAT_NONE'] type": "int",
+		"properties[name='MUSIC_PLAYER_REPEAT_ONE'] type": "int",
+		"properties[name='MUSIC_PLAYER_SHUFFLE_ALBUMS'] type": "int",
+		"properties[name='MUSIC_PLAYER_SHUFFLE_DEFAULT'] type": "int",
+		"properties[name='MUSIC_PLAYER_SHUFFLE_NONE'] type": "int",
+		"properties[name='MUSIC_PLAYER_SHUFFLE_SONGS'] type": "int",
+		"properties[name='MUSIC_PLAYER_STATE_INTERRUPTED'] type": "int",
+		"properties[name='MUSIC_PLAYER_STATE_PAUSED'] type": "int",
+		"properties[name='MUSIC_PLAYER_STATE_PLAYING'] type": "int",
+		"properties[name='MUSIC_PLAYER_STATE_SEEK_BACKWARD'] type": "int",
+		"properties[name='MUSIC_PLAYER_STATE_SKEEK_FORWARD'] type": "int",
+		"properties[name='MUSIC_PLAYER_STATE_STOPPED'] type": "int",
+		"properties[name='NO_CAMERA'] type": "int",
+		"properties[name='NO_VIDEO'] type": "int",
+		"properties[name='QUALITY_HIGH'] type": "int",
+		"properties[name='QUALITY_LOW'] type": "int",
+		"properties[name='QUALITY_MEDIUM'] type": "int",
+		"properties[name='UNKNOWN_ERROR'] type": "int",
+		"properties[name='VIDEO_CONTROL_DEFAULT'] type": "int",
+		"properties[name='VIDEO_CONTROL_EMBEDDED'] type": "int",
+		"properties[name='VIDEO_CONTROL_FULLSCREEN'] type": "int",
+		"properties[name='VIDEO_CONTROL_HIDDEN'] type": "int",
+		"properties[name='VIDEO_CONTROL_NONE'] type": "int",
+		"properties[name='VIDEO_CONTROL_VOLUME_ONLY'] type": "int",
+		"properties[name='VIDEO_FINISH_REASON_PLAYBACK_ENDED'] type": "int",
+		"properties[name='VIDEO_FINISH_REASON_PLAYBACK_ERROR'] type": "int",
+		"properties[name='VIDEO_FINISH_REASON_USER_EXITED'] type": "int",
+		"properties[name='VIDEO_LOAD_STATE_PLAYABLE'] type": "int",
+		"properties[name='VIDEO_LOAD_STATE_PLAYTHROUGH_OK'] type": "int",
+		"properties[name='VIDEO_LOAD_STATE_STALLED'] type": "int",
+		"properties[name='VIDEO_LOAD_STATE_UNKNOWN'] type": "int",
+		"properties[name='VIDEO_MEDIA_TYPE_AUDIO'] type": "int",
+		"properties[name='VIDEO_MEDIA_TYPE_NONE'] type": "int",
+		"properties[name='VIDEO_MEDIA_TYPE_VIDEO'] type": "int",
+		"properties[name='VIDEO_PLAYBACK_STATE_INTERRUPTED'] type": "int",
+		"properties[name='VIDEO_PLAYBACK_STATE_PAUSED'] type": "int",
+		"properties[name='VIDEO_PLAYBACK_STATE_PLAYING'] type": "int",
+		"properties[name='VIDEO_PLAYBACK_STATE_SEEKING_BACKWARD'] type": "int",
+		"properties[name='VIDEO_PLAYBACK_STATE_SEEKING_FORWARD'] type": "int",
+		"properties[name='VIDEO_PLAYBACK_STATE_STOPPED'] type": "int",
+		"properties[name='VIDEO_REPEAT_MODE_NONE'] type": "int",
+		"properties[name='VIDEO_REPEAT_MODE_ONE'] type": "int",
+		"properties[name='VIDEO_SCALING_ASPECT_FILL'] type": "int",
+		"properties[name='VIDEO_SCALING_ASPECT_FIT'] type": "int",
+		"properties[name='VIDEO_SCALING_MODE_FILL'] type": "int",
+		"properties[name='VIDEO_SCALING_NONE'] type": "int",
+		"properties[name='VIDEO_SOURCE_TYPE_FILE'] type": "int",
+		"properties[name='VIDEO_SOURCE_TYPE_STREAMING'] type": "int",
+		"properties[name='VIDEO_SOURCE_TYPE_UNKNOWN'] type": "int",
+		"properties[name='VIDEO_TIME_OPTION_EXACT'] type": "int",
+		"properties[name='VIDEO_TIME_OPTION_NEAREST_KEYFRAME'] type": "int",
+		"properties[name='audioLineType'] type": "int",
+		"properties[name='audioSessionMode'] type": "int",
+		"properties[name='averageMicrophonePower'] type": "float",
+		"properties[name='peakMicrophonePower'] type": "float",
+		"properties[name='volume'] type": "float"
+	},
+	"Titanium.UI.Window": {
+		"properties[name='windowSoftInputMode'] type": "int"
+	},
+	"Titanium.Platform.DisplayCaps": {
+		"properties[name='dpi'] type": "int",
+		"properties[name='platformHeight'] type": "float",
+		"properties[name='platformWidth'] type": "float"
+	},
+	"Titanium.UI.PickerColumn": {
+		"properties[name='rowCount'] type": "int"
+	},
+	"Titanium.App.Properties": {
+		"methods[name='getDouble'] returns type": "double",
+		"methods[name='getDouble'] parameters[name='default'] type": "double",
+		"methods[name='getInt'] returns type": "int",
+		"methods[name='getInt'] parameters[name='default'] type": "int",
+		"methods[name='setDouble'] parameters[name='value'] type": "double",
+		"methods[name='setInt'] parameters[name='value'] type": "int"
+	},
+	"Titanium.Media.MusicPlayer": {
+		"properties[name='currentPlaybackTime'] type": "double",
+		"properties[name='playbackState'] type": "int",
+		"properties[name='repeatMode'] type": "int",
+		"properties[name='shuffleMode'] type": "int",
+		"properties[name='volume'] type": "float"
+	},
+	"Titanium.UI.ActivityIndicator": {
+		"properties[name='style'] type": "int"
+	},
+	"Titanium.UI.iPad.Popover": {
+		"properties[name='arrowDirection'] type": "int"
+	},
+	"Titanium.Contacts.Person": {
+		"properties[name='kind'] type": "int"
+	},
+	"Titanium.UI.Android": {
+		"properties[name='LINKIFY_ALL'] type": "int",
+		"properties[name='LINKIFY_EMAIL_ADDRESSES'] type": "int",
+		"properties[name='LINKIFY_MAP_ADDRESSES'] type": "int",
+		"properties[name='LINKIFY_MAP_LINKS'] type": "int",
+		"properties[name='LINKIFY_PHONE_NUMBERS'] type": "int",
+		"properties[name='LINKIFY_WEB_URLS'] type": "int",
+		"properties[name='SOFT_INPUT_ADJUST_PAN'] type": "int",
+		"properties[name='SOFT_INPUT_ADJUST_RESIZE'] type": "int",
+		"properties[name='SOFT_INPUT_ADJUST_UNSPECIFIED'] type": "int",
+		"properties[name='SOFT_INPUT_STATE_HIDDEN'] type": "int",
+		"properties[name='SOFT_INPUT_STATE_UNSPECIFIED'] type": "int",
+		"properties[name='SOFT_INPUT_STATE_VISIBLE'] type": "int",
+		"properties[name='SOFT_KEYBOARD_DEFAULT_ON_FOCUS'] type": "int",
+		"properties[name='SOFT_KEYBOARD_HIDE_ON_FOCUS'] type": "int",
+		"properties[name='SOFT_KEYBOARD_SHOW_ON_FOCUS'] type": "int",
+		"properties[name='SWITCH_STYLE_CHECKBOX'] type": "int",
+		"properties[name='SWITCH_STYLE_TOGGLEBUTTON'] type": "int"
+	}
+}

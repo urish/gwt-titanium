@@ -533,12 +533,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * 
 	 * @platforms android
 	 */
-	public final native float getWindowSoftInputMode()
+	public final native int getWindowSoftInputMode()
 	/*-{
 		return this.windowSoftInputMode;
 	}-*/;
 
-	public final native void setWindowSoftInputMode(float value)
+	public final native void setWindowSoftInputMode(int value)
 	/*-{
 		this.windowSoftInputMode = value;
 	}-*/;

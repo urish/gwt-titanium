@@ -29,39 +29,39 @@ public class AnimationStyle extends org.urish.gwtit.titanium.Proxy {
 	protected AnimationStyle() {
 	}
 
-	private static native final float value_CURL_DOWN()
+	private static native final int value_CURL_DOWN()
 	/*-{
 		return Titanium.UI.iPhone.AnimationStyle.CURL_DOWN;
 	}-*/;
 
-	public static final float CURL_DOWN = value_CURL_DOWN();
+	public static final int CURL_DOWN = value_CURL_DOWN();
 
-	private static native final float value_CURL_UP()
+	private static native final int value_CURL_UP()
 	/*-{
 		return Titanium.UI.iPhone.AnimationStyle.CURL_UP;
 	}-*/;
 
-	public static final float CURL_UP = value_CURL_UP();
+	public static final int CURL_UP = value_CURL_UP();
 
-	private static native final float value_FLIP_FROM_LEFT()
+	private static native final int value_FLIP_FROM_LEFT()
 	/*-{
 		return Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_LEFT;
 	}-*/;
 
-	public static final float FLIP_FROM_LEFT = value_FLIP_FROM_LEFT();
+	public static final int FLIP_FROM_LEFT = value_FLIP_FROM_LEFT();
 
-	private static native final float value_FLIP_FROM_RIGHT()
+	private static native final int value_FLIP_FROM_RIGHT()
 	/*-{
 		return Titanium.UI.iPhone.AnimationStyle.FLIP_FROM_RIGHT;
 	}-*/;
 
-	public static final float FLIP_FROM_RIGHT = value_FLIP_FROM_RIGHT();
+	public static final int FLIP_FROM_RIGHT = value_FLIP_FROM_RIGHT();
 
-	private static native final float value_NONE()
+	private static native final int value_NONE()
 	/*-{
 		return Titanium.UI.iPhone.AnimationStyle.NONE;
 	}-*/;
 
-	public static final float NONE = value_NONE();
+	public static final int NONE = value_NONE();
 
 }

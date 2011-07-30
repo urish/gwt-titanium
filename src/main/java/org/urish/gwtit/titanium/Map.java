@@ -29,26 +29,26 @@ public class Map extends org.urish.gwtit.titanium.Module {
 	protected Map() {
 	}
 
-	private static native final float value_HYBRID_TYPE()
+	private static native final int value_HYBRID_TYPE()
 	/*-{
 		return Titanium.Map.HYBRID_TYPE;
 	}-*/;
 
-	public static final float HYBRID_TYPE = value_HYBRID_TYPE();
+	public static final int HYBRID_TYPE = value_HYBRID_TYPE();
 
-	private static native final float value_SATELLITE_TYPE()
+	private static native final int value_SATELLITE_TYPE()
 	/*-{
 		return Titanium.Map.SATELLITE_TYPE;
 	}-*/;
 
-	public static final float SATELLITE_TYPE = value_SATELLITE_TYPE();
+	public static final int SATELLITE_TYPE = value_SATELLITE_TYPE();
 
-	private static native final float value_STANDARD_TYPE()
+	private static native final int value_STANDARD_TYPE()
 	/*-{
 		return Titanium.Map.STANDARD_TYPE;
 	}-*/;
 
-	public static final float STANDARD_TYPE = value_STANDARD_TYPE();
+	public static final int STANDARD_TYPE = value_STANDARD_TYPE();
 
 	public static native org.urish.gwtit.titanium.map.Annotation createAnnotation()
 	/*-{

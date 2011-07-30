@@ -83,12 +83,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The duration of the movie, or 0.0 if not known.
 	 */
-	public final native float getDuration()
+	public final native double getDuration()
 	/*-{
 		return this.duration;
 	}-*/;
 
-	public final native void setDuration(float value)
+	public final native void setDuration(double value)
 	/*-{
 		this.duration = value;
 	}-*/;
@@ -97,12 +97,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 * @return The end time of movie playback. defaults to nan, which indicates
 	 *         natural end time of the movie.
 	 */
-	public final native float getEndPlaybackTime()
+	public final native double getEndPlaybackTime()
 	/*-{
 		return this.endPlaybackTime;
 	}-*/;
 
-	public final native void setEndPlaybackTime(float value)
+	public final native void setEndPlaybackTime(double value)
 	/*-{
 		this.endPlaybackTime = value;
 	}-*/;
@@ -127,12 +127,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 * @return The start time of movie playback. defaults to nan, indicating the
 	 *         natural start time of the movie.
 	 */
-	public final native float getInitialPlaybackTime()
+	public final native double getInitialPlaybackTime()
 	/*-{
 		return this.initialPlaybackTime;
 	}-*/;
 
-	public final native void setInitialPlaybackTime(float value)
+	public final native void setInitialPlaybackTime(double value)
 	/*-{
 		this.initialPlaybackTime = value;
 	}-*/;
@@ -140,12 +140,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Returns the network load state of the movie player.
 	 */
-	public final native float getLoadState()
+	public final native int getLoadState()
 	/*-{
 		return this.loadState;
 	}-*/;
 
-	public final native void setLoadState(float value)
+	public final native void setLoadState(int value)
 	/*-{
 		this.loadState = value;
 	}-*/;
@@ -167,12 +167,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 * @return The style of the playback controls. defaults to
 	 *         {@link org.urish.gwtit.titanium.media.video_control_default}
 	 */
-	public final native float getMediaControlStyle()
+	public final native int getMediaControlStyle()
 	/*-{
 		return this.mediaControlStyle;
 	}-*/;
 
-	public final native void setMediaControlStyle(float value)
+	public final native void setMediaControlStyle(int value)
 	/*-{
 		this.mediaControlStyle = value;
 	}-*/;
@@ -182,12 +182,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.media.video_media_type_none} if
 	 *         not known.
 	 */
-	public final native float getMediaTypes()
+	public final native int getMediaTypes()
 	/*-{
 		return this.mediaTypes;
 	}-*/;
 
-	public final native void setMediaTypes(float value)
+	public final native void setMediaTypes(int value)
 	/*-{
 		this.mediaTypes = value;
 	}-*/;
@@ -198,12 +198,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *         defaults to
 	 *         {@link org.urish.gwtit.titanium.media.video_control_default}.
 	 */
-	public final native float getMovieControlMode()
+	public final native int getMovieControlMode()
 	/*-{
 		return this.movieControlMode;
 	}-*/;
 
-	public final native void setMovieControlMode(float value)
+	public final native void setMovieControlMode(int value)
 	/*-{
 		this.movieControlMode = value;
 	}-*/;
@@ -227,12 +227,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 * @return The currently playable duration of the movie, for progressively
 	 *         downloaded network content.
 	 */
-	public final native float getPlayableDuration()
+	public final native double getPlayableDuration()
 	/*-{
 		return this.playableDuration;
 	}-*/;
 
-	public final native void setPlayableDuration(float value)
+	public final native void setPlayableDuration(double value)
 	/*-{
 		this.playableDuration = value;
 	}-*/;
@@ -240,12 +240,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Returns the current playback state of the music player
 	 */
-	public final native float getPlaybackState()
+	public final native int getPlaybackState()
 	/*-{
 		return this.playbackState;
 	}-*/;
 
-	public final native void setPlaybackState(float value)
+	public final native void setPlaybackState(int value)
 	/*-{
 		this.playbackState = value;
 	}-*/;
@@ -268,12 +268,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *         playback. defaults to
 	 *         {@link org.urish.gwtit.titanium.media.video_repeat_mode_none}.
 	 */
-	public final native float getRepeatMode()
+	public final native int getRepeatMode()
 	/*-{
 		return this.repeatMode;
 	}-*/;
 
-	public final native void setRepeatMode(float value)
+	public final native void setRepeatMode(int value)
 	/*-{
 		this.repeatMode = value;
 	}-*/;
@@ -282,12 +282,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 * @return Determines how the content scales to fit the view. defaults to
 	 *         {@link org.urish.gwtit.titanium.media.video_scaling_aspect_fit}.
 	 */
-	public final native float getScalingMode()
+	public final native int getScalingMode()
 	/*-{
 		return this.scalingMode;
 	}-*/;
 
-	public final native void setScalingMode(float value)
+	public final native void setScalingMode(int value)
 	/*-{
 		this.scalingMode = value;
 	}-*/;
@@ -298,12 +298,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *         specifying a playback type before playing the movie can result in
 	 *         faster load times.
 	 */
-	public final native float getSourceType()
+	public final native int getSourceType()
 	/*-{
 		return this.sourceType;
 	}-*/;
 
-	public final native void setSourceType(float value)
+	public final native void setSourceType(int value)
 	/*-{
 		this.sourceType = value;
 	}-*/;
@@ -386,7 +386,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *            {@link org.urish.gwtit.titanium.Media.VIDEO_TIME_OPTION_EXACT}
 	 *            .
 	 */
-	public final native void requestThumbnailImagesAtTimes(Object[] times, float option)
+	public final native void requestThumbnailImagesAtTimes(Object[] times, int option)
 	/*-{
 		return this.requestThumbnailImagesAtTimes(times, option);
 	}-*/;
@@ -421,7 +421,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *            or
 	 *            {@link org.urish.gwtit.titanium.Media.VIDEO_TIME_OPTION_EXACT}
 	 */
-	public final native Object thumbnailImageAtTime(float time, float option)
+	public final native Object thumbnailImageAtTime(double time, int option)
 	/*-{
 		return this.thumbnailImageAtTime(time, option);
 	}-*/;

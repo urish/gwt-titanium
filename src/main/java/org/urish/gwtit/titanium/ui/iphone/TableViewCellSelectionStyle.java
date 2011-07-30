@@ -30,25 +30,25 @@ public class TableViewCellSelectionStyle extends org.urish.gwtit.titanium.Proxy 
 	protected TableViewCellSelectionStyle() {
 	}
 
-	private static native final float value_BLUE()
+	private static native final int value_BLUE()
 	/*-{
 		return Titanium.UI.iPhone.TableViewCellSelectionStyle.BLUE;
 	}-*/;
 
-	public static final float BLUE = value_BLUE();
+	public static final int BLUE = value_BLUE();
 
-	private static native final float value_GRAY()
+	private static native final int value_GRAY()
 	/*-{
 		return Titanium.UI.iPhone.TableViewCellSelectionStyle.GRAY;
 	}-*/;
 
-	public static final float GRAY = value_GRAY();
+	public static final int GRAY = value_GRAY();
 
-	private static native final float value_NONE()
+	private static native final int value_NONE()
 	/*-{
 		return Titanium.UI.iPhone.TableViewCellSelectionStyle.NONE;
 	}-*/;
 
-	public static final float NONE = value_NONE();
+	public static final int NONE = value_NONE();
 
 }

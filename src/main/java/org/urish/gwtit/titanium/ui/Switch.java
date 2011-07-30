@@ -50,12 +50,12 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	 *         ti.ui.android.switch_style_togglebutton (default). (android only)
 	 * @platforms android
 	 */
-	public final native float getStyle()
+	public final native int getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public final native void setStyle(float value)
+	public final native void setStyle(int value)
 	/*-{
 		this.style = value;
 	}-*/;

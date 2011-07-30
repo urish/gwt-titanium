@@ -32,117 +32,117 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	protected Geolocation() {
 	}
 
-	private static native final float value_ACCURACY_BEST()
+	private static native final int value_ACCURACY_BEST()
 	/*-{
 		return Titanium.Geolocation.ACCURACY_BEST;
 	}-*/;
 
-	public static final float ACCURACY_BEST = value_ACCURACY_BEST();
+	public static final int ACCURACY_BEST = value_ACCURACY_BEST();
 
-	private static native final float value_ACCURACY_HUNDRED_METERS()
+	private static native final int value_ACCURACY_HUNDRED_METERS()
 	/*-{
 		return Titanium.Geolocation.ACCURACY_HUNDRED_METERS;
 	}-*/;
 
-	public static final float ACCURACY_HUNDRED_METERS = value_ACCURACY_HUNDRED_METERS();
+	public static final int ACCURACY_HUNDRED_METERS = value_ACCURACY_HUNDRED_METERS();
 
-	private static native final float value_ACCURACY_KILOMETER()
+	private static native final int value_ACCURACY_KILOMETER()
 	/*-{
 		return Titanium.Geolocation.ACCURACY_KILOMETER;
 	}-*/;
 
-	public static final float ACCURACY_KILOMETER = value_ACCURACY_KILOMETER();
+	public static final int ACCURACY_KILOMETER = value_ACCURACY_KILOMETER();
 
-	private static native final float value_ACCURACY_NEAREST_TEN_METERS()
+	private static native final int value_ACCURACY_NEAREST_TEN_METERS()
 	/*-{
 		return Titanium.Geolocation.ACCURACY_NEAREST_TEN_METERS;
 	}-*/;
 
-	public static final float ACCURACY_NEAREST_TEN_METERS = value_ACCURACY_NEAREST_TEN_METERS();
+	public static final int ACCURACY_NEAREST_TEN_METERS = value_ACCURACY_NEAREST_TEN_METERS();
 
-	private static native final float value_ACCURACY_THREE_KILOMETERS()
+	private static native final int value_ACCURACY_THREE_KILOMETERS()
 	/*-{
 		return Titanium.Geolocation.ACCURACY_THREE_KILOMETERS;
 	}-*/;
 
-	public static final float ACCURACY_THREE_KILOMETERS = value_ACCURACY_THREE_KILOMETERS();
+	public static final int ACCURACY_THREE_KILOMETERS = value_ACCURACY_THREE_KILOMETERS();
 
-	private static native final float value_AUTHORIZATION_AUTHORIZED()
+	private static native final int value_AUTHORIZATION_AUTHORIZED()
 	/*-{
 		return Titanium.Geolocation.AUTHORIZATION_AUTHORIZED;
 	}-*/;
 
-	public static final float AUTHORIZATION_AUTHORIZED = value_AUTHORIZATION_AUTHORIZED();
+	public static final int AUTHORIZATION_AUTHORIZED = value_AUTHORIZATION_AUTHORIZED();
 
-	private static native final float value_AUTHORIZATION_DENIED()
+	private static native final int value_AUTHORIZATION_DENIED()
 	/*-{
 		return Titanium.Geolocation.AUTHORIZATION_DENIED;
 	}-*/;
 
-	public static final float AUTHORIZATION_DENIED = value_AUTHORIZATION_DENIED();
+	public static final int AUTHORIZATION_DENIED = value_AUTHORIZATION_DENIED();
 
-	private static native final float value_AUTHORIZATION_RESTRICTED()
+	private static native final int value_AUTHORIZATION_RESTRICTED()
 	/*-{
 		return Titanium.Geolocation.AUTHORIZATION_RESTRICTED;
 	}-*/;
 
-	public static final float AUTHORIZATION_RESTRICTED = value_AUTHORIZATION_RESTRICTED();
+	public static final int AUTHORIZATION_RESTRICTED = value_AUTHORIZATION_RESTRICTED();
 
-	private static native final float value_AUTHORIZATION_UNKNOWN()
+	private static native final int value_AUTHORIZATION_UNKNOWN()
 	/*-{
 		return Titanium.Geolocation.AUTHORIZATION_UNKNOWN;
 	}-*/;
 
-	public static final float AUTHORIZATION_UNKNOWN = value_AUTHORIZATION_UNKNOWN();
+	public static final int AUTHORIZATION_UNKNOWN = value_AUTHORIZATION_UNKNOWN();
 
-	private static native final float value_ERROR_DENIED()
+	private static native final int value_ERROR_DENIED()
 	/*-{
 		return Titanium.Geolocation.ERROR_DENIED;
 	}-*/;
 
-	public static final float ERROR_DENIED = value_ERROR_DENIED();
+	public static final int ERROR_DENIED = value_ERROR_DENIED();
 
-	private static native final float value_ERROR_HEADING_FAILURE()
+	private static native final int value_ERROR_HEADING_FAILURE()
 	/*-{
 		return Titanium.Geolocation.ERROR_HEADING_FAILURE;
 	}-*/;
 
-	public static final float ERROR_HEADING_FAILURE = value_ERROR_HEADING_FAILURE();
+	public static final int ERROR_HEADING_FAILURE = value_ERROR_HEADING_FAILURE();
 
-	private static native final float value_ERROR_LOCATION_UNKNOWN()
+	private static native final int value_ERROR_LOCATION_UNKNOWN()
 	/*-{
 		return Titanium.Geolocation.ERROR_LOCATION_UNKNOWN;
 	}-*/;
 
-	public static final float ERROR_LOCATION_UNKNOWN = value_ERROR_LOCATION_UNKNOWN();
+	public static final int ERROR_LOCATION_UNKNOWN = value_ERROR_LOCATION_UNKNOWN();
 
-	private static native final float value_ERROR_NETWORK()
+	private static native final int value_ERROR_NETWORK()
 	/*-{
 		return Titanium.Geolocation.ERROR_NETWORK;
 	}-*/;
 
-	public static final float ERROR_NETWORK = value_ERROR_NETWORK();
+	public static final int ERROR_NETWORK = value_ERROR_NETWORK();
 
-	private static native final float value_ERROR_REGION_MONITORING_DELAYED()
+	private static native final int value_ERROR_REGION_MONITORING_DELAYED()
 	/*-{
 		return Titanium.Geolocation.ERROR_REGION_MONITORING_DELAYED;
 	}-*/;
 
-	public static final float ERROR_REGION_MONITORING_DELAYED = value_ERROR_REGION_MONITORING_DELAYED();
+	public static final int ERROR_REGION_MONITORING_DELAYED = value_ERROR_REGION_MONITORING_DELAYED();
 
-	private static native final float value_ERROR_REGION_MONITORING_DENIED()
+	private static native final int value_ERROR_REGION_MONITORING_DENIED()
 	/*-{
 		return Titanium.Geolocation.ERROR_REGION_MONITORING_DENIED;
 	}-*/;
 
-	public static final float ERROR_REGION_MONITORING_DENIED = value_ERROR_REGION_MONITORING_DENIED();
+	public static final int ERROR_REGION_MONITORING_DENIED = value_ERROR_REGION_MONITORING_DENIED();
 
-	private static native final float value_ERROR_REGION_MONITORING_FAILURE()
+	private static native final int value_ERROR_REGION_MONITORING_FAILURE()
 	/*-{
 		return Titanium.Geolocation.ERROR_REGION_MONITORING_FAILURE;
 	}-*/;
 
-	public static final float ERROR_REGION_MONITORING_FAILURE = value_ERROR_REGION_MONITORING_FAILURE();
+	public static final int ERROR_REGION_MONITORING_FAILURE = value_ERROR_REGION_MONITORING_FAILURE();
 
 	private static native final String value_PROVIDER_GPS()
 	/*-{
@@ -163,12 +163,12 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *         event is fired. default is 0, meaning that location events are
 	 *         continuously generated.
 	 */
-	public static native float getDistanceFilter()
+	public static native double getDistanceFilter()
 	/*-{
 		return Titanium.Geolocation.distanceFilter;
 	}-*/;
 
-	public static native void setDistanceFilter(float value)
+	public static native void setDistanceFilter(double value)
 	/*-{
 		Titanium.Geolocation.distanceFilter = value;
 	}-*/;
@@ -178,12 +178,12 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *         event is fired. default is 0, meaning that heading events are
 	 *         continuously generated.
 	 */
-	public static native float getHeadingFilter()
+	public static native double getHeadingFilter()
 	/*-{
 		return Titanium.Geolocation.headingFilter;
 	}-*/;
 
-	public static native void setHeadingFilter(float value)
+	public static native void setHeadingFilter(double value)
 	/*-{
 		Titanium.Geolocation.headingFilter = value;
 	}-*/;
@@ -195,12 +195,12 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *         re-authorize when authorization_restricted will lead to issues
 	 * @platforms iphone, ipad
 	 */
-	public static native float getLocationServicesAuthorization()
+	public static native int getLocationServicesAuthorization()
 	/*-{
 		return Titanium.Geolocation.locationServicesAuthorization;
 	}-*/;
 
-	public static native void setLocationServicesAuthorization(float value)
+	public static native void setLocationServicesAuthorization(int value)
 	/*-{
 		Titanium.Geolocation.locationServicesAuthorization = value;
 	}-*/;
@@ -303,7 +303,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * @param longitude
 	 *            longitude to search
 	 */
-	public static native void reverseGeocoder(float latitude, float longitude,
+	public static native void reverseGeocoder(double latitude, double longitude,
 			EventCallback<org.urish.gwtit.titanium.geolocation.ReverseGeocoderResult> callback)
 	/*-{
 		return Titanium.Geolocation.reverseGeocoder(latitude, longitude, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });

@@ -40,12 +40,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 *         keep in mind that improved performance (larger cache) will lead
 	 *         to faster performance, but more memory usage. ios only.
 	 */
-	public final native float getCacheSize()
+	public final native int getCacheSize()
 	/*-{
 		return this.cacheSize;
 	}-*/;
 
-	public final native void setCacheSize(float value)
+	public final native void setCacheSize(int value)
 	/*-{
 		this.cacheSize = value;
 	}-*/;
@@ -53,12 +53,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The current page visible in the view
 	 */
-	public final native float getCurrentPage()
+	public final native int getCurrentPage()
 	/*-{
 		return this.currentPage;
 	}-*/;
 
-	public final native void setCurrentPage(float value)
+	public final native void setCurrentPage(int value)
 	/*-{
 		this.currentPage = value;
 	}-*/;

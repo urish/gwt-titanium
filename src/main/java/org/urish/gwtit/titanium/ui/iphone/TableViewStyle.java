@@ -30,18 +30,18 @@ public class TableViewStyle extends org.urish.gwtit.titanium.Proxy {
 	protected TableViewStyle() {
 	}
 
-	private static native final float value_GROUPED()
+	private static native final int value_GROUPED()
 	/*-{
 		return Titanium.UI.iPhone.TableViewStyle.GROUPED;
 	}-*/;
 
-	public static final float GROUPED = value_GROUPED();
+	public static final int GROUPED = value_GROUPED();
 
-	private static native final float value_PLAIN()
+	private static native final int value_PLAIN()
 	/*-{
 		return Titanium.UI.iPhone.TableViewStyle.PLAIN;
 	}-*/;
 
-	public static final float PLAIN = value_PLAIN();
+	public static final int PLAIN = value_PLAIN();
 
 }

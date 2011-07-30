@@ -62,12 +62,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @platforms android
 	 * @since 1.7.0
 	 */
-	public final native float getDecodeRetries()
+	public final native int getDecodeRetries()
 	/*-{
 		return this.decodeRetries;
 	}-*/;
 
-	public final native void setDecodeRetries(float value)
+	public final native void setDecodeRetries(int value)
 	/*-{
 		this.decodeRetries = value;
 	}-*/;
@@ -181,12 +181,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Number of times to repeat the image animation
 	 */
-	public final native float getRepeatCount()
+	public final native int getRepeatCount()
 	/*-{
 		return this.repeatCount;
 	}-*/;
 
-	public final native void setRepeatCount(float value)
+	public final native void setRepeatCount(int value)
 	/*-{
 		this.repeatCount = value;
 	}-*/;

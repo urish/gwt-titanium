@@ -40,47 +40,47 @@ public class iPad extends org.urish.gwtit.titanium.Module {
 	protected iPad() {
 	}
 
-	private static native final float value_POPOVER_ARROW_DIRECTION_ANY()
+	private static native final int value_POPOVER_ARROW_DIRECTION_ANY()
 	/*-{
 		return Titanium.UI.iPad.POPOVER_ARROW_DIRECTION_ANY;
 	}-*/;
 
-	public static final float POPOVER_ARROW_DIRECTION_ANY = value_POPOVER_ARROW_DIRECTION_ANY();
+	public static final int POPOVER_ARROW_DIRECTION_ANY = value_POPOVER_ARROW_DIRECTION_ANY();
 
-	private static native final float value_POPOVER_ARROW_DIRECTION_DOWN()
+	private static native final int value_POPOVER_ARROW_DIRECTION_DOWN()
 	/*-{
 		return Titanium.UI.iPad.POPOVER_ARROW_DIRECTION_DOWN;
 	}-*/;
 
-	public static final float POPOVER_ARROW_DIRECTION_DOWN = value_POPOVER_ARROW_DIRECTION_DOWN();
+	public static final int POPOVER_ARROW_DIRECTION_DOWN = value_POPOVER_ARROW_DIRECTION_DOWN();
 
-	private static native final float value_POPOVER_ARROW_DIRECTION_LEFT()
+	private static native final int value_POPOVER_ARROW_DIRECTION_LEFT()
 	/*-{
 		return Titanium.UI.iPad.POPOVER_ARROW_DIRECTION_LEFT;
 	}-*/;
 
-	public static final float POPOVER_ARROW_DIRECTION_LEFT = value_POPOVER_ARROW_DIRECTION_LEFT();
+	public static final int POPOVER_ARROW_DIRECTION_LEFT = value_POPOVER_ARROW_DIRECTION_LEFT();
 
-	private static native final float value_POPOVER_ARROW_DIRECTION_RIGHT()
+	private static native final int value_POPOVER_ARROW_DIRECTION_RIGHT()
 	/*-{
 		return Titanium.UI.iPad.POPOVER_ARROW_DIRECTION_RIGHT;
 	}-*/;
 
-	public static final float POPOVER_ARROW_DIRECTION_RIGHT = value_POPOVER_ARROW_DIRECTION_RIGHT();
+	public static final int POPOVER_ARROW_DIRECTION_RIGHT = value_POPOVER_ARROW_DIRECTION_RIGHT();
 
-	private static native final float value_POPOVER_ARROW_DIRECTION_UNKNOWN()
+	private static native final int value_POPOVER_ARROW_DIRECTION_UNKNOWN()
 	/*-{
 		return Titanium.UI.iPad.POPOVER_ARROW_DIRECTION_UNKNOWN;
 	}-*/;
 
-	public static final float POPOVER_ARROW_DIRECTION_UNKNOWN = value_POPOVER_ARROW_DIRECTION_UNKNOWN();
+	public static final int POPOVER_ARROW_DIRECTION_UNKNOWN = value_POPOVER_ARROW_DIRECTION_UNKNOWN();
 
-	private static native final float value_POPOVER_ARROW_DIRECTION_UP()
+	private static native final int value_POPOVER_ARROW_DIRECTION_UP()
 	/*-{
 		return Titanium.UI.iPad.POPOVER_ARROW_DIRECTION_UP;
 	}-*/;
 
-	public static final float POPOVER_ARROW_DIRECTION_UP = value_POPOVER_ARROW_DIRECTION_UP();
+	public static final int POPOVER_ARROW_DIRECTION_UP = value_POPOVER_ARROW_DIRECTION_UP();
 
 	public static native org.urish.gwtit.titanium.ui.ipad.DocumentViewer createDocumentViewer()
 	/*-{

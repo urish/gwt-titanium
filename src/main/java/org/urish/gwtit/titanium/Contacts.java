@@ -39,33 +39,33 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	protected Contacts() {
 	}
 
-	private static native final float value_CONTACTS_KIND_ORGANIZATION()
+	private static native final int value_CONTACTS_KIND_ORGANIZATION()
 	/*-{
 		return Titanium.Contacts.CONTACTS_KIND_ORGANIZATION;
 	}-*/;
 
-	public static final float CONTACTS_KIND_ORGANIZATION = value_CONTACTS_KIND_ORGANIZATION();
+	public static final int CONTACTS_KIND_ORGANIZATION = value_CONTACTS_KIND_ORGANIZATION();
 
-	private static native final float value_CONTACTS_KIND_PERSON()
+	private static native final int value_CONTACTS_KIND_PERSON()
 	/*-{
 		return Titanium.Contacts.CONTACTS_KIND_PERSON;
 	}-*/;
 
-	public static final float CONTACTS_KIND_PERSON = value_CONTACTS_KIND_PERSON();
+	public static final int CONTACTS_KIND_PERSON = value_CONTACTS_KIND_PERSON();
 
-	private static native final float value_CONTACTS_SORT_FIRST_NAME()
+	private static native final int value_CONTACTS_SORT_FIRST_NAME()
 	/*-{
 		return Titanium.Contacts.CONTACTS_SORT_FIRST_NAME;
 	}-*/;
 
-	public static final float CONTACTS_SORT_FIRST_NAME = value_CONTACTS_SORT_FIRST_NAME();
+	public static final int CONTACTS_SORT_FIRST_NAME = value_CONTACTS_SORT_FIRST_NAME();
 
-	private static native final float value_CONTACTS_SORT_LAST_NAME()
+	private static native final int value_CONTACTS_SORT_LAST_NAME()
 	/*-{
 		return Titanium.Contacts.CONTACTS_SORT_LAST_NAME;
 	}-*/;
 
-	public static final float CONTACTS_SORT_LAST_NAME = value_CONTACTS_SORT_LAST_NAME();
+	public static final int CONTACTS_SORT_LAST_NAME = value_CONTACTS_SORT_LAST_NAME();
 
 	/**
 	 * Create and return an instance of titanium.contacts.group
@@ -123,7 +123,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 * @param id
 	 *            The database ID of the group to retrieve
 	 */
-	public static native org.urish.gwtit.titanium.contacts.Group getGroupByID(float id)
+	public static native org.urish.gwtit.titanium.contacts.Group getGroupByID(int id)
 	/*-{
 		return Titanium.Contacts.getGroupByID(id);
 	}-*/;
@@ -148,7 +148,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 * @param id
 	 *            The database ID of the person to retrieve
 	 */
-	public static native org.urish.gwtit.titanium.contacts.Person getPersonByID(float id)
+	public static native org.urish.gwtit.titanium.contacts.Person getPersonByID(int id)
 	/*-{
 		return Titanium.Contacts.getPersonByID(id);
 	}-*/;

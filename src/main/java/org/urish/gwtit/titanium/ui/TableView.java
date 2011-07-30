@@ -308,12 +308,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The separator style constant. for iphone,
 	 *         titanium.ui.iphone.tableviewseparatorstyle
 	 */
-	public final native float getSeparatorStyle()
+	public final native int getSeparatorStyle()
 	/*-{
 		return this.separatorStyle;
 	}-*/;
 
-	public final native void setSeparatorStyle(float value)
+	public final native void setSeparatorStyle(int value)
 	/*-{
 		this.separatorStyle = value;
 	}-*/;
@@ -337,12 +337,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.ui.iphone.tableviewstyle}
 	 * @platforms iphone, ipad
 	 */
-	public final native float getStyle()
+	public final native int getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public final native void setStyle(float value)
+	public final native void setStyle(int value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -368,7 +368,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void deleteRow(float row, Object properties)
+	public final native void deleteRow(int row, Object properties)
 	/*-{
 		return this.deleteRow(row, properties);
 	}-*/;
@@ -379,7 +379,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param row
 	 *            row index to deselect
 	 */
-	public final native void deselectRow(float row)
+	public final native void deselectRow(int row)
 	/*-{
 		return this.deselectRow(row);
 	}-*/;
@@ -394,7 +394,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void insertRowAfter(float index, Object row, Object properties)
+	public final native void insertRowAfter(int index, Object row, Object properties)
 	/*-{
 		return this.insertRowAfter(index, row, properties);
 	}-*/;
@@ -409,7 +409,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void insertRowBefore(float index, Object row, Object properties)
+	public final native void insertRowBefore(int index, Object row, Object properties)
 	/*-{
 		return this.insertRowBefore(index, row, properties);
 	}-*/;
@@ -424,7 +424,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *            position constant to use for position (on iPhone, use
 	 *            constants from Titanium.UI.iPhone.TableViewScrollPosition).
 	 */
-	public final native void scrollToIndex(float index, Object properties)
+	public final native void scrollToIndex(int index, Object properties)
 	/*-{
 		return this.scrollToIndex(index, properties);
 	}-*/;
@@ -451,7 +451,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param row
 	 *            row index to select
 	 */
-	public final native void selectRow(float row)
+	public final native void selectRow(int row)
 	/*-{
 		return this.selectRow(row);
 	}-*/;

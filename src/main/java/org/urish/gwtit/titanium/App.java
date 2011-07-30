@@ -129,12 +129,12 @@ public class App extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return The state of the device's proximity detector
 	 */
-	public static native float getProximityState()
+	public static native int getProximityState()
 	/*-{
 		return Titanium.App.proximityState;
 	}-*/;
 
-	public static native void setProximityState(float value)
+	public static native void setProximityState(int value)
 	/*-{
 		Titanium.App.proximityState = value;
 	}-*/;

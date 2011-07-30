@@ -33,33 +33,33 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	protected EmailDialog() {
 	}
 
-	private static native final float value_CANCELLED()
+	private static native final int value_CANCELLED()
 	/*-{
 		return Titanium.UI.EmailDialog.CANCELLED;
 	}-*/;
 
-	public static final float CANCELLED = value_CANCELLED();
+	public static final int CANCELLED = value_CANCELLED();
 
-	private static native final float value_FAILED()
+	private static native final int value_FAILED()
 	/*-{
 		return Titanium.UI.EmailDialog.FAILED;
 	}-*/;
 
-	public static final float FAILED = value_FAILED();
+	public static final int FAILED = value_FAILED();
 
-	private static native final float value_SAVED()
+	private static native final int value_SAVED()
 	/*-{
 		return Titanium.UI.EmailDialog.SAVED;
 	}-*/;
 
-	public static final float SAVED = value_SAVED();
+	public static final int SAVED = value_SAVED();
 
-	private static native final float value_SENT()
+	private static native final int value_SENT()
 	/*-{
 		return Titanium.UI.EmailDialog.SENT;
 	}-*/;
 
-	public static final float SENT = value_SENT();
+	public static final int SENT = value_SENT();
 
 	/**
 	 * @return The bar color of the email dialog window when opened

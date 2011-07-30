@@ -58,12 +58,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return An index to indicate which button should be the cancel button
 	 */
-	public final native float getCancel()
+	public final native int getCancel()
 	/*-{
 		return this.cancel;
 	}-*/;
 
-	public final native void setCancel(float value)
+	public final native void setCancel(int value)
 	/*-{
 		this.cancel = value;
 	}-*/;

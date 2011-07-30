@@ -42,12 +42,12 @@ public class SearchBar extends org.urish.gwtit.titanium.ui.View {
 	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_all}
 	 *         to indicate how the field should be capitalized during typing.
 	 */
-	public final native float getAutocapitalization()
+	public final native int getAutocapitalization()
 	/*-{
 		return this.autocapitalization;
 	}-*/;
 
-	public final native void setAutocapitalization(float value)
+	public final native void setAutocapitalization(int value)
 	/*-{
 		this.autocapitalization = value;
 	}-*/;
@@ -108,12 +108,12 @@ public class SearchBar extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The keyboard type constant to use when the field is focused
 	 */
-	public final native float getKeyboardType()
+	public final native int getKeyboardType()
 	/*-{
 		return this.keyboardType;
 	}-*/;
 
-	public final native void setKeyboardType(float value)
+	public final native void setKeyboardType(int value)
 	/*-{
 		this.keyboardType = value;
 	}-*/;

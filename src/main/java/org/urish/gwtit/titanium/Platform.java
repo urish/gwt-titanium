@@ -32,33 +32,33 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	protected Platform() {
 	}
 
-	private static native final float value_BATTERY_STATE_CHARGING()
+	private static native final int value_BATTERY_STATE_CHARGING()
 	/*-{
 		return Titanium.Platform.BATTERY_STATE_CHARGING;
 	}-*/;
 
-	public static final float BATTERY_STATE_CHARGING = value_BATTERY_STATE_CHARGING();
+	public static final int BATTERY_STATE_CHARGING = value_BATTERY_STATE_CHARGING();
 
-	private static native final float value_BATTERY_STATE_FULL()
+	private static native final int value_BATTERY_STATE_FULL()
 	/*-{
 		return Titanium.Platform.BATTERY_STATE_FULL;
 	}-*/;
 
-	public static final float BATTERY_STATE_FULL = value_BATTERY_STATE_FULL();
+	public static final int BATTERY_STATE_FULL = value_BATTERY_STATE_FULL();
 
-	private static native final float value_BATTERY_STATE_UNKNOWN()
+	private static native final int value_BATTERY_STATE_UNKNOWN()
 	/*-{
 		return Titanium.Platform.BATTERY_STATE_UNKNOWN;
 	}-*/;
 
-	public static final float BATTERY_STATE_UNKNOWN = value_BATTERY_STATE_UNKNOWN();
+	public static final int BATTERY_STATE_UNKNOWN = value_BATTERY_STATE_UNKNOWN();
 
-	private static native final float value_BATTERY_STATE_UNPLUGGED()
+	private static native final int value_BATTERY_STATE_UNPLUGGED()
 	/*-{
 		return Titanium.Platform.BATTERY_STATE_UNPLUGGED;
 	}-*/;
 
-	public static final float BATTERY_STATE_UNPLUGGED = value_BATTERY_STATE_UNPLUGGED();
+	public static final int BATTERY_STATE_UNPLUGGED = value_BATTERY_STATE_UNPLUGGED();
 
 	/**
 	 * @return The ip address that the device reports (only applicable on wifi
@@ -90,12 +90,12 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return Return the amount of memory available on the device in bytes
 	 */
-	public static native float getAvailableMemory()
+	public static native double getAvailableMemory()
 	/*-{
 		return Titanium.Platform.availableMemory;
 	}-*/;
 
-	public static native void setAvailableMemory(float value)
+	public static native void setAvailableMemory(double value)
 	/*-{
 		Titanium.Platform.availableMemory = value;
 	}-*/;
@@ -132,12 +132,12 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	 * @return Constant that represents the state of the battery. this property
 	 *         is only accessible if `batterymonitoring` is enabled
 	 */
-	public static native float getBatteryState()
+	public static native int getBatteryState()
 	/*-{
 		return Titanium.Platform.batteryState;
 	}-*/;
 
-	public static native void setBatteryState(float value)
+	public static native void setBatteryState(int value)
 	/*-{
 		Titanium.Platform.batteryState = value;
 	}-*/;
@@ -265,12 +265,12 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return The number of processors the device reports
 	 */
-	public static native float getProcessorCount()
+	public static native int getProcessorCount()
 	/*-{
 		return Titanium.Platform.processorCount;
 	}-*/;
 
-	public static native void setProcessorCount(float value)
+	public static native void setProcessorCount(int value)
 	/*-{
 		Titanium.Platform.processorCount = value;
 	}-*/;

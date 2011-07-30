@@ -128,7 +128,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	 *            the timeout for service resolution, in seconds. Optional,
 	 *            default is 120s.
 	 */
-	public final native void resolve(float timeout)
+	public final native void resolve(double timeout)
 	/*-{
 		return this.resolve(timeout);
 	}-*/;

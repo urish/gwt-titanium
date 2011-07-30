@@ -47,7 +47,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the created timestamp for the file
 	 */
-	public final native float createTimestamp()
+	public final native long createTimestamp()
 	/*-{
 		return this.createTimestamp();
 	}-*/;
@@ -125,7 +125,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the last modification timestamp for the file
 	 */
-	public final native float modificationTimestamp()
+	public final native long modificationTimestamp()
 	/*-{
 		return this.modificationTimestamp();
 	}-*/;

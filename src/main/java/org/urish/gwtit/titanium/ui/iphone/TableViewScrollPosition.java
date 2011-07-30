@@ -31,32 +31,32 @@ public class TableViewScrollPosition extends org.urish.gwtit.titanium.Proxy {
 	protected TableViewScrollPosition() {
 	}
 
-	private static native final float value_BOTTOM()
+	private static native final int value_BOTTOM()
 	/*-{
 		return Titanium.UI.iPhone.TableViewScrollPosition.BOTTOM;
 	}-*/;
 
-	public static final float BOTTOM = value_BOTTOM();
+	public static final int BOTTOM = value_BOTTOM();
 
-	private static native final float value_MIDDLE()
+	private static native final int value_MIDDLE()
 	/*-{
 		return Titanium.UI.iPhone.TableViewScrollPosition.MIDDLE;
 	}-*/;
 
-	public static final float MIDDLE = value_MIDDLE();
+	public static final int MIDDLE = value_MIDDLE();
 
-	private static native final float value_NONE()
+	private static native final int value_NONE()
 	/*-{
 		return Titanium.UI.iPhone.TableViewScrollPosition.NONE;
 	}-*/;
 
-	public static final float NONE = value_NONE();
+	public static final int NONE = value_NONE();
 
-	private static native final float value_TOP()
+	private static native final int value_TOP()
 	/*-{
 		return Titanium.UI.iPhone.TableViewScrollPosition.TOP;
 	}-*/;
 
-	public static final float TOP = value_TOP();
+	public static final int TOP = value_TOP();
 
 }

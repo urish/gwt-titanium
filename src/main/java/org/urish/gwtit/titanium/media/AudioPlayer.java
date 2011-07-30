@@ -31,68 +31,68 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	protected AudioPlayer() {
 	}
 
-	private static native final float value_STATE_BUFFERING()
+	private static native final int value_STATE_BUFFERING()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_BUFFERING;
 	}-*/;
 
-	public static final float STATE_BUFFERING = value_STATE_BUFFERING();
+	public static final int STATE_BUFFERING = value_STATE_BUFFERING();
 
-	private static native final float value_STATE_INITIALIZED()
+	private static native final int value_STATE_INITIALIZED()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_INITIALIZED;
 	}-*/;
 
-	public static final float STATE_INITIALIZED = value_STATE_INITIALIZED();
+	public static final int STATE_INITIALIZED = value_STATE_INITIALIZED();
 
-	private static native final float value_STATE_PAUSED()
+	private static native final int value_STATE_PAUSED()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_PAUSED;
 	}-*/;
 
-	public static final float STATE_PAUSED = value_STATE_PAUSED();
+	public static final int STATE_PAUSED = value_STATE_PAUSED();
 
-	private static native final float value_STATE_PLAYING()
+	private static native final int value_STATE_PLAYING()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_PLAYING;
 	}-*/;
 
-	public static final float STATE_PLAYING = value_STATE_PLAYING();
+	public static final int STATE_PLAYING = value_STATE_PLAYING();
 
-	private static native final float value_STATE_STARTING()
+	private static native final int value_STATE_STARTING()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_STARTING;
 	}-*/;
 
-	public static final float STATE_STARTING = value_STATE_STARTING();
+	public static final int STATE_STARTING = value_STATE_STARTING();
 
-	private static native final float value_STATE_STOPPED()
+	private static native final int value_STATE_STOPPED()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_STOPPED;
 	}-*/;
 
-	public static final float STATE_STOPPED = value_STATE_STOPPED();
+	public static final int STATE_STOPPED = value_STATE_STOPPED();
 
-	private static native final float value_STATE_STOPPING()
+	private static native final int value_STATE_STOPPING()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_STOPPING;
 	}-*/;
 
-	public static final float STATE_STOPPING = value_STATE_STOPPING();
+	public static final int STATE_STOPPING = value_STATE_STOPPING();
 
-	private static native final float value_STATE_WAITING_FOR_DATA()
+	private static native final int value_STATE_WAITING_FOR_DATA()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_WAITING_FOR_DATA;
 	}-*/;
 
-	public static final float STATE_WAITING_FOR_DATA = value_STATE_WAITING_FOR_DATA();
+	public static final int STATE_WAITING_FOR_DATA = value_STATE_WAITING_FOR_DATA();
 
-	private static native final float value_STATE_WAITING_FOR_QUEUE()
+	private static native final int value_STATE_WAITING_FOR_QUEUE()
 	/*-{
 		return Titanium.Media.AudioPlayer.STATE_WAITING_FOR_QUEUE;
 	}-*/;
 
-	public static final float STATE_WAITING_FOR_QUEUE = value_STATE_WAITING_FOR_QUEUE();
+	public static final int STATE_WAITING_FOR_QUEUE = value_STATE_WAITING_FOR_QUEUE();
 
 	/**
 	 * @return Boolean to indicate if audio should continue playing even if
@@ -111,12 +111,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Bit rate of the current playback stream
 	 */
-	public final native float getBitRate()
+	public final native double getBitRate()
 	/*-{
 		return this.bitRate;
 	}-*/;
 
-	public final native void setBitRate(float value)
+	public final native void setBitRate(double value)
 	/*-{
 		this.bitRate = value;
 	}-*/;
@@ -164,12 +164,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	 * @return Returns the current playback progress. will return zero if
 	 *         samplerate has not yet been detected
 	 */
-	public final native float getProgress()
+	public final native double getProgress()
 	/*-{
 		return this.progress;
 	}-*/;
 
-	public final native void setProgress(float value)
+	public final native void setProgress(double value)
 	/*-{
 		this.progress = value;
 	}-*/;
@@ -177,12 +177,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Returns int for the current state of playback
 	 */
-	public final native float getState()
+	public final native int getState()
 	/*-{
 		return this.state;
 	}-*/;
 
-	public final native void setState(float value)
+	public final native void setState(int value)
 	/*-{
 		this.state = value;
 	}-*/;

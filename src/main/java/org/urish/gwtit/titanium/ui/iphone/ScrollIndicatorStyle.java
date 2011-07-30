@@ -30,25 +30,25 @@ public class ScrollIndicatorStyle extends org.urish.gwtit.titanium.Proxy {
 	protected ScrollIndicatorStyle() {
 	}
 
-	private static native final float value_BLACK()
+	private static native final int value_BLACK()
 	/*-{
 		return Titanium.UI.iPhone.ScrollIndicatorStyle.BLACK;
 	}-*/;
 
-	public static final float BLACK = value_BLACK();
+	public static final int BLACK = value_BLACK();
 
-	private static native final float value_DEFAULT()
+	private static native final int value_DEFAULT()
 	/*-{
 		return Titanium.UI.iPhone.ScrollIndicatorStyle.DEFAULT;
 	}-*/;
 
-	public static final float DEFAULT = value_DEFAULT();
+	public static final int DEFAULT = value_DEFAULT();
 
-	private static native final float value_WHITE()
+	private static native final int value_WHITE()
 	/*-{
 		return Titanium.UI.iPhone.ScrollIndicatorStyle.WHITE;
 	}-*/;
 
-	public static final float WHITE = value_WHITE();
+	public static final int WHITE = value_WHITE();
 
 }

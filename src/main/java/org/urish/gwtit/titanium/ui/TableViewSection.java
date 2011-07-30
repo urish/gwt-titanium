@@ -86,12 +86,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The (readonly) number of rows in the section
 	 */
-	public final native float getRowCount()
+	public final native int getRowCount()
 	/*-{
 		return this.rowCount;
 	}-*/;
 
-	public final native void setRowCount(float value)
+	public final native void setRowCount(int value)
 	/*-{
 		this.rowCount = value;
 	}-*/;
