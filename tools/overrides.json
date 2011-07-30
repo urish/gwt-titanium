@@ -154,6 +154,14 @@
 	"Titanium.UI.ProgressBar": {
 		"properties[name='font'] type": "Font"
 	},
+	"Titanium.UI.Tab": {
+		"methods": [
+			{"name": "open", "parameters": [{"name": "view", "type": "Titanium.UI.View", "description": "The view to open in the tab"}]}
+		]
+	},
+	"Titanium.UI.TabGroup": {
+		"properties[name='activeTab'] type": "Titanium.UI.Tab"
+	},
 	"Titanium.XML.Document": {
 		"methods[name='createCDATASection']     returns type": "Object",
 		"methods[name='createComment']          returns type": "Object",

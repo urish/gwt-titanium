@@ -100,4 +100,13 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 		this.window = value;
 	}-*/;
 
+	/**
+	 * @param view
+	 *            The view to open in the tab
+	 */
+	public final native void open(org.urish.gwtit.titanium.ui.View view)
+	/*-{
+		return this.open(view);
+	}-*/;
+
 }

@@ -39,12 +39,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The active tab
 	 */
-	public final native Object getActiveTab()
+	public final native org.urish.gwtit.titanium.ui.Tab getActiveTab()
 	/*-{
 		return this.activeTab;
 	}-*/;
 
-	public final native void setActiveTab(Object value)
+	public final native void setActiveTab(org.urish.gwtit.titanium.ui.Tab value)
 	/*-{
 		this.activeTab = value;
 	}-*/;

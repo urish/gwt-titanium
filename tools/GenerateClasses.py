@@ -566,7 +566,11 @@ def processOverrides(typeInfo, overrides):
 						subject = subItem
 			else:
 				subject = subject[selector]
-		subject[chain[-1]] = item
+		key = chain[-1]
+		if key.endswith("+"):
+			subject[key[:-1]] += item
+		else:
+			subject[key] = item
 
 def processDir(inputDir, projectDir):
 	types = []
