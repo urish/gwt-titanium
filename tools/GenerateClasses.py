@@ -97,7 +97,7 @@ CALLBACK_GETTER_TEMPLATE = """
 CALLBACK_SETTER_TEMPLATE = """
 	public final native void set%(nameCapital)s(%(type)s value) 
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		this.%(name)s = callback;
 	}-*/;
@@ -133,7 +133,7 @@ STATIC_CALLBACK_GETTER_TEMPLATE = """
 STATIC_CALLBACK_SETTER_TEMPLATE = """
 	public static native void set%(nameCapital)s(%(type)s value) 
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		%(module)s.%(name)s = callback;
 	}-*/;

@@ -99,7 +99,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void setConnected(EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> value)
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		this.connected = callback;
 	}-*/;
@@ -114,7 +114,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void setError(EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> value)
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		this.error = callback;
 	}-*/;
@@ -129,7 +129,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void setAccepted(EventCallback<org.urish.gwtit.titanium.AcceptedCallbackArgs> value)
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		this.accepted = callback;
 	}-*/;

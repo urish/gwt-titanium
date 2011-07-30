@@ -61,7 +61,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void setOnCreateOptionsMenu(EventCallback<JavaScriptObject> value)
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		this.onCreateOptionsMenu = callback;
 	}-*/;
@@ -81,7 +81,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void setOnPrepareOptionsMenu(EventCallback<JavaScriptObject> value)
 	/*-{
-		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } )
+		var callback = function(e) { value.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); };
 		callback._javaObj = value;
 		this.onPrepareOptionsMenu = callback;
 	}-*/;
