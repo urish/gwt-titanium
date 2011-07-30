@@ -173,13 +173,6 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @param params
 	 *            A dictionary object for pre-filling some of the dialog's
 	 *            fields. See example.
-	 * @param callback
-	 *            A callback for when dialog is completed/cancelled. The
-	 *            callback should accept a single argument which will be filled
-	 *            with a dictionary object concerning call results: items in the
-	 *            dictionary can be "success" (boolean), "error" (string with
-	 *            the error message), "cancelled" (set to true if user
-	 *            cancelled) and "result" (the data returned by Facebook.)
 	 */
 	public static native void dialog(String action, Object params,
 			EventCallback<org.urish.gwtit.titanium.facebook.DialogCallbackParams> callback)
@@ -204,13 +197,6 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @param params
 	 *            A dictionary object for setting parameters required by the
 	 *            call, if any. See examples.
-	 * @param callback
-	 *            A callback for when call is completed. The callback should
-	 *            accept a single argument which will be filled with a
-	 *            dictionary object concerning call results: items in the
-	 *            dictionary can be "success" (boolean), "error" (string with
-	 *            the error message), "method" (the REST method call you
-	 *            specified), "result" (the data returned by Facebook.)
 	 */
 	public static native void request(String method, Object params,
 			EventCallback<org.urish.gwtit.titanium.facebook.RequestCallbackParams> callback)
@@ -234,13 +220,6 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 *            call, if any. See examples.
 	 * @param httpMethod
 	 *            The http method (GET/POST/DELETE) to use for the call.
-	 * @param callback
-	 *            A callback for when call is completed. The callback should
-	 *            accept a single argument which will be filled with a
-	 *            dictionary object concerning call results: items in the
-	 *            dictionary can be "success" (boolean), "error" (string with
-	 *            the error message), "path" (the graph call path you
-	 *            specified), "result" (the JSON returned by Facebook.)
 	 */
 	public static native void requestWithGraphPath(String path, Object params, String httpMethod,
 			EventCallback<org.urish.gwtit.titanium.facebook.GraphRequestCallbackParams> callback)
@@ -253,8 +232,6 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -266,8 +243,6 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

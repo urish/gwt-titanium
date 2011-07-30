@@ -73,8 +73,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            Stream to read from
 	 * @param buffer
 	 *            Buffer to read into
-	 * @param resultsCallback
-	 *            called with result of the read operation
 	 */
 	public static native void read(org.urish.gwtit.titanium.IOStream sourceStream,
 			org.urish.gwtit.titanium.Buffer buffer,
@@ -94,8 +92,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            offset to start reading buffer data from
 	 * @param length
 	 *            length of data to read from buffer
-	 * @param resultsCallback
-	 *            called with result of the read operation
 	 */
 	public static native void read(org.urish.gwtit.titanium.IOStream sourceStream,
 			org.urish.gwtit.titanium.Buffer buffer, float offset, float length,
@@ -122,8 +118,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            Stream to read from
 	 * @param buffer
 	 *            Buffer to read into
-	 * @param resultsCallback
-	 *            called with result of the read operation
 	 */
 	public static native void readAll(org.urish.gwtit.titanium.IOStream sourceStream,
 			org.urish.gwtit.titanium.Buffer buffer,
@@ -139,8 +133,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            Stream to write to
 	 * @param buffer
 	 *            Buffer to write from
-	 * @param resultsCallback
-	 *            called with result of the write operation
 	 */
 	public static native void write(org.urish.gwtit.titanium.IOStream outputStream,
 			org.urish.gwtit.titanium.Buffer buffer,
@@ -161,8 +153,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 *            offset to start writing buffer data from
 	 * @param length
 	 *            length of data to write from buffer
-	 * @param resultsCallback
-	 *            called with result of the write operation
 	 */
 	public static native void write(org.urish.gwtit.titanium.IOStream outputStream,
 			org.urish.gwtit.titanium.Buffer buffer, float offset, float length,
@@ -199,8 +189,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 * @param maxChunkSize
 	 *            max size of data to write from inputStream to ouputStream at
 	 *            once
-	 * @param resultsCallback
-	 *            called with result of the writeStream operation
 	 */
 	public static native void writeStream(org.urish.gwtit.titanium.IOStream inputStream,
 			org.urish.gwtit.titanium.IOStream outputStream, float maxChunkSize,
@@ -214,8 +202,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param inputStream
 	 *            Stream to pump from
-	 * @param handler
-	 *            handler method that will receive the pumped data
 	 * @param maxChunkSize
 	 *            max size of data to pump from inputStream to the handler
 	 *            method at once
@@ -231,8 +217,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param inputStream
 	 *            Stream to pump from
-	 * @param handler
-	 *            handler method that will receive the pumped data
 	 * @param maxChunkSize
 	 *            max size of data to pump from inputStream to the handler
 	 *            method at once
@@ -250,8 +234,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -263,8 +245,6 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

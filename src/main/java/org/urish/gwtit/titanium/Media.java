@@ -1131,10 +1131,6 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Take a screen shot of the visible ui on the device
-	 * 
-	 * @param callback
-	 *            function that will be called upon capture. the event property
-	 *            `media` will contain an image Blob object of the screenshot
 	 */
 	public static native void takeScreenshot(
 			EventCallback<org.urish.gwtit.titanium.media.ScreenshotCallbackParams> callback)
@@ -1155,8 +1151,6 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -1168,8 +1162,6 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

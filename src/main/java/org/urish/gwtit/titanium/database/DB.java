@@ -83,10 +83,6 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @param sql
 	 *            the SQL to execute
-	 * @param vararg
-	 *            one or more optional variable arguments passed to this
-	 *            function or an array of objects to be replaced in the query
-	 *            using `?` substitution.
 	 */
 	public final native Object execute(String sql)
 	/*-{

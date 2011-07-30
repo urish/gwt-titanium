@@ -354,7 +354,7 @@ def generatePropertyDoc(property):
 		parts += ["@since " + property['since']]
 	return "\n * ".join(parts)
 
-def generateMethodDoc(method):
+def generateMethodDoc(method, paramNames):
 	parts = []
 	if 'description' in method:
 		parts.append(parseDocString(method['description']).capitalize())
@@ -362,7 +362,8 @@ def generateMethodDoc(method):
 		parts += ["@platforms " + ", ".join(method['platforms'])]
 	if 'parameters' in method:
 		for parameter in method['parameters']:
-			parts.append("@param %s %s" % (mapIdentifiers(parameter['name']), parseDocString(parameter['description'])))
+			if parameter['name'] in paramNames:
+				parts.append("@param %s %s" % (mapIdentifiers(parameter['name']), parseDocString(parameter['description'])))
 	if 'returns' in method and 'description' in method['returns']:
 		descr = parseDocString(method['returns']['description'])
 		if descr:
@@ -415,7 +416,9 @@ def methodPermutations(method):
 	paramNames = []
 	if 'parameters' in method:
 		for parameter in method['parameters']:
-			if 'optional' in parameter and parameter['optional']:
+			optional = ('optional' in parameter and parameter['optional'] or
+						'default' in parameter and parameter['default'])
+			if optional:
 				yield (copy(params), copy(paramNames))
 			name = mapIdentifiers(parameter['name'])
 			paramType = mapTypes(parameter['type'])
@@ -464,7 +467,7 @@ def generateMethods(type, isSingleton, types):
 					'module': type['name'],
 					'name': mapMethodNames(method['name']),
 					'nativeName': method['name'],
-					'docString': generateMethodDoc(method),
+					'docString': generateMethodDoc(method, paramNames),
 					'params': ", ".join(params),
 					'paramNames': ", ".join(paramNames),
 					'return': mapTypes(returnType),

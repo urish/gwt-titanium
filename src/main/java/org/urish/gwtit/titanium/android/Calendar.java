@@ -221,8 +221,6 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -234,8 +232,6 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

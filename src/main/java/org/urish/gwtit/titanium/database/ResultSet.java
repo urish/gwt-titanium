@@ -68,12 +68,6 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @param index
 	 *            column index (which is zero based)
-	 * @param type
-	 *            One of (
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_STRING} |
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_INT} |
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
 	public final native Object field(float index)
 	/*-{
@@ -102,12 +96,6 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @param name
 	 *            column name from SQL query
-	 * @param type
-	 *            One of (
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_STRING} |
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_INT} |
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
-	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
 	public final native Object fieldByName(String name)
 	/*-{

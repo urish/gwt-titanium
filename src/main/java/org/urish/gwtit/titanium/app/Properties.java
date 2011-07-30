@@ -37,8 +37,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param property
 	 *            return a boolean value for property
-	 * @param _default
-	 *            optional default value if property is not found
 	 */
 	public static native boolean getBool(String property, boolean _default)
 	/*-{
@@ -50,8 +48,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param property
 	 *            return a double value for property
-	 * @param _default
-	 *            optional default value if property is not found
 	 */
 	public static native float getDouble(String property, float _default)
 	/*-{
@@ -63,8 +59,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param property
 	 *            return a integer value for property
-	 * @param _default
-	 *            optional default value if property is not found
 	 */
 	public static native float getInt(String property, float _default)
 	/*-{
@@ -76,8 +70,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param property
 	 *            return an array value for property
-	 * @param _default
-	 *            optional default value if property is not found
 	 */
 	public static native Object[] getList(String property, Object[] _default)
 	/*-{
@@ -89,8 +81,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param property
 	 *            return a string value for property
-	 * @param _default
-	 *            optional default value if property is not found
 	 */
 	public static native String getString(String property, String _default)
 	/*-{
@@ -197,8 +187,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -210,8 +198,6 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

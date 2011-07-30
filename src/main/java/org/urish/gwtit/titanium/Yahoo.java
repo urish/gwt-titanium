@@ -37,12 +37,6 @@ public class Yahoo extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param yql
 	 *            the YQL query to execute
-	 * @param callback
-	 *            the function to execute when the query completes. The event
-	 *            will contain the boolean property `success` if successful. If
-	 *            `success` is false, the `message` property will contain the
-	 *            error message. If `success` is true, the `data` property will
-	 *            contain the data payload received from the YQL.
 	 */
 	public static native void yql(String yql, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -54,8 +48,6 @@ public class Yahoo extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -67,8 +59,6 @@ public class Yahoo extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

@@ -30,7 +30,7 @@ package org.urish.gwtit.titanium;
  * 
  * The UI module is broken down into 3 major area:
  * 
- * **Views** - [Views](Titanium.UI.View-object.html) are containers that host
+ ***Views** - [Views](Titanium.UI.View-object.html) are containers that host
  * visual elements such as controls or other views. Views can have their
  * properties customized, such as their border color and radius, can fire events
  * such as swipe events or touches, and can optionally contain a hierarchy or

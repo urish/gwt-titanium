@@ -135,8 +135,6 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param key
 	 *            the key to use when mapping into the localization file
-	 * @param hint
-	 *            the text to use if no key found in the localization file
 	 */
 	public static native String getString(String key)
 	/*-{
@@ -161,8 +159,6 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -174,8 +170,6 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

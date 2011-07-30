@@ -36,8 +36,6 @@ public class Proxy extends JavaScriptObject {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public final native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -49,8 +47,6 @@ public class Proxy extends JavaScriptObject {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public final native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

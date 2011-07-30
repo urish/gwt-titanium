@@ -1340,12 +1340,6 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param intent
 	 *            The Intent that will be executed
-	 * @param flags
-	 *            Can be any of
-	 *            {@link org.urish.gwtit.titanium.Android.FLAG_CANCEL_CURRENT},
-	 *            {@link org.urish.gwtit.titanium.Android.FLAG_NO_CREATE},
-	 *            {@link org.urish.gwtit.titanium.Android.FLAG_ONE_SHOT},
-	 *            {@link org.urish.gwtit.titanium.Android.FLAG_UPDATE_CURRENT}
 	 */
 	public static native org.urish.gwtit.titanium.android.PendingIntent createPendingIntent(
 			org.urish.gwtit.titanium.android.Intent intent)
@@ -1444,8 +1438,6 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -1457,8 +1449,6 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

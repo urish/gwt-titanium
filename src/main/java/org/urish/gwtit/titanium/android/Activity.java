@@ -177,10 +177,6 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @param intent
 	 *            Description of the Activity to start
-	 * @param callback
-	 *            A callback function that is executed when the Activity has set
-	 *            it's result. See example in
-	 *            {@link org.urish.gwtit.titanium.android.Activity}.
 	 */
 	public final native void startActivityForResult(org.urish.gwtit.titanium.android.Intent intent,
 			EventCallback<JavaScriptObject> callback)

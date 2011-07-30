@@ -327,12 +327,33 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *            the HTTP method
 	 * @param url
 	 *            the URL for the request
+	 */
+	public final native void open(String method, String url)
+	/*-{
+		return this.open(method, url);
+	}-*/;
+
+	/**
+	 * Open the request and ready the connection
+	 * 
+	 * @param method
+	 *            the HTTP method
+	 * @param url
+	 *            the URL for the request
 	 * @param async
 	 *            optional property to indicate if asynchronous (default) or not
 	 */
 	public final native void open(String method, String url, boolean async)
 	/*-{
 		return this.open(method, url, async);
+	}-*/;
+
+	/**
+	 * Send the request (only async is currently supported)
+	 */
+	public final native void send()
+	/*-{
+		return this.send();
 	}-*/;
 
 	/**

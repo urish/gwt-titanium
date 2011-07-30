@@ -268,10 +268,6 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param address
 	 *            address to resolve.
-	 * @param callback
-	 *            function to invoke on success or failure. The event object
-	 *            contains the properties described as the `place` dictionary in
-	 *            {@link org.urish.gwtit.titanium.geolocation.reverseGeocoder}.
 	 */
 	public static native void forwardGeocoder(String address,
 			EventCallback<org.urish.gwtit.titanium.geolocation.Place> callback)
@@ -281,11 +277,6 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Retrieve the current compass heading.
-	 * 
-	 * @param callback
-	 *            function to invoke on success or failure of obtaining the
-	 *            current heading. See heading event in
-	 *            {@link org.urish.gwtit.titanium.Geolocation}.
 	 */
 	public static native void getCurrentHeading(
 			EventCallback<org.urish.gwtit.titanium.Geolocation.HeadingEvent> callback)
@@ -297,11 +288,6 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * Retrieve the last known location from the device. on android, the radios
 	 * are not turned on to update the location. on ios the radios may be used
 	 * if the location is too "old".
-	 * 
-	 * @param callback
-	 *            function to invoke on success or failure of obtaining the
-	 *            current location. See location event in
-	 *            {@link org.urish.gwtit.titanium.Geolocation}.
 	 */
 	public static native void getCurrentPosition(
 			EventCallback<org.urish.gwtit.titanium.Geolocation.LocationEvent> callback)
@@ -316,13 +302,6 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 *            latitude to search
 	 * @param longitude
 	 *            longitude to search
-	 * @param callback
-	 *            function to invoke on success or failure. The event object
-	 *            passed contains a `places` array of zero or more place
-	 *            dictionaries. Each `place` dictionary contains the following
-	 *            properties: `street`, `street1`, `city`, `region1`, `region2`,
-	 *            `postalCode`, `country`, `countryCode`, `longitude`,
-	 *            `latitude`, `displayAddress`, `address`.
 	 */
 	public static native void reverseGeocoder(float latitude, float longitude,
 			EventCallback<org.urish.gwtit.titanium.geolocation.ReverseGeocoderResult> callback)
@@ -335,8 +314,6 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -348,8 +325,6 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

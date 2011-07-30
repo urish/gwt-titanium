@@ -45,11 +45,6 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 *            Array of mime types for the files in the paths parameter. Can
 	 *            be null, in which case the mime type will be inferred at scan
 	 *            time.
-	 * @param callback
-	 *            A function that will be called when each file is finished
-	 *            being scanned. Check the callback argument's "path" and "uri"
-	 *            properties to see the path that was scanned and the resulting
-	 *            content uri.
 	 */
 	public static native void scanMediaFiles(String[] paths, String[] mimeTypes,
 			EventCallback<JavaScriptObject> callback)
@@ -81,8 +76,6 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -94,8 +87,6 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{

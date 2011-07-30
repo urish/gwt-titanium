@@ -136,6 +136,9 @@
 			{"name": "media", "type": "Titanium.Blob"}
 		]
 	},
+	"Titanium.Network.HTTPClient": {
+		"methods[name='send'] parameters[name='data'] optional": true
+	},
 	"Titanium.UI.ActivityIndicator": {
 		"properties[name='font'] type": "Font"
 	},

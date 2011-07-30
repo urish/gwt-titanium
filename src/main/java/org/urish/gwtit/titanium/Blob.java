@@ -38,10 +38,6 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	 * @platforms iphone, ipad
 	 * @param size
 	 *            The size of the thumbnail, in either width or height
-	 * @param borderSize
-	 *            The width of the thumbnail's border.
-	 * @param cornerRadius
-	 *            The radius of the thumbnail's corners.
 	 * @return The image thumbnail in a blob.
 	 */
 	public final native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size)
@@ -58,8 +54,6 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	 *            The size of the thumbnail, in either width or height
 	 * @param borderSize
 	 *            The width of the thumbnail's border.
-	 * @param cornerRadius
-	 *            The radius of the thumbnail's corners.
 	 * @return The image thumbnail in a blob.
 	 */
 	public final native org.urish.gwtit.titanium.Blob imageAsThumbnail(float size, float borderSize)

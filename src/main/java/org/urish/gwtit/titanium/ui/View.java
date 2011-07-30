@@ -536,8 +536,6 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param obj
 	 *            either a dictionary of animation properties or an Animation
 	 *            object
-	 * @param callback
-	 *            function to be invoked upon completion of the animation
 	 */
 	public final native void animate(Object obj, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -573,11 +571,6 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Return a blob image of the rendered view
-	 * 
-	 * @param f
-	 *            function to be invoked upon completion. if non-null, this
-	 *            method will be performed asynchronously. if null, it will be
-	 *            performed immediately
 	 */
 	public final native Object toImage()
 	/*-{
@@ -586,11 +579,6 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Return a blob image of the rendered view
-	 * 
-	 * @param f
-	 *            function to be invoked upon completion. if non-null, this
-	 *            method will be performed asynchronously. if null, it will be
-	 *            performed immediately
 	 */
 	public final native Object toImage(EventCallback<JavaScriptObject> f)
 	/*-{

@@ -200,14 +200,6 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	/**
 	 * Displays the contact picker
 	 * 
-	 * @param cancel
-	 *            The function to call when selection is cancelled
-	 * @param selectedPerson
-	 *            The function to call when a person is selected. Mutually
-	 *            exclusive with `selectedProperty`
-	 * @param selectedProperty
-	 *            The function to call when a property is selected. Mutally
-	 *            exclusive with `selectedPerson`
 	 * @param animated
 	 *            Whether or not to animate the show/hide of the contacts picker
 	 * @param fields
@@ -226,8 +218,6 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callback
-	 *            callback function to invoke when the event is fired
 	 */
 	public static native void addEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -239,8 +229,6 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	 * 
 	 * @param name
 	 *            name of the event
-	 * @param callbac
-	 *            callback function passed in addEventListener
 	 */
 	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
 	/*-{
