@@ -357,12 +357,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         orientation to landscape mode 6) empty array - resets the
 	 *         orientation to default sensor control
 	 */
-	public final native float[] getOrientationModes()
+	public final native int[] getOrientationModes()
 	/*-{
 		return this.orientationModes;
 	}-*/;
 
-	public final native void setOrientationModes(float[] value)
+	public final native void setOrientationModes(int[] value)
 	/*-{
 		this.orientationModes = value;
 	}-*/;
