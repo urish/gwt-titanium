@@ -117,7 +117,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the file parent
 	 */
-	public final native org.urish.gwtit.titanium.filesystem.File getParent()
+	public final native String getParent()
 	/*-{
 		return this.getParent();
 	}-*/;
