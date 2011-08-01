@@ -29,6 +29,14 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
+	 * @return Readonly returns the fully resolved native path
+	 */
+	public final native String getNativePath()
+	/*-{
+		return this.nativePath;
+	}-*/;
+
+	/**
 	 * Create a directory at the path for the file object
 	 */
 	public final native boolean createDirectory()
@@ -150,14 +158,6 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Returns the fully resolved native path
-	 */
-	public final native String nativePath()
-	/*-{
-		return this.nativePath();
-	}-*/;
-
-	/**
 	 * Return the contents of file as blob
 	 */
 	public final native org.urish.gwtit.titanium.Blob read()
@@ -222,6 +222,18 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	public final native boolean symbolicLink()
 	/*-{
 		return this.symbolicLink();
+	}-*/;
+
+	/**
+	 * Write the contents to file.
+	 * 
+	 * @param contents
+	 *            write the contents of string, blob or
+	 *            {@link org.urish.gwtit.titanium.filesystem.File} to file
+	 */
+	public final native boolean write(Object contents)
+	/*-{
+		return this.write(contents);
 	}-*/;
 
 	/**
