@@ -469,8 +469,8 @@
 		"methods[name='translate'] parameters[name='ty'] type": "float"
 	},
 	"Titanium.Filesystem.File": {
-		"methods[name='createTimestamp'] returns type": "long",
-		"methods[name='modificationTimestamp'] returns type": "long"
+		"methods[name='createTimestamp'] returns type": "int",
+		"methods[name='modificationTimestamp'] returns type": "int"
 	},
 	"Titanium.UI.iPhone": {
 		"methods[name='hideStatusBar'] parameters[name='animationStyle'] type": "int",
