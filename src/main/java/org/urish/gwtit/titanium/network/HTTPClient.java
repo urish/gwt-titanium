@@ -219,58 +219,38 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The response data as a blob object.
+	 * @return Readonly the response data as a blob object.
 	 */
-	public final native Object getResponseData()
+	public final native org.urish.gwtit.titanium.Blob getResponseData()
 	/*-{
 		return this.responseData;
 	}-*/;
 
-	public final native void setResponseData(Object value)
-	/*-{
-		this.responseData = value;
-	}-*/;
-
 	/**
-	 * @return The response as text or null if an error was received or no data
-	 *         was returned
+	 * @return Readonly the response as text or null if an error was received or
+	 *         no data was returned
 	 */
 	public final native String getResponseText()
 	/*-{
 		return this.responseText;
 	}-*/;
 
-	public final native void setResponseText(String value)
-	/*-{
-		this.responseText = value;
-	}-*/;
-
 	/**
-	 * @return The response object as an xml domdocument object. returns null if
-	 *         the content type returned by the server was not xml or the
-	 *         content could not be parsed
+	 * @return Readonly the response object as an xml domdocument object.
+	 *         returns null if the content type returned by the server was not
+	 *         xml or the content could not be parsed
 	 */
-	public final native Object getResponseXML()
+	public final native org.urish.gwtit.titanium.xml.Document getResponseXML()
 	/*-{
 		return this.responseXML;
 	}-*/;
 
-	public final native void setResponseXML(Object value)
-	/*-{
-		this.responseXML = value;
-	}-*/;
-
 	/**
-	 * @return The response http status code
+	 * @return Readonly the response http status code
 	 */
 	public final native int getStatus()
 	/*-{
 		return this.status;
-	}-*/;
-
-	public final native void setStatus(int value)
-	/*-{
-		this.status = value;
 	}-*/;
 
 	/**
