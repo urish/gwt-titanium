@@ -76,18 +76,16 @@ public class Timers {
 
 	private static native int nativeSetTimeout(int ms, final TimerCallback callback, TimeoutTimer timer)
 	/*-{
-		var closure = callback;
 		return setTimeout(function() {
-			timer.@org.urish.gwtit.client.util.Timers.TimeoutTimer.fired()();
-			callback.@org.urish.gwtit.client.util.TimerCallback::onTimerShot(org.urish.gwtit.client.util.Timer)(timer);
+			timer.@org.urish.gwtit.client.util.Timers.TimeoutTimer::fired()();
+			callback.@org.urish.gwtit.client.util.TimerCallback::onTimerShot(Lorg/urish/gwtit/client/util/Timer;)(timer);
 		}, ms);
 	}-*/;
 
 	private static native int nativeSetInterval(int ms, final TimerCallback callback, Timer timer)
 	/*-{
-		var closure = callback;
 		return setTimeout(function() {
-			closure.@org.urish.gwtit.client.util.TimerCallback::onTimerShot(org.urish.gwtit.client.util.Timer)(timer);
+			callback.@org.urish.gwtit.client.util.TimerCallback::onTimerShot(Lorg/urish/gwtit/client/util/Timer;)(timer);
 		}, ms);
 	}-*/;
 
