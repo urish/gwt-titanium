@@ -21,10 +21,8 @@ import org.urish.gwtit.titanium.API;
 import org.urish.gwtit.titanium.UI;
 import org.urish.gwtit.titanium.ui.AlertDialog;
 import org.urish.gwtit.titanium.ui.Label;
-import org.urish.gwtit.titanium.ui.Window;
 import org.urish.gwtit.titanium.ui.View.ClickEvent;
-
-import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.titanium.ui.Window;
 
 public class HelloWorld extends GwtTitaniumBootstrap {
 
