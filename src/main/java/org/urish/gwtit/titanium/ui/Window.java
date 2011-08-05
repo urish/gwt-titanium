@@ -368,15 +368,30 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return Current orientation of the window. value will be one of the
+	 *         orientation constants defined in {@link
+	 *         org.urish.gwtit..titanium.ui}.
+	 */
+	public final native int getOrientation()
+	/*-{
+		return this.orientation;
+	}-*/;
+
+	public final native void setOrientation(int value)
+	/*-{
+		this.orientation = value;
+	}-*/;
+
+	/**
 	 * @return View to show in the right nav bar area. only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public final native Object getRightNavButton()
+	public final native org.urish.gwtit.titanium.ui.View getRightNavButton()
 	/*-{
 		return this.rightNavButton;
 	}-*/;
 
-	public final native void setRightNavButton(Object value)
+	public final native void setRightNavButton(org.urish.gwtit.titanium.ui.View value)
 	/*-{
 		this.rightNavButton = value;
 	}-*/;
@@ -412,12 +427,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return View to show in the title area. only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public final native Object getTitleControl()
+	public final native org.urish.gwtit.titanium.ui.View getTitleControl()
 	/*-{
 		return this.titleControl;
 	}-*/;
 
-	public final native void setTitleControl(Object value)
+	public final native void setTitleControl(org.urish.gwtit.titanium.ui.View value)
 	/*-{
 		this.titleControl = value;
 	}-*/;
@@ -545,6 +560,14 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * Close the window
+	 */
+	public final native void close()
+	/*-{
+		return this.close();
+	}-*/;
+
+	/**
+	 * Close the window
 	 * 
 	 * @param options
 	 *            close the window with optional animation or display properties
@@ -552,6 +575,14 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	public final native void close(Object options)
 	/*-{
 		return this.close(options);
+	}-*/;
+
+	/**
+	 * Open the window
+	 */
+	public final native void open()
+	/*-{
+		return this.open();
 	}-*/;
 
 	/**

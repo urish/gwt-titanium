@@ -44,7 +44,7 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Whether or not to convert text within this area to clickable
-	 *         links. ios only.
+	 *         links.
 	 * @platforms iphone, ipad
 	 */
 	public final native int getAutoLink()
@@ -173,7 +173,8 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return True (default) if textarea can be scrolled
+	 * @return True (default) if textarea can be scrolled.
+	 * @platforms iphone, ipad
 	 */
 	public final native boolean getScrollable()
 	/*-{

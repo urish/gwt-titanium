@@ -673,6 +673,7 @@
 	},
 	"Titanium.UI.Window": {
 		"properties[name='orientationModes'] type": "Array<int>",
+		"properties[name='orientation'] type": "int",
 		"properties[name='windowSoftInputMode'] type": "int"
 	},
 	"Titanium.Platform.DisplayCaps": {
