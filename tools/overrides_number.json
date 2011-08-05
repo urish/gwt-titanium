@@ -385,6 +385,10 @@
 		"properties[name='TOP'] type": "int"
 	},
 	"Titanium.UI.TabGroup": {
+		"events[name='blur'] properties[name='index'] type": "int",	
+		"events[name='blur'] properties[name='previousIndex'] type": "int",	
+		"events[name='focus'] properties[name='index'] type": "int",	
+		"events[name='focus'] properties[name='previousIndex'] type": "int",	
 		"properties[name='windowSoftInputMode'] type": "int"
 	},
 	"Titanium.Database.DB": {

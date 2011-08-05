@@ -169,7 +169,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the tab index
 		 */
-		public final native Object getIndex()
+		public final native int getIndex()
 		/*-{
 			return this.index;
 		}-*/;
@@ -177,7 +177,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the previous tab index
 		 */
-		public final native Object getPreviousIndex()
+		public final native int getPreviousIndex()
 		/*-{
 			return this.previousIndex;
 		}-*/;
@@ -185,7 +185,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the tab object
 		 */
-		public final native Object getTab()
+		public final native org.urish.gwtit.titanium.ui.Tab getTab()
 		/*-{
 			return this.tab;
 		}-*/;
@@ -193,7 +193,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the y point of the event, in receiving view coordinates
 		 */
-		public final native Object getY()
+		public final native float getY()
 		/*-{
 			return this.y;
 		}-*/;
@@ -201,7 +201,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the x point of the event in receiving view coordiantes
 		 */
-		public final native Object getX()
+		public final native float getX()
 		/*-{
 			return this.x;
 		}-*/;
@@ -218,7 +218,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the previous tab object
 		 */
-		public final native Object getPreviousTab()
+		public final native org.urish.gwtit.titanium.ui.Tab getPreviousTab()
 		/*-{
 			return this.previousTab;
 		}-*/;
@@ -239,7 +239,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the y point of the event, in receiving view coordinates
 		 */
-		public final native Object getY()
+		public final native float getY()
 		/*-{
 			return this.y;
 		}-*/;
@@ -256,7 +256,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the x point of the event in receiving view coordiantes
 		 */
-		public final native Object getX()
+		public final native float getX()
 		/*-{
 			return this.x;
 		}-*/;
@@ -277,7 +277,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the tab index
 		 */
-		public final native Object getIndex()
+		public final native int getIndex()
 		/*-{
 			return this.index;
 		}-*/;
@@ -285,7 +285,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the previous tab index
 		 */
-		public final native Object getPreviousIndex()
+		public final native int getPreviousIndex()
 		/*-{
 			return this.previousIndex;
 		}-*/;
@@ -293,7 +293,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the tab object
 		 */
-		public final native Object getTab()
+		public final native org.urish.gwtit.titanium.ui.Tab getTab()
 		/*-{
 			return this.tab;
 		}-*/;
@@ -301,7 +301,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the y point of the event, in receiving view coordinates
 		 */
-		public final native Object getY()
+		public final native float getY()
 		/*-{
 			return this.y;
 		}-*/;
@@ -309,7 +309,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the x point of the event in receiving view coordiantes
 		 */
-		public final native Object getX()
+		public final native float getX()
 		/*-{
 			return this.x;
 		}-*/;
@@ -326,7 +326,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the previous tab object
 		 */
-		public final native Object getPreviousTab()
+		public final native org.urish.gwtit.titanium.ui.Tab getPreviousTab()
 		/*-{
 			return this.previousTab;
 		}-*/;
@@ -347,7 +347,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the y point of the event, in receiving view coordinates
 		 */
-		public final native Object getY()
+		public final native float getY()
 		/*-{
 			return this.y;
 		}-*/;
@@ -364,7 +364,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		/**
 		 * the x point of the event in receiving view coordiantes
 		 */
-		public final native Object getX()
+		public final native float getX()
 		/*-{
 			return this.x;
 		}-*/;
