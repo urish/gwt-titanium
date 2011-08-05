@@ -4,4 +4,6 @@ public interface Timer {
 	void cancel();
 
 	public int getId();
+
+	boolean isCanceled();
 }

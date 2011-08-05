@@ -7,17 +7,21 @@ package org.urish.gwtit.client.util;
  */
 public class Timers {
 	private static class TimeoutTimer implements Timer {
-		final private int id;
+		private int id;
 		private boolean isCanceled = false;
-
-		public TimeoutTimer(int id) {
-			this.id = id;
-		}
 
 		private native void nativeClearTimeout(int id)
 		/*-{
 			clearTimeout(id);
 		}-*/;
+		
+		void setId(int id) {
+			this.id = id;
+		}
+		
+		void fired() {
+			isCanceled = true;
+		}
 
 		@Override
 		public int getId() {
@@ -31,20 +35,25 @@ public class Timers {
 			}
 			isCanceled = true;
 		}
+		
+		@Override
+		public boolean isCanceled() {
+			return isCanceled;
+		}
 	}
 
 	private static class IntervalTimer implements Timer {
-		final private int id;
+		private int id;
 		private boolean isCanceled = false;
-
-		public IntervalTimer(int id) {
-			this.id = id;
-		}
 
 		private native void nativeClearInterval(int id)
 		/*-{
 			clearInterval(id);
 		}-*/;
+
+		void setId(int id) {
+			this.id = id;
+		}
 
 		@Override
 		public int getId() {
@@ -58,21 +67,27 @@ public class Timers {
 			}
 			isCanceled = true;
 		}
+		
+		@Override
+		public boolean isCanceled() {
+			return isCanceled;
+		}
 	}
 
-	private static native int nativeSetTimeout(int ms, final TimerCallback callback)
+	private static native int nativeSetTimeout(int ms, final TimerCallback callback, TimeoutTimer timer)
 	/*-{
 		var closure = callback;
 		return setTimeout(function() {
-			callback.@org.urish.gwtit.client.util.TimerCallback::onTimerShot()();
+			timer.@org.urish.gwtit.client.util.Timers.TimeoutTimer.fired()();
+			callback.@org.urish.gwtit.client.util.TimerCallback::onTimerShot(org.urish.gwtit.client.util.Timer)(timer);
 		}, ms);
 	}-*/;
 
-	private static native int nativeSetInterval(int ms, final TimerCallback callback)
+	private static native int nativeSetInterval(int ms, final TimerCallback callback, Timer timer)
 	/*-{
 		var closure = callback;
 		return setTimeout(function() {
-			closure.@org.urish.gwtit.client.util.TimerCallback::onTimerShot()();
+			closure.@org.urish.gwtit.client.util.TimerCallback::onTimerShot(org.urish.gwtit.client.util.Timer)(timer);
 		}, ms);
 	}-*/;
 
@@ -84,7 +99,9 @@ public class Timers {
 	 * @return
 	 */
 	public static Timer setTimeout(int milliseconds, TimerCallback callback) {
-		return new TimeoutTimer(nativeSetTimeout(milliseconds, callback));
+		TimeoutTimer timeout = new TimeoutTimer(); 
+		timeout.setId(nativeSetTimeout(milliseconds, callback, timeout));
+		return timeout;
 	}
 
 	/**
@@ -95,6 +112,8 @@ public class Timers {
 	 * @return
 	 */
 	public static Timer setInterval(int milliseconds, TimerCallback callback) {
-		return new IntervalTimer(nativeSetInterval(milliseconds, callback));
+		IntervalTimer interval = new IntervalTimer();
+		interval.setId(nativeSetInterval(milliseconds, callback, interval));
+		return interval;
 	}
 }
