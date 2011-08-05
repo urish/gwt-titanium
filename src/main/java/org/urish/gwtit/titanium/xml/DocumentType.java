@@ -45,22 +45,12 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 		return this.entities;
 	}-*/;
 
-	public final native void setEntities(org.urish.gwtit.titanium.xml.NamedNodeMap value)
-	/*-{
-		this.entities = value;
-	}-*/;
-
 	/**
 	 * @return The internal subset as a string.
 	 */
 	public final native String getInternalSubset()
 	/*-{
 		return this.internalSubset;
-	}-*/;
-
-	public final native void setInternalSubset(String value)
-	/*-{
-		this.internalSubset = value;
 	}-*/;
 
 	/**
@@ -70,11 +60,6 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 	public final native String getName()
 	/*-{
 		return this.name;
-	}-*/;
-
-	public final native void setName(String value)
-	/*-{
-		this.name = value;
 	}-*/;
 
 	/**
@@ -88,11 +73,6 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 		return this.notations;
 	}-*/;
 
-	public final native void setNotations(org.urish.gwtit.titanium.xml.NamedNodeMap value)
-	/*-{
-		this.notations = value;
-	}-*/;
-
 	/**
 	 * @return The public identifier of the external subset.
 	 */
@@ -101,22 +81,12 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 		return this.publicId;
 	}-*/;
 
-	public final native void setPublicId(String value)
-	/*-{
-		this.publicId = value;
-	}-*/;
-
 	/**
 	 * @return The system identifier of the external subset.
 	 */
 	public final native String getSystemId()
 	/*-{
 		return this.systemId;
-	}-*/;
-
-	public final native void setSystemId(String value)
-	/*-{
-		this.systemId = value;
 	}-*/;
 
 }

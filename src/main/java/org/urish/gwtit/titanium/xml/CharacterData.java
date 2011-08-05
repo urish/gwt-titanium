@@ -57,11 +57,6 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 		return this.length;
 	}-*/;
 
-	public final native void setLength(float value)
-	/*-{
-		this.length = value;
-	}-*/;
-
 	/**
 	 * Append the string to the end of the character data of the node. upon
 	 * success, data provides access to the concatenation of data and the string

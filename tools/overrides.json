@@ -162,6 +162,9 @@
 	"Titanium.UI.TabGroup": {
 		"properties[name='activeTab'] type": "Titanium.UI.Tab"
 	},
+	"Titanium.UI.View": {
+		"methods[name='add'] parameters[name='view'] type": "Titanium.UI.View"
+	},
 	"Titanium.XML.Document": {
 		"methods[name='createCDATASection']     returns type": "Object",
 		"methods[name='createComment']          returns type": "Object",

@@ -58,9 +58,4 @@ public class ProcessingInstruction extends org.urish.gwtit.titanium.Proxy {
 		return this.target;
 	}-*/;
 
-	public final native void setTarget(String value)
-	/*-{
-		this.target = value;
-	}-*/;
-
 }

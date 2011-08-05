@@ -142,11 +142,6 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 		return this.state;
 	}-*/;
 
-	public final native void setState(float value)
-	/*-{
-		this.state = value;
-	}-*/;
-
 	/**
 	 * Attempts to connect the socket to its host/port. throws exception if the
 	 * socket is in a connected or listening state. throws exception if a valid

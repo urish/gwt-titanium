@@ -525,7 +525,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param view
 	 *            the view to add to this views hiearchy
 	 */
-	public final native void add(Object view)
+	public final native void add(org.urish.gwtit.titanium.ui.View view)
 	/*-{
 		return this.add(view);
 	}-*/;
@@ -556,7 +556,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @param view
 	 *            the view to remove from this views hiearchy
 	 */
-	public final native void remove(Object view)
+	public final native void remove(org.urish.gwtit.titanium.ui.View view)
 	/*-{
 		return this.remove(view);
 	}-*/;

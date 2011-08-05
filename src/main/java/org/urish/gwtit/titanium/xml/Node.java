@@ -121,22 +121,12 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.nodeName;
 	}-*/;
 
-	public final native void setNodeName(String value)
-	/*-{
-		this.nodeName = value;
-	}-*/;
-
 	/**
 	 * @return The content (value) of this node
 	 */
 	public final native String getNodeValue()
 	/*-{
 		return this.nodeValue;
-	}-*/;
-
-	public final native void setNodeValue(String value)
-	/*-{
-		this.nodeValue = value;
 	}-*/;
 
 	/**
@@ -147,22 +137,12 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.nodeType;
 	}-*/;
 
-	public final native void setNodeType(float value)
-	/*-{
-		this.nodeType = value;
-	}-*/;
-
 	/**
 	 * @return This node's parent node
 	 */
 	public final native org.urish.gwtit.titanium.xml.Node getParentNode()
 	/*-{
 		return this.parentNode;
-	}-*/;
-
-	public final native void setParentNode(org.urish.gwtit.titanium.xml.Node value)
-	/*-{
-		this.parentNode = value;
 	}-*/;
 
 	/**
@@ -174,22 +154,12 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.childNodes;
 	}-*/;
 
-	public final native void setChildNodes(org.urish.gwtit.titanium.xml.NodeList value)
-	/*-{
-		this.childNodes = value;
-	}-*/;
-
 	/**
 	 * @return This node's first child
 	 */
 	public final native org.urish.gwtit.titanium.xml.Node getFirstChild()
 	/*-{
 		return this.firstChild;
-	}-*/;
-
-	public final native void setFirstChild(org.urish.gwtit.titanium.xml.Node value)
-	/*-{
-		this.firstChild = value;
 	}-*/;
 
 	/**
@@ -200,22 +170,12 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.lastChild;
 	}-*/;
 
-	public final native void setLastChild(org.urish.gwtit.titanium.xml.Node value)
-	/*-{
-		this.lastChild = value;
-	}-*/;
-
 	/**
 	 * @return This node's previous sibling
 	 */
 	public final native org.urish.gwtit.titanium.xml.Node getPreviousSibling()
 	/*-{
 		return this.previousSibling;
-	}-*/;
-
-	public final native void setPreviousSibling(org.urish.gwtit.titanium.xml.Node value)
-	/*-{
-		this.previousSibling = value;
 	}-*/;
 
 	/**
@@ -226,22 +186,12 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.nextSibling;
 	}-*/;
 
-	public final native void setNextSibling(org.urish.gwtit.titanium.xml.Node value)
-	/*-{
-		this.nextSibling = value;
-	}-*/;
-
 	/**
 	 * @return A map of this node's attributes
 	 */
 	public final native org.urish.gwtit.titanium.xml.NamedNodeMap getAttributes()
 	/*-{
 		return this.attributes;
-	}-*/;
-
-	public final native void setAttributes(org.urish.gwtit.titanium.xml.NamedNodeMap value)
-	/*-{
-		this.attributes = value;
 	}-*/;
 
 	/**
@@ -252,11 +202,6 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.ownerDocument;
 	}-*/;
 
-	public final native void setOwnerDocument(org.urish.gwtit.titanium.xml.Document value)
-	/*-{
-		this.ownerDocument = value;
-	}-*/;
-
 	/**
 	 * @return The namespace uri of this node
 	 */
@@ -265,22 +210,12 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 		return this.namespaceURI;
 	}-*/;
 
-	public final native void setNamespaceURI(String value)
-	/*-{
-		this.namespaceURI = value;
-	}-*/;
-
 	/**
 	 * @return The namespace prefix of this node
 	 */
 	public final native String getPrefix()
 	/*-{
 		return this.prefix;
-	}-*/;
-
-	public final native void setPrefix(String value)
-	/*-{
-		this.prefix = value;
 	}-*/;
 
 	/**

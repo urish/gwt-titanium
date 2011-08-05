@@ -41,22 +41,12 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 		return this.doctype;
 	}-*/;
 
-	public final native void setDoctype(org.urish.gwtit.titanium.xml.DocumentType value)
-	/*-{
-		this.doctype = value;
-	}-*/;
-
 	/**
 	 * @return The root element in the document.
 	 */
 	public final native org.urish.gwtit.titanium.xml.Element getDocumentElement()
 	/*-{
 		return this.documentElement;
-	}-*/;
-
-	public final native void setDocumentElement(org.urish.gwtit.titanium.xml.Element value)
-	/*-{
-		this.documentElement = value;
 	}-*/;
 
 	/**
@@ -66,11 +56,6 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	public final native org.urish.gwtit.titanium.xml.DOMImplementation getImplementation()
 	/*-{
 		return this.implementation;
-	}-*/;
-
-	public final native void setImplementation(org.urish.gwtit.titanium.xml.DOMImplementation value)
-	/*-{
-		this.implementation = value;
 	}-*/;
 
 	/**

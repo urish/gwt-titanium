@@ -38,11 +38,6 @@ public class NodeList extends org.urish.gwtit.titanium.Proxy {
 		return this.length;
 	}-*/;
 
-	public final native void setLength(float value)
-	/*-{
-		this.length = value;
-	}-*/;
-
 	/**
 	 * Returns the {@link org.urish.gwtit.titanium.xml.node} object at the
 	 * specified index.

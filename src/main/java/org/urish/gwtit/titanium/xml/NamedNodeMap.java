@@ -40,11 +40,6 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 		return this.length;
 	}-*/;
 
-	public final native void setLength(float value)
-	/*-{
-		this.length = value;
-	}-*/;
-
 	/**
 	 * Retrieves a node specified by name.
 	 * 

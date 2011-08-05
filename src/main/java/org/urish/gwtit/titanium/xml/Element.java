@@ -39,22 +39,12 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 		return this.tagName;
 	}-*/;
 
-	public final native void setTagName(String value)
-	/*-{
-		this.tagName = value;
-	}-*/;
-
 	/**
 	 * @return Retrieves all child text nodes as one string
 	 */
 	public final native String getText()
 	/*-{
 		return this.text;
-	}-*/;
-
-	public final native void setText(String value)
-	/*-{
-		this.text = value;
 	}-*/;
 
 	/**

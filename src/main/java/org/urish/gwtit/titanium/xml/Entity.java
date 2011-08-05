@@ -42,11 +42,6 @@ public class Entity extends org.urish.gwtit.titanium.xml.Node {
 		return this.notationName;
 	}-*/;
 
-	public final native void setNotationName(String value)
-	/*-{
-		this.notationName = value;
-	}-*/;
-
 	/**
 	 * @return The public identifier associated with the entity, if specified.
 	 *         if the public identifier was not specified, this is `null`.
@@ -56,11 +51,6 @@ public class Entity extends org.urish.gwtit.titanium.xml.Node {
 		return this.publicId;
 	}-*/;
 
-	public final native void setPublicId(String value)
-	/*-{
-		this.publicId = value;
-	}-*/;
-
 	/**
 	 * @return The system identifier associated with the entity, if specified.
 	 *         if the system identifier was not specified, this is null.
@@ -68,11 +58,6 @@ public class Entity extends org.urish.gwtit.titanium.xml.Node {
 	public final native String getSystemId()
 	/*-{
 		return this.systemId;
-	}-*/;
-
-	public final native void setSystemId(String value)
-	/*-{
-		this.systemId = value;
 	}-*/;
 
 }

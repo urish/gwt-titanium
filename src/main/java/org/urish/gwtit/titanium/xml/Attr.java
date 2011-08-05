@@ -37,11 +37,6 @@ public class Attr extends org.urish.gwtit.titanium.xml.Node {
 		return this.name;
 	}-*/;
 
-	public final native void setName(String value)
-	/*-{
-		this.name = value;
-	}-*/;
-
 	/**
 	 * @return The {@link org.urish.gwtit.titanium.xml.element} to which the
 	 *         attribute belongs.
@@ -51,11 +46,6 @@ public class Attr extends org.urish.gwtit.titanium.xml.Node {
 		return this.ownerElement;
 	}-*/;
 
-	public final native void setOwnerElement(org.urish.gwtit.titanium.xml.Element value)
-	/*-{
-		this.ownerElement = value;
-	}-*/;
-
 	/**
 	 * @return True if this attribute was explicitly given a value in the
 	 *         instance document, false otherwise.
@@ -63,11 +53,6 @@ public class Attr extends org.urish.gwtit.titanium.xml.Node {
 	public final native boolean getSpecified()
 	/*-{
 		return this.specified;
-	}-*/;
-
-	public final native void setSpecified(boolean value)
-	/*-{
-		this.specified = value;
 	}-*/;
 
 	/**
