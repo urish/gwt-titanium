@@ -145,12 +145,12 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return Return the displaycaps object for platform
 	 */
-	public static native Object getDisplayCaps()
+	public static native org.urish.gwtit.titanium.platform.DisplayCaps getDisplayCaps()
 	/*-{
 		return Titanium.Platform.displayCaps;
 	}-*/;
 
-	public static native void setDisplayCaps(Object value)
+	public static native void setDisplayCaps(org.urish.gwtit.titanium.platform.DisplayCaps value)
 	/*-{
 		Titanium.Platform.displayCaps = value;
 	}-*/;
