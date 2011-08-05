@@ -22,6 +22,7 @@ import org.urish.gwtit.titanium.UI;
 import org.urish.gwtit.titanium.ui.AlertDialog;
 import org.urish.gwtit.titanium.ui.Label;
 import org.urish.gwtit.titanium.ui.Window;
+import org.urish.gwtit.titanium.ui.View.ClickEvent;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -40,17 +41,17 @@ public class HelloWorld extends GwtTitaniumBootstrap {
 		label.setTextAlign("center");
 		label.setText("Hello World !");
 
-		label.addClickHandler(new EventCallback<JavaScriptObject>() {
+		label.addClickHandler(new EventCallback<ClickEvent>() {
 			@Override
-			public void onEvent(JavaScriptObject event) {
+			public void onEvent(ClickEvent event) {
 				AlertDialog alertDialog = UI.createAlertDialog();
 				alertDialog.setTitle("Example");
 				alertDialog.setMessage("Hello, World");
 				alertDialog.show();
 			}
 		});
-
+				
 		win.add(label);
-		win.open(null);
+		win.open();
 	}
 }
