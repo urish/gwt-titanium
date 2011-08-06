@@ -45,7 +45,7 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
 		try {
 			runner.run(this);
 		}
-		catch (RuntimeException e) {
+		catch (Throwable e) {
 			e.printStackTrace();
 			
 			/* Unfortunately, Titanium can only handle string exceptions... */
