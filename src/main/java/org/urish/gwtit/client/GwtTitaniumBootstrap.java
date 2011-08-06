@@ -15,8 +15,12 @@
  */
 package org.urish.gwtit.client;
 
+import java.io.PrintStream;
+
+import org.urish.gwtit.client.io.StringPrintStream;
 import org.urish.gwtit.client.io.TitaniumStandardErrorPrintStream;
 import org.urish.gwtit.client.io.TitaniumStandardOutputPrintStream;
+import org.urish.gwtit.client.util.Javascript;
 import org.urish.gwtit.client.util.Timer;
 import org.urish.gwtit.client.util.TimerCallback;
 import org.urish.gwtit.client.util.Timers;
@@ -43,7 +47,11 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
 		}
 		catch (RuntimeException e) {
 			e.printStackTrace();
-			throw e;
+			
+			/* Unfortunately, Titanium can only handle string exceptions... */
+			PrintStream ps = new StringPrintStream();
+			e.printStackTrace(ps);
+			Javascript.throwString(ps.toString());
 		}
 	}
 
