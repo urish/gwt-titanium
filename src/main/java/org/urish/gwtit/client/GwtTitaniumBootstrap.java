@@ -15,6 +15,8 @@
  */
 package org.urish.gwtit.client;
 
+import org.urish.gwtit.client.io.TitaniumStandardErrorPrintStream;
+import org.urish.gwtit.client.io.TitaniumStandardOutputPrintStream;
 import org.urish.gwtit.client.util.Timer;
 import org.urish.gwtit.client.util.TimerCallback;
 import org.urish.gwtit.client.util.Timers;
@@ -34,7 +36,15 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
 	@Override
 	public final void onModuleLoad() {
 		Runner runner = GWT.create(Runner.class);
-		runner.run(this);
+		System.setOut(new TitaniumStandardOutputPrintStream());
+		System.setErr(new TitaniumStandardErrorPrintStream());
+		try {
+			runner.run(this);
+		}
+		catch (RuntimeException e) {
+			e.printStackTrace();
+			throw e;
+		}
 	}
 
 	public Timer setTimeout(int milliseconds, TimerCallback callback) {
