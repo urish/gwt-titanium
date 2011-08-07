@@ -163,7 +163,23 @@
 		"properties[name='activeTab'] type": "Titanium.UI.Tab"
 	},
 	"Titanium.UI.View": {
-		"methods[name='add'] parameters[name='view'] type": "Titanium.UI.View"
+		"methods[name='add'] parameters[name='view'] type": "Titanium.UI.View",
+		"properties[name='bottom'] getterType": "float",
+		"properties[name='anchorPoint'] type": "$Point",
+		"properties[name='animatedCenterPoint'] type": "$Point",
+		"properties[name='center'] type": "$Point",
+		"properties[name='height'] getterType": "float",
+		"properties[name='left'] getterType": "float",
+		"properties[name='right'] getterType": "float",
+		"properties[name='width'] getterType": "float",
+		"properties[name='size'] getterType": "$Size",
+		"properties[name='top'] getterType": "float",
+		"events[name=/.*/] superClass": "TitaniumTouchEvent",		
+		"events[name=/(dbl|long|)click|(double|single|twofinger)tap|longpress|touch(start|end|move|cancel)/] callbackClass": "TitaniumTouchEvent",		
+		"events[name=/.*/] properties[name='globalPoint']": null,		
+		"events[name=/.*/] properties[name='x']": null,
+		"events[name=/.*/] properties[name='y']": null,		
+		"events[name='swipe'] properties[name='direction'] type": "String"		
 	},
 	"Titanium.XML.Document": {
 		"methods[name='createCDATASection']     returns type": "Object",

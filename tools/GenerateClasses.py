@@ -43,6 +43,7 @@ package org.urish.gwtit.%(package)s;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.TitaniumTouchEvent;
 
 /**
  * %(docString)s
@@ -107,7 +108,7 @@ STATIC_GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public static native %(type)s get%(nameCapital)s() 
+	public static native %(getterType)s get%(nameCapital)s() 
 	/*-{
 		return %(module)s.%(name)s;
 	}-*/;
@@ -124,7 +125,7 @@ STATIC_CALLBACK_GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public static native %(type)s get%(nameCapital)s() 
+	public static native %(getterType)s get%(nameCapital)s() 
 	/*-{
 		return %(module)s.%(name)s._javaObj;
 	}-*/;
@@ -176,7 +177,7 @@ FACTORY_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public final static class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
+	public final static class %(nameCapital)sEvent extends %(superClass)s
 	{	
 		public final static String EVENT_NAME = "%(name)s";
 		
@@ -185,7 +186,7 @@ EVENT_TEMPLATE = """
 		%(eventProperties)s		
 	} 
 
-	public final native void add%(nameCapital)sHandler(EventCallback<%(nameCapital)sEvent> handler) 
+	public final native void add%(nameCapital)sHandler(EventCallback<%(callbackType)s> handler) 
 	/*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -223,6 +224,8 @@ def mapTypes(s, withConsts = False):
 		"Object": "Object",
 		"Date": "java.util.Date",
 		"Font": "org.urish.gwtit.client.font.Font",
+		"$Point": "org.urish.gwtit.client.util.Point",
+		"$Size": "org.urish.gwtit.client.util.Size",
 	}
 	if s in TYPE_MAP.keys():
 		return TYPE_MAP[s]
@@ -325,7 +328,7 @@ def generateProperties(type, isSingleton, types):
 					result += getter % {
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
-						'type': "Object",
+						'type': property.get('getterType', "Object"),
 						'module': type['name'],
 						'docString': docString,
 					}
@@ -338,6 +341,7 @@ def generateProperties(type, isSingleton, types):
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
 						'type': mappedType,
+						'getterType': property.get('getterType', mappedType),
 						'module': type['name'],
 						'docString': docString,
 					}
@@ -489,33 +493,36 @@ def generateEvents(typeInfo, isSingleton, types):
 	result = ""
 	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
 	AUTO_EVENT_PROPERTIES = ["source", "type"]
-	if 'events' in typeInfo:
-		for event in typeInfo['events']:
-			foundInAncetors = False
-			eventProperties = ""
-			for propertyInfo in event['properties']:
-				if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
-					continue
-				eventType = propertyInfo['type'] if 'type' in propertyInfo else "Object"
-				eventProperties += GETTER_TEMPLATE % {
-					'docString': propertyInfo['description'],
-					'type': mapTypes(eventType),
-					'name': propertyInfo['name'],
-					'nameCapital': capitalFirst(propertyInfo['name']),
-				}
-			if not isSingleton:
-				for ancestor in ancestors(typeInfo, types):
-					if 'events' in ancestor:
-						for candidate in ancestor['events']:
-							if event['name'] == candidate['name']:
-								foundInAncetors = True
-			if not foundInAncetors: 
-				result += template % {
-					'name': event['name'],
-					'nameCapital': capitalEventName(event['name']),
-					'module': typeInfo['name'],
-					'eventProperties': eventProperties,
-				}
+	for event in typeInfo.get('events', []):
+		superClass = event.get("superClass", "org.urish.gwtit.client.event.AbstractTitaniumEvent")
+		callbackType = event.get("callbackClass", "%sEvent" % capitalEventName(event['name']))
+		foundInAncetors = False
+		eventProperties = ""
+		for propertyInfo in event['properties']:
+			if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
+				continue
+			eventType = propertyInfo['type'] if 'type' in propertyInfo else "Object"
+			eventProperties += GETTER_TEMPLATE % {
+				'docString': propertyInfo['description'],
+				'type': mapTypes(eventType),
+				'name': propertyInfo['name'],
+				'nameCapital': capitalFirst(propertyInfo['name']),
+			}
+		if not isSingleton:
+			for ancestor in ancestors(typeInfo, types):
+				if 'events' in ancestor:
+					for candidate in ancestor['events']:
+						if event['name'] == candidate['name']:
+							foundInAncetors = True
+		if not foundInAncetors: 
+			result += template % {
+				'name': event['name'],
+				'nameCapital': capitalEventName(event['name']),
+				'superClass': superClass,
+				'callbackType': callbackType,
+				'module': typeInfo['name'],
+				'eventProperties': eventProperties,
+			}
 	return result
 
 def generateClass(projectRoot, type, types):
@@ -553,26 +560,42 @@ def chunks(l, n):
     """ Yield successive n-sized chunks from l."""
     for i in xrange(0, len(l), n):
         yield l[i:i+n]
+        
+def processSelectorChain(subject, chain, value):
+	while len(chain) > 0:
+		selector = chain.pop(0)
+		if (len(chain) == 0) and (value != None):
+			if selector.endswith("+"):
+				subject[selector] += value
+			else:
+				subject[selector] = value
+		match = re.match(r"^([^[]+)\[([^=]+)='([^']+)'\]$", selector)
+		rematch = re.match(r"^([^[]+)\[([^=]+)=/([^/]+)/\]$", selector)
+		if match:
+			realKey, searchKey, searchValue = match.groups()
+			for subItem in subject[realKey]:
+				if subItem[searchKey] == searchValue:
+					if len(chain) > 0:
+						subject = subItem
+					else:		
+						subject[realKey].remove(subItem)
+		elif rematch:
+			realKey, searchKey, searchValue = rematch.groups()
+			for subItem in subject[realKey]:
+				if re.search(searchValue, subItem[searchKey]):
+					if len(chain) > 0:
+						processSelectorChain(subItem, list(chain), value)
+					else:
+						subject[realKey].remove(subItem) 
+			return
+		else:
+			subject = subject[selector]
 	
 def processOverrides(typeInfo, overrides):
 	for key, item in overrides.items():
 		key = re.sub("\s+", " ", key)
 		chain = key.split(" ")
-		subject = typeInfo
-		for selector in chain[:-1]:
-			match = re.match(r"^([^[]+)\[([^=]+)='([^']+)'\]$", selector)
-			if match:
-				realKey, searchKey, searchValue = match.groups()
-				for subItem in subject[realKey]:
-					if subItem[searchKey] == searchValue:
-						subject = subItem
-			else:
-				subject = subject[selector]
-		key = chain[-1]
-		if key.endswith("+"):
-			subject[key[:-1]] += item
-		else:
-			subject[key] = item
+		processSelectorChain(typeInfo, chain, item)
 
 def processDir(inputDir, projectDir):
 	types = []
@@ -595,7 +618,7 @@ def processDir(inputDir, projectDir):
 		if typeInfo['name'] in overrides:
 			processOverrides(typeInfo, overrides[typeInfo['name']])
 		classes.append(generateClass(projectDir, typeInfo, types))
-	# Format code
+	# Format the generated code
 	for someClasses in chunks(classes, 32):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
