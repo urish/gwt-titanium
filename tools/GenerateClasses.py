@@ -73,7 +73,7 @@ GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public final native %(type)s get%(nameCapital)s() 
+	public final native %(getterType)s get%(nameCapital)s() 
 	/*-{
 		return this.%(name)s;
 	}-*/;
@@ -125,7 +125,7 @@ STATIC_CALLBACK_GETTER_TEMPLATE = """
 	/**
 	 * %(docString)s
 	 */
-	public static native %(getterType)s get%(nameCapital)s() 
+	public static native %(type)s get%(nameCapital)s() 
 	/*-{
 		return %(module)s.%(name)s._javaObj;
 	}-*/;
@@ -328,7 +328,7 @@ def generateProperties(type, isSingleton, types):
 					result += getter % {
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
-						'type': property.get('getterType', "Object"),
+						'getterType': mapTypes(property.get('getterType', "Object")),
 						'module': type['name'],
 						'docString': docString,
 					}
@@ -341,7 +341,7 @@ def generateProperties(type, isSingleton, types):
 						'name': property['name'],
 						'nameCapital': capitalFirst(property['name']),
 						'type': mappedType,
-						'getterType': property.get('getterType', mappedType),
+						'getterType': mapTypes(property.get('getterType', property['type'])),
 						'module': type['name'],
 						'docString': docString,
 					}
@@ -504,7 +504,7 @@ def generateEvents(typeInfo, isSingleton, types):
 			eventType = propertyInfo['type'] if 'type' in propertyInfo else "Object"
 			eventProperties += GETTER_TEMPLATE % {
 				'docString': propertyInfo['description'],
-				'type': mapTypes(eventType),
+				'getterType': mapTypes(eventType),
 				'name': propertyInfo['name'],
 				'nameCapital': capitalFirst(propertyInfo['name']),
 			}

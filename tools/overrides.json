@@ -175,7 +175,6 @@
 		"properties[name='size'] getterType": "$Size",
 		"properties[name='top'] getterType": "float",
 		"events[name=/.*/] superClass": "TitaniumTouchEvent",		
-		"events[name=/(dbl|long|)click|(double|single|twofinger)tap|longpress|touch(start|end|move|cancel)/] callbackClass": "TitaniumTouchEvent",		
 		"events[name=/.*/] properties[name='globalPoint']": null,		
 		"events[name=/.*/] properties[name='x']": null,
 		"events[name=/.*/] properties[name='y']": null,		

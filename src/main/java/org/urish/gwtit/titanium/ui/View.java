@@ -402,7 +402,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return The size of the view as a dictionary of width and height
 	 *         properties
 	 */
-	public final native Object getSize()
+	public final native org.urish.gwtit.client.util.Size getSize()
 	/*-{
 		return this.size;
 	}-*/;
@@ -594,7 +594,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addClickHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addClickHandler(EventCallback<ClickEvent> handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -607,7 +607,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addDblclickHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addDblclickHandler(EventCallback<DblclickEvent> handler)
 	/*-{
 		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -620,7 +620,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addDoubletapHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addDoubletapHandler(EventCallback<DoubletapEvent> handler)
 	/*-{
 		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -633,7 +633,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addLongclickHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addLongclickHandler(EventCallback<LongclickEvent> handler)
 	/*-{
 		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -646,7 +646,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addLongpressHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addLongpressHandler(EventCallback<LongpressEvent> handler)
 	/*-{
 		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -659,7 +659,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addSingletapHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addSingletapHandler(EventCallback<SingletapEvent> handler)
 	/*-{
 		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -693,7 +693,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addTouchcancelHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addTouchcancelHandler(EventCallback<TouchcancelEvent> handler)
 	/*-{
 		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -706,7 +706,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addTouchendHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addTouchendHandler(EventCallback<TouchendEvent> handler)
 	/*-{
 		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -719,7 +719,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addTouchmoveHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addTouchmoveHandler(EventCallback<TouchmoveEvent> handler)
 	/*-{
 		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -732,7 +732,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addTouchstartHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addTouchstartHandler(EventCallback<TouchstartEvent> handler)
 	/*-{
 		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
@@ -745,7 +745,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addTwofingertapHandler(EventCallback<TitaniumTouchEvent> handler)
+	public final native void addTwofingertapHandler(EventCallback<TwofingertapEvent> handler)
 	/*-{
 		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
 	}-*/;
