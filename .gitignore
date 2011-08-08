@@ -1,7 +1,8 @@
+/.classpath
+/.project
+/.settings
 /war
 /build
 /bin
 /target
-
 /.gwt/.gwt-log
-/.settings
