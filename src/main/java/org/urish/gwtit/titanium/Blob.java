@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The blob is an abstract data type that represents binary information, often

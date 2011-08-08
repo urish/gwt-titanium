@@ -18,9 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.EventCallback;
-
 import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The top level media module. the media module is used accessing the device's
@@ -1181,21 +1182,25 @@ public class Media extends org.urish.gwtit.titanium.Module {
 		return Titanium.Media.fireEvent(name, event);
 	}-*/;
 
-	public final static class LinechangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "linechange";
+	public final static class LinechangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "linechange";
 
 		protected LinechangeEvent() {
 		}
 
 	}
 
-	public static native void addLinechangeHandler(EventCallback<LinechangeEvent> handler)
+	public interface LinechangeHandler {
+		public void onLinechangeEvent(LinechangeEvent event);
+	}
+
+	public static native void addLinechangeHandler(LinechangeHandler handler)
 	/*-{
-		return Titanium.Media.addEventListener('linechange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Media.addEventListener('linechange', function(e) { handler.@org.urish.gwtit.titanium.Media.LinechangeHandler::onLinechange(Lorg/urish/gwtit/titanium/Media/LinechangeEvent;)(e); } );
 	}-*/;
 
-	public final static class RecordinginputEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "recordinginput";
+	public final static class RecordinginputEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "recordinginput";
 
 		protected RecordinginputEvent() {
 		}
@@ -1210,13 +1215,17 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addRecordinginputHandler(EventCallback<RecordinginputEvent> handler)
+	public interface RecordinginputHandler {
+		public void onRecordinginputEvent(RecordinginputEvent event);
+	}
+
+	public static native void addRecordinginputHandler(RecordinginputHandler handler)
 	/*-{
-		return Titanium.Media.addEventListener('recordinginput', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Media.addEventListener('recordinginput', function(e) { handler.@org.urish.gwtit.titanium.Media.RecordinginputHandler::onRecordinginput(Lorg/urish/gwtit/titanium/Media/RecordinginputEvent;)(e); } );
 	}-*/;
 
-	public final static class VolumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "volume";
+	public final static class VolumeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "volume";
 
 		protected VolumeEvent() {
 		}
@@ -1231,9 +1240,13 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addVolumeHandler(EventCallback<VolumeEvent> handler)
+	public interface VolumeHandler {
+		public void onVolumeEvent(VolumeEvent event);
+	}
+
+	public static native void addVolumeHandler(VolumeHandler handler)
 	/*-{
-		return Titanium.Media.addEventListener('volume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Media.addEventListener('volume', function(e) { handler.@org.urish.gwtit.titanium.Media.VolumeHandler::onVolume(Lorg/urish/gwtit/titanium/Media/VolumeEvent;)(e); } );
 	}-*/;
 
 }

@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The window is an empty drawing surface or container. the window is created by
@@ -596,8 +599,8 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.open(options);
 	}-*/;
 
-	public final static class AndroidBackEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "android:back";
+	public final static class AndroidBackEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "android:back";
 
 		protected AndroidBackEvent() {
 		}
@@ -629,13 +632,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addAndroidBackHandler(EventCallback<AndroidBackEvent> handler)
+	public interface AndroidBackHandler {
+		public void onAndroidBack(AndroidBackEvent event);
+	}
+
+	public final native void addAndroidBackHandler(AndroidBackHandler handler)
 	/*-{
-		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidBackHandler::onAndroidBack(Lorg/urish/gwtit/titanium/ui/Window/AndroidBackEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidCameraEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "android:camera";
+	public final static class AndroidCameraEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "android:camera";
 
 		protected AndroidCameraEvent() {
 		}
@@ -667,13 +674,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addAndroidCameraHandler(EventCallback<AndroidCameraEvent> handler)
+	public interface AndroidCameraHandler {
+		public void onAndroidCamera(AndroidCameraEvent event);
+	}
+
+	public final native void addAndroidCameraHandler(AndroidCameraHandler handler)
 	/*-{
-		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidCameraHandler::onAndroidCamera(Lorg/urish/gwtit/titanium/ui/Window/AndroidCameraEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidFocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "android:focus";
+	public final static class AndroidFocusEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "android:focus";
 
 		protected AndroidFocusEvent() {
 		}
@@ -705,13 +716,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addAndroidFocusHandler(EventCallback<AndroidFocusEvent> handler)
+	public interface AndroidFocusHandler {
+		public void onAndroidFocus(AndroidFocusEvent event);
+	}
+
+	public final native void addAndroidFocusHandler(AndroidFocusHandler handler)
 	/*-{
-		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidFocusHandler::onAndroidFocus(Lorg/urish/gwtit/titanium/ui/Window/AndroidFocusEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidSearchEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "android:search";
+	public final static class AndroidSearchEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "android:search";
 
 		protected AndroidSearchEvent() {
 		}
@@ -743,13 +758,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addAndroidSearchHandler(EventCallback<AndroidSearchEvent> handler)
+	public interface AndroidSearchHandler {
+		public void onAndroidSearch(AndroidSearchEvent event);
+	}
+
+	public final native void addAndroidSearchHandler(AndroidSearchHandler handler)
 	/*-{
-		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidSearchHandler::onAndroidSearch(Lorg/urish/gwtit/titanium/ui/Window/AndroidSearchEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidVoldownEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "android:voldown";
+	public final static class AndroidVoldownEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "android:voldown";
 
 		protected AndroidVoldownEvent() {
 		}
@@ -781,13 +800,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addAndroidVoldownHandler(EventCallback<AndroidVoldownEvent> handler)
+	public interface AndroidVoldownHandler {
+		public void onAndroidVoldown(AndroidVoldownEvent event);
+	}
+
+	public final native void addAndroidVoldownHandler(AndroidVoldownHandler handler)
 	/*-{
-		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVoldownHandler::onAndroidVoldown(Lorg/urish/gwtit/titanium/ui/Window/AndroidVoldownEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidVolupEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "android:volup";
+	public final static class AndroidVolupEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "android:volup";
 
 		protected AndroidVolupEvent() {
 		}
@@ -819,13 +842,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addAndroidVolupHandler(EventCallback<AndroidVolupEvent> handler)
+	public interface AndroidVolupHandler {
+		public void onAndroidVolup(AndroidVolupEvent event);
+	}
+
+	public final native void addAndroidVolupHandler(AndroidVolupHandler handler)
 	/*-{
-		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVolupHandler::onAndroidVolup(Lorg/urish/gwtit/titanium/ui/Window/AndroidVolupEvent;)(e); } );
 	}-*/;
 
-	public final static class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "blur";
+	public final static class BlurEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "blur";
 
 		protected BlurEvent() {
 		}
@@ -857,13 +884,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addBlurHandler(EventCallback<BlurEvent> handler)
+	public interface BlurHandler {
+		public void onBlur(BlurEvent event);
+	}
+
+	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/Window/BlurEvent;)(e); } );
 	}-*/;
 
-	public final static class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "close";
+	public final static class CloseEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "close";
 
 		protected CloseEvent() {
 		}
@@ -895,13 +926,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addCloseHandler(EventCallback<CloseEvent> handler)
+	public interface CloseHandler {
+		public void onClose(CloseEvent event);
+	}
+
+	public final native void addCloseHandler(CloseHandler handler)
 	/*-{
-		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/Window/CloseEvent;)(e); } );
 	}-*/;
 
-	public final static class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "focus";
+	public final static class FocusEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "focus";
 
 		protected FocusEvent() {
 		}
@@ -933,13 +968,17 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addFocusHandler(EventCallback<FocusEvent> handler)
+	public interface FocusHandler {
+		public void onFocus(FocusEvent event);
+	}
+
+	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/Window/FocusEvent;)(e); } );
 	}-*/;
 
-	public final static class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "open";
+	public final static class OpenEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "open";
 
 		protected OpenEvent() {
 		}
@@ -971,9 +1010,13 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addOpenHandler(EventCallback<OpenEvent> handler)
+	public interface OpenHandler {
+		public void onOpen(OpenEvent event);
+	}
+
+	public final native void addOpenHandler(OpenHandler handler)
 	/*-{
-		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.OpenHandler::onOpen(Lorg/urish/gwtit/titanium/ui/Window/OpenEvent;)(e); } );
 	}-*/;
 
 }

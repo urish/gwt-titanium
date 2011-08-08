@@ -18,9 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.EventCallback;
-
 import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The top level network module. the network module is used accessing networking
@@ -477,8 +478,8 @@ public class Network extends org.urish.gwtit.titanium.Module {
 		return Titanium.Network.fireEvent(name, event);
 	}-*/;
 
-	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "change";
+	public final static class ChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "change";
 
 		protected ChangeEvent() {
 		}
@@ -509,9 +510,13 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addChangeHandler(EventCallback<ChangeEvent> handler)
+	public interface ChangeHandler {
+		public void onChangeEvent(ChangeEvent event);
+	}
+
+	public static native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return Titanium.Network.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Network.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.Network.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/Network/ChangeEvent;)(e); } );
 	}-*/;
 
 }

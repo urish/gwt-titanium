@@ -43,7 +43,8 @@ package org.urish.gwtit.%(package)s;
 
 import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.TitaniumTouchEvent;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * %(docString)s
@@ -177,34 +178,42 @@ FACTORY_TEMPLATE = """
 """
 
 EVENT_TEMPLATE = """
-	public final static class %(nameCapital)sEvent extends %(superClass)s
+	public final static class %(javaName)sEvent extends %(superClass)s
 	{	
-		public final static String EVENT_NAME = "%(name)s";
+		public final static String NATIVE_EVENT_NAME = "%(name)s";
 		
-		protected %(nameCapital)sEvent() {}
+		protected %(javaName)sEvent() {}
 
 		%(eventProperties)s		
-	} 
-
-	public final native void add%(nameCapital)sHandler(EventCallback<%(callbackType)s> handler) 
+	}
+	
+	public interface %(javaName)sHandler {
+		public void on%(javaName)s(%(javaName)sEvent event);
+	}
+	
+	public final native void add%(javaName)sHandler(%(javaName)sHandler handler) 
 	/*-{
-		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.%(package)s.%(className)s.%(javaName)sHandler::on%(javaName)s(Lorg/urish/gwtit/%(packagePath)s/%(className)s/%(javaName)sEvent;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public final static class %(nameCapital)sEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent
+	public final static class %(javaName)sEvent extends AbstractTitaniumEvent
 	{
-		public final static String EVENT_NAME = "%(name)s";
+		public final static String NATIVE_EVENT_NAME = "%(name)s";
 
-		protected %(nameCapital)sEvent() {}
+		protected %(javaName)sEvent() {}
 	
 		%(eventProperties)s
 	} 
 
-	public static native void add%(nameCapital)sHandler(EventCallback<%(nameCapital)sEvent> handler) 
+	public interface %(javaName)sHandler {
+		public void on%(javaName)sEvent(%(javaName)sEvent event);
+	}
+	
+	public static native void add%(javaName)sHandler(%(javaName)sHandler handler) 
 	/*-{
-		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.%(package)s.%(className)s.%(javaName)sHandler::on%(javaName)s(Lorg/urish/gwtit/%(packagePath)s/%(className)s/%(javaName)sEvent;)(e); } );
 	}-*/;
 """
 
@@ -488,14 +497,19 @@ def capitalEventName(eventName):
 	def capitalMatch(match):
 		return match.group(1).upper()
 	return re.sub(":(.)", capitalMatch, capitalFirst(eventName))
+
+def getPackageNameSuffix(typeInfo):
+	return ".".join(["titanium"] + typeInfo['name'].split(".")[1:-1]).lower();
 	
 def generateEvents(typeInfo, isSingleton, types):
 	result = ""
 	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
 	AUTO_EVENT_PROPERTIES = ["source", "type"]
+	package = getPackageNameSuffix(typeInfo)
+	packagePath = package.replace(".", "/")
 	for event in typeInfo.get('events', []):
-		superClass = event.get("superClass", "org.urish.gwtit.client.event.AbstractTitaniumEvent")
-		callbackType = event.get("callbackClass", "%sEvent" % capitalEventName(event['name']))
+		superClass = event.get("superClass", "AbstractTitaniumEvent")
+		javaName = event.get("javaName", capitalEventName(event['name']))
 		foundInAncetors = False
 		eventProperties = ""
 		for propertyInfo in event['properties']:
@@ -516,10 +530,13 @@ def generateEvents(typeInfo, isSingleton, types):
 							foundInAncetors = True
 		if not foundInAncetors: 
 			result += template % {
+				'className': typeInfo['name'].split(".")[-1],
+				'package': package,
+				'packagePath': packagePath,
 				'name': event['name'],
 				'nameCapital': capitalEventName(event['name']),
 				'superClass': superClass,
-				'callbackType': callbackType,
+				'javaName': javaName,
 				'module': typeInfo['name'],
 				'eventProperties': eventProperties,
 			}
@@ -535,7 +552,7 @@ def generateClass(projectRoot, type, types):
 		parentClass = mapTypes(type['extends'])
 		singleton = type['extends'] == 'Titanium.Module'
 	code = CLASS_TEMPLATE % {
-		'package': ".".join(["titanium"] + name[1:-1]).lower(),
+		'package': getPackageNameSuffix(type),
 		'name': name[-1],
 		'parent': parentClass,
 		'docString': generateClassDoc(type),

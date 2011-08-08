@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A text area is created by the method
@@ -210,8 +213,8 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 		return this.hasText();
 	}-*/;
 
-	public final static class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "blur";
+	public final static class BlurEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "blur";
 
 		protected BlurEvent() {
 		}
@@ -251,13 +254,17 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addBlurHandler(EventCallback<BlurEvent> handler)
+	public interface BlurHandler {
+		public void onBlur(BlurEvent event);
+	}
+
+	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/TextArea/BlurEvent;)(e); } );
 	}-*/;
 
-	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "change";
+	public final static class ChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "change";
 
 		protected ChangeEvent() {
 		}
@@ -297,13 +304,17 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
+	public interface ChangeHandler {
+		public void onChange(ChangeEvent event);
+	}
+
+	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/TextArea/ChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "focus";
+	public final static class FocusEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "focus";
 
 		protected FocusEvent() {
 		}
@@ -343,13 +354,17 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addFocusHandler(EventCallback<FocusEvent> handler)
+	public interface FocusHandler {
+		public void onFocus(FocusEvent event);
+	}
+
+	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/TextArea/FocusEvent;)(e); } );
 	}-*/;
 
-	public final static class ReturnEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "return";
+	public final static class ReturnEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "return";
 
 		protected ReturnEvent() {
 		}
@@ -389,13 +404,17 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addReturnHandler(EventCallback<ReturnEvent> handler)
+	public interface ReturnHandler {
+		public void onReturn(ReturnEvent event);
+	}
+
+	public final native void addReturnHandler(ReturnHandler handler)
 	/*-{
-		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.ReturnHandler::onReturn(Lorg/urish/gwtit/titanium/ui/TextArea/ReturnEvent;)(e); } );
 	}-*/;
 
-	public final static class SelectedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "selected";
+	public final static class SelectedEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "selected";
 
 		protected SelectedEvent() {
 		}
@@ -436,9 +455,13 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addSelectedHandler(EventCallback<SelectedEvent> handler)
+	public interface SelectedHandler {
+		public void onSelected(SelectedEvent event);
+	}
+
+	public final native void addSelectedHandler(SelectedHandler handler)
 	/*-{
-		return this.addEventListener('selected', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('selected', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.SelectedHandler::onSelected(Lorg/urish/gwtit/titanium/ui/TextArea/SelectedEvent;)(e); } );
 	}-*/;
 
 }

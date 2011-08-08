@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium.filesystem;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The file object which support various filesystem based operations.

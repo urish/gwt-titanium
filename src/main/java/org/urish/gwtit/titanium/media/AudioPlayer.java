@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.media;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The audioplayer object is returned by
@@ -260,8 +263,8 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "change";
+	public final static class ChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "change";
 
 		protected ChangeEvent() {
 		}
@@ -284,13 +287,17 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
+	public interface ChangeHandler {
+		public void onChange(ChangeEvent event);
+	}
+
+	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.media.AudioPlayer.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/media/AudioPlayer/ChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class ProgressEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "progress";
+	public final static class ProgressEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "progress";
 
 		protected ProgressEvent() {
 		}
@@ -305,9 +312,13 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addProgressHandler(EventCallback<ProgressEvent> handler)
+	public interface ProgressHandler {
+		public void onProgress(ProgressEvent event);
+	}
+
+	public final native void addProgressHandler(ProgressHandler handler)
 	/*-{
-		return this.addEventListener('progress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('progress', function(e) { handler.@org.urish.gwtit.titanium.media.AudioPlayer.ProgressHandler::onProgress(Lorg/urish/gwtit/titanium/media/AudioPlayer/ProgressEvent;)(e); } );
 	}-*/;
 
 }

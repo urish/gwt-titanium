@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * An image view is used to display an image or a series of images in an
@@ -252,8 +255,8 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.toBlob();
 	}-*/;
 
-	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "change";
+	public final static class ChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "change";
 
 		protected ChangeEvent() {
 		}
@@ -293,13 +296,17 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
+	public interface ChangeHandler {
+		public void onChange(ChangeEvent event);
+	}
+
+	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/ImageView/ChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "load";
+	public final static class LoadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "load";
 
 		protected LoadEvent() {
 		}
@@ -340,13 +347,17 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addLoadHandler(EventCallback<LoadEvent> handler)
+	public interface LoadHandler {
+		public void onLoad(LoadEvent event);
+	}
+
+	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/ImageView/LoadEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "start";
+	public final static class StartEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "start";
 
 		protected StartEvent() {
 		}
@@ -378,13 +389,17 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addStartHandler(EventCallback<StartEvent> handler)
+	public interface StartHandler {
+		public void onStart(StartEvent event);
+	}
+
+	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/ImageView/StartEvent;)(e); } );
 	}-*/;
 
-	public final static class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "stop";
+	public final static class StopEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "stop";
 
 		protected StopEvent() {
 		}
@@ -416,9 +431,13 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addStopHandler(EventCallback<StopEvent> handler)
+	public interface StopHandler {
+		public void onStop(StopEvent event);
+	}
+
+	public final native void addStopHandler(StopHandler handler)
 	/*-{
-		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.StopHandler::onStop(Lorg/urish/gwtit/titanium/ui/ImageView/StopEvent;)(e); } );
 	}-*/;
 
 }

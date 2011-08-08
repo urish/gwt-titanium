@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui.ipad;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A splitwindow is a window that manages the presentation of two side-by-side
@@ -86,8 +89,8 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 		this.showMasterInPortrait = value;
 	}-*/;
 
-	public final static class VisibleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "visible";
+	public final static class VisibleEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "visible";
 
 		protected VisibleEvent() {
 		}
@@ -145,9 +148,13 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addVisibleHandler(EventCallback<VisibleEvent> handler)
+	public interface VisibleHandler {
+		public void onVisible(VisibleEvent event);
+	}
+
+	public final native void addVisibleHandler(VisibleHandler handler)
 	/*-{
-		return this.addEventListener('visible', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('visible', function(e) { handler.@org.urish.gwtit.titanium.ui.ipad.SplitWindow.VisibleHandler::onVisible(Lorg/urish/gwtit/titanium/ui/ipad/SplitWindow/VisibleEvent;)(e); } );
 	}-*/;
 
 }

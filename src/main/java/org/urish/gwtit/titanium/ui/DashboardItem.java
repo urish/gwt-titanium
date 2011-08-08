@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * An item that represents a visual icon in the
@@ -87,8 +90,8 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		this.selectedImage = value;
 	}-*/;
 
-	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "click";
+	public final static class ClickEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "click";
 
 		protected ClickEvent() {
 		}
@@ -112,13 +115,17 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addClickHandler(EventCallback<ClickEvent> handler)
+	public interface ClickHandler {
+		public void onClick(ClickEvent event);
+	}
+
+	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/DashboardItem/ClickEvent;)(e); } );
 	}-*/;
 
-	public final static class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "delete";
+	public final static class DeleteEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "delete";
 
 		protected DeleteEvent() {
 		}
@@ -133,13 +140,17 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addDeleteHandler(EventCallback<DeleteEvent> handler)
+	public interface DeleteHandler {
+		public void onDelete(DeleteEvent event);
+	}
+
+	public final native void addDeleteHandler(DeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/DashboardItem/DeleteEvent;)(e); } );
 	}-*/;
 
-	public final static class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "move";
+	public final static class MoveEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "move";
 
 		protected MoveEvent() {
 		}
@@ -162,9 +173,13 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addMoveHandler(EventCallback<MoveEvent> handler)
+	public interface MoveHandler {
+		public void onMove(MoveEvent event);
+	}
+
+	public final native void addMoveHandler(MoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/DashboardItem/MoveEvent;)(e); } );
 	}-*/;
 
 }

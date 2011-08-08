@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.android;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The titanium binding of an [android
@@ -83,8 +86,8 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final static class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "pause";
+	public final static class PauseEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "pause";
 
 		protected PauseEvent() {
 		}
@@ -103,13 +106,17 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addPauseHandler(EventCallback<PauseEvent> handler)
+	public interface PauseHandler {
+		public void onPause(PauseEvent event);
+	}
+
+	public final native void addPauseHandler(PauseHandler handler)
 	/*-{
-		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.Service.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/Service/PauseEvent;)(e); } );
 	}-*/;
 
-	public final static class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "resume";
+	public final static class ResumeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "resume";
 
 		protected ResumeEvent() {
 		}
@@ -128,35 +135,47 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addResumeHandler(EventCallback<ResumeEvent> handler)
+	public interface ResumeHandler {
+		public void onResume(ResumeEvent event);
+	}
+
+	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{
-		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.Service.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/Service/ResumeEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "start";
+	public final static class StartEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "start";
 
 		protected StartEvent() {
 		}
 
 	}
 
-	public final native void addStartHandler(EventCallback<StartEvent> handler)
+	public interface StartHandler {
+		public void onStart(StartEvent event);
+	}
+
+	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.android.Service.StartHandler::onStart(Lorg/urish/gwtit/titanium/android/Service/StartEvent;)(e); } );
 	}-*/;
 
-	public final static class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "stop";
+	public final static class StopEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "stop";
 
 		protected StopEvent() {
 		}
 
 	}
 
-	public final native void addStopHandler(EventCallback<StopEvent> handler)
+	public interface StopHandler {
+		public void onStop(StopEvent event);
+	}
+
+	public final native void addStopHandler(StopHandler handler)
 	/*-{
-		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.android.Service.StopHandler::onStop(Lorg/urish/gwtit/titanium/android/Service/StopEvent;)(e); } );
 	}-*/;
 
 }

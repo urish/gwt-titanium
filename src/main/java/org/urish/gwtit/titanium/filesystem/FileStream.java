@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium.filesystem;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * Wrapper around `titanium.filesystem.file` that implements the

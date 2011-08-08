@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui.ipad;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A popover is used to manage the presentation of content in a popover. you use
@@ -111,8 +114,8 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 		return this.setWidth(width);
 	}-*/;
 
-	public final static class HideEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "hide";
+	public final static class HideEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "hide";
 
 		protected HideEvent() {
 		}
@@ -144,9 +147,13 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addHideHandler(EventCallback<HideEvent> handler)
+	public interface HideHandler {
+		public void onHide(HideEvent event);
+	}
+
+	public final native void addHideHandler(HideHandler handler)
 	/*-{
-		return this.addEventListener('hide', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('hide', function(e) { handler.@org.urish.gwtit.titanium.ui.ipad.Popover.HideHandler::onHide(Lorg/urish/gwtit/titanium/ui/ipad/Popover/HideEvent;)(e); } );
 	}-*/;
 
 }

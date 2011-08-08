@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium.ui.ios;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The 3dmatrix is created by

@@ -18,9 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.EventCallback;
-
 import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The top level facebook module. the facebook module is used for connecting
@@ -262,8 +263,8 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 		return Titanium.Facebook.fireEvent(name, event);
 	}-*/;
 
-	public final static class LoginEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "login";
+	public final static class LoginEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "login";
 
 		protected LoginEvent() {
 		}
@@ -312,22 +313,30 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addLoginHandler(EventCallback<LoginEvent> handler)
+	public interface LoginHandler {
+		public void onLoginEvent(LoginEvent event);
+	}
+
+	public static native void addLoginHandler(LoginHandler handler)
 	/*-{
-		return Titanium.Facebook.addEventListener('login', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Facebook.addEventListener('login', function(e) { handler.@org.urish.gwtit.titanium.Facebook.LoginHandler::onLogin(Lorg/urish/gwtit/titanium/Facebook/LoginEvent;)(e); } );
 	}-*/;
 
-	public final static class LogoutEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "logout";
+	public final static class LogoutEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "logout";
 
 		protected LogoutEvent() {
 		}
 
 	}
 
-	public static native void addLogoutHandler(EventCallback<LogoutEvent> handler)
+	public interface LogoutHandler {
+		public void onLogoutEvent(LogoutEvent event);
+	}
+
+	public static native void addLogoutHandler(LogoutHandler handler)
 	/*-{
-		return Titanium.Facebook.addEventListener('logout', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Facebook.addEventListener('logout', function(e) { handler.@org.urish.gwtit.titanium.Facebook.LogoutHandler::onLogout(Lorg/urish/gwtit/titanium/Facebook/LogoutEvent;)(e); } );
 	}-*/;
 
 }

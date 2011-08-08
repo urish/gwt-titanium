@@ -18,9 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
-import org.urish.gwtit.client.EventCallback;
-
 import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The top level geolocation module. the geolocation module is used for
@@ -344,21 +345,25 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		return Titanium.Geolocation.fireEvent(name, event);
 	}-*/;
 
-	public final static class CalibrationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "calibration";
+	public final static class CalibrationEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "calibration";
 
 		protected CalibrationEvent() {
 		}
 
 	}
 
-	public static native void addCalibrationHandler(EventCallback<CalibrationEvent> handler)
+	public interface CalibrationHandler {
+		public void onCalibrationEvent(CalibrationEvent event);
+	}
+
+	public static native void addCalibrationHandler(CalibrationHandler handler)
 	/*-{
-		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.CalibrationHandler::onCalibration(Lorg/urish/gwtit/titanium/Geolocation/CalibrationEvent;)(e); } );
 	}-*/;
 
-	public final static class HeadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "heading";
+	public final static class HeadingEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "heading";
 
 		protected HeadingEvent() {
 		}
@@ -400,13 +405,17 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addHeadingHandler(EventCallback<HeadingEvent> handler)
+	public interface HeadingHandler {
+		public void onHeadingEvent(HeadingEvent event);
+	}
+
+	public static native void addHeadingHandler(HeadingHandler handler)
 	/*-{
-		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.HeadingHandler::onHeading(Lorg/urish/gwtit/titanium/Geolocation/HeadingEvent;)(e); } );
 	}-*/;
 
-	public final static class LocationEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "location";
+	public final static class LocationEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "location";
 
 		protected LocationEvent() {
 		}
@@ -457,9 +466,13 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addLocationHandler(EventCallback<LocationEvent> handler)
+	public interface LocationHandler {
+		public void onLocationEvent(LocationEvent event);
+	}
+
+	public static native void addLocationHandler(LocationHandler handler)
 	/*-{
-		return Titanium.Geolocation.addEventListener('location', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Geolocation.addEventListener('location', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.LocationHandler::onLocation(Lorg/urish/gwtit/titanium/Geolocation/LocationEvent;)(e); } );
 	}-*/;
 
 }

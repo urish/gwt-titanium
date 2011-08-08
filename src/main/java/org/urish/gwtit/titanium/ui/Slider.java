@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A slider is created by the method
@@ -272,8 +275,8 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 		this.value = value;
 	}-*/;
 
-	public final static class ChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "change";
+	public final static class ChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "change";
 
 		protected ChangeEvent() {
 		}
@@ -331,9 +334,13 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addChangeHandler(EventCallback<ChangeEvent> handler)
+	public interface ChangeHandler {
+		public void onChange(ChangeEvent event);
+	}
+
+	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.Slider.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/Slider/ChangeEvent;)(e); } );
 	}-*/;
 
 }

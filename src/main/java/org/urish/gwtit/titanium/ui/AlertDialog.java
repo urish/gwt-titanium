@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The alert dialog is created by
@@ -123,8 +126,8 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.show();
 	}-*/;
 
-	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "click";
+	public final static class ClickEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "click";
 
 		protected ClickEvent() {
 		}
@@ -147,9 +150,13 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addClickHandler(EventCallback<ClickEvent> handler)
+	public interface ClickHandler {
+		public void onClick(ClickEvent event);
+	}
+
+	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.AlertDialog.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/AlertDialog/ClickEvent;)(e); } );
 	}-*/;
 
 }

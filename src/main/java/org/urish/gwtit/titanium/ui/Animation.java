@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The animation object is used for specifying lower-level animation properties
@@ -296,30 +299,38 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 		this.zIndex = value;
 	}-*/;
 
-	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "complete";
+	public final static class CompleteEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "complete";
 
 		protected CompleteEvent() {
 		}
 
 	}
 
-	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
+	public interface CompleteHandler {
+		public void onComplete(CompleteEvent event);
+	}
+
+	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.Animation.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/Animation/CompleteEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "start";
+	public final static class StartEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "start";
 
 		protected StartEvent() {
 		}
 
 	}
 
-	public final native void addStartHandler(EventCallback<StartEvent> handler)
+	public interface StartHandler {
+		public void onStart(StartEvent event);
+	}
+
+	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.Animation.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/Animation/StartEvent;)(e); } );
 	}-*/;
 
 }

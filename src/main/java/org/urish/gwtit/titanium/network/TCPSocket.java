@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.network;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * Deprecated: use {@link org.urish.gwtit.titanium.network.socket.tcp} where
@@ -157,8 +160,8 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 		return this.write(data, sendTo);
 	}-*/;
 
-	public final static class ReadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "read";
+	public final static class ReadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "read";
 
 		protected ReadEvent() {
 		}
@@ -181,13 +184,17 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addReadHandler(EventCallback<ReadEvent> handler)
+	public interface ReadHandler {
+		public void onRead(ReadEvent event);
+	}
+
+	public final native void addReadHandler(ReadHandler handler)
 	/*-{
-		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.ReadHandler::onRead(Lorg/urish/gwtit/titanium/network/TCPSocket/ReadEvent;)(e); } );
 	}-*/;
 
-	public final static class ReadErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "readError";
+	public final static class ReadErrorEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "readError";
 
 		protected ReadErrorEvent() {
 		}
@@ -210,13 +217,17 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addReadErrorHandler(EventCallback<ReadErrorEvent> handler)
+	public interface ReadErrorHandler {
+		public void onReadError(ReadErrorEvent event);
+	}
+
+	public final native void addReadErrorHandler(ReadErrorHandler handler)
 	/*-{
-		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.ReadErrorHandler::onReadError(Lorg/urish/gwtit/titanium/network/TCPSocket/ReadErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class WriteErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "writeError";
+	public final static class WriteErrorEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "writeError";
 
 		protected WriteErrorEvent() {
 		}
@@ -239,9 +250,13 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addWriteErrorHandler(EventCallback<WriteErrorEvent> handler)
+	public interface WriteErrorHandler {
+		public void onWriteError(WriteErrorEvent event);
+	}
+
+	public final native void addWriteErrorHandler(WriteErrorHandler handler)
 	/*-{
-		return this.addEventListener('writeError', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('writeError', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.WriteErrorHandler::onWriteError(Lorg/urish/gwtit/titanium/network/TCPSocket/WriteErrorEvent;)(e); } );
 	}-*/;
 
 }

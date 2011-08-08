@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The top level accelerometer module. the accelerometer modules contains
@@ -37,8 +40,8 @@ public class Accelerometer extends org.urish.gwtit.titanium.Module {
 	protected Accelerometer() {
 	}
 
-	public final static class UpdateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "update";
+	public final static class UpdateEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "update";
 
 		protected UpdateEvent() {
 		}
@@ -79,9 +82,13 @@ public class Accelerometer extends org.urish.gwtit.titanium.Module {
 
 	}
 
-	public static native void addUpdateHandler(EventCallback<UpdateEvent> handler)
+	public interface UpdateHandler {
+		public void onUpdateEvent(UpdateEvent event);
+	}
+
+	public static native void addUpdateHandler(UpdateHandler handler)
 	/*-{
-		return Titanium.Accelerometer.addEventListener('update', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return Titanium.Accelerometer.addEventListener('update', function(e) { handler.@org.urish.gwtit.titanium.Accelerometer.UpdateHandler::onUpdate(Lorg/urish/gwtit/titanium/Accelerometer/UpdateEvent;)(e); } );
 	}-*/;
 
 }

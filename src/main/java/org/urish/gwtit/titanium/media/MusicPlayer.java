@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.media;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The musicplayer instance returned from
@@ -218,43 +221,55 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.stopSeeking();
 	}-*/;
 
-	public final static class PlayingChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "playingChange";
+	public final static class PlayingChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "playingChange";
 
 		protected PlayingChangeEvent() {
 		}
 
 	}
 
-	public final native void addPlayingChangeHandler(EventCallback<PlayingChangeEvent> handler)
+	public interface PlayingChangeHandler {
+		public void onPlayingChange(PlayingChangeEvent event);
+	}
+
+	public final native void addPlayingChangeHandler(PlayingChangeHandler handler)
 	/*-{
-		return this.addEventListener('playingChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('playingChange', function(e) { handler.@org.urish.gwtit.titanium.media.MusicPlayer.PlayingChangeHandler::onPlayingChange(Lorg/urish/gwtit/titanium/media/MusicPlayer/PlayingChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class StateChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "stateChange";
+	public final static class StateChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "stateChange";
 
 		protected StateChangeEvent() {
 		}
 
 	}
 
-	public final native void addStateChangeHandler(EventCallback<StateChangeEvent> handler)
+	public interface StateChangeHandler {
+		public void onStateChange(StateChangeEvent event);
+	}
+
+	public final native void addStateChangeHandler(StateChangeHandler handler)
 	/*-{
-		return this.addEventListener('stateChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('stateChange', function(e) { handler.@org.urish.gwtit.titanium.media.MusicPlayer.StateChangeHandler::onStateChange(Lorg/urish/gwtit/titanium/media/MusicPlayer/StateChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class VolumeChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "volumeChange";
+	public final static class VolumeChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "volumeChange";
 
 		protected VolumeChangeEvent() {
 		}
 
 	}
 
-	public final native void addVolumeChangeHandler(EventCallback<VolumeChangeEvent> handler)
+	public interface VolumeChangeHandler {
+		public void onVolumeChange(VolumeChangeEvent event);
+	}
+
+	public final native void addVolumeChangeHandler(VolumeChangeHandler handler)
 	/*-{
-		return this.addEventListener('volumeChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('volumeChange', function(e) { handler.@org.urish.gwtit.titanium.media.MusicPlayer.VolumeChangeHandler::onVolumeChange(Lorg/urish/gwtit/titanium/media/MusicPlayer/VolumeChangeEvent;)(e); } );
 	}-*/;
 
 }

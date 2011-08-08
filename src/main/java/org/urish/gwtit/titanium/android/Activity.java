@@ -18,9 +18,10 @@
 
 package org.urish.gwtit.titanium.android;
 
-import org.urish.gwtit.client.EventCallback;
-
 import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The titanium binding of an [android
@@ -184,34 +185,42 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.startActivityForResult(intent, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
-	public final static class CreateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "create";
+	public final static class CreateEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "create";
 
 		protected CreateEvent() {
 		}
 
 	}
 
-	public final native void addCreateHandler(EventCallback<CreateEvent> handler)
+	public interface CreateHandler {
+		public void onCreate(CreateEvent event);
+	}
+
+	public final native void addCreateHandler(CreateHandler handler)
 	/*-{
-		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.CreateHandler::onCreate(Lorg/urish/gwtit/titanium/android/Activity/CreateEvent;)(e); } );
 	}-*/;
 
-	public final static class DestroyEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "destroy";
+	public final static class DestroyEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "destroy";
 
 		protected DestroyEvent() {
 		}
 
 	}
 
-	public final native void addDestroyHandler(EventCallback<DestroyEvent> handler)
+	public interface DestroyHandler {
+		public void onDestroy(DestroyEvent event);
+	}
+
+	public final native void addDestroyHandler(DestroyHandler handler)
 	/*-{
-		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.DestroyHandler::onDestroy(Lorg/urish/gwtit/titanium/android/Activity/DestroyEvent;)(e); } );
 	}-*/;
 
-	public final static class NewIntentEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "newIntent";
+	public final static class NewIntentEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "newIntent";
 
 		protected NewIntentEvent() {
 		}
@@ -227,61 +236,81 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addNewIntentHandler(EventCallback<NewIntentEvent> handler)
+	public interface NewIntentHandler {
+		public void onNewIntent(NewIntentEvent event);
+	}
+
+	public final native void addNewIntentHandler(NewIntentHandler handler)
 	/*-{
-		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.NewIntentHandler::onNewIntent(Lorg/urish/gwtit/titanium/android/Activity/NewIntentEvent;)(e); } );
 	}-*/;
 
-	public final static class PauseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "pause";
+	public final static class PauseEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "pause";
 
 		protected PauseEvent() {
 		}
 
 	}
 
-	public final native void addPauseHandler(EventCallback<PauseEvent> handler)
+	public interface PauseHandler {
+		public void onPause(PauseEvent event);
+	}
+
+	public final native void addPauseHandler(PauseHandler handler)
 	/*-{
-		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/Activity/PauseEvent;)(e); } );
 	}-*/;
 
-	public final static class ResumeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "resume";
+	public final static class ResumeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "resume";
 
 		protected ResumeEvent() {
 		}
 
 	}
 
-	public final native void addResumeHandler(EventCallback<ResumeEvent> handler)
+	public interface ResumeHandler {
+		public void onResume(ResumeEvent event);
+	}
+
+	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{
-		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/Activity/ResumeEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "start";
+	public final static class StartEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "start";
 
 		protected StartEvent() {
 		}
 
 	}
 
-	public final native void addStartHandler(EventCallback<StartEvent> handler)
+	public interface StartHandler {
+		public void onStart(StartEvent event);
+	}
+
+	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.StartHandler::onStart(Lorg/urish/gwtit/titanium/android/Activity/StartEvent;)(e); } );
 	}-*/;
 
-	public final static class StopEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "stop";
+	public final static class StopEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "stop";
 
 		protected StopEvent() {
 		}
 
 	}
 
-	public final native void addStopHandler(EventCallback<StopEvent> handler)
+	public interface StopHandler {
+		public void onStop(StopEvent event);
+	}
+
+	public final native void addStopHandler(StopHandler handler)
 	/*-{
-		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.StopHandler::onStop(Lorg/urish/gwtit/titanium/android/Activity/StopEvent;)(e); } );
 	}-*/;
 
 }

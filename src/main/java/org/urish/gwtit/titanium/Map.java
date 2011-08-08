@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The top level map module. the map module is used for creating in-application

@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The scrollable view provides a view that supports horizontal scrolling on one
@@ -192,8 +195,8 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollToView(view);
 	}-*/;
 
-	public final static class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "scroll";
+	public final static class ScrollEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "scroll";
 
 		protected ScrollEvent() {
 		}
@@ -241,9 +244,13 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addScrollHandler(EventCallback<ScrollEvent> handler)
+	public interface ScrollHandler {
+		public void onScroll(ScrollEvent event);
+	}
+
+	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollableView.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/ScrollableView/ScrollEvent;)(e); } );
 	}-*/;
 
 }

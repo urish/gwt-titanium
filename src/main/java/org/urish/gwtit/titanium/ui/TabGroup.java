@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The tab group allows you to manage a tabbed ui of one or more windows. the
@@ -160,8 +163,8 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.removeTab();
 	}-*/;
 
-	public final static class BlurEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "blur";
+	public final static class BlurEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "blur";
 
 		protected BlurEvent() {
 		}
@@ -225,13 +228,17 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addBlurHandler(EventCallback<BlurEvent> handler)
+	public interface BlurHandler {
+		public void onBlur(BlurEvent event);
+	}
+
+	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/TabGroup/BlurEvent;)(e); } );
 	}-*/;
 
-	public final static class CloseEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "close";
+	public final static class CloseEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "close";
 
 		protected CloseEvent() {
 		}
@@ -263,13 +270,17 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addCloseHandler(EventCallback<CloseEvent> handler)
+	public interface CloseHandler {
+		public void onClose(CloseEvent event);
+	}
+
+	public final native void addCloseHandler(CloseHandler handler)
 	/*-{
-		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/TabGroup/CloseEvent;)(e); } );
 	}-*/;
 
-	public final static class FocusEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "focus";
+	public final static class FocusEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "focus";
 
 		protected FocusEvent() {
 		}
@@ -333,13 +344,17 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addFocusHandler(EventCallback<FocusEvent> handler)
+	public interface FocusHandler {
+		public void onFocus(FocusEvent event);
+	}
+
+	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/TabGroup/FocusEvent;)(e); } );
 	}-*/;
 
-	public final static class OpenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "open";
+	public final static class OpenEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "open";
 
 		protected OpenEvent() {
 		}
@@ -371,9 +386,13 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addOpenHandler(EventCallback<OpenEvent> handler)
+	public interface OpenHandler {
+		public void onOpen(OpenEvent event);
+	}
+
+	public final native void addOpenHandler(OpenHandler handler)
 	/*-{
-		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.OpenHandler::onOpen(Lorg/urish/gwtit/titanium/ui/TabGroup/OpenEvent;)(e); } );
 	}-*/;
 
 }

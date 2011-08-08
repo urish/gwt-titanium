@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The email dialog is created by
@@ -192,8 +195,8 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.open(properties);
 	}-*/;
 
-	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "complete";
+	public final static class CompleteEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "complete";
 
 		protected CompleteEvent() {
 		}
@@ -226,9 +229,13 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
+	public interface CompleteHandler {
+		public void onComplete(CompleteEvent event);
+	}
+
+	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.EmailDialog.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/EmailDialog/CompleteEvent;)(e); } );
 	}-*/;
 
 }

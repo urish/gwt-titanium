@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The web view allows you to open an html5 based view which can load either
@@ -190,8 +193,8 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 		return this.stopLoading();
 	}-*/;
 
-	public final static class BeforeloadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "beforeload";
+	public final static class BeforeloadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "beforeload";
 
 		protected BeforeloadEvent() {
 		}
@@ -231,13 +234,17 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addBeforeloadHandler(EventCallback<BeforeloadEvent> handler)
+	public interface BeforeloadHandler {
+		public void onBeforeload(BeforeloadEvent event);
+	}
+
+	public final native void addBeforeloadHandler(BeforeloadHandler handler)
 	/*-{
-		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.BeforeloadHandler::onBeforeload(Lorg/urish/gwtit/titanium/ui/WebView/BeforeloadEvent;)(e); } );
 	}-*/;
 
-	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "error";
+	public final static class ErrorEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "error";
 
 		protected ErrorEvent() {
 		}
@@ -285,13 +292,17 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addErrorHandler(EventCallback<ErrorEvent> handler)
+	public interface ErrorHandler {
+		public void onError(ErrorEvent event);
+	}
+
+	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/WebView/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "load";
+	public final static class LoadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "load";
 
 		protected LoadEvent() {
 		}
@@ -331,9 +342,13 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addLoadHandler(EventCallback<LoadEvent> handler)
+	public interface LoadHandler {
+		public void onLoad(LoadEvent event);
+	}
+
+	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/WebView/LoadEvent;)(e); } );
 	}-*/;
 
 }

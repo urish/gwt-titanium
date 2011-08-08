@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.TitaniumTouchEvent;
-
 import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The view is an empty drawing surface or container. the view is created by the
@@ -586,86 +586,110 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.toImage(function(e) { f.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
-	public final static class ClickEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "click";
+	public final static class ClickEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "click";
 
 		protected ClickEvent() {
 		}
 
 	}
 
-	public final native void addClickHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface ClickHandler {
+		public void onClick(ClickEvent event);
+	}
+
+	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.View.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/View/ClickEvent;)(e); } );
 	}-*/;
 
-	public final static class DblclickEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "dblclick";
+	public final static class DoubleClickEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "dblclick";
 
-		protected DblclickEvent() {
+		protected DoubleClickEvent() {
 		}
 
 	}
 
-	public final native void addDblclickHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface DoubleClickHandler {
+		public void onDoubleClick(DoubleClickEvent event);
+	}
+
+	public final native void addDoubleClickHandler(DoubleClickHandler handler)
 	/*-{
-		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.titanium.ui.View.DoubleClickHandler::onDoubleClick(Lorg/urish/gwtit/titanium/ui/View/DoubleClickEvent;)(e); } );
 	}-*/;
 
-	public final static class DoubletapEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "doubletap";
+	public final static class DoubleTapEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "doubletap";
 
-		protected DoubletapEvent() {
+		protected DoubleTapEvent() {
 		}
 
 	}
 
-	public final native void addDoubletapHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface DoubleTapHandler {
+		public void onDoubleTap(DoubleTapEvent event);
+	}
+
+	public final native void addDoubleTapHandler(DoubleTapHandler handler)
 	/*-{
-		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.titanium.ui.View.DoubleTapHandler::onDoubleTap(Lorg/urish/gwtit/titanium/ui/View/DoubleTapEvent;)(e); } );
 	}-*/;
 
-	public final static class LongclickEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "longclick";
+	public final static class LongClickEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "longclick";
 
-		protected LongclickEvent() {
+		protected LongClickEvent() {
 		}
 
 	}
 
-	public final native void addLongclickHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface LongClickHandler {
+		public void onLongClick(LongClickEvent event);
+	}
+
+	public final native void addLongClickHandler(LongClickHandler handler)
 	/*-{
-		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.titanium.ui.View.LongClickHandler::onLongClick(Lorg/urish/gwtit/titanium/ui/View/LongClickEvent;)(e); } );
 	}-*/;
 
-	public final static class LongpressEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "longpress";
+	public final static class LongPressEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "longpress";
 
-		protected LongpressEvent() {
+		protected LongPressEvent() {
 		}
 
 	}
 
-	public final native void addLongpressHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface LongPressHandler {
+		public void onLongPress(LongPressEvent event);
+	}
+
+	public final native void addLongPressHandler(LongPressHandler handler)
 	/*-{
-		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.titanium.ui.View.LongPressHandler::onLongPress(Lorg/urish/gwtit/titanium/ui/View/LongPressEvent;)(e); } );
 	}-*/;
 
-	public final static class SingletapEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "singletap";
+	public final static class SingleTapEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "singletap";
 
-		protected SingletapEvent() {
+		protected SingleTapEvent() {
 		}
 
 	}
 
-	public final native void addSingletapHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface SingleTapHandler {
+		public void onSingleTap(SingleTapEvent event);
+	}
+
+	public final native void addSingleTapHandler(SingleTapHandler handler)
 	/*-{
-		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.titanium.ui.View.SingleTapHandler::onSingleTap(Lorg/urish/gwtit/titanium/ui/View/SingleTapEvent;)(e); } );
 	}-*/;
 
-	public final static class SwipeEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "swipe";
+	public final static class SwipeEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "swipe";
 
 		protected SwipeEvent() {
 		}
@@ -680,74 +704,98 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addSwipeHandler(EventCallback<SwipeEvent> handler)
+	public interface SwipeHandler {
+		public void onSwipe(SwipeEvent event);
+	}
+
+	public final native void addSwipeHandler(SwipeHandler handler)
 	/*-{
-		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.titanium.ui.View.SwipeHandler::onSwipe(Lorg/urish/gwtit/titanium/ui/View/SwipeEvent;)(e); } );
 	}-*/;
 
-	public final static class TouchcancelEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "touchcancel";
+	public final static class TouchCancelEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "touchcancel";
 
-		protected TouchcancelEvent() {
+		protected TouchCancelEvent() {
 		}
 
 	}
 
-	public final native void addTouchcancelHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface TouchCancelHandler {
+		public void onTouchCancel(TouchCancelEvent event);
+	}
+
+	public final native void addTouchCancelHandler(TouchCancelHandler handler)
 	/*-{
-		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchCancelHandler::onTouchCancel(Lorg/urish/gwtit/titanium/ui/View/TouchCancelEvent;)(e); } );
 	}-*/;
 
-	public final static class TouchendEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "touchend";
+	public final static class TouchEndEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "touchend";
 
-		protected TouchendEvent() {
+		protected TouchEndEvent() {
 		}
 
 	}
 
-	public final native void addTouchendHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface TouchEndHandler {
+		public void onTouchEnd(TouchEndEvent event);
+	}
+
+	public final native void addTouchEndHandler(TouchEndHandler handler)
 	/*-{
-		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchEndHandler::onTouchEnd(Lorg/urish/gwtit/titanium/ui/View/TouchEndEvent;)(e); } );
 	}-*/;
 
-	public final static class TouchmoveEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "touchmove";
+	public final static class TouchMoveEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "touchmove";
 
-		protected TouchmoveEvent() {
+		protected TouchMoveEvent() {
 		}
 
 	}
 
-	public final native void addTouchmoveHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface TouchMoveHandler {
+		public void onTouchMove(TouchMoveEvent event);
+	}
+
+	public final native void addTouchMoveHandler(TouchMoveHandler handler)
 	/*-{
-		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchMoveHandler::onTouchMove(Lorg/urish/gwtit/titanium/ui/View/TouchMoveEvent;)(e); } );
 	}-*/;
 
-	public final static class TouchstartEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "touchstart";
+	public final static class TouchStartEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "touchstart";
 
-		protected TouchstartEvent() {
+		protected TouchStartEvent() {
 		}
 
 	}
 
-	public final native void addTouchstartHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface TouchStartHandler {
+		public void onTouchStart(TouchStartEvent event);
+	}
+
+	public final native void addTouchStartHandler(TouchStartHandler handler)
 	/*-{
-		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchStartHandler::onTouchStart(Lorg/urish/gwtit/titanium/ui/View/TouchStartEvent;)(e); } );
 	}-*/;
 
-	public final static class TwofingertapEvent extends TitaniumTouchEvent {
-		public final static String EVENT_NAME = "twofingertap";
+	public final static class TwoFingerTapEvent extends TouchEvent {
+		public final static String NATIVE_EVENT_NAME = "twofingertap";
 
-		protected TwofingertapEvent() {
+		protected TwoFingerTapEvent() {
 		}
 
 	}
 
-	public final native void addTwofingertapHandler(EventCallback<TitaniumTouchEvent> handler)
+	public interface TwoFingerTapHandler {
+		public void onTwoFingerTap(TwoFingerTapEvent event);
+	}
+
+	public final native void addTwoFingerTapHandler(TwoFingerTapHandler handler)
 	/*-{
-		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TwoFingerTapHandler::onTwoFingerTap(Lorg/urish/gwtit/titanium/ui/View/TwoFingerTapEvent;)(e); } );
 	}-*/;
 
 }

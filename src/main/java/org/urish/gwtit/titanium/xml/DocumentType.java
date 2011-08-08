@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium.xml;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * Each {@link org.urish.gwtit.titanium.xml.document} has a `doctype` attribute

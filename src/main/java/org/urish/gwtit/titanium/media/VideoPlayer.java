@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.media;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The videoplayer object is returned by
@@ -426,8 +429,8 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.thumbnailImageAtTime(time, option);
 	}-*/;
 
-	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "complete";
+	public final static class CompleteEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "complete";
 
 		protected CompleteEvent() {
 		}
@@ -470,13 +473,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
+	public interface CompleteHandler {
+		public void onComplete(CompleteEvent event);
+	}
+
+	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/VideoPlayer/CompleteEvent;)(e); } );
 	}-*/;
 
-	public final static class DurationAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "durationAvailable";
+	public final static class DurationAvailableEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "durationAvailable";
 
 		protected DurationAvailableEvent() {
 		}
@@ -516,13 +523,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addDurationAvailableHandler(EventCallback<DurationAvailableEvent> handler)
+	public interface DurationAvailableHandler {
+		public void onDurationAvailable(DurationAvailableEvent event);
+	}
+
+	public final native void addDurationAvailableHandler(DurationAvailableHandler handler)
 	/*-{
-		return this.addEventListener('durationAvailable', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('durationAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.DurationAvailableHandler::onDurationAvailable(Lorg/urish/gwtit/titanium/media/VideoPlayer/DurationAvailableEvent;)(e); } );
 	}-*/;
 
-	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "error";
+	public final static class ErrorEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "error";
 
 		protected ErrorEvent() {
 		}
@@ -562,13 +573,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addErrorHandler(EventCallback<ErrorEvent> handler)
+	public interface ErrorHandler {
+		public void onError(ErrorEvent event);
+	}
+
+	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/VideoPlayer/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class FullscreenEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "fullscreen";
+	public final static class FullscreenEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "fullscreen";
 
 		protected FullscreenEvent() {
 		}
@@ -609,13 +624,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addFullscreenHandler(EventCallback<FullscreenEvent> handler)
+	public interface FullscreenHandler {
+		public void onFullscreen(FullscreenEvent event);
+	}
+
+	public final native void addFullscreenHandler(FullscreenHandler handler)
 	/*-{
-		return this.addEventListener('fullscreen', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('fullscreen', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.FullscreenHandler::onFullscreen(Lorg/urish/gwtit/titanium/media/VideoPlayer/FullscreenEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "load";
+	public final static class LoadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "load";
 
 		protected LoadEvent() {
 		}
@@ -647,13 +666,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addLoadHandler(EventCallback<LoadEvent> handler)
+	public interface LoadHandler {
+		public void onLoad(LoadEvent event);
+	}
+
+	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/media/VideoPlayer/LoadEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadstateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "loadstate";
+	public final static class LoadstateEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "loadstate";
 
 		protected LoadstateEvent() {
 		}
@@ -693,13 +716,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addLoadstateHandler(EventCallback<LoadstateEvent> handler)
+	public interface LoadstateHandler {
+		public void onLoadstate(LoadstateEvent event);
+	}
+
+	public final native void addLoadstateHandler(LoadstateHandler handler)
 	/*-{
-		return this.addEventListener('loadstate', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('loadstate', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.LoadstateHandler::onLoadstate(Lorg/urish/gwtit/titanium/media/VideoPlayer/LoadstateEvent;)(e); } );
 	}-*/;
 
-	public final static class MediaTypesAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "mediaTypesAvailable";
+	public final static class MediaTypesAvailableEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "mediaTypesAvailable";
 
 		protected MediaTypesAvailableEvent() {
 		}
@@ -739,13 +766,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addMediaTypesAvailableHandler(EventCallback<MediaTypesAvailableEvent> handler)
+	public interface MediaTypesAvailableHandler {
+		public void onMediaTypesAvailable(MediaTypesAvailableEvent event);
+	}
+
+	public final native void addMediaTypesAvailableHandler(MediaTypesAvailableHandler handler)
 	/*-{
-		return this.addEventListener('mediaTypesAvailable', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('mediaTypesAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.MediaTypesAvailableHandler::onMediaTypesAvailable(Lorg/urish/gwtit/titanium/media/VideoPlayer/MediaTypesAvailableEvent;)(e); } );
 	}-*/;
 
-	public final static class NaturalSizeAvailableEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "naturalSizeAvailable";
+	public final static class NaturalSizeAvailableEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "naturalSizeAvailable";
 
 		protected NaturalSizeAvailableEvent() {
 		}
@@ -785,13 +816,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addNaturalSizeAvailableHandler(EventCallback<NaturalSizeAvailableEvent> handler)
+	public interface NaturalSizeAvailableHandler {
+		public void onNaturalSizeAvailable(NaturalSizeAvailableEvent event);
+	}
+
+	public final native void addNaturalSizeAvailableHandler(NaturalSizeAvailableHandler handler)
 	/*-{
-		return this.addEventListener('naturalSizeAvailable', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('naturalSizeAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.NaturalSizeAvailableHandler::onNaturalSizeAvailable(Lorg/urish/gwtit/titanium/media/VideoPlayer/NaturalSizeAvailableEvent;)(e); } );
 	}-*/;
 
-	public final static class PlaybackStateEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "playbackState";
+	public final static class PlaybackStateEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "playbackState";
 
 		protected PlaybackStateEvent() {
 		}
@@ -831,13 +866,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addPlaybackStateHandler(EventCallback<PlaybackStateEvent> handler)
+	public interface PlaybackStateHandler {
+		public void onPlaybackState(PlaybackStateEvent event);
+	}
+
+	public final native void addPlaybackStateHandler(PlaybackStateHandler handler)
 	/*-{
-		return this.addEventListener('playbackState', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('playbackState', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.PlaybackStateHandler::onPlaybackState(Lorg/urish/gwtit/titanium/media/VideoPlayer/PlaybackStateEvent;)(e); } );
 	}-*/;
 
-	public final static class PlayingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "playing";
+	public final static class PlayingEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "playing";
 
 		protected PlayingEvent() {
 		}
@@ -877,13 +916,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addPlayingHandler(EventCallback<PlayingEvent> handler)
+	public interface PlayingHandler {
+		public void onPlaying(PlayingEvent event);
+	}
+
+	public final native void addPlayingHandler(PlayingHandler handler)
 	/*-{
-		return this.addEventListener('playing', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('playing', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.PlayingHandler::onPlaying(Lorg/urish/gwtit/titanium/media/VideoPlayer/PlayingEvent;)(e); } );
 	}-*/;
 
-	public final static class PreloadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "preload";
+	public final static class PreloadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "preload";
 
 		protected PreloadEvent() {
 		}
@@ -915,13 +958,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addPreloadHandler(EventCallback<PreloadEvent> handler)
+	public interface PreloadHandler {
+		public void onPreload(PreloadEvent event);
+	}
+
+	public final native void addPreloadHandler(PreloadHandler handler)
 	/*-{
-		return this.addEventListener('preload', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('preload', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.PreloadHandler::onPreload(Lorg/urish/gwtit/titanium/media/VideoPlayer/PreloadEvent;)(e); } );
 	}-*/;
 
-	public final static class ResizeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "resize";
+	public final static class ResizeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "resize";
 
 		protected ResizeEvent() {
 		}
@@ -953,13 +1000,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addResizeHandler(EventCallback<ResizeEvent> handler)
+	public interface ResizeHandler {
+		public void onResize(ResizeEvent event);
+	}
+
+	public final native void addResizeHandler(ResizeHandler handler)
 	/*-{
-		return this.addEventListener('resize', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('resize', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.ResizeHandler::onResize(Lorg/urish/gwtit/titanium/media/VideoPlayer/ResizeEvent;)(e); } );
 	}-*/;
 
-	public final static class SourceChangeEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "sourceChange";
+	public final static class SourceChangeEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "sourceChange";
 
 		protected SourceChangeEvent() {
 		}
@@ -999,13 +1050,17 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addSourceChangeHandler(EventCallback<SourceChangeEvent> handler)
+	public interface SourceChangeHandler {
+		public void onSourceChange(SourceChangeEvent event);
+	}
+
+	public final native void addSourceChangeHandler(SourceChangeHandler handler)
 	/*-{
-		return this.addEventListener('sourceChange', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('sourceChange', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.SourceChangeHandler::onSourceChange(Lorg/urish/gwtit/titanium/media/VideoPlayer/SourceChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class ThumbnailEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "thumbnail";
+	public final static class ThumbnailEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "thumbnail";
 
 		protected ThumbnailEvent() {
 		}
@@ -1069,9 +1124,13 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addThumbnailHandler(EventCallback<ThumbnailEvent> handler)
+	public interface ThumbnailHandler {
+		public void onThumbnail(ThumbnailEvent event);
+	}
+
+	public final native void addThumbnailHandler(ThumbnailHandler handler)
 	/*-{
-		return this.addEventListener('thumbnail', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('thumbnail', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.ThumbnailHandler::onThumbnail(Lorg/urish/gwtit/titanium/media/VideoPlayer/ThumbnailEvent;)(e); } );
 	}-*/;
 
 }

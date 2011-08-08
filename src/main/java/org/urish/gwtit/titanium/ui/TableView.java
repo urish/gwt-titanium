@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A table view allows you to create a scrollable table of content in a
@@ -469,8 +472,8 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.updateRow(row, properties);
 	}-*/;
 
-	public final static class DeleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "delete";
+	public final static class DeleteEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "delete";
 
 		protected DeleteEvent() {
 		}
@@ -550,13 +553,17 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addDeleteHandler(EventCallback<DeleteEvent> handler)
+	public interface DeleteHandler {
+		public void onDelete(DeleteEvent event);
+	}
+
+	public final native void addDeleteHandler(DeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/TableView/DeleteEvent;)(e); } );
 	}-*/;
 
-	public final static class MoveEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "move";
+	public final static class MoveEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "move";
 
 		protected MoveEvent() {
 		}
@@ -636,13 +643,17 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addMoveHandler(EventCallback<MoveEvent> handler)
+	public interface MoveHandler {
+		public void onMove(MoveEvent event);
+	}
+
+	public final native void addMoveHandler(MoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/TableView/MoveEvent;)(e); } );
 	}-*/;
 
-	public final static class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "scroll";
+	public final static class ScrollEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "scroll";
 
 		protected ScrollEvent() {
 		}
@@ -726,13 +737,17 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addScrollHandler(EventCallback<ScrollEvent> handler)
+	public interface ScrollHandler {
+		public void onScroll(ScrollEvent event);
+	}
+
+	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/TableView/ScrollEvent;)(e); } );
 	}-*/;
 
-	public final static class ScrollEndEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "scrollEnd";
+	public final static class ScrollEndEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "scrollEnd";
 
 		protected ScrollEndEvent() {
 		}
@@ -792,9 +807,13 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addScrollEndHandler(EventCallback<ScrollEndEvent> handler)
+	public interface ScrollEndHandler {
+		public void onScrollEnd(ScrollEndEvent event);
+	}
+
+	public final native void addScrollEndHandler(ScrollEndHandler handler)
 	/*-{
-		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.ScrollEndHandler::onScrollEnd(Lorg/urish/gwtit/titanium/ui/TableView/ScrollEndEvent;)(e); } );
 	}-*/;
 
 }

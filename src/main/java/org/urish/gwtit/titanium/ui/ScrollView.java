@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A scroll view is used to create a scrollable region of content. views added
@@ -233,8 +236,8 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollTo(x, y);
 	}-*/;
 
-	public final static class ScaleEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "scale";
+	public final static class ScaleEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "scale";
 
 		protected ScaleEvent() {
 		}
@@ -274,13 +277,17 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addScaleHandler(EventCallback<ScaleEvent> handler)
+	public interface ScaleHandler {
+		public void onScale(ScaleEvent event);
+	}
+
+	public final native void addScaleHandler(ScaleHandler handler)
 	/*-{
-		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollView.ScaleHandler::onScale(Lorg/urish/gwtit/titanium/ui/ScrollView/ScaleEvent;)(e); } );
 	}-*/;
 
-	public final static class ScrollEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "scroll";
+	public final static class ScrollEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "scroll";
 
 		protected ScrollEvent() {
 		}
@@ -328,9 +335,13 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addScrollHandler(EventCallback<ScrollEvent> handler)
+	public interface ScrollHandler {
+		public void onScroll(ScrollEvent event);
+	}
+
+	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollView.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/ScrollView/ScrollEvent;)(e); } );
 	}-*/;
 
 }

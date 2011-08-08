@@ -18,6 +18,10 @@
 
 package org.urish.gwtit.titanium.map;
 
+import com.google.gwt.core.client.JavaScriptObject;
+import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * An annotation object that is created by the method

@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.android;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The titanium binding of an [android
@@ -149,17 +152,21 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 		return this.setIcon(icon);
 	}-*/;
 
-	public final static class ClickEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "click";
+	public final static class ClickEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "click";
 
 		protected ClickEvent() {
 		}
 
 	}
 
-	public final native void addClickHandler(EventCallback<ClickEvent> handler)
+	public interface ClickHandler {
+		public void onClick(ClickEvent event);
+	}
+
+	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.android.MenuItem.ClickHandler::onClick(Lorg/urish/gwtit/titanium/android/MenuItem/ClickEvent;)(e); } );
 	}-*/;
 
 }

@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.map;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The mapview is an object created by
@@ -252,8 +255,8 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 		return this.zoom(level);
 	}-*/;
 
-	public final static class CompleteEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "complete";
+	public final static class CompleteEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "complete";
 
 		protected CompleteEvent() {
 		}
@@ -285,13 +288,17 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addCompleteHandler(EventCallback<CompleteEvent> handler)
+	public interface CompleteHandler {
+		public void onComplete(CompleteEvent event);
+	}
+
+	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/map/MapView/CompleteEvent;)(e); } );
 	}-*/;
 
-	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "error";
+	public final static class ErrorEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "error";
 
 		protected ErrorEvent() {
 		}
@@ -331,13 +338,17 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addErrorHandler(EventCallback<ErrorEvent> handler)
+	public interface ErrorHandler {
+		public void onError(ErrorEvent event);
+	}
+
+	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/map/MapView/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadingEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "loading";
+	public final static class LoadingEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "loading";
 
 		protected LoadingEvent() {
 		}
@@ -369,13 +380,17 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addLoadingHandler(EventCallback<LoadingEvent> handler)
+	public interface LoadingHandler {
+		public void onLoading(LoadingEvent event);
+	}
+
+	public final native void addLoadingHandler(LoadingHandler handler)
 	/*-{
-		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.LoadingHandler::onLoading(Lorg/urish/gwtit/titanium/map/MapView/LoadingEvent;)(e); } );
 	}-*/;
 
-	public final static class RegionChangedEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "regionChanged";
+	public final static class RegionChangedEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "regionChanged";
 
 		protected RegionChangedEvent() {
 		}
@@ -439,9 +454,13 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addRegionChangedHandler(EventCallback<RegionChangedEvent> handler)
+	public interface RegionChangedHandler {
+		public void onRegionChanged(RegionChangedEvent event);
+	}
+
+	public final native void addRegionChangedHandler(RegionChangedHandler handler)
 	/*-{
-		return this.addEventListener('regionChanged', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('regionChanged', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.RegionChangedHandler::onRegionChanged(Lorg/urish/gwtit/titanium/map/MapView/RegionChangedEvent;)(e); } );
 	}-*/;
 
 }

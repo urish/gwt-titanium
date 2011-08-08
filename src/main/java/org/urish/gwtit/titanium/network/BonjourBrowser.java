@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.network;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The bonjourbrowser instance returned from
@@ -101,8 +104,8 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 		return this.stopSearch();
 	}-*/;
 
-	public final static class UpdatedServicesEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "updatedServices";
+	public final static class UpdatedServicesEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "updatedServices";
 
 		protected UpdatedServicesEvent() {
 		}
@@ -120,9 +123,13 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 
 	}
 
-	public final native void addUpdatedServicesHandler(EventCallback<UpdatedServicesEvent> handler)
+	public interface UpdatedServicesHandler {
+		public void onUpdatedServices(UpdatedServicesEvent event);
+	}
+
+	public final native void addUpdatedServicesHandler(UpdatedServicesHandler handler)
 	/*-{
-		return this.addEventListener('updatedServices', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('updatedServices', function(e) { handler.@org.urish.gwtit.titanium.network.BonjourBrowser.UpdatedServicesHandler::onUpdatedServices(Lorg/urish/gwtit/titanium/network/BonjourBrowser/UpdatedServicesEvent;)(e); } );
 	}-*/;
 
 }

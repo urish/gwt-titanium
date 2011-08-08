@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui.ios;
 
+import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The adview is a view for display apple iads. the view is created by the
@@ -70,8 +73,8 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 		return this.cancelAction();
 	}-*/;
 
-	public final static class ActionEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "action";
+	public final static class ActionEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "action";
 
 		protected ActionEvent() {
 		}
@@ -103,13 +106,17 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addActionHandler(EventCallback<ActionEvent> handler)
+	public interface ActionHandler {
+		public void onAction(ActionEvent event);
+	}
+
+	public final native void addActionHandler(ActionHandler handler)
 	/*-{
-		return this.addEventListener('action', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('action', function(e) { handler.@org.urish.gwtit.titanium.ui.ios.AdView.ActionHandler::onAction(Lorg/urish/gwtit/titanium/ui/ios/AdView/ActionEvent;)(e); } );
 	}-*/;
 
-	public final static class ErrorEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "error";
+	public final static class ErrorEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "error";
 
 		protected ErrorEvent() {
 		}
@@ -149,13 +156,17 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addErrorHandler(EventCallback<ErrorEvent> handler)
+	public interface ErrorHandler {
+		public void onError(ErrorEvent event);
+	}
+
+	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.ios.AdView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/ios/AdView/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadEvent extends org.urish.gwtit.client.event.AbstractTitaniumEvent {
-		public final static String EVENT_NAME = "load";
+	public final static class LoadEvent extends AbstractTitaniumEvent {
+		public final static String NATIVE_EVENT_NAME = "load";
 
 		protected LoadEvent() {
 		}
@@ -187,9 +198,13 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 
 	}
 
-	public final native void addLoadHandler(EventCallback<LoadEvent> handler)
+	public interface LoadHandler {
+		public void onLoad(LoadEvent event);
+	}
+
+	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.ios.AdView.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/ios/AdView/LoadEvent;)(e); } );
 	}-*/;
 
 }
