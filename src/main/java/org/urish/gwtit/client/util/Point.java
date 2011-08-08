@@ -3,6 +3,9 @@ package org.urish.gwtit.client.util;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class Point extends JavaScriptObject {
+	protected Point() {
+	}
+
 	public static native Point createPoint(float x, float y)
 	/*-{
 		return {x: x, y: y};

@@ -3,6 +3,9 @@ package org.urish.gwtit.client.event;
 import org.urish.gwtit.client.util.Point;
 
 public class TitaniumTouchEvent extends AbstractTitaniumEvent {
+	protected TitaniumTouchEvent() {
+	}
+
 	/**
 	 * the x point of the event in receiving view coordinates
 	 */

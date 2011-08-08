@@ -1,6 +1,9 @@
 package org.urish.gwtit.client.util;
 
 public class Size {
+	protected Size() {
+	}
+	
 	public static native Size createSize(float width, float height)
 	/*-{
 		return {width: width, height: height};
