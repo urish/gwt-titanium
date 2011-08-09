@@ -258,7 +258,9 @@ def mapTypes(s, withConsts = False):
 		innerType = mapTypes(innerType, withConsts)
 		return "%s.%sEvent" % (innerType, capitalFirst(eventName))
 	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", 
-			"EncodeStringSpec", "MediaItemType", "MediaQueryInfoType", "MediaQueryType"]:
+			"EncodeStringSpec", "MediaItemType", "MediaQueryInfoType", "MediaQueryType",
+			"AcceptDict", "DecodeNumberDict", "DecodeStringDict", "EncodeNumberDict",
+			"EncodeStringDict", "ImageAsCroppedDict"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):
 		path = s.split(".")

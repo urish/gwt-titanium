@@ -24,21 +24,21 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 import org.urish.gwtit.client.event.TouchEvent;
 
 /**
- * Specification for {@link org.urish.gwtit.titanium.codec.encodestring}
+ * Options for {@link org.urish.gwtit.titanium.codec.encodenumber}
  */
-public class EncodeStringSpec extends JavaScriptObject {
-	protected EncodeStringSpec() {
+public class EncodeNumberDict extends JavaScriptObject {
+	protected EncodeNumberDict() {
 	}
 
 	/**
-	 * @return The source string to encode
+	 * @return The source number to encode
 	 */
-	public final native String getSource()
+	public final native float getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public final native void setSource(String value)
+	public final native void setSource(float value)
 	/*-{
 		this.source = value;
 	}-*/;
@@ -57,55 +57,48 @@ public class EncodeStringSpec extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The position in `dest` to set the encoded string.
+	 * @return The encoding type to use. must be one of
+	 *         {@link org.urish.gwtit.titanium.codec.type_byte},
+	 *         {@link org.urish.gwtit.titanium.codec.type_short},
+	 *         {@link org.urish.gwtit.titanium.codec.type_int},
+	 *         {@link org.urish.gwtit.titanium.codec.type_float},
+	 *         {@link org.urish.gwtit.titanium.codec.type_long}, or
+	 *         {@link org.urish.gwtit.titanium.codec.type_double}
 	 */
-	public final native float getDestPosition()
+	public final native String getType()
 	/*-{
-		return this.destPosition;
+		return this.type;
 	}-*/;
 
-	public final native void setDestPosition(float value)
+	public final native void setType(String value)
 	/*-{
-		this.destPosition = value;
+		this.type = value;
 	}-*/;
 
 	/**
-	 * @return The position in `source` to start encoding.
+	 * @return The position in dest to set the encoded data
 	 */
-	public final native float getSourcePosition()
+	public final native float getPosition()
 	/*-{
-		return this.sourcePosition;
+		return this.position;
 	}-*/;
 
-	public final native void setSourcePosition(float value)
+	public final native void setPosition(float value)
 	/*-{
-		this.sourcePosition = value;
+		this.position = value;
 	}-*/;
 
 	/**
-	 * @return The number of characters in `source` to encode.
+	 * @return The byte order to encode with
 	 */
-	public final native float getSourceLength()
+	public final native float getByteOrder()
 	/*-{
-		return this.sourceLength;
+		return this.byteOrder;
 	}-*/;
 
-	public final native void setSourceLength(float value)
+	public final native void setByteOrder(float value)
 	/*-{
-		this.sourceLength = value;
-	}-*/;
-
-	/**
-	 * @return The character set to use when encoding this string to bytes.
-	 */
-	public final native String getCharset()
-	/*-{
-		return this.charset;
-	}-*/;
-
-	public final native void setCharset(String value)
-	/*-{
-		this.charset = value;
+		this.byteOrder = value;
 	}-*/;
 
 }

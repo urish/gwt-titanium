@@ -150,7 +150,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 *            encodeNumber named options
 	 * @return The position after the encoded number in `dest`.
 	 */
-	public static native float encodeNumber(org.urish.gwtit.titanium.EncodeNumberSpec options)
+	public static native float encodeNumber(org.urish.gwtit.titanium.EncodeNumberDict options)
 	/*-{
 		return Titanium.Codec.encodeNumber(options);
 	}-*/;
@@ -164,7 +164,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 *            decodeNumber named options
 	 * @return The Number decoded from `source`.
 	 */
-	public static native float decodeNumber(org.urish.gwtit.titanium.DecodeNumberSpec options)
+	public static native float decodeNumber(org.urish.gwtit.titanium.DecodeNumberDict options)
 	/*-{
 		return Titanium.Codec.decodeNumber(options);
 	}-*/;
@@ -179,7 +179,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 *            encodeString named options
 	 * @return The position after the encoded String inside `dest`.
 	 */
-	public static native float encodeString(org.urish.gwtit.titanium.EncodeStringSpec options)
+	public static native float encodeString(org.urish.gwtit.titanium.EncodeStringDict options)
 	/*-{
 		return Titanium.Codec.encodeString(options);
 	}-*/;
@@ -195,7 +195,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	 *            decodeString named options
 	 * @return The decoded string
 	 */
-	public static native String decodeString(org.urish.gwtit.titanium.DecodeStringSpec options)
+	public static native String decodeString(org.urish.gwtit.titanium.DecodeStringDict options)
 	/*-{
 		return Titanium.Codec.decodeString(options);
 	}-*/;

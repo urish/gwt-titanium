@@ -24,19 +24,11 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 import org.urish.gwtit.client.event.TouchEvent;
 
 /**
- * Specification for {@link org.urish.gwtit.titanium.codec.decodenumber}
+ * Options for {@link org.urish.gwtit.titanium.codec.decodenumber}
  */
-public class DecodeNumberSpec extends JavaScriptObject {
-	protected DecodeNumberSpec() {
+public class DecodeNumberDict extends JavaScriptObject {
+	protected DecodeNumberDict() {
 	}
-
-	/**
-	 * Creates a new, empty instance of DecodeNumberSpec
-	 */
-	public static final native DecodeNumberSpec createDecodeNumberSpec()
-	/*-{
-		return {};
-	}-*/;
 
 	/**
 	 * @return The buffer to decode

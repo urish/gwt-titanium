@@ -24,10 +24,10 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 import org.urish.gwtit.client.event.TouchEvent;
 
 /**
- * Specification for {@link org.urish.gwtit.titanium.codec.decodestring}
+ * Options for {@link org.urish.gwtit.titanium.codec.decodestring}
  */
-public class DecodeStringSpec extends JavaScriptObject {
-	protected DecodeStringSpec() {
+public class DecodeStringDict extends JavaScriptObject {
+	protected DecodeStringDict() {
 	}
 
 	/**

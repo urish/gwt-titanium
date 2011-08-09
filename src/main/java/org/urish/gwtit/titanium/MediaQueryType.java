@@ -49,7 +49,7 @@ public class MediaQueryType extends JavaScriptObject {
 		this.grouping = value;
 	}-*/;
 
-	public final native void setMediaType(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setMediaType(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.mediaType = value;
 	}-*/;
@@ -69,7 +69,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.mediaType;
 	}-*/;
 
-	public final native void setTitle(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setTitle(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.title = value;
 	}-*/;
@@ -87,7 +87,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.title;
 	}-*/;
 
-	public final native void setAlbumTitle(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setAlbumTitle(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.albumTitle = value;
 	}-*/;
@@ -105,7 +105,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.albumTitle;
 	}-*/;
 
-	public final native void setArtist(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setArtist(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.artist = value;
 	}-*/;
@@ -123,7 +123,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.artist;
 	}-*/;
 
-	public final native void setAlbumArtist(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setAlbumArtist(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.albumArtist = value;
 	}-*/;
@@ -141,7 +141,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.albumArtist;
 	}-*/;
 
-	public final native void setGenre(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setGenre(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.genre = value;
 	}-*/;
@@ -159,7 +159,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.genre;
 	}-*/;
 
-	public final native void setComposer(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setComposer(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.composer = value;
 	}-*/;
@@ -177,7 +177,7 @@ public class MediaQueryType extends JavaScriptObject {
 		return this.composer;
 	}-*/;
 
-	public final native void setIsCompilation(EventCallback<org.urish.gwtit.titanium.MediaQueryInfoType> value)
+	public final native void setIsCompilation(org.urish.gwtit.titanium.MediaQueryInfoType value)
 	/*-{
 		this.isCompilation = value;
 	}-*/;
