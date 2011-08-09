@@ -18,41 +18,16 @@
 
 package org.urish.gwtit.titanium.ui.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * 
  */
-public class AndroidCameraEvent extends AbstractTitaniumEvent {
+public class AndroidCameraEvent extends TouchEvent {
 
 	public final static String NATIVE_EVENT_NAME = "android:camera";
 
 	protected AndroidCameraEvent() {
 	}
-
-	/**
-	 * the y point of the event, in receiving view coordinates
-	 */
-	public final native Object getY()
-	/*-{
-		return this.y;
-	}-*/;
-
-	/**
-	 * a dictionary with properties x and y describing the point of the event in
-	 * screen coordinates
-	 */
-	public final native Object getGlobalPoint()
-	/*-{
-		return this.globalPoint;
-	}-*/;
-
-	/**
-	 * the x point of the event in receiving view coordiantes
-	 */
-	public final native Object getX()
-	/*-{
-		return this.x;
-	}-*/;
 
 }

@@ -5,6 +5,7 @@
 		"properties[name='STANDARD_TYPE'] type": "int"
 	},
 	"Titanium.Media.AudioPlayer": {
+		"events[name='change'] properties[name='state'] type": "int",
 		"properties[name='STATE_BUFFERING'] type": "int",
 		"properties[name='STATE_INITIALIZED'] type": "int",
 		"properties[name='STATE_PAUSED'] type": "int",
@@ -247,6 +248,7 @@
 		"properties[name='PLAIN'] type": "int"
 	},
 	"Titanium.Map.MapView": {
+		"events[name='click'] properties[name='index'] type": "int",
 		"methods[name='setMapType'] parameters[name='mapType'] type": "int",
 		"methods[name='zoom'] parameters[name='level'] type": "double",
 		"properties[name='mapType'] type": "int"
@@ -730,5 +732,12 @@
 		"properties[name='SOFT_KEYBOARD_SHOW_ON_FOCUS'] type": "int",
 		"properties[name='SWITCH_STYLE_CHECKBOX'] type": "int",
 		"properties[name='SWITCH_STYLE_TOGGLEBUTTON'] type": "int"
+	},
+	"Titanium.Android.Service": {
+		"events[name='pause'] properties[name='iteration'] type": "int",	
+		"events[name='resume'] properties[name='iteration'] type": "int"
+	},
+	"Titanium.Gesture": {
+		"events[name='orientationchange'] properties[name='orientation'] type": "int"
 	}
 }

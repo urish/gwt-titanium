@@ -18,12 +18,12 @@
 
 package org.urish.gwtit.titanium.ui.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * 
  */
-public class ScrollEvent extends AbstractTitaniumEvent {
+public class ScrollEvent extends TouchEvent {
 
 	public final static String NATIVE_EVENT_NAME = "scroll";
 
@@ -64,22 +64,6 @@ public class ScrollEvent extends AbstractTitaniumEvent {
 	}-*/;
 
 	/**
-	 * the y point of the event, in receiving view coordinates
-	 */
-	public final native Object getY()
-	/*-{
-		return this.y;
-	}-*/;
-
-	/**
-	 * the x point of the event in receiving view coordiantes
-	 */
-	public final native Object getX()
-	/*-{
-		return this.x;
-	}-*/;
-
-	/**
 	 * dictionary with `width` and `height` properties containing the size of
 	 * the content (regardless of the display size in the case of scrolling)
 	 * (iOS only)
@@ -87,15 +71,6 @@ public class ScrollEvent extends AbstractTitaniumEvent {
 	public final native Object getContentSize()
 	/*-{
 		return this.contentSize;
-	}-*/;
-
-	/**
-	 * a dictionary with properties x and y describing the point of the event in
-	 * screen coordinates
-	 */
-	public final native Object getGlobalPoint()
-	/*-{
-		return this.globalPoint;
 	}-*/;
 
 	/**

@@ -18,12 +18,12 @@
 
 package org.urish.gwtit.titanium.map.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * 
  */
-public class RegionChangedEvent extends AbstractTitaniumEvent {
+public class RegionChangedEvent extends TouchEvent {
 
 	public final static String NATIVE_EVENT_NAME = "regionChanged";
 
@@ -31,17 +31,9 @@ public class RegionChangedEvent extends AbstractTitaniumEvent {
 	}
 
 	/**
-	 * the y point of the event, in receiving view coordinates
-	 */
-	public final native Object getY()
-	/*-{
-		return this.y;
-	}-*/;
-
-	/**
 	 * the new longitude
 	 */
-	public final native Object getLongitude()
+	public final native float getLongitude()
 	/*-{
 		return this.longitude;
 	}-*/;
@@ -49,7 +41,7 @@ public class RegionChangedEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new latitude delta
 	 */
-	public final native Object getLatitudeDelta()
+	public final native float getLatitudeDelta()
 	/*-{
 		return this.latitudeDelta;
 	}-*/;
@@ -57,7 +49,7 @@ public class RegionChangedEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new longitude delta
 	 */
-	public final native Object getLongitudeDelta()
+	public final native float getLongitudeDelta()
 	/*-{
 		return this.longitudeDelta;
 	}-*/;
@@ -65,26 +57,9 @@ public class RegionChangedEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new latitude
 	 */
-	public final native Object getLatitude()
+	public final native float getLatitude()
 	/*-{
 		return this.latitude;
-	}-*/;
-
-	/**
-	 * the x point of the event in receiving view coordiantes
-	 */
-	public final native Object getX()
-	/*-{
-		return this.x;
-	}-*/;
-
-	/**
-	 * a dictionary with properties x and y describing the point of the event in
-	 * screen coordinates
-	 */
-	public final native Object getGlobalPoint()
-	/*-{
-		return this.globalPoint;
 	}-*/;
 
 }

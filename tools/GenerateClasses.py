@@ -539,19 +539,25 @@ def getPackageNameSuffix(typeInfo):
 def generateEvents(javaClass, typeInfo, isSingleton, types):
 	result = ""
 	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
-	AUTO_EVENT_PROPERTIES = ["source", "type"]
 	package = getPackageNameSuffix(typeInfo)
 	packagePath = package.replace(".", "/")
 	eventClasses = []
 	for event in typeInfo.get('events', []):
-		superClass = event.get("superClass", "AbstractTitaniumEvent")
+		superClass = "AbstractTitaniumEvent"
 		javaName = event.get("javaName", capitalEventName(event['name']))
 		foundInAncetors = False
 		eventProperties = ""
+		propertyNames = [propertyInfo['name'] for propertyInfo in event['properties']]
+		skipEventProperties = ["source", "type"]
+		if 'x' in propertyNames and 'y' in propertyNames and 'globalPoint' in propertyNames:
+			superClass = "TouchEvent"
+			skipEventProperties += ['x', 'y', 'globalPoint']
 		for propertyInfo in event['properties']:
-			if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
+			if propertyInfo['name'] in skipEventProperties:
 				continue
 			eventType = propertyInfo.get('type', "Object")
+			if eventType == "Object":
+				print "WARNING: no type, event= " + event['name'] + " property= " + propertyInfo['name']
 			eventProperties += GETTER_TEMPLATE % {
 				'docString': propertyInfo['description'],
 				'getterType': mapTypes(eventType),

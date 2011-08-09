@@ -36,7 +36,7 @@ public class ResumeEvent extends AbstractTitaniumEvent {
 	 * running every 10 seconds, iteration 3 would occur at about 30 seconds
 	 * after you start the instance (assuming your service code runs quickly.)
 	 */
-	public final native Object getIteration()
+	public final native int getIteration()
 	/*-{
 		return this.iteration;
 	}-*/;

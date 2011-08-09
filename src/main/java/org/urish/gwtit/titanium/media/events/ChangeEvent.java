@@ -33,7 +33,7 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	/**
 	 * current state of playback
 	 */
-	public final native Object getState()
+	public final native int getState()
 	/*-{
 		return this.state;
 	}-*/;
@@ -41,7 +41,7 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	/**
 	 * textual description of the state of playback
 	 */
-	public final native Object getDescription()
+	public final native String getDescription()
 	/*-{
 		return this.description;
 	}-*/;

@@ -35,7 +35,7 @@ public class UpdateEvent extends AbstractTitaniumEvent {
 	 * timestamp and should simply be used to determine the time between events
 	 * and not an exact timestamp.
 	 */
-	public final native Object getTimestamp()
+	public final native float getTimestamp()
 	/*-{
 		return this.timestamp;
 	}-*/;
@@ -43,7 +43,7 @@ public class UpdateEvent extends AbstractTitaniumEvent {
 	/**
 	 * the y axis of the device
 	 */
-	public final native Object getY()
+	public final native float getY()
 	/*-{
 		return this.y;
 	}-*/;
@@ -51,7 +51,7 @@ public class UpdateEvent extends AbstractTitaniumEvent {
 	/**
 	 * the x axis of the device
 	 */
-	public final native Object getX()
+	public final native float getX()
 	/*-{
 		return this.x;
 	}-*/;
@@ -59,7 +59,7 @@ public class UpdateEvent extends AbstractTitaniumEvent {
 	/**
 	 * the z axis of the device
 	 */
-	public final native Object getZ()
+	public final native float getZ()
 	/*-{
 		return this.z;
 	}-*/;

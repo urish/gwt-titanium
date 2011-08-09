@@ -18,12 +18,12 @@
 
 package org.urish.gwtit.titanium.map.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * 
  */
-public class ErrorEvent extends AbstractTitaniumEvent {
+public class ErrorEvent extends TouchEvent {
 
 	public final static String NATIVE_EVENT_NAME = "error";
 
@@ -31,36 +31,11 @@ public class ErrorEvent extends AbstractTitaniumEvent {
 	}
 
 	/**
-	 * the y point of the event, in receiving view coordinates
-	 */
-	public final native Object getY()
-	/*-{
-		return this.y;
-	}-*/;
-
-	/**
-	 * the x point of the event in receiving view coordiantes
-	 */
-	public final native Object getX()
-	/*-{
-		return this.x;
-	}-*/;
-
-	/**
 	 * the error message
 	 */
-	public final native Object getMessage()
+	public final native String getMessage()
 	/*-{
 		return this.message;
-	}-*/;
-
-	/**
-	 * a dictionary with properties x and y describing the point of the event in
-	 * screen coordinates
-	 */
-	public final native Object getGlobalPoint()
-	/*-{
-		return this.globalPoint;
 	}-*/;
 
 }

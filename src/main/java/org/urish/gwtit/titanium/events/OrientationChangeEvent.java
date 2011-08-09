@@ -33,7 +33,7 @@ public class OrientationChangeEvent extends AbstractTitaniumEvent {
 	/**
 	 * the orientation constant
 	 */
-	public final native Object getOrientation()
+	public final native int getOrientation()
 	/*-{
 		return this.orientation;
 	}-*/;

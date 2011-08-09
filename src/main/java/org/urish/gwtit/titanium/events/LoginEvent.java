@@ -33,7 +33,7 @@ public class LoginEvent extends AbstractTitaniumEvent {
 	/**
 	 * the user id returned by Facebook if the login was successful.
 	 */
-	public final native Object getUid()
+	public final native String getUid()
 	/*-{
 		return this.uid;
 	}-*/;
@@ -41,7 +41,7 @@ public class LoginEvent extends AbstractTitaniumEvent {
 	/**
 	 * true if the login was successful
 	 */
-	public final native Object getSuccess()
+	public final native boolean getSuccess()
 	/*-{
 		return this.success;
 	}-*/;
@@ -59,7 +59,7 @@ public class LoginEvent extends AbstractTitaniumEvent {
 	/**
 	 * error message if success was false
 	 */
-	public final native Object getError()
+	public final native String getError()
 	/*-{
 		return this.error;
 	}-*/;
@@ -67,7 +67,7 @@ public class LoginEvent extends AbstractTitaniumEvent {
 	/**
 	 * true if the user cancelled the request by closing the dialog
 	 */
-	public final native Object getCancelled()
+	public final native boolean getCancelled()
 	/*-{
 		return this.cancelled;
 	}-*/;

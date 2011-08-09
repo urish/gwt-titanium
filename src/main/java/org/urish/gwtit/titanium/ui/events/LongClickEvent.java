@@ -18,12 +18,12 @@
 
 package org.urish.gwtit.titanium.ui.events;
 
-import org.urish.gwtit.client.event.TouchEvent;
+import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 
 /**
  * 
  */
-public class LongClickEvent extends TouchEvent {
+public class LongClickEvent extends AbstractTitaniumEvent {
 
 	public final static String NATIVE_EVENT_NAME = "longclick";
 

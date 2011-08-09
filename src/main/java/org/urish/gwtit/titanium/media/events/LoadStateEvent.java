@@ -18,12 +18,12 @@
 
 package org.urish.gwtit.titanium.media.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * 
  */
-public class LoadStateEvent extends AbstractTitaniumEvent {
+public class LoadStateEvent extends TouchEvent {
 
 	public final static String NATIVE_EVENT_NAME = "loadstate";
 
@@ -36,31 +36,6 @@ public class LoadStateEvent extends AbstractTitaniumEvent {
 	public final native Object getLoadState()
 	/*-{
 		return this.loadState;
-	}-*/;
-
-	/**
-	 * the y point of the event, in receiving view coordinates
-	 */
-	public final native Object getY()
-	/*-{
-		return this.y;
-	}-*/;
-
-	/**
-	 * the x point of the event in receiving view coordiantes
-	 */
-	public final native Object getX()
-	/*-{
-		return this.x;
-	}-*/;
-
-	/**
-	 * a dictionary with properties x and y describing the point of the event in
-	 * screen coordinates
-	 */
-	public final native Object getGlobalPoint()
-	/*-{
-		return this.globalPoint;
 	}-*/;
 
 }

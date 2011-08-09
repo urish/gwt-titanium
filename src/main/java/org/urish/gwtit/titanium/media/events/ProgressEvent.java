@@ -33,7 +33,7 @@ public class ProgressEvent extends AbstractTitaniumEvent {
 	/**
 	 * current progress value
 	 */
-	public final native Object getProgress()
+	public final native float getProgress()
 	/*-{
 		return this.progress;
 	}-*/;

@@ -33,7 +33,7 @@ public class NewIntentEvent extends AbstractTitaniumEvent {
 	/**
 	 * the <Titanium.Android.Intent> passed to the native `onNewIntent` method.
 	 */
-	public final native Object getIntent()
+	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
 		return this.intent;
 	}-*/;

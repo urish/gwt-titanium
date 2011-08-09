@@ -33,7 +33,7 @@ public class ShakeEvent extends AbstractTitaniumEvent {
 	/**
 	 * timestamp reference since previous shake
 	 */
-	public final native Object getTimestamp()
+	public final native float getTimestamp()
 	/*-{
 		return this.timestamp;
 	}-*/;
