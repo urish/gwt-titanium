@@ -30,8 +30,6 @@ public class LoadingEvent extends AbstractTitaniumEvent {
 	protected LoadingEvent() {
 	}
 
-	// Titanium.Map.MapView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

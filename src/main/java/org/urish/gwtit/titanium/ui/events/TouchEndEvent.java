@@ -30,6 +30,4 @@ public class TouchEndEvent extends TouchEvent {
 	protected TouchEndEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

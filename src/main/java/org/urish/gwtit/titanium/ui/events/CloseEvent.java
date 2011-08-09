@@ -30,8 +30,6 @@ public class CloseEvent extends AbstractTitaniumEvent {
 	protected CloseEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

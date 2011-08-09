@@ -30,8 +30,6 @@ public class NaturalSizeAvailableEvent extends AbstractTitaniumEvent {
 	protected NaturalSizeAvailableEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * natural size as a dictionary. see `naturalSize` property.
 	 */

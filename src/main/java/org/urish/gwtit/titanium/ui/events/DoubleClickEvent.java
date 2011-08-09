@@ -30,6 +30,4 @@ public class DoubleClickEvent extends TouchEvent {
 	protected DoubleClickEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

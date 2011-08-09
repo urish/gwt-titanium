@@ -30,6 +30,4 @@ public class LogoutEvent extends AbstractTitaniumEvent {
 	protected LogoutEvent() {
 	}
 
-	// Titanium.Facebook
-
 }

@@ -30,8 +30,6 @@ public class ReadErrorEvent extends AbstractTitaniumEvent {
 	protected ReadErrorEvent() {
 	}
 
-	// Titanium.Network.TCPSocket
-
 	/**
 	 * the BSD socket error code
 	 */

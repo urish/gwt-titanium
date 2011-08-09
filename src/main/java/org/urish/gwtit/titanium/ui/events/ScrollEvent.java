@@ -30,8 +30,6 @@ public class ScrollEvent extends AbstractTitaniumEvent {
 	protected ScrollEvent() {
 	}
 
-	// Titanium.UI.TableView
-
 	/**
 	 * the row index of the topmost visible row in the view (Android only)
 	 */

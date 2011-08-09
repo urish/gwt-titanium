@@ -30,8 +30,6 @@ public class ActionEvent extends AbstractTitaniumEvent {
 	protected ActionEvent() {
 	}
 
-	// Titanium.UI.iOS.AdView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

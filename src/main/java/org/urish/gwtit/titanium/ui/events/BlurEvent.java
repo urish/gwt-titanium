@@ -30,8 +30,6 @@ public class BlurEvent extends AbstractTitaniumEvent {
 	protected BlurEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

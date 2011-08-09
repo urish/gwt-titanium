@@ -30,8 +30,6 @@ public class ProgressEvent extends AbstractTitaniumEvent {
 	protected ProgressEvent() {
 	}
 
-	// Titanium.Media.AudioPlayer
-
 	/**
 	 * current progress value
 	 */

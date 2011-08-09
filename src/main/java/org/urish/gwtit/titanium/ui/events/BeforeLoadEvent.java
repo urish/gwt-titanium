@@ -30,8 +30,6 @@ public class BeforeLoadEvent extends AbstractTitaniumEvent {
 	protected BeforeLoadEvent() {
 	}
 
-	// Titanium.UI.WebView
-
 	/**
 	 * the url of the web document
 	 */

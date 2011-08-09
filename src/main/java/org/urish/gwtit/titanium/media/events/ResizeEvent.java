@@ -30,8 +30,6 @@ public class ResizeEvent extends AbstractTitaniumEvent {
 	protected ResizeEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

@@ -30,8 +30,6 @@ public class PlayingEvent extends AbstractTitaniumEvent {
 	protected PlayingEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * url of the media
 	 */

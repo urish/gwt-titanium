@@ -30,8 +30,6 @@ public class AndroidCameraEvent extends AbstractTitaniumEvent {
 	protected AndroidCameraEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

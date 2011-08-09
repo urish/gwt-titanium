@@ -30,8 +30,6 @@ public class HeadingEvent extends AbstractTitaniumEvent {
 	protected HeadingEvent() {
 	}
 
-	// Titanium.Geolocation
-
 	/**
 	 * if success is false, the error code if available (iOS only)
 	 */

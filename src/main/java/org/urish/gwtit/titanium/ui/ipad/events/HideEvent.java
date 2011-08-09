@@ -30,8 +30,6 @@ public class HideEvent extends AbstractTitaniumEvent {
 	protected HideEvent() {
 	}
 
-	// Titanium.UI.iPad.Popover
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

@@ -30,8 +30,6 @@ public class CancelEvent extends AbstractTitaniumEvent {
 	protected CancelEvent() {
 	}
 
-	// Titanium.UI.SearchBar
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

@@ -30,8 +30,6 @@ public class ThumbnailEvent extends AbstractTitaniumEvent {
 	protected ThumbnailEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * boolean to indicate success or failure
 	 */

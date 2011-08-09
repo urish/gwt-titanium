@@ -30,8 +30,6 @@ public class BatteryEvent extends AbstractTitaniumEvent {
 	protected BatteryEvent() {
 	}
 
-	// Titanium.Platform
-
 	/**
 	 * the new battery state
 	 */

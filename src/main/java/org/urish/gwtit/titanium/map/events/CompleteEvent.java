@@ -30,8 +30,6 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	protected CompleteEvent() {
 	}
 
-	// Titanium.Map.MapView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

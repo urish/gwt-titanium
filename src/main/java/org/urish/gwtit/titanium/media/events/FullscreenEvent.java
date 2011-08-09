@@ -30,8 +30,6 @@ public class FullscreenEvent extends AbstractTitaniumEvent {
 	protected FullscreenEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * true to indicate entering fullscreen, false to indicate leaving
 	 * fullscreen

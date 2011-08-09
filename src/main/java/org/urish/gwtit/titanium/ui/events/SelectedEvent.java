@@ -30,8 +30,6 @@ public class SelectedEvent extends AbstractTitaniumEvent {
 	protected SelectedEvent() {
 	}
 
-	// Titanium.UI.TextArea
-
 	/**
 	 * the range of text. range is an object with the properties `location` and
 	 * `length`.

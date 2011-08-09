@@ -30,6 +30,4 @@ public class CreateEvent extends AbstractTitaniumEvent {
 	protected CreateEvent() {
 	}
 
-	// Titanium.Android.Activity
-
 }

@@ -30,8 +30,6 @@ public class OrientationChangeEvent extends AbstractTitaniumEvent {
 	protected OrientationChangeEvent() {
 	}
 
-	// Titanium.Gesture
-
 	/**
 	 * the orientation constant
 	 */

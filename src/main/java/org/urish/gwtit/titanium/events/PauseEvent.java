@@ -30,6 +30,4 @@ public class PauseEvent extends AbstractTitaniumEvent {
 	protected PauseEvent() {
 	}
 
-	// Titanium.App
-
 }

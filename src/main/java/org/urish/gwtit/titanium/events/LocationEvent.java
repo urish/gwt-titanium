@@ -30,8 +30,6 @@ public class LocationEvent extends AbstractTitaniumEvent {
 	protected LocationEvent() {
 	}
 
-	// Titanium.Geolocation
-
 	/**
 	 * if success is false, the error code if available (iOS only)
 	 */

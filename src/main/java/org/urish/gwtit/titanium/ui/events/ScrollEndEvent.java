@@ -30,8 +30,6 @@ public class ScrollEndEvent extends AbstractTitaniumEvent {
 	protected ScrollEndEvent() {
 	}
 
-	// Titanium.UI.TableView
-
 	/**
 	 * dictionary with `x` and `y` properties containing the content offset (iOS
 	 * only)

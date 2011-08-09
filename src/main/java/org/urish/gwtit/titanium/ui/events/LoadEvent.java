@@ -30,8 +30,6 @@ public class LoadEvent extends AbstractTitaniumEvent {
 	protected LoadEvent() {
 	}
 
-	// Titanium.UI.WebView
-
 	/**
 	 * the url of the web document
 	 */

@@ -30,8 +30,6 @@ public class WriteErrorEvent extends AbstractTitaniumEvent {
 	protected WriteErrorEvent() {
 	}
 
-	// Titanium.Network.TCPSocket
-
 	/**
 	 * the BSD socket error code
 	 */

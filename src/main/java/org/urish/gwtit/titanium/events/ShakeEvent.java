@@ -30,8 +30,6 @@ public class ShakeEvent extends AbstractTitaniumEvent {
 	protected ShakeEvent() {
 	}
 
-	// Titanium.Gesture
-
 	/**
 	 * timestamp reference since previous shake
 	 */

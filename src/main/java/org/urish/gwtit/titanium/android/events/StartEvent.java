@@ -30,6 +30,4 @@ public class StartEvent extends AbstractTitaniumEvent {
 	protected StartEvent() {
 	}
 
-	// Titanium.Android.Service
-
 }

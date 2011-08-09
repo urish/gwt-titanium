@@ -30,8 +30,6 @@ public class DeleteEvent extends AbstractTitaniumEvent {
 	protected DeleteEvent() {
 	}
 
-	// Titanium.UI.TableView
-
 	/**
 	 * table view row index
 	 */

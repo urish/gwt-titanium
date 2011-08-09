@@ -30,8 +30,6 @@ public class StartEvent extends AbstractTitaniumEvent {
 	protected StartEvent() {
 	}
 
-	// Titanium.UI.ImageView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

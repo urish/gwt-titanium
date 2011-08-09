@@ -30,8 +30,6 @@ public class LoadStateEvent extends AbstractTitaniumEvent {
 	protected LoadStateEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * loadState
 	 */

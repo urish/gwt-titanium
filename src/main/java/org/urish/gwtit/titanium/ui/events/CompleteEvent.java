@@ -30,8 +30,6 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	protected CompleteEvent() {
 	}
 
-	// Titanium.UI.EmailDialog
-
 	/**
 	 * result status either as SENT, SAVED, CANCELLED or FAILED. (Note: Android
 	 * result will be SENT even if user discards or saves the message. SAVED and

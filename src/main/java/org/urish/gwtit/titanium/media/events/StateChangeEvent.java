@@ -30,6 +30,4 @@ public class StateChangeEvent extends AbstractTitaniumEvent {
 	protected StateChangeEvent() {
 	}
 
-	// Titanium.Media.MusicPlayer
-
 }

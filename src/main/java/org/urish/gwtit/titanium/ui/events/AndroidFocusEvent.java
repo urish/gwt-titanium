@@ -30,8 +30,6 @@ public class AndroidFocusEvent extends AbstractTitaniumEvent {
 	protected AndroidFocusEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

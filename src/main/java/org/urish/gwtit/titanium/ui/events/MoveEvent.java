@@ -30,8 +30,6 @@ public class MoveEvent extends AbstractTitaniumEvent {
 	protected MoveEvent() {
 	}
 
-	// Titanium.UI.TableView
-
 	/**
 	 * table view row index
 	 */

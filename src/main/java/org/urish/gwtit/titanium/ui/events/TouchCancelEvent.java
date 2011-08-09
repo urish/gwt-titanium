@@ -30,6 +30,4 @@ public class TouchCancelEvent extends TouchEvent {
 	protected TouchCancelEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

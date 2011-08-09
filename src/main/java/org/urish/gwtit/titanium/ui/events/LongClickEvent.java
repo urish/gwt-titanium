@@ -30,6 +30,4 @@ public class LongClickEvent extends TouchEvent {
 	protected LongClickEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

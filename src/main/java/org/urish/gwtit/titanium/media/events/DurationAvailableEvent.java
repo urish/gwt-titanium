@@ -30,8 +30,6 @@ public class DurationAvailableEvent extends AbstractTitaniumEvent {
 	protected DurationAvailableEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

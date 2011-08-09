@@ -30,6 +30,4 @@ public class TouchMoveEvent extends TouchEvent {
 	protected TouchMoveEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

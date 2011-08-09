@@ -30,6 +30,4 @@ public class TwoFingerTapEvent extends TouchEvent {
 	protected TwoFingerTapEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

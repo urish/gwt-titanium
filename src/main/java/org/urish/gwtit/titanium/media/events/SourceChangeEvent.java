@@ -30,8 +30,6 @@ public class SourceChangeEvent extends AbstractTitaniumEvent {
 	protected SourceChangeEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * the new sourceType
 	 */

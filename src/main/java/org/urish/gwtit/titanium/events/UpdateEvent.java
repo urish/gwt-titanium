@@ -30,8 +30,6 @@ public class UpdateEvent extends AbstractTitaniumEvent {
 	protected UpdateEvent() {
 	}
 
-	// Titanium.Accelerometer
-
 	/**
 	 * reference timestamp since the previous change. this is not a valid
 	 * timestamp and should simply be used to determine the time between events

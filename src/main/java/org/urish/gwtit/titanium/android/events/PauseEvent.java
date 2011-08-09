@@ -30,8 +30,6 @@ public class PauseEvent extends AbstractTitaniumEvent {
 	protected PauseEvent() {
 	}
 
-	// Titanium.Android.Service
-
 	/**
 	 * incrementing integer indicating which iteration of an interval-based
 	 * Service is pausing. For example, if you have an interval-based Service

@@ -30,6 +30,4 @@ public class CalibrationEvent extends AbstractTitaniumEvent {
 	protected CalibrationEvent() {
 	}
 
-	// Titanium.Geolocation
-
 }

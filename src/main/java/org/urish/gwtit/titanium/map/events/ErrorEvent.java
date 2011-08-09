@@ -30,8 +30,6 @@ public class ErrorEvent extends AbstractTitaniumEvent {
 	protected ErrorEvent() {
 	}
 
-	// Titanium.Map.MapView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

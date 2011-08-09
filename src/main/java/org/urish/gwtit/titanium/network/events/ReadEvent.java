@@ -30,8 +30,6 @@ public class ReadEvent extends AbstractTitaniumEvent {
 	protected ReadEvent() {
 	}
 
-	// Titanium.Network.TCPSocket
-
 	/**
 	 * the reference for the socket that data was retrieved from
 	 */

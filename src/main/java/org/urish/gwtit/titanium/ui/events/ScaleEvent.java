@@ -30,8 +30,6 @@ public class ScaleEvent extends AbstractTitaniumEvent {
 	protected ScaleEvent() {
 	}
 
-	// Titanium.UI.ScrollView
-
 	/**
 	 * the new scale as a float
 	 */

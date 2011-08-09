@@ -30,6 +30,4 @@ public class ClickEvent extends TouchEvent {
 	protected ClickEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

@@ -30,6 +30,4 @@ public class VolumeChangeEvent extends AbstractTitaniumEvent {
 	protected VolumeChangeEvent() {
 	}
 
-	// Titanium.Media.MusicPlayer
-
 }

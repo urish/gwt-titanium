@@ -30,8 +30,6 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	protected ChangeEvent() {
 	}
 
-	// Titanium.Network
-
 	/**
 	 * the new network type as a string
 	 */

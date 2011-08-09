@@ -30,8 +30,6 @@ public class AndroidSearchEvent extends AbstractTitaniumEvent {
 	protected AndroidSearchEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

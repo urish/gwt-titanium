@@ -30,6 +30,4 @@ public class ClickEvent extends AbstractTitaniumEvent {
 	protected ClickEvent() {
 	}
 
-	// Titanium.Android.MenuItem
-
 }

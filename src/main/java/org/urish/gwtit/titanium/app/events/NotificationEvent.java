@@ -30,6 +30,4 @@ public class NotificationEvent extends AbstractTitaniumEvent {
 	protected NotificationEvent() {
 	}
 
-	// Titanium.App.iOS
-
 }

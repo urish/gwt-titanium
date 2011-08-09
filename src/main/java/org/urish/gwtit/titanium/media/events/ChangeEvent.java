@@ -30,8 +30,6 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	protected ChangeEvent() {
 	}
 
-	// Titanium.Media.AudioPlayer
-
 	/**
 	 * current state of playback
 	 */

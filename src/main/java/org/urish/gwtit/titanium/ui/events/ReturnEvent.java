@@ -30,8 +30,6 @@ public class ReturnEvent extends AbstractTitaniumEvent {
 	protected ReturnEvent() {
 	}
 
-	// Titanium.UI.TextField
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

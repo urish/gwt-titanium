@@ -30,8 +30,6 @@ public class SwipeEvent extends TouchEvent {
 	protected SwipeEvent() {
 	}
 
-	// Titanium.UI.View
-
 	/**
 	 * direction of the swipe - either left or right
 	 */

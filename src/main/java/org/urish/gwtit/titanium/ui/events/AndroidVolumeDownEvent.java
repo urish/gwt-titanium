@@ -30,8 +30,6 @@ public class AndroidVolumeDownEvent extends AbstractTitaniumEvent {
 	protected AndroidVolumeDownEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

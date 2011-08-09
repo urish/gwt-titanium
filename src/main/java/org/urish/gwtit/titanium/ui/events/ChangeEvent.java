@@ -30,8 +30,6 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	protected ChangeEvent() {
 	}
 
-	// Titanium.UI.TextField
-
 	/**
 	 * the value of the field upon change
 	 */

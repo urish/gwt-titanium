@@ -30,8 +30,6 @@ public class NewIntentEvent extends AbstractTitaniumEvent {
 	protected NewIntentEvent() {
 	}
 
-	// Titanium.Android.Activity
-
 	/**
 	 * the <Titanium.Android.Intent> passed to the native `onNewIntent` method.
 	 */

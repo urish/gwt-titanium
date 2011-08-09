@@ -174,8 +174,6 @@ EVENT_CLASS_BODY_TEMPLATE = """
 	public final static String NATIVE_EVENT_NAME = "%(name)s";
 	
 	protected %(javaName)sEvent() {}
-	
-	//%(type)s
 
 	%(eventProperties)s		
 """
@@ -569,7 +567,6 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 			eventClass = JavaClass(package + ".events", javaName + "Event", superClass=superClass, body=EVENT_CLASS_BODY_TEMPLATE % {
 				'eventProperties': eventProperties,
 				'name': event['name'],
-				'type': typeInfo['name'],
 				'javaName': javaName,
 			})
 			eventClass.addImport("org.urish.gwtit.client.event.%s" % superClass)

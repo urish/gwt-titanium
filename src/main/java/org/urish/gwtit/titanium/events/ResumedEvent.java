@@ -30,6 +30,4 @@ public class ResumedEvent extends AbstractTitaniumEvent {
 	protected ResumedEvent() {
 	}
 
-	// Titanium.App
-
 }

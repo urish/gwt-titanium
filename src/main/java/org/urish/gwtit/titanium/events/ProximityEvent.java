@@ -30,8 +30,6 @@ public class ProximityEvent extends AbstractTitaniumEvent {
 	protected ProximityEvent() {
 	}
 
-	// Titanium.App
-
 	/**
 	 * the proximity state value
 	 */

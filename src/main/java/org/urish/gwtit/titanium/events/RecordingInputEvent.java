@@ -30,8 +30,6 @@ public class RecordingInputEvent extends AbstractTitaniumEvent {
 	protected RecordingInputEvent() {
 	}
 
-	// Titanium.Media
-
 	/**
 	 * bool indicating availability of recording device
 	 */

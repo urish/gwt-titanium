@@ -30,8 +30,6 @@ public class PreloadEvent extends AbstractTitaniumEvent {
 	protected PreloadEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

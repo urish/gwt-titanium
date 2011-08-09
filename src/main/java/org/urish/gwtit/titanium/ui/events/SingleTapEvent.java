@@ -30,6 +30,4 @@ public class SingleTapEvent extends TouchEvent {
 	protected SingleTapEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

@@ -30,8 +30,6 @@ public class EditEvent extends AbstractTitaniumEvent {
 	protected EditEvent() {
 	}
 
-	// Titanium.UI.DashboardView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

@@ -30,8 +30,6 @@ public class MediaTypesAvailableEvent extends AbstractTitaniumEvent {
 	protected MediaTypesAvailableEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * media types
 	 */

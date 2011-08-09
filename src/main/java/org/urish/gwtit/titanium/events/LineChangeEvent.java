@@ -30,6 +30,4 @@ public class LineChangeEvent extends AbstractTitaniumEvent {
 	protected LineChangeEvent() {
 	}
 
-	// Titanium.Media
-
 }

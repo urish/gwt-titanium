@@ -30,8 +30,6 @@ public class RegionChangedEvent extends AbstractTitaniumEvent {
 	protected RegionChangedEvent() {
 	}
 
-	// Titanium.Map.MapView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

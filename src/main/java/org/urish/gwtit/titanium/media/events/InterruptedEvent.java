@@ -30,6 +30,4 @@ public class InterruptedEvent extends AbstractTitaniumEvent {
 	protected InterruptedEvent() {
 	}
 
-	// Titanium.Media.Sound
-
 }

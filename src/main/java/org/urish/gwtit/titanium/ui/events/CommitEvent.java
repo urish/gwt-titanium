@@ -30,8 +30,6 @@ public class CommitEvent extends AbstractTitaniumEvent {
 	protected CommitEvent() {
 	}
 
-	// Titanium.UI.DashboardView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

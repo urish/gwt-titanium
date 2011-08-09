@@ -30,8 +30,6 @@ public class ErrorEvent extends AbstractTitaniumEvent {
 	protected ErrorEvent() {
 	}
 
-	// Titanium.UI.WebView
-
 	/**
 	 * the url of the web document
 	 */

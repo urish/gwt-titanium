@@ -30,8 +30,6 @@ public class VisibleEvent extends AbstractTitaniumEvent {
 	protected VisibleEvent() {
 	}
 
-	// Titanium.UI.iPad.SplitWindow
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

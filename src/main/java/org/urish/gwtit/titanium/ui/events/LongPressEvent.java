@@ -30,6 +30,4 @@ public class LongPressEvent extends TouchEvent {
 	protected LongPressEvent() {
 	}
 
-	// Titanium.UI.View
-
 }

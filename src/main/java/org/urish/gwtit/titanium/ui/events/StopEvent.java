@@ -30,8 +30,6 @@ public class StopEvent extends AbstractTitaniumEvent {
 	protected StopEvent() {
 	}
 
-	// Titanium.UI.ImageView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

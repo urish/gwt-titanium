@@ -30,8 +30,6 @@ public class PlaybackStateEvent extends AbstractTitaniumEvent {
 	protected PlaybackStateEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

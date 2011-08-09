@@ -30,6 +30,4 @@ public class PlayingChangeEvent extends AbstractTitaniumEvent {
 	protected PlayingChangeEvent() {
 	}
 
-	// Titanium.Media.MusicPlayer
-
 }

@@ -30,8 +30,6 @@ public class LoadEvent extends AbstractTitaniumEvent {
 	protected LoadEvent() {
 	}
 
-	// Titanium.UI.iOS.AdView
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

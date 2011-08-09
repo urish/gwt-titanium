@@ -30,8 +30,6 @@ public class FocusEvent extends AbstractTitaniumEvent {
 	protected FocusEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

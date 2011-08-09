@@ -30,8 +30,6 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	protected CompleteEvent() {
 	}
 
-	// Titanium.Media.VideoPlayer
-
 	/**
 	 * the completion reason. One of
 	 * <Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ENDED>,

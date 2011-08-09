@@ -30,8 +30,6 @@ public class ResumeEvent extends AbstractTitaniumEvent {
 	protected ResumeEvent() {
 	}
 
-	// Titanium.Android.Service
-
 	/**
 	 * incrementing integer indicating which iteration of an interval-based
 	 * Service is resuming. For example, if you have an interval-based Service

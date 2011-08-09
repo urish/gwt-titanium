@@ -30,8 +30,6 @@ public class VolumeEvent extends AbstractTitaniumEvent {
 	protected VolumeEvent() {
 	}
 
-	// Titanium.Media
-
 	/**
 	 * float of the new volume in dB
 	 */

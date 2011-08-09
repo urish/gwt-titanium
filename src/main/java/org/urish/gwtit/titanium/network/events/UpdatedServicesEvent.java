@@ -30,8 +30,6 @@ public class UpdatedServicesEvent extends AbstractTitaniumEvent {
 	protected UpdatedServicesEvent() {
 	}
 
-	// Titanium.Network.BonjourBrowser
-
 	/**
 	 * An array of BonjourService objects corresponding to currently available
 	 * services. If you cache this value, including using it as table data, be

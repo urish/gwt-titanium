@@ -30,8 +30,6 @@ public class ResumeEvent extends AbstractTitaniumEvent {
 	protected ResumeEvent() {
 	}
 
-	// Titanium.Media.Sound
-
 	/**
 	 * boolean to indicate if the resume was from an interruption
 	 */

@@ -30,8 +30,6 @@ public class LoginEvent extends AbstractTitaniumEvent {
 	protected LoginEvent() {
 	}
 
-	// Titanium.Facebook
-
 	/**
 	 * the user id returned by Facebook if the login was successful.
 	 */

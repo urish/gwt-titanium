@@ -30,8 +30,6 @@ public class AndroidBackEvent extends AbstractTitaniumEvent {
 	protected AndroidBackEvent() {
 	}
 
-	// Titanium.UI.Window
-
 	/**
 	 * the y point of the event, in receiving view coordinates
 	 */

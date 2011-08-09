@@ -30,6 +30,4 @@ public class StopEvent extends AbstractTitaniumEvent {
 	protected StopEvent() {
 	}
 
-	// Titanium.Android.Service
-
 }

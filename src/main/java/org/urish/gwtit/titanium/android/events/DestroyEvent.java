@@ -30,6 +30,4 @@ public class DestroyEvent extends AbstractTitaniumEvent {
 	protected DestroyEvent() {
 	}
 
-	// Titanium.Android.Activity
-
 }
