@@ -18,10 +18,6 @@
 
 package org.urish.gwtit.titanium.media;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A representation of a media item returned by the music picker as part of the

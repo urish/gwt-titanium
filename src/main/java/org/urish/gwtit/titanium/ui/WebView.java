@@ -18,10 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The web view allows you to open an html5 based view which can load either

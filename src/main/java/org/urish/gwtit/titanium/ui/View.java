@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 import org.urish.gwtit.client.event.TouchEvent;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The view is an empty drawing surface or container. the view is created by the
@@ -402,7 +402,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 * @return The size of the view as a dictionary of width and height
 	 *         properties
 	 */
-	public final native Object getSize()
+	public final native org.urish.gwtit.client.util.Size getSize()
 	/*-{
 		return this.size;
 	}-*/;

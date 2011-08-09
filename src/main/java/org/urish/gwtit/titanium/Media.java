@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The top level media module. the media module is used accessing the device's

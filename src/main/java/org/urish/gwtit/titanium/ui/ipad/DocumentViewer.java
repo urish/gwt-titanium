@@ -18,10 +18,6 @@
 
 package org.urish.gwtit.titanium.ui.ipad;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A documentviewer provides in-app support for managing user interactions with

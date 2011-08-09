@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.app;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The top level app ios module. the app ios module is only available on ios

@@ -18,10 +18,7 @@
 
 package org.urish.gwtit.titanium.network.socket;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * Tcp socket that implements the `titanium.iostream` interface. created by

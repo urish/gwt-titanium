@@ -18,10 +18,6 @@
 
 package org.urish.gwtit.titanium;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * The main {@link org.urish.gwtit..titanium.ui} module. the ui module is

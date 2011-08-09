@@ -18,10 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A scroll view is used to create a scrollable region of content. views added

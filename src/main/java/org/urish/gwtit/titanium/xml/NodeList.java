@@ -18,10 +18,6 @@
 
 package org.urish.gwtit.titanium.xml;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * A list of {@link org.urish.gwtit.titanium.xml.node} objects. this conforms to

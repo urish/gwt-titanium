@@ -18,10 +18,6 @@
 
 package org.urish.gwtit.titanium.xml;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * Represents an element in a dom document, a

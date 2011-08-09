@@ -18,10 +18,9 @@
 
 package org.urish.gwtit.titanium;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Options for {@link org.urish.gwtit.titanium.network.socket.tcp.accept} that

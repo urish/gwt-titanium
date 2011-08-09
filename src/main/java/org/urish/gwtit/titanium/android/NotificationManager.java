@@ -18,10 +18,9 @@
 
 package org.urish.gwtit.titanium.android;
 
-import com.google.gwt.core.client.JavaScriptObject;
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
+
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Module to notify users of events that happen. it is a thin wrapper on
