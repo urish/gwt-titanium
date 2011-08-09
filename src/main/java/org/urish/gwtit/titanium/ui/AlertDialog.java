@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ClickHandler;
 
 /**
  * The alert dialog is created by
@@ -122,34 +122,6 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.show();
 	}-*/;
-
-	public final static class ClickEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "click";
-
-		protected ClickEvent() {
-		}
-
-		/**
-		 * boolean to indicate if the cancel button was pressed
-		 */
-		public final native Object getCancel()
-		/*-{
-			return this.cancel;
-		}-*/;
-
-		/**
-		 * the button index that was pressed
-		 */
-		public final native Object getIndex()
-		/*-{
-			return this.index;
-		}-*/;
-
-	}
-
-	public interface ClickHandler {
-		public void onClick(ClickEvent event);
-	}
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{

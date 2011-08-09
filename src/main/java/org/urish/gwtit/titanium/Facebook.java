@@ -19,7 +19,8 @@
 package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.events.LoginHandler;
+import org.urish.gwtit.titanium.events.LogoutHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -263,76 +264,10 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 		return Titanium.Facebook.fireEvent(name, event);
 	}-*/;
 
-	public final static class LoginEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "login";
-
-		protected LoginEvent() {
-		}
-
-		/**
-		 * the user id returned by Facebook if the login was successful.
-		 */
-		public final native Object getUid()
-		/*-{
-			return this.uid;
-		}-*/;
-
-		/**
-		 * true if the login was successful
-		 */
-		public final native Object getSuccess()
-		/*-{
-			return this.success;
-		}-*/;
-
-		/**
-		 * data returned by Facebook when we query for the uid (using graph path
-		 * "me") after successful login. Data is in JSON format. Includes
-		 * information such as user name, locale and gender.
-		 */
-		public final native Object getData()
-		/*-{
-			return this.data;
-		}-*/;
-
-		/**
-		 * error message if success was false
-		 */
-		public final native Object getError()
-		/*-{
-			return this.error;
-		}-*/;
-
-		/**
-		 * true if the user cancelled the request by closing the dialog
-		 */
-		public final native Object getCancelled()
-		/*-{
-			return this.cancelled;
-		}-*/;
-
-	}
-
-	public interface LoginHandler {
-		public void onLoginEvent(LoginEvent event);
-	}
-
 	public static native void addLoginHandler(LoginHandler handler)
 	/*-{
 		return Titanium.Facebook.addEventListener('login', function(e) { handler.@org.urish.gwtit.titanium.Facebook.LoginHandler::onLogin(Lorg/urish/gwtit/titanium/Facebook/LoginEvent;)(e); } );
 	}-*/;
-
-	public final static class LogoutEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "logout";
-
-		protected LogoutEvent() {
-		}
-
-	}
-
-	public interface LogoutHandler {
-		public void onLogoutEvent(LogoutEvent event);
-	}
 
 	public static native void addLogoutHandler(LogoutHandler handler)
 	/*-{

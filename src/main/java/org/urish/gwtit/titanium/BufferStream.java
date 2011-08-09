@@ -28,5 +28,4 @@ package org.urish.gwtit.titanium;
 public class BufferStream extends org.urish.gwtit.titanium.IOStream {
 	protected BufferStream() {
 	}
-
 }

@@ -28,5 +28,4 @@ package org.urish.gwtit.titanium.filesystem;
 public class FileStream extends org.urish.gwtit.titanium.IOStream {
 	protected FileStream() {
 	}
-
 }

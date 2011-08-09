@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 
 /**
  * The cover flow view is container for showing animated, three dimensional
@@ -77,59 +77,6 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	/*-{
 		return this.setImage(index, image);
 	}-*/;
-
-	public final static class ChangeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "change";
-
-		protected ChangeEvent() {
-		}
-
-		/**
-		 * the index of the image that is now visible
-		 */
-		public final native Object getIndex()
-		/*-{
-			return this.index;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the previous index of the image that was visible
-		 */
-		public final native Object getPrevious()
-		/*-{
-			return this.previous;
-		}-*/;
-
-	}
-
-	public interface ChangeHandler {
-		public void onChange(ChangeEvent event);
-	}
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{

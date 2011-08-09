@@ -30,5 +30,4 @@ package org.urish.gwtit.titanium.ui;
 public class Toolbar extends org.urish.gwtit.titanium.ui.View {
 	protected Toolbar() {
 	}
-
 }

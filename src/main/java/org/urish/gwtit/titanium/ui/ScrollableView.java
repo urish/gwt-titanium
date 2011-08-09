@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ScrollHandler;
 
 /**
  * The scrollable view provides a view that supports horizontal scrolling on one
@@ -191,59 +191,6 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/*-{
 		return this.scrollToView(view);
 	}-*/;
-
-	public final static class ScrollEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "scroll";
-
-		protected ScrollEvent() {
-		}
-
-		/**
-		 * the current page index
-		 */
-		public final native Object getCurrentPage()
-		/*-{
-			return this.currentPage;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the current page view
-		 */
-		public final native Object getView()
-		/*-{
-			return this.view;
-		}-*/;
-
-	}
-
-	public interface ScrollHandler {
-		public void onScroll(ScrollEvent event);
-	}
 
 	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{

@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.map;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.map.events.CompleteHandler;
+import org.urish.gwtit.titanium.map.events.ErrorHandler;
+import org.urish.gwtit.titanium.map.events.LoadingHandler;
+import org.urish.gwtit.titanium.map.events.RegionChangedHandler;
 
 /**
  * The mapview is an object created by
@@ -252,208 +255,20 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 		return this.zoom(level);
 	}-*/;
 
-	public final static class CompleteEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "complete";
-
-		protected CompleteEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface CompleteHandler {
-		public void onComplete(CompleteEvent event);
-	}
-
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/map/MapView/CompleteEvent;)(e); } );
 	}-*/;
-
-	public final static class ErrorEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "error";
-
-		protected ErrorEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * the error message
-		 */
-		public final native Object getMessage()
-		/*-{
-			return this.message;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ErrorHandler {
-		public void onError(ErrorEvent event);
-	}
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/map/MapView/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class LoadingEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "loading";
-
-		protected LoadingEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface LoadingHandler {
-		public void onLoading(LoadingEvent event);
-	}
-
 	public final native void addLoadingHandler(LoadingHandler handler)
 	/*-{
 		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.LoadingHandler::onLoading(Lorg/urish/gwtit/titanium/map/MapView/LoadingEvent;)(e); } );
 	}-*/;
-
-	public final static class RegionChangedEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "regionChanged";
-
-		protected RegionChangedEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the new longitude
-		 */
-		public final native Object getLongitude()
-		/*-{
-			return this.longitude;
-		}-*/;
-
-		/**
-		 * the new latitude delta
-		 */
-		public final native Object getLatitudeDelta()
-		/*-{
-			return this.latitudeDelta;
-		}-*/;
-
-		/**
-		 * the new longitude delta
-		 */
-		public final native Object getLongitudeDelta()
-		/*-{
-			return this.longitudeDelta;
-		}-*/;
-
-		/**
-		 * the new latitude
-		 */
-		public final native Object getLatitude()
-		/*-{
-			return this.latitude;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface RegionChangedHandler {
-		public void onRegionChanged(RegionChangedEvent event);
-	}
 
 	public final native void addRegionChangedHandler(RegionChangedHandler handler)
 	/*-{

@@ -18,7 +18,11 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.BlurHandler;
+import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.FocusHandler;
+import org.urish.gwtit.titanium.ui.events.ReturnHandler;
+import org.urish.gwtit.titanium.ui.events.SelectedHandler;
 
 /**
  * A text area is created by the method
@@ -210,251 +214,25 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 		return this.hasText();
 	}-*/;
 
-	public final static class BlurEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "blur";
-
-		protected BlurEvent() {
-		}
-
-		/**
-		 * the value of the field upon blur
-		 */
-		public final native Object getValue()
-		/*-{
-			return this.value;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface BlurHandler {
-		public void onBlur(BlurEvent event);
-	}
-
 	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/TextArea/BlurEvent;)(e); } );
 	}-*/;
-
-	public final static class ChangeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "change";
-
-		protected ChangeEvent() {
-		}
-
-		/**
-		 * the value of the field upon change
-		 */
-		public final native Object getValue()
-		/*-{
-			return this.value;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ChangeHandler {
-		public void onChange(ChangeEvent event);
-	}
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/TextArea/ChangeEvent;)(e); } );
 	}-*/;
 
-	public final static class FocusEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "focus";
-
-		protected FocusEvent() {
-		}
-
-		/**
-		 * the value of the field upon focus
-		 */
-		public final native Object getValue()
-		/*-{
-			return this.value;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface FocusHandler {
-		public void onFocus(FocusEvent event);
-	}
-
 	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/TextArea/FocusEvent;)(e); } );
 	}-*/;
 
-	public final static class ReturnEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "return";
-
-		protected ReturnEvent() {
-		}
-
-		/**
-		 * the value of the field upon return
-		 */
-		public final native Object getValue()
-		/*-{
-			return this.value;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ReturnHandler {
-		public void onReturn(ReturnEvent event);
-	}
-
 	public final native void addReturnHandler(ReturnHandler handler)
 	/*-{
 		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.TextArea.ReturnHandler::onReturn(Lorg/urish/gwtit/titanium/ui/TextArea/ReturnEvent;)(e); } );
 	}-*/;
-
-	public final static class SelectedEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "selected";
-
-		protected SelectedEvent() {
-		}
-
-		/**
-		 * the range of text. range is an object with the properties `location`
-		 * and `length`.
-		 */
-		public final native Object getRange()
-		/*-{
-			return this.range;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface SelectedHandler {
-		public void onSelected(SelectedEvent event);
-	}
 
 	public final native void addSelectedHandler(SelectedHandler handler)
 	/*-{

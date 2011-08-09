@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui.ipad;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.ipad.events.VisibleHandler;
 
 /**
  * A splitwindow is a window that manages the presentation of two side-by-side
@@ -85,69 +85,6 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	/*-{
 		this.showMasterInPortrait = value;
 	}-*/;
-
-	public final static class VisibleEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "visible";
-
-		protected VisibleEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * for `view` view type, the button that is automatically wired to
-		 * control the master view popover
-		 */
-		public final native Object getButton()
-		/*-{
-			return this.button;
-		}-*/;
-
-		/**
-		 * for either `popover` or `detail` view types, the popover instance
-		 */
-		public final native Object getPopover()
-		/*-{
-			return this.popover;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the type of view becoming visible. either `master`, `popover` or
-		 * `detail`.
-		 */
-		public final native Object getView()
-		/*-{
-			return this.view;
-		}-*/;
-
-	}
-
-	public interface VisibleHandler {
-		public void onVisible(VisibleEvent event);
-	}
 
 	public final native void addVisibleHandler(VisibleHandler handler)
 	/*-{

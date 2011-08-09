@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.CompleteHandler;
 
 /**
  * The email dialog is created by
@@ -191,44 +191,6 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.open(properties);
 	}-*/;
-
-	public final static class CompleteEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "complete";
-
-		protected CompleteEvent() {
-		}
-
-		/**
-		 * result status either as SENT, SAVED, CANCELLED or FAILED. (Note:
-		 * Android result will be SENT even if user discards or saves the
-		 * message. SAVED and CANCELLED are not supported on Android.)
-		 */
-		public final native Object getResult()
-		/*-{
-			return this.result;
-		}-*/;
-
-		/**
-		 * boolean to indicate if the email was successfully sent
-		 */
-		public final native Object getSuccess()
-		/*-{
-			return this.success;
-		}-*/;
-
-		/**
-		 * string message of the error or null if successfully sent
-		 */
-		public final native Object getError()
-		/*-{
-			return this.error;
-		}-*/;
-
-	}
-
-	public interface CompleteHandler {
-		public void onComplete(CompleteEvent event);
-	}
 
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{

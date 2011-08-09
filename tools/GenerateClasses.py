@@ -20,6 +20,8 @@ import json
 from copy import copy
 from numpy.f2py.auxfuncs import issigned_array
 
+PACKAGE_PREFIX = "org.urish.gwtit."
+
 CLASS_TEMPLATE = """
 /*
  * Copyright 2011 Uri Shaked
@@ -39,24 +41,15 @@ CLASS_TEMPLATE = """
  
 /* Automatically generated code, don't edit ! */
 
-package org.urish.gwtit.%(package)s;
+package %(package)s;
 
-import com.google.gwt.core.client.JavaScriptObject;
-import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-import org.urish.gwtit.client.event.TouchEvent;
+%(imports)s
 
 /**
- * %(docString)s
+ * %(javaDoc)s
  */
-public class %(name)s extends %(parent)s {
-	protected %(name)s() {}
-
-	%(constructors)s
-	%(properties)s
-	%(factories)s
-	%(methods)s
-	%(events)s
+public %(type)s %(name)s %(superClass)s {
+	%(body)s
 }
 """
 
@@ -177,20 +170,21 @@ FACTORY_TEMPLATE = """
 	}-*/;
 """
 
-EVENT_TEMPLATE = """
-	public final static class %(javaName)sEvent extends %(superClass)s
-	{	
-		public final static String NATIVE_EVENT_NAME = "%(name)s";
-		
-		protected %(javaName)sEvent() {}
+EVENT_CLASS_BODY_TEMPLATE = """
+	public final static String NATIVE_EVENT_NAME = "%(name)s";
+	
+	protected %(javaName)sEvent() {}
+	
+	//%(type)s
 
-		%(eventProperties)s		
-	}
-	
-	public interface %(javaName)sHandler {
-		public void on%(javaName)s(%(javaName)sEvent event);
-	}
-	
+	%(eventProperties)s		
+"""
+
+EVENT_HANDLER_BODY_TEMPLATE = """
+	public void on%(javaName)s(%(javaName)sEvent event);
+"""
+
+EVENT_TEMPLATE = """
 	public final native void add%(javaName)sHandler(%(javaName)sHandler handler) 
 	/*-{
 		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.%(package)s.%(className)s.%(javaName)sHandler::on%(javaName)s(Lorg/urish/gwtit/%(packagePath)s/%(className)s/%(javaName)sEvent;)(e); } );
@@ -198,24 +192,57 @@ EVENT_TEMPLATE = """
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public final static class %(javaName)sEvent extends AbstractTitaniumEvent
-	{
-		public final static String NATIVE_EVENT_NAME = "%(name)s";
-
-		protected %(javaName)sEvent() {}
-	
-		%(eventProperties)s
-	} 
-
-	public interface %(javaName)sHandler {
-		public void on%(javaName)sEvent(%(javaName)sEvent event);
-	}
-	
 	public static native void add%(javaName)sHandler(%(javaName)sHandler handler) 
 	/*-{
 		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.%(package)s.%(className)s.%(javaName)sHandler::on%(javaName)s(Lorg/urish/gwtit/%(packagePath)s/%(className)s/%(javaName)sEvent;)(e); } );
 	}-*/;
 """
+
+class JavaClass(object):
+	def __init__(self, package, name, body = "", interface = False, superClass = None, javaDoc = ""):
+		self.package = PACKAGE_PREFIX + package
+		self.name = name
+		self.imports = []
+		self.body = body
+		self.interface = interface
+		self.superClass = superClass
+		self.javaDoc = javaDoc
+		if superClass:
+			self.setSuperClass(superClass)
+	
+	def addImport(self, name):
+		if isinstance(name, JavaClass):
+			name = name.package + "." + name.name
+		package = ".".join(name.split(".")[:-1])
+		if (name not in self.imports) and (package != self.package):
+			self.imports.append(name)
+		
+	def setInterface(self, value):
+		self.interface = value
+		
+	def setSuperClass(self, value):
+		self.superClass = value
+	
+	def setJavaDoc(self, value):
+		self.javaDoc = value
+		
+	def append(self, code):
+		self.body += code
+		
+	def getPath(self):
+		return os.path.join(self.package.replace(".", "/"), self.name + ".java")
+	
+	def getCode(self):
+		importsString = "\n".join("import %s;" % importName for importName in self.imports)
+		return CLASS_TEMPLATE % {
+			'package': self.package,
+			'type': "interface" if self.interface else "class",
+			'superClass': "extends " + self.superClass if self.superClass else "",
+			'name': self.name,
+			'javaDoc': self.javaDoc,
+			'imports': importsString,
+			'body': self.body,
+		}
 
 def capitalFirst(s):
 	return s[0].upper() + s[1:]
@@ -255,12 +282,11 @@ def mapTypes(s, withConsts = False):
 	eventMatch = re.match("^Event<(.+)\.([^.]+)>$", s)
 	if eventMatch:
 		innerType, eventName = eventMatch.groups()
-		innerType = mapTypes(innerType, withConsts)
-		return "%s.%sEvent" % (innerType, capitalFirst(eventName))
-	if s in ["AcceptParams", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberSpec", 
-			"EncodeStringSpec", "MediaItemType", "MediaQueryInfoType", "MediaQueryType",
-			"AcceptDict", "DecodeNumberDict", "DecodeStringDict", "EncodeNumberDict",
-			"EncodeStringDict", "ImageAsCroppedDict"]:
+		innerType = re.sub(r"\.[^.]+$", "", mapTypes(innerType, withConsts))
+		return "%s.events.%sEvent" % (innerType, capitalFirst(eventName))
+	if s in ["AcceptDict", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberDict", 
+			"DecodeStringDict", "EncodeNumberDict",  "EncodeStringDict", "ImageAsCroppedDict",
+			"MediaItemType", "MediaQueryInfoType", "MediaQueryType"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Titanium."):
 		path = s.split(".")
@@ -503,12 +529,13 @@ def capitalEventName(eventName):
 def getPackageNameSuffix(typeInfo):
 	return ".".join(["titanium"] + typeInfo['name'].split(".")[1:-1]).lower();
 	
-def generateEvents(typeInfo, isSingleton, types):
+def generateEvents(javaClass, typeInfo, isSingleton, types):
 	result = ""
 	template = STATIC_EVENT_TEMPLATE if isSingleton else EVENT_TEMPLATE
 	AUTO_EVENT_PROPERTIES = ["source", "type"]
 	package = getPackageNameSuffix(typeInfo)
 	packagePath = package.replace(".", "/")
+	eventClasses = []
 	for event in typeInfo.get('events', []):
 		superClass = event.get("superClass", "AbstractTitaniumEvent")
 		javaName = event.get("javaName", capitalEventName(event['name']))
@@ -517,7 +544,7 @@ def generateEvents(typeInfo, isSingleton, types):
 		for propertyInfo in event['properties']:
 			if propertyInfo['name'] in AUTO_EVENT_PROPERTIES:
 				continue
-			eventType = propertyInfo['type'] if 'type' in propertyInfo else "Object"
+			eventType = propertyInfo.get('type', "Object")
 			eventProperties += GETTER_TEMPLATE % {
 				'docString': propertyInfo['description'],
 				'getterType': mapTypes(eventType),
@@ -526,50 +553,67 @@ def generateEvents(typeInfo, isSingleton, types):
 			}
 		if not isSingleton:
 			for ancestor in ancestors(typeInfo, types):
-				if 'events' in ancestor:
-					for candidate in ancestor['events']:
-						if event['name'] == candidate['name']:
-							foundInAncetors = True
+				for candidate in ancestor.get('events', []):
+					if event['name'] == candidate['name']:
+						foundInAncetors = True
 		if not foundInAncetors: 
-			result += template % {
+			eventClass = JavaClass(package + ".events", javaName + "Event", superClass=superClass, body=EVENT_CLASS_BODY_TEMPLATE % {
+				'eventProperties': eventProperties,
+				'name': event['name'],
+				'type': typeInfo['name'],
+				'javaName': javaName,
+			})
+			eventClass.addImport("org.urish.gwtit.client.event.%s" % superClass)
+			handlerClass = JavaClass(package + ".events", javaName + "Handler", interface=True, body=EVENT_HANDLER_BODY_TEMPLATE % {
+				'javaName': javaName,
+			})
+			javaClass.addImport(eventClass)
+			javaClass.addImport(handlerClass)
+			javaClass.append(template % {
 				'className': typeInfo['name'].split(".")[-1],
 				'package': package,
 				'packagePath': packagePath,
 				'name': event['name'],
 				'nameCapital': capitalEventName(event['name']),
-				'superClass': superClass,
 				'javaName': javaName,
 				'module': typeInfo['name'],
-				'eventProperties': eventProperties,
-			}
-	return result
+			})
+			eventClasses += [eventClass, handlerClass]
+	return eventClasses
 
 def generateClass(projectRoot, type, types):
 	print type['name']
 	type['name'] = re.sub(r"(^|\.)(\d)", r"\1_\2", type['name'])
 	name = type['name'].split(".")
-	parentClass = "JavaScriptObject"
+	superClass = "JavaScriptObject"
 	singleton = False
 	if ('extends' in type) and type['name'] != "Titanium.Module":
-		parentClass = mapTypes(type['extends'])
+		superClass = mapTypes(type['extends'])
 		singleton = type['extends'] == 'Titanium.Module'
-	code = CLASS_TEMPLATE % {
-		'package': getPackageNameSuffix(type),
-		'name': name[-1],
-		'parent': parentClass,
-		'docString': generateClassDoc(type),
-		'properties': generateProperties(type, singleton, types),
-		'constructors': generateConstructors(type),
-		'factories': generateFactories(type, types),
-		'methods': generateMethods(type, singleton, types) if ('methods' in type) else '',
-		'events': generateEvents(type, singleton, types),
-	}
-	dir = os.path.join(projectRoot, r"src/main/java/org/urish/gwtit", "/".join(["titanium"] + name[1:-1]).lower())
-	if not os.path.exists(dir):
-		os.makedirs(dir)
-	classFile = os.path.join(dir, name[-1] + ".java")
-	file(classFile, "w").write(code.lstrip())
-	return classFile
+	className = getPackageNameSuffix(type) + "." + name[-1]
+	javaClass = JavaClass(getPackageNameSuffix(type), name[-1])
+	javaClass.setSuperClass(superClass)
+	javaClass.addImport("com.google.gwt.core.client.JavaScriptObject")
+	javaClass.addImport("org.urish.gwtit.client.EventCallback")
+	javaClass.setJavaDoc(generateClassDoc(type))
+	javaClass.append("protected %s () {}" % name[-1])
+	javaClass.append(generateConstructors(type))
+	javaClass.append(generateProperties(type, singleton, types))
+	javaClass.append(generateFactories(type, types))
+	if 'methods' in type:
+		javaClass.append(generateMethods(type, singleton, types))
+	classes = generateEvents(javaClass, type, singleton, types)
+	classes.append(javaClass)
+	BASE_PATH = r"src/main/java"
+	classFiles = []
+	for javaClass in classes:
+		dir = os.path.join(projectRoot, BASE_PATH, os.path.dirname(javaClass.getPath()))
+		if not os.path.exists(dir):
+			os.makedirs(dir)
+		classFile = os.path.join(dir, os.path.basename(javaClass.getPath()))
+		file(classFile, "w").write(javaClass.getCode())
+		classFiles.append(classFile)
+	return classFiles
 
 def getTypes(path):
 	with open(path, 'r') as f:
@@ -636,9 +680,9 @@ def processDir(inputDir, projectDir):
 	for typeInfo in types:
 		if typeInfo['name'] in overrides:
 			processOverrides(typeInfo, overrides[typeInfo['name']])
-		classes.append(generateClass(projectDir, typeInfo, types))
+		classes += generateClass(projectDir, typeInfo, types)
 	# Format the generated code
-	for someClasses in chunks(classes, 32):
+	for someClasses in chunks(classes, 64):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
 if __name__ == "__main__":

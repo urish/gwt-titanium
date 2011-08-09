@@ -18,7 +18,8 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.CompleteHandler;
+import org.urish.gwtit.titanium.ui.events.StartHandler;
 
 /**
  * The animation object is used for specifying lower-level animation properties
@@ -296,34 +297,10 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 		this.zIndex = value;
 	}-*/;
 
-	public final static class CompleteEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "complete";
-
-		protected CompleteEvent() {
-		}
-
-	}
-
-	public interface CompleteHandler {
-		public void onComplete(CompleteEvent event);
-	}
-
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.Animation.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/Animation/CompleteEvent;)(e); } );
 	}-*/;
-
-	public final static class StartEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "start";
-
-		protected StartEvent() {
-		}
-
-	}
-
-	public interface StartHandler {
-		public void onStart(StartEvent event);
-	}
 
 	public final native void addStartHandler(StartHandler handler)
 	/*-{

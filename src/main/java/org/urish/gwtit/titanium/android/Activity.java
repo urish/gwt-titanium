@@ -19,7 +19,13 @@
 package org.urish.gwtit.titanium.android;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.android.events.CreateHandler;
+import org.urish.gwtit.titanium.android.events.DestroyHandler;
+import org.urish.gwtit.titanium.android.events.NewIntentHandler;
+import org.urish.gwtit.titanium.android.events.PauseHandler;
+import org.urish.gwtit.titanium.android.events.ResumeHandler;
+import org.urish.gwtit.titanium.android.events.StartHandler;
+import org.urish.gwtit.titanium.android.events.StopHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -185,128 +191,35 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.startActivityForResult(intent, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
-	public final static class CreateEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "create";
-
-		protected CreateEvent() {
-		}
-
-	}
-
-	public interface CreateHandler {
-		public void onCreate(CreateEvent event);
-	}
-
 	public final native void addCreateHandler(CreateHandler handler)
 	/*-{
 		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.CreateHandler::onCreate(Lorg/urish/gwtit/titanium/android/Activity/CreateEvent;)(e); } );
 	}-*/;
-
-	public final static class DestroyEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "destroy";
-
-		protected DestroyEvent() {
-		}
-
-	}
-
-	public interface DestroyHandler {
-		public void onDestroy(DestroyEvent event);
-	}
 
 	public final native void addDestroyHandler(DestroyHandler handler)
 	/*-{
 		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.DestroyHandler::onDestroy(Lorg/urish/gwtit/titanium/android/Activity/DestroyEvent;)(e); } );
 	}-*/;
 
-	public final static class NewIntentEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "newIntent";
-
-		protected NewIntentEvent() {
-		}
-
-		/**
-		 * the <Titanium.Android.Intent> passed to the native `onNewIntent`
-		 * method.
-		 */
-		public final native Object getIntent()
-		/*-{
-			return this.intent;
-		}-*/;
-
-	}
-
-	public interface NewIntentHandler {
-		public void onNewIntent(NewIntentEvent event);
-	}
-
 	public final native void addNewIntentHandler(NewIntentHandler handler)
 	/*-{
 		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.NewIntentHandler::onNewIntent(Lorg/urish/gwtit/titanium/android/Activity/NewIntentEvent;)(e); } );
 	}-*/;
-
-	public final static class PauseEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "pause";
-
-		protected PauseEvent() {
-		}
-
-	}
-
-	public interface PauseHandler {
-		public void onPause(PauseEvent event);
-	}
 
 	public final native void addPauseHandler(PauseHandler handler)
 	/*-{
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/Activity/PauseEvent;)(e); } );
 	}-*/;
 
-	public final static class ResumeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "resume";
-
-		protected ResumeEvent() {
-		}
-
-	}
-
-	public interface ResumeHandler {
-		public void onResume(ResumeEvent event);
-	}
-
 	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/Activity/ResumeEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "start";
-
-		protected StartEvent() {
-		}
-
-	}
-
-	public interface StartHandler {
-		public void onStart(StartEvent event);
-	}
-
 	public final native void addStartHandler(StartHandler handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.StartHandler::onStart(Lorg/urish/gwtit/titanium/android/Activity/StartEvent;)(e); } );
 	}-*/;
-
-	public final static class StopEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "stop";
-
-		protected StopEvent() {
-		}
-
-	}
-
-	public interface StopHandler {
-		public void onStop(StopEvent event);
-	}
 
 	public final native void addStopHandler(StopHandler handler)
 	/*-{

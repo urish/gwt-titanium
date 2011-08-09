@@ -18,7 +18,8 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ScaleHandler;
+import org.urish.gwtit.titanium.ui.events.ScrollHandler;
 
 /**
  * A scroll view is used to create a scrollable region of content. views added
@@ -233,108 +234,10 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollTo(x, y);
 	}-*/;
 
-	public final static class ScaleEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "scale";
-
-		protected ScaleEvent() {
-		}
-
-		/**
-		 * the new scale as a float
-		 */
-		public final native Object getScale()
-		/*-{
-			return this.scale;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ScaleHandler {
-		public void onScale(ScaleEvent event);
-	}
-
 	public final native void addScaleHandler(ScaleHandler handler)
 	/*-{
 		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollView.ScaleHandler::onScale(Lorg/urish/gwtit/titanium/ui/ScrollView/ScaleEvent;)(e); } );
 	}-*/;
-
-	public final static class ScrollEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "scroll";
-
-		protected ScrollEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * boolean to indicate if the scroll is based on a dragging gesture
-		 */
-		public final native Object getDragging()
-		/*-{
-			return this.dragging;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * boolean to indicate if the scroll is decelerating
-		 */
-		public final native Object getDecelerating()
-		/*-{
-			return this.decelerating;
-		}-*/;
-
-	}
-
-	public interface ScrollHandler {
-		public void onScroll(ScrollEvent event);
-	}
 
 	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{

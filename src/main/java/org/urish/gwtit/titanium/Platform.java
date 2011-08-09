@@ -19,7 +19,7 @@
 package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.events.BatteryHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -380,34 +380,6 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	/*-{
 		return Titanium.Platform.fireEvent(name, event);
 	}-*/;
-
-	public final static class BatteryEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "battery";
-
-		protected BatteryEvent() {
-		}
-
-		/**
-		 * the new battery state
-		 */
-		public final native Object getState()
-		/*-{
-			return this.state;
-		}-*/;
-
-		/**
-		 * the new battery level
-		 */
-		public final native Object getLevel()
-		/*-{
-			return this.level;
-		}-*/;
-
-	}
-
-	public interface BatteryHandler {
-		public void onBatteryEvent(BatteryEvent event);
-	}
 
 	public static native void addBatteryHandler(BatteryHandler handler)
 	/*-{

@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ClickHandler;
 
 /**
  * The option dialog is created by
@@ -135,51 +135,6 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.show();
 	}-*/;
-
-	public final static class ClickEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "click";
-
-		protected ClickEvent() {
-		}
-
-		/**
-		 * the button index that was pressed
-		 */
-		public final native Object getIndex()
-		/*-{
-			return this.index;
-		}-*/;
-
-		/**
-		 * boolean to indicate that the index refers to a button on the dialog
-		 * and not an item. (Android)
-		 */
-		public final native Object getButton()
-		/*-{
-			return this.button;
-		}-*/;
-
-		/**
-		 * the index of the cancel button
-		 */
-		public final native Object getCancel()
-		/*-{
-			return this.cancel;
-		}-*/;
-
-		/**
-		 * the index of the destructive button
-		 */
-		public final native Object getDestructive()
-		/*-{
-			return this.destructive;
-		}-*/;
-
-	}
-
-	public interface ClickHandler {
-		public void onClick(ClickEvent event);
-	}
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{

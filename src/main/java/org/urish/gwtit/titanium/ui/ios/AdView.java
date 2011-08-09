@@ -18,7 +18,9 @@
 
 package org.urish.gwtit.titanium.ui.ios;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.ios.events.ActionHandler;
+import org.urish.gwtit.titanium.ui.ios.events.ErrorHandler;
+import org.urish.gwtit.titanium.ui.ios.events.LoadHandler;
 
 /**
  * The adview is a view for display apple iads. the view is created by the
@@ -70,134 +72,15 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 		return this.cancelAction();
 	}-*/;
 
-	public final static class ActionEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "action";
-
-		protected ActionEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface ActionHandler {
-		public void onAction(ActionEvent event);
-	}
-
 	public final native void addActionHandler(ActionHandler handler)
 	/*-{
 		return this.addEventListener('action', function(e) { handler.@org.urish.gwtit.titanium.ui.ios.AdView.ActionHandler::onAction(Lorg/urish/gwtit/titanium/ui/ios/AdView/ActionEvent;)(e); } );
 	}-*/;
 
-	public final static class ErrorEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "error";
-
-		protected ErrorEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * the error message
-		 */
-		public final native Object getMessage()
-		/*-{
-			return this.message;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ErrorHandler {
-		public void onError(ErrorEvent event);
-	}
-
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.ios.AdView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/ios/AdView/ErrorEvent;)(e); } );
 	}-*/;
-
-	public final static class LoadEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "load";
-
-		protected LoadEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface LoadHandler {
-		public void onLoad(LoadEvent event);
-	}
 
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{

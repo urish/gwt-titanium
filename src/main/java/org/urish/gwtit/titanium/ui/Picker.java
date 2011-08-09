@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 
 /**
  * A picker is created by the method
@@ -271,67 +271,6 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.setSelectedRow(column, row, animated);
 	}-*/;
-
-	public final static class ChangeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "change";
-
-		protected ChangeEvent() {
-		}
-
-		/**
-		 * the selected column index
-		 */
-		public final native Object getColumnIndex()
-		/*-{
-			return this.columnIndex;
-		}-*/;
-
-		/**
-		 * the selected row index
-		 */
-		public final native Object getRowIndex()
-		/*-{
-			return this.rowIndex;
-		}-*/;
-
-		/**
-		 * the column object
-		 */
-		public final native Object getColumn()
-		/*-{
-			return this.column;
-		}-*/;
-
-		/**
-		 * (date/time pickers only) the selected date/time value.
-		 */
-		public final native Object getValue()
-		/*-{
-			return this.value;
-		}-*/;
-
-		/**
-		 * the row object
-		 */
-		public final native Object getRow()
-		/*-{
-			return this.row;
-		}-*/;
-
-		/**
-		 * (plain picker only) the array of selected values, one element per
-		 * column in the picker.
-		 */
-		public final native Object getSelectedValue()
-		/*-{
-			return this.selectedValue;
-		}-*/;
-
-	}
-
-	public interface ChangeHandler {
-		public void onChange(ChangeEvent event);
-	}
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{

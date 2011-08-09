@@ -19,7 +19,10 @@
 package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.events.PauseHandler;
+import org.urish.gwtit.titanium.events.ProximityHandler;
+import org.urish.gwtit.titanium.events.ResumeHandler;
+import org.urish.gwtit.titanium.events.ResumedHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -237,76 +240,20 @@ public class App extends org.urish.gwtit.titanium.Module {
 		return Titanium.App.fireEvent(name, event);
 	}-*/;
 
-	public final static class ProximityEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "proximity";
-
-		protected ProximityEvent() {
-		}
-
-		/**
-		 * the proximity state value
-		 */
-		public final native Object getState()
-		/*-{
-			return this.state;
-		}-*/;
-
-	}
-
-	public interface ProximityHandler {
-		public void onProximityEvent(ProximityEvent event);
-	}
-
 	public static native void addProximityHandler(ProximityHandler handler)
 	/*-{
 		return Titanium.App.addEventListener('proximity', function(e) { handler.@org.urish.gwtit.titanium.App.ProximityHandler::onProximity(Lorg/urish/gwtit/titanium/App/ProximityEvent;)(e); } );
 	}-*/;
-
-	public final static class ResumeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "resume";
-
-		protected ResumeEvent() {
-		}
-
-	}
-
-	public interface ResumeHandler {
-		public void onResumeEvent(ResumeEvent event);
-	}
 
 	public static native void addResumeHandler(ResumeHandler handler)
 	/*-{
 		return Titanium.App.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.App.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/App/ResumeEvent;)(e); } );
 	}-*/;
 
-	public final static class ResumedEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "resumed";
-
-		protected ResumedEvent() {
-		}
-
-	}
-
-	public interface ResumedHandler {
-		public void onResumedEvent(ResumedEvent event);
-	}
-
 	public static native void addResumedHandler(ResumedHandler handler)
 	/*-{
 		return Titanium.App.addEventListener('resumed', function(e) { handler.@org.urish.gwtit.titanium.App.ResumedHandler::onResumed(Lorg/urish/gwtit/titanium/App/ResumedEvent;)(e); } );
 	}-*/;
-
-	public final static class PauseEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "pause";
-
-		protected PauseEvent() {
-		}
-
-	}
-
-	public interface PauseHandler {
-		public void onPauseEvent(PauseEvent event);
-	}
 
 	public static native void addPauseHandler(PauseHandler handler)
 	/*-{

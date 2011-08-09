@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.android;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.android.events.ClickHandler;
 
 /**
  * The titanium binding of an [android
@@ -148,18 +148,6 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.setIcon(icon);
 	}-*/;
-
-	public final static class ClickEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "click";
-
-		protected ClickEvent() {
-		}
-
-	}
-
-	public interface ClickHandler {
-		public void onClick(ClickEvent event);
-	}
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{

@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.android;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.android.events.PauseHandler;
+import org.urish.gwtit.titanium.android.events.ResumeHandler;
+import org.urish.gwtit.titanium.android.events.StartHandler;
+import org.urish.gwtit.titanium.android.events.StopHandler;
 
 /**
  * The titanium binding of an [android
@@ -83,92 +86,20 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final static class PauseEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "pause";
-
-		protected PauseEvent() {
-		}
-
-		/**
-		 * incrementing integer indicating which iteration of an interval-based
-		 * Service is pausing. For example, if you have an interval-based
-		 * Service running every 10 seconds, iteration 3 would occur at about 30
-		 * seconds after you start the instance (assuming your service code runs
-		 * quickly.)
-		 */
-		public final native Object getIteration()
-		/*-{
-			return this.iteration;
-		}-*/;
-
-	}
-
-	public interface PauseHandler {
-		public void onPause(PauseEvent event);
-	}
-
 	public final native void addPauseHandler(PauseHandler handler)
 	/*-{
 		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.Service.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/Service/PauseEvent;)(e); } );
 	}-*/;
-
-	public final static class ResumeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "resume";
-
-		protected ResumeEvent() {
-		}
-
-		/**
-		 * incrementing integer indicating which iteration of an interval-based
-		 * Service is resuming. For example, if you have an interval-based
-		 * Service running every 10 seconds, iteration 3 would occur at about 30
-		 * seconds after you start the instance (assuming your service code runs
-		 * quickly.)
-		 */
-		public final native Object getIteration()
-		/*-{
-			return this.iteration;
-		}-*/;
-
-	}
-
-	public interface ResumeHandler {
-		public void onResume(ResumeEvent event);
-	}
 
 	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{
 		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.Service.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/Service/ResumeEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "start";
-
-		protected StartEvent() {
-		}
-
-	}
-
-	public interface StartHandler {
-		public void onStart(StartEvent event);
-	}
-
 	public final native void addStartHandler(StartHandler handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.android.Service.StartHandler::onStart(Lorg/urish/gwtit/titanium/android/Service/StartEvent;)(e); } );
 	}-*/;
-
-	public final static class StopEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "stop";
-
-		protected StopEvent() {
-		}
-
-	}
-
-	public interface StopHandler {
-		public void onStop(StopEvent event);
-	}
 
 	public final native void addStopHandler(StopHandler handler)
 	/*-{

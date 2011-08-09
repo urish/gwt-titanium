@@ -18,7 +18,9 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.BeforeLoadHandler;
+import org.urish.gwtit.titanium.ui.events.ErrorHandler;
+import org.urish.gwtit.titanium.ui.events.LoadHandler;
 
 /**
  * The web view allows you to open an html5 based view which can load either
@@ -190,158 +192,15 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 		return this.stopLoading();
 	}-*/;
 
-	public final static class BeforeloadEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "beforeload";
-
-		protected BeforeloadEvent() {
-		}
-
-		/**
-		 * the url of the web document
-		 */
-		public final native Object getUrl()
-		/*-{
-			return this.url;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface BeforeloadHandler {
-		public void onBeforeload(BeforeloadEvent event);
-	}
-
-	public final native void addBeforeloadHandler(BeforeloadHandler handler)
+	public final native void addBeforeLoadHandler(BeforeLoadHandler handler)
 	/*-{
-		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.BeforeloadHandler::onBeforeload(Lorg/urish/gwtit/titanium/ui/WebView/BeforeloadEvent;)(e); } );
+		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.BeforeLoadHandler::onBeforeLoad(Lorg/urish/gwtit/titanium/ui/WebView/BeforeLoadEvent;)(e); } );
 	}-*/;
-
-	public final static class ErrorEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "error";
-
-		protected ErrorEvent() {
-		}
-
-		/**
-		 * the url of the web document
-		 */
-		public final native Object getUrl()
-		/*-{
-			return this.url;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * the error message
-		 */
-		public final native Object getMessage()
-		/*-{
-			return this.message;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ErrorHandler {
-		public void onError(ErrorEvent event);
-	}
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/WebView/ErrorEvent;)(e); } );
 	}-*/;
-
-	public final static class LoadEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "load";
-
-		protected LoadEvent() {
-		}
-
-		/**
-		 * the url of the web document
-		 */
-		public final native Object getUrl()
-		/*-{
-			return this.url;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface LoadHandler {
-		public void onLoad(LoadEvent event);
-	}
 
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{

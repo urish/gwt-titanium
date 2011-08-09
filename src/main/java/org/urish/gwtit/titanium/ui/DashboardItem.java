@@ -18,7 +18,9 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ClickHandler;
+import org.urish.gwtit.titanium.ui.events.DeleteHandler;
+import org.urish.gwtit.titanium.ui.events.MoveHandler;
 
 /**
  * An item that represents a visual icon in the
@@ -87,92 +89,15 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		this.selectedImage = value;
 	}-*/;
 
-	public final static class ClickEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "click";
-
-		protected ClickEvent() {
-		}
-
-		/**
-		 * the location object with the properties `x` and `y` of where in the
-		 * parent view the click was
-		 */
-		public final native Object getLocation()
-		/*-{
-			return this.location;
-		}-*/;
-
-		/**
-		 * the <Titanium.UI.DashboardItem> that was clicked
-		 */
-		public final native Object getItem()
-		/*-{
-			return this.item;
-		}-*/;
-
-	}
-
-	public interface ClickHandler {
-		public void onClick(ClickEvent event);
-	}
-
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{
 		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/DashboardItem/ClickEvent;)(e); } );
 	}-*/;
 
-	public final static class DeleteEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "delete";
-
-		protected DeleteEvent() {
-		}
-
-		/**
-		 * the <Titanium.UI.DashboardItem> that was deleted
-		 */
-		public final native Object getItem()
-		/*-{
-			return this.item;
-		}-*/;
-
-	}
-
-	public interface DeleteHandler {
-		public void onDelete(DeleteEvent event);
-	}
-
 	public final native void addDeleteHandler(DeleteHandler handler)
 	/*-{
 		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/DashboardItem/DeleteEvent;)(e); } );
 	}-*/;
-
-	public final static class MoveEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "move";
-
-		protected MoveEvent() {
-		}
-
-		/**
-		 * the pending data array in the new order (uncommitted)
-		 */
-		public final native Object getItems()
-		/*-{
-			return this.items;
-		}-*/;
-
-		/**
-		 * the <Titanium.UI.DashboardItem> that was moved
-		 */
-		public final native Object getItem()
-		/*-{
-			return this.item;
-		}-*/;
-
-	}
-
-	public interface MoveHandler {
-		public void onMove(MoveEvent event);
-	}
 
 	public final native void addMoveHandler(MoveHandler handler)
 	/*-{

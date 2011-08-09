@@ -19,7 +19,7 @@
 package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.events.ChangeHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -477,42 +477,6 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	/*-{
 		return Titanium.Network.fireEvent(name, event);
 	}-*/;
-
-	public final static class ChangeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "change";
-
-		protected ChangeEvent() {
-		}
-
-		/**
-		 * the new network type as a string
-		 */
-		public final native Object getNetworkTypeName()
-		/*-{
-			return this.networkTypeName;
-		}-*/;
-
-		/**
-		 * boolean to indicate if the network is online
-		 */
-		public final native Object getOnline()
-		/*-{
-			return this.online;
-		}-*/;
-
-		/**
-		 * the new network type
-		 */
-		public final native Object getNetworkType()
-		/*-{
-			return this.networkType;
-		}-*/;
-
-	}
-
-	public interface ChangeHandler {
-		public void onChangeEvent(ChangeEvent event);
-	}
 
 	public static native void addChangeHandler(ChangeHandler handler)
 	/*-{

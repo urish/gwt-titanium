@@ -19,7 +19,9 @@
 package org.urish.gwtit.titanium;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.events.CalibrationHandler;
+import org.urish.gwtit.titanium.events.HeadingHandler;
+import org.urish.gwtit.titanium.events.LocationHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -279,8 +281,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	/**
 	 * Retrieve the current compass heading.
 	 */
-	public static native void getCurrentHeading(
-			EventCallback<org.urish.gwtit.titanium.Geolocation.HeadingEvent> callback)
+	public static native void getCurrentHeading(EventCallback<org.urish.gwtit.titanium.events.HeadingEvent> callback)
 	/*-{
 		return Titanium.Geolocation.getCurrentHeading(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -290,8 +291,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	 * are not turned on to update the location. on ios the radios may be used
 	 * if the location is too "old".
 	 */
-	public static native void getCurrentPosition(
-			EventCallback<org.urish.gwtit.titanium.Geolocation.LocationEvent> callback)
+	public static native void getCurrentPosition(EventCallback<org.urish.gwtit.titanium.events.LocationEvent> callback)
 	/*-{
 		return Titanium.Geolocation.getCurrentPosition(function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -345,130 +345,15 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 		return Titanium.Geolocation.fireEvent(name, event);
 	}-*/;
 
-	public final static class CalibrationEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "calibration";
-
-		protected CalibrationEvent() {
-		}
-
-	}
-
-	public interface CalibrationHandler {
-		public void onCalibrationEvent(CalibrationEvent event);
-	}
-
 	public static native void addCalibrationHandler(CalibrationHandler handler)
 	/*-{
 		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.CalibrationHandler::onCalibration(Lorg/urish/gwtit/titanium/Geolocation/CalibrationEvent;)(e); } );
 	}-*/;
 
-	public final static class HeadingEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "heading";
-
-		protected HeadingEvent() {
-		}
-
-		/**
-		 * if success is false, the error code if available (iOS only)
-		 */
-		public final native float getCode()
-		/*-{
-			return this.code;
-		}-*/;
-
-		/**
-		 * boolean to indicate if the heading event was successfully received or
-		 * an error occurred
-		 */
-		public final native boolean getSuccess()
-		/*-{
-			return this.success;
-		}-*/;
-
-		/**
-		 * if success is false, returns a string of the error description
-		 */
-		public final native String getError()
-		/*-{
-			return this.error;
-		}-*/;
-
-		/**
-		 * heading results dictionary with the following sub-properties:
-		 * `magneticHeading`, `trueHeading`, `accuracy`, `x`, `y`, `z`,
-		 * `timestamp`.
-		 */
-		public final native org.urish.gwtit.titanium.geolocation.HeadingInfo getHeading()
-		/*-{
-			return this.heading;
-		}-*/;
-
-	}
-
-	public interface HeadingHandler {
-		public void onHeadingEvent(HeadingEvent event);
-	}
-
 	public static native void addHeadingHandler(HeadingHandler handler)
 	/*-{
 		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.HeadingHandler::onHeading(Lorg/urish/gwtit/titanium/Geolocation/HeadingEvent;)(e); } );
 	}-*/;
-
-	public final static class LocationEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "location";
-
-		protected LocationEvent() {
-		}
-
-		/**
-		 * if success is false, the error code if available (iOS only)
-		 */
-		public final native float getCode()
-		/*-{
-			return this.code;
-		}-*/;
-
-		/**
-		 * boolean to indicate if the location event was successfully received
-		 * or an error occurred
-		 */
-		public final native boolean getSuccess()
-		/*-{
-			return this.success;
-		}-*/;
-
-		/**
-		 * (Android only) location provider dictionary with the following
-		 * sub-properties: `name`, `accuracy`, `power`, and `provider`.
-		 */
-		public final native org.urish.gwtit.titanium.geolocation.LocationProviderInfo getProvider()
-		/*-{
-			return this.provider;
-		}-*/;
-
-		/**
-		 * location coordinates dictionary with the following sub-properties:
-		 * `latitude`, `longitude`, `altitude`, `accuracy`, `altitudeAccuracy`,
-		 * `heading`, `speed`, `timestamp`.
-		 */
-		public final native org.urish.gwtit.titanium.geolocation.Coords getCoords()
-		/*-{
-			return this.coords;
-		}-*/;
-
-		/**
-		 * if success is false, returns a string of the error description
-		 */
-		public final native String getError()
-		/*-{
-			return this.error;
-		}-*/;
-
-	}
-
-	public interface LocationHandler {
-		public void onLocationEvent(LocationEvent event);
-	}
 
 	public static native void addLocationHandler(LocationHandler handler)
 	/*-{

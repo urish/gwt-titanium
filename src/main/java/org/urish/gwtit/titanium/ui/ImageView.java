@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.LoadHandler;
+import org.urish.gwtit.titanium.ui.events.StartHandler;
+import org.urish.gwtit.titanium.ui.events.StopHandler;
 
 /**
  * An image view is used to display an image or a series of images in an
@@ -252,185 +255,20 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.toBlob();
 	}-*/;
 
-	public final static class ChangeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "change";
-
-		protected ChangeEvent() {
-		}
-
-		/**
-		 * the index of the image frame being displayed
-		 */
-		public final native Object getIndex()
-		/*-{
-			return this.index;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface ChangeHandler {
-		public void onChange(ChangeEvent event);
-	}
-
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/ImageView/ChangeEvent;)(e); } );
 	}-*/;
-
-	public final static class LoadEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "load";
-
-		protected LoadEvent() {
-		}
-
-		/**
-		 * either `url` to indicate the url property is loaded or `images` when
-		 * all the images are loaded
-		 */
-		public final native Object getState()
-		/*-{
-			return this.state;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-	}
-
-	public interface LoadHandler {
-		public void onLoad(LoadEvent event);
-	}
 
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/ImageView/LoadEvent;)(e); } );
 	}-*/;
 
-	public final static class StartEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "start";
-
-		protected StartEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface StartHandler {
-		public void onStart(StartEvent event);
-	}
-
 	public final native void addStartHandler(StartHandler handler)
 	/*-{
 		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/ImageView/StartEvent;)(e); } );
 	}-*/;
-
-	public final static class StopEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "stop";
-
-		protected StopEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface StopHandler {
-		public void onStop(StopEvent event);
-	}
 
 	public final native void addStopHandler(StopHandler handler)
 	/*-{

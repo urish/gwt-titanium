@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.BlurHandler;
+import org.urish.gwtit.titanium.ui.events.CloseHandler;
+import org.urish.gwtit.titanium.ui.events.FocusHandler;
+import org.urish.gwtit.titanium.ui.events.OpenHandler;
 
 /**
  * The tab group allows you to manage a tabbed ui of one or more windows. the
@@ -160,232 +163,20 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.removeTab();
 	}-*/;
 
-	public final static class BlurEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "blur";
-
-		protected BlurEvent() {
-		}
-
-		/**
-		 * the tab index
-		 */
-		public final native int getIndex()
-		/*-{
-			return this.index;
-		}-*/;
-
-		/**
-		 * the previous tab index
-		 */
-		public final native int getPreviousIndex()
-		/*-{
-			return this.previousIndex;
-		}-*/;
-
-		/**
-		 * the tab object
-		 */
-		public final native org.urish.gwtit.titanium.ui.Tab getTab()
-		/*-{
-			return this.tab;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native float getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native float getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the previous tab object
-		 */
-		public final native org.urish.gwtit.titanium.ui.Tab getPreviousTab()
-		/*-{
-			return this.previousTab;
-		}-*/;
-
-	}
-
-	public interface BlurHandler {
-		public void onBlur(BlurEvent event);
-	}
-
 	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/TabGroup/BlurEvent;)(e); } );
 	}-*/;
-
-	public final static class CloseEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "close";
-
-		protected CloseEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native float getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native float getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface CloseHandler {
-		public void onClose(CloseEvent event);
-	}
 
 	public final native void addCloseHandler(CloseHandler handler)
 	/*-{
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/TabGroup/CloseEvent;)(e); } );
 	}-*/;
 
-	public final static class FocusEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "focus";
-
-		protected FocusEvent() {
-		}
-
-		/**
-		 * the tab index
-		 */
-		public final native int getIndex()
-		/*-{
-			return this.index;
-		}-*/;
-
-		/**
-		 * the previous tab index
-		 */
-		public final native int getPreviousIndex()
-		/*-{
-			return this.previousIndex;
-		}-*/;
-
-		/**
-		 * the tab object
-		 */
-		public final native org.urish.gwtit.titanium.ui.Tab getTab()
-		/*-{
-			return this.tab;
-		}-*/;
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native float getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native float getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the previous tab object
-		 */
-		public final native org.urish.gwtit.titanium.ui.Tab getPreviousTab()
-		/*-{
-			return this.previousTab;
-		}-*/;
-
-	}
-
-	public interface FocusHandler {
-		public void onFocus(FocusEvent event);
-	}
-
 	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/TabGroup/FocusEvent;)(e); } );
 	}-*/;
-
-	public final static class OpenEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "open";
-
-		protected OpenEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native float getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native float getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface OpenHandler {
-		public void onOpen(OpenEvent event);
-	}
 
 	public final native void addOpenHandler(OpenHandler handler)
 	/*-{

@@ -18,7 +18,8 @@
 
 package org.urish.gwtit.titanium.media;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.media.events.ChangeHandler;
+import org.urish.gwtit.titanium.media.events.ProgressHandler;
 
 /**
  * The audioplayer object is returned by
@@ -260,58 +261,10 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final static class ChangeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "change";
-
-		protected ChangeEvent() {
-		}
-
-		/**
-		 * current state of playback
-		 */
-		public final native Object getState()
-		/*-{
-			return this.state;
-		}-*/;
-
-		/**
-		 * textual description of the state of playback
-		 */
-		public final native Object getDescription()
-		/*-{
-			return this.description;
-		}-*/;
-
-	}
-
-	public interface ChangeHandler {
-		public void onChange(ChangeEvent event);
-	}
-
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.media.AudioPlayer.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/media/AudioPlayer/ChangeEvent;)(e); } );
 	}-*/;
-
-	public final static class ProgressEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "progress";
-
-		protected ProgressEvent() {
-		}
-
-		/**
-		 * current progress value
-		 */
-		public final native Object getProgress()
-		/*-{
-			return this.progress;
-		}-*/;
-
-	}
-
-	public interface ProgressHandler {
-		public void onProgress(ProgressEvent event);
-	}
 
 	public final native void addProgressHandler(ProgressHandler handler)
 	/*-{

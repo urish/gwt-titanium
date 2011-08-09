@@ -18,7 +18,9 @@
 
 package org.urish.gwtit.titanium.network;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.network.events.ReadErrorHandler;
+import org.urish.gwtit.titanium.network.events.ReadHandler;
+import org.urish.gwtit.titanium.network.events.WriteErrorHandler;
 
 /**
  * Deprecated: use {@link org.urish.gwtit.titanium.network.socket.tcp} where
@@ -157,99 +159,15 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 		return this.write(data, sendTo);
 	}-*/;
 
-	public final static class ReadEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "read";
-
-		protected ReadEvent() {
-		}
-
-		/**
-		 * the reference for the socket that data was retrieved from
-		 */
-		public final native Object getFrom()
-		/*-{
-			return this.from;
-		}-*/;
-
-		/**
-		 * a blob representing the data read, can be interpreted via toString
-		 */
-		public final native Object getData()
-		/*-{
-			return this.data;
-		}-*/;
-
-	}
-
-	public interface ReadHandler {
-		public void onRead(ReadEvent event);
-	}
-
 	public final native void addReadHandler(ReadHandler handler)
 	/*-{
 		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.ReadHandler::onRead(Lorg/urish/gwtit/titanium/network/TCPSocket/ReadEvent;)(e); } );
 	}-*/;
 
-	public final static class ReadErrorEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "readError";
-
-		protected ReadErrorEvent() {
-		}
-
-		/**
-		 * the BSD socket error code
-		 */
-		public final native Object getCode()
-		/*-{
-			return this.code;
-		}-*/;
-
-		/**
-		 * a description of the error
-		 */
-		public final native Object getError()
-		/*-{
-			return this.error;
-		}-*/;
-
-	}
-
-	public interface ReadErrorHandler {
-		public void onReadError(ReadErrorEvent event);
-	}
-
 	public final native void addReadErrorHandler(ReadErrorHandler handler)
 	/*-{
 		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.ReadErrorHandler::onReadError(Lorg/urish/gwtit/titanium/network/TCPSocket/ReadErrorEvent;)(e); } );
 	}-*/;
-
-	public final static class WriteErrorEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "writeError";
-
-		protected WriteErrorEvent() {
-		}
-
-		/**
-		 * the BSD socket error code
-		 */
-		public final native Object getCode()
-		/*-{
-			return this.code;
-		}-*/;
-
-		/**
-		 * a description of the error
-		 */
-		public final native Object getError()
-		/*-{
-			return this.error;
-		}-*/;
-
-	}
-
-	public interface WriteErrorHandler {
-		public void onWriteError(WriteErrorEvent event);
-	}
 
 	public final native void addWriteErrorHandler(WriteErrorHandler handler)
 	/*-{

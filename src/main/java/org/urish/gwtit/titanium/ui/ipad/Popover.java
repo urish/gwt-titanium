@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui.ipad;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.ipad.events.HideHandler;
 
 /**
  * A popover is used to manage the presentation of content in a popover. you use
@@ -110,43 +110,6 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	/*-{
 		return this.setWidth(width);
 	}-*/;
-
-	public final static class HideEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "hide";
-
-		protected HideEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface HideHandler {
-		public void onHide(HideEvent event);
-	}
 
 	public final native void addHideHandler(HideHandler handler)
 	/*-{

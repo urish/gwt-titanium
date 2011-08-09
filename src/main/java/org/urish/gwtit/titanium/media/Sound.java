@@ -18,7 +18,10 @@
 
 package org.urish.gwtit.titanium.media;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.media.events.CompleteHandler;
+import org.urish.gwtit.titanium.media.events.ErrorHandler;
+import org.urish.gwtit.titanium.media.events.InterruptedHandler;
+import org.urish.gwtit.titanium.media.events.ResumeHandler;
 
 /**
  * The sound object is returned by
@@ -213,92 +216,20 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final static class CompleteEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "complete";
-
-		protected CompleteEvent() {
-		}
-
-		/**
-		 * boolean to indicate if the sound was successfully played
-		 */
-		public final native Object getSuccess()
-		/*-{
-			return this.success;
-		}-*/;
-
-	}
-
-	public interface CompleteHandler {
-		public void onComplete(CompleteEvent event);
-	}
-
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
 		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/Sound/CompleteEvent;)(e); } );
 	}-*/;
-
-	public final static class ErrorEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "error";
-
-		protected ErrorEvent() {
-		}
-
-		/**
-		 * error message
-		 */
-		public final native Object getMessage()
-		/*-{
-			return this.message;
-		}-*/;
-
-	}
-
-	public interface ErrorHandler {
-		public void onError(ErrorEvent event);
-	}
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/Sound/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final static class InterruptedEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "interrupted";
-
-		protected InterruptedEvent() {
-		}
-
-	}
-
-	public interface InterruptedHandler {
-		public void onInterrupted(InterruptedEvent event);
-	}
-
 	public final native void addInterruptedHandler(InterruptedHandler handler)
 	/*-{
 		return this.addEventListener('interrupted', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.InterruptedHandler::onInterrupted(Lorg/urish/gwtit/titanium/media/Sound/InterruptedEvent;)(e); } );
 	}-*/;
-
-	public final static class ResumeEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "resume";
-
-		protected ResumeEvent() {
-		}
-
-		/**
-		 * boolean to indicate if the resume was from an interruption
-		 */
-		public final native Object getInterruption()
-		/*-{
-			return this.interruption;
-		}-*/;
-
-	}
-
-	public interface ResumeHandler {
-		public void onResume(ResumeEvent event);
-	}
 
 	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{

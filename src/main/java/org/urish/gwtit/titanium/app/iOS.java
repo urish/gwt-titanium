@@ -19,7 +19,7 @@
 package org.urish.gwtit.titanium.app;
 
 import org.urish.gwtit.client.EventCallback;
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.app.events.NotificationHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -132,18 +132,6 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 	/*-{
 		return Titanium.App.iOS.fireEvent(name, event);
 	}-*/;
-
-	public final static class NotificationEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "notification";
-
-		protected NotificationEvent() {
-		}
-
-	}
-
-	public interface NotificationHandler {
-		public void onNotificationEvent(NotificationEvent event);
-	}
 
 	public static native void addNotificationHandler(NotificationHandler handler)
 	/*-{

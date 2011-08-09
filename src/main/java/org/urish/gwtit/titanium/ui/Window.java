@@ -18,7 +18,16 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.titanium.ui.events.AndroidBackHandler;
+import org.urish.gwtit.titanium.ui.events.AndroidCameraHandler;
+import org.urish.gwtit.titanium.ui.events.AndroidFocusHandler;
+import org.urish.gwtit.titanium.ui.events.AndroidSearchHandler;
+import org.urish.gwtit.titanium.ui.events.AndroidVolumeDownHandler;
+import org.urish.gwtit.titanium.ui.events.AndroidVolumeUpHandler;
+import org.urish.gwtit.titanium.ui.events.BlurHandler;
+import org.urish.gwtit.titanium.ui.events.CloseHandler;
+import org.urish.gwtit.titanium.ui.events.FocusHandler;
+import org.urish.gwtit.titanium.ui.events.OpenHandler;
 
 /**
  * The window is an empty drawing surface or container. the window is created by
@@ -596,420 +605,50 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.open(options);
 	}-*/;
 
-	public final static class AndroidBackEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "android:back";
-
-		protected AndroidBackEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface AndroidBackHandler {
-		public void onAndroidBack(AndroidBackEvent event);
-	}
-
 	public final native void addAndroidBackHandler(AndroidBackHandler handler)
 	/*-{
 		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidBackHandler::onAndroidBack(Lorg/urish/gwtit/titanium/ui/Window/AndroidBackEvent;)(e); } );
 	}-*/;
-
-	public final static class AndroidCameraEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "android:camera";
-
-		protected AndroidCameraEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface AndroidCameraHandler {
-		public void onAndroidCamera(AndroidCameraEvent event);
-	}
 
 	public final native void addAndroidCameraHandler(AndroidCameraHandler handler)
 	/*-{
 		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidCameraHandler::onAndroidCamera(Lorg/urish/gwtit/titanium/ui/Window/AndroidCameraEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidFocusEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "android:focus";
-
-		protected AndroidFocusEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface AndroidFocusHandler {
-		public void onAndroidFocus(AndroidFocusEvent event);
-	}
-
 	public final native void addAndroidFocusHandler(AndroidFocusHandler handler)
 	/*-{
 		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidFocusHandler::onAndroidFocus(Lorg/urish/gwtit/titanium/ui/Window/AndroidFocusEvent;)(e); } );
 	}-*/;
-
-	public final static class AndroidSearchEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "android:search";
-
-		protected AndroidSearchEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface AndroidSearchHandler {
-		public void onAndroidSearch(AndroidSearchEvent event);
-	}
 
 	public final native void addAndroidSearchHandler(AndroidSearchHandler handler)
 	/*-{
 		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidSearchHandler::onAndroidSearch(Lorg/urish/gwtit/titanium/ui/Window/AndroidSearchEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidVoldownEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "android:voldown";
-
-		protected AndroidVoldownEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface AndroidVoldownHandler {
-		public void onAndroidVoldown(AndroidVoldownEvent event);
-	}
-
-	public final native void addAndroidVoldownHandler(AndroidVoldownHandler handler)
+	public final native void addAndroidVolumeDownHandler(AndroidVolumeDownHandler handler)
 	/*-{
-		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVoldownHandler::onAndroidVoldown(Lorg/urish/gwtit/titanium/ui/Window/AndroidVoldownEvent;)(e); } );
+		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVolumeDownHandler::onAndroidVolumeDown(Lorg/urish/gwtit/titanium/ui/Window/AndroidVolumeDownEvent;)(e); } );
 	}-*/;
 
-	public final static class AndroidVolupEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "android:volup";
-
-		protected AndroidVolupEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface AndroidVolupHandler {
-		public void onAndroidVolup(AndroidVolupEvent event);
-	}
-
-	public final native void addAndroidVolupHandler(AndroidVolupHandler handler)
+	public final native void addAndroidVolumeUpHandler(AndroidVolumeUpHandler handler)
 	/*-{
-		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVolupHandler::onAndroidVolup(Lorg/urish/gwtit/titanium/ui/Window/AndroidVolupEvent;)(e); } );
+		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVolumeUpHandler::onAndroidVolumeUp(Lorg/urish/gwtit/titanium/ui/Window/AndroidVolumeUpEvent;)(e); } );
 	}-*/;
-
-	public final static class BlurEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "blur";
-
-		protected BlurEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface BlurHandler {
-		public void onBlur(BlurEvent event);
-	}
 
 	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/Window/BlurEvent;)(e); } );
 	}-*/;
 
-	public final static class CloseEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "close";
-
-		protected CloseEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface CloseHandler {
-		public void onClose(CloseEvent event);
-	}
-
 	public final native void addCloseHandler(CloseHandler handler)
 	/*-{
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/Window/CloseEvent;)(e); } );
 	}-*/;
 
-	public final static class FocusEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "focus";
-
-		protected FocusEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface FocusHandler {
-		public void onFocus(FocusEvent event);
-	}
-
 	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
 		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/Window/FocusEvent;)(e); } );
 	}-*/;
-
-	public final static class OpenEvent extends AbstractTitaniumEvent {
-		public final static String NATIVE_EVENT_NAME = "open";
-
-		protected OpenEvent() {
-		}
-
-		/**
-		 * the y point of the event, in receiving view coordinates
-		 */
-		public final native Object getY()
-		/*-{
-			return this.y;
-		}-*/;
-
-		/**
-		 * a dictionary with properties x and y describing the point of the
-		 * event in screen coordinates
-		 */
-		public final native Object getGlobalPoint()
-		/*-{
-			return this.globalPoint;
-		}-*/;
-
-		/**
-		 * the x point of the event in receiving view coordiantes
-		 */
-		public final native Object getX()
-		/*-{
-			return this.x;
-		}-*/;
-
-	}
-
-	public interface OpenHandler {
-		public void onOpen(OpenEvent event);
-	}
 
 	public final native void addOpenHandler(OpenHandler handler)
 	/*-{

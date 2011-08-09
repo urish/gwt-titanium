@@ -126,7 +126,12 @@
 			{"name": "places", "type": "Array<Titanium.Geolocation.Place>"}
 		]
 	},
+	"Titanium.Gesture": {
+		"events[name='orientationchange'] javaName": "OrientationChange"
+	},
 	"Titanium.Media": {
+		"events[name='linechange'] javaName": "LineChange",
+		"events[name='recordinginput'] javaName": "RecordingInput",
 		"methods[name='takeScreenshot'] parameters[name='callback'] type": "Callback<Titanium.Media.ScreenshotCallbackParams>"
 	},
 	"+Titanium.Media.ScreenshotCallbackParams": {
@@ -135,6 +140,9 @@
 		"properties": [
 			{"name": "media", "type": "Titanium.Blob"}
 		]
+	},
+	"Titanium.Media.VideoPlayer": {
+		"events[name='loadstate'] javaName": "LoadState"
 	},
 	"Titanium.Network.HTTPClient": {
 		"methods[name='send'] parameters[name='data'] optional": true
@@ -189,6 +197,13 @@
 		"events[name='touchmove'] javaName": "TouchMove",		
 		"events[name='touchstart'] javaName": "TouchStart",
 		"events[name='twofingertap'] javaName": "TwoFingerTap"
+	},
+	"Titanium.UI.WebView": {
+		"events[name='beforeload'] javaName": "BeforeLoad"
+	},
+	"Titanium.UI.Window": {
+		"events[name='android:volup'] javaName": "AndroidVolumeUp",
+		"events[name='android:voldown'] javaName": "AndroidVolumeDown"
 	},
 	"Titanium.XML.Document": {
 		"methods[name='createCDATASection']     returns type": "Object",

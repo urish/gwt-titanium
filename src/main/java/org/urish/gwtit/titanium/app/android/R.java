@@ -39,5 +39,4 @@ package org.urish.gwtit.titanium.app.android;
 public class R extends org.urish.gwtit.titanium.Proxy {
 	protected R() {
 	}
-
 }
