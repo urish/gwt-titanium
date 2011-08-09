@@ -33,12 +33,12 @@ public class Gesture extends org.urish.gwtit.titanium.Module {
 
 	public static native void addOrientationChangeHandler(OrientationChangeHandler handler)
 	/*-{
-		return Titanium.Gesture.addEventListener('orientationchange', function(e) { handler.@org.urish.gwtit.titanium.Gesture.OrientationChangeHandler::onOrientationChange(Lorg/urish/gwtit/titanium/Gesture/OrientationChangeEvent;)(e); } );
+		return Titanium.Gesture.addEventListener('orientationchange', function(e) { handler.@org.urish.gwtit.titanium.events.OrientationChangeHandler::onOrientationChange(Lorg/urish/gwtit/titanium/events/OrientationChangeEvent;)(e); } );
 	}-*/;
 
 	public static native void addShakeHandler(ShakeHandler handler)
 	/*-{
-		return Titanium.Gesture.addEventListener('shake', function(e) { handler.@org.urish.gwtit.titanium.Gesture.ShakeHandler::onShake(Lorg/urish/gwtit/titanium/Gesture/ShakeEvent;)(e); } );
+		return Titanium.Gesture.addEventListener('shake', function(e) { handler.@org.urish.gwtit.titanium.events.ShakeHandler::onShake(Lorg/urish/gwtit/titanium/events/ShakeEvent;)(e); } );
 	}-*/;
 
 }

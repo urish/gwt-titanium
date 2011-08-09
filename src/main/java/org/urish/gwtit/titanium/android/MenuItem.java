@@ -151,7 +151,7 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.android.MenuItem.ClickHandler::onClick(Lorg/urish/gwtit/titanium/android/MenuItem/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.android.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/android/events/ClickEvent;)(e); } );
 	}-*/;
 
 }

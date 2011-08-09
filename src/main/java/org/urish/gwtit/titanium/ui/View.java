@@ -599,62 +599,62 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.View.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/View/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
 	}-*/;
 
 	public final native void addDoubleClickHandler(DoubleClickHandler handler)
 	/*-{
-		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.titanium.ui.View.DoubleClickHandler::onDoubleClick(Lorg/urish/gwtit/titanium/ui/View/DoubleClickEvent;)(e); } );
+		return this.addEventListener('dblclick', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DoubleClickHandler::onDoubleClick(Lorg/urish/gwtit/titanium/ui/events/DoubleClickEvent;)(e); } );
 	}-*/;
 
 	public final native void addDoubleTapHandler(DoubleTapHandler handler)
 	/*-{
-		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.titanium.ui.View.DoubleTapHandler::onDoubleTap(Lorg/urish/gwtit/titanium/ui/View/DoubleTapEvent;)(e); } );
+		return this.addEventListener('doubletap', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DoubleTapHandler::onDoubleTap(Lorg/urish/gwtit/titanium/ui/events/DoubleTapEvent;)(e); } );
 	}-*/;
 
 	public final native void addLongClickHandler(LongClickHandler handler)
 	/*-{
-		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.titanium.ui.View.LongClickHandler::onLongClick(Lorg/urish/gwtit/titanium/ui/View/LongClickEvent;)(e); } );
+		return this.addEventListener('longclick', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LongClickHandler::onLongClick(Lorg/urish/gwtit/titanium/ui/events/LongClickEvent;)(e); } );
 	}-*/;
 
 	public final native void addLongPressHandler(LongPressHandler handler)
 	/*-{
-		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.titanium.ui.View.LongPressHandler::onLongPress(Lorg/urish/gwtit/titanium/ui/View/LongPressEvent;)(e); } );
+		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LongPressHandler::onLongPress(Lorg/urish/gwtit/titanium/ui/events/LongPressEvent;)(e); } );
 	}-*/;
 
 	public final native void addSingleTapHandler(SingleTapHandler handler)
 	/*-{
-		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.titanium.ui.View.SingleTapHandler::onSingleTap(Lorg/urish/gwtit/titanium/ui/View/SingleTapEvent;)(e); } );
+		return this.addEventListener('singletap', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SingleTapHandler::onSingleTap(Lorg/urish/gwtit/titanium/ui/events/SingleTapEvent;)(e); } );
 	}-*/;
 
 	public final native void addSwipeHandler(SwipeHandler handler)
 	/*-{
-		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.titanium.ui.View.SwipeHandler::onSwipe(Lorg/urish/gwtit/titanium/ui/View/SwipeEvent;)(e); } );
+		return this.addEventListener('swipe', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SwipeHandler::onSwipe(Lorg/urish/gwtit/titanium/ui/events/SwipeEvent;)(e); } );
 	}-*/;
 
 	public final native void addTouchCancelHandler(TouchCancelHandler handler)
 	/*-{
-		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchCancelHandler::onTouchCancel(Lorg/urish/gwtit/titanium/ui/View/TouchCancelEvent;)(e); } );
+		return this.addEventListener('touchcancel', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TouchCancelHandler::onTouchCancel(Lorg/urish/gwtit/titanium/ui/events/TouchCancelEvent;)(e); } );
 	}-*/;
 
 	public final native void addTouchEndHandler(TouchEndHandler handler)
 	/*-{
-		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchEndHandler::onTouchEnd(Lorg/urish/gwtit/titanium/ui/View/TouchEndEvent;)(e); } );
+		return this.addEventListener('touchend', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TouchEndHandler::onTouchEnd(Lorg/urish/gwtit/titanium/ui/events/TouchEndEvent;)(e); } );
 	}-*/;
 
 	public final native void addTouchMoveHandler(TouchMoveHandler handler)
 	/*-{
-		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchMoveHandler::onTouchMove(Lorg/urish/gwtit/titanium/ui/View/TouchMoveEvent;)(e); } );
+		return this.addEventListener('touchmove', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TouchMoveHandler::onTouchMove(Lorg/urish/gwtit/titanium/ui/events/TouchMoveEvent;)(e); } );
 	}-*/;
 
 	public final native void addTouchStartHandler(TouchStartHandler handler)
 	/*-{
-		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TouchStartHandler::onTouchStart(Lorg/urish/gwtit/titanium/ui/View/TouchStartEvent;)(e); } );
+		return this.addEventListener('touchstart', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TouchStartHandler::onTouchStart(Lorg/urish/gwtit/titanium/ui/events/TouchStartEvent;)(e); } );
 	}-*/;
 
 	public final native void addTwoFingerTapHandler(TwoFingerTapHandler handler)
 	/*-{
-		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.titanium.ui.View.TwoFingerTapHandler::onTwoFingerTap(Lorg/urish/gwtit/titanium/ui/View/TwoFingerTapEvent;)(e); } );
+		return this.addEventListener('twofingertap', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TwoFingerTapHandler::onTwoFingerTap(Lorg/urish/gwtit/titanium/ui/events/TwoFingerTapEvent;)(e); } );
 	}-*/;
 
 }

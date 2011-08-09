@@ -383,7 +383,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 
 	public static native void addBatteryHandler(BatteryHandler handler)
 	/*-{
-		return Titanium.Platform.addEventListener('battery', function(e) { handler.@org.urish.gwtit.titanium.Platform.BatteryHandler::onBattery(Lorg/urish/gwtit/titanium/Platform/BatteryEvent;)(e); } );
+		return Titanium.Platform.addEventListener('battery', function(e) { handler.@org.urish.gwtit.titanium.events.BatteryHandler::onBattery(Lorg/urish/gwtit/titanium/events/BatteryEvent;)(e); } );
 	}-*/;
 
 }

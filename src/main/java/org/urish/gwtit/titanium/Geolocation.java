@@ -347,17 +347,17 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	public static native void addCalibrationHandler(CalibrationHandler handler)
 	/*-{
-		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.CalibrationHandler::onCalibration(Lorg/urish/gwtit/titanium/Geolocation/CalibrationEvent;)(e); } );
+		return Titanium.Geolocation.addEventListener('calibration', function(e) { handler.@org.urish.gwtit.titanium.events.CalibrationHandler::onCalibration(Lorg/urish/gwtit/titanium/events/CalibrationEvent;)(e); } );
 	}-*/;
 
 	public static native void addHeadingHandler(HeadingHandler handler)
 	/*-{
-		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.HeadingHandler::onHeading(Lorg/urish/gwtit/titanium/Geolocation/HeadingEvent;)(e); } );
+		return Titanium.Geolocation.addEventListener('heading', function(e) { handler.@org.urish.gwtit.titanium.events.HeadingHandler::onHeading(Lorg/urish/gwtit/titanium/events/HeadingEvent;)(e); } );
 	}-*/;
 
 	public static native void addLocationHandler(LocationHandler handler)
 	/*-{
-		return Titanium.Geolocation.addEventListener('location', function(e) { handler.@org.urish.gwtit.titanium.Geolocation.LocationHandler::onLocation(Lorg/urish/gwtit/titanium/Geolocation/LocationEvent;)(e); } );
+		return Titanium.Geolocation.addEventListener('location', function(e) { handler.@org.urish.gwtit.titanium.events.LocationHandler::onLocation(Lorg/urish/gwtit/titanium/events/LocationEvent;)(e); } );
 	}-*/;
 
 }

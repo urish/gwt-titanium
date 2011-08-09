@@ -121,7 +121,7 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.Switch.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/Switch/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
 	}-*/;
 
 }

@@ -193,37 +193,37 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addCreateHandler(CreateHandler handler)
 	/*-{
-		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.CreateHandler::onCreate(Lorg/urish/gwtit/titanium/android/Activity/CreateEvent;)(e); } );
+		return this.addEventListener('create', function(e) { handler.@org.urish.gwtit.titanium.android.events.CreateHandler::onCreate(Lorg/urish/gwtit/titanium/android/events/CreateEvent;)(e); } );
 	}-*/;
 
 	public final native void addDestroyHandler(DestroyHandler handler)
 	/*-{
-		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.DestroyHandler::onDestroy(Lorg/urish/gwtit/titanium/android/Activity/DestroyEvent;)(e); } );
+		return this.addEventListener('destroy', function(e) { handler.@org.urish.gwtit.titanium.android.events.DestroyHandler::onDestroy(Lorg/urish/gwtit/titanium/android/events/DestroyEvent;)(e); } );
 	}-*/;
 
 	public final native void addNewIntentHandler(NewIntentHandler handler)
 	/*-{
-		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.NewIntentHandler::onNewIntent(Lorg/urish/gwtit/titanium/android/Activity/NewIntentEvent;)(e); } );
+		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.titanium.android.events.NewIntentHandler::onNewIntent(Lorg/urish/gwtit/titanium/android/events/NewIntentEvent;)(e); } );
 	}-*/;
 
 	public final native void addPauseHandler(PauseHandler handler)
 	/*-{
-		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/Activity/PauseEvent;)(e); } );
+		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.events.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/events/PauseEvent;)(e); } );
 	}-*/;
 
 	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{
-		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/Activity/ResumeEvent;)(e); } );
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.events.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/events/ResumeEvent;)(e); } );
 	}-*/;
 
 	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.StartHandler::onStart(Lorg/urish/gwtit/titanium/android/Activity/StartEvent;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.android.events.StartHandler::onStart(Lorg/urish/gwtit/titanium/android/events/StartEvent;)(e); } );
 	}-*/;
 
 	public final native void addStopHandler(StopHandler handler)
 	/*-{
-		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.android.Activity.StopHandler::onStop(Lorg/urish/gwtit/titanium/android/Activity/StopEvent;)(e); } );
+		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.android.events.StopHandler::onStop(Lorg/urish/gwtit/titanium/android/events/StopEvent;)(e); } );
 	}-*/;
 
 }

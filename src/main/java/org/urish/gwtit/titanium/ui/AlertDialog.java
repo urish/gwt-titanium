@@ -125,7 +125,7 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.AlertDialog.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/AlertDialog/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
 	}-*/;
 
 }

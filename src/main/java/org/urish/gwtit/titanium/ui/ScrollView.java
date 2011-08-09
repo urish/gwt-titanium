@@ -236,12 +236,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addScaleHandler(ScaleHandler handler)
 	/*-{
-		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollView.ScaleHandler::onScale(Lorg/urish/gwtit/titanium/ui/ScrollView/ScaleEvent;)(e); } );
+		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScaleHandler::onScale(Lorg/urish/gwtit/titanium/ui/events/ScaleEvent;)(e); } );
 	}-*/;
 
 	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollView.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/ScrollView/ScrollEvent;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollEvent;)(e); } );
 	}-*/;
 
 }

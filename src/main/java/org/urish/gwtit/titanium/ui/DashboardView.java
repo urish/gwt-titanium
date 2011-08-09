@@ -83,22 +83,22 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addCommitHandler(CommitHandler handler)
 	/*-{
-		return this.addEventListener('commit', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardView.CommitHandler::onCommit(Lorg/urish/gwtit/titanium/ui/DashboardView/CommitEvent;)(e); } );
+		return this.addEventListener('commit', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CommitHandler::onCommit(Lorg/urish/gwtit/titanium/ui/events/CommitEvent;)(e); } );
 	}-*/;
 
 	public final native void addDeleteHandler(DeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardView.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/DashboardView/DeleteEvent;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/events/DeleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addEditHandler(EditHandler handler)
 	/*-{
-		return this.addEventListener('edit', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardView.EditHandler::onEdit(Lorg/urish/gwtit/titanium/ui/DashboardView/EditEvent;)(e); } );
+		return this.addEventListener('edit', function(e) { handler.@org.urish.gwtit.titanium.ui.events.EditHandler::onEdit(Lorg/urish/gwtit/titanium/ui/events/EditEvent;)(e); } );
 	}-*/;
 
 	public final native void addMoveHandler(MoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardView.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/DashboardView/MoveEvent;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/events/MoveEvent;)(e); } );
 	}-*/;
 
 }

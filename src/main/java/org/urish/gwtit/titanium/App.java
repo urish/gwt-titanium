@@ -242,22 +242,22 @@ public class App extends org.urish.gwtit.titanium.Module {
 
 	public static native void addProximityHandler(ProximityHandler handler)
 	/*-{
-		return Titanium.App.addEventListener('proximity', function(e) { handler.@org.urish.gwtit.titanium.App.ProximityHandler::onProximity(Lorg/urish/gwtit/titanium/App/ProximityEvent;)(e); } );
+		return Titanium.App.addEventListener('proximity', function(e) { handler.@org.urish.gwtit.titanium.events.ProximityHandler::onProximity(Lorg/urish/gwtit/titanium/events/ProximityEvent;)(e); } );
 	}-*/;
 
 	public static native void addResumeHandler(ResumeHandler handler)
 	/*-{
-		return Titanium.App.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.App.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/App/ResumeEvent;)(e); } );
+		return Titanium.App.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.events.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/events/ResumeEvent;)(e); } );
 	}-*/;
 
 	public static native void addResumedHandler(ResumedHandler handler)
 	/*-{
-		return Titanium.App.addEventListener('resumed', function(e) { handler.@org.urish.gwtit.titanium.App.ResumedHandler::onResumed(Lorg/urish/gwtit/titanium/App/ResumedEvent;)(e); } );
+		return Titanium.App.addEventListener('resumed', function(e) { handler.@org.urish.gwtit.titanium.events.ResumedHandler::onResumed(Lorg/urish/gwtit/titanium/events/ResumedEvent;)(e); } );
 	}-*/;
 
 	public static native void addPauseHandler(PauseHandler handler)
 	/*-{
-		return Titanium.App.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.App.PauseHandler::onPause(Lorg/urish/gwtit/titanium/App/PauseEvent;)(e); } );
+		return Titanium.App.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.events.PauseHandler::onPause(Lorg/urish/gwtit/titanium/events/PauseEvent;)(e); } );
 	}-*/;
 
 }

@@ -441,72 +441,72 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/VideoPlayer/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/events/CompleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addDurationAvailableHandler(DurationAvailableHandler handler)
 	/*-{
-		return this.addEventListener('durationAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.DurationAvailableHandler::onDurationAvailable(Lorg/urish/gwtit/titanium/media/VideoPlayer/DurationAvailableEvent;)(e); } );
+		return this.addEventListener('durationAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.events.DurationAvailableHandler::onDurationAvailable(Lorg/urish/gwtit/titanium/media/events/DurationAvailableEvent;)(e); } );
 	}-*/;
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/VideoPlayer/ErrorEvent;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/events/ErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addFullscreenHandler(FullscreenHandler handler)
 	/*-{
-		return this.addEventListener('fullscreen', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.FullscreenHandler::onFullscreen(Lorg/urish/gwtit/titanium/media/VideoPlayer/FullscreenEvent;)(e); } );
+		return this.addEventListener('fullscreen', function(e) { handler.@org.urish.gwtit.titanium.media.events.FullscreenHandler::onFullscreen(Lorg/urish/gwtit/titanium/media/events/FullscreenEvent;)(e); } );
 	}-*/;
 
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/media/VideoPlayer/LoadEvent;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.media.events.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/media/events/LoadEvent;)(e); } );
 	}-*/;
 
 	public final native void addLoadStateHandler(LoadStateHandler handler)
 	/*-{
-		return this.addEventListener('loadstate', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.LoadStateHandler::onLoadState(Lorg/urish/gwtit/titanium/media/VideoPlayer/LoadStateEvent;)(e); } );
+		return this.addEventListener('loadstate', function(e) { handler.@org.urish.gwtit.titanium.media.events.LoadStateHandler::onLoadState(Lorg/urish/gwtit/titanium/media/events/LoadStateEvent;)(e); } );
 	}-*/;
 
 	public final native void addMediaTypesAvailableHandler(MediaTypesAvailableHandler handler)
 	/*-{
-		return this.addEventListener('mediaTypesAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.MediaTypesAvailableHandler::onMediaTypesAvailable(Lorg/urish/gwtit/titanium/media/VideoPlayer/MediaTypesAvailableEvent;)(e); } );
+		return this.addEventListener('mediaTypesAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.events.MediaTypesAvailableHandler::onMediaTypesAvailable(Lorg/urish/gwtit/titanium/media/events/MediaTypesAvailableEvent;)(e); } );
 	}-*/;
 
 	public final native void addNaturalSizeAvailableHandler(NaturalSizeAvailableHandler handler)
 	/*-{
-		return this.addEventListener('naturalSizeAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.NaturalSizeAvailableHandler::onNaturalSizeAvailable(Lorg/urish/gwtit/titanium/media/VideoPlayer/NaturalSizeAvailableEvent;)(e); } );
+		return this.addEventListener('naturalSizeAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.events.NaturalSizeAvailableHandler::onNaturalSizeAvailable(Lorg/urish/gwtit/titanium/media/events/NaturalSizeAvailableEvent;)(e); } );
 	}-*/;
 
 	public final native void addPlaybackStateHandler(PlaybackStateHandler handler)
 	/*-{
-		return this.addEventListener('playbackState', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.PlaybackStateHandler::onPlaybackState(Lorg/urish/gwtit/titanium/media/VideoPlayer/PlaybackStateEvent;)(e); } );
+		return this.addEventListener('playbackState', function(e) { handler.@org.urish.gwtit.titanium.media.events.PlaybackStateHandler::onPlaybackState(Lorg/urish/gwtit/titanium/media/events/PlaybackStateEvent;)(e); } );
 	}-*/;
 
 	public final native void addPlayingHandler(PlayingHandler handler)
 	/*-{
-		return this.addEventListener('playing', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.PlayingHandler::onPlaying(Lorg/urish/gwtit/titanium/media/VideoPlayer/PlayingEvent;)(e); } );
+		return this.addEventListener('playing', function(e) { handler.@org.urish.gwtit.titanium.media.events.PlayingHandler::onPlaying(Lorg/urish/gwtit/titanium/media/events/PlayingEvent;)(e); } );
 	}-*/;
 
 	public final native void addPreloadHandler(PreloadHandler handler)
 	/*-{
-		return this.addEventListener('preload', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.PreloadHandler::onPreload(Lorg/urish/gwtit/titanium/media/VideoPlayer/PreloadEvent;)(e); } );
+		return this.addEventListener('preload', function(e) { handler.@org.urish.gwtit.titanium.media.events.PreloadHandler::onPreload(Lorg/urish/gwtit/titanium/media/events/PreloadEvent;)(e); } );
 	}-*/;
 
 	public final native void addResizeHandler(ResizeHandler handler)
 	/*-{
-		return this.addEventListener('resize', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.ResizeHandler::onResize(Lorg/urish/gwtit/titanium/media/VideoPlayer/ResizeEvent;)(e); } );
+		return this.addEventListener('resize', function(e) { handler.@org.urish.gwtit.titanium.media.events.ResizeHandler::onResize(Lorg/urish/gwtit/titanium/media/events/ResizeEvent;)(e); } );
 	}-*/;
 
 	public final native void addSourceChangeHandler(SourceChangeHandler handler)
 	/*-{
-		return this.addEventListener('sourceChange', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.SourceChangeHandler::onSourceChange(Lorg/urish/gwtit/titanium/media/VideoPlayer/SourceChangeEvent;)(e); } );
+		return this.addEventListener('sourceChange', function(e) { handler.@org.urish.gwtit.titanium.media.events.SourceChangeHandler::onSourceChange(Lorg/urish/gwtit/titanium/media/events/SourceChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addThumbnailHandler(ThumbnailHandler handler)
 	/*-{
-		return this.addEventListener('thumbnail', function(e) { handler.@org.urish.gwtit.titanium.media.VideoPlayer.ThumbnailHandler::onThumbnail(Lorg/urish/gwtit/titanium/media/VideoPlayer/ThumbnailEvent;)(e); } );
+		return this.addEventListener('thumbnail', function(e) { handler.@org.urish.gwtit.titanium.media.events.ThumbnailHandler::onThumbnail(Lorg/urish/gwtit/titanium/media/events/ThumbnailEvent;)(e); } );
 	}-*/;
 
 }

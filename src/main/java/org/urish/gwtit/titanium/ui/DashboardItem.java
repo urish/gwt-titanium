@@ -91,17 +91,17 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/DashboardItem/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
 	}-*/;
 
 	public final native void addDeleteHandler(DeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/DashboardItem/DeleteEvent;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/events/DeleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addMoveHandler(MoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.DashboardItem.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/DashboardItem/MoveEvent;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/events/MoveEvent;)(e); } );
 	}-*/;
 
 }

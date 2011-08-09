@@ -15,14 +15,14 @@
  */
 package org.urish.gwtit.examples.helloworld.client;
 
-import org.urish.gwtit.client.EventCallback;
 import org.urish.gwtit.client.GwtTitaniumBootstrap;
 import org.urish.gwtit.titanium.API;
 import org.urish.gwtit.titanium.UI;
 import org.urish.gwtit.titanium.ui.AlertDialog;
 import org.urish.gwtit.titanium.ui.Label;
-import org.urish.gwtit.titanium.ui.View.ClickEvent;
 import org.urish.gwtit.titanium.ui.Window;
+import org.urish.gwtit.titanium.ui.events.ClickEvent;
+import org.urish.gwtit.titanium.ui.events.ClickHandler;
 
 public class HelloWorld extends GwtTitaniumBootstrap {
 
@@ -39,13 +39,14 @@ public class HelloWorld extends GwtTitaniumBootstrap {
 		label.setTextAlign("center");
 		label.setText("Hello World !");
 
-		label.addClickHandler(new EventCallback<ClickEvent>() {
+		label.addClickHandler(new ClickHandler() {
+			
 			@Override
-			public void onEvent(ClickEvent event) {
+			public void onClick(ClickEvent event) {
 				AlertDialog alertDialog = UI.createAlertDialog();
 				alertDialog.setTitle("Example");
 				alertDialog.setMessage("Hello, World");
-				alertDialog.show();
+				alertDialog.show();				
 			}
 		});
 				

@@ -194,7 +194,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.EmailDialog.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/EmailDialog/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/events/CompleteEvent;)(e); } );
 	}-*/;
 
 }

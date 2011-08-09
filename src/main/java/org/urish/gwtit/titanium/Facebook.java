@@ -266,12 +266,12 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 
 	public static native void addLoginHandler(LoginHandler handler)
 	/*-{
-		return Titanium.Facebook.addEventListener('login', function(e) { handler.@org.urish.gwtit.titanium.Facebook.LoginHandler::onLogin(Lorg/urish/gwtit/titanium/Facebook/LoginEvent;)(e); } );
+		return Titanium.Facebook.addEventListener('login', function(e) { handler.@org.urish.gwtit.titanium.events.LoginHandler::onLogin(Lorg/urish/gwtit/titanium/events/LoginEvent;)(e); } );
 	}-*/;
 
 	public static native void addLogoutHandler(LogoutHandler handler)
 	/*-{
-		return Titanium.Facebook.addEventListener('logout', function(e) { handler.@org.urish.gwtit.titanium.Facebook.LogoutHandler::onLogout(Lorg/urish/gwtit/titanium/Facebook/LogoutEvent;)(e); } );
+		return Titanium.Facebook.addEventListener('logout', function(e) { handler.@org.urish.gwtit.titanium.events.LogoutHandler::onLogout(Lorg/urish/gwtit/titanium/events/LogoutEvent;)(e); } );
 	}-*/;
 
 }

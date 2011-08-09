@@ -299,12 +299,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.Animation.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/Animation/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/events/CompleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.Animation.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/Animation/StartEvent;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.events.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/events/StartEvent;)(e); } );
 	}-*/;
 
 }

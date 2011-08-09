@@ -480,7 +480,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	public static native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return Titanium.Network.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.Network.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/Network/ChangeEvent;)(e); } );
+		return Titanium.Network.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/events/ChangeEvent;)(e); } );
 	}-*/;
 
 }

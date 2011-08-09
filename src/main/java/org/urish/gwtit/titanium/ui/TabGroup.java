@@ -165,22 +165,22 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/TabGroup/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addCloseHandler(CloseHandler handler)
 	/*-{
-		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/TabGroup/CloseEvent;)(e); } );
+		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/events/CloseEvent;)(e); } );
 	}-*/;
 
 	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/TabGroup/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
 	}-*/;
 
 	public final native void addOpenHandler(OpenHandler handler)
 	/*-{
-		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.titanium.ui.TabGroup.OpenHandler::onOpen(Lorg/urish/gwtit/titanium/ui/TabGroup/OpenEvent;)(e); } );
+		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.titanium.ui.events.OpenHandler::onOpen(Lorg/urish/gwtit/titanium/ui/events/OpenEvent;)(e); } );
 	}-*/;
 
 }

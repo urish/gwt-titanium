@@ -161,17 +161,17 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addReadHandler(ReadHandler handler)
 	/*-{
-		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.ReadHandler::onRead(Lorg/urish/gwtit/titanium/network/TCPSocket/ReadEvent;)(e); } );
+		return this.addEventListener('read', function(e) { handler.@org.urish.gwtit.titanium.network.events.ReadHandler::onRead(Lorg/urish/gwtit/titanium/network/events/ReadEvent;)(e); } );
 	}-*/;
 
 	public final native void addReadErrorHandler(ReadErrorHandler handler)
 	/*-{
-		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.ReadErrorHandler::onReadError(Lorg/urish/gwtit/titanium/network/TCPSocket/ReadErrorEvent;)(e); } );
+		return this.addEventListener('readError', function(e) { handler.@org.urish.gwtit.titanium.network.events.ReadErrorHandler::onReadError(Lorg/urish/gwtit/titanium/network/events/ReadErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addWriteErrorHandler(WriteErrorHandler handler)
 	/*-{
-		return this.addEventListener('writeError', function(e) { handler.@org.urish.gwtit.titanium.network.TCPSocket.WriteErrorHandler::onWriteError(Lorg/urish/gwtit/titanium/network/TCPSocket/WriteErrorEvent;)(e); } );
+		return this.addEventListener('writeError', function(e) { handler.@org.urish.gwtit.titanium.network.events.WriteErrorHandler::onWriteError(Lorg/urish/gwtit/titanium/network/events/WriteErrorEvent;)(e); } );
 	}-*/;
 
 }

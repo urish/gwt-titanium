@@ -257,22 +257,22 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/ImageView/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/ImageView/LoadEvent;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/events/LoadEvent;)(e); } );
 	}-*/;
 
 	public final native void addStartHandler(StartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/ImageView/StartEvent;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.events.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/events/StartEvent;)(e); } );
 	}-*/;
 
 	public final native void addStopHandler(StopHandler handler)
 	/*-{
-		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.ui.ImageView.StopHandler::onStop(Lorg/urish/gwtit/titanium/ui/ImageView/StopEvent;)(e); } );
+		return this.addEventListener('stop', function(e) { handler.@org.urish.gwtit.titanium.ui.events.StopHandler::onStop(Lorg/urish/gwtit/titanium/ui/events/StopEvent;)(e); } );
 	}-*/;
 
 }

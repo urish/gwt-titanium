@@ -135,7 +135,7 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 
 	public static native void addNotificationHandler(NotificationHandler handler)
 	/*-{
-		return Titanium.App.iOS.addEventListener('notification', function(e) { handler.@org.urish.gwtit.titanium.app.iOS.NotificationHandler::onNotification(Lorg/urish/gwtit/titanium/app/iOS/NotificationEvent;)(e); } );
+		return Titanium.App.iOS.addEventListener('notification', function(e) { handler.@org.urish.gwtit.titanium.app.events.NotificationHandler::onNotification(Lorg/urish/gwtit/titanium/app/events/NotificationEvent;)(e); } );
 	}-*/;
 
 }

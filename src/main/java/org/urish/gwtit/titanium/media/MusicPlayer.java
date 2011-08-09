@@ -222,17 +222,17 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addPlayingChangeHandler(PlayingChangeHandler handler)
 	/*-{
-		return this.addEventListener('playingChange', function(e) { handler.@org.urish.gwtit.titanium.media.MusicPlayer.PlayingChangeHandler::onPlayingChange(Lorg/urish/gwtit/titanium/media/MusicPlayer/PlayingChangeEvent;)(e); } );
+		return this.addEventListener('playingChange', function(e) { handler.@org.urish.gwtit.titanium.media.events.PlayingChangeHandler::onPlayingChange(Lorg/urish/gwtit/titanium/media/events/PlayingChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addStateChangeHandler(StateChangeHandler handler)
 	/*-{
-		return this.addEventListener('stateChange', function(e) { handler.@org.urish.gwtit.titanium.media.MusicPlayer.StateChangeHandler::onStateChange(Lorg/urish/gwtit/titanium/media/MusicPlayer/StateChangeEvent;)(e); } );
+		return this.addEventListener('stateChange', function(e) { handler.@org.urish.gwtit.titanium.media.events.StateChangeHandler::onStateChange(Lorg/urish/gwtit/titanium/media/events/StateChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addVolumeChangeHandler(VolumeChangeHandler handler)
 	/*-{
-		return this.addEventListener('volumeChange', function(e) { handler.@org.urish.gwtit.titanium.media.MusicPlayer.VolumeChangeHandler::onVolumeChange(Lorg/urish/gwtit/titanium/media/MusicPlayer/VolumeChangeEvent;)(e); } );
+		return this.addEventListener('volumeChange', function(e) { handler.@org.urish.gwtit.titanium.media.events.VolumeChangeHandler::onVolumeChange(Lorg/urish/gwtit/titanium/media/events/VolumeChangeEvent;)(e); } );
 	}-*/;
 
 }

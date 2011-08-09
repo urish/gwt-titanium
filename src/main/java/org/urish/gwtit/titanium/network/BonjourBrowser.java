@@ -103,7 +103,7 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addUpdatedServicesHandler(UpdatedServicesHandler handler)
 	/*-{
-		return this.addEventListener('updatedServices', function(e) { handler.@org.urish.gwtit.titanium.network.BonjourBrowser.UpdatedServicesHandler::onUpdatedServices(Lorg/urish/gwtit/titanium/network/BonjourBrowser/UpdatedServicesEvent;)(e); } );
+		return this.addEventListener('updatedServices', function(e) { handler.@org.urish.gwtit.titanium.network.events.UpdatedServicesHandler::onUpdatedServices(Lorg/urish/gwtit/titanium/network/events/UpdatedServicesEvent;)(e); } );
 	}-*/;
 
 }

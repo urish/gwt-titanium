@@ -607,52 +607,52 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addAndroidBackHandler(AndroidBackHandler handler)
 	/*-{
-		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidBackHandler::onAndroidBack(Lorg/urish/gwtit/titanium/ui/Window/AndroidBackEvent;)(e); } );
+		return this.addEventListener('android:back', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidBackHandler::onAndroidBack(Lorg/urish/gwtit/titanium/ui/events/AndroidBackEvent;)(e); } );
 	}-*/;
 
 	public final native void addAndroidCameraHandler(AndroidCameraHandler handler)
 	/*-{
-		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidCameraHandler::onAndroidCamera(Lorg/urish/gwtit/titanium/ui/Window/AndroidCameraEvent;)(e); } );
+		return this.addEventListener('android:camera', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidCameraHandler::onAndroidCamera(Lorg/urish/gwtit/titanium/ui/events/AndroidCameraEvent;)(e); } );
 	}-*/;
 
 	public final native void addAndroidFocusHandler(AndroidFocusHandler handler)
 	/*-{
-		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidFocusHandler::onAndroidFocus(Lorg/urish/gwtit/titanium/ui/Window/AndroidFocusEvent;)(e); } );
+		return this.addEventListener('android:focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidFocusHandler::onAndroidFocus(Lorg/urish/gwtit/titanium/ui/events/AndroidFocusEvent;)(e); } );
 	}-*/;
 
 	public final native void addAndroidSearchHandler(AndroidSearchHandler handler)
 	/*-{
-		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidSearchHandler::onAndroidSearch(Lorg/urish/gwtit/titanium/ui/Window/AndroidSearchEvent;)(e); } );
+		return this.addEventListener('android:search', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidSearchHandler::onAndroidSearch(Lorg/urish/gwtit/titanium/ui/events/AndroidSearchEvent;)(e); } );
 	}-*/;
 
 	public final native void addAndroidVolumeDownHandler(AndroidVolumeDownHandler handler)
 	/*-{
-		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVolumeDownHandler::onAndroidVolumeDown(Lorg/urish/gwtit/titanium/ui/Window/AndroidVolumeDownEvent;)(e); } );
+		return this.addEventListener('android:voldown', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidVolumeDownHandler::onAndroidVolumeDown(Lorg/urish/gwtit/titanium/ui/events/AndroidVolumeDownEvent;)(e); } );
 	}-*/;
 
 	public final native void addAndroidVolumeUpHandler(AndroidVolumeUpHandler handler)
 	/*-{
-		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.AndroidVolumeUpHandler::onAndroidVolumeUp(Lorg/urish/gwtit/titanium/ui/Window/AndroidVolumeUpEvent;)(e); } );
+		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidVolumeUpHandler::onAndroidVolumeUp(Lorg/urish/gwtit/titanium/ui/events/AndroidVolumeUpEvent;)(e); } );
 	}-*/;
 
 	public final native void addBlurHandler(BlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/Window/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addCloseHandler(CloseHandler handler)
 	/*-{
-		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/Window/CloseEvent;)(e); } );
+		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/events/CloseEvent;)(e); } );
 	}-*/;
 
 	public final native void addFocusHandler(FocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/Window/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
 	}-*/;
 
 	public final native void addOpenHandler(OpenHandler handler)
 	/*-{
-		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.titanium.ui.Window.OpenHandler::onOpen(Lorg/urish/gwtit/titanium/ui/Window/OpenEvent;)(e); } );
+		return this.addEventListener('open', function(e) { handler.@org.urish.gwtit.titanium.ui.events.OpenHandler::onOpen(Lorg/urish/gwtit/titanium/ui/events/OpenEvent;)(e); } );
 	}-*/;
 
 }

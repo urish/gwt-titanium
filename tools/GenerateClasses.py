@@ -187,14 +187,14 @@ EVENT_HANDLER_BODY_TEMPLATE = """
 EVENT_TEMPLATE = """
 	public final native void add%(javaName)sHandler(%(javaName)sHandler handler) 
 	/*-{
-		return this.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.%(package)s.%(className)s.%(javaName)sHandler::on%(javaName)s(Lorg/urish/gwtit/%(packagePath)s/%(className)s/%(javaName)sEvent;)(e); } );
+		return this.addEventListener('%(name)s', function(e) { handler.@%(handlerClass)s::on%(javaName)s(L%(eventClassPath)s;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
 	public static native void add%(javaName)sHandler(%(javaName)sHandler handler) 
 	/*-{
-		return %(module)s.addEventListener('%(name)s', function(e) { handler.@org.urish.gwtit.%(package)s.%(className)s.%(javaName)sHandler::on%(javaName)s(Lorg/urish/gwtit/%(packagePath)s/%(className)s/%(javaName)sEvent;)(e); } );
+		return %(module)s.addEventListener('%(name)s', function(e) { handler.@%(handlerClass)s::on%(javaName)s(L%(eventClassPath)s;)(e); } );
 	}-*/;
 """
 
@@ -231,6 +231,15 @@ class JavaClass(object):
 		
 	def getPath(self):
 		return os.path.join(self.package.replace(".", "/"), self.name + ".java")
+	
+	def getPackage(self):
+		return self.package
+	
+	def getName(self):
+		return self.name
+	
+	def getQualifiedName(self):
+		return self.package + "." + self.name
 	
 	def getCode(self):
 		importsString = "\n".join("import %s;" % importName for importName in self.imports)
@@ -567,14 +576,11 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 			handlerClass = JavaClass(package + ".events", javaName + "Handler", interface=True, body=EVENT_HANDLER_BODY_TEMPLATE % {
 				'javaName': javaName,
 			})
-			javaClass.addImport(eventClass)
 			javaClass.addImport(handlerClass)
 			javaClass.append(template % {
-				'className': typeInfo['name'].split(".")[-1],
-				'package': package,
-				'packagePath': packagePath,
+				'handlerClass': handlerClass.getQualifiedName(),
+				'eventClassPath': eventClass.getQualifiedName().replace(".", "/"),
 				'name': event['name'],
-				'nameCapital': capitalEventName(event['name']),
 				'javaName': javaName,
 				'module': typeInfo['name'],
 			})

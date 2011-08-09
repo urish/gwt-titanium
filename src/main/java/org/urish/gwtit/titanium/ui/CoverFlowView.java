@@ -80,7 +80,7 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.CoverFlowView.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/CoverFlowView/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
 	}-*/;
 
 }

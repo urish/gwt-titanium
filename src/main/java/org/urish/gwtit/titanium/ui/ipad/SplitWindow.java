@@ -88,7 +88,7 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addVisibleHandler(VisibleHandler handler)
 	/*-{
-		return this.addEventListener('visible', function(e) { handler.@org.urish.gwtit.titanium.ui.ipad.SplitWindow.VisibleHandler::onVisible(Lorg/urish/gwtit/titanium/ui/ipad/SplitWindow/VisibleEvent;)(e); } );
+		return this.addEventListener('visible', function(e) { handler.@org.urish.gwtit.titanium.ui.ipad.events.VisibleHandler::onVisible(Lorg/urish/gwtit/titanium/ui/ipad/events/VisibleEvent;)(e); } );
 	}-*/;
 
 }

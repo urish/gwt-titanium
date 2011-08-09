@@ -263,12 +263,12 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.media.AudioPlayer.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/media/AudioPlayer/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.media.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/media/events/ChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addProgressHandler(ProgressHandler handler)
 	/*-{
-		return this.addEventListener('progress', function(e) { handler.@org.urish.gwtit.titanium.media.AudioPlayer.ProgressHandler::onProgress(Lorg/urish/gwtit/titanium/media/AudioPlayer/ProgressEvent;)(e); } );
+		return this.addEventListener('progress', function(e) { handler.@org.urish.gwtit.titanium.media.events.ProgressHandler::onProgress(Lorg/urish/gwtit/titanium/media/events/ProgressEvent;)(e); } );
 	}-*/;
 
 }

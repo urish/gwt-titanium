@@ -218,22 +218,22 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/Sound/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/events/CompleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/Sound/ErrorEvent;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/events/ErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addInterruptedHandler(InterruptedHandler handler)
 	/*-{
-		return this.addEventListener('interrupted', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.InterruptedHandler::onInterrupted(Lorg/urish/gwtit/titanium/media/Sound/InterruptedEvent;)(e); } );
+		return this.addEventListener('interrupted', function(e) { handler.@org.urish.gwtit.titanium.media.events.InterruptedHandler::onInterrupted(Lorg/urish/gwtit/titanium/media/events/InterruptedEvent;)(e); } );
 	}-*/;
 
 	public final native void addResumeHandler(ResumeHandler handler)
 	/*-{
-		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.media.Sound.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/media/Sound/ResumeEvent;)(e); } );
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.media.events.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/media/events/ResumeEvent;)(e); } );
 	}-*/;
 
 }

@@ -194,7 +194,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.ScrollableView.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/ScrollableView/ScrollEvent;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollEvent;)(e); } );
 	}-*/;
 
 }

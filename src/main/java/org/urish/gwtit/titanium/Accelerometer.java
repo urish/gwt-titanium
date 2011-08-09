@@ -39,7 +39,7 @@ public class Accelerometer extends org.urish.gwtit.titanium.Module {
 
 	public static native void addUpdateHandler(UpdateHandler handler)
 	/*-{
-		return Titanium.Accelerometer.addEventListener('update', function(e) { handler.@org.urish.gwtit.titanium.Accelerometer.UpdateHandler::onUpdate(Lorg/urish/gwtit/titanium/Accelerometer/UpdateEvent;)(e); } );
+		return Titanium.Accelerometer.addEventListener('update', function(e) { handler.@org.urish.gwtit.titanium.events.UpdateHandler::onUpdate(Lorg/urish/gwtit/titanium/events/UpdateEvent;)(e); } );
 	}-*/;
 
 }

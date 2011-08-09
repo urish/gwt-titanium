@@ -474,22 +474,22 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addDeleteHandler(DeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/TableView/DeleteEvent;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/events/DeleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addMoveHandler(MoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/TableView/MoveEvent;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/events/MoveEvent;)(e); } );
 	}-*/;
 
 	public final native void addScrollHandler(ScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/TableView/ScrollEvent;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollEvent;)(e); } );
 	}-*/;
 
 	public final native void addScrollEndHandler(ScrollEndHandler handler)
 	/*-{
-		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.titanium.ui.TableView.ScrollEndHandler::onScrollEnd(Lorg/urish/gwtit/titanium/ui/TableView/ScrollEndEvent;)(e); } );
+		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollEndHandler::onScrollEnd(Lorg/urish/gwtit/titanium/ui/events/ScrollEndEvent;)(e); } );
 	}-*/;
 
 }

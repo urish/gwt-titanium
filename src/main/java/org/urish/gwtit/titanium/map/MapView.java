@@ -257,22 +257,22 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addCompleteHandler(CompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/map/MapView/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.map.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/map/events/CompleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/map/MapView/ErrorEvent;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.map.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/map/events/ErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addLoadingHandler(LoadingHandler handler)
 	/*-{
-		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.LoadingHandler::onLoading(Lorg/urish/gwtit/titanium/map/MapView/LoadingEvent;)(e); } );
+		return this.addEventListener('loading', function(e) { handler.@org.urish.gwtit.titanium.map.events.LoadingHandler::onLoading(Lorg/urish/gwtit/titanium/map/events/LoadingEvent;)(e); } );
 	}-*/;
 
 	public final native void addRegionChangedHandler(RegionChangedHandler handler)
 	/*-{
-		return this.addEventListener('regionChanged', function(e) { handler.@org.urish.gwtit.titanium.map.MapView.RegionChangedHandler::onRegionChanged(Lorg/urish/gwtit/titanium/map/MapView/RegionChangedEvent;)(e); } );
+		return this.addEventListener('regionChanged', function(e) { handler.@org.urish.gwtit.titanium.map.events.RegionChangedHandler::onRegionChanged(Lorg/urish/gwtit/titanium/map/events/RegionChangedEvent;)(e); } );
 	}-*/;
 
 }

@@ -138,7 +138,7 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addClickHandler(ClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.OptionDialog.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/OptionDialog/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
 	}-*/;
 
 }

@@ -194,17 +194,17 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addBeforeLoadHandler(BeforeLoadHandler handler)
 	/*-{
-		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.BeforeLoadHandler::onBeforeLoad(Lorg/urish/gwtit/titanium/ui/WebView/BeforeLoadEvent;)(e); } );
+		return this.addEventListener('beforeload', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BeforeLoadHandler::onBeforeLoad(Lorg/urish/gwtit/titanium/ui/events/BeforeLoadEvent;)(e); } );
 	}-*/;
 
 	public final native void addErrorHandler(ErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/WebView/ErrorEvent;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/events/ErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.WebView.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/WebView/LoadEvent;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/events/LoadEvent;)(e); } );
 	}-*/;
 
 }

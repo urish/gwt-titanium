@@ -274,7 +274,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.Picker.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/Picker/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
 	}-*/;
 
 }

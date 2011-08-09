@@ -274,7 +274,7 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addChangeHandler(ChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.Slider.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/Slider/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
 	}-*/;
 
 }

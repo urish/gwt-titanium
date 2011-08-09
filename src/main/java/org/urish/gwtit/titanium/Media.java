@@ -1186,17 +1186,17 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	public static native void addLineChangeHandler(LineChangeHandler handler)
 	/*-{
-		return Titanium.Media.addEventListener('linechange', function(e) { handler.@org.urish.gwtit.titanium.Media.LineChangeHandler::onLineChange(Lorg/urish/gwtit/titanium/Media/LineChangeEvent;)(e); } );
+		return Titanium.Media.addEventListener('linechange', function(e) { handler.@org.urish.gwtit.titanium.events.LineChangeHandler::onLineChange(Lorg/urish/gwtit/titanium/events/LineChangeEvent;)(e); } );
 	}-*/;
 
 	public static native void addRecordingInputHandler(RecordingInputHandler handler)
 	/*-{
-		return Titanium.Media.addEventListener('recordinginput', function(e) { handler.@org.urish.gwtit.titanium.Media.RecordingInputHandler::onRecordingInput(Lorg/urish/gwtit/titanium/Media/RecordingInputEvent;)(e); } );
+		return Titanium.Media.addEventListener('recordinginput', function(e) { handler.@org.urish.gwtit.titanium.events.RecordingInputHandler::onRecordingInput(Lorg/urish/gwtit/titanium/events/RecordingInputEvent;)(e); } );
 	}-*/;
 
 	public static native void addVolumeHandler(VolumeHandler handler)
 	/*-{
-		return Titanium.Media.addEventListener('volume', function(e) { handler.@org.urish.gwtit.titanium.Media.VolumeHandler::onVolume(Lorg/urish/gwtit/titanium/Media/VolumeEvent;)(e); } );
+		return Titanium.Media.addEventListener('volume', function(e) { handler.@org.urish.gwtit.titanium.events.VolumeHandler::onVolume(Lorg/urish/gwtit/titanium/events/VolumeEvent;)(e); } );
 	}-*/;
 
 }

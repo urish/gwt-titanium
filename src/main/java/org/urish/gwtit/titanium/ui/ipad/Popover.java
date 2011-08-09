@@ -113,7 +113,7 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 
 	public final native void addHideHandler(HideHandler handler)
 	/*-{
-		return this.addEventListener('hide', function(e) { handler.@org.urish.gwtit.titanium.ui.ipad.Popover.HideHandler::onHide(Lorg/urish/gwtit/titanium/ui/ipad/Popover/HideEvent;)(e); } );
+		return this.addEventListener('hide', function(e) { handler.@org.urish.gwtit.titanium.ui.ipad.events.HideHandler::onHide(Lorg/urish/gwtit/titanium/ui/ipad/events/HideEvent;)(e); } );
 	}-*/;
 
 }
