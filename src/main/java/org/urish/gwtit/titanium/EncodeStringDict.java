@@ -21,10 +21,10 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Specification for {@link org.urish.gwtit.titanium.codec.encodestring}
+ * Options for {@link org.urish.gwtit.titanium.codec.encodestring}
  */
-public class EncodeStringSpec extends JavaScriptObject {
-	protected EncodeStringSpec() {
+public class EncodeStringDict extends JavaScriptObject {
+	protected EncodeStringDict() {
 	}
 
 	/**

@@ -21,44 +21,23 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Specification for {@link org.urish.gwtit.titanium.codec.encodenumber}
+ * Options for {@link org.urish.gwtit.titanium.codec.decodenumber}
  */
-public class EncodeNumberSpec extends JavaScriptObject {
-	protected EncodeNumberSpec() {
+public class DecodeNumberDict extends JavaScriptObject {
+	protected DecodeNumberDict() {
 	}
 
 	/**
-	 * Creates a new, empty instance of EncodeNumberSpec
+	 * @return The buffer to decode
 	 */
-	public static final native EncodeNumberSpec createEncodeNumberSpec()
-	/*-{
-		return {};
-	}-*/;
-
-	/**
-	 * @return The source number to encode
-	 */
-	public final native float getSource()
+	public final native org.urish.gwtit.titanium.Buffer getSource()
 	/*-{
 		return this.source;
 	}-*/;
 
-	public final native void setSource(float value)
+	public final native void setSource(org.urish.gwtit.titanium.Buffer value)
 	/*-{
 		this.source = value;
-	}-*/;
-
-	/**
-	 * @return The destination buffer
-	 */
-	public final native org.urish.gwtit.titanium.Buffer getDest()
-	/*-{
-		return this.dest;
-	}-*/;
-
-	public final native void setDest(org.urish.gwtit.titanium.Buffer value)
-	/*-{
-		this.dest = value;
 	}-*/;
 
 	/**
@@ -81,7 +60,7 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The position in dest to set the encoded data
+	 * @return The position in `source` to start at
 	 */
 	public final native float getPosition()
 	/*-{
@@ -94,7 +73,7 @@ public class EncodeNumberSpec extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The byte order to encode with
+	 * @return The byte order to decode with
 	 */
 	public final native float getByteOrder()
 	/*-{

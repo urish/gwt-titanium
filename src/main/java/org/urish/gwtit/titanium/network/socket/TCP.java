@@ -178,13 +178,13 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	 * be update to use the newly specified options object. throws an exception
 	 * if the socket is not in a listening state
 	 * 
-	 * @param params
-	 *            parameters that contain callbacks to be set on next accepted
+	 * @param options
+	 *            options that contain callbacks to be set on next accepted
 	 *            socket
 	 */
-	public final native void accept(org.urish.gwtit.titanium.AcceptParams params)
+	public final native void accept(org.urish.gwtit.titanium.AcceptDict options)
 	/*-{
-		return this.accept(params);
+		return this.accept(options);
 	}-*/;
 
 	/**

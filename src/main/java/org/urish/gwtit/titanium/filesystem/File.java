@@ -29,7 +29,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return Readonly returns the fully resolved native path
+	 * @return Returns the fully resolved native path
 	 */
 	public final native String getNativePath()
 	/*-{
@@ -117,7 +117,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return the file parent
 	 */
-	public final native String getParent()
+	public final native org.urish.gwtit.titanium.filesystem.File getParent()
 	/*-{
 		return this.getParent();
 	}-*/;

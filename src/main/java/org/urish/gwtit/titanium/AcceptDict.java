@@ -23,21 +23,14 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Parameters that contain callbacks to be set on next accepted socket.
+ * Options for {@link org.urish.gwtit.titanium.network.socket.tcp.accept} that
+ * contain callbacks to be set on the next accepted socket.
  * 
  * @since 1.7
  */
-public class AcceptParams extends JavaScriptObject {
-	protected AcceptParams() {
+public class AcceptDict extends JavaScriptObject {
+	protected AcceptDict() {
 	}
-
-	/**
-	 * Creates a new, empty instance of AcceptParams
-	 */
-	public static final native AcceptParams createAcceptParams()
-	/*-{
-		return {};
-	}-*/;
 
 	/**
 	 * @return The timeout for connect() and all i/o write() operations. cannot
