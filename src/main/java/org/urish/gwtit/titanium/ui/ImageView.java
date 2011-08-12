@@ -134,17 +134,27 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		this.hires = value;
 	}-*/;
 
+	public final native void setImage(String value)
+	/*-{
+		this.image = value;
+	}-*/;
+
+	public final native void setImage(org.urish.gwtit.titanium.Blob value)
+	/*-{
+		this.image = value;
+	}-*/;
+
+	public final native void setImage(org.urish.gwtit.titanium.filesystem.File value)
+	/*-{
+		this.image = value;
+	}-*/;
+
 	/**
 	 * @return Image to display either as string url, blob or file
 	 */
 	public final native JavaScriptObject getImage()
 	/*-{
 		return this.image;
-	}-*/;
-
-	public final native void setImage(JavaScriptObject value)
-	/*-{
-		this.image = value;
 	}-*/;
 
 	/**
