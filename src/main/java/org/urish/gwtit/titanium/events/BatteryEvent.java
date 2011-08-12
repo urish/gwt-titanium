@@ -33,7 +33,7 @@ public class BatteryEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new battery state
 	 */
-	public final native Object getState()
+	public final native int getState()
 	/*-{
 		return this.state;
 	}-*/;
@@ -41,7 +41,7 @@ public class BatteryEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new battery level
 	 */
-	public final native Object getLevel()
+	public final native float getLevel()
 	/*-{
 		return this.level;
 	}-*/;

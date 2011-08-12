@@ -33,7 +33,7 @@ public class ThumbnailEvent extends TouchEvent {
 	/**
 	 * boolean to indicate success or failure
 	 */
-	public final native Object getSuccess()
+	public final native boolean getSuccess()
 	/*-{
 		return this.success;
 	}-*/;
@@ -41,7 +41,7 @@ public class ThumbnailEvent extends TouchEvent {
 	/**
 	 * blob of the thumbnail image
 	 */
-	public final native Object getImage()
+	public final native org.urish.gwtit.titanium.Blob getImage()
 	/*-{
 		return this.image;
 	}-*/;
@@ -49,7 +49,7 @@ public class ThumbnailEvent extends TouchEvent {
 	/**
 	 * time
 	 */
-	public final native Object getTime()
+	public final native float getTime()
 	/*-{
 		return this.time;
 	}-*/;
@@ -57,7 +57,7 @@ public class ThumbnailEvent extends TouchEvent {
 	/**
 	 * if success is `false`, error message as string for reason
 	 */
-	public final native Object getError()
+	public final native String getError()
 	/*-{
 		return this.error;
 	}-*/;

@@ -36,7 +36,7 @@ public class UpdatedServicesEvent extends AbstractTitaniumEvent {
 	 * aware that it could become out of date at any time due to the
 	 * asynchronous nature of Bonjour service discovery.
 	 */
-	public final native Object getServices()
+	public final native org.urish.gwtit.titanium.network.BonjourService[] getServices()
 	/*-{
 		return this.services;
 	}-*/;

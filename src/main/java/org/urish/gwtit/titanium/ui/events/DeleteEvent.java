@@ -33,7 +33,7 @@ public class DeleteEvent extends TouchEvent {
 	/**
 	 * table view row index
 	 */
-	public final native Object getIndex()
+	public final native int getIndex()
 	/*-{
 		return this.index;
 	}-*/;
@@ -41,7 +41,7 @@ public class DeleteEvent extends TouchEvent {
 	/**
 	 * table view section object
 	 */
-	public final native Object getSection()
+	public final native org.urish.gwtit.titanium.ui.TableViewSection getSection()
 	/*-{
 		return this.section;
 	}-*/;
@@ -49,7 +49,7 @@ public class DeleteEvent extends TouchEvent {
 	/**
 	 * boolean to indicate if the right area was clicked
 	 */
-	public final native Object getDetail()
+	public final native boolean getDetail()
 	/*-{
 		return this.detail;
 	}-*/;
@@ -57,7 +57,7 @@ public class DeleteEvent extends TouchEvent {
 	/**
 	 * boolean to indicate if the table is in search mode
 	 */
-	public final native Object getSearchMode()
+	public final native boolean getSearchMode()
 	/*-{
 		return this.searchMode;
 	}-*/;
@@ -73,7 +73,7 @@ public class DeleteEvent extends TouchEvent {
 	/**
 	 * table view row object
 	 */
-	public final native Object getRow()
+	public final native org.urish.gwtit.titanium.ui.TableViewRow getRow()
 	/*-{
 		return this.row;
 	}-*/;

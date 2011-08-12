@@ -269,6 +269,7 @@ def mapTypes(s, withConsts = False):
 		"Font": "org.urish.gwtit.client.font.Font",
 		"$Point": "org.urish.gwtit.client.util.Point",
 		"$Size": "org.urish.gwtit.client.util.Size",
+		"$Range": "org.urish.gwtit.client.util.Range",
 	}
 	if s in TYPE_MAP.keys():
 		return TYPE_MAP[s]

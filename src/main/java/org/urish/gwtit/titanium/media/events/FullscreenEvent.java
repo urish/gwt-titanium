@@ -34,7 +34,7 @@ public class FullscreenEvent extends TouchEvent {
 	 * true to indicate entering fullscreen, false to indicate leaving
 	 * fullscreen
 	 */
-	public final native Object getEntering()
+	public final native boolean getEntering()
 	/*-{
 		return this.entering;
 	}-*/;

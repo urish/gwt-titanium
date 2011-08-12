@@ -36,7 +36,7 @@ public class CompleteEvent extends TouchEvent {
 	 * <Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ERROR> or
 	 * <Titanium.Media.VIDEO_FINISH_REASON_USER_EXITED>.
 	 */
-	public final native Object getReason()
+	public final native int getReason()
 	/*-{
 		return this.reason;
 	}-*/;

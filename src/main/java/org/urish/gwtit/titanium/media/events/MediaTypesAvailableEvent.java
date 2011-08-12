@@ -33,7 +33,7 @@ public class MediaTypesAvailableEvent extends TouchEvent {
 	/**
 	 * media types
 	 */
-	public final native Object getMediaTypes()
+	public final native int getMediaTypes()
 	/*-{
 		return this.mediaTypes;
 	}-*/;

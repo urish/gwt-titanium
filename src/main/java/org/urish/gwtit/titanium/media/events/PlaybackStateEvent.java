@@ -33,7 +33,7 @@ public class PlaybackStateEvent extends TouchEvent {
 	/**
 	 * playbackState
 	 */
-	public final native Object getPlaybackState()
+	public final native int getPlaybackState()
 	/*-{
 		return this.playbackState;
 	}-*/;

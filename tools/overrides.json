@@ -142,7 +142,9 @@
 		]
 	},
 	"Titanium.Media.VideoPlayer": {
-		"events[name='loadstate'] javaName": "LoadState"
+		"events[name='loadstate'] javaName": "LoadState",
+		"events[name='naturalSizeAvailable'] properties[name='naturalSize'] type": "$Size",
+		"properties[name='naturalSize'] type": "$Size"
 	},
 	"Titanium.Network.HTTPClient": {
 		"methods[name='send'] parameters[name='data'] optional": true
@@ -153,6 +155,9 @@
 	"Titanium.UI.Button": {
 		"properties[name='font'] type": "Font"
 	},
+	"Titanium.UI.DashboardItem": {
+		"events[name='click'] properties[name='location'] type": "$Point"
+	},
 	"Titanium.UI.Label": {
 		"properties[name='font'] type": "Font"
 	},
@@ -162,6 +167,10 @@
 	"Titanium.UI.ProgressBar": {
 		"properties[name='font'] type": "Font"
 	},
+	"Titanium.UI.Slider": {
+		"events[name='change'] properties[name='thumbSize'] type": "$Size",
+		"events[name='change'] properties[name='thumbOffset'] type": "$Point"
+	},
 	"Titanium.UI.Tab": {
 		"methods": [
 			{"name": "open", "parameters": [{"name": "view", "type": "Titanium.UI.View", "description": "The view to open in the tab"}]}
@@ -169,6 +178,17 @@
 	},
 	"Titanium.UI.TabGroup": {
 		"properties[name='activeTab'] type": "Titanium.UI.Tab"
+	},
+	"Titanium.UI.TableView": {
+		"events[name='scroll'] properties[name='contentOffset'] type": "$Point",
+		"events[name='scroll'] properties[name='contentSize'] type": "$Size",
+		"events[name='scroll'] properties[name='size'] type": "$Size",
+		"events[name='scrollEnd'] properties[name='contentOffset'] type": "$Point",
+		"events[name='scrollEnd'] properties[name='contentSize'] type": "$Size",
+		"events[name='scrollEnd'] properties[name='size'] type": "$Size"
+	},
+	"Titanium.UI.TextArea": {
+		"events[name='selected'] properties[name='range'] type": "$Range"
 	},
 	"Titanium.UI.View": {
 		"methods[name='add'] parameters[name='view'] type": "Titanium.UI.View",

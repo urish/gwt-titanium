@@ -33,7 +33,7 @@ public class VolumeEvent extends AbstractTitaniumEvent {
 	/**
 	 * float of the new volume in dB
 	 */
-	public final native Object getVolume()
+	public final native float getVolume()
 	/*-{
 		return this.volume;
 	}-*/;

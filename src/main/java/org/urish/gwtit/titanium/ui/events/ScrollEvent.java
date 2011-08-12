@@ -33,7 +33,7 @@ public class ScrollEvent extends TouchEvent {
 	/**
 	 * the row index of the topmost visible row in the view (Android only)
 	 */
-	public final native Object getFirstVisibleItem()
+	public final native int getFirstVisibleItem()
 	/*-{
 		return this.firstVisibleItem;
 	}-*/;
@@ -41,7 +41,7 @@ public class ScrollEvent extends TouchEvent {
 	/**
 	 * the number of rows currently visible in the view (Android only)
 	 */
-	public final native Object getVisibleItemCount()
+	public final native int getVisibleItemCount()
 	/*-{
 		return this.visibleItemCount;
 	}-*/;
@@ -50,7 +50,7 @@ public class ScrollEvent extends TouchEvent {
 	 * dictionary with `x` and `y` properties containing the content offset (iOS
 	 * only)
 	 */
-	public final native Object getContentOffset()
+	public final native org.urish.gwtit.client.util.Point getContentOffset()
 	/*-{
 		return this.contentOffset;
 	}-*/;
@@ -58,7 +58,7 @@ public class ScrollEvent extends TouchEvent {
 	/**
 	 * the total number of rows in the view (Android only)
 	 */
-	public final native Object getTotalItemCount()
+	public final native int getTotalItemCount()
 	/*-{
 		return this.totalItemCount;
 	}-*/;
@@ -68,7 +68,7 @@ public class ScrollEvent extends TouchEvent {
 	 * the content (regardless of the display size in the case of scrolling)
 	 * (iOS only)
 	 */
-	public final native Object getContentSize()
+	public final native org.urish.gwtit.client.util.Size getContentSize()
 	/*-{
 		return this.contentSize;
 	}-*/;
@@ -77,7 +77,7 @@ public class ScrollEvent extends TouchEvent {
 	 * dictionary with `width` and `height` properties containing the size of
 	 * the visible table view
 	 */
-	public final native Object getSize()
+	public final native org.urish.gwtit.client.util.Size getSize()
 	/*-{
 		return this.size;
 	}-*/;

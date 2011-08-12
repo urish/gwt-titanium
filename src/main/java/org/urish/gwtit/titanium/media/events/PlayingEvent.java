@@ -33,7 +33,7 @@ public class PlayingEvent extends TouchEvent {
 	/**
 	 * url of the media
 	 */
-	public final native Object getUrl()
+	public final native String getUrl()
 	/*-{
 		return this.url;
 	}-*/;

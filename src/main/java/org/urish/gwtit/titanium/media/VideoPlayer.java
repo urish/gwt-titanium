@@ -226,12 +226,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *         returns the natural size of the movie or 0 for both properties if
 	 *         not known or applicable.
 	 */
-	public final native Object getNaturalSize()
+	public final native org.urish.gwtit.client.util.Size getNaturalSize()
 	/*-{
 		return this.naturalSize;
 	}-*/;
 
-	public final native void setNaturalSize(Object value)
+	public final native void setNaturalSize(org.urish.gwtit.client.util.Size value)
 	/*-{
 		this.naturalSize = value;
 	}-*/;

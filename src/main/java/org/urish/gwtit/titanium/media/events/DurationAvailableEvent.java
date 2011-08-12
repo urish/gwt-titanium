@@ -33,7 +33,7 @@ public class DurationAvailableEvent extends TouchEvent {
 	/**
 	 * duration
 	 */
-	public final native Object getDuration()
+	public final native float getDuration()
 	/*-{
 		return this.duration;
 	}-*/;

@@ -28,6 +28,7 @@
 		"properties[name='POPOVER_ARROW_DIRECTION_UP'] type": "int"
 	},
 	"Titanium.UI.EmailDialog": {
+		"events[name='complete'] properties[name='result'] type": "int",
 		"properties[name='CANCELLED'] type": "int",
 		"properties[name='FAILED'] type": "int",
 		"properties[name='SAVED'] type": "int",
@@ -39,10 +40,13 @@
 		"properties[name='MODE_WRITE'] type": "int"
 	},
 	"Titanium.UI.CoverFlowView": {
+		"events[name='change'] properties[name='index'] type": "int",
+		"events[name='change'] properties[name='previous'] type": "int",
 		"methods[name='setImage'] parameters[name='index'] type": "int",
 		"properties[name='selected'] type": "int"
 	},
 	"Titanium.UI.ScrollableView": {
+		"events[name='scroll'] properties[name='currentPage'] type": "int",
 		"properties[name='cacheSize'] type": "int",
 		"properties[name='currentPage'] type": "int",
 		"properties[name='maxZoomScale'] type": "float",
@@ -50,6 +54,11 @@
 		"properties[name='pagingControlHeight'] type": "float"
 	},
 	"Titanium.Media.VideoPlayer": {
+		"events[name='complete'] properties[name='reason'] type": "int",
+		"events[name='loadstate'] properties[name='loadState'] type": "int",
+		"events[name='mediaTypesAvailable'] properties[name='mediaTypes'] type": "int",
+		"events[name='playbackState'] properties[name='playbackState'] type": "int",
+		"events[name='sourceChange'] properties[name='sourceType'] type": "int",
 		"methods[name='requestThumbnailImagesAtTimes'] parameters[name='option'] type": "int",
 		"methods[name='thumbnailImageAtTime'] parameters[name='time'] type": "double",
 		"methods[name='thumbnailImageAtTime'] parameters[name='option'] type": "int",
@@ -72,6 +81,7 @@
 		"properties[name='PLAIN'] type": "int"
 	},
 	"Titanium.UI.ImageView": {
+		"events[name='change'] properties[name='index'] type": "int",
 		"properties[name='decodeRetries'] type": "int",
 		"properties[name='duration'] type": "float",
 		"properties[name='repeatCount'] type": "int"
@@ -398,6 +408,11 @@
 		"properties[name='rowsAffected'] type": "int"
 	},
 	"Titanium.UI.TableView": {
+		"events[name='delete'] properties[name='index'] type": "int",
+		"events[name='move'] properties[name='index'] type": "int",
+		"events[name='scroll'] properties[name='firstVisibleItem'] type": "int",
+		"events[name='scroll'] properties[name='visibleItemCount'] type": "int",
+		"events[name='scroll'] properties[name='totalItemCount'] type": "int",
 		"methods[name='deleteRow'] parameters[name='row'] type": "int",
 		"methods[name='deselectRow'] parameters[name='row'] type": "int",
 		"methods[name='insertRowAfter'] parameters[name='index'] type": "int",
@@ -419,6 +434,7 @@
 		"properties[name='volume'] type": "float"
 	},
 	"Titanium.UI.AlertDialog": {
+		"events[name='click'] properties[name='index'] type": "int",
 		"properties[name='cancel'] type": "int"
 	},
 	"Titanium.Geolocation": {
@@ -463,6 +479,9 @@
 		"properties[name='zIndex'] type": "int"
 	},
 	"Titanium.UI.OptionDialog": {
+		"events[name='click'] properties[name='index'] type": "int",
+		"events[name='click'] properties[name='cancel'] type": "int",
+		"events[name='click'] properties[name='destructive'] type": "int",
 		"properties[name='cancel'] type": "int",
 		"properties[name='destructive'] type": "int",
 		"properties[name='selectedIndex'] type": "int"
@@ -507,6 +526,7 @@
 		"properties[name='NONE'] type": "int"
 	},
 	"Titanium.Network": {
+		"events[name='change'] properties[name='networkType'] type": "int",
 		"methods[name='createTCPSocket'] parameters[name='port'] type": "int",
 		"methods[name='createTCPSocket'] parameters[name='mode'] type": "int",
 		"properties[name='NETWORK_LAN'] type": "int",
@@ -539,6 +559,8 @@
 		"properties[name='timeout'] type": "int"
 	},
 	"Titanium.UI.Picker": {
+		"events[name='change'] properties[name='columnIndex'] type": "int",
+		"events[name='change'] properties[name='rowIndex'] type": "int",
 		"methods[name='getSelectedRow'] parameters[name='index'] type": "int",
 		"methods[name='setSelectedRow'] parameters[name='column'] type": "int",
 		"methods[name='setSelectedRow'] parameters[name='row'] type": "int",
@@ -569,6 +591,7 @@
 		"properties[name='TOP_RATED'] type": "int"
 	},
 	"Titanium.Platform": {
+		"events[name='battery'] properties[name='state'] type": "int",
 		"properties[name='BATTERY_STATE_CHARGING'] type": "int",
 		"properties[name='BATTERY_STATE_FULL'] type": "int",
 		"properties[name='BATTERY_STATE_UNKNOWN'] type": "int",

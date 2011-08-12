@@ -33,7 +33,7 @@ public class NaturalSizeAvailableEvent extends TouchEvent {
 	/**
 	 * natural size as a dictionary. see `naturalSize` property.
 	 */
-	public final native Object getNaturalSize()
+	public final native org.urish.gwtit.client.util.Size getNaturalSize()
 	/*-{
 		return this.naturalSize;
 	}-*/;

@@ -34,7 +34,7 @@ public class SelectedEvent extends TouchEvent {
 	 * the range of text. range is an object with the properties `location` and
 	 * `length`.
 	 */
-	public final native Object getRange()
+	public final native org.urish.gwtit.client.util.Range getRange()
 	/*-{
 		return this.range;
 	}-*/;

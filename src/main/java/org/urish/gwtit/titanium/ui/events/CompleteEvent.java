@@ -35,7 +35,7 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	 * result will be SENT even if user discards or saves the message. SAVED and
 	 * CANCELLED are not supported on Android.)
 	 */
-	public final native Object getResult()
+	public final native int getResult()
 	/*-{
 		return this.result;
 	}-*/;
@@ -43,7 +43,7 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	/**
 	 * boolean to indicate if the email was successfully sent
 	 */
-	public final native Object getSuccess()
+	public final native boolean getSuccess()
 	/*-{
 		return this.success;
 	}-*/;
@@ -51,7 +51,7 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	/**
 	 * string message of the error or null if successfully sent
 	 */
-	public final native Object getError()
+	public final native String getError()
 	/*-{
 		return this.error;
 	}-*/;

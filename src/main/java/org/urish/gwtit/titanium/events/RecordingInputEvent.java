@@ -33,7 +33,7 @@ public class RecordingInputEvent extends AbstractTitaniumEvent {
 	/**
 	 * bool indicating availability of recording device
 	 */
-	public final native Object getAvailable()
+	public final native boolean getAvailable()
 	/*-{
 		return this.available;
 	}-*/;

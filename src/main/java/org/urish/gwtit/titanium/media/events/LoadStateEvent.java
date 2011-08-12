@@ -33,7 +33,7 @@ public class LoadStateEvent extends TouchEvent {
 	/**
 	 * loadState
 	 */
-	public final native Object getLoadState()
+	public final native int getLoadState()
 	/*-{
 		return this.loadState;
 	}-*/;

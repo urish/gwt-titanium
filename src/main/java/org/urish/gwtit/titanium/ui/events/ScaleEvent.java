@@ -33,7 +33,7 @@ public class ScaleEvent extends TouchEvent {
 	/**
 	 * the new scale as a float
 	 */
-	public final native Object getScale()
+	public final native float getScale()
 	/*-{
 		return this.scale;
 	}-*/;

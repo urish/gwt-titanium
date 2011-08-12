@@ -34,7 +34,7 @@ public class ScrollEndEvent extends TouchEvent {
 	 * dictionary with `x` and `y` properties containing the content offset (iOS
 	 * only)
 	 */
-	public final native Object getContentOffset()
+	public final native org.urish.gwtit.client.util.Point getContentOffset()
 	/*-{
 		return this.contentOffset;
 	}-*/;
@@ -44,7 +44,7 @@ public class ScrollEndEvent extends TouchEvent {
 	 * the content (regardless of the display size in the case of scrolling)
 	 * (iOS only)
 	 */
-	public final native Object getContentSize()
+	public final native org.urish.gwtit.client.util.Size getContentSize()
 	/*-{
 		return this.contentSize;
 	}-*/;
@@ -53,7 +53,7 @@ public class ScrollEndEvent extends TouchEvent {
 	 * dictionary with `width` and `height` properties containing the size of
 	 * the visible table view
 	 */
-	public final native Object getSize()
+	public final native org.urish.gwtit.client.util.Size getSize()
 	/*-{
 		return this.size;
 	}-*/;

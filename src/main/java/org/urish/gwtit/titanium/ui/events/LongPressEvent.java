@@ -18,32 +18,16 @@
 
 package org.urish.gwtit.titanium.ui.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+import org.urish.gwtit.client.event.TouchEvent;
 
 /**
  * 
  */
-public class LongPressEvent extends AbstractTitaniumEvent {
+public class LongPressEvent extends TouchEvent {
 
 	public final static String NATIVE_EVENT_NAME = "longpress";
 
 	protected LongPressEvent() {
 	}
-
-	/**
-	 * the y point of the event, in receiving view coordinates
-	 */
-	public final native Object getY()
-	/*-{
-		return this.y;
-	}-*/;
-
-	/**
-	 * the x point of the event in receiving view coordinates
-	 */
-	public final native Object getX()
-	/*-{
-		return this.x;
-	}-*/;
 
 }

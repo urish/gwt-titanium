@@ -33,9 +33,9 @@ public class SourceChangeEvent extends TouchEvent {
 	/**
 	 * the new sourceType
 	 */
-	public final native Object getSourceChange()
+	public final native int getSourceType()
 	/*-{
-		return this.sourceChange;
+		return this.sourceType;
 	}-*/;
 
 }

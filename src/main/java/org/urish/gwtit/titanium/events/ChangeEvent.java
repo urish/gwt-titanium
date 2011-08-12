@@ -33,7 +33,7 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new network type as a string
 	 */
-	public final native Object getNetworkTypeName()
+	public final native String getNetworkTypeName()
 	/*-{
 		return this.networkTypeName;
 	}-*/;
@@ -41,7 +41,7 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	/**
 	 * boolean to indicate if the network is online
 	 */
-	public final native Object getOnline()
+	public final native boolean getOnline()
 	/*-{
 		return this.online;
 	}-*/;
@@ -49,7 +49,7 @@ public class ChangeEvent extends AbstractTitaniumEvent {
 	/**
 	 * the new network type
 	 */
-	public final native Object getNetworkType()
+	public final native int getNetworkType()
 	/*-{
 		return this.networkType;
 	}-*/;

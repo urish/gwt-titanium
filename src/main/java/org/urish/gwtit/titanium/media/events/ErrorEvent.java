@@ -33,7 +33,7 @@ public class ErrorEvent extends TouchEvent {
 	/**
 	 * reason for error as string
 	 */
-	public final native Object getMessage()
+	public final native String getMessage()
 	/*-{
 		return this.message;
 	}-*/;

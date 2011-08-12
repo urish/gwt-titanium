@@ -33,7 +33,7 @@ public class ResumeEvent extends AbstractTitaniumEvent {
 	/**
 	 * boolean to indicate if the resume was from an interruption
 	 */
-	public final native Object getInterruption()
+	public final native boolean getInterruption()
 	/*-{
 		return this.interruption;
 	}-*/;

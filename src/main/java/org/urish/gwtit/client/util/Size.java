@@ -1,6 +1,8 @@
 package org.urish.gwtit.client.util;
 
-public class Size {
+import com.google.gwt.core.client.JavaScriptObject;
+
+public class Size extends JavaScriptObject {
 	protected Size() {
 	}
 	

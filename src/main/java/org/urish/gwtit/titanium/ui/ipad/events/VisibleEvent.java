@@ -34,7 +34,7 @@ public class VisibleEvent extends TouchEvent {
 	 * for `view` view type, the button that is automatically wired to control
 	 * the master view popover
 	 */
-	public final native Object getButton()
+	public final native org.urish.gwtit.titanium.ui.Button getButton()
 	/*-{
 		return this.button;
 	}-*/;
@@ -42,7 +42,7 @@ public class VisibleEvent extends TouchEvent {
 	/**
 	 * for either `popover` or `detail` view types, the popover instance
 	 */
-	public final native Object getPopover()
+	public final native org.urish.gwtit.titanium.ui.View getPopover()
 	/*-{
 		return this.popover;
 	}-*/;
@@ -51,7 +51,7 @@ public class VisibleEvent extends TouchEvent {
 	 * the type of view becoming visible. either `master`, `popover` or
 	 * `detail`.
 	 */
-	public final native Object getView()
+	public final native String getView()
 	/*-{
 		return this.view;
 	}-*/;
