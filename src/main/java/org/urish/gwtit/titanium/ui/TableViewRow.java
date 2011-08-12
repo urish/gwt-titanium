@@ -70,6 +70,20 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return Whether or not the row can be deleted
+	 * @platforms iphone, ipad
+	 */
+	public final native boolean getEditable()
+	/*-{
+		return this.editable;
+	}-*/;
+
+	public final native void setEditable(boolean value)
+	/*-{
+		this.editable = value;
+	}-*/;
+
+	/**
 	 * @return Render a system provided check mark in the right image area of
 	 *         the row cell
 	 */

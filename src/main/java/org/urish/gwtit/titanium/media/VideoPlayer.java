@@ -96,6 +96,20 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return The current playback time of the now playing item in seconds.
+	 * @platforms iphone, ipad
+	 */
+	public final native float getCurrentPlaybackTime()
+	/*-{
+		return this.currentPlaybackTime;
+	}-*/;
+
+	public final native void setCurrentPlaybackTime(float value)
+	/*-{
+		this.currentPlaybackTime = value;
+	}-*/;
+
+	/**
 	 * @return The duration of the movie, or 0.0 if not known.
 	 */
 	public final native double getDuration()

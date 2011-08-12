@@ -29,11 +29,6 @@ import org.urish.gwtit.titanium.media.events.ResumeHandler;
  * basic sounds. the sound object loads the entire media resource in memory
  * before playing. if you need to support streaming, use the
  * {@link org.urish.gwtit.titanium.media.createaudioplayer} api.
- * <p>
- * Notes: You can pass the property `preload` in the constructor as an object
- * property to cause the audio to be preloaded before `play` is invoked. For
- * larger audio files, this is recommended if you want the audio to begin
- * immediately when invoking `play`.
  * 
  * @since 0.8
  */
@@ -147,6 +142,22 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 	public final native void setVolume(float value)
 	/*-{
 		this.volume = value;
+	}-*/;
+
+	/**
+	 * @return Causes the audio to be preloaded before `play` is invoked.
+	 *         recommended if you want the audio to begin immediately when
+	 *         invoking `play`.
+	 * @platforms iphone, ipad
+	 */
+	public final native boolean getPreload()
+	/*-{
+		return this.preload;
+	}-*/;
+
+	public final native void setPreload(boolean value)
+	/*-{
+		this.preload = value;
 	}-*/;
 
 	/**

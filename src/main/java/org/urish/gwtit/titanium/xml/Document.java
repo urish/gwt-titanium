@@ -26,6 +26,11 @@ import com.google.gwt.core.client.JavaScriptObject;
  * {@link org.urish.gwtit.titanium.xml.parse}. implements the [dom level 2
  * api](http
  * ://www.w3.org/tr/2000/rec-dom-level-2-core-20001113/core.html#i-document).
+ * <p>
+ * Notes: As of version 3.1, Android still does not truly support DTDs. A
+ * document with a DTD can be parsed, however it is not validated, none of its
+ * default attributes will automatically be put into the tree, etc. [Google is
+ * aware of the issue](http://code.google.com/p/android/issues/detail?id=7395).
  * 
  * @since 0.9
  */
@@ -35,7 +40,8 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return An interface to the list of entities that are defined for the
-	 *         document, such as via a document type definition (dtd).
+	 *         document, such as via a document type definition (dtd). see note
+	 *         about android and dtds.
 	 */
 	public final native org.urish.gwtit.titanium.xml.DocumentType getDoctype()
 	/*-{
