@@ -10,7 +10,7 @@ public abstract class AbstractTitaniumEvent extends JavaScriptObject implements 
 	/**
 	 * the source object that fired the event
 	 */
-	public final native Object getSource()
+	public final native JavaScriptObject getSource()
 	/*-{
 		return this.source;
 	}-*/;
