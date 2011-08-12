@@ -49,6 +49,9 @@
 			{"name": "result", "type": "String", "description": "the data returned by Facebook"}
 		]
 	},
+	"Titanium.Filesystem.File": {
+		"methods[name='getParent'] methodBody": "var x=this.getParent(); return (typeof x=='string')?Titanium.Filesystem.getFile(x):x;"
+	},
 	"Titanium.Geolocation": {
 		"methods[name='forwardGeocoder'] parameters[name='callback'] type": "Callback<Titanium.Geolocation.Place>",
 		"methods[name='getCurrentHeading'] parameters[name='callback'] type": "Callback<Event<Titanium.Geolocation.heading>>",

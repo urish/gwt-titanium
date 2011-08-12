@@ -454,10 +454,9 @@ def generateFactories(typeInfo, types):
 			factoryName = 'create' + candidate['name'].split(".")[-1]
 			duplicate = False
 			readonly = 'readonly' in candidate and candidate['readonly'] 
-			if 'methods' in typeInfo:
-				for method in typeInfo['methods']:
-					if method['name'] == factoryName:
-						duplicate = True
+			for method in typeInfo.get('methods', []):
+				if method['name'] == factoryName:
+					duplicate = True
 			if not duplicate and not readonly:
 				result += FACTORY_TEMPLATE % {
 					'type': typeName,
@@ -493,11 +492,10 @@ def generateMethods(type, isSingleton, types):
 				methods.extend(ancestor['methods'])
 	for method in methods:
 		duplicate = False
-		if 'properties' in type:
-			for property in type['properties']:
-				propName = capitalFirst(property['name'])
-				if method['name'] in ["get" + propName, "set" + propName]:
-					duplicate = True
+		for property in type.get('properties', []):
+			propName = capitalFirst(property['name'])
+			if method['name'] in ["get" + propName, "set" + propName]:
+				duplicate = True
 		if duplicate:
 			continue
 		returnType = "void"
@@ -511,14 +509,13 @@ def generateMethods(type, isSingleton, types):
 			foundInAncetors = False
 			if not isSingleton:
 				for ancestor in ancestors(type, types):
-					if 'methods' in ancestor:
-						for candidate in ancestor['methods']:
-							if method['name'] == candidate['name']:
-								for candidateParams, _ in methodPermutations(candidate):
-									if candidateParams == params:
-										foundInAncetors = True
+					for candidate in ancestor.get('methods', []):
+						if method['name'] == candidate['name']:
+							for candidateParams, _ in methodPermutations(candidate):
+								if candidateParams == params:
+									foundInAncetors = True
 			if not foundInAncetors:
-				result += template % {
+				methodCode = template % {
 					'module': type['name'],
 					'name': mapMethodNames(method['name']),
 					'nativeName': method['name'],
@@ -527,6 +524,10 @@ def generateMethods(type, isSingleton, types):
 					'paramNames': ", ".join(paramNames),
 					'return': mapTypes(returnType),
 				}
+				methodBody = method.get('methodBody', None)
+				if methodBody:
+					methodCode = re.sub(r"return\s.+;", methodBody, methodCode)
+				result += methodCode
 	return result
 	
 def capitalEventName(eventName):

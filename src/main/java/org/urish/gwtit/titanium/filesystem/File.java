@@ -119,7 +119,7 @@ public class File extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native org.urish.gwtit.titanium.filesystem.File getParent()
 	/*-{
-		return this.getParent();
+		var x=this.getParent(); return (typeof x=='string')?Titanium.Filesystem.getFile(x):x;
 	}-*/;
 
 	/**
