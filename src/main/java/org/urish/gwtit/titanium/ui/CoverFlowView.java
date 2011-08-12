@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The cover flow view is container for showing animated, three dimensional
  * images in a nice ui. the cover flow view is created by the method
@@ -37,12 +39,12 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Array of images to display in the view
 	 */
-	public final native Object[] getImages()
+	public final native JavaScriptObject[] getImages()
 	/*-{
 		return this.images;
 	}-*/;
 
-	public final native void setImages(Object[] value)
+	public final native void setImages(JavaScriptObject[] value)
 	/*-{
 		this.images = value;
 	}-*/;
@@ -73,7 +75,7 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 	 *            at that size). If passed as a TiFile or URL, will perform a
 	 *            check for '@2x' on Retina displays
 	 */
-	public final native void setImage(int index, Object image)
+	public final native void setImage(int index, JavaScriptObject image)
 	/*-{
 		return this.setImage(index, image);
 	}-*/;

@@ -49,7 +49,7 @@ public class MediaQueryInfoType extends JavaScriptObject {
 	 * @return The value for the given predicate. see the descriptions in for
 	 *         information about which properties require which values.
 	 */
-	public final native Object getValue()
+	public final native JavaScriptObject getValue()
 	/*-{
 		return this.value;
 	}-*/;

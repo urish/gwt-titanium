@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui.events;
 
 import org.urish.gwtit.client.event.TouchEvent;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * 
  */
@@ -65,7 +67,7 @@ public class MoveEvent extends TouchEvent {
 	/**
 	 * table view row data object
 	 */
-	public final native Object getRowData()
+	public final native JavaScriptObject getRowData()
 	/*-{
 		return this.rowData;
 	}-*/;

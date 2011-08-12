@@ -210,12 +210,12 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *         application. only available on iphone.
 	 * @platforms iphone, ipad
 	 */
-	public static native Object[] getRemoteNotificationTypes()
+	public static native int[] getRemoteNotificationTypes()
 	/*-{
 		return Titanium.Network.remoteNotificationTypes;
 	}-*/;
 
-	public static native void setRemoteNotificationTypes(Object[] value)
+	public static native void setRemoteNotificationTypes(int[] value)
 	/*-{
 		Titanium.Network.remoteNotificationTypes = value;
 	}-*/;
@@ -388,7 +388,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *            {@link org.urish.gwtit.titanium.network.TCPSocket}
 	 */
 	public static native org.urish.gwtit.titanium.network.TCPSocket createTCPSocket(String hostName, int port,
-			int mode, Object parameters)
+			int mode, JavaScriptObject parameters)
 	/*-{
 		return Titanium.Network.createTCPSocket(hostName, port, mode, parameters);
 	}-*/;
@@ -429,7 +429,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 *            invoked upon receiving a new push notification. This method
 	 *            should be called at application startup.
 	 */
-	public static native void registerForPushNotifications(Object config)
+	public static native void registerForPushNotifications(JavaScriptObject config)
 	/*-{
 		return Titanium.Network.registerForPushNotifications(config);
 	}-*/;
@@ -473,7 +473,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Network.fireEvent(name, event);
 	}-*/;

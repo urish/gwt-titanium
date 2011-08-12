@@ -23,6 +23,8 @@ import org.urish.gwtit.titanium.ui.events.MoveHandler;
 import org.urish.gwtit.titanium.ui.events.ScrollEndHandler;
 import org.urish.gwtit.titanium.ui.events.ScrollHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A table view allows you to create a scrollable table of content in a
  * list-based fashion. the table view is created by the method
@@ -66,12 +68,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The data array of objects to be used for the rows of the table
 	 *         view
 	 */
-	public final native Object[] getData()
+	public final native JavaScriptObject[] getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public final native void setData(Object[] value)
+	public final native void setData(JavaScriptObject[] value)
 	/*-{
 		this.data = value;
 	}-*/;
@@ -150,12 +152,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The table view footer as a view that will be rendered instead of
 	 *         a label
 	 */
-	public final native Object getFooterView()
+	public final native JavaScriptObject getFooterView()
 	/*-{
 		return this.footerView;
 	}-*/;
 
-	public final native void setFooterView(Object value)
+	public final native void setFooterView(JavaScriptObject value)
 	/*-{
 		this.footerView = value;
 	}-*/;
@@ -177,12 +179,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return The table view header as a view that will be rendered instead of
 	 *         a label
 	 */
-	public final native Object getHeaderView()
+	public final native JavaScriptObject getHeaderView()
 	/*-{
 		return this.headerView;
 	}-*/;
 
-	public final native void setHeaderView(Object value)
+	public final native void setHeaderView(JavaScriptObject value)
 	/*-{
 		this.headerView = value;
 	}-*/;
@@ -191,12 +193,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An array of objects (with title and index properties) to control
 	 *         the table view index
 	 */
-	public final native Object[] getIndex()
+	public final native JavaScriptObject[] getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public final native void setIndex(Object[] value)
+	public final native void setIndex(JavaScriptObject[] value)
 	/*-{
 		this.index = value;
 	}-*/;
@@ -271,12 +273,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The search field to use for the table view
 	 */
-	public final native Object getSearch()
+	public final native JavaScriptObject getSearch()
 	/*-{
 		return this.search;
 	}-*/;
 
-	public final native void setSearch(Object value)
+	public final native void setSearch(JavaScriptObject value)
 	/*-{
 		this.search = value;
 	}-*/;
@@ -358,7 +360,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void appendRow(Object row, Object properties)
+	public final native void appendRow(JavaScriptObject row, JavaScriptObject properties)
 	/*-{
 		return this.appendRow(row, properties);
 	}-*/;
@@ -371,7 +373,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void deleteRow(int row, Object properties)
+	public final native void deleteRow(int row, JavaScriptObject properties)
 	/*-{
 		return this.deleteRow(row, properties);
 	}-*/;
@@ -397,7 +399,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void insertRowAfter(int index, Object row, Object properties)
+	public final native void insertRowAfter(int index, JavaScriptObject row, JavaScriptObject properties)
 	/*-{
 		return this.insertRowAfter(index, row, properties);
 	}-*/;
@@ -412,7 +414,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void insertRowBefore(int index, Object row, Object properties)
+	public final native void insertRowBefore(int index, JavaScriptObject row, JavaScriptObject properties)
 	/*-{
 		return this.insertRowBefore(index, row, properties);
 	}-*/;
@@ -427,7 +429,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *            position constant to use for position (on iPhone, use
 	 *            constants from Titanium.UI.iPhone.TableViewScrollPosition).
 	 */
-	public final native void scrollToIndex(int index, Object properties)
+	public final native void scrollToIndex(int index, JavaScriptObject properties)
 	/*-{
 		return this.scrollToIndex(index, properties);
 	}-*/;
@@ -443,7 +445,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *            boolean to indicate if the scroll should be animated or
 	 *            immediate
 	 */
-	public final native void scrollToTop(float top, Object properties)
+	public final native void scrollToTop(float top, JavaScriptObject properties)
 	/*-{
 		return this.scrollToTop(top, properties);
 	}-*/;
@@ -467,7 +469,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void updateRow(Object row, Object properties)
+	public final native void updateRow(JavaScriptObject row, JavaScriptObject properties)
 	/*-{
 		return this.updateRow(row, properties);
 	}-*/;

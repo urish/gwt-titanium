@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A tableview section object created by the method
@@ -46,12 +47,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	 * @return A view to use instead of the default label when rendering the
 	 *         section footer
 	 */
-	public final native Object getFooterView()
+	public final native JavaScriptObject getFooterView()
 	/*-{
 		return this.footerView;
 	}-*/;
 
-	public final native void setFooterView(Object value)
+	public final native void setFooterView(JavaScriptObject value)
 	/*-{
 		this.footerView = value;
 	}-*/;
@@ -73,12 +74,12 @@ public class TableViewSection extends org.urish.gwtit.titanium.ui.View {
 	 * @return A view to use instead of the default label when rendering the
 	 *         section header
 	 */
-	public final native Object getHeaderView()
+	public final native JavaScriptObject getHeaderView()
 	/*-{
 		return this.headerView;
 	}-*/;
 
-	public final native void setHeaderView(Object value)
+	public final native void setHeaderView(JavaScriptObject value)
 	/*-{
 		this.headerView = value;
 	}-*/;

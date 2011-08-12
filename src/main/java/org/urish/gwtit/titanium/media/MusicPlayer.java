@@ -22,6 +22,8 @@ import org.urish.gwtit.titanium.media.events.PlayingChangeHandler;
 import org.urish.gwtit.titanium.media.events.StateChangeHandler;
 import org.urish.gwtit.titanium.media.events.VolumeChangeHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The musicplayer instance returned from
  * {@link org.urish.gwtit.titanium.media.createmusicplayer}. this object
@@ -50,12 +52,12 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return An item object which indicates the currently playing media
 	 */
-	public final native Object getNowPlaying()
+	public final native JavaScriptObject getNowPlaying()
 	/*-{
 		return this.nowPlaying;
 	}-*/;
 
-	public final native void setNowPlaying(Object value)
+	public final native void setNowPlaying(JavaScriptObject value)
 	/*-{
 		this.nowPlaying = value;
 	}-*/;
@@ -175,7 +177,7 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	 *            of {@link org.urish.gwtit.titanium.media.Item} objects, or a
 	 *            single {@link org.urish.gwtit.titanium.media.Item} object.
 	 */
-	public final native void setQueue(Object queue)
+	public final native void setQueue(JavaScriptObject queue)
 	/*-{
 		return this.setQueue(queue);
 	}-*/;

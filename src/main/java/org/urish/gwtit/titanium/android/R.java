@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.android;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The titanium binding of
@@ -45,12 +46,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.anim.html](http:
 	 *         //developer.android.com/reference/android/r.anim.html)
 	 */
-	public final native Object getAnim()
+	public final native JavaScriptObject getAnim()
 	/*-{
 		return this.anim;
 	}-*/;
 
-	public final native void setAnim(Object value)
+	public final native void setAnim(JavaScriptObject value)
 	/*-{
 		this.anim = value;
 	}-*/;
@@ -61,12 +62,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.array.html](http
 	 *         ://developer.android.com/reference/android/r.array.html)
 	 */
-	public final native Object getArray()
+	public final native JavaScriptObject getArray()
 	/*-{
 		return this.array;
 	}-*/;
 
-	public final native void setArray(Object value)
+	public final native void setArray(JavaScriptObject value)
 	/*-{
 		this.array = value;
 	}-*/;
@@ -77,12 +78,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.attr.html](http:
 	 *         //developer.android.com/reference/android/r.attr.html)
 	 */
-	public final native Object getAttr()
+	public final native JavaScriptObject getAttr()
 	/*-{
 		return this.attr;
 	}-*/;
 
-	public final native void setAttr(Object value)
+	public final native void setAttr(JavaScriptObject value)
 	/*-{
 		this.attr = value;
 	}-*/;
@@ -93,12 +94,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.color.html](http
 	 *         ://developer.android.com/reference/android/r.color.html)
 	 */
-	public final native Object getColor()
+	public final native JavaScriptObject getColor()
 	/*-{
 		return this.color;
 	}-*/;
 
-	public final native void setColor(Object value)
+	public final native void setColor(JavaScriptObject value)
 	/*-{
 		this.color = value;
 	}-*/;
@@ -109,12 +110,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.dimen.html](http
 	 *         ://developer.android.com/reference/android/r.dimen.html)
 	 */
-	public final native Object getDimen()
+	public final native JavaScriptObject getDimen()
 	/*-{
 		return this.dimen;
 	}-*/;
 
-	public final native void setDimen(Object value)
+	public final native void setDimen(JavaScriptObject value)
 	/*-{
 		this.dimen = value;
 	}-*/;
@@ -125,12 +126,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.drawable.html](http
 	 *         ://developer.android.com/reference/android/r.drawable.html)
 	 */
-	public final native Object getDrawable()
+	public final native JavaScriptObject getDrawable()
 	/*-{
 		return this.drawable;
 	}-*/;
 
-	public final native void setDrawable(Object value)
+	public final native void setDrawable(JavaScriptObject value)
 	/*-{
 		this.drawable = value;
 	}-*/;
@@ -141,12 +142,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         r.id.html](http://
 	 *         developer.android.com/reference/android/r.id.html)
 	 */
-	public final native Object getId()
+	public final native JavaScriptObject getId()
 	/*-{
 		return this.id;
 	}-*/;
 
-	public final native void setId(Object value)
+	public final native void setId(JavaScriptObject value)
 	/*-{
 		this.id = value;
 	}-*/;
@@ -157,12 +158,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.integer.html](http
 	 *         ://developer.android.com/reference/android/r.integer.html)
 	 */
-	public final native Object getInteger()
+	public final native JavaScriptObject getInteger()
 	/*-{
 		return this.integer;
 	}-*/;
 
-	public final native void setInteger(Object value)
+	public final native void setInteger(JavaScriptObject value)
 	/*-{
 		this.integer = value;
 	}-*/;
@@ -173,12 +174,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.layout.html](http
 	 *         ://developer.android.com/reference/android/r.layout.html)
 	 */
-	public final native Object getLayout()
+	public final native JavaScriptObject getLayout()
 	/*-{
 		return this.layout;
 	}-*/;
 
-	public final native void setLayout(Object value)
+	public final native void setLayout(JavaScriptObject value)
 	/*-{
 		this.layout = value;
 	}-*/;
@@ -189,12 +190,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.string.html](http
 	 *         ://developer.android.com/reference/android/r.string.html)
 	 */
-	public final native Object getString()
+	public final native JavaScriptObject getString()
 	/*-{
 		return this.string;
 	}-*/;
 
-	public final native void setString(Object value)
+	public final native void setString(JavaScriptObject value)
 	/*-{
 		this.string = value;
 	}-*/;
@@ -205,12 +206,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.style.html](http
 	 *         ://developer.android.com/reference/android/r.style.html)
 	 */
-	public final native Object getStyle()
+	public final native JavaScriptObject getStyle()
 	/*-{
 		return this.style;
 	}-*/;
 
-	public final native void setStyle(Object value)
+	public final native void setStyle(JavaScriptObject value)
 	/*-{
 		this.style = value;
 	}-*/;
@@ -221,12 +222,12 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	 *         /r.styleable.html](
 	 *         http://developer.android.com/reference/android/r.styleable.html)
 	 */
-	public final native Object getStyleable()
+	public final native JavaScriptObject getStyleable()
 	/*-{
 		return this.styleable;
 	}-*/;
 
-	public final native void setStyleable(Object value)
+	public final native void setStyleable(JavaScriptObject value)
 	/*-{
 		this.styleable = value;
 	}-*/;

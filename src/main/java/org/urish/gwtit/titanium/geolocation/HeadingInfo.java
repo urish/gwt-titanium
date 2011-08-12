@@ -30,7 +30,7 @@ public class HeadingInfo extends JavaScriptObject {
 	/**
 	 * 
 	 */
-	public final native Object getMagneticHeading()
+	public final native JavaScriptObject getMagneticHeading()
 	/*-{
 		return this.magneticHeading;
 	}-*/;
@@ -38,7 +38,7 @@ public class HeadingInfo extends JavaScriptObject {
 	/**
 	 * 
 	 */
-	public final native Object getTrueHeading()
+	public final native JavaScriptObject getTrueHeading()
 	/*-{
 		return this.trueHeading;
 	}-*/;

@@ -101,7 +101,7 @@ public class Clipboard extends org.urish.gwtit.titanium.Module {
 	 * @param data
 	 *            The new clipboard text.
 	 */
-	public static native void setData(String type, Object data)
+	public static native void setData(String type, JavaScriptObject data)
 	/*-{
 		return Titanium.UI.Clipboard.setData(type, data);
 	}-*/;
@@ -148,7 +148,7 @@ public class Clipboard extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.UI.Clipboard.fireEvent(name, event);
 	}-*/;

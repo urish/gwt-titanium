@@ -29,6 +29,8 @@ import org.urish.gwtit.titanium.ui.events.CloseHandler;
 import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.OpenHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The window is an empty drawing surface or container. the window is created by
  * the method {@link org.urish.gwtit.titanium.ui.createwindow}. unlike
@@ -280,12 +282,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @return View to show in the left nav bar area. only available in iphone.
 	 * @platforms iphone, ipad
 	 */
-	public final native Object getLeftNavButton()
+	public final native JavaScriptObject getLeftNavButton()
 	/*-{
 		return this.leftNavButton;
 	}-*/;
 
-	public final native void setLeftNavButton(Object value)
+	public final native void setLeftNavButton(JavaScriptObject value)
 	/*-{
 		this.leftNavButton = value;
 	}-*/;
@@ -506,12 +508,12 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 *         child of a tab.
 	 * @platforms iphone, ipad
 	 */
-	public final native Object[] getToolbar()
+	public final native JavaScriptObject[] getToolbar()
 	/*-{
 		return this.toolbar;
 	}-*/;
 
-	public final native void setToolbar(Object[] value)
+	public final native void setToolbar(JavaScriptObject[] value)
 	/*-{
 		this.toolbar = value;
 	}-*/;
@@ -581,7 +583,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @param options
 	 *            close the window with optional animation or display properties
 	 */
-	public final native void close(Object options)
+	public final native void close(JavaScriptObject options)
 	/*-{
 		return this.close(options);
 	}-*/;
@@ -600,7 +602,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	 * @param options
 	 *            open the window with optional animation or display properties
 	 */
-	public final native void open(Object options)
+	public final native void open(JavaScriptObject options)
 	/*-{
 		return this.open(options);
 	}-*/;

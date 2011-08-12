@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui.ios;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The 3dmatrix is created by
@@ -269,7 +270,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            matrix t2 does not necessarily equal the result of multiplying
 	 *            matrix t2 by matrix t1.
 	 */
-	public final native Object multiply(Object t2)
+	public final native JavaScriptObject multiply(JavaScriptObject t2)
 	/*-{
 		return this.multiply(t2);
 	}-*/;
@@ -288,7 +289,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param z
 	 *            The z part of the vector about which to rotate
 	 */
-	public final native Object rotate(float angle, float x, float y, float z)
+	public final native JavaScriptObject rotate(float angle, float x, float y, float z)
 	/*-{
 		return this.rotate(angle, x, y, z);
 	}-*/;
@@ -303,7 +304,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param sz
 	 *            The value by which to scale z values of the matrix
 	 */
-	public final native Object scale(float sx, float sy, float sz)
+	public final native JavaScriptObject scale(float sx, float sy, float sz)
 	/*-{
 		return this.scale(sx, sy, sz);
 	}-*/;
@@ -318,7 +319,7 @@ public class _3DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param tz
 	 *            The value by which to move z values with the matrix
 	 */
-	public final native Object translate(float tx, float ty, float tz)
+	public final native JavaScriptObject translate(float tx, float ty, float tz)
 	/*-{
 		return this.translate(tx, ty, tz);
 	}-*/;

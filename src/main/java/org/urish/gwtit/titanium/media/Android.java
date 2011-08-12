@@ -66,7 +66,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 *            the system wallpaper desired width, or false to leave it
 	 *            as-is.
 	 */
-	public static native void setSystemWallpaper(Object image, boolean scale)
+	public static native void setSystemWallpaper(JavaScriptObject image, boolean scale)
 	/*-{
 		return Titanium.Media.Android.setSystemWallpaper(image, scale);
 	}-*/;
@@ -101,7 +101,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Media.Android.fireEvent(name, event);
 	}-*/;

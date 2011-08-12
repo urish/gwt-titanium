@@ -24,6 +24,8 @@ import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.ReturnHandler;
 import org.urish.gwtit.titanium.ui.events.SelectedHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A text area is created by the method
  * {@link org.urish.gwtit.titanium.ui.createtextarea}. the text area is a
@@ -113,12 +115,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 * @return Array of toolbar button objects to be used when the keyboard is
 	 *         displayed
 	 */
-	public final native Object[] getKeyboardToolbar()
+	public final native JavaScriptObject[] getKeyboardToolbar()
 	/*-{
 		return this.keyboardToolbar;
 	}-*/;
 
-	public final native void setKeyboardToolbar(Object[] value)
+	public final native void setKeyboardToolbar(JavaScriptObject[] value)
 	/*-{
 		this.keyboardToolbar = value;
 	}-*/;

@@ -264,7 +264,7 @@ def mapTypes(s, withConsts = False):
 		"Number": "float",
 		"Boolean": "boolean",
 		"void": "void",
-		"Object": "Object",
+		"Object": "JavaScriptObject",
 		"Date": "java.util.Date",
 		"Font": "org.urish.gwtit.client.font.Font",
 		"$Point": "org.urish.gwtit.client.util.Point",
@@ -576,6 +576,7 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 				'name': event['name'],
 				'javaName': javaName,
 			})
+			eventClass.addImport("com.google.gwt.core.client.JavaScriptObject")
 			eventClass.addImport("org.urish.gwtit.client.event.%s" % superClass)
 			handlerClass = JavaClass(package + ".events", javaName + "Handler", interface=True, body=EVENT_HANDLER_BODY_TEMPLATE % {
 				'javaName': javaName,

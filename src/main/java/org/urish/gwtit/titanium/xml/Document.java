@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.xml;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The dom document returned from
@@ -91,7 +92,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	 * @return A CDATA section with the given data, ready to be applied to an
 	 *         element.
 	 */
-	public final native Object createCDATASection(String data)
+	public final native JavaScriptObject createCDATASection(String data)
 	/*-{
 		return this.createCDATASection(data);
 	}-*/;
@@ -104,7 +105,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	 *            The textual comment itself.
 	 * @return The comment, ready to be appended to the DOM tree.
 	 */
-	public final native Object createComment(String data)
+	public final native JavaScriptObject createComment(String data)
 	/*-{
 		return this.createComment(data);
 	}-*/;
@@ -114,7 +115,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	 * 
 	 * @return The empty {@link org.urish.gwtit.titanium.xml.DocumentFragment}.
 	 */
-	public final native Object createDocumentFragment()
+	public final native JavaScriptObject createDocumentFragment()
 	/*-{
 		return this.createDocumentFragment();
 	}-*/;
@@ -153,7 +154,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	 *            Name for the new entity reference.
 	 * @return The created entity reference.
 	 */
-	public final native Object createEntityReference(String name)
+	public final native JavaScriptObject createEntityReference(String name)
 	/*-{
 		return this.createEntityReference(name);
 	}-*/;

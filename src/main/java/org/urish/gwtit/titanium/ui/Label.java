@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A label is created by the method
@@ -199,12 +200,12 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The shadow offset as a dictionary with the properties `x` and `y`
 	 */
-	public final native Object getShadowOffset()
+	public final native JavaScriptObject getShadowOffset()
 	/*-{
 		return this.shadowOffset;
 	}-*/;
 
-	public final native void setShadowOffset(Object value)
+	public final native void setShadowOffset(JavaScriptObject value)
 	/*-{
 		this.shadowOffset = value;
 	}-*/;
@@ -236,7 +237,7 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	 * @return The alignment constant or string value such as `left`, `center`
 	 *         or `right`
 	 */
-	public final native Object getTextAlign()
+	public final native JavaScriptObject getTextAlign()
 	/*-{
 		return this.textAlign;
 	}-*/;

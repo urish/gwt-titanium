@@ -545,7 +545,8 @@
 		"properties[name='SOCKET_INITIALIZED'] type": "int",
 		"properties[name='SOCKET_LISTENING'] type": "int",
 		"properties[name='WRITE_MODE'] type": "int",
-		"properties[name='networkType'] type": "int"
+		"properties[name='networkType'] type": "int",
+		"properties[name='remoteNotificationTypes'] type": "Array<int>"
 	},
 	"Titanium.Network.HTTPClient": {
 		"methods[name='setTimeout'] parameters[name='timeout'] type": "double",
@@ -696,6 +697,9 @@
 		"properties[name='VIDEO_TIME_OPTION_NEAREST_KEYFRAME'] type": "int",
 		"properties[name='audioLineType'] type": "int",
 		"properties[name='audioSessionMode'] type": "int",
+		"properties[name='availableCameraMediaTypes'] type": "Array<int>",
+		"properties[name='availablePhotoGalleryMediaTypes'] type": "Array<int>",
+		"properties[name='availablePhotoMediaTypes'] type": "Array<int>",
 		"properties[name='averageMicrophonePower'] type": "float",
 		"properties[name='peakMicrophonePower'] type": "float",
 		"properties[name='volume'] type": "float"

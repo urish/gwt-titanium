@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.ClickHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The alert dialog is created by
  * {@link org.urish.gwtit.titanium.ui.createalertdialog} and allows you to show
@@ -45,12 +47,12 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of button names as strings
 	 */
-	public final native Object[] getButtonNames()
+	public final native JavaScriptObject[] getButtonNames()
 	/*-{
 		return this.buttonNames;
 	}-*/;
 
-	public final native void setButtonNames(Object[] value)
+	public final native void setButtonNames(JavaScriptObject[] value)
 	/*-{
 		this.buttonNames = value;
 	}-*/;

@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui.iphone;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A navigation group implements a specialized view that manages the navigation
@@ -48,7 +49,7 @@ public class NavigationGroup extends org.urish.gwtit.titanium.ui.View {
 	 *            `animated` which is a boolean to indicate if the window should
 	 *            be closed animated (default) or not.
 	 */
-	public final native void close(Object window, Object properties)
+	public final native void close(JavaScriptObject window, JavaScriptObject properties)
 	/*-{
 		return this.close(window, properties);
 	}-*/;
@@ -63,7 +64,7 @@ public class NavigationGroup extends org.urish.gwtit.titanium.ui.View {
 	 *            `animated` which is a boolean to indicate if the window should
 	 *            be opened animated (default) or not.
 	 */
-	public final native void open(Object window, Object properties)
+	public final native void open(JavaScriptObject window, JavaScriptObject properties)
 	/*-{
 		return this.open(window, properties);
 	}-*/;

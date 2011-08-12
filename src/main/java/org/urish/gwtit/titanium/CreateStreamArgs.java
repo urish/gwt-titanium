@@ -50,7 +50,7 @@ public class CreateStreamArgs extends JavaScriptObject {
 	/**
 	 * @return Object to create stream around
 	 */
-	public final native Object getSource()
+	public final native JavaScriptObject getSource()
 	/*-{
 		return this.source;
 	}-*/;

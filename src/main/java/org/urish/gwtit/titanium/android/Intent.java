@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.android;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The titanium binding of an [android
@@ -227,7 +228,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	 * @param value
 	 *            The property value
 	 */
-	public final native void putExtra(String name, Object value)
+	public final native void putExtra(String name, JavaScriptObject value)
 	/*-{
 		return this.putExtra(name, value);
 	}-*/;

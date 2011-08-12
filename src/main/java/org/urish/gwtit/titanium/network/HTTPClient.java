@@ -343,7 +343,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	 *            the data to send in the request. can either be null,
 	 *            dictionary, string, File object or Blob.
 	 */
-	public final native void send(Object data)
+	public final native void send(JavaScriptObject data)
 	/*-{
 		return this.send(data);
 	}-*/;

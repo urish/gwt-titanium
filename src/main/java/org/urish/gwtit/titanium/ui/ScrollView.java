@@ -21,6 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import org.urish.gwtit.titanium.ui.events.ScaleHandler;
 import org.urish.gwtit.titanium.ui.events.ScrollHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A scroll view is used to create a scrollable region of content. views added
  * to the scroll view will be scrolled based on the content size of the scroll
@@ -71,12 +73,12 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An object (with x and y properties) to indicate the offset of the
 	 *         content area
 	 */
-	public final native Object getContentOffset()
+	public final native JavaScriptObject getContentOffset()
 	/*-{
 		return this.contentOffset;
 	}-*/;
 
-	public final native void setContentOffset(Object value)
+	public final native void setContentOffset(JavaScriptObject value)
 	/*-{
 		this.contentOffset = value;
 	}-*/;

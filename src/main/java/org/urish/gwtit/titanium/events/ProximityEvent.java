@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.events;
 
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * 
  */
@@ -33,7 +35,7 @@ public class ProximityEvent extends AbstractTitaniumEvent {
 	/**
 	 * the proximity state value
 	 */
-	public final native Object getState()
+	public final native JavaScriptObject getState()
 	/*-{
 		return this.state;
 	}-*/;

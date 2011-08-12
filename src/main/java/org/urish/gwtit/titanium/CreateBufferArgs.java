@@ -55,7 +55,7 @@ public class CreateBufferArgs extends JavaScriptObject {
 	 *         {@link org.urish.gwtit.titanium.codec.encodenumber} and placing
 	 *         the encoded value in the returned buffer.)
 	 */
-	public final native Object getValue()
+	public final native JavaScriptObject getValue()
 	/*-{
 		return this.value;
 	}-*/;

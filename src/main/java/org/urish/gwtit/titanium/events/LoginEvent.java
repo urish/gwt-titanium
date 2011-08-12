@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.events;
 
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * 
  */
@@ -51,7 +53,7 @@ public class LoginEvent extends AbstractTitaniumEvent {
 	 * "me") after successful login. Data is in JSON format. Includes
 	 * information such as user name, locale and gender.
 	 */
-	public final native Object getData()
+	public final native JavaScriptObject getData()
 	/*-{
 		return this.data;
 	}-*/;

@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui.ipad;
 
 import org.urish.gwtit.titanium.ui.ipad.events.VisibleHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A splitwindow is a window that manages the presentation of two side-by-side
  * view controllers. you use this class to implement a master-detail interface,
@@ -48,12 +50,12 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return View for the detail view section of the splitwindow
 	 */
-	public final native Object getDetailView()
+	public final native JavaScriptObject getDetailView()
 	/*-{
 		return this.detailView;
 	}-*/;
 
-	public final native void setDetailView(Object value)
+	public final native void setDetailView(JavaScriptObject value)
 	/*-{
 		this.detailView = value;
 	}-*/;
@@ -61,12 +63,12 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return View for the master view section of the splitwindow
 	 */
-	public final native Object getMasterView()
+	public final native JavaScriptObject getMasterView()
 	/*-{
 		return this.masterView;
 	}-*/;
 
-	public final native void setMasterView(Object value)
+	public final native void setMasterView(JavaScriptObject value)
 	/*-{
 		this.masterView = value;
 	}-*/;

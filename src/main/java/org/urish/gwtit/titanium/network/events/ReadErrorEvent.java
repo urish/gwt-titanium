@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.network.events;
 
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * 
  */
@@ -33,7 +35,7 @@ public class ReadErrorEvent extends AbstractTitaniumEvent {
 	/**
 	 * the BSD socket error code
 	 */
-	public final native Object getCode()
+	public final native JavaScriptObject getCode()
 	/*-{
 		return this.code;
 	}-*/;
@@ -41,7 +43,7 @@ public class ReadErrorEvent extends AbstractTitaniumEvent {
 	/**
 	 * a description of the error
 	 */
-	public final native Object getError()
+	public final native JavaScriptObject getError()
 	/*-{
 		return this.error;
 	}-*/;

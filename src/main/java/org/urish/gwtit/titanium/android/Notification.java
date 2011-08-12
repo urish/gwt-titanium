@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.android;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The titanium binding of an [android
@@ -58,12 +59,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return The {@link org.urish.gwtit.titanium.android.pendingintent} to
 	 *         execute when the expanded status entry is clicked.
 	 */
-	public final native Object getContentIntent()
+	public final native JavaScriptObject getContentIntent()
 	/*-{
 		return this.contentIntent;
 	}-*/;
 
-	public final native void setContentIntent(Object value)
+	public final native void setContentIntent(JavaScriptObject value)
 	/*-{
 		this.contentIntent = value;
 	}-*/;
@@ -112,12 +113,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 *         execute when the status entry is deleted by the user with the
 	 *         "clear all notifications" button.
 	 */
-	public final native Object getDeleteIntent()
+	public final native JavaScriptObject getDeleteIntent()
 	/*-{
 		return this.deleteIntent;
 	}-*/;
 
-	public final native void setDeleteIntent(Object value)
+	public final native void setDeleteIntent(JavaScriptObject value)
 	/*-{
 		this.deleteIntent = value;
 	}-*/;
@@ -157,7 +158,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	 * @return A resource id or url to an icon (the url must be an image located
 	 *         in resources/android/images/ or an android content uri)
 	 */
-	public final native Object getIcon()
+	public final native JavaScriptObject getIcon()
 	/*-{
 		return this.icon;
 	}-*/;
@@ -256,7 +257,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The timestamp for the notification (defaults to the current time)
 	 */
-	public final native Object getWhen()
+	public final native JavaScriptObject getWhen()
 	/*-{
 		return this.when;
 	}-*/;

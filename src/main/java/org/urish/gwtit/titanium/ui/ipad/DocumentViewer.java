@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui.ipad;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A documentviewer provides in-app support for managing user interactions with
@@ -44,7 +45,7 @@ public class DocumentViewer extends org.urish.gwtit.titanium.ui.View {
 	 *            The view property would specify the view relative to where the
 	 *            viewer should display.
 	 */
-	public final native void show(boolean animated, Object view)
+	public final native void show(boolean animated, JavaScriptObject view)
 	/*-{
 		return this.show(animated, view);
 	}-*/;

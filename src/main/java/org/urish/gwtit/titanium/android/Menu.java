@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.android;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The titanium binding of an [android
@@ -33,12 +34,12 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of {@link org.urish.gwtit.titanium.android.menuitem}
 	 */
-	public final native Object[] getItems()
+	public final native JavaScriptObject[] getItems()
 	/*-{
 		return this.items;
 	}-*/;
 
-	public final native void setItems(Object[] value)
+	public final native void setItems(JavaScriptObject[] value)
 	/*-{
 		this.items = value;
 	}-*/;
@@ -51,7 +52,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 *            creation options. Supported options are itemId, groupId,
 	 *            title, and order.
 	 */
-	public final native org.urish.gwtit.titanium.android.MenuItem add(Object options)
+	public final native org.urish.gwtit.titanium.android.MenuItem add(JavaScriptObject options)
 	/*-{
 		return this.add(options);
 	}-*/;
@@ -81,7 +82,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	 *            integer itemId or
 	 *            {@link org.urish.gwtit.titanium.android.MenuItem}
 	 */
-	public final native org.urish.gwtit.titanium.android.MenuItem findItem(Object item)
+	public final native org.urish.gwtit.titanium.android.MenuItem findItem(JavaScriptObject item)
 	/*-{
 		return this.findItem(item);
 	}-*/;

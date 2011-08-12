@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.media;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A representation of a media item returned by the music picker as part of the
@@ -99,12 +100,12 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	 * @return A blob object containing the image for the item's artwork, or
 	 *         null if none
 	 */
-	public final native Object getArtwork()
+	public final native JavaScriptObject getArtwork()
 	/*-{
 		return this.artwork;
 	}-*/;
 
-	public final native void setArtwork(Object value)
+	public final native void setArtwork(JavaScriptObject value)
 	/*-{
 		this.artwork = value;
 	}-*/;

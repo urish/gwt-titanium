@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.contacts;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * An object which represents a person in the contacts database.
@@ -34,23 +35,23 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	protected Person() {
 	}
 
-	private static native final Object value_URL()
+	private static native final JavaScriptObject value_URL()
 	/*-{
 		return Titanium.Contacts.Person.URL;
 	}-*/;
 
-	public static final Object URL = value_URL();
+	public static final JavaScriptObject URL = value_URL();
 
 	/**
 	 * @return The addresses for the person. multi-value, valid labels are:
 	 *         `home`, `work`, `other`. values are dictionaries.
 	 */
-	public final native Object getAddress()
+	public final native JavaScriptObject getAddress()
 	/*-{
 		return this.address;
 	}-*/;
 
-	public final native void setAddress(Object value)
+	public final native void setAddress(JavaScriptObject value)
 	/*-{
 		this.address = value;
 	}-*/;
@@ -88,12 +89,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         `anniversary`. values are strings of format
 	 *         "yyyy-mm-dd't'hh:mm:ss'.'sss+0000"
 	 */
-	public final native Object getDate()
+	public final native JavaScriptObject getDate()
 	/*-{
 		return this.date;
 	}-*/;
 
-	public final native void setDate(Object value)
+	public final native void setDate(JavaScriptObject value)
 	/*-{
 		this.date = value;
 	}-*/;
@@ -115,12 +116,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return The email addresses for the person. multi-value, valid labels
 	 *         are: `home`, `work`, `other`. values are strings.
 	 */
-	public final native Object getEmail()
+	public final native JavaScriptObject getEmail()
 	/*-{
 		return this.email;
 	}-*/;
 
-	public final native void setEmail(Object value)
+	public final native void setEmail(JavaScriptObject value)
 	/*-{
 		this.email = value;
 	}-*/;
@@ -168,12 +169,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 * @return A blob object representing the image for the person. set to
 	 *         `null` to remove the image. single value
 	 */
-	public final native Object getImage()
+	public final native JavaScriptObject getImage()
 	/*-{
 		return this.image;
 	}-*/;
 
-	public final native void setImage(Object value)
+	public final native void setImage(JavaScriptObject value)
 	/*-{
 		this.image = value;
 	}-*/;
@@ -183,12 +184,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         labels are: `aim`, `icq`, `jabber`, `msn`, `yahoo`. values are
 	 *         dictionaries.
 	 */
-	public final native Object getInstantMessage()
+	public final native JavaScriptObject getInstantMessage()
 	/*-{
 		return this.instantMessage;
 	}-*/;
 
-	public final native void setInstantMessage(Object value)
+	public final native void setInstantMessage(JavaScriptObject value)
 	/*-{
 		this.instantMessage = value;
 	}-*/;
@@ -331,12 +332,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         `home`, `work`, `other`, `mobile`, `pager`, `workfax`, `homefax`,
 	 *         `main`, `iphone`. values are strings.
 	 */
-	public final native Object getPhone()
+	public final native JavaScriptObject getPhone()
 	/*-{
 		return this.phone;
 	}-*/;
 
-	public final native void setPhone(Object value)
+	public final native void setPhone(JavaScriptObject value)
 	/*-{
 		this.phone = value;
 	}-*/;
@@ -360,12 +361,12 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	 *         `child`, `friend`, `spouse`, `partner`, `manager`, `assistant`.
 	 *         values are strings.
 	 */
-	public final native Object getRelatedNames()
+	public final native JavaScriptObject getRelatedNames()
 	/*-{
 		return this.relatedNames;
 	}-*/;
 
-	public final native void setRelatedNames(Object value)
+	public final native void setRelatedNames(JavaScriptObject value)
 	/*-{
 		this.relatedNames = value;
 	}-*/;

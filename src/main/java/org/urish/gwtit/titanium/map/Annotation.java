@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.map;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * An annotation object that is created by the method
@@ -70,7 +71,7 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	 * @return The left button image on the annotation. must either be a button
 	 *         type constant or url
 	 */
-	public final native Object getLeftButton()
+	public final native JavaScriptObject getLeftButton()
 	/*-{
 		return this.leftButton;
 	}-*/;
@@ -78,12 +79,12 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return A left view that is displayed on the annotation
 	 */
-	public final native Object getLeftView()
+	public final native JavaScriptObject getLeftView()
 	/*-{
 		return this.leftView;
 	}-*/;
 
-	public final native void setLeftView(Object value)
+	public final native void setLeftView(JavaScriptObject value)
 	/*-{
 		this.leftView = value;
 	}-*/;
@@ -134,7 +135,7 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	 * @return The right button image on the annotation. must either be a button
 	 *         type constant or url
 	 */
-	public final native Object getRightButton()
+	public final native JavaScriptObject getRightButton()
 	/*-{
 		return this.rightButton;
 	}-*/;
@@ -142,12 +143,12 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return A right view that is displayed on the annotation
 	 */
-	public final native Object getRightView()
+	public final native JavaScriptObject getRightView()
 	/*-{
 		return this.rightView;
 	}-*/;
 
-	public final native void setRightView(Object value)
+	public final native void setRightView(JavaScriptObject value)
 	/*-{
 		this.rightView = value;
 	}-*/;

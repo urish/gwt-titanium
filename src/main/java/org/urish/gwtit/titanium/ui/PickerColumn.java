@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The picker row object created by
@@ -45,12 +46,12 @@ public class PickerColumn extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return An array of rows
 	 */
-	public final native Object[] getRows()
+	public final native JavaScriptObject[] getRows()
 	/*-{
 		return this.rows;
 	}-*/;
 
-	public final native void setRows(Object[] value)
+	public final native void setRows(JavaScriptObject[] value)
 	/*-{
 		this.rows = value;
 	}-*/;

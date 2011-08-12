@@ -71,7 +71,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param property
 	 *            return an array value for property
 	 */
-	public static native Object[] getList(String property, Object[] _default)
+	public static native JavaScriptObject[] getList(String property, JavaScriptObject[] _default)
 	/*-{
 		return Titanium.App.Properties.getList(property, _default);
 	}-*/;
@@ -101,7 +101,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	/**
 	 * Return an array of property propertys
 	 */
-	public static native Object[] listProperties()
+	public static native JavaScriptObject[] listProperties()
 	/*-{
 		return Titanium.App.Properties.listProperties();
 	}-*/;
@@ -164,7 +164,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param value
 	 *            value
 	 */
-	public static native void setList(String property, Object[] value)
+	public static native void setList(String property, JavaScriptObject[] value)
 	/*-{
 		return Titanium.App.Properties.setList(property, value);
 	}-*/;
@@ -212,7 +212,7 @@ public class Properties extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.App.Properties.fireEvent(name, event);
 	}-*/;

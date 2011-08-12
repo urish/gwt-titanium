@@ -200,7 +200,7 @@ public class App extends org.urish.gwtit.titanium.Module {
 	/**
 	 * Return the arguments passed to the application on startup as a dictionary
 	 */
-	public static native Object getArguments()
+	public static native JavaScriptObject getArguments()
 	/*-{
 		return Titanium.App.getArguments();
 	}-*/;
@@ -235,7 +235,7 @@ public class App extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.App.fireEvent(name, event);
 	}-*/;

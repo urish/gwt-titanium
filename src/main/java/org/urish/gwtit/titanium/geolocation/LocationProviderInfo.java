@@ -46,7 +46,7 @@ public class LocationProviderInfo extends JavaScriptObject {
 	/**
 	 * 
 	 */
-	public final native Object getPower()
+	public final native JavaScriptObject getPower()
 	/*-{
 		return this.power;
 	}-*/;
@@ -54,7 +54,7 @@ public class LocationProviderInfo extends JavaScriptObject {
 	/**
 	 * 
 	 */
-	public final native Object getProvider()
+	public final native JavaScriptObject getProvider()
 	/*-{
 		return this.provider;
 	}-*/;

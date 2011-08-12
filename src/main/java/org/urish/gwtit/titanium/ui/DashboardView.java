@@ -23,6 +23,8 @@ import org.urish.gwtit.titanium.ui.events.DeleteHandler;
 import org.urish.gwtit.titanium.ui.events.EditHandler;
 import org.urish.gwtit.titanium.ui.events.MoveHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The dashboard view provides a view that supports the ability to have
  * springboard-like view of icons which can be reordered by dragging and can
@@ -41,12 +43,12 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An array of {@link org.urish.gwtit.titanium.ui.dashboarditem}
 	 *         objects to display in the view
 	 */
-	public final native Object[] getData()
+	public final native JavaScriptObject[] getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public final native void setData(Object[] value)
+	public final native void setData(JavaScriptObject[] value)
 	/*-{
 		this.data = value;
 	}-*/;

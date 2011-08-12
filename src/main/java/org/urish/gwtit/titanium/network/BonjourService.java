@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.network;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The bonjourservice instance returned either from
@@ -85,12 +86,12 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The tcpsocket object that is used to connect to the service
 	 */
-	public final native Object getSocket()
+	public final native JavaScriptObject getSocket()
 	/*-{
 		return this.socket;
 	}-*/;
 
-	public final native void setSocket(Object value)
+	public final native void setSocket(JavaScriptObject value)
 	/*-{
 		this.socket = value;
 	}-*/;
@@ -114,7 +115,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	 * @param socket
 	 *            a TCPSocket object to associate with the Bonjour service.
 	 */
-	public final native void publish(Object socket)
+	public final native void publish(JavaScriptObject socket)
 	/*-{
 		return this.publish(socket);
 	}-*/;

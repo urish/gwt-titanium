@@ -21,6 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import org.urish.gwtit.titanium.ui.events.CompleteHandler;
 import org.urish.gwtit.titanium.ui.events.StartHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The animation object is used for specifying lower-level animation properties
  * and more low-level control of events during an animation. the animation is
@@ -77,12 +79,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the center property to change during animation
 	 */
-	public final native Object getCenter()
+	public final native JavaScriptObject getCenter()
 	/*-{
 		return this.center;
 	}-*/;
 
-	public final native void setCenter(Object value)
+	public final native void setCenter(JavaScriptObject value)
 	/*-{
 		this.center = value;
 	}-*/;
@@ -234,12 +236,12 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Value of the transform property to change during animation
 	 */
-	public final native Object getTransform()
+	public final native JavaScriptObject getTransform()
 	/*-{
 		return this.transform;
 	}-*/;
 
-	public final native void setTransform(Object value)
+	public final native void setTransform(JavaScriptObject value)
 	/*-{
 		this.transform = value;
 	}-*/;

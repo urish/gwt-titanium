@@ -22,6 +22,8 @@ import org.urish.gwtit.titanium.ui.events.BeforeLoadHandler;
 import org.urish.gwtit.titanium.ui.events.ErrorHandler;
 import org.urish.gwtit.titanium.ui.events.LoadHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The web view allows you to open an html5 based view which can load either
  * local or remote content. the content can be any valid web content such as
@@ -45,12 +47,12 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return A data blob or file that is used to load the web document
 	 */
-	public final native Object getData()
+	public final native JavaScriptObject getData()
 	/*-{
 		return this.data;
 	}-*/;
 
-	public final native void setData(Object value)
+	public final native void setData(JavaScriptObject value)
 	/*-{
 		this.data = value;
 	}-*/;

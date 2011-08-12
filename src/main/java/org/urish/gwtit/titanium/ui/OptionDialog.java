@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.ClickHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The option dialog is created by
  * {@link org.urish.gwtit.titanium.ui.createoptiondialog} and allows you to show
@@ -36,12 +38,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	 *         dialog. works for any dialog. (android)
 	 * @platforms android
 	 */
-	public final native Object getAndroidView()
+	public final native JavaScriptObject getAndroidView()
 	/*-{
 		return this.androidView;
 	}-*/;
 
-	public final native void setAndroidView(Object value)
+	public final native void setAndroidView(JavaScriptObject value)
 	/*-{
 		this.androidView = value;
 	}-*/;
@@ -77,12 +79,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of button names as strings
 	 */
-	public final native Object[] getOptions()
+	public final native JavaScriptObject[] getOptions()
 	/*-{
 		return this.options;
 	}-*/;
 
-	public final native void setOptions(Object[] value)
+	public final native void setOptions(JavaScriptObject[] value)
 	/*-{
 		this.options = value;
 	}-*/;

@@ -149,12 +149,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         type,startpoint
 	 *         ,endpoint,startradius,endradius,backfillstart,backfillend,colors.
 	 */
-	public final native Object getBackgroundGradient()
+	public final native JavaScriptObject getBackgroundGradient()
 	/*-{
 		return this.backgroundGradient;
 	}-*/;
 
-	public final native void setBackgroundGradient(Object value)
+	public final native void setBackgroundGradient(JavaScriptObject value)
 	/*-{
 		this.backgroundGradient = value;
 	}-*/;
@@ -418,7 +418,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 		return this.size;
 	}-*/;
 
-	public final native void setSize(Object value)
+	public final native void setSize(JavaScriptObject value)
 	/*-{
 		this.size = value;
 	}-*/;
@@ -476,12 +476,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return The transformation matrix to apply to the view
 	 */
-	public final native Object getTransform()
+	public final native JavaScriptObject getTransform()
 	/*-{
 		return this.transform;
 	}-*/;
 
-	public final native void setTransform(Object value)
+	public final native void setTransform(JavaScriptObject value)
 	/*-{
 		this.transform = value;
 	}-*/;
@@ -549,7 +549,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *            either a dictionary of animation properties or an Animation
 	 *            object
 	 */
-	public final native void animate(Object obj, EventCallback<JavaScriptObject> callback)
+	public final native void animate(JavaScriptObject obj, EventCallback<JavaScriptObject> callback)
 	/*-{
 		return this.animate(obj, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
@@ -584,7 +584,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return a blob image of the rendered view
 	 */
-	public final native Object toImage()
+	public final native JavaScriptObject toImage()
 	/*-{
 		return this.toImage();
 	}-*/;
@@ -592,7 +592,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Return a blob image of the rendered view
 	 */
-	public final native Object toImage(EventCallback<JavaScriptObject> f)
+	public final native JavaScriptObject toImage(EventCallback<JavaScriptObject> f)
 	/*-{
 		return this.toImage(function(e) { f.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;

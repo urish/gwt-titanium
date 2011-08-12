@@ -1169,12 +1169,12 @@ public class Android extends org.urish.gwtit.titanium.Module {
 
 	public static final float PENDING_INTENT_MAX_VALUE = value_PENDING_INTENT_MAX_VALUE();
 
-	private static native final Object value_R()
+	private static native final JavaScriptObject value_R()
 	/*-{
 		return Titanium.Android.R;
 	}-*/;
 
-	public static final Object R = value_R();
+	public static final JavaScriptObject R = value_R();
 
 	private static native final float value_RESULT_CANCELED()
 	/*-{
@@ -1389,7 +1389,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 *            Options dictionary -- pass in a `url` option to specify the
 	 *            path to a javascript-based service you create.
 	 */
-	public static native org.urish.gwtit.titanium.android.Intent createServiceIntent(Object options)
+	public static native org.urish.gwtit.titanium.android.Intent createServiceIntent(JavaScriptObject options)
 	/*-{
 		return Titanium.Android.createServiceIntent(options);
 	}-*/;
@@ -1463,7 +1463,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Android.fireEvent(name, event);
 	}-*/;

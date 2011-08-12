@@ -61,7 +61,7 @@ public class Proxy extends JavaScriptObject {
 	 * @param event
 	 *            event object
 	 */
-	public final native void fireEvent(String name, Object event)
+	public final native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return this.fireEvent(name, event);
 	}-*/;

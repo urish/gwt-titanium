@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A tabgroup tab instance. each tab instance maintains a stack of tab windows.
@@ -90,12 +91,12 @@ public class Tab extends org.urish.gwtit.titanium.ui.View {
 	 * @return The root level tab window. all tabs must have at least one root
 	 *         level tab window.
 	 */
-	public final native Object getWindow()
+	public final native JavaScriptObject getWindow()
 	/*-{
 		return this.window;
 	}-*/;
 
-	public final native void setWindow(Object value)
+	public final native void setWindow(JavaScriptObject value)
 	/*-{
 		this.window = value;
 	}-*/;

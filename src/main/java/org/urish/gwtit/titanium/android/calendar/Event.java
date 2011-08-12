@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.android.calendar;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * An object which represents a single event in an android calendar.
@@ -105,12 +106,12 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return An object containing extended properties of the event.
 	 */
-	public final native Object getExtendedProperties()
+	public final native JavaScriptObject getExtendedProperties()
 	/*-{
 		return this.extendedProperties;
 	}-*/;
 
-	public final native void setExtendedProperties(Object value)
+	public final native void setExtendedProperties(JavaScriptObject value)
 	/*-{
 		this.extendedProperties = value;
 	}-*/;

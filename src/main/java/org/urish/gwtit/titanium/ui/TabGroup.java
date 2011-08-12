@@ -23,6 +23,8 @@ import org.urish.gwtit.titanium.ui.events.CloseHandler;
 import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.OpenHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The tab group allows you to manage a tabbed ui of one or more windows. the
  * tab group is created by the method
@@ -97,12 +99,12 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Array of tab objects that are managed by the tab group
 	 */
-	public final native Object[] getTabs()
+	public final native JavaScriptObject[] getTabs()
 	/*-{
 		return this.tabs;
 	}-*/;
 
-	public final native void setTabs(Object[] value)
+	public final native void setTabs(JavaScriptObject[] value)
 	/*-{
 		this.tabs = value;
 	}-*/;

@@ -133,7 +133,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	 * @param format
 	 *            Optional format arguments for the String resource
 	 */
-	public final native String getString(float resourceId, Object[] format)
+	public final native String getString(float resourceId, JavaScriptObject[] format)
 	/*-{
 		return this.getString(resourceId, format);
 	}-*/;

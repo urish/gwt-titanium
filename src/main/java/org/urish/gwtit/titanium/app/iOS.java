@@ -68,7 +68,7 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 	 *            the `url` property should point to a local JavaScript url that
 	 *            will be executed when the app is backgrounded.
 	 */
-	public static native Object registerBackgroundService(Object params)
+	public static native JavaScriptObject registerBackgroundService(JavaScriptObject params)
 	/*-{
 		return Titanium.App.iOS.registerBackgroundService(params);
 	}-*/;
@@ -93,7 +93,7 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 	 *            optional property which specifies data passed to the
 	 *            application upon launch when the notification is triggered.
 	 */
-	public static native Object scheduleLocalNotification(Object params)
+	public static native JavaScriptObject scheduleLocalNotification(JavaScriptObject params)
 	/*-{
 		return Titanium.App.iOS.scheduleLocalNotification(params);
 	}-*/;
@@ -128,7 +128,7 @@ public class iOS extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.App.iOS.fireEvent(name, event);
 	}-*/;

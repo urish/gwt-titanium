@@ -127,12 +127,12 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @return Set/return an array of permissions to request for your app. be
 	 *         sure the permissions you want are set before calling `authorize`.
 	 */
-	public static native Object getPermissions()
+	public static native JavaScriptObject getPermissions()
 	/*-{
 		return Titanium.Facebook.permissions;
 	}-*/;
 
-	public static native void setPermissions(Object value)
+	public static native void setPermissions(JavaScriptObject value)
 	/*-{
 		Titanium.Facebook.permissions = value;
 	}-*/;
@@ -176,7 +176,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 *            A dictionary object for pre-filling some of the dialog's
 	 *            fields. See example.
 	 */
-	public static native void dialog(String action, Object params,
+	public static native void dialog(String action, JavaScriptObject params,
 			EventCallback<org.urish.gwtit.titanium.facebook.DialogCallbackParams> callback)
 	/*-{
 		return Titanium.Facebook.dialog(action, params, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
@@ -200,7 +200,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 *            A dictionary object for setting parameters required by the
 	 *            call, if any. See examples.
 	 */
-	public static native void request(String method, Object params,
+	public static native void request(String method, JavaScriptObject params,
 			EventCallback<org.urish.gwtit.titanium.facebook.RequestCallbackParams> callback)
 	/*-{
 		return Titanium.Facebook.request(method, params, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
@@ -223,7 +223,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @param httpMethod
 	 *            The http method (GET/POST/DELETE) to use for the call.
 	 */
-	public static native void requestWithGraphPath(String path, Object params, String httpMethod,
+	public static native void requestWithGraphPath(String path, JavaScriptObject params, String httpMethod,
 			EventCallback<org.urish.gwtit.titanium.facebook.GraphRequestCallbackParams> callback)
 	/*-{
 		return Titanium.Facebook.requestWithGraphPath(path, params, httpMethod, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
@@ -259,7 +259,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Facebook.fireEvent(name, event);
 	}-*/;

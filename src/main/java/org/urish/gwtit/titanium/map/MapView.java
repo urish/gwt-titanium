@@ -23,6 +23,8 @@ import org.urish.gwtit.titanium.map.events.ErrorHandler;
 import org.urish.gwtit.titanium.map.events.LoadingHandler;
 import org.urish.gwtit.titanium.map.events.RegionChangedHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The mapview is an object created by
  * {@link org.urish.gwtit.titanium.map.createmapview} and is used for embedding
@@ -57,12 +59,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return An array of annotations to add to the map
 	 */
-	public final native Object[] getAnnotations()
+	public final native JavaScriptObject[] getAnnotations()
 	/*-{
 		return this.annotations;
 	}-*/;
 
-	public final native void setAnnotations(Object[] value)
+	public final native void setAnnotations(JavaScriptObject[] value)
 	/*-{
 		this.annotations = value;
 	}-*/;
@@ -88,12 +90,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *         the region location to set the map: `latitudedelta`,
 	 *         `longitudedelta`, `latitude`, `longitude`.
 	 */
-	public final native Object getRegion()
+	public final native JavaScriptObject getRegion()
 	/*-{
 		return this.region;
 	}-*/;
 
-	public final native void setRegion(Object value)
+	public final native void setRegion(JavaScriptObject value)
 	/*-{
 		this.region = value;
 	}-*/;
@@ -159,7 +161,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            dictionary of values with longitude and latitude keys, `color`
 	 *            for the line color and `width` for the line width.
 	 */
-	public final native void addRoute(Object route)
+	public final native void addRoute(JavaScriptObject route)
 	/*-{
 		return this.addRoute(route);
 	}-*/;
@@ -214,7 +216,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 * @param route
 	 *            same route object used during addRoute
 	 */
-	public final native void removeRoute(Object route)
+	public final native void removeRoute(JavaScriptObject route)
 	/*-{
 		return this.removeRoute(route);
 	}-*/;
@@ -239,7 +241,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            specifying the location to set the map: `latitudeDelta`,
 	 *            `longitudeDelta`, `latitude`, `longitude`.
 	 */
-	public final native void setLocation(Object location)
+	public final native void setLocation(JavaScriptObject location)
 	/*-{
 		return this.setLocation(location);
 	}-*/;

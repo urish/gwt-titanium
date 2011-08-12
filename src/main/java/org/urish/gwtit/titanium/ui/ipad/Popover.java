@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui.ipad;
 
 import org.urish.gwtit.titanium.ui.ipad.events.HideHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A popover is used to manage the presentation of content in a popover. you use
  * popovers to present information temporarily but in a way that does not take
@@ -53,12 +55,12 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The left button in the nav area of the popover
 	 */
-	public final native Object getLeftNavButton()
+	public final native JavaScriptObject getLeftNavButton()
 	/*-{
 		return this.leftNavButton;
 	}-*/;
 
-	public final native void setLeftNavButton(Object value)
+	public final native void setLeftNavButton(JavaScriptObject value)
 	/*-{
 		this.leftNavButton = value;
 	}-*/;
@@ -95,7 +97,7 @@ public class Popover extends org.urish.gwtit.titanium.ui.View {
 	 *            popover is open (i.e. clicking on these views will interact
 	 *            with these views, and not dismiss the popover).
 	 */
-	public final native void setPassthroughViews(Object[] passthroughViews)
+	public final native void setPassthroughViews(JavaScriptObject[] passthroughViews)
 	/*-{
 		return this.setPassthroughViews(passthroughViews);
 	}-*/;

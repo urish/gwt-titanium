@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A tabbed bar is created by the method
@@ -53,12 +54,12 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	 * @return The array of labels for the tabbed bar. each object should have
 	 *         the properties `title`, `image`, `width` and `enabled`.
 	 */
-	public final native Object[] getLabels()
+	public final native JavaScriptObject[] getLabels()
 	/*-{
 		return this.labels;
 	}-*/;
 
-	public final native void setLabels(Object[] value)
+	public final native void setLabels(JavaScriptObject[] value)
 	/*-{
 		this.labels = value;
 	}-*/;

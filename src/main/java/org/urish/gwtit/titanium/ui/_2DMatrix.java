@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The 2dmatrix is created by {@link org.urish.gwtit.titanium.ui.create2dmatrix}
@@ -143,7 +144,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            matrix t2 does not necessarily equal the result of multiplying
 	 *            matrix t2 by matrix t1.
 	 */
-	public final native Object multiply(Object t2)
+	public final native JavaScriptObject multiply(JavaScriptObject t2)
 	/*-{
 		return this.multiply(t2);
 	}-*/;
@@ -156,7 +157,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            positive value specifies counterclockwise rotation and a
 	 *            negative value specifies clockwise rotation.
 	 */
-	public final native Object rotate(float angle)
+	public final native JavaScriptObject rotate(float angle)
 	/*-{
 		return this.rotate(angle);
 	}-*/;
@@ -169,7 +170,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param sy
 	 *            The value by which to scale y values of the matrix
 	 */
-	public final native Object scale(float sx, float sy)
+	public final native JavaScriptObject scale(float sx, float sy)
 	/*-{
 		return this.scale(sx, sy);
 	}-*/;
@@ -182,7 +183,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param ty
 	 *            The value by which to move y values with the matrix
 	 */
-	public final native Object translate(float tx, float ty)
+	public final native JavaScriptObject translate(float tx, float ty)
 	/*-{
 		return this.translate(tx, ty);
 	}-*/;

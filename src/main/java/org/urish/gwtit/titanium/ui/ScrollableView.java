@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.ScrollHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The scrollable view provides a view that supports horizontal scrolling on one
  * or more views in a gesture motion. the scrollable view also optionally
@@ -148,12 +150,12 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Array of view objects to place in the view
 	 */
-	public final native Object[] getViews()
+	public final native JavaScriptObject[] getViews()
 	/*-{
 		return this.views;
 	}-*/;
 
-	public final native void setViews(Object[] value)
+	public final native void setViews(JavaScriptObject[] value)
 	/*-{
 		this.views = value;
 	}-*/;
@@ -164,7 +166,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param view
 	 *            the view to add
 	 */
-	public final native void addView(Object view)
+	public final native void addView(JavaScriptObject view)
 	/*-{
 		return this.addView(view);
 	}-*/;
@@ -175,7 +177,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param view
 	 *            the view to remove
 	 */
-	public final native void removeView(Object view)
+	public final native void removeView(JavaScriptObject view)
 	/*-{
 		return this.removeView(view);
 	}-*/;

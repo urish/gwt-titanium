@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium;
 
+import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * Buffer is a container for raw data. a buffer is created by the method
@@ -63,7 +64,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	 *         {@link org.urish.gwtit.titanium.codec.encodestring} or
 	 *         {@link org.urish.gwtit.titanium.codec.encodenumber}).
 	 */
-	public final native Object getValue()
+	public final native JavaScriptObject getValue()
 	/*-{
 		return this.value;
 	}-*/;

@@ -61,7 +61,7 @@ public class MediaQueryType extends JavaScriptObject {
 	 *         `music_media_type_` constants on
 	 *         {@link org.urish.gwtit.titanium.media}.
 	 */
-	public final native Object getMediaType()
+	public final native JavaScriptObject getMediaType()
 	/*-{
 		return this.mediaType;
 	}-*/;
@@ -79,7 +79,7 @@ public class MediaQueryType extends JavaScriptObject {
 	/**
 	 * @return The title to filter on. value should be a string.
 	 */
-	public final native Object getTitle()
+	public final native JavaScriptObject getTitle()
 	/*-{
 		return this.title;
 	}-*/;
@@ -97,7 +97,7 @@ public class MediaQueryType extends JavaScriptObject {
 	/**
 	 * @return The album title to filter on. value should be a string.
 	 */
-	public final native Object getAlbumTitle()
+	public final native JavaScriptObject getAlbumTitle()
 	/*-{
 		return this.albumTitle;
 	}-*/;
@@ -115,7 +115,7 @@ public class MediaQueryType extends JavaScriptObject {
 	/**
 	 * @return The artist to filter on. value should be a string.
 	 */
-	public final native Object getArtist()
+	public final native JavaScriptObject getArtist()
 	/*-{
 		return this.artist;
 	}-*/;
@@ -133,7 +133,7 @@ public class MediaQueryType extends JavaScriptObject {
 	/**
 	 * @return The album artist to filter on. value should be a string.
 	 */
-	public final native Object getAlbumArtist()
+	public final native JavaScriptObject getAlbumArtist()
 	/*-{
 		return this.albumArtist;
 	}-*/;
@@ -151,7 +151,7 @@ public class MediaQueryType extends JavaScriptObject {
 	/**
 	 * @return The genre to filter on. value should be a string.
 	 */
-	public final native Object getGenre()
+	public final native JavaScriptObject getGenre()
 	/*-{
 		return this.genre;
 	}-*/;
@@ -169,7 +169,7 @@ public class MediaQueryType extends JavaScriptObject {
 	/**
 	 * @return The composer to filter on. value should be a string.
 	 */
-	public final native Object getComposer()
+	public final native JavaScriptObject getComposer()
 	/*-{
 		return this.composer;
 	}-*/;
@@ -188,7 +188,7 @@ public class MediaQueryType extends JavaScriptObject {
 	 * @return Filter by whether or not the item is a compilation. value should
 	 *         be a boolean.
 	 */
-	public final native Object getIsCompilation()
+	public final native JavaScriptObject getIsCompilation()
 	/*-{
 		return this.isCompilation;
 	}-*/;

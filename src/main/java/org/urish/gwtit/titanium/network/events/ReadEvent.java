@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.network.events;
 
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * 
  */
@@ -33,7 +35,7 @@ public class ReadEvent extends AbstractTitaniumEvent {
 	/**
 	 * the reference for the socket that data was retrieved from
 	 */
-	public final native Object getFrom()
+	public final native JavaScriptObject getFrom()
 	/*-{
 		return this.from;
 	}-*/;
@@ -41,7 +43,7 @@ public class ReadEvent extends AbstractTitaniumEvent {
 	/**
 	 * a blob representing the data read, can be interpreted via toString
 	 */
-	public final native Object getData()
+	public final native JavaScriptObject getData()
 	/*-{
 		return this.data;
 	}-*/;

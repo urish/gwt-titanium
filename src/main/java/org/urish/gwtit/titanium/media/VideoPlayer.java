@@ -33,6 +33,8 @@ import org.urish.gwtit.titanium.media.events.ResizeHandler;
 import org.urish.gwtit.titanium.media.events.SourceChangeHandler;
 import org.urish.gwtit.titanium.media.events.ThumbnailHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The videoplayer object is returned by
  * {@link org.urish.gwtit.titanium.media.createvideoplayer} and is useful for
@@ -166,12 +168,12 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The media object, either a file or blob.
 	 */
-	public final native Object getMedia()
+	public final native JavaScriptObject getMedia()
 	/*-{
 		return this.media;
 	}-*/;
 
-	public final native void setMedia(Object value)
+	public final native void setMedia(JavaScriptObject value)
 	/*-{
 		this.media = value;
 	}-*/;
@@ -399,7 +401,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *            {@link org.urish.gwtit.titanium.Media.VIDEO_TIME_OPTION_EXACT}
 	 *            .
 	 */
-	public final native void requestThumbnailImagesAtTimes(Object[] times, int option)
+	public final native void requestThumbnailImagesAtTimes(JavaScriptObject[] times, int option)
 	/*-{
 		return this.requestThumbnailImagesAtTimes(times, option);
 	}-*/;
@@ -410,7 +412,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 * @param view
 	 *            view to set
 	 */
-	public final native void setBackgroundView(Object view)
+	public final native void setBackgroundView(JavaScriptObject view)
 	/*-{
 		return this.setBackgroundView(view);
 	}-*/;
@@ -434,7 +436,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	 *            or
 	 *            {@link org.urish.gwtit.titanium.Media.VIDEO_TIME_OPTION_EXACT}
 	 */
-	public final native Object thumbnailImageAtTime(double time, int option)
+	public final native JavaScriptObject thumbnailImageAtTime(double time, int option)
 	/*-{
 		return this.thumbnailImageAtTime(time, option);
 	}-*/;

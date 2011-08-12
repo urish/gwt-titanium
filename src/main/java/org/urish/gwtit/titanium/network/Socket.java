@@ -76,7 +76,7 @@ public class Socket extends org.urish.gwtit.titanium.Module {
 	 *            creation parameters
 	 * @return New TCP socket.
 	 */
-	public static native org.urish.gwtit.titanium.network.socket.TCP createTCP(Object params)
+	public static native org.urish.gwtit.titanium.network.socket.TCP createTCP(JavaScriptObject params)
 	/*-{
 		return Titanium.Network.Socket.createTCP(params);
 	}-*/;
@@ -111,7 +111,7 @@ public class Socket extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Network.Socket.fireEvent(name, event);
 	}-*/;

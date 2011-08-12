@@ -23,6 +23,8 @@ import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.ReturnHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A text area is created by the method
  * {@link org.urish.gwtit.titanium.ui.createtextfield}. the text field is a
@@ -151,12 +153,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	 * @return Array of toolbar button objects to be used when the keyboard is
 	 *         displayed
 	 */
-	public final native Object[] getKeyboardToolbar()
+	public final native JavaScriptObject[] getKeyboardToolbar()
 	/*-{
 		return this.keyboardToolbar;
 	}-*/;
 
-	public final native void setKeyboardToolbar(Object[] value)
+	public final native void setKeyboardToolbar(JavaScriptObject[] value)
 	/*-{
 		this.keyboardToolbar = value;
 	}-*/;
@@ -190,12 +192,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The left button view
 	 */
-	public final native Object getLeftButton()
+	public final native JavaScriptObject getLeftButton()
 	/*-{
 		return this.leftButton;
 	}-*/;
 
-	public final native void setLeftButton(Object value)
+	public final native void setLeftButton(JavaScriptObject value)
 	/*-{
 		this.leftButton = value;
 	}-*/;
@@ -270,12 +272,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The right button view
 	 */
-	public final native Object getRightButton()
+	public final native JavaScriptObject getRightButton()
 	/*-{
 		return this.rightButton;
 	}-*/;
 
-	public final native void setRightButton(Object value)
+	public final native void setRightButton(JavaScriptObject value)
 	/*-{
 		this.rightButton = value;
 	}-*/;
@@ -347,7 +349,7 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The constant or string value for the fields vertical alignment.
 	 */
-	public final native Object getVerticalAlign()
+	public final native JavaScriptObject getVerticalAlign()
 	/*-{
 		return this.verticalAlign;
 	}-*/;

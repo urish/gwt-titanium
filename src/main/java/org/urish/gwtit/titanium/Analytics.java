@@ -46,7 +46,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 *            event data or null if not specified. the object must be
 	 *            serializable as JSON
 	 */
-	public static native void addEvent(String type, String name, Object data)
+	public static native void addEvent(String type, String name, JavaScriptObject data)
 	/*-{
 		return Titanium.Analytics.addEvent(type, name, data);
 	}-*/;
@@ -60,7 +60,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 *            event data or null if not specified. the object must be
 	 *            serializable as JSON
 	 */
-	public static native void featureEvent(String name, Object data)
+	public static native void featureEvent(String name, JavaScriptObject data)
 	/*-{
 		return Titanium.Analytics.featureEvent(name, data);
 	}-*/;
@@ -78,7 +78,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 *            event data or null if not specified. the object must be
 	 *            serializable as JSON
 	 */
-	public static native void navEvent(String from, String to, String name, Object data)
+	public static native void navEvent(String from, String to, String name, JavaScriptObject data)
 	/*-{
 		return Titanium.Analytics.navEvent(from, to, name, data);
 	}-*/;
@@ -92,7 +92,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 *            event data or null if not specified. the object must be
 	 *            serializable as JSON
 	 */
-	public static native void settingsEvent(String name, Object data)
+	public static native void settingsEvent(String name, JavaScriptObject data)
 	/*-{
 		return Titanium.Analytics.settingsEvent(name, data);
 	}-*/;
@@ -113,7 +113,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 *            serializable as JSON
 	 */
 	public static native void timedEvent(String name, java.util.Date start, java.util.Date stop, float duration,
-			Object data)
+			JavaScriptObject data)
 	/*-{
 		return Titanium.Analytics.timedEvent(name, start, stop, duration, data);
 	}-*/;
@@ -127,7 +127,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 *            event data or null if not specified. the object must be
 	 *            serializable as JSON
 	 */
-	public static native void userEvent(String name, Object data)
+	public static native void userEvent(String name, JavaScriptObject data)
 	/*-{
 		return Titanium.Analytics.userEvent(name, data);
 	}-*/;
@@ -162,7 +162,7 @@ public class Analytics extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Analytics.fireEvent(name, event);
 	}-*/;

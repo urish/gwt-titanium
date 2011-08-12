@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * A picker is created by the method
  * [titanium.ui.createpicker](titanium.ui.createpicker). a picker can be used to
@@ -45,12 +47,12 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of column values
 	 */
-	public final native Object[] getColumns()
+	public final native JavaScriptObject[] getColumns()
 	/*-{
 		return this.columns;
 	}-*/;
 
-	public final native void setColumns(Object[] value)
+	public final native void setColumns(JavaScriptObject[] value)
 	/*-{
 		this.columns = value;
 	}-*/;
@@ -240,7 +242,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *            for the column index, return the row object or nil if not
 	 *            found
 	 */
-	public final native Object getSelectedRow(int index)
+	public final native JavaScriptObject getSelectedRow(int index)
 	/*-{
 		return this.getSelectedRow(index);
 	}-*/;
@@ -251,7 +253,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 * @param column
 	 *            new column to load
 	 */
-	public final native void reloadColumn(Object column)
+	public final native void reloadColumn(JavaScriptObject column)
 	/*-{
 		return this.reloadColumn(column);
 	}-*/;

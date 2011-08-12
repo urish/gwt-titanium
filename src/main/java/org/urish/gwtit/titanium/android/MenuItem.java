@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.android;
 
 import org.urish.gwtit.titanium.android.events.ClickHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The titanium binding of an [android
  * menuitem](http://developer.android.com/reference/android/view/menuitem.html)
@@ -144,7 +146,7 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	 * @param icon
 	 *            icon to use with the item
 	 */
-	public final native void setIcon(Object icon)
+	public final native void setIcon(JavaScriptObject icon)
 	/*-{
 		return this.setIcon(icon);
 	}-*/;

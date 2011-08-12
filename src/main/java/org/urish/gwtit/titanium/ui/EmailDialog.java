@@ -20,6 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.CompleteHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * The email dialog is created by
  * {@link org.urish.gwtit.titanium.ui.createemaildialog} and allows you to send
@@ -77,12 +79,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email bcc: recipients
 	 */
-	public final native Object[] getBccRecipients()
+	public final native JavaScriptObject[] getBccRecipients()
 	/*-{
 		return this.bccRecipients;
 	}-*/;
 
-	public final native void setBccRecipients(Object[] value)
+	public final native void setBccRecipients(JavaScriptObject[] value)
 	/*-{
 		this.bccRecipients = value;
 	}-*/;
@@ -90,12 +92,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email cc: recipients
 	 */
-	public final native Object[] getCcRecipients()
+	public final native JavaScriptObject[] getCcRecipients()
 	/*-{
 		return this.ccRecipients;
 	}-*/;
 
-	public final native void setCcRecipients(Object[] value)
+	public final native void setCcRecipients(JavaScriptObject[] value)
 	/*-{
 		this.ccRecipients = value;
 	}-*/;
@@ -144,12 +146,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email recipients
 	 */
-	public final native Object[] getToRecipients()
+	public final native JavaScriptObject[] getToRecipients()
 	/*-{
 		return this.toRecipients;
 	}-*/;
 
-	public final native void setToRecipients(Object[] value)
+	public final native void setToRecipients(JavaScriptObject[] value)
 	/*-{
 		this.toRecipients = value;
 	}-*/;
@@ -167,7 +169,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	 * @param attachment
 	 *            attachment object as either a Blob or File object
 	 */
-	public final native void addAttachment(Object attachment)
+	public final native void addAttachment(JavaScriptObject attachment)
 	/*-{
 		return this.addAttachment(attachment);
 	}-*/;
@@ -187,7 +189,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	 *            object of animation properties. pass `animated` property (as
 	 *            boolean) to indicate if the dialog should be animated on open.
 	 */
-	public final native void open(Object properties)
+	public final native void open(JavaScriptObject properties)
 	/*-{
 		return this.open(properties);
 	}-*/;

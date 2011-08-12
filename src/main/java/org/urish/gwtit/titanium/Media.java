@@ -739,12 +739,12 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @return An instance of {@link org.urish.gwtit.titanium.media.musicplayer}
 	 *         representing the app-specific music player. iphone/ipad only
 	 */
-	public static native Object getAppMusicPlayer()
+	public static native org.urish.gwtit.titanium.media.MusicPlayer getAppMusicPlayer()
 	/*-{
 		return Titanium.Media.appMusicPlayer;
 	}-*/;
 
-	public static native void setAppMusicPlayer(Object value)
+	public static native void setAppMusicPlayer(org.urish.gwtit.titanium.media.MusicPlayer value)
 	/*-{
 		Titanium.Media.appMusicPlayer = value;
 	}-*/;
@@ -794,12 +794,12 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return Return an array of media type constants supported for the camera
 	 */
-	public static native Object[] getAvailableCameraMediaTypes()
+	public static native int[] getAvailableCameraMediaTypes()
 	/*-{
 		return Titanium.Media.availableCameraMediaTypes;
 	}-*/;
 
-	public static native void setAvailableCameraMediaTypes(Object[] value)
+	public static native void setAvailableCameraMediaTypes(int[] value)
 	/*-{
 		Titanium.Media.availableCameraMediaTypes = value;
 	}-*/;
@@ -808,12 +808,12 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @return Return an array of media type constants supported for saving to
 	 *         the photo gallery
 	 */
-	public static native Object[] getAvailablePhotoGalleryMediaTypes()
+	public static native int[] getAvailablePhotoGalleryMediaTypes()
 	/*-{
 		return Titanium.Media.availablePhotoGalleryMediaTypes;
 	}-*/;
 
-	public static native void setAvailablePhotoGalleryMediaTypes(Object[] value)
+	public static native void setAvailablePhotoGalleryMediaTypes(int[] value)
 	/*-{
 		Titanium.Media.availablePhotoGalleryMediaTypes = value;
 	}-*/;
@@ -821,12 +821,12 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return Return an array of media type constants supported for the photo
 	 */
-	public static native Object[] getAvailablePhotoMediaTypes()
+	public static native int[] getAvailablePhotoMediaTypes()
 	/*-{
 		return Titanium.Media.availablePhotoMediaTypes;
 	}-*/;
 
-	public static native void setAvailablePhotoMediaTypes(Object[] value)
+	public static native void setAvailablePhotoMediaTypes(int[] value)
 	/*-{
 		Titanium.Media.availablePhotoMediaTypes = value;
 	}-*/;
@@ -889,12 +889,12 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @return An instance of {@link org.urish.gwtit.titanium.media.musicplayer}
 	 *         representing the system-wide music player. iphone/ipad only
 	 */
-	public static native Object getSystemMusicPlayer()
+	public static native JavaScriptObject getSystemMusicPlayer()
 	/*-{
 		return Titanium.Media.systemMusicPlayer;
 	}-*/;
 
-	public static native void setSystemMusicPlayer(Object value)
+	public static native void setSystemMusicPlayer(JavaScriptObject value)
 	/*-{
 		Titanium.Media.systemMusicPlayer = value;
 	}-*/;
@@ -1014,7 +1014,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 *            `arrowDirection` can be provided to control the type of arrow
 	 *            and position of the gallery.
 	 */
-	public static native void openPhotoGallery(Object options)
+	public static native void openPhotoGallery(JavaScriptObject options)
 	/*-{
 		return Titanium.Media.openPhotoGallery(options);
 	}-*/;
@@ -1032,7 +1032,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 *            `error` a function that will be called upon anreceiving an
 	 *            error
 	 */
-	public static native void saveToPhotoGallery(Object media, Object callbacks)
+	public static native void saveToPhotoGallery(JavaScriptObject media, JavaScriptObject callbacks)
 	/*-{
 		return Titanium.Media.saveToPhotoGallery(media, callbacks);
 	}-*/;
@@ -1062,7 +1062,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 *            (on top), `transform` an transformation matrix that applies to
 	 *            the camera UI transform.
 	 */
-	public static native void showCamera(Object options)
+	public static native void showCamera(JavaScriptObject options)
 	/*-{
 		return Titanium.Media.showCamera(options);
 	}-*/;
@@ -1086,7 +1086,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 *            `allowMultipleSelections` boolean whether or not more than one
 	 *            media selection is allowed
 	 */
-	public static native void showMusicLibrary(Object options)
+	public static native void showMusicLibrary(JavaScriptObject options)
 	/*-{
 		return Titanium.Media.showMusicLibrary(options);
 	}-*/;
@@ -1179,7 +1179,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	 * @param event
 	 *            event object
 	 */
-	public static native void fireEvent(String name, Object event)
+	public static native void fireEvent(String name, JavaScriptObject event)
 	/*-{
 		return Titanium.Media.fireEvent(name, event);
 	}-*/;

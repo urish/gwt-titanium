@@ -23,6 +23,8 @@ import org.urish.gwtit.titanium.ui.events.LoadHandler;
 import org.urish.gwtit.titanium.ui.events.StartHandler;
 import org.urish.gwtit.titanium.ui.events.StopHandler;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 /**
  * An image view is used to display an image or a series of images in an
  * animation. the image view is created by the method
@@ -135,12 +137,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Image to display either as string url, blob or file
 	 */
-	public final native Object getImage()
+	public final native JavaScriptObject getImage()
 	/*-{
 		return this.image;
 	}-*/;
 
-	public final native void setImage(Object value)
+	public final native void setImage(JavaScriptObject value)
 	/*-{
 		this.image = value;
 	}-*/;
@@ -149,12 +151,12 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	 * @return Array of images (either as string url, blob or file) to display
 	 *         in an animation
 	 */
-	public final native Object[] getImages()
+	public final native JavaScriptObject[] getImages()
 	/*-{
 		return this.images;
 	}-*/;
 
-	public final native void setImages(Object[] value)
+	public final native void setImages(JavaScriptObject[] value)
 	/*-{
 		this.images = value;
 	}-*/;
