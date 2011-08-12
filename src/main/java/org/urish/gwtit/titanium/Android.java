@@ -1260,6 +1260,14 @@ public class Android extends org.urish.gwtit.titanium.Module {
 
 	public static final float URI_INTENT_SCHEME = value_URI_INTENT_SCHEME();
 
+	/**
+	 * @return The current activity
+	 */
+	public static native org.urish.gwtit.titanium.android.Activity getCurrentActivity()
+	/*-{
+		return Titanium.Android.currentActivity;
+	}-*/;
+
 	public static native org.urish.gwtit.titanium.android.Activity createActivity()
 	/*-{
 		return Titanium.Android.createActivity();

@@ -641,9 +641,10 @@ def processSelectorChain(subject, chain, value):
 		selector = chain.pop(0)
 		if (len(chain) == 0) and (value != None):
 			if selector.endswith("+"):
-				subject[selector] += value
+				subject[selector[:-1]] += value
 			else:
 				subject[selector] = value
+			break
 		match = re.match(r"^([^[]+)\[([^=]+)='([^']+)'\]$", selector)
 		rematch = re.match(r"^([^[]+)\[([^=]+)=/([^/]+)/\]$", selector)
 		if match:

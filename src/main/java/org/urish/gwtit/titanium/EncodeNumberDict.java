@@ -28,6 +28,14 @@ public class EncodeNumberDict extends JavaScriptObject {
 	}
 
 	/**
+	 * Creates a new, empty instance of EncodeNumberDict
+	 */
+	public static final native EncodeNumberDict createEncodeNumberDict()
+	/*-{
+		return {};
+	}-*/;
+
+	/**
 	 * @return The source number to encode
 	 */
 	public final native float getSource()

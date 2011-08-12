@@ -28,6 +28,14 @@ public class DecodeNumberDict extends JavaScriptObject {
 	}
 
 	/**
+	 * Creates a new, empty instance of DecodeNumberDict
+	 */
+	public static final native DecodeNumberDict createDecodeNumberDict()
+	/*-{
+		return {};
+	}-*/;
+
+	/**
 	 * @return The buffer to decode
 	 */
 	public final native org.urish.gwtit.titanium.Buffer getSource()

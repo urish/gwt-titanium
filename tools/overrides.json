@@ -8,11 +8,16 @@
 	"CreateStreamArgs": {
 		"needsConstructor": true
 	},
-	"DecodeNumberSpec": {
+	"DecodeNumberDict": {
 		"needsConstructor": true
 	},
-	"EncodeNumberSpec": {
+	"EncodeNumberDict": {
 		"needsConstructor": true
+	},
+	"Titanium.Android": {
+		"properties+": [
+			{"name": "currentActivity", "description": "The current activity", "permission": "read-only", "type": "Titanium.Android.Activity"}
+		]
 	},
 	"Titanium.Facebook": {
 		"methods[name='dialog'] parameters[name='callback'] type": "Callback<Titanium.Facebook.DialogCallbackParams>",
