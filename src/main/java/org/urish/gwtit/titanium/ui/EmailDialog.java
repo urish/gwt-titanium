@@ -79,12 +79,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email bcc: recipients
 	 */
-	public final native JavaScriptObject[] getBccRecipients()
+	public final native String[] getBccRecipients()
 	/*-{
 		return this.bccRecipients;
 	}-*/;
 
-	public final native void setBccRecipients(JavaScriptObject[] value)
+	public final native void setBccRecipients(String[] value)
 	/*-{
 		this.bccRecipients = value;
 	}-*/;
@@ -92,12 +92,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email cc: recipients
 	 */
-	public final native JavaScriptObject[] getCcRecipients()
+	public final native String[] getCcRecipients()
 	/*-{
 		return this.ccRecipients;
 	}-*/;
 
-	public final native void setCcRecipients(JavaScriptObject[] value)
+	public final native void setCcRecipients(String[] value)
 	/*-{
 		this.ccRecipients = value;
 	}-*/;
@@ -146,12 +146,12 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of email recipients
 	 */
-	public final native JavaScriptObject[] getToRecipients()
+	public final native String[] getToRecipients()
 	/*-{
 		return this.toRecipients;
 	}-*/;
 
-	public final native void setToRecipients(JavaScriptObject[] value)
+	public final native void setToRecipients(String[] value)
 	/*-{
 		this.toRecipients = value;
 	}-*/;

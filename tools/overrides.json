@@ -166,6 +166,11 @@
 	"Titanium.UI.DashboardItem": {
 		"events[name='click'] properties[name='location'] type": "$Point"
 	},
+	"Titanium.UI.EmailDialog": {
+		"properties[name='bccRecipients'] type": "Array<String>",
+		"properties[name='ccRecipients'] type": "Array<String>",
+		"properties[name='toRecipients'] type": "Array<String>"
+	},
 	"Titanium.UI.Label": {
 		"properties[name='font'] type": "Font"
 	},
