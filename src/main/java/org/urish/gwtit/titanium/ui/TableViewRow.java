@@ -139,20 +139,6 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The layout algorithm to use for the layout. either absolute
-	 *         (default) or vertical.
-	 */
-	public final native String getLayout()
-	/*-{
-		return this.layout;
-	}-*/;
-
-	public final native void setLayout(String value)
-	/*-{
-		this.layout = value;
-	}-*/;
-
-	/**
 	 * @return Image url to render in the left image area of the row cell
 	 */
 	public final native String getLeftImage()

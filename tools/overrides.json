@@ -218,6 +218,9 @@
 		"properties[name='width'] getterType": "float",
 		"properties[name='size'] getterType": "$Size",
 		"properties[name='top'] getterType": "float",
+		"properties+": {
+			{"name": "layout", "description": "The layout algorithm to use for the layout. Either 'absolute' or 'vertical'", "type": "String"}
+		},
 		"events[name='dblclick'] javaName": "DoubleClick",		
 		"events[name='doubletap'] javaName": "DoubleTap",		
 		"events[name='longclick'] javaName": "LongClick",		

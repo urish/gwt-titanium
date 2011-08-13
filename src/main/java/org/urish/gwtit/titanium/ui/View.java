@@ -355,6 +355,16 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.height;
 	}-*/;
+	
+	public final native void setLayout(String value)
+	/*-{
+		this.layout = value;
+	}-*/;
+
+	public final native String getLayout()
+	/*-{
+		return this.layout;
+	}-*/;
 
 	public final native void setLeft(float value)
 	/*-{
