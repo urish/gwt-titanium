@@ -184,6 +184,9 @@
 			{"name": "open", "parameters": [{"name": "view", "type": "Titanium.UI.View", "description": "The view to open in the tab"}]}
 		]
 	},
+	"Titanium.UI.TabbedBar": {
+		"properties[name='labels'] type": "Array<String>"
+	},
 	"Titanium.UI.TabGroup": {
 		"properties[name='activeTab'] type": "Titanium.UI.Tab"
 	},
