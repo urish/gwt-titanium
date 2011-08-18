@@ -68,18 +68,18 @@ var devMode = (function() {
 			return msg;
 		};
 	}
-
+	
 	var JAVA_OBJECT_MAGIC = {};
-
+	
 	function JavaObject(id) {
-		var result = function() {
+		var result = function(){
 			warn("Called JavaObject... What now?");
 		};
 		result.javaObject = JAVA_OBJECT_MAGIC;
 		result.id = id;
 		return result;
 	}
-
+	
 	var IO_BUFFER_LENGTH = 1024;
 	var _ioBuffer = Ti.createBuffer({
 		length : IO_BUFFER_LENGTH
@@ -221,9 +221,28 @@ var devMode = (function() {
 		}
 	}
 
+	function isInteger(value){
+		return !isNaN(parseInt(value * 1)
+	}
+	
 	function writeValue(stream, value) {
 		if (value === null) {
 			writeByte(stream, VALUE_TYPE_NULL);
+			return;
+		}
+		if ((value === true) || (value === false)) {
+			writeByte(stream, VALUE_TYPE_BOOLEAN);
+			writeByte(stream, value ? 1 : 0);
+			return;
+		}
+		if ((typeof value == 'number')) {
+			if (isInteger(value)) {
+				writeByte(stream, VALUE_TYPE_INTEGER);
+				writeInt(stream, value);
+			} else {
+				writeByte(stream, VALUE_TYPE_DOUBLE);
+				writeDouble(stream, value);
+			}
 			return;
 		}
 		if (typeof value == typeof '') {
@@ -233,7 +252,7 @@ var devMode = (function() {
 		}
 		if (typeof value == 'function' && (value.javaObject === JAVA_OBJECT_MAGIC)) {
 			writeByte(stream, VALUE_TYPE_JAVA_OBJECT);
-			writeInt(stream, value.id);
+			writeInt(stream, value.id);		
 			return;
 		}
 		if (typeof value == 'object' || typeof value == 'function') {
@@ -364,8 +383,8 @@ var devMode = (function() {
 	window.__gwt_makeTearOff = function(dispId, argCount) {
 		// TODO optimize
 		return function() {
-			var newArgs = [ dispId, this ];
-			for ( var i = 0; arguments.length; i++) {
+			var newArgs = [dispId, this];
+			for (var i = 0; arguments.length; i++) {
 				newArgs.push(arguments[i]);
 			}
 			window.__static.apply(null, newArgs);
@@ -377,7 +396,7 @@ var devMode = (function() {
 	window.fireOnModuleLoadStart = function(className) {
 		debug("fireOnModuleLoadStart(" + className + ")");
 	};
-
+	
 	function processNegotiation(socket) {
 		sendCheckVersions();
 		var type = readByte(socket);
@@ -400,8 +419,7 @@ var devMode = (function() {
 	function onConnected() {
 		connectionOk = true;
 		try {
-			sendCheckVersions(socket, BROWSERCHANNEL_PROTOCOL_VERSION, BROWSERCHANNEL_PROTOCOL_VERSION,
-					$hostedHtmlVersion);
+			sendCheckVersions(socket, BROWSERCHANNEL_PROTOCOL_VERSION, BROWSERCHANNEL_PROTOCOL_VERSION, $hostedHtmlVersion);
 			processIO(socket);
 		} catch (e) {
 			if ((e == QUIT_EXCEPTION) || (e == EOF_EXCEPTION)) {
