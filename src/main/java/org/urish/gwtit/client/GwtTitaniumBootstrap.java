@@ -40,14 +40,19 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
 	@Override
 	public final void onModuleLoad() {
 		Runner runner = GWT.create(Runner.class);
+		if (isDevelopmentMode()) {
+			// In development mode we don't need to override the streams and
+			// catch exception since we run from within a JVM.
+			runner.run(this);
+			return;
+		}
 		System.setOut(new TitaniumStandardOutputPrintStream());
 		System.setErr(new TitaniumStandardErrorPrintStream());
 		try {
 			runner.run(this);
-		}
-		catch (Throwable e) {
+		} catch (Throwable e) {
 			e.printStackTrace();
-			
+
 			/* Unfortunately, Titanium can only handle string exceptions... */
 			PrintStream ps = new StringPrintStream();
 			e.printStackTrace(ps);
@@ -61,6 +66,10 @@ public abstract class GwtTitaniumBootstrap implements EntryPoint {
 
 	public Timer setInterval(int milliseconds, TimerCallback callback) {
 		return Timers.setInterval(milliseconds, callback);
+	}
+
+	private boolean isDevelopmentMode() {
+		return !GWT.isScript() && GWT.isClient();
 	}
 
 	public abstract void main();
