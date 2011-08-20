@@ -80,6 +80,91 @@ var devMode = (function() {
 		return result;
 	}
 	
+	function glassAlert(title, content) {
+		var win = Ti.UI.createWindow({
+			title: title,
+			backgroundColor: 'white'
+		});
+
+		var t = Titanium.UI.create2DMatrix();
+		t = t.scale(0);
+
+		win.backgroundColor = 'black';
+		win.borderWidth = 8;
+		win.borderColor='#369';
+		win.height=380;
+		win.layout = 'vertical';
+		win.width=280;
+		win.borderRadius=10;
+		// win.opacity=0.92;
+		win.transform=t;
+
+		var modal = Titanium.UI.createWindow({
+			fullscreen:true
+		});
+
+		// create first transform to go beyond normal size
+		var t1 = Titanium.UI.create2DMatrix();
+		t1 = t1.scale(1.1);
+		var a = Titanium.UI.createAnimation();
+		a.transform = t1;
+		a.duration = 200;
+
+		// when this animation completes, scale to normal size
+		a.addEventListener('complete', function() {
+			var t2 = Titanium.UI.create2DMatrix();
+			t2 = t2.scale(1.0);
+			win.animate({
+				transform:t2,
+				duration:200
+			});
+		});
+		var topLabel = Titanium.UI.createLabel({
+			top: 20,
+			color: 'white',
+			height: 'auto',
+			width: 240,
+			text: title,
+			textAlign: 'center',
+			font: {
+				fontSize: 16,
+				fontWeight: 'bold'
+			}
+		});
+		win.add(topLabel);
+		var webView = Titanium.UI.createWebView({
+			top: 20,
+			width: 264,
+			height: 230,
+			backgroundColor: 'black',
+			color: 'white',
+			html: "<style>html{color:white;}</style>" + content
+		});
+		win.add(webView);
+		// create a button to close window
+		var closeButton = Titanium.UI.createButton({
+			title:'Dismiss',
+			height:30,
+			width:150,
+			top:20
+		});
+		win.add(closeButton);
+		closeButton.addEventListener('click', function() {
+			var t3 = Titanium.UI.create2DMatrix();
+			t3 = t3.scale(0);
+			win.close({
+				transform:t3,
+				duration:300
+			});
+			modal.close();
+		});
+		function showModal() {
+			modal.open();
+			win.open(a);
+		};
+		showModal();
+	}
+	
 	var IO_BUFFER_LENGTH = 1024;
 	var _ioBuffer = Ti.createBuffer({
 		length : IO_BUFFER_LENGTH
@@ -391,7 +476,7 @@ var devMode = (function() {
 		};
 	};
 	window.__gwt_displayGlassMessage = function(summary, details) {
-		alert("S: " + summary + ", " + details);
+		glassAlert(summary, details);
 	};
 	window.fireOnModuleLoadStart = function(className) {
 		debug("fireOnModuleLoadStart(" + className + ")");
