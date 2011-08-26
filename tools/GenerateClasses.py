@@ -18,7 +18,6 @@ import re
 import yaml
 import json
 from copy import copy
-from numpy.f2py.auxfuncs import issigned_array
 
 PACKAGE_PREFIX = "org.urish.gwtit."
 
