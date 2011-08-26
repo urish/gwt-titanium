@@ -184,6 +184,14 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Open the email dialog. the email dialog itself is a modal window
+	 */
+	public final native void open()
+	/*-{
+		return this.open();
+	}-*/;
+
+	/**
+	 * Open the email dialog. the email dialog itself is a modal window
 	 * 
 	 * @param properties
 	 *            object of animation properties. pass `animated` property (as
