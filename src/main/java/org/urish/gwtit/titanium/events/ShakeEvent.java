@@ -38,4 +38,28 @@ public class ShakeEvent extends AbstractTitaniumEvent {
 		return this.timestamp;
 	}-*/;
 
+	/**
+	 * x coordinate of the shake event
+	 */
+	public final native float getX()
+	/*-{
+		return this.x;
+	}-*/;
+
+	/**
+	 * y coordinate of the shake event
+	 */
+	public final native float getY()
+	/*-{
+		return this.y;
+	}-*/;
+
+	/**
+	 * z coordinate of the shake event
+	 */
+	public final native float getZ()
+	/*-{
+		return this.z;
+	}-*/;
+
 }

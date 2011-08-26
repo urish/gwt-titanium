@@ -31,6 +31,37 @@ public class Gesture extends org.urish.gwtit.titanium.Module {
 	protected Gesture() {
 	}
 
+	/**
+	 * @return True if current window is considered portrait by the device,
+	 *         false otherwise
+	 */
+	public static native boolean getPortrait()
+	/*-{
+		return Titanium.Gesture.portrait;
+	}-*/;
+
+	/**
+	 * @return True if current window is considered landscape by the device,
+	 *         false otherwise
+	 */
+	public static native boolean getLandscape()
+	/*-{
+		return Titanium.Gesture.landscape;
+	}-*/;
+
+	/**
+	 * @return Orientation of the current window. value will be one of the
+	 *         following - {@link org.urish.gwtit.titanium.ui.portrait},
+	 *         {@link org.urish.gwtit.titanium.ui.upside_portrait},
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_left},
+	 *         {@link org.urish.gwtit.titanium.ui.landscape_right} or
+	 *         {@link org.urish.gwtit.titanium.ui.unknown}
+	 */
+	public static native float getOrientation()
+	/*-{
+		return Titanium.Gesture.orientation;
+	}-*/;
+
 	public static native void addOrientationChangeHandler(OrientationChangeHandler handler)
 	/*-{
 		return Titanium.Gesture.addEventListener('orientationchange', function(e) { handler.@org.urish.gwtit.titanium.events.OrientationChangeHandler::onOrientationChange(Lorg/urish/gwtit/titanium/events/OrientationChangeEvent;)(e); } );

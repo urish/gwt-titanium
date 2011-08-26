@@ -419,6 +419,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * Register for push notifications with the apple push notification service.
 	 * only available on iphone.
 	 * 
+	 * @platforms iphone, ipad
 	 * @param config
 	 *            dictionary of the following: `types` is an array of type
 	 *            constants that the application would like to receive,
@@ -460,9 +461,9 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param name
 	 *            name of the event
 	 */
-	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Network.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+		return Titanium.Network.removeEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

@@ -22,8 +22,8 @@ package org.urish.gwtit.titanium.xml;
 /**
  * Represents the textual content of an
  * {@link org.urish.gwtit.titanium.xml.element} or
- * {@link org.urish.gwtit.titanium.xml.attr} this conforms to the [dom level 2]
- * (http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom text.
+ * {@link org.urish.gwtit.titanium.xml.attr} this conforms to the [dom level
+ * 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom text.
  */
 public class Text extends org.urish.gwtit.titanium.xml.CharacterData {
 	protected Text() {

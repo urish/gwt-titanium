@@ -355,16 +355,6 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	/*-{
 		return this.height;
 	}-*/;
-	
-	public final native void setLayout(String value)
-	/*-{
-		this.layout = value;
-	}-*/;
-
-	public final native String getLayout()
-	/*-{
-		return this.layout;
-	}-*/;
 
 	public final native void setLeft(float value)
 	/*-{
@@ -539,6 +529,20 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	public final native void setZIndex(int value)
 	/*-{
 		this.zIndex = value;
+	}-*/;
+
+	/**
+	 * @return The layout algorithm to use for the layout. either 'absolute' or
+	 *         'vertical'
+	 */
+	public final native String getLayout()
+	/*-{
+		return this.layout;
+	}-*/;
+
+	public final native void setLayout(String value)
+	/*-{
+		this.layout = value;
 	}-*/;
 
 	/**

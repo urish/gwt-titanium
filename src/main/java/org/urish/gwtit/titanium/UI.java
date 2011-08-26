@@ -841,11 +841,6 @@ public class UI extends org.urish.gwtit.titanium.Module {
 		return Titanium.UI.createButtonBar();
 	}-*/;
 
-	public static native org.urish.gwtit.titanium.ui.CoverFlowView createCoverFlowView()
-	/*-{
-		return Titanium.UI.createCoverFlowView();
-	}-*/;
-
 	public static native org.urish.gwtit.titanium.ui.DashboardItem createDashboardItem()
 	/*-{
 		return Titanium.UI.createDashboardItem();
@@ -989,6 +984,11 @@ public class UI extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.ui.Clipboard createClipboard()
 	/*-{
 		return Titanium.UI.createClipboard();
+	}-*/;
+
+	public static native org.urish.gwtit.titanium.ui.CoverFlowView createCoverFlowView()
+	/*-{
+		return Titanium.UI.createCoverFlowView();
 	}-*/;
 
 	public static native org.urish.gwtit.titanium.ui.iOS createiOS()

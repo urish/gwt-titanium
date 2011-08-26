@@ -299,9 +299,11 @@ def mapTypes(s, withConsts = False):
 		path = s.split(".")
 		if withConsts and path[-1].upper() == path[-1]:
 			# Constant
-			return "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
-		return "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
-	if s.endswith("CallbackArgs") or s in ['EncodeNumberSpec', 'DecodeStringSpec']:
+			result = "org.urish.gwtit.%s.%s.%s" % (".".join(path[:-2]).lower(), path[-2], path[-1])
+		else:
+			result = "org.urish.gwtit." + ".".join(path[:-1]).lower() + "." + path[-1]
+		return re.sub(r"\.(\d)", r"._\1", result)
+	if s.endswith("CallbackArgs"):
 		return "org.urish.gwtit.titanium." + s
 	print "!!!WARN!!! unknown type detected: ", s
 	return "Object"
@@ -548,12 +550,12 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 		javaName = event.get("javaName", capitalEventName(event['name']))
 		foundInAncetors = False
 		eventProperties = ""
-		propertyNames = [propertyInfo['name'] for propertyInfo in event['properties']]
+		propertyNames = [propertyInfo['name'] for propertyInfo in event.get('properties', [])]
 		skipEventProperties = ["source", "type"]
 		if 'x' in propertyNames and 'y' in propertyNames and 'globalPoint' in propertyNames:
 			superClass = "TouchEvent"
 			skipEventProperties += ['x', 'y', 'globalPoint']
-		for propertyInfo in event['properties']:
+		for propertyInfo in event.get('properties', []):
 			if propertyInfo['name'] in skipEventProperties:
 				continue
 			eventType = propertyInfo.get('type', "Object")

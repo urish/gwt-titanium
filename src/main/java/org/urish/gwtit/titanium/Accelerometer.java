@@ -27,9 +27,12 @@ import org.urish.gwtit.titanium.events.UpdateHandler;
  * Notes: You'll want to be selective about turning on and off the device
  * accelerometer. It's recommended you turn off the accelerometer when you're
  * not using it. You can turn off the accelerometer by simply removing your
- * event listener function. You can turn it back on by re-adding the same
- * function with `addEventListener`.
+ * event listener function.
+ * 
  * Titanium.Accelerometer.removeEventListener('update',myFunction);
+ * 
+ * You can turn it back on by re-adding the same function with
+ * `addEventListener`.
  * 
  * @since 0.1
  */

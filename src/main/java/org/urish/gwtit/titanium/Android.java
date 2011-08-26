@@ -1330,7 +1330,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Crate a {@link org.urish.gwtit.titanium.android.notification}. used to
+	 * Create a {@link org.urish.gwtit.titanium.android.notification}. used to
 	 * notify the user of an event.
 	 * 
 	 * @param options
@@ -1458,9 +1458,9 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * @param name
 	 *            name of the event
 	 */
-	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Android.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+		return Titanium.Android.removeEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

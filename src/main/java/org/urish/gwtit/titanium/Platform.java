@@ -363,9 +363,9 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	 * @param name
 	 *            name of the event
 	 */
-	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.Platform.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+		return Titanium.Platform.removeEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

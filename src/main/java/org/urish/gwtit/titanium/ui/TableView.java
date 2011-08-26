@@ -312,6 +312,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return The separator style constant. for iphone,
 	 *         titanium.ui.iphone.tableviewseparatorstyle
+	 * @platforms iphone, ipad
 	 */
 	public final native int getSeparatorStyle()
 	/*-{

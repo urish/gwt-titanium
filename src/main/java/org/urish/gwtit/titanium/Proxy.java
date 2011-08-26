@@ -48,9 +48,9 @@ public class Proxy extends JavaScriptObject {
 	 * @param name
 	 *            name of the event
 	 */
-	public final native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
+	public final native void removeEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return this.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+		return this.removeEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

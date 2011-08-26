@@ -31,11 +31,19 @@ public class ChangeEvent extends TouchEvent {
 	}
 
 	/**
-	 * the value of the field upon change
+	 * the index of the image that is now visible
 	 */
-	public final native String getValue()
+	public final native int getIndex()
 	/*-{
-		return this.value;
+		return this.index;
+	}-*/;
+
+	/**
+	 * the previous index of the image that was visible
+	 */
+	public final native int getPrevious()
+	/*-{
+		return this.previous;
 	}-*/;
 
 }

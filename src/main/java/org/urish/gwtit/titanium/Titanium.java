@@ -50,15 +50,15 @@ import com.google.gwt.core.client.JavaScriptObject;
  * #### Alert
  * 
  * Titanium has a built-in convenience function `alert` which can be used as a
- * shortcut to [[Titanium.UI.createAlertDialog]] for creating a message box.
- * Note that unlike a web browser-based version of `alert`, the method is
+ * shortcut to <Titanium.UI.createAlertDialog> for creating a message box. Note
+ * that unlike a web browser-based version of `alert`, the method is
  * asynchronous. However, only one alert dialog will be visible and modal at a
  * time.
  * 
  * #### Locale
  * 
  * The macro `L` can also be used which aliases the method
- * [[Titanium.Locale.getString]].
+ * <Titanium.Locale.getString>.
  * 
  * #### String formatting
  * 
@@ -128,6 +128,11 @@ public class Titanium extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.BufferStream createBufferStream()
 	/*-{
 		return Titanium.createBufferStream();
+	}-*/;
+
+	public static native org.urish.gwtit.titanium.Event createEvent()
+	/*-{
+		return Titanium.createEvent();
 	}-*/;
 
 	public static native org.urish.gwtit.titanium.IOStream createIOStream()
@@ -296,9 +301,9 @@ public class Titanium extends org.urish.gwtit.titanium.Module {
 	 * @param name
 	 *            name of the event
 	 */
-	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+		return Titanium.removeEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

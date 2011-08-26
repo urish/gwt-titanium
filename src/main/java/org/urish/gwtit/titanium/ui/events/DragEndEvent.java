@@ -16,29 +16,28 @@
 
 /* Automatically generated code, don't edit ! */
 
-package org.urish.gwtit.titanium.events;
+package org.urish.gwtit.titanium.ui.events;
 
 import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 
 /**
  * 
  */
-public class OrientationChangeEvent extends AbstractTitaniumEvent {
+public class DragEndEvent extends AbstractTitaniumEvent {
 
-	public final static String NATIVE_EVENT_NAME = "orientationchange";
+	public final static String NATIVE_EVENT_NAME = "dragEnd";
 
-	protected OrientationChangeEvent() {
+	protected DragEndEvent() {
 	}
 
 	/**
-	 * Orientation of the current window. Value will be one of the following -
-	 * <Titanium.UI.PORTRAIT>, <Titanium.UI.UPSIDE_PORTRAIT>,
-	 * <Titanium.UI.LANDSCAPE_LEFT>, <Titanium.UI.LANDSCAPE_RIGHT> or
-	 * <Titanium.UI.UNKNOWN>
+	 * boolean. YES if the scrolling movement will continue, but decelerate,
+	 * after a touch-up gesture during a dragging operation. If the value is NO,
+	 * scrolling stops immediately upon touch-up.
 	 */
-	public final native int getOrientation()
+	public final native boolean getDecelerate()
 	/*-{
-		return this.orientation;
+		return this.decelerate;
 	}-*/;
 
 }

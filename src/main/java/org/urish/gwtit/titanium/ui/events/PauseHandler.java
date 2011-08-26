@@ -16,29 +16,13 @@
 
 /* Automatically generated code, don't edit ! */
 
-package org.urish.gwtit.titanium.events;
-
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
+package org.urish.gwtit.titanium.ui.events;
 
 /**
  * 
  */
-public class OrientationChangeEvent extends AbstractTitaniumEvent {
+public interface PauseHandler {
 
-	public final static String NATIVE_EVENT_NAME = "orientationchange";
-
-	protected OrientationChangeEvent() {
-	}
-
-	/**
-	 * Orientation of the current window. Value will be one of the following -
-	 * <Titanium.UI.PORTRAIT>, <Titanium.UI.UPSIDE_PORTRAIT>,
-	 * <Titanium.UI.LANDSCAPE_LEFT>, <Titanium.UI.LANDSCAPE_RIGHT> or
-	 * <Titanium.UI.UNKNOWN>
-	 */
-	public final native int getOrientation()
-	/*-{
-		return this.orientation;
-	}-*/;
+	public void onPause(PauseEvent event);
 
 }

@@ -110,19 +110,75 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Cause the dialog to become hidden
+	 * @return The key in the locale file to use for the title property
 	 */
-	public final native void hide()
+	public final native String getTitleid()
 	/*-{
-		return this.hide();
+		return this.titleid;
+	}-*/;
+
+	public final native void setTitleid(String value)
+	/*-{
+		this.titleid = value;
 	}-*/;
 
 	/**
-	 * Cause the dialog to become visible
+	 * @return Text for the ok button. useful for when you only want one button
+	 *         and therefore don't want to use the `buttonnames` property. if
+	 *         you do use `buttonnames`, this property will be ignored.
+	 */
+	public final native String getOk()
+	/*-{
+		return this.ok;
+	}-*/;
+
+	public final native void setOk(String value)
+	/*-{
+		this.ok = value;
+	}-*/;
+
+	/**
+	 * @return The key in the locale file to use for the `ok` property. note
+	 *         that if you use the `buttonnames` property to set the button
+	 *         titles, this will be ignored.
+	 */
+	public final native String getOkid()
+	/*-{
+		return this.okid;
+	}-*/;
+
+	public final native void setOkid(String value)
+	/*-{
+		this.okid = value;
+	}-*/;
+
+	/**
+	 * @return Titanium view that should be loaded inside the alert dialog
+	 */
+	public final native org.urish.gwtit.titanium.ui.View getAndroidView()
+	/*-{
+		return this.androidView;
+	}-*/;
+
+	public final native void setAndroidView(org.urish.gwtit.titanium.ui.View value)
+	/*-{
+		this.androidView = value;
+	}-*/;
+
+	/**
+	 * Shows the alert dialog and blocks the background view like a modal window
 	 */
 	public final native void show()
 	/*-{
 		return this.show();
+	}-*/;
+
+	/**
+	 * Hides the alert dialog and unblocks the background view
+	 */
+	public final native void hide()
+	/*-{
+		return this.hide();
 	}-*/;
 
 	public final native void addClickHandler(ClickHandler handler)

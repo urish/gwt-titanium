@@ -84,16 +84,6 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return When this blob represents a {@link org.urish.gwtit.titanium.file}
-	 *         , this is the absolute path to the file.
-	 * @platforms iphone, ipad
-	 */
-	public final native String getPath()
-	/*-{
-		return this.path;
-	}-*/;
-
-	/**
 	 * @return When this blob represents an image, this is the total number of
 	 *         pixels in the image. otherwise it returns the number of bytes in
 	 *         the binary data.

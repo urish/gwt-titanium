@@ -25,7 +25,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 /**
  * The cover flow view is container for showing animated, three dimensional
  * images in a nice ui. the cover flow view is created by the method
- * {@link org.urish.gwtit.titanium.ui.createcoverflowview}.
+ * {@link org.urish.gwtit.titanium.ui.ios.createcoverflowview}.
  * <p>
  * Notes:
  * 

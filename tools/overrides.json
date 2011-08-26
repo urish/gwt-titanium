@@ -184,6 +184,9 @@
 		"events[name='change'] properties[name='thumbSize'] type": "$Size",
 		"events[name='change'] properties[name='thumbOffset'] type": "$Point"
 	},
+	"Titanium.Switch": {
+		"events[name='change'] javaName": "SwitchChange"
+	},
 	"Titanium.UI.Tab": {
 		"methods": [
 			{"name": "open", "parameters": [{"name": "view", "type": "Titanium.UI.View", "description": "The view to open in the tab"}]}
@@ -203,6 +206,9 @@
 		"events[name='scrollEnd'] properties[name='contentSize'] type": "$Size",
 		"events[name='scrollEnd'] properties[name='size'] type": "$Size"
 	},
+	"Titanium.UI.TableViewRow": {
+		"properties[name='layout']": null
+	},
 	"Titanium.UI.TextArea": {
 		"events[name='selected'] properties[name='range'] type": "$Range"
 	},
@@ -218,9 +224,9 @@
 		"properties[name='width'] getterType": "float",
 		"properties[name='size'] getterType": "$Size",
 		"properties[name='top'] getterType": "float",
-		"properties+": {
+		"properties+": [
 			{"name": "layout", "description": "The layout algorithm to use for the layout. Either 'absolute' or 'vertical'", "type": "String"}
-		},
+		],
 		"events[name='dblclick'] javaName": "DoubleClick",		
 		"events[name='doubletap'] javaName": "DoubleTap",		
 		"events[name='longclick'] javaName": "LongClick",		

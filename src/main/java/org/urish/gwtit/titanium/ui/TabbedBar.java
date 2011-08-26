@@ -53,7 +53,7 @@ public class TabbedBar extends org.urish.gwtit.titanium.ui.View {
 	 * @return The array of labels for the tabbed bar. each object should have
 	 *         the properties `title`, `image`, `width` and `enabled`.
 	 */
-	public final native Object[] getLabels()
+	public final native String[] getLabels()
 	/*-{
 		return this.labels;
 	}-*/;

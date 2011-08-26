@@ -21,6 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import org.urish.gwtit.titanium.ui.events.BeforeLoadHandler;
 import org.urish.gwtit.titanium.ui.events.ErrorHandler;
 import org.urish.gwtit.titanium.ui.events.LoadHandler;
+import org.urish.gwtit.titanium.ui.events.PauseHandler;
+import org.urish.gwtit.titanium.ui.events.ResumeHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -81,6 +83,30 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	public final native void setLoading(boolean value)
 	/*-{
 		this.loading = value;
+	}-*/;
+
+	/**
+	 * @return Set how plugins are processed. accepts one of
+	 *         {@link org.urish.gwtit.titanium.ui.android.webview_plugins_off},
+	 *         {@link org.urish.gwtit.titanium.ui.android.webview_plugins_on},
+	 *         or
+	 *         {@link org.urish.gwtit.titanium.ui.android.webview_plugins_on_demand}
+	 *         . see android documentation for
+	 *         [websettings.pluginstate](http://developer
+	 *         .android.com/reference/android
+	 *         /webkit/websettings.pluginstate.html). only works on android
+	 *         devices at api level 8 or greater.
+	 * @platforms android
+	 * @since 1.8.0
+	 */
+	public final native float getPluginState()
+	/*-{
+		return this.pluginState;
+	}-*/;
+
+	public final native void setPluginState(float value)
+	/*-{
+		this.pluginState = value;
 	}-*/;
 
 	/**
@@ -207,6 +233,16 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	public final native void addLoadHandler(LoadHandler handler)
 	/*-{
 		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/events/LoadEvent;)(e); } );
+	}-*/;
+
+	public final native void addPauseHandler(PauseHandler handler)
+	/*-{
+		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.ui.events.PauseHandler::onPause(Lorg/urish/gwtit/titanium/ui/events/PauseEvent;)(e); } );
+	}-*/;
+
+	public final native void addResumeHandler(ResumeHandler handler)
+	/*-{
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/ui/events/ResumeEvent;)(e); } );
 	}-*/;
 
 }

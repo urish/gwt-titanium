@@ -152,6 +152,27 @@ public class Android extends org.urish.gwtit.titanium.Module {
 
 	public static final int SWITCH_STYLE_TOGGLEBUTTON = value_SWITCH_STYLE_TOGGLEBUTTON();
 
+	private static native final float value_WEBVIEW_PLUGINS_OFF()
+	/*-{
+		return Titanium.UI.Android.WEBVIEW_PLUGINS_OFF;
+	}-*/;
+
+	public static final float WEBVIEW_PLUGINS_OFF = value_WEBVIEW_PLUGINS_OFF();
+
+	private static native final float value_WEBVIEW_PLUGINS_ON()
+	/*-{
+		return Titanium.UI.Android.WEBVIEW_PLUGINS_ON;
+	}-*/;
+
+	public static final float WEBVIEW_PLUGINS_ON = value_WEBVIEW_PLUGINS_ON();
+
+	private static native final float value_PLUGIN_STATE_ON_DEMAND()
+	/*-{
+		return Titanium.UI.Android.PLUGIN_STATE_ON_DEMAND;
+	}-*/;
+
+	public static final float PLUGIN_STATE_ON_DEMAND = value_PLUGIN_STATE_ON_DEMAND();
+
 	/**
 	 * Request that the soft keyboard hide. note: it is not currently possible
 	 * in the native android api to detect that the keyboard is already visible.
@@ -192,9 +213,9 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	 * @param name
 	 *            name of the event
 	 */
-	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callbac)
+	public static native void removeEventListener(String name, EventCallback<JavaScriptObject> callback)
 	/*-{
-		return Titanium.UI.Android.removeEventListener(name, function(e) { callbac.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+		return Titanium.UI.Android.removeEventListener(name, function(e) { callback.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
 	}-*/;
 
 	/**

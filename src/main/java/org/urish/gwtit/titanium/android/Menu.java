@@ -34,12 +34,12 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of {@link org.urish.gwtit.titanium.android.menuitem}
 	 */
-	public final native JavaScriptObject[] getItems()
+	public final native org.urish.gwtit.titanium.android.MenuItem[] getItems()
 	/*-{
 		return this.items;
 	}-*/;
 
-	public final native void setItems(JavaScriptObject[] value)
+	public final native void setItems(org.urish.gwtit.titanium.android.MenuItem[] value)
 	/*-{
 		this.items = value;
 	}-*/;
