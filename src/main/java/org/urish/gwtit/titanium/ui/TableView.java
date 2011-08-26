@@ -358,12 +358,34 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * 
 	 * @param row
 	 *            row to append
+	 */
+	public final native void appendRow(org.urish.gwtit.titanium.ui.TableViewRow row)
+	/*-{
+		return this.appendRow(row);
+	}-*/;
+
+	/**
+	 * Append a row to the table, optionally with animation
+	 * 
+	 * @param row
+	 *            row to append
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void appendRow(JavaScriptObject row, JavaScriptObject properties)
+	public final native void appendRow(org.urish.gwtit.titanium.ui.TableViewRow row, JavaScriptObject properties)
 	/*-{
 		return this.appendRow(row, properties);
+	}-*/;
+
+	/**
+	 * Delete an existing row, optionally with animation
+	 * 
+	 * @param row
+	 *            index of row to delete
+	 */
+	public final native void deleteRow(int row)
+	/*-{
+		return this.deleteRow(row);
 	}-*/;
 
 	/**
@@ -397,12 +419,39 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 *            index
 	 * @param row
 	 *            row to insert
+	 */
+	public final native void insertRowAfter(int index, org.urish.gwtit.titanium.ui.TableViewRow row)
+	/*-{
+		return this.insertRowAfter(index, row);
+	}-*/;
+
+	/**
+	 * Insert a row before another row, optionally with animation
+	 * 
+	 * @param index
+	 *            index
+	 * @param row
+	 *            row to insert
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void insertRowAfter(int index, JavaScriptObject row, JavaScriptObject properties)
+	public final native void insertRowAfter(int index, org.urish.gwtit.titanium.ui.TableViewRow row,
+			JavaScriptObject properties)
 	/*-{
 		return this.insertRowAfter(index, row, properties);
+	}-*/;
+
+	/**
+	 * Insert a row after another row, optionally with animation
+	 * 
+	 * @param index
+	 *            index
+	 * @param row
+	 *            row to insert
+	 */
+	public final native void insertRowBefore(int index, org.urish.gwtit.titanium.ui.TableViewRow row)
+	/*-{
+		return this.insertRowBefore(index, row);
 	}-*/;
 
 	/**
@@ -415,9 +464,21 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void insertRowBefore(int index, JavaScriptObject row, JavaScriptObject properties)
+	public final native void insertRowBefore(int index, org.urish.gwtit.titanium.ui.TableViewRow row,
+			JavaScriptObject properties)
 	/*-{
 		return this.insertRowBefore(index, row, properties);
+	}-*/;
+
+	/**
+	 * Scroll to a specific row index and ensure that that row is on screen
+	 * 
+	 * @param index
+	 *            index
+	 */
+	public final native void scrollToIndex(int index)
+	/*-{
+		return this.scrollToIndex(index);
 	}-*/;
 
 	/**
@@ -433,6 +494,18 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	public final native void scrollToIndex(int index, JavaScriptObject properties)
 	/*-{
 		return this.scrollToIndex(index, properties);
+	}-*/;
+
+	/**
+	 * Scroll the table to a specific top position where 0 is the topmost y
+	 * position in the table view
+	 * 
+	 * @param top
+	 *            y position
+	 */
+	public final native void scrollToTop(float top)
+	/*-{
+		return this.scrollToTop(top);
 	}-*/;
 
 	/**
@@ -467,10 +540,21 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * 
 	 * @param row
 	 *            row data to update
+	 */
+	public final native void updateRow(org.urish.gwtit.titanium.ui.TableViewRow row)
+	/*-{
+		return this.updateRow(row);
+	}-*/;
+
+	/**
+	 * Update an existing row, optionally with animation
+	 * 
+	 * @param row
+	 *            row data to update
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void updateRow(JavaScriptObject row, JavaScriptObject properties)
+	public final native void updateRow(org.urish.gwtit.titanium.ui.TableViewRow row, JavaScriptObject properties)
 	/*-{
 		return this.updateRow(row, properties);
 	}-*/;

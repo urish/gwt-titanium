@@ -126,6 +126,20 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return If set, displays the given string above the cell as a group
+	 *         header
+	 */
+	public final native String getHeader()
+	/*-{
+		return this.header;
+	}-*/;
+
+	public final native void setHeader(String value)
+	/*-{
+		this.header = value;
+	}-*/;
+
+	/**
 	 * @return The indention level for the cell (defaults to 0)
 	 */
 	public final native int getIndentionLevel()

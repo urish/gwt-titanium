@@ -449,6 +449,8 @@ def generateConstructors(typeInfo):
 def generateFactories(typeInfo, types):
 	typeName = typeInfo['name']
 	result = ""
+	if typeName == "Titanium":
+		return ""
 	for candidate in types:
 		if (candidate['name'].startswith(typeName + ".") and 
 			len(candidate['name'].split(".")) == len(typeName.split(".")) + 1):
@@ -692,6 +694,8 @@ def processDir(inputDir, projectDir):
 			typeInfo['name'] = typeName[1:]
 			types.append(typeInfo)
 	for typeInfo in types:
+		if typeInfo['name'] == "Titanium.Event":
+			continue
 		if typeInfo['name'] in overrides:
 			processOverrides(typeInfo, overrides[typeInfo['name']])
 		classes += generateClass(projectDir, typeInfo, types)
