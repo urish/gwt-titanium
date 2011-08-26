@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.PickerChangeHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -274,9 +274,9 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 		return this.setSelectedRow(column, row, animated);
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(PickerChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.PickerChangeHandler::onPickerChange(Lorg/urish/gwtit/titanium/ui/events/PickerChangeEvent;)(e); } );
 	}-*/;
 
 }

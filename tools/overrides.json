@@ -163,6 +163,9 @@
 	"Titanium.UI.Button": {
 		"properties[name='font'] type": "Font"
 	},
+	"Titanium.UI.CoverFlowView": {
+		"events[name='change'] javaEventName": "CoverFlowViewChange"
+	},
 	"Titanium.UI.DashboardItem": {
 		"events[name='click'] properties[name='location'] type": "$Point"
 	},
@@ -171,8 +174,14 @@
 		"properties[name='ccRecipients'] type": "Array<String>",
 		"properties[name='toRecipients'] type": "Array<String>"
 	},
+	"Titanium.UI.ImageView": {
+		"events[name='change'] javaEventName": "ImageViewChange"
+	},
 	"Titanium.UI.Label": {
 		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.Picker": {
+		"events[name='change'] javaEventName": "PickerChange"
 	},
 	"Titanium.UI.PickerRow": {
 		"properties[name='font'] type": "Font"
@@ -180,12 +189,16 @@
 	"Titanium.UI.ProgressBar": {
 		"properties[name='font'] type": "Font"
 	},
+	"Titanium.UI.SearchBar": {
+		"events[name='change'] javaEventName": "SearchBarChange"
+	},
 	"Titanium.UI.Slider": {
+		"events[name='change'] javaEventName": "SliderChange",
 		"events[name='change'] properties[name='thumbSize'] type": "$Size",
 		"events[name='change'] properties[name='thumbOffset'] type": "$Point"
 	},
-	"Titanium.Switch": {
-		"events[name='change'] javaName": "SwitchChange"
+	"Titanium.UI.Switch": {
+		"events[name='change'] javaEventName": "SwitchChange"
 	},
 	"Titanium.UI.Tab": {
 		"methods": [
@@ -210,7 +223,11 @@
 		"properties[name='layout']": null
 	},
 	"Titanium.UI.TextArea": {
+		"events[name='change'] javaEventName": "TextAreaChange",
 		"events[name='selected'] properties[name='range'] type": "$Range"
+	},
+	"Titanium.UI.TextField": {
+		"events[name='change'] javaEventName": "TextFieldChange"
 	},
 	"Titanium.UI.View": {
 		"methods[name='add'] parameters[name='view'] type": "Titanium.UI.View",

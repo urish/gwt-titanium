@@ -19,9 +19,9 @@
 package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.BlurHandler;
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.ReturnHandler;
+import org.urish.gwtit.titanium.ui.events.TextFieldChangeHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -383,9 +383,9 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(TextFieldChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextFieldChangeHandler::onTextFieldChange(Lorg/urish/gwtit/titanium/ui/events/TextFieldChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addFocusHandler(FocusHandler handler)

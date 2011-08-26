@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.ImageViewChangeHandler;
 import org.urish.gwtit.titanium.ui.events.LoadHandler;
 import org.urish.gwtit.titanium.ui.events.StartHandler;
 import org.urish.gwtit.titanium.ui.events.StopHandler;
@@ -267,9 +267,9 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.toBlob();
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(ImageViewChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ImageViewChangeHandler::onImageViewChange(Lorg/urish/gwtit/titanium/ui/events/ImageViewChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addLoadHandler(LoadHandler handler)

@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.SwitchChangeHandler;
 
 /**
  * A switch is created by the method
@@ -119,9 +119,9 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 		this.value = value;
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(SwitchChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SwitchChangeHandler::onSwitchChange(Lorg/urish/gwtit/titanium/ui/events/SwitchChangeEvent;)(e); } );
 	}-*/;
 
 }

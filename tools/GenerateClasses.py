@@ -172,26 +172,26 @@ FACTORY_TEMPLATE = """
 EVENT_CLASS_BODY_TEMPLATE = """
 	public final static String NATIVE_EVENT_NAME = "%(name)s";
 	
-	protected %(javaName)sEvent() {}
+	protected %(eventName)sEvent() {}
 
 	%(eventProperties)s		
 """
 
 EVENT_HANDLER_BODY_TEMPLATE = """
-	public void on%(javaName)s(%(javaName)sEvent event);
+	public void on%(eventName)s(%(eventName)sEvent event);
 """
 
 EVENT_TEMPLATE = """
-	public final native void add%(javaName)sHandler(%(javaName)sHandler handler) 
+	public final native void add%(javaName)sHandler(%(eventName)sHandler handler) 
 	/*-{
-		return this.addEventListener('%(name)s', function(e) { handler.@%(handlerClass)s::on%(javaName)s(L%(eventClassPath)s;)(e); } );
+		return this.addEventListener('%(name)s', function(e) { handler.@%(handlerClass)s::on%(eventName)s(L%(eventClassPath)s;)(e); } );
 	}-*/;
 """
 
 STATIC_EVENT_TEMPLATE = """
-	public static native void add%(javaName)sHandler(%(javaName)sHandler handler) 
+	public static native void add%(javaName)sHandler(%(eventName)sHandler handler) 
 	/*-{
-		return %(module)s.addEventListener('%(name)s', function(e) { handler.@%(handlerClass)s::on%(javaName)s(L%(eventClassPath)s;)(e); } );
+		return %(module)s.addEventListener('%(name)s', function(e) { handler.@%(handlerClass)s::on%(eventName)s(L%(eventClassPath)s;)(e); } );
 	}-*/;
 """
 
@@ -550,6 +550,7 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 	for event in typeInfo.get('events', []):
 		superClass = "AbstractTitaniumEvent"
 		javaName = event.get("javaName", capitalEventName(event['name']))
+		javaEventName = event.get('javaEventName', javaName)
 		foundInAncetors = False
 		eventProperties = ""
 		propertyNames = [propertyInfo['name'] for propertyInfo in event.get('properties', [])]
@@ -575,15 +576,15 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 					if event['name'] == candidate['name']:
 						foundInAncetors = True
 		if not foundInAncetors: 
-			eventClass = JavaClass(package + ".events", javaName + "Event", superClass=superClass, body=EVENT_CLASS_BODY_TEMPLATE % {
+			eventClass = JavaClass(package + ".events", javaEventName + "Event", superClass=superClass, body=EVENT_CLASS_BODY_TEMPLATE % {
 				'eventProperties': eventProperties,
 				'name': event['name'],
-				'javaName': javaName,
+				'eventName': javaEventName,
 			})
 			eventClass.addImport("com.google.gwt.core.client.JavaScriptObject")
 			eventClass.addImport("org.urish.gwtit.client.event.%s" % superClass)
-			handlerClass = JavaClass(package + ".events", javaName + "Handler", interface=True, body=EVENT_HANDLER_BODY_TEMPLATE % {
-				'javaName': javaName,
+			handlerClass = JavaClass(package + ".events", javaEventName + "Handler", interface=True, body=EVENT_HANDLER_BODY_TEMPLATE % {
+				'eventName': javaEventName,
 			})
 			javaClass.addImport(handlerClass)
 			javaClass.append(template % {
@@ -591,6 +592,7 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 				'eventClassPath': eventClass.getQualifiedName().replace(".", "/"),
 				'name': event['name'],
 				'javaName': javaName,
+				'eventName': javaEventName,
 				'module': typeInfo['name'],
 			})
 			eventClasses += [eventClass, handlerClass]

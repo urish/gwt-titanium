@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.BlurHandler;
 import org.urish.gwtit.titanium.ui.events.CancelHandler;
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
 import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.ReturnHandler;
+import org.urish.gwtit.titanium.ui.events.SearchBarChangeHandler;
 
 /**
  * A search bar is created by the method
@@ -200,9 +200,9 @@ public class SearchBar extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('cancel', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CancelHandler::onCancel(Lorg/urish/gwtit/titanium/ui/events/CancelEvent;)(e); } );
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(SearchBarChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SearchBarChangeHandler::onSearchBarChange(Lorg/urish/gwtit/titanium/ui/events/SearchBarChangeEvent;)(e); } );
 	}-*/;
 
 	public final native void addFocusHandler(FocusHandler handler)

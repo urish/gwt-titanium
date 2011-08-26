@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui.events;
 /**
  * 
  */
-public interface ChangeHandler {
+public interface CoverFlowViewChangeHandler {
 
-	public void onChange(ChangeEvent event);
+	public void onCoverFlowViewChange(CoverFlowViewChangeEvent event);
 
 }

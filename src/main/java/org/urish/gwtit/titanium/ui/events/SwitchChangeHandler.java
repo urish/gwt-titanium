@@ -18,32 +18,11 @@
 
 package org.urish.gwtit.titanium.ui.events;
 
-import org.urish.gwtit.client.event.TouchEvent;
-
 /**
  * 
  */
-public class ChangeEvent extends TouchEvent {
+public interface SwitchChangeHandler {
 
-	public final static String NATIVE_EVENT_NAME = "change";
-
-	protected ChangeEvent() {
-	}
-
-	/**
-	 * the index of the image that is now visible
-	 */
-	public final native int getIndex()
-	/*-{
-		return this.index;
-	}-*/;
-
-	/**
-	 * the previous index of the image that was visible
-	 */
-	public final native int getPrevious()
-	/*-{
-		return this.previous;
-	}-*/;
+	public void onSwitchChange(SwitchChangeEvent event);
 
 }

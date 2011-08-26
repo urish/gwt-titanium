@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.SliderChangeHandler;
 
 /**
  * A slider is created by the method
@@ -272,9 +272,9 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 		this.value = value;
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(SliderChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SliderChangeHandler::onSliderChange(Lorg/urish/gwtit/titanium/ui/events/SliderChangeEvent;)(e); } );
 	}-*/;
 
 }

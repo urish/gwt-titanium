@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ChangeHandler;
+import org.urish.gwtit.titanium.ui.events.CoverFlowViewChangeHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -80,9 +80,9 @@ public class CoverFlowView extends org.urish.gwtit.titanium.ui.View {
 		return this.setImage(index, image);
 	}-*/;
 
-	public final native void addChangeHandler(ChangeHandler handler)
+	public final native void addChangeHandler(CoverFlowViewChangeHandler handler)
 	/*-{
-		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ChangeHandler::onChange(Lorg/urish/gwtit/titanium/ui/events/ChangeEvent;)(e); } );
+		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CoverFlowViewChangeHandler::onCoverFlowViewChange(Lorg/urish/gwtit/titanium/ui/events/CoverFlowViewChangeEvent;)(e); } );
 	}-*/;
 
 }
