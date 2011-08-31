@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.ui.events;
@@ -24,18 +25,17 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
  * 
  */
 public class CompleteEvent extends AbstractTitaniumEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "complete";
+	
+	protected CompleteEvent() {}
 
-	protected CompleteEvent() {
-	}
-
+	
 	/**
-	 * result status either as SENT, SAVED, CANCELLED or FAILED. (Note: Android
-	 * result will be SENT even if user discards or saves the message. SAVED and
-	 * CANCELLED are not supported on Android.)
+	 * result status either as SENT, SAVED, CANCELLED or FAILED. (Note: Android result will be SENT even if user discards or saves the message.  SAVED and CANCELLED are not supported on Android.)
+
 	 */
-	public final native int getResult()
+	public final native int getResult() 
 	/*-{
 		return this.result;
 	}-*/;
@@ -43,7 +43,7 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	/**
 	 * boolean to indicate if the email was successfully sent
 	 */
-	public final native boolean getSuccess()
+	public final native boolean getSuccess() 
 	/*-{
 		return this.success;
 	}-*/;
@@ -51,9 +51,10 @@ public class CompleteEvent extends AbstractTitaniumEvent {
 	/**
 	 * string message of the error or null if successfully sent
 	 */
-	public final native String getError()
+	public final native String getError() 
 	/*-{
 		return this.error;
 	}-*/;
+		
 
 }

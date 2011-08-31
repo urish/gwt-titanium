@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ScrollHandler;
+import org.urish.gwtit.titanium.ui.events.ScrollableViewScrollHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -194,9 +194,9 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 		return this.scrollToView(view);
 	}-*/;
 
-	public final native void addScrollHandler(ScrollHandler handler)
+	public final native void addScrollHandler(ScrollableViewScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollEvent;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollableViewScrollHandler::onScrollableViewScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollableViewScrollEvent;)(e); } );
 	}-*/;
 
 }

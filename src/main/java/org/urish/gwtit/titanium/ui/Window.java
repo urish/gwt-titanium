@@ -24,10 +24,10 @@ import org.urish.gwtit.titanium.ui.events.AndroidFocusHandler;
 import org.urish.gwtit.titanium.ui.events.AndroidSearchHandler;
 import org.urish.gwtit.titanium.ui.events.AndroidVolumeDownHandler;
 import org.urish.gwtit.titanium.ui.events.AndroidVolumeUpHandler;
-import org.urish.gwtit.titanium.ui.events.BlurHandler;
 import org.urish.gwtit.titanium.ui.events.CloseHandler;
-import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.OpenHandler;
+import org.urish.gwtit.titanium.ui.events.WindowBlurHandler;
+import org.urish.gwtit.titanium.ui.events.WindowFocusHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -637,9 +637,9 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('android:volup', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AndroidVolumeUpHandler::onAndroidVolumeUp(Lorg/urish/gwtit/titanium/ui/events/AndroidVolumeUpEvent;)(e); } );
 	}-*/;
 
-	public final native void addBlurHandler(BlurHandler handler)
+	public final native void addBlurHandler(WindowBlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.WindowBlurHandler::onWindowBlur(Lorg/urish/gwtit/titanium/ui/events/WindowBlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addCloseHandler(CloseHandler handler)
@@ -647,9 +647,9 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/events/CloseEvent;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(FocusHandler handler)
+	public final native void addFocusHandler(WindowFocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.WindowFocusHandler::onWindowFocus(Lorg/urish/gwtit/titanium/ui/events/WindowFocusEvent;)(e); } );
 	}-*/;
 
 	public final native void addOpenHandler(OpenHandler handler)

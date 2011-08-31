@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.BlurHandler;
-import org.urish.gwtit.titanium.ui.events.FocusHandler;
-import org.urish.gwtit.titanium.ui.events.ReturnHandler;
+import org.urish.gwtit.titanium.ui.events.TextFieldBlurHandler;
 import org.urish.gwtit.titanium.ui.events.TextFieldChangeHandler;
+import org.urish.gwtit.titanium.ui.events.TextFieldFocusHandler;
+import org.urish.gwtit.titanium.ui.events.TextFieldReturnHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -378,9 +378,9 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.hasText();
 	}-*/;
 
-	public final native void addBlurHandler(BlurHandler handler)
+	public final native void addBlurHandler(TextFieldBlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextFieldBlurHandler::onTextFieldBlur(Lorg/urish/gwtit/titanium/ui/events/TextFieldBlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addChangeHandler(TextFieldChangeHandler handler)
@@ -388,14 +388,14 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextFieldChangeHandler::onTextFieldChange(Lorg/urish/gwtit/titanium/ui/events/TextFieldChangeEvent;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(FocusHandler handler)
+	public final native void addFocusHandler(TextFieldFocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextFieldFocusHandler::onTextFieldFocus(Lorg/urish/gwtit/titanium/ui/events/TextFieldFocusEvent;)(e); } );
 	}-*/;
 
-	public final native void addReturnHandler(ReturnHandler handler)
+	public final native void addReturnHandler(TextFieldReturnHandler handler)
 	/*-{
-		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ReturnHandler::onReturn(Lorg/urish/gwtit/titanium/ui/events/ReturnEvent;)(e); } );
+		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextFieldReturnHandler::onTextFieldReturn(Lorg/urish/gwtit/titanium/ui/events/TextFieldReturnEvent;)(e); } );
 	}-*/;
 
 }

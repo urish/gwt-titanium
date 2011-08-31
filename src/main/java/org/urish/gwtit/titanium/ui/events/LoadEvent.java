@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.ui.events;
@@ -24,18 +25,19 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
  * 
  */
 public class LoadEvent extends AbstractTitaniumEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "load";
+	
+	protected LoadEvent() {}
 
-	protected LoadEvent() {
-	}
-
+	
 	/**
 	 * the url of the web document
 	 */
-	public final native String getUrl()
+	public final native String getUrl() 
 	/*-{
 		return this.url;
 	}-*/;
+		
 
 }

@@ -18,9 +18,7 @@
 
 package org.urish.gwtit.titanium.media;
 
-import org.urish.gwtit.titanium.media.events.CompleteHandler;
 import org.urish.gwtit.titanium.media.events.DurationAvailableHandler;
-import org.urish.gwtit.titanium.media.events.ErrorHandler;
 import org.urish.gwtit.titanium.media.events.FullscreenHandler;
 import org.urish.gwtit.titanium.media.events.LoadHandler;
 import org.urish.gwtit.titanium.media.events.LoadStateHandler;
@@ -32,6 +30,8 @@ import org.urish.gwtit.titanium.media.events.PreloadHandler;
 import org.urish.gwtit.titanium.media.events.ResizeHandler;
 import org.urish.gwtit.titanium.media.events.SourceChangeHandler;
 import org.urish.gwtit.titanium.media.events.ThumbnailHandler;
+import org.urish.gwtit.titanium.media.events.VideoPlayerCompleteHandler;
+import org.urish.gwtit.titanium.media.events.VideoPlayerErrorHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -455,9 +455,9 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.thumbnailImageAtTime(time, option);
 	}-*/;
 
-	public final native void addCompleteHandler(CompleteHandler handler)
+	public final native void addCompleteHandler(VideoPlayerCompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/events/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.events.VideoPlayerCompleteHandler::onVideoPlayerComplete(Lorg/urish/gwtit/titanium/media/events/VideoPlayerCompleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addDurationAvailableHandler(DurationAvailableHandler handler)
@@ -465,9 +465,9 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('durationAvailable', function(e) { handler.@org.urish.gwtit.titanium.media.events.DurationAvailableHandler::onDurationAvailable(Lorg/urish/gwtit/titanium/media/events/DurationAvailableEvent;)(e); } );
 	}-*/;
 
-	public final native void addErrorHandler(ErrorHandler handler)
+	public final native void addErrorHandler(VideoPlayerErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/events/ErrorEvent;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.events.VideoPlayerErrorHandler::onVideoPlayerError(Lorg/urish/gwtit/titanium/media/events/VideoPlayerErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addFullscreenHandler(FullscreenHandler handler)

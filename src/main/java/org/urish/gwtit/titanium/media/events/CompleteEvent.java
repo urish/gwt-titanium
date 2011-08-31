@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.media.events;
@@ -24,21 +25,19 @@ import org.urish.gwtit.client.event.TouchEvent;
  * 
  */
 public class CompleteEvent extends TouchEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "complete";
+	
+	protected CompleteEvent() {}
 
-	protected CompleteEvent() {
-	}
-
+	
 	/**
-	 * the completion reason. One of
-	 * <Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ENDED>,
-	 * <Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ERROR> or
-	 * <Titanium.Media.VIDEO_FINISH_REASON_USER_EXITED>.
+	 * the completion reason. One of <Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ENDED>, <Titanium.Media.VIDEO_FINISH_REASON_PLAYBACK_ERROR> or <Titanium.Media.VIDEO_FINISH_REASON_USER_EXITED>.
 	 */
-	public final native int getReason()
+	public final native int getReason() 
 	/*-{
 		return this.reason;
 	}-*/;
+		
 
 }

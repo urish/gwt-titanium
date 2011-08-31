@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.android.events;
@@ -24,21 +25,19 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
  * 
  */
 public class ResumeEvent extends AbstractTitaniumEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "resume";
+	
+	protected ResumeEvent() {}
 
-	protected ResumeEvent() {
-	}
-
+	
 	/**
-	 * incrementing integer indicating which iteration of an interval-based
-	 * Service is resuming. For example, if you have an interval-based Service
-	 * running every 10 seconds, iteration 3 would occur at about 30 seconds
-	 * after you start the instance (assuming your service code runs quickly.)
+	 * incrementing integer indicating which iteration of an interval-based Service is resuming.  For example, if you have an interval-based Service running every 10 seconds, iteration 3 would occur at about 30 seconds after you start the instance (assuming your service code runs quickly.)
 	 */
-	public final native int getIteration()
+	public final native int getIteration() 
 	/*-{
 		return this.iteration;
 	}-*/;
+		
 
 }

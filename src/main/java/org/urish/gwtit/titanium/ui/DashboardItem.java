@@ -18,9 +18,9 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ClickHandler;
-import org.urish.gwtit.titanium.ui.events.DeleteHandler;
-import org.urish.gwtit.titanium.ui.events.MoveHandler;
+import org.urish.gwtit.titanium.ui.events.DashboardItemClickHandler;
+import org.urish.gwtit.titanium.ui.events.DashboardItemDeleteHandler;
+import org.urish.gwtit.titanium.ui.events.DashboardItemMoveHandler;
 
 /**
  * An item that represents a visual icon in the
@@ -89,19 +89,19 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 		this.selectedImage = value;
 	}-*/;
 
-	public final native void addClickHandler(ClickHandler handler)
+	public final native void addClickHandler(DashboardItemClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DashboardItemClickHandler::onDashboardItemClick(Lorg/urish/gwtit/titanium/ui/events/DashboardItemClickEvent;)(e); } );
 	}-*/;
 
-	public final native void addDeleteHandler(DeleteHandler handler)
+	public final native void addDeleteHandler(DashboardItemDeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/events/DeleteEvent;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DashboardItemDeleteHandler::onDashboardItemDelete(Lorg/urish/gwtit/titanium/ui/events/DashboardItemDeleteEvent;)(e); } );
 	}-*/;
 
-	public final native void addMoveHandler(MoveHandler handler)
+	public final native void addMoveHandler(DashboardItemMoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/events/MoveEvent;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DashboardItemMoveHandler::onDashboardItemMove(Lorg/urish/gwtit/titanium/ui/events/DashboardItemMoveEvent;)(e); } );
 	}-*/;
 
 }

@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.BeforeLoadHandler;
 import org.urish.gwtit.titanium.ui.events.ErrorHandler;
-import org.urish.gwtit.titanium.ui.events.LoadHandler;
 import org.urish.gwtit.titanium.ui.events.PauseHandler;
 import org.urish.gwtit.titanium.ui.events.ResumeHandler;
+import org.urish.gwtit.titanium.ui.events.WebViewLoadHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -230,9 +230,9 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/ui/events/ErrorEvent;)(e); } );
 	}-*/;
 
-	public final native void addLoadHandler(LoadHandler handler)
+	public final native void addLoadHandler(WebViewLoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/events/LoadEvent;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.WebViewLoadHandler::onWebViewLoad(Lorg/urish/gwtit/titanium/ui/events/WebViewLoadEvent;)(e); } );
 	}-*/;
 
 	public final native void addPauseHandler(PauseHandler handler)

@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,16 +14,18 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.ui.events;
 
+
+
 /**
  * 
  */
-public interface StartHandler {
-
+public interface StartHandler  {
+	
 	public void onStart(StartEvent event);
 
 }

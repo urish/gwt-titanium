@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,71 +14,38 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.ui.events;
 
 import org.urish.gwtit.client.event.TouchEvent;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
 /**
  * 
  */
 public class MoveEvent extends TouchEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "move";
+	
+	protected MoveEvent() {}
 
-	protected MoveEvent() {
-	}
-
+	
 	/**
-	 * table view row index
+	 * the <Titanium.UI.DashboardItem> that was moved
 	 */
-	public final native int getIndex()
+	public final native org.urish.gwtit.titanium.ui.DashboardItem getItem() 
 	/*-{
-		return this.index;
+		return this.item;
 	}-*/;
 
 	/**
-	 * table view section object
+	 * the pending data array in the new order (uncommitted)
 	 */
-	public final native org.urish.gwtit.titanium.ui.TableViewSection getSection()
+	public final native org.urish.gwtit.titanium.ui.DashboardItem[] getItems() 
 	/*-{
-		return this.section;
+		return this.items;
 	}-*/;
-
-	/**
-	 * boolean to indicate if the right area was clicked
-	 */
-	public final native boolean getDetail()
-	/*-{
-		return this.detail;
-	}-*/;
-
-	/**
-	 * boolean to indicate if the table is in search mode
-	 */
-	public final native boolean getSearchMode()
-	/*-{
-		return this.searchMode;
-	}-*/;
-
-	/**
-	 * table view row data object
-	 */
-	public final native JavaScriptObject getRowData()
-	/*-{
-		return this.rowData;
-	}-*/;
-
-	/**
-	 * table view row object
-	 */
-	public final native org.urish.gwtit.titanium.ui.TableViewRow getRow()
-	/*-{
-		return this.row;
-	}-*/;
+		
 
 }

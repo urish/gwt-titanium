@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.DeleteHandler;
-import org.urish.gwtit.titanium.ui.events.MoveHandler;
 import org.urish.gwtit.titanium.ui.events.ScrollEndHandler;
-import org.urish.gwtit.titanium.ui.events.ScrollHandler;
+import org.urish.gwtit.titanium.ui.events.TableViewDeleteHandler;
+import org.urish.gwtit.titanium.ui.events.TableViewMoveHandler;
+import org.urish.gwtit.titanium.ui.events.TableViewScrollHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -559,19 +559,19 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 		return this.updateRow(row, properties);
 	}-*/;
 
-	public final native void addDeleteHandler(DeleteHandler handler)
+	public final native void addDeleteHandler(TableViewDeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/events/DeleteEvent;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TableViewDeleteHandler::onTableViewDelete(Lorg/urish/gwtit/titanium/ui/events/TableViewDeleteEvent;)(e); } );
 	}-*/;
 
-	public final native void addMoveHandler(MoveHandler handler)
+	public final native void addMoveHandler(TableViewMoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/events/MoveEvent;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TableViewMoveHandler::onTableViewMove(Lorg/urish/gwtit/titanium/ui/events/TableViewMoveEvent;)(e); } );
 	}-*/;
 
-	public final native void addScrollHandler(ScrollHandler handler)
+	public final native void addScrollHandler(TableViewScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollEvent;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TableViewScrollHandler::onTableViewScroll(Lorg/urish/gwtit/titanium/ui/events/TableViewScrollEvent;)(e); } );
 	}-*/;
 
 	public final native void addScrollEndHandler(ScrollEndHandler handler)

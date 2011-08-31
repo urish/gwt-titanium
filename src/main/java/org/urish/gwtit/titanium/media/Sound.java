@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.media;
 
-import org.urish.gwtit.titanium.media.events.CompleteHandler;
-import org.urish.gwtit.titanium.media.events.ErrorHandler;
 import org.urish.gwtit.titanium.media.events.InterruptedHandler;
 import org.urish.gwtit.titanium.media.events.ResumeHandler;
+import org.urish.gwtit.titanium.media.events.SoundCompleteHandler;
+import org.urish.gwtit.titanium.media.events.SoundErrorHandler;
 
 /**
  * The sound object is returned by
@@ -227,14 +227,14 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final native void addCompleteHandler(CompleteHandler handler)
+	public final native void addCompleteHandler(SoundCompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/media/events/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.media.events.SoundCompleteHandler::onSoundComplete(Lorg/urish/gwtit/titanium/media/events/SoundCompleteEvent;)(e); } );
 	}-*/;
 
-	public final native void addErrorHandler(ErrorHandler handler)
+	public final native void addErrorHandler(SoundErrorHandler handler)
 	/*-{
-		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.events.ErrorHandler::onError(Lorg/urish/gwtit/titanium/media/events/ErrorEvent;)(e); } );
+		return this.addEventListener('error', function(e) { handler.@org.urish.gwtit.titanium.media.events.SoundErrorHandler::onSoundError(Lorg/urish/gwtit/titanium/media/events/SoundErrorEvent;)(e); } );
 	}-*/;
 
 	public final native void addInterruptedHandler(InterruptedHandler handler)

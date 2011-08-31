@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.media.events;
@@ -24,18 +25,19 @@ import org.urish.gwtit.client.event.TouchEvent;
  * 
  */
 public class ErrorEvent extends TouchEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "error";
+	
+	protected ErrorEvent() {}
 
-	protected ErrorEvent() {
-	}
-
+	
 	/**
 	 * reason for error as string
 	 */
-	public final native String getMessage()
+	public final native String getMessage() 
 	/*-{
 		return this.message;
 	}-*/;
+		
 
 }

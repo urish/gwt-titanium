@@ -18,11 +18,11 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.BlurHandler;
-import org.urish.gwtit.titanium.ui.events.FocusHandler;
-import org.urish.gwtit.titanium.ui.events.ReturnHandler;
 import org.urish.gwtit.titanium.ui.events.SelectedHandler;
+import org.urish.gwtit.titanium.ui.events.TextAreaBlurHandler;
 import org.urish.gwtit.titanium.ui.events.TextAreaChangeHandler;
+import org.urish.gwtit.titanium.ui.events.TextAreaFocusHandler;
+import org.urish.gwtit.titanium.ui.events.TextAreaReturnHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -216,9 +216,9 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 		return this.hasText();
 	}-*/;
 
-	public final native void addBlurHandler(BlurHandler handler)
+	public final native void addBlurHandler(TextAreaBlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextAreaBlurHandler::onTextAreaBlur(Lorg/urish/gwtit/titanium/ui/events/TextAreaBlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addChangeHandler(TextAreaChangeHandler handler)
@@ -226,14 +226,14 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextAreaChangeHandler::onTextAreaChange(Lorg/urish/gwtit/titanium/ui/events/TextAreaChangeEvent;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(FocusHandler handler)
+	public final native void addFocusHandler(TextAreaFocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextAreaFocusHandler::onTextAreaFocus(Lorg/urish/gwtit/titanium/ui/events/TextAreaFocusEvent;)(e); } );
 	}-*/;
 
-	public final native void addReturnHandler(ReturnHandler handler)
+	public final native void addReturnHandler(TextAreaReturnHandler handler)
 	/*-{
-		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ReturnHandler::onReturn(Lorg/urish/gwtit/titanium/ui/events/ReturnEvent;)(e); } );
+		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TextAreaReturnHandler::onTextAreaReturn(Lorg/urish/gwtit/titanium/ui/events/TextAreaReturnEvent;)(e); } );
 	}-*/;
 
 	public final native void addSelectedHandler(SelectedHandler handler)

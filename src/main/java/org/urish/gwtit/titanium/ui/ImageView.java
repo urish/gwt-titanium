@@ -19,8 +19,8 @@
 package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.ImageViewChangeHandler;
-import org.urish.gwtit.titanium.ui.events.LoadHandler;
-import org.urish.gwtit.titanium.ui.events.StartHandler;
+import org.urish.gwtit.titanium.ui.events.ImageViewLoadHandler;
+import org.urish.gwtit.titanium.ui.events.ImageViewStartHandler;
 import org.urish.gwtit.titanium.ui.events.StopHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
@@ -272,14 +272,14 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ImageViewChangeHandler::onImageViewChange(Lorg/urish/gwtit/titanium/ui/events/ImageViewChangeEvent;)(e); } );
 	}-*/;
 
-	public final native void addLoadHandler(LoadHandler handler)
+	public final native void addLoadHandler(ImageViewLoadHandler handler)
 	/*-{
-		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LoadHandler::onLoad(Lorg/urish/gwtit/titanium/ui/events/LoadEvent;)(e); } );
+		return this.addEventListener('load', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ImageViewLoadHandler::onImageViewLoad(Lorg/urish/gwtit/titanium/ui/events/ImageViewLoadEvent;)(e); } );
 	}-*/;
 
-	public final native void addStartHandler(StartHandler handler)
+	public final native void addStartHandler(ImageViewStartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.events.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/events/StartEvent;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ImageViewStartHandler::onImageViewStart(Lorg/urish/gwtit/titanium/ui/events/ImageViewStartEvent;)(e); } );
 	}-*/;
 
 	public final native void addStopHandler(StopHandler handler)

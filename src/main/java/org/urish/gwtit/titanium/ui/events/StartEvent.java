@@ -1,3 +1,4 @@
+
 /*
  * Copyright 2011 Uri Shaked
  * 
@@ -13,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
+ 
 /* Automatically generated code, don't edit ! */
 
 package org.urish.gwtit.titanium.ui.events;
@@ -24,10 +25,11 @@ import org.urish.gwtit.client.event.TouchEvent;
  * 
  */
 public class StartEvent extends TouchEvent {
-
+	
 	public final static String NATIVE_EVENT_NAME = "start";
+	
+	protected StartEvent() {}
 
-	protected StartEvent() {
-	}
+			
 
 }

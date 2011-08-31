@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ClickHandler;
+import org.urish.gwtit.titanium.ui.events.AlertDialogClickHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -181,9 +181,9 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.hide();
 	}-*/;
 
-	public final native void addClickHandler(ClickHandler handler)
+	public final native void addClickHandler(AlertDialogClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AlertDialogClickHandler::onAlertDialogClick(Lorg/urish/gwtit/titanium/ui/events/AlertDialogClickEvent;)(e); } );
 	}-*/;
 
 }

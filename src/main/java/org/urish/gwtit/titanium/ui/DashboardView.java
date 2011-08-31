@@ -19,9 +19,9 @@
 package org.urish.gwtit.titanium.ui;
 
 import org.urish.gwtit.titanium.ui.events.CommitHandler;
-import org.urish.gwtit.titanium.ui.events.DeleteHandler;
+import org.urish.gwtit.titanium.ui.events.DashboardViewDeleteHandler;
+import org.urish.gwtit.titanium.ui.events.DashboardViewMoveHandler;
 import org.urish.gwtit.titanium.ui.events.EditHandler;
-import org.urish.gwtit.titanium.ui.events.MoveHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -88,9 +88,9 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('commit', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CommitHandler::onCommit(Lorg/urish/gwtit/titanium/ui/events/CommitEvent;)(e); } );
 	}-*/;
 
-	public final native void addDeleteHandler(DeleteHandler handler)
+	public final native void addDeleteHandler(DashboardViewDeleteHandler handler)
 	/*-{
-		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DeleteHandler::onDelete(Lorg/urish/gwtit/titanium/ui/events/DeleteEvent;)(e); } );
+		return this.addEventListener('delete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DashboardViewDeleteHandler::onDashboardViewDelete(Lorg/urish/gwtit/titanium/ui/events/DashboardViewDeleteEvent;)(e); } );
 	}-*/;
 
 	public final native void addEditHandler(EditHandler handler)
@@ -98,9 +98,9 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('edit', function(e) { handler.@org.urish.gwtit.titanium.ui.events.EditHandler::onEdit(Lorg/urish/gwtit/titanium/ui/events/EditEvent;)(e); } );
 	}-*/;
 
-	public final native void addMoveHandler(MoveHandler handler)
+	public final native void addMoveHandler(DashboardViewMoveHandler handler)
 	/*-{
-		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.MoveHandler::onMove(Lorg/urish/gwtit/titanium/ui/events/MoveEvent;)(e); } );
+		return this.addEventListener('move', function(e) { handler.@org.urish.gwtit.titanium.ui.events.DashboardViewMoveHandler::onDashboardViewMove(Lorg/urish/gwtit/titanium/ui/events/DashboardViewMoveEvent;)(e); } );
 	}-*/;
 
 }

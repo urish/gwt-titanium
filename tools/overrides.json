@@ -19,6 +19,14 @@
 			{"name": "currentActivity", "description": "The current activity", "permission": "read-only", "type": "Titanium.Android.Activity"}
 		]
 	},
+	"Titanium.Android.Activity": {
+		"events[name='pause'] javaEventName": "ActivityPause",
+		"events[name='resume'] javaEventName": "ActivityResume"
+	},
+	"Titanium.Android.Service": {
+		"events[name='pause'] javaEventName": "ServicePause",
+		"events[name='resume'] javaEventName": "ServiceResume"
+	},
 	"Titanium.Facebook": {
 		"methods[name='dialog'] parameters[name='callback'] type": "Callback<Titanium.Facebook.DialogCallbackParams>",
 		"methods[name='request'] parameters[name='callback'] type": "Callback<Titanium.Facebook.RequestCallbackParams>",
@@ -149,7 +157,13 @@
 			{"name": "media", "type": "Titanium.Blob"}
 		]
 	},
+	"Titanium.Media.Sound": {
+		"events[name='complete'] javaEventName": "SoundComplete",
+		"events[name='error'] javaEventName": "SoundError"
+	},
 	"Titanium.Media.VideoPlayer": {
+		"events[name='complete'] javaEventName": "VideoPlayerComplete",
+		"events[name='error'] javaEventName": "VideoPlayerError",
 		"events[name='loadstate'] javaName": "LoadState",
 		"events[name='naturalSizeAvailable'] properties[name='naturalSize'] type": "$Size",
 		"properties[name='naturalSize'] type": "$Size"
@@ -157,8 +171,15 @@
 	"Titanium.Network.HTTPClient": {
 		"methods[name='send'] parameters[name='data'] optional": true
 	},
+	"Titanium.UI.AlertDialog": {
+		"events[name='click'] javaEventName": "AlertDialogClick"
+	},
 	"Titanium.UI.ActivityIndicator": {
 		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.Animation": {
+		"events[name='complete'] javaEventName": "AnimationComplete",
+		"events[name='start'] javaEventName": "AnimationStart"
 	},
 	"Titanium.UI.Button": {
 		"properties[name='font'] type": "Font"
@@ -167,18 +188,31 @@
 		"events[name='change'] javaEventName": "CoverFlowViewChange"
 	},
 	"Titanium.UI.DashboardItem": {
-		"events[name='click'] properties[name='location'] type": "$Point"
+		"events[name='click'] javaEventName": "DashboardItemClick",
+		"events[name='click'] properties[name='location'] type": "$Point",
+		"events[name='delete'] javaEventName": "DashboardItemDelete",
+		"events[name='move'] javaEventName": "DashboardItemMove"
+	},
+	"Titanium.UI.DashboardView": {
+		"events[name='delete'] javaEventName": "DashboardViewDelete",
+		"events[name='move'] javaEventName": "DashboardViewMove"
 	},
 	"Titanium.UI.EmailDialog": {
+		"events[name='complete'] javaEventName": "EmailDialogComplete",
 		"properties[name='bccRecipients'] type": "Array<String>",
 		"properties[name='ccRecipients'] type": "Array<String>",
 		"properties[name='toRecipients'] type": "Array<String>"
 	},
 	"Titanium.UI.ImageView": {
-		"events[name='change'] javaEventName": "ImageViewChange"
+		"events[name='change'] javaEventName": "ImageViewChange",
+		"events[name='load'] javaEventName": "ImageViewLoad",
+		"events[name='start'] javaEventName": "ImageViewStart"
 	},
 	"Titanium.UI.Label": {
 		"properties[name='font'] type": "Font"
+	},
+	"Titanium.UI.OptionDialog": {
+		"events[name='click'] javaEventName": "OptionDialogClick"
 	},
 	"Titanium.UI.Picker": {
 		"events[name='change'] javaEventName": "PickerChange"
@@ -189,8 +223,17 @@
 	"Titanium.UI.ProgressBar": {
 		"properties[name='font'] type": "Font"
 	},
+	"Titanium.UI.ScrollableView": {
+		"events[name='scroll'] javaEventName": "ScrollableViewScroll"
+	},
+	"Titanium.UI.ScrollView": {
+		"events[name='scroll'] javaEventName": "ScrollViewScroll"
+	},
 	"Titanium.UI.SearchBar": {
-		"events[name='change'] javaEventName": "SearchBarChange"
+		"events[name='blur'] javaEventName": "SearchBarBlur",
+		"events[name='change'] javaEventName": "SearchBarChange",
+		"events[name='focus'] javaEventName": "SearchBarFocus",
+		"events[name='return'] javaEventName": "SearchBarReturn"
 	},
 	"Titanium.UI.Slider": {
 		"events[name='change'] javaEventName": "SliderChange",
@@ -209,9 +252,14 @@
 		"properties[name='labels'] type": "Array<String>"
 	},
 	"Titanium.UI.TabGroup": {
+		"events[name='blur'] javaEventName": "TabGroupBlur",
+		"events[name='focus'] javaEventName": "TabGroupFocus",
 		"properties[name='activeTab'] type": "Titanium.UI.Tab"
 	},
 	"Titanium.UI.TableView": {
+		"events[name='delete'] javaEventName": "TableViewDelete",
+		"events[name='move'] javaEventName": "TableViewMove",
+		"events[name='scroll'] javaEventName": "TableViewScroll",
 		"events[name='scroll'] properties[name='contentOffset'] type": "$Point",
 		"events[name='scroll'] properties[name='contentSize'] type": "$Size",
 		"events[name='scroll'] properties[name='size'] type": "$Size",
@@ -223,11 +271,17 @@
 		"properties[name='layout']": null
 	},
 	"Titanium.UI.TextArea": {
+		"events[name='blur'] javaEventName": "TextAreaBlur",
 		"events[name='change'] javaEventName": "TextAreaChange",
+		"events[name='focus'] javaEventName": "TextAreaFocus",
+		"events[name='return'] javaEventName": "TextAreaReturn",
 		"events[name='selected'] properties[name='range'] type": "$Range"
 	},
 	"Titanium.UI.TextField": {
-		"events[name='change'] javaEventName": "TextFieldChange"
+		"events[name='blur'] javaEventName": "TextFieldBlur",
+		"events[name='change'] javaEventName": "TextFieldChange",
+		"events[name='return'] javaEventName": "TextFieldReturn",
+		"events[name='focus'] javaEventName": "TextFieldFocus"
 	},
 	"Titanium.UI.View": {
 		"methods[name='add'] parameters[name='view'] type": "Titanium.UI.View",
@@ -257,11 +311,14 @@
 		"events[name='twofingertap'] javaName": "TwoFingerTap"
 	},
 	"Titanium.UI.WebView": {
-		"events[name='beforeload'] javaName": "BeforeLoad"
+		"events[name='beforeload'] javaName": "BeforeLoad",
+		"events[name='load'] javaEventName": "WebViewLoad"
 	},
 	"Titanium.UI.Window": {
 		"events[name='android:volup'] javaName": "AndroidVolumeUp",
-		"events[name='android:voldown'] javaName": "AndroidVolumeDown"
+		"events[name='android:voldown'] javaName": "AndroidVolumeDown",
+		"events[name='blur'] javaEventName": "WindowBlur",
+		"events[name='focus'] javaEventName": "WindowFocus"
 	},
 	"Titanium.XML.Document": {
 		"methods[name='createCDATASection']     returns type": "Object",

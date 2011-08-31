@@ -18,8 +18,8 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.CompleteHandler;
-import org.urish.gwtit.titanium.ui.events.StartHandler;
+import org.urish.gwtit.titanium.ui.events.AnimationCompleteHandler;
+import org.urish.gwtit.titanium.ui.events.AnimationStartHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -299,14 +299,14 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 		this.zIndex = value;
 	}-*/;
 
-	public final native void addCompleteHandler(CompleteHandler handler)
+	public final native void addCompleteHandler(AnimationCompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/events/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AnimationCompleteHandler::onAnimationComplete(Lorg/urish/gwtit/titanium/ui/events/AnimationCompleteEvent;)(e); } );
 	}-*/;
 
-	public final native void addStartHandler(StartHandler handler)
+	public final native void addStartHandler(AnimationStartHandler handler)
 	/*-{
-		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.events.StartHandler::onStart(Lorg/urish/gwtit/titanium/ui/events/StartEvent;)(e); } );
+		return this.addEventListener('start', function(e) { handler.@org.urish.gwtit.titanium.ui.events.AnimationStartHandler::onAnimationStart(Lorg/urish/gwtit/titanium/ui/events/AnimationStartEvent;)(e); } );
 	}-*/;
 
 }

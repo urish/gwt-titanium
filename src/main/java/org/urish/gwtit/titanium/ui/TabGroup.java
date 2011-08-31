@@ -18,10 +18,10 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.BlurHandler;
 import org.urish.gwtit.titanium.ui.events.CloseHandler;
-import org.urish.gwtit.titanium.ui.events.FocusHandler;
 import org.urish.gwtit.titanium.ui.events.OpenHandler;
+import org.urish.gwtit.titanium.ui.events.TabGroupBlurHandler;
+import org.urish.gwtit.titanium.ui.events.TabGroupFocusHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -165,9 +165,9 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.removeTab();
 	}-*/;
 
-	public final native void addBlurHandler(BlurHandler handler)
+	public final native void addBlurHandler(TabGroupBlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TabGroupBlurHandler::onTabGroupBlur(Lorg/urish/gwtit/titanium/ui/events/TabGroupBlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addCloseHandler(CloseHandler handler)
@@ -175,9 +175,9 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('close', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CloseHandler::onClose(Lorg/urish/gwtit/titanium/ui/events/CloseEvent;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(FocusHandler handler)
+	public final native void addFocusHandler(TabGroupFocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.TabGroupFocusHandler::onTabGroupFocus(Lorg/urish/gwtit/titanium/ui/events/TabGroupFocusEvent;)(e); } );
 	}-*/;
 
 	public final native void addOpenHandler(OpenHandler handler)

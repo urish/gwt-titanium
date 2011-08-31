@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.ClickHandler;
+import org.urish.gwtit.titanium.ui.events.OptionDialogClickHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -138,9 +138,9 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.show();
 	}-*/;
 
-	public final native void addClickHandler(ClickHandler handler)
+	public final native void addClickHandler(OptionDialogClickHandler handler)
 	/*-{
-		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ClickHandler::onClick(Lorg/urish/gwtit/titanium/ui/events/ClickEvent;)(e); } );
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.OptionDialogClickHandler::onOptionDialogClick(Lorg/urish/gwtit/titanium/ui/events/OptionDialogClickEvent;)(e); } );
 	}-*/;
 
 }

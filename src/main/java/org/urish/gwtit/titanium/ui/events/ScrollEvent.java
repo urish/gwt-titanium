@@ -31,55 +31,19 @@ public class ScrollEvent extends TouchEvent {
 	}
 
 	/**
-	 * the row index of the topmost visible row in the view (Android only)
+	 * boolean to indicate if the scroll is based on a dragging gesture
 	 */
-	public final native int getFirstVisibleItem()
+	public final native boolean getDragging()
 	/*-{
-		return this.firstVisibleItem;
+		return this.dragging;
 	}-*/;
 
 	/**
-	 * the number of rows currently visible in the view (Android only)
+	 * boolean to indicate if the scroll is decelerating
 	 */
-	public final native int getVisibleItemCount()
+	public final native boolean getDecelerating()
 	/*-{
-		return this.visibleItemCount;
-	}-*/;
-
-	/**
-	 * dictionary with `x` and `y` properties containing the content offset (iOS
-	 * only)
-	 */
-	public final native org.urish.gwtit.client.util.Point getContentOffset()
-	/*-{
-		return this.contentOffset;
-	}-*/;
-
-	/**
-	 * the total number of rows in the view (Android only)
-	 */
-	public final native int getTotalItemCount()
-	/*-{
-		return this.totalItemCount;
-	}-*/;
-
-	/**
-	 * dictionary with `width` and `height` properties containing the size of
-	 * the content (regardless of the display size in the case of scrolling)
-	 * (iOS only)
-	 */
-	public final native org.urish.gwtit.client.util.Size getContentSize()
-	/*-{
-		return this.contentSize;
-	}-*/;
-
-	/**
-	 * dictionary with `width` and `height` properties containing the size of
-	 * the visible table view
-	 */
-	public final native org.urish.gwtit.client.util.Size getSize()
-	/*-{
-		return this.size;
+		return this.decelerating;
 	}-*/;
 
 }

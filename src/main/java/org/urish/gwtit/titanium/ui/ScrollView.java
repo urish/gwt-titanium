@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.ui;
 import org.urish.gwtit.titanium.ui.events.DragEndHandler;
 import org.urish.gwtit.titanium.ui.events.DragStartHandler;
 import org.urish.gwtit.titanium.ui.events.ScaleHandler;
-import org.urish.gwtit.titanium.ui.events.ScrollHandler;
+import org.urish.gwtit.titanium.ui.events.ScrollViewScrollHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -243,9 +243,9 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('scale', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScaleHandler::onScale(Lorg/urish/gwtit/titanium/ui/events/ScaleEvent;)(e); } );
 	}-*/;
 
-	public final native void addScrollHandler(ScrollHandler handler)
+	public final native void addScrollHandler(ScrollViewScrollHandler handler)
 	/*-{
-		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollHandler::onScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollEvent;)(e); } );
+		return this.addEventListener('scroll', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollViewScrollHandler::onScrollViewScroll(Lorg/urish/gwtit/titanium/ui/events/ScrollViewScrollEvent;)(e); } );
 	}-*/;
 
 	public final native void addDragStartHandler(DragStartHandler handler)

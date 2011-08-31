@@ -19,11 +19,11 @@
 package org.urish.gwtit.titanium.android;
 
 import org.urish.gwtit.client.EventCallback;
+import org.urish.gwtit.titanium.android.events.ActivityPauseHandler;
+import org.urish.gwtit.titanium.android.events.ActivityResumeHandler;
 import org.urish.gwtit.titanium.android.events.CreateHandler;
 import org.urish.gwtit.titanium.android.events.DestroyHandler;
 import org.urish.gwtit.titanium.android.events.NewIntentHandler;
-import org.urish.gwtit.titanium.android.events.PauseHandler;
-import org.urish.gwtit.titanium.android.events.ResumeHandler;
 import org.urish.gwtit.titanium.android.events.StartHandler;
 import org.urish.gwtit.titanium.android.events.StopHandler;
 
@@ -206,14 +206,14 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 		return this.addEventListener('newIntent', function(e) { handler.@org.urish.gwtit.titanium.android.events.NewIntentHandler::onNewIntent(Lorg/urish/gwtit/titanium/android/events/NewIntentEvent;)(e); } );
 	}-*/;
 
-	public final native void addPauseHandler(PauseHandler handler)
+	public final native void addPauseHandler(ActivityPauseHandler handler)
 	/*-{
-		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.events.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/events/PauseEvent;)(e); } );
+		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.events.ActivityPauseHandler::onActivityPause(Lorg/urish/gwtit/titanium/android/events/ActivityPauseEvent;)(e); } );
 	}-*/;
 
-	public final native void addResumeHandler(ResumeHandler handler)
+	public final native void addResumeHandler(ActivityResumeHandler handler)
 	/*-{
-		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.events.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/events/ResumeEvent;)(e); } );
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.events.ActivityResumeHandler::onActivityResume(Lorg/urish/gwtit/titanium/android/events/ActivityResumeEvent;)(e); } );
 	}-*/;
 
 	public final native void addStartHandler(StartHandler handler)

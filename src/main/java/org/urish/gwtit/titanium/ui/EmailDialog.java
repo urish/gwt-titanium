@@ -18,7 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.CompleteHandler;
+import org.urish.gwtit.titanium.ui.events.EmailDialogCompleteHandler;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
@@ -202,9 +202,9 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 		return this.open(properties);
 	}-*/;
 
-	public final native void addCompleteHandler(CompleteHandler handler)
+	public final native void addCompleteHandler(EmailDialogCompleteHandler handler)
 	/*-{
-		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.CompleteHandler::onComplete(Lorg/urish/gwtit/titanium/ui/events/CompleteEvent;)(e); } );
+		return this.addEventListener('complete', function(e) { handler.@org.urish.gwtit.titanium.ui.events.EmailDialogCompleteHandler::onEmailDialogComplete(Lorg/urish/gwtit/titanium/ui/events/EmailDialogCompleteEvent;)(e); } );
 	}-*/;
 
 }

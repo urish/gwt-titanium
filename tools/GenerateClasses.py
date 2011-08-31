@@ -598,7 +598,7 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 			eventClasses += [eventClass, handlerClass]
 	return eventClasses
 
-def generateClass(projectRoot, type, types):
+def generateClass(type, types):
 	print type['name']
 	type['name'] = re.sub(r"(^|\.)(\d)", r"\1_\2", type['name'])
 	name = type['name'].split(".")
@@ -621,8 +621,12 @@ def generateClass(projectRoot, type, types):
 		javaClass.append(generateMethods(type, singleton, types))
 	classes = generateEvents(javaClass, type, singleton, types)
 	classes.append(javaClass)
+	return classes
+
+def writeClasses(projectRoot, classes):
 	BASE_PATH = r"src/main/java"
 	classFiles = []
+	writtenClasses = {}
 	for javaClass in classes:
 		dir = os.path.join(projectRoot, BASE_PATH, os.path.dirname(javaClass.getPath()))
 		if not os.path.exists(dir):
@@ -630,6 +634,12 @@ def generateClass(projectRoot, type, types):
 		classFile = os.path.join(dir, os.path.basename(javaClass.getPath()))
 		file(classFile, "w").write(javaClass.getCode())
 		classFiles.append(classFile)
+		qn = javaClass.getQualifiedName()
+		if qn in writtenClasses:
+			if javaClass.getCode() != writtenClasses[qn].getCode():
+				raise Exception("Conflicting duplicate class definition: " + qn)
+		else:
+			writtenClasses[qn] = javaClass 
 	return classFiles
 
 def getTypes(path):
@@ -700,9 +710,10 @@ def processDir(inputDir, projectDir):
 			continue
 		if typeInfo['name'] in overrides:
 			processOverrides(typeInfo, overrides[typeInfo['name']])
-		classes += generateClass(projectDir, typeInfo, types)
+		classes += generateClass(typeInfo, types)
+	classFiles = writeClasses(projectDir, classes)
 	# Format the generated code
-	for someClasses in chunks(classes, 64):
+	for someClasses in chunks(classFiles, 64):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
 if __name__ == "__main__":

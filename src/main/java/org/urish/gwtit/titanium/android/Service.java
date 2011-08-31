@@ -18,8 +18,8 @@
 
 package org.urish.gwtit.titanium.android;
 
-import org.urish.gwtit.titanium.android.events.PauseHandler;
-import org.urish.gwtit.titanium.android.events.ResumeHandler;
+import org.urish.gwtit.titanium.android.events.ServicePauseHandler;
+import org.urish.gwtit.titanium.android.events.ServiceResumeHandler;
 import org.urish.gwtit.titanium.android.events.StartHandler;
 import org.urish.gwtit.titanium.android.events.StopHandler;
 
@@ -86,14 +86,14 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 		return this.stop();
 	}-*/;
 
-	public final native void addPauseHandler(PauseHandler handler)
+	public final native void addPauseHandler(ServicePauseHandler handler)
 	/*-{
-		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.events.PauseHandler::onPause(Lorg/urish/gwtit/titanium/android/events/PauseEvent;)(e); } );
+		return this.addEventListener('pause', function(e) { handler.@org.urish.gwtit.titanium.android.events.ServicePauseHandler::onServicePause(Lorg/urish/gwtit/titanium/android/events/ServicePauseEvent;)(e); } );
 	}-*/;
 
-	public final native void addResumeHandler(ResumeHandler handler)
+	public final native void addResumeHandler(ServiceResumeHandler handler)
 	/*-{
-		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.events.ResumeHandler::onResume(Lorg/urish/gwtit/titanium/android/events/ResumeEvent;)(e); } );
+		return this.addEventListener('resume', function(e) { handler.@org.urish.gwtit.titanium.android.events.ServiceResumeHandler::onServiceResume(Lorg/urish/gwtit/titanium/android/events/ServiceResumeEvent;)(e); } );
 	}-*/;
 
 	public final native void addStartHandler(StartHandler handler)

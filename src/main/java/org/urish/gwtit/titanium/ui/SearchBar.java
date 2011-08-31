@@ -18,11 +18,11 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import org.urish.gwtit.titanium.ui.events.BlurHandler;
 import org.urish.gwtit.titanium.ui.events.CancelHandler;
-import org.urish.gwtit.titanium.ui.events.FocusHandler;
-import org.urish.gwtit.titanium.ui.events.ReturnHandler;
+import org.urish.gwtit.titanium.ui.events.SearchBarBlurHandler;
 import org.urish.gwtit.titanium.ui.events.SearchBarChangeHandler;
+import org.urish.gwtit.titanium.ui.events.SearchBarFocusHandler;
+import org.urish.gwtit.titanium.ui.events.SearchBarReturnHandler;
 
 /**
  * A search bar is created by the method
@@ -190,9 +190,9 @@ public class SearchBar extends org.urish.gwtit.titanium.ui.View {
 		return this.focus();
 	}-*/;
 
-	public final native void addBlurHandler(BlurHandler handler)
+	public final native void addBlurHandler(SearchBarBlurHandler handler)
 	/*-{
-		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.BlurHandler::onBlur(Lorg/urish/gwtit/titanium/ui/events/BlurEvent;)(e); } );
+		return this.addEventListener('blur', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SearchBarBlurHandler::onSearchBarBlur(Lorg/urish/gwtit/titanium/ui/events/SearchBarBlurEvent;)(e); } );
 	}-*/;
 
 	public final native void addCancelHandler(CancelHandler handler)
@@ -205,14 +205,14 @@ public class SearchBar extends org.urish.gwtit.titanium.ui.View {
 		return this.addEventListener('change', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SearchBarChangeHandler::onSearchBarChange(Lorg/urish/gwtit/titanium/ui/events/SearchBarChangeEvent;)(e); } );
 	}-*/;
 
-	public final native void addFocusHandler(FocusHandler handler)
+	public final native void addFocusHandler(SearchBarFocusHandler handler)
 	/*-{
-		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.FocusHandler::onFocus(Lorg/urish/gwtit/titanium/ui/events/FocusEvent;)(e); } );
+		return this.addEventListener('focus', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SearchBarFocusHandler::onSearchBarFocus(Lorg/urish/gwtit/titanium/ui/events/SearchBarFocusEvent;)(e); } );
 	}-*/;
 
-	public final native void addReturnHandler(ReturnHandler handler)
+	public final native void addReturnHandler(SearchBarReturnHandler handler)
 	/*-{
-		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ReturnHandler::onReturn(Lorg/urish/gwtit/titanium/ui/events/ReturnEvent;)(e); } );
+		return this.addEventListener('return', function(e) { handler.@org.urish.gwtit.titanium.ui.events.SearchBarReturnHandler::onSearchBarReturn(Lorg/urish/gwtit/titanium/ui/events/SearchBarReturnEvent;)(e); } );
 	}-*/;
 
 }
