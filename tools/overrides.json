@@ -257,6 +257,41 @@
 		"properties[name='activeTab'] type": "Titanium.UI.Tab"
 	},
 	"Titanium.UI.TableView": {
+		"events+": 
+			[{
+				"name": "click",
+				"javaName": "RowClick",
+				"description": "fired when a row in the table view is clicked",
+				"properties": [{
+      				"name": "globalPoint",
+        			"description": "a dictionary with properties x and y describing the point of the event in screen coordinates",
+        			"type": "Object"
+				},{
+	      			"name": "index",
+        			"description": "table view row index",
+        			"type": "Number"
+	        	},{
+      				"name": "section",
+	        		"description": "table view section object",
+	        		"type": "Titanium.UI.TableViewSection"
+        		},{
+	        		"name": "rowData",
+        			"description": "table view row data object",
+	        		"type": "Object"
+        		},{
+      				"name": "row",
+        			"description": "table view row that was clicked",
+        			"type": "Titanium.UI.TableViewRow"
+				},{
+      				"name": "x",
+        			"description": "the x point of the event in receiving view coordinates",
+        			"type": "float"
+				},{
+      				"name": "y",
+        			"description": "the y point of the event, in receiving view coordinates",
+        			"type": "float"
+				}]
+			}],
 		"events[name='delete'] javaEventName": "TableViewDelete",
 		"events[name='move'] javaEventName": "TableViewMove",
 		"events[name='scroll'] javaEventName": "TableViewScroll",

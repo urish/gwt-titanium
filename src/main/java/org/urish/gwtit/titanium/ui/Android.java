@@ -75,6 +75,104 @@ public class Android extends org.urish.gwtit.titanium.Module {
 
 	public static final int LINKIFY_WEB_URLS = value_LINKIFY_WEB_URLS();
 
+	private static native final float value_PIXEL_FORMAT_A_8()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_A_8;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_A_8 = value_PIXEL_FORMAT_A_8();
+
+	private static native final float value_PIXEL_FORMAT_LA_88()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_LA_88;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_LA_88 = value_PIXEL_FORMAT_LA_88();
+
+	private static native final float value_PIXEL_FORMAT_L_8()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_L_8;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_L_8 = value_PIXEL_FORMAT_L_8();
+
+	private static native final float value_PIXEL_FORMAT_OPAQUE()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_OPAQUE;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_OPAQUE = value_PIXEL_FORMAT_OPAQUE();
+
+	private static native final float value_PIXEL_FORMAT_RGBA_4444()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGBA_4444;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGBA_4444 = value_PIXEL_FORMAT_RGBA_4444();
+
+	private static native final float value_PIXEL_FORMAT_RGBA_5551()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGBA_5551;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGBA_5551 = value_PIXEL_FORMAT_RGBA_5551();
+
+	private static native final float value_PIXEL_FORMAT_RGBA_8888()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGBA_8888;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGBA_8888 = value_PIXEL_FORMAT_RGBA_8888();
+
+	private static native final float value_PIXEL_FORMAT_RGBX_8888()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGBX_8888;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGBX_8888 = value_PIXEL_FORMAT_RGBX_8888();
+
+	private static native final float value_PIXEL_FORMAT_RGB_332()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGB_332;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGB_332 = value_PIXEL_FORMAT_RGB_332();
+
+	private static native final float value_PIXEL_FORMAT_RGB_565()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGB_565;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGB_565 = value_PIXEL_FORMAT_RGB_565();
+
+	private static native final float value_PIXEL_FORMAT_RGB_888()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_RGB_888;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_RGB_888 = value_PIXEL_FORMAT_RGB_888();
+
+	private static native final float value_PIXEL_FORMAT_TRANSLUCENT()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_TRANSLUCENT;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_TRANSLUCENT = value_PIXEL_FORMAT_TRANSLUCENT();
+
+	private static native final float value_PIXEL_FORMAT_TRANSPARENT()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_TRANSPARENT;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_TRANSPARENT = value_PIXEL_FORMAT_TRANSPARENT();
+
+	private static native final float value_PIXEL_FORMAT_UNKNOWN()
+	/*-{
+		return Titanium.UI.Android.PIXEL_FORMAT_UNKNOWN;
+	}-*/;
+
+	public static final float PIXEL_FORMAT_UNKNOWN = value_PIXEL_FORMAT_UNKNOWN();
+
 	private static native final int value_SOFT_INPUT_ADJUST_PAN()
 	/*-{
 		return Titanium.UI.Android.SOFT_INPUT_ADJUST_PAN;

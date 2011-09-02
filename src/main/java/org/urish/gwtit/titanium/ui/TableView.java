@@ -18,6 +18,7 @@
 
 package org.urish.gwtit.titanium.ui;
 
+import org.urish.gwtit.titanium.ui.events.RowClickHandler;
 import org.urish.gwtit.titanium.ui.events.ScrollEndHandler;
 import org.urish.gwtit.titanium.ui.events.TableViewDeleteHandler;
 import org.urish.gwtit.titanium.ui.events.TableViewMoveHandler;
@@ -354,25 +355,29 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Append a row to the table, optionally with animation
+	 * Append one or more rows to the table, optionally with animation
 	 * 
 	 * @param row
-	 *            row to append
+	 *            if appending a single row, this should contain only the row
+	 *            being appended. if appending multiple rows, this should be an
+	 *            array of the rows being appended
 	 */
-	public final native void appendRow(org.urish.gwtit.titanium.ui.TableViewRow row)
+	public final native void appendRow(Object row)
 	/*-{
 		return this.appendRow(row);
 	}-*/;
 
 	/**
-	 * Append a row to the table, optionally with animation
+	 * Append one or more rows to the table, optionally with animation
 	 * 
 	 * @param row
-	 *            row to append
+	 *            if appending a single row, this should contain only the row
+	 *            being appended. if appending multiple rows, this should be an
+	 *            array of the rows being appended
 	 * @param properties
 	 *            animation properties
 	 */
-	public final native void appendRow(org.urish.gwtit.titanium.ui.TableViewRow row, JavaScriptObject properties)
+	public final native void appendRow(Object row, JavaScriptObject properties)
 	/*-{
 		return this.appendRow(row, properties);
 	}-*/;
@@ -577,6 +582,11 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	public final native void addScrollEndHandler(ScrollEndHandler handler)
 	/*-{
 		return this.addEventListener('scrollEnd', function(e) { handler.@org.urish.gwtit.titanium.ui.events.ScrollEndHandler::onScrollEnd(Lorg/urish/gwtit/titanium/ui/events/ScrollEndEvent;)(e); } );
+	}-*/;
+
+	public final native void addRowClickHandler(RowClickHandler handler)
+	/*-{
+		return this.addEventListener('click', function(e) { handler.@org.urish.gwtit.titanium.ui.events.RowClickHandler::onRowClick(Lorg/urish/gwtit/titanium/ui/events/RowClickEvent;)(e); } );
 	}-*/;
 
 }

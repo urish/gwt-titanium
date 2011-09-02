@@ -80,34 +80,6 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The maximum zoom scale for the view
-	 * @platforms iphone, ipad
-	 */
-	public final native float getMaxZoomScale()
-	/*-{
-		return this.maxZoomScale;
-	}-*/;
-
-	public final native void setMaxZoomScale(float value)
-	/*-{
-		this.maxZoomScale = value;
-	}-*/;
-
-	/**
-	 * @return The minimum zoom scale for the view
-	 * @platforms iphone, ipad
-	 */
-	public final native float getMinZoomScale()
-	/*-{
-		return this.minZoomScale;
-	}-*/;
-
-	public final native void setMinZoomScale(float value)
-	/*-{
-		this.minZoomScale = value;
-	}-*/;
-
-	/**
 	 * @return The color of the paging control. defaults to black.
 	 */
 	public final native String getPagingControlColor()

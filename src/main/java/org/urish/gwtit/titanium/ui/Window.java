@@ -189,6 +189,22 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
+	 * @return For heavyweight windows, this property contains a reference to
+	 *         the android activity object associated with this window.
+	 * 
+	 * @platforms android
+	 */
+	public final native org.urish.gwtit.titanium.android.Activity getActivity()
+	/*-{
+		return this.activity;
+	}-*/;
+
+	public final native void setActivity(org.urish.gwtit.titanium.android.Activity value)
+	/*-{
+		this.activity = value;
+	}-*/;
+
+	/**
 	 * @return Title for the back button. only available in iphone. this is only
 	 *         valid when the window is a child of a tab.
 	 * @platforms iphone, ipad
@@ -567,6 +583,27 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	public final native void setWindowSoftInputMode(int value)
 	/*-{
 		this.windowSoftInputMode = value;
+	}-*/;
+
+	/**
+	 * @return Set the pixel format for the activity's window. the property is
+	 *         ignored on a titanium "lightweight" window. use one of the
+	 *         .pixel_format constants to set the format. see [android sdk
+	 *         window
+	 *         .setformat](http://developer.android.com/reference/android/view
+	 *         /window.html#setformat(int))
+	 * 
+	 * @platforms android
+	 * @since 1.8.0
+	 */
+	public final native float getWindowPixelFormat()
+	/*-{
+		return this.windowPixelFormat;
+	}-*/;
+
+	public final native void setWindowPixelFormat(float value)
+	/*-{
+		this.windowPixelFormat = value;
 	}-*/;
 
 	/**

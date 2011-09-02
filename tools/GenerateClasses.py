@@ -573,7 +573,7 @@ def generateEvents(javaClass, typeInfo, isSingleton, types):
 		if not isSingleton:
 			for ancestor in ancestors(typeInfo, types):
 				for candidate in ancestor.get('events', []):
-					if event['name'] == candidate['name']:
+					if javaName == capitalEventName(candidate['name']):
 						foundInAncetors = True
 		if not foundInAncetors: 
 			eventClass = JavaClass(package + ".events", javaEventName + "Event", superClass=superClass, body=EVENT_CLASS_BODY_TEMPLATE % {
