@@ -353,9 +353,7 @@ def generateProperties(type, isSingleton, types):
 	if 'properties' in type:
 		allReadOnly = 'readonly' in type and type['readonly']
 		for property in type['properties']:
-			readonly = allReadOnly or (property['description'] and property['description'].lower().strip().startswith("readonly"))
-			if 'permission' in property and property['permission'] == "read-only":
-				readonly = True
+			readonly = allReadOnly or (property.get('permission', '') == "read-only")
 			docString = generatePropertyDoc(property)
 			getter = getterTemplate
 			setter = setterTemplate if not readonly else ""

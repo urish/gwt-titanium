@@ -57,7 +57,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Readonly property to indicate if paused
+	 * @return Property to indicate if paused
 	 */
 	public final native boolean getPaused()
 	/*-{
@@ -65,7 +65,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Readonly property to indicate if recording
+	 * @return Property to indicate if recording
 	 */
 	public final native boolean getRecording()
 	/*-{
@@ -73,7 +73,7 @@ public class AudioRecorder extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Readonly property to indicate if stopped
+	 * @return Property to indicate if stopped
 	 */
 	public final native boolean getStopped()
 	/*-{
