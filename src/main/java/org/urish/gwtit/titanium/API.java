@@ -23,7 +23,7 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level api module. the api module is mainly used for logging.
+ * The top level API module. The API module is mainly used for logging.
  * 
  * @since 0.1
  */

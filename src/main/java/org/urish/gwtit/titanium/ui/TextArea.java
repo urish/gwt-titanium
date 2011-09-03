@@ -27,8 +27,8 @@ import org.urish.gwtit.titanium.ui.events.TextAreaReturnHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A text area is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtextarea}. the text area is a
+ * A Text Area is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTextArea}. The Text Area is a
  * multiline field.
  * <p>
  * Notes: Both Text Areas and Text Fields can control the buttons displayed in a
@@ -65,12 +65,12 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return One of
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_none},
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_words}
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_NONE},
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_sentences}
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES}
 	 *         , or
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_all}
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_ALL}
 	 *         to indicate how the field should be capitalized during typing.
 	 * @platforms android
 	 */

@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The callback to be fired after the socket enters the error state
+ * The callback to be fired after the socket enters the ERROR state
  * 
  * @since 1.7
  */

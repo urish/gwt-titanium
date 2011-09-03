@@ -67,8 +67,8 @@ public class Socket extends org.urish.gwtit.titanium.Module {
 	public static final float ERROR = value_ERROR();
 
 	/**
-	 * Returns new tcp socket object, takes object containing properties list
-	 * defined in `titanium.network.socket.tcp`. some properties are only needed
+	 * Returns new TCP socket object, takes object containing properties list
+	 * defined in `Titanium.Network.Socket.TCP`. Some properties are only needed
 	 * based on whether the socket will be a connecting socket or a listening
 	 * socket.
 	 * 

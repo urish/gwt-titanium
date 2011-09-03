@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level yahoo module. the yahoo module is used for accessing yahoo
- * related api services.
+ * The top level Yahoo module. The Yahoo module is used for accessing Yahoo
+ * related API services.
  * 
  * @since 0.8
  */
@@ -33,7 +33,7 @@ public class Yahoo extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * Invoke a yahoo yql query
+	 * Invoke a Yahoo YQL query
 	 * 
 	 * @param yql
 	 *            the YQL query to execute

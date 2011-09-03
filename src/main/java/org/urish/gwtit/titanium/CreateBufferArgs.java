@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Arguments to be passed to createbuffer
+ * Arguments to be passed to createBuffer
  * 
  * @since 1.7
  */
@@ -49,10 +49,10 @@ public class CreateBufferArgs extends JavaScriptObject {
 
 	/**
 	 * @return An initial value which will be encoded and placed in the buffer.
-	 *         if value is a number, type must also be set. (this is simply a
+	 *         If value is a Number, type must also be set. (this is simply a
 	 *         convenient way of calling
-	 *         {@link org.urish.gwtit.titanium.codec.encodestring} or
-	 *         {@link org.urish.gwtit.titanium.codec.encodenumber} and placing
+	 *         {@link org.urish.gwtit.titanium.codec.encodeString} or
+	 *         {@link org.urish.gwtit.titanium.codec.encodeNumber} and placing
 	 *         the encoded value in the returned buffer.)
 	 */
 	public final native JavaScriptObject getValue()
@@ -61,6 +61,8 @@ public class CreateBufferArgs extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default 0, unless `value` is specified, in which case the length of the
+	 *          encoded data is used.
 	 * @return The length of the buffer.
 	 */
 	public final native float getLength()
@@ -74,6 +76,8 @@ public class CreateBufferArgs extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default <Titanium.Codec.CHARSET_UTF8> if `value` is a String, If `value`
+	 *          is a Number, this argument is required
 	 * @return The type of data encoding to use with `value`.
 	 */
 	public final native String getType()
@@ -87,6 +91,8 @@ public class CreateBufferArgs extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default The OS native byte order is used by default. See
+	 *          <Titanium.Codec.getNativeByteOrder>
 	 * @return The byte order of this buffer.
 	 */
 	public final native float getByteOrder()

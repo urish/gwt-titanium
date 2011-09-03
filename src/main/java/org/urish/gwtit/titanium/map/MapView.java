@@ -26,9 +26,9 @@ import org.urish.gwtit.titanium.map.events.RegionChangedHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The mapview is an object created by
- * {@link org.urish.gwtit.titanium.map.createmapview} and is used for embedding
- * native mapping capabilities as a view in your application. with native maps,
+ * The MapView is an object created by
+ * {@link org.urish.gwtit.titanium.map.createMapView} and is used for embedding
+ * native mapping capabilities as a view in your application. With native maps,
  * you can control the mapping location, the type of map, the zoom level and you
  * can add custom annotations directly to the map.
  * <p>
@@ -71,9 +71,9 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return The map type constant of either
-	 *         {@link org.urish.gwtit.titanium.map.standard_type},
-	 *         {@link org.urish.gwtit.titanium.map.satellite_type} or
-	 *         {@link org.urish.gwtit.titanium.map.hybrid_type}.
+	 *         {@link org.urish.gwtit.titanium.Map.STANDARD_TYPE},
+	 *         {@link org.urish.gwtit.titanium.Map.SATELLITE_TYPE} or
+	 *         {@link org.urish.gwtit.titanium.Map.HYBRID_TYPE}.
 	 */
 	public final native int getMapType()
 	/*-{
@@ -87,8 +87,8 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return A dictionary that specifies the following properties specifying
-	 *         the region location to set the map: `latitudedelta`,
-	 *         `longitudedelta`, `latitude`, `longitude`.
+	 *         the region location to set the map: `latitudeDelta`,
+	 *         `longitudeDelta`, `latitude`, `longitude`.
 	 */
 	public final native JavaScriptObject getRegion()
 	/*-{

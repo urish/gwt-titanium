@@ -46,7 +46,7 @@ public class MediaQueryInfoType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The value for the given predicate. see the descriptions in for
+	 * @return The value for the given predicate. See the descriptions in for
 	 *         information about which properties require which values.
 	 */
 	public final native JavaScriptObject getValue()
@@ -55,7 +55,7 @@ public class MediaQueryInfoType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return Whether or not the predicate is for an exact match. the default
+	 * @return Whether or not the predicate is for an exact match. The default
 	 *         is `true`.
 	 */
 	public final native boolean getExact()

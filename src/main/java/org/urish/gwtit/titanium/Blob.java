@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 
 /**
  * The blob is an abstract data type that represents binary information, often
- * obtained through httpclient or via files. it often is used to store text or
+ * obtained through HTTPClient or via files. It often is used to store text or
  * the actual data of an image.
  * 
  * @platforms android, iphone, ipad
@@ -40,7 +40,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A utf-8 string representation of the data in this blob. if this
+	 * @return A UTF-8 string representation of the data in this blob. If this
 	 *         blob represents pure binary data, the value will be `null`.
 	 */
 	public final native String getText()
@@ -58,7 +58,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return When this blob represents an image, this is the height of the
-	 *         image in pixels. otherwise, this is 0.
+	 *         image in pixels. Otherwise, this is 0.
 	 */
 	public final native float getHeight()
 	/*-{
@@ -67,7 +67,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return When this blob represents an image, this is the width of the
-	 *         image in pixels. otherwise, this is 0.
+	 *         image in pixels. Otherwise, this is 0.
 	 */
 	public final native float getWidth()
 	/*-{
@@ -75,8 +75,8 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return When this blob represents a {@link org.urish.gwtit.titanium.file}
-	 *         , this is the file url that represents it
+	 * @return When this blob represents a {@link org.urish.gwtit.titanium.File}
+	 *         , this is the file URL that represents it
 	 */
 	public final native String getNativePath()
 	/*-{
@@ -85,7 +85,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return When this blob represents an image, this is the total number of
-	 *         pixels in the image. otherwise it returns the number of bytes in
+	 *         pixels in the image. Otherwise it returns the number of bytes in
 	 *         the binary data.
 	 * @platforms iphone, ipad
 	 */
@@ -95,7 +95,7 @@ public class Blob extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Converts this blob to a string
+	 * Converts this blob to a String
 	 */
 	public final native String toString_()
 	/*-{

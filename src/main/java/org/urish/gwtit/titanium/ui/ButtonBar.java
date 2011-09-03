@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A button bar is created by the method
- * {@link org.urish.gwtit.titanium.ui.createbuttonbar}.
+ * A Button Bar is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createButtonBar}.
  * <p>
  * Notes: For iPhone, the style constants are available in the constants defined
  * in <Titanium.UI.iPhone.SystemButtonStyle>.

@@ -25,18 +25,18 @@ import org.urish.gwtit.titanium.events.LogoutHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level facebook module. the facebook module is used for connecting
- * your application with facebook through the [facebook graph
- * api](http://developers.facebook.com/docs/reference/api/) (see
- * `requestwithgraphpath`) or the deprecated [facebook rest
- * api](http://developers.facebook.com/docs/reference/rest/) (see `request`).
- * due to how the facebook login process works on ios, your app will need to
+ * The top level Facebook module. The Facebook module is used for connecting
+ * your application with Facebook through the [Facebook Graph
+ * API](http://developers.facebook.com/docs/reference/api/) (see
+ * `requestWithGraphPath`) or the deprecated [Facebook REST
+ * API](http://developers.facebook.com/docs/reference/rest/) (see `request`).
+ * Due to how the facebook login process works on iOS, your app will need to
  * have the following in your tiapp.xml if you target those platforms:
  * 
  * your_app_id_here
  * 
- * you must still set ti.facebook.appid within your app itself to use the
- * facebook module. this property is used only for configuring your app to
+ * You must still set Ti.Facebook.appid within your app itself to use the
+ * facebook module. This property is used only for configuring your app to
  * interface with the facebook login process.
  * 
  * <p>
@@ -53,7 +53,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * @return Oauth token set after a successful `authorize`.
+	 * @return OAuth token set after a successful `authorize`.
 	 */
 	public static native String getAccessToken()
 	/*-{
@@ -66,7 +66,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Your facebook application id. you need to set this for anything
+	 * @return Your Facebook application id. You need to set this for anything
 	 *         to work.
 	 */
 	public static native String getAppid()
@@ -80,7 +80,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Time at which the `accesstoken` expires.
+	 * @return Time at which the `accessToken` expires.
 	 */
 	public static native java.util.Date getExpirationDate()
 	/*-{
@@ -93,12 +93,12 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Set to false to enable "single-sign-on" in cases where the
-	 *         official facebook app is on the device. default is true, meaning
+	 * @return Set to false to enable "Single-Sign-On" in cases where the
+	 *         official Facebook app is on the device. Default is true, meaning
 	 *         the traditional, dialog-based authentication is used rather than
-	 *         single-sign-on. see [facebook mobile
-	 *         guide](http://developers.facebook.com/docs/guides/mobile) for
-	 *         details of their single-sign-on schem.
+	 *         Single-Sign-On. See [Facebook Mobile
+	 *         Guide](http://developers.facebook.com/docs/guides/mobile) for
+	 *         details of their Single-Sign-On schem.
 	 */
 	public static native boolean getForceDialogAuth()
 	/*-{
@@ -124,7 +124,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Set/return an array of permissions to request for your app. be
+	 * @return Set/return an array of permissions to request for your app. Be
 	 *         sure the permissions you want are set before calling `authorize`.
 	 */
 	public static native JavaScriptObject getPermissions()
@@ -138,7 +138,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The unique user id returned from facebook.
+	 * @return The unique user id returned from Facebook.
 	 */
 	public static native String getUid()
 	/*-{
@@ -157,7 +157,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Login the user (if not already logged in) and authorize your application.
-	 * be sure to set your desired `permissions` and your `appid` before calling
+	 * Be sure to set your desired `permissions` and your `appid` before calling
 	 * this.
 	 */
 	public static native void authorize()
@@ -166,7 +166,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Open a supported facebook
+	 * Open a supported Facebook
 	 * [dialog](http://developers.facebook.com/docs/reference/dialogs/). "feed"
 	 * is just about the only useful one.
 	 * 
@@ -183,7 +183,7 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Clear the oauth `accesstoken` and logout the user.
+	 * Clear the OAuth `accessToken` and logout the user.
 	 */
 	public static native void logout()
 	/*-{
@@ -191,8 +191,8 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Make a request to the deprecated [facebook rest
-	 * api](http://developers.facebook.com/docs/reference/rest/).
+	 * Make a request to the deprecated [Facebook REST
+	 * API](http://developers.facebook.com/docs/reference/rest/).
 	 * 
 	 * @param method
 	 *            The REST API method to call.
@@ -207,10 +207,10 @@ public class Facebook extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Make a [facebook graph
-	 * api](http://developers.facebook.com/docs/reference/api/) request. if the
+	 * Make a [Facebook Graph
+	 * API](http://developers.facebook.com/docs/reference/api/) request. If the
 	 * request requires user authorization, be sure user is already logged-in
-	 * and your app is authorized. (you can check `loggedin` for that.)
+	 * and your app is authorized. (You can check `loggedIn` for that.)
 	 * 
 	 * @param path
 	 *            The graph API path to request. For example, "me" requests

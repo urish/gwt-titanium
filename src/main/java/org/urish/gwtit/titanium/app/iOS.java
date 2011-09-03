@@ -24,7 +24,7 @@ import org.urish.gwtit.titanium.app.events.NotificationHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level app ios module. the app ios module is only available on ios
+ * The top level App iOS module. The App iOS module is only available on iOS
  * based devices.
  * 
  * @platforms iphone, ipad

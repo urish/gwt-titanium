@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium;
 
 
 /**
- * Wrapper around `titanium.buffer` that implements the `titanium.iostream`
+ * Wrapper around `Titanium.Buffer` that implements the `Titanium.IOStream`
  * interface
  * 
  * @since 1.7

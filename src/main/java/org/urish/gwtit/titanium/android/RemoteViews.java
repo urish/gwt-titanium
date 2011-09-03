@@ -20,11 +20,11 @@ package org.urish.gwtit.titanium.android;
 
 
 /**
- * The titanium binding of [android
- * remoteviews](http://developer.android.com/reference
- * /android/widget/remoteviews.html). remoteviews are an api for referencing and
+ * The Titanium binding of [Android
+ * RemoteViews](http://developer.android.com/reference
+ * /android/widget/RemoteViews.html). RemoteViews are an API for referencing and
  * updating views that live in another process (i.e. in a
- * {@link org.urish.gwtit.titanium.android.notification})
+ * {@link org.urish.gwtit.titanium.android.Notification})
  * 
  * @platforms android
  * @since 1.6
@@ -35,10 +35,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Call a method taking one boolean on a view in the layout for this
-	 * remoteviews. see android's documentation for
-	 * [setboolean](http://developer
-	 * .android.com/reference/android/widget/remoteviews.html#setboolean(int,
-	 * java.lang.string, boolean))
+	 * RemoteViews. See Android's documentation for
+	 * [setBoolean](http://developer
+	 * .android.com/reference/android/widget/RemoteViews.html#setBoolean(int,
+	 * java.lang.String, boolean))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View (also see
@@ -54,11 +54,11 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets a chronometer's base, format, and started flag. see android's
+	 * Sets a chronometer's base, format, and started flag. See Android's
 	 * documentation for
-	 * [setchronometer](http://developer.android.com/reference/
-	 * android/widget/remoteviews.html#setchronometer(int, long,
-	 * java.lang.string, boolean))
+	 * [setChronometer](http://developer.android.com/reference/
+	 * android/widget/RemoteViews.html#setChronometer(int, long,
+	 * java.lang.String, boolean))
 	 * 
 	 * @param viewId
 	 *            The resource id of the Chronometer whose values will change
@@ -78,10 +78,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Call a method taking one double on a view in the layout for this
-	 * remoteviews. see android's documentation for
-	 * [setdouble](http://developer.
-	 * android.com/reference/android/widget/remoteviews.html#setdouble(int,
-	 * java.lang.string, double))
+	 * RemoteViews. See Android's documentation for
+	 * [setDouble](http://developer.
+	 * android.com/reference/android/widget/RemoteViews.html#setDouble(int,
+	 * java.lang.String, double))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View (also see
@@ -97,10 +97,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets an imageview's source given a resource id. see android's
+	 * Sets an ImageView's source given a Resource ID. See Android's
 	 * documentation for
-	 * [setimageviewresource](http://developer.android.com/reference
-	 * /android/widget/remoteviews.html#setimageviewresource(int, int))
+	 * [setImageViewResource](http://developer.android.com/reference
+	 * /android/widget/RemoteViews.html#setImageViewResource(int, int))
 	 * 
 	 * @param viewId
 	 *            The resource id of the ImageView whose image should change
@@ -114,11 +114,11 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets an imageview's source given a uri (supports both android and
-	 * titanium urls). see android's documentation for
-	 * [setimageviewuri](http://developer
-	 * .android.com/reference/android/widget/remoteviews
-	 * .html#setimageviewuri(int, android.net.uri))
+	 * Sets an ImageView's source given a URI (supports both Android and
+	 * Titanium URLs). See Android's documentation for
+	 * [setImageViewUri](http://developer
+	 * .android.com/reference/android/widget/RemoteViews
+	 * .html#setImageViewUri(int, android.net.Uri))
 	 * 
 	 * @param viewId
 	 *            The resource id of the ImageView whose image should change
@@ -134,10 +134,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Call a method taking one int on a view in the layout for this
-	 * remoteviews. see android's documentation for
-	 * [setint](http://developer.android
-	 * .com/reference/android/widget/remoteviews.html#setint(int,
-	 * java.lang.string, int))
+	 * RemoteViews. See Android's documentation for
+	 * [setInt](http://developer.android
+	 * .com/reference/android/widget/RemoteViews.html#setInt(int,
+	 * java.lang.String, int))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View (also see
@@ -153,12 +153,12 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Launches a {@link org.urish.gwtit.titanium.android.pendingintent} when
-	 * the specified view is clicked. see android's documentation for
-	 * [setonclickpendingintent
+	 * Launches a {@link org.urish.gwtit.titanium.android.PendingIntent} when
+	 * the specified view is clicked. See Android's documentation for
+	 * [setOnClickPendingIntent
 	 * ](http://developer.android.com/reference/android/widget
-	 * /remoteviews.html#setonclickpendingintent(int,
-	 * android.app.pendingintent))
+	 * /RemoteViews.html#setOnClickPendingIntent(int,
+	 * android.app.PendingIntent))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View to add a click listener to (also
@@ -173,10 +173,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets the progress, max value, and indeterminate flag of a progressbar.
-	 * see android's documentation for
-	 * [setprogressbar](http://developer.android.
-	 * com/reference/android/widget/remoteviews.html#setprogressbar(int, int,
+	 * Sets the progress, max value, and indeterminate flag of a ProgressBar.
+	 * See Android's documentation for
+	 * [setProgressBar](http://developer.android.
+	 * com/reference/android/widget/RemoteViews.html#setProgressBar(int, int,
 	 * int, boolean))
 	 * 
 	 * @param viewId
@@ -195,11 +195,11 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Call a method taking one string on a view in the layout for this
-	 * remoteviews. see android's documentation for
-	 * [setstring](http://developer.
-	 * android.com/reference/android/widget/remoteviews.html#setstring(int,
-	 * java.lang.string, java.lang.string))
+	 * Call a method taking one String on a view in the layout for this
+	 * RemoteViews. See Android's documentation for
+	 * [setString](http://developer.
+	 * android.com/reference/android/widget/RemoteViews.html#setString(int,
+	 * java.lang.String, java.lang.String))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View (also see
@@ -215,10 +215,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets the text color of a view. see android's documentation for
-	 * [settextcolor
-	 * ](http://developer.android.com/reference/android/widget/remoteviews
-	 * .html#settextcolor(int, int))
+	 * Sets the text color of a view. See Android's documentation for
+	 * [setTextColor
+	 * ](http://developer.android.com/reference/android/widget/RemoteViews
+	 * .html#setTextColor(int, int))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View whose text color will change (also
@@ -232,10 +232,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets the text of a textview. see android's documentation for
-	 * [settextviewtext
-	 * ](http://developer.android.com/reference/android/widget/remoteviews
-	 * .html#settextviewtext(int, java.lang.charsequence))
+	 * Sets the text of a TextView. See Android's documentation for
+	 * [setTextViewText
+	 * ](http://developer.android.com/reference/android/widget/RemoteViews
+	 * .html#setTextViewText(int, java.lang.CharSequence))
 	 * 
 	 * @param viewId
 	 *            The resource id of the TextView whose text will change (also
@@ -249,11 +249,11 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Call a method taking one uri on a view in the layout for this
-	 * remoteviews. see android's documentation for
-	 * [seturi](http://developer.android
-	 * .com/reference/android/widget/remoteviews.html#seturi(int,
-	 * java.lang.string, android.net.uri))
+	 * Call a method taking one Uri on a view in the layout for this
+	 * RemoteViews. See Android's documentation for
+	 * [setUri](http://developer.android
+	 * .com/reference/android/widget/RemoteViews.html#setUri(int,
+	 * java.lang.String, android.net.Uri))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View (also see
@@ -269,10 +269,10 @@ public class RemoteViews extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets the visibility of a view. see android's documentation for
-	 * [setviewvisibility
+	 * Sets the visibility of a View. See Android's documentation for
+	 * [setViewVisibility
 	 * ](http://developer.android.com/reference/android/widget/
-	 * remoteviews.html#setviewvisibility(int, int))
+	 * RemoteViews.html#setViewVisibility(int, int))
 	 * 
 	 * @param viewId
 	 *            The resource id of the View whose visibility will change (also

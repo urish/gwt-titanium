@@ -32,9 +32,9 @@ import org.urish.gwtit.titanium.ui.events.WindowFocusHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The window is an empty drawing surface or container. the window is created by
- * the method {@link org.urish.gwtit.titanium.ui.createwindow}. unlike
- * [views](titanium.ui.view-object), windows can be opened and closed and can
+ * The Window is an empty drawing surface or container. The Window is created by
+ * the method {@link org.urish.gwtit.titanium.ui.createWindow}. Unlike
+ * [Views](Titanium.UI.View-object), Windows can be opened and closed and can
  * have special display properties such as `fullscreen` or `modal`.
  * <p>
  * Notes: ### Sub-contexts
@@ -190,7 +190,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return For heavyweight windows, this property contains a reference to
-	 *         the android activity object associated with this window.
+	 *         the Android Activity object associated with this window.
 	 * 
 	 * @platforms android
 	 */
@@ -205,7 +205,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Title for the back button. this is only valid when the window is
+	 * @return Title for the back button. This is only valid when the window is
 	 *         a child of a tab.
 	 * @platforms iphone, ipad
 	 */
@@ -220,7 +220,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Url to an image to show as the back button.this is only valid
+	 * @return Url to an image to show as the back button.This is only valid
 	 *         when the window is a child of a tab.
 	 * @platforms iphone, ipad
 	 */
@@ -263,9 +263,10 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Boolean indicates if the application should exit when the android
-	 *         back button is pressed while the window is being shown. you can
-	 *         only set this as a createwindow({...}) option. setting it after
+	 * @default False
+	 * @return Boolean indicates if the application should exit when the Android
+	 *         back button is pressed while the window is being shown. You can
+	 *         only set this as a createWindow({...}) option. Setting it after
 	 *         window creation will no effect.
 	 * @platforms android
 	 */
@@ -307,14 +308,15 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default False
 	 * @return Boolean to indicate if the window should be opened modal in front
-	 *         of other windows. android note: the combination of
+	 *         of other windows. Android note: the combination of
 	 *         `fullscreen:true` and `modal:true` will not work as expected.
-	 *         android modal windows are translucent, and, in android, the
+	 *         Android modal windows are translucent, and, in Android, the
 	 *         contents of a translucent window cannot appear above the status
-	 *         bar. i.e., even though you say `fullscreen:true`, the status bar
+	 *         bar. I.e., even though you say `fullscreen:true`, the status bar
 	 *         will still be visible *if* it was visible in the previous window.
-	 *         `navbarhidden` and `modal` do work fine together, however.
+	 *         `navBarHidden` and `modal` do work fine together, however.
 	 */
 	public final native boolean getModal()
 	/*-{
@@ -327,6 +329,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default False
 	 * @return For modal windows, hide the nav bar (true) or show the nav bar
 	 *         (false, default).
 	 */
@@ -342,43 +345,43 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Array of orientation mode constants defined in {@link
-	 *         org.urish.gwtit..titanium.ui}. on android, orientation modes that
-	 *         can be set are dependant on the android sdk level of the device
-	 *         itself. it should be noted that, the definition of portrait or
+	 *         org.urish.gwtit..Titanium.UI}. On Android, orientation modes that
+	 *         can be set are dependant on the Android SDK level of the device
+	 *         itself. It should be noted that, the definition of portrait or
 	 *         landscape mode can vary based on the physical orientation of the
-	 *         device. for example, on some devices
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_left} represents the
+	 *         device. For example, on some devices
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_LEFT} represents the
 	 *         top of the device being at the 270 degree position but other
 	 *         devices may (based on camera position for example) treat this
-	 *         position as {@link org.urish.gwtit.titanium.ui.landscape_right}.
-	 *         in general, applications for android that need to be aware of
+	 *         position as {@link org.urish.gwtit.titanium.UI.LANDSCAPE_RIGHT}.
+	 *         In general, applications for Android that need to be aware of
 	 *         orientation should try and limit their orientation logic to
 	 *         handling either portrait or landscape rather than worrying about
-	 *         the reverse modes. this approach will allow the orientation modes
+	 *         the reverse modes. This approach will allow the orientation modes
 	 *         to adopt a more natural feel for the specific device.
 	 * 
-	 *         the following list breaks down the orientation behavior on
-	 *         android: 1) ({@link org.urish.gwtit.titanium.ui.portrait} or
-	 *         {@link org.urish.gwtit.titanium.ui.upside_portrait}) and (
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_left} or
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_right}) - enables
+	 *         The following list breaks down the orientation behavior on
+	 *         Android: 1) ({@link org.urish.gwtit.titanium.UI.PORTRAIT} OR
+	 *         {@link org.urish.gwtit.titanium.UI.UPSIDE_PORTRAIT}) AND (
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_LEFT} OR
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_RIGHT}) - Enables
 	 *         full sensor which lets the operating system control the
 	 *         orientation of the screen based on the sensor inside the device.
-	 *         2) {@link org.urish.gwtit.titanium.ui.portrait} or
-	 *         {@link org.urish.gwtit.titanium.ui.upside_portrait} - enables
-	 *         sensor portrait mode on android 2.3 and above. sensor portrait
-	 *         mode on android means the screen will shift between both portrait
-	 *         modes according to the sensor inside the device. if the android
+	 *         2) {@link org.urish.gwtit.titanium.UI.PORTRAIT} OR
+	 *         {@link org.urish.gwtit.titanium.UI.UPSIDE_PORTRAIT} - Enables
+	 *         sensor portrait mode on Android 2.3 and above. Sensor portrait
+	 *         mode on Android means the screen will shift between both portrait
+	 *         modes according to the sensor inside the device. If the Android
 	 *         version is less than 2.3, then normal portrait mode is locked. 3)
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_left} or
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_right} - enables
-	 *         sensor landscape mode on android 2.3 and above. sensor landscape
-	 *         mode on android means the screen will shift between both
-	 *         landscape modes according to the sensor inside the device. if the
-	 *         android version is less than 2.3, then normal landscape mode is
-	 *         locked. 4) {@link org.urish.gwtit.titanium.ui.portrait} - locks
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_LEFT} OR
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_RIGHT} - Enables
+	 *         sensor landscape mode on Android 2.3 and above. Sensor landscape
+	 *         mode on Android means the screen will shift between both
+	 *         landscape modes according to the sensor inside the device. If the
+	 *         Android version is less than 2.3, then normal landscape mode is
+	 *         locked. 4) {@link org.urish.gwtit.titanium.UI.PORTRAIT} - Locks
 	 *         screen orientation to portrait mode 5)
-	 *         {@link org.urish.gwtit.titanium.ui.landscape} - locks screen
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE} - Locks screen
 	 *         orientation to landscape mode 6) empty array - resets the
 	 *         orientation to default sensor control
 	 */
@@ -393,9 +396,9 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Current orientation of the window. value will be one of the
+	 * @return Current orientation of the window. Value will be one of the
 	 *         orientation constants defined in {@link
-	 *         org.urish.gwtit..titanium.ui}.
+	 *         org.urish.gwtit..Titanium.UI}.
 	 */
 	public final native int getOrientation()
 	/*-{
@@ -503,7 +506,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The key in the locale file to use for the titleprompt property
+	 * @return The key in the locale file to use for the titlePrompt property
 	 */
 	public final native String getTitlepromptid()
 	/*-{
@@ -517,7 +520,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Array of button objects to show in the toolbar of the window.
-	 *         this is only valid when the window is a child of a tab.
+	 *         This is only valid when the window is a child of a tab.
 	 * @platforms iphone, ipad
 	 */
 	public final native JavaScriptObject[] getToolbar()
@@ -545,8 +548,8 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Url to a javascript file with the windows instructions. this
-	 *         window will create a new javascript sub-context that will run in
+	 * @return Url to a JavaScript file with the windows instructions. this
+	 *         window will create a new JavaScript sub-context that will run in
 	 *         its own thread and global variable space.
 	 */
 	public final native String getUrl()
@@ -560,11 +563,16 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return One of , , or . note: must be passed in the creation options.
-	 *         (android only) [android doc:
-	 *         window.setsoftinputmode](http://developer
-	 *         .android.com/reference/android
-	 *         /view/window.html#setsoftinputmode(int))
+	 * @return One of
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SOFT_INPUT_ADJUST_PAN}
+	 *         ,
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SOFT_INPUT_ADJUST_RESIZE}
+	 *         , or
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SOFT_INPUT_ADJUST_UNSPECIFIED}
+	 *         . Note: MUST be passed in the creation options. (Android Only)
+	 *         [Android Doc:
+	 *         Window.setSoftInputMode](http://developer.android.com
+	 *         /reference/android/view/Window.html#setSoftInputMode(int))
 	 * 
 	 * @platforms android
 	 */
@@ -579,12 +587,13 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Set the pixel format for the activity's window. the property is
-	 *         ignored on a titanium "lightweight" window. use one of the
-	 *         .pixel_format constants to set the format. see [android sdk
-	 *         window
-	 *         .setformat](http://developer.android.com/reference/android/view
-	 *         /window.html#setformat(int))
+	 * @return Set the pixel format for the Activity's Window. The property is
+	 *         ignored on a Titanium "lightweight" Window. Use one of the
+	 *         {@link org.urish.gwtit.titanium.ui.Android}.PIXEL_FORMAT
+	 *         constants to set the format. See [Android SDK
+	 *         Window.setFormat](http
+	 *         ://developer.android.com/reference/android/view
+	 *         /Window.html#setFormat(int))
 	 * 
 	 * @platforms android
 	 * @since 1.8.0

@@ -21,11 +21,11 @@ package org.urish.gwtit.titanium.android;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The titanium binding of
- * [android.r](http://developer.android.com/reference/android/r.html). note that
- * this accesses android system-wide resources, not your application's
- * resources. to access your application's resources, you want
- * {@link org.urish.gwtit.titanium.app.android.r}.
+ * The Titanium binding of
+ * [android.R](http://developer.android.com/reference/android/R.html). Note that
+ * this accesses Android system-wide resources, not your application's
+ * resources. To access your application's resources, you want
+ * {@link org.urish.gwtit.titanium.app.Android.R}.
  * <p>
  * Notes: These properties and sub-properties are queried directly against the
  * `android.R` class, and should have the same syntax. For example, to retrieve
@@ -43,8 +43,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Animation resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.anim.html](http:
-	 *         //developer.android.com/reference/android/r.anim.html)
+	 *         /R.anim.html](http:
+	 *         //developer.android.com/reference/android/R.anim.html)
 	 */
 	public final native JavaScriptObject getAnim()
 	/*-{
@@ -59,8 +59,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.array.html](http
-	 *         ://developer.android.com/reference/android/r.array.html)
+	 *         /R.array.html](http
+	 *         ://developer.android.com/reference/android/R.array.html)
 	 */
 	public final native JavaScriptObject getArray()
 	/*-{
@@ -75,8 +75,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Attribute resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.attr.html](http:
-	 *         //developer.android.com/reference/android/r.attr.html)
+	 *         /R.attr.html](http:
+	 *         //developer.android.com/reference/android/R.attr.html)
 	 */
 	public final native JavaScriptObject getAttr()
 	/*-{
@@ -91,8 +91,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Color resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.color.html](http
-	 *         ://developer.android.com/reference/android/r.color.html)
+	 *         /R.color.html](http
+	 *         ://developer.android.com/reference/android/R.color.html)
 	 */
 	public final native JavaScriptObject getColor()
 	/*-{
@@ -107,8 +107,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Dimension resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.dimen.html](http
-	 *         ://developer.android.com/reference/android/r.dimen.html)
+	 *         /R.dimen.html](http
+	 *         ://developer.android.com/reference/android/R.dimen.html)
 	 */
 	public final native JavaScriptObject getDimen()
 	/*-{
@@ -123,8 +123,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Drawable resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.drawable.html](http
-	 *         ://developer.android.com/reference/android/r.drawable.html)
+	 *         /R.drawable.html](http
+	 *         ://developer.android.com/reference/android/R.drawable.html)
 	 */
 	public final native JavaScriptObject getDrawable()
 	/*-{
@@ -137,10 +137,10 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Id resources, see
+	 * @return ID resources, see
 	 *         [http://developer.android.com/reference/android/
-	 *         r.id.html](http://
-	 *         developer.android.com/reference/android/r.id.html)
+	 *         R.id.html](http://
+	 *         developer.android.com/reference/android/R.id.html)
 	 */
 	public final native JavaScriptObject getId()
 	/*-{
@@ -155,8 +155,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Integer resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.integer.html](http
-	 *         ://developer.android.com/reference/android/r.integer.html)
+	 *         /R.integer.html](http
+	 *         ://developer.android.com/reference/android/R.integer.html)
 	 */
 	public final native JavaScriptObject getInteger()
 	/*-{
@@ -171,8 +171,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Layout resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.layout.html](http
-	 *         ://developer.android.com/reference/android/r.layout.html)
+	 *         /R.layout.html](http
+	 *         ://developer.android.com/reference/android/R.layout.html)
 	 */
 	public final native JavaScriptObject getLayout()
 	/*-{
@@ -187,8 +187,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return String resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.string.html](http
-	 *         ://developer.android.com/reference/android/r.string.html)
+	 *         /R.string.html](http
+	 *         ://developer.android.com/reference/android/R.string.html)
 	 */
 	public final native JavaScriptObject getString()
 	/*-{
@@ -203,8 +203,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Style resources, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.style.html](http
-	 *         ://developer.android.com/reference/android/r.style.html)
+	 *         /R.style.html](http
+	 *         ://developer.android.com/reference/android/R.style.html)
 	 */
 	public final native JavaScriptObject getStyle()
 	/*-{
@@ -219,8 +219,8 @@ public class R extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Styleable reosurces, see
 	 *         [http://developer.android.com/reference/android
-	 *         /r.styleable.html](
-	 *         http://developer.android.com/reference/android/r.styleable.html)
+	 *         /R.styleable.html](
+	 *         http://developer.android.com/reference/android/R.styleable.html)
 	 */
 	public final native JavaScriptObject getStyleable()
 	/*-{

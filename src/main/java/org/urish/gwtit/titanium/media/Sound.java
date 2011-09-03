@@ -24,11 +24,11 @@ import org.urish.gwtit.titanium.media.events.SoundCompleteHandler;
 import org.urish.gwtit.titanium.media.events.SoundErrorHandler;
 
 /**
- * The sound object is returned by
- * {@link org.urish.gwtit.titanium.media.createsound} and is useful for playing
- * basic sounds. the sound object loads the entire media resource in memory
- * before playing. if you need to support streaming, use the
- * {@link org.urish.gwtit.titanium.media.createaudioplayer} api.
+ * The Sound object is returned by
+ * {@link org.urish.gwtit.titanium.media.createSound} and is useful for playing
+ * basic sounds. The Sound object loads the entire media resource in memory
+ * before playing. If you need to support streaming, use the
+ * {@link org.urish.gwtit.titanium.media.createAudioPlayer} API.
  * 
  * @since 0.8
  */
@@ -38,7 +38,7 @@ public class Sound extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Boolean to indicate if audio should continue playing even if
-	 *         activity is paused
+	 *         Activity is paused
 	 * @platforms android
 	 * @since 1.3.0
 	 */

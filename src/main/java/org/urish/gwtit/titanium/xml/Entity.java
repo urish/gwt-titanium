@@ -20,12 +20,12 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * This interface represents an entity, either parsed or unparsed, in an xml
- * document. note that this models the entity itself not the entity declaration.
- * the nodename attribute that is inherited from node contains the name of the
- * entity. an entity node does not have any parent. this conforms to the [dom
- * level 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
- * entity.
+ * This interface represents an entity, either parsed or unparsed, in an XML
+ * document. Note that this models the entity itself not the entity declaration.
+ * The nodeName attribute that is inherited from Node contains the name of the
+ * entity. An Entity node does not have any parent. This conforms to the [DOM
+ * Level 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) defintion of a DOM
+ * Entity.
  * 
  * @since 0.9
  */
@@ -35,7 +35,7 @@ public class Entity extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return For unparsed entities, the name of the notation for the entity.
-	 *         for parsed entities, this is `null`.
+	 *         For parsed entities, this is `null`.
 	 */
 	public final native String getNotationName()
 	/*-{
@@ -44,7 +44,7 @@ public class Entity extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return The public identifier associated with the entity, if specified.
-	 *         if the public identifier was not specified, this is `null`.
+	 *         If the public identifier was not specified, this is `null`.
 	 */
 	public final native String getPublicId()
 	/*-{
@@ -53,7 +53,7 @@ public class Entity extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return The system identifier associated with the entity, if specified.
-	 *         if the system identifier was not specified, this is null.
+	 *         If the system identifier was not specified, this is null.
 	 */
 	public final native String getSystemId()
 	/*-{

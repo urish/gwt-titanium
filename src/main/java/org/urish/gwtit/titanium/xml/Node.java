@@ -20,10 +20,10 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A single node in the [document|titanium.xml.document] tree. for full property
- * and method description, see the [dom level 2
- * api|http://www.w3.org/tr/2000/rec
- * -dom-level-2-core-20001113/core.html#id-1950641247].
+ * A single node in the [Document|Titanium.XML.Document] tree. For full property
+ * and method description, see the [DOM Level 2
+ * API|http://www.w3.org/TR/2000/REC
+ * -DOM-Level-2-Core-20001113/core.html#ID-1950641247].
  */
 public class Node extends org.urish.gwtit.titanium.Proxy {
 	protected Node() {
@@ -130,7 +130,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return This node's type. one of , , , , , , , , , , ,
+	 * @return This node's type. One of , , , , , , , , , , ,
 	 */
 	public final native float getNodeType()
 	/*-{
@@ -146,7 +146,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A {@link org.urish.gwtit.titanium.xml.nodelist} of this node's
+	 * @return A {@link org.urish.gwtit.titanium.xml.NodeList} of this node's
 	 *         children
 	 */
 	public final native org.urish.gwtit.titanium.xml.NodeList getChildNodes()
@@ -195,7 +195,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return This node's owning document
+	 * @return This node's owning Document
 	 */
 	public final native org.urish.gwtit.titanium.xml.Document getOwnerDocument()
 	/*-{
@@ -203,7 +203,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The namespace uri of this node
+	 * @return The namespace URI of this node
 	 */
 	public final native String getNamespaceURI()
 	/*-{
@@ -232,7 +232,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Appends the node `newchild` as a child of this node
+	 * Appends the node `newChild` as a child of this node
 	 * 
 	 * @param newChild
 	 *            The new node to append
@@ -285,7 +285,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Tests whether the dom implementation supports a specific feature
+	 * Tests whether the DOM implementation supports a specific feature
 	 * 
 	 * @param feature
 	 *            The name of the feature
@@ -319,7 +319,7 @@ public class Node extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Replaces the node `oldchild` with the node `newchild`
+	 * Replaces the node `oldChild` with the node `newChild`
 	 * 
 	 * @param newChild
 	 *            The new node

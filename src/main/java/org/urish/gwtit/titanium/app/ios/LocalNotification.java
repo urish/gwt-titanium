@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.app.ios;
 
 
 /**
- * The localnotification is created by
- * {@link org.urish.gwtit.titanium.app.ios.schedulelocalnotification}.
+ * The LocalNotification is created by
+ * {@link org.urish.gwtit.titanium.app.ios.scheduleLocalNotification}.
  * 
  * @platforms iphone, ipad
  * @since 1.5

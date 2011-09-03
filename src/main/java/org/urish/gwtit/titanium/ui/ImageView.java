@@ -26,9 +26,9 @@ import org.urish.gwtit.titanium.ui.events.StopHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An image view is used to display an image or a series of images in an
- * animation. the image view is created by the method
- * {@link org.urish.gwtit.titanium.ui.createimageview}.
+ * An Image View is used to display an image or a series of images in an
+ * animation. The Image View is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createImageView}.
  * <p>
  * Notes: If you specify a `width` and/or `height` property on the image, the
  * image will be scaled to fit into this space if the image is larger.
@@ -62,7 +62,8 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Number of times to retry decoding the bitmap at this url
+	 * @default 5
+	 * @return Number of times to retry decoding the bitmap at this URL
 	 * 
 	 * @platforms android
 	 * @since 1.7.0
@@ -104,7 +105,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Enable zoom controls on android. default is true for backward
+	 * @return Enable zoom controls on Android. Default is true for backward
 	 *         compatibility. (1.3.0)
 	 * @platforms android
 	 * @since 1.3.0
@@ -121,7 +122,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Indicates whether or not the source image is in 2x resolution for
-	 *         retina displays. use for remote images only.
+	 *         retina displays. Use for remote images ONLY.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getHires()
@@ -150,7 +151,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Image to display either as string url, blob or file
+	 * @return Image to display either as string url, Blob or File
 	 */
 	public final native JavaScriptObject getImage()
 	/*-{
@@ -158,7 +159,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Array of images (either as string url, blob or file) to display
+	 * @return Array of images (either as string url, Blob or File) to display
 	 *         in an animation
 	 */
 	public final native JavaScriptObject[] getImages()
@@ -221,8 +222,10 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Url to the image to display (note: this property is deprecated.
+	 * @return Url to the image to display (NOTE: this property is deprecated.
 	 *         use image instead)
+	 * 
+	 * @deprecated since 1.5.0
 	 */
 	public final native String getUrl()
 	/*-{
@@ -260,7 +263,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Return the image as a blob object
+	 * Return the image as a Blob object
 	 */
 	public final native void toBlob()
 	/*-{

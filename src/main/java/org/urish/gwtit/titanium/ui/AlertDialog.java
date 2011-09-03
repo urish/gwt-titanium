@@ -23,8 +23,8 @@ import org.urish.gwtit.titanium.ui.events.AlertDialogClickHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The alert dialog is created by
- * {@link org.urish.gwtit.titanium.ui.createalertdialog} and allows you to show
+ * The Alert Dialog is created by
+ * {@link org.urish.gwtit.titanium.ui.createAlertDialog} and allows you to show
  * a modal application dialog.
  * <p>
  * Notes: the global method `alert` is aliased to this object and can be invoked
@@ -123,9 +123,9 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Text for the ok button. useful for when you only want one button
-	 *         and therefore don't want to use the `buttonnames` property. if
-	 *         you do use `buttonnames`, this property will be ignored.
+	 * @return Text for the OK button. Useful for when you only want one button
+	 *         and therefore don't want to use the `buttonNames` property. If
+	 *         you do use `buttonNames`, this property will be ignored.
 	 */
 	public final native String getOk()
 	/*-{
@@ -138,8 +138,8 @@ public class AlertDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The key in the locale file to use for the `ok` property. note
-	 *         that if you use the `buttonnames` property to set the button
+	 * @return The key in the locale file to use for the `ok` property. Note
+	 *         that if you use the `buttonNames` property to set the button
 	 *         titles, this will be ignored.
 	 */
 	public final native String getOkid()

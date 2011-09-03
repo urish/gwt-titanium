@@ -21,11 +21,11 @@ package org.urish.gwtit.titanium.xml;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The dom document returned from
- * {@link org.urish.gwtit.titanium.xml.parsestring} or
- * {@link org.urish.gwtit.titanium.xml.parse}. implements the [dom level 2
- * api](http
- * ://www.w3.org/tr/2000/rec-dom-level-2-core-20001113/core.html#i-document).
+ * The DOM Document returned from
+ * {@link org.urish.gwtit.titanium.xml.parseString} or
+ * {@link org.urish.gwtit.titanium.xml.parse}. Implements the [DOM Level 2
+ * API](http
+ * ://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#i-Document).
  * <p>
  * Notes: As of version 3.1, Android still does not truly support DTDs. A
  * document with a DTD can be parsed, however it is not validated, none of its
@@ -40,8 +40,8 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return An interface to the list of entities that are defined for the
-	 *         document, such as via a document type definition (dtd). see note
-	 *         about android and dtds.
+	 *         document, such as via a Document Type Definition (DTD). See note
+	 *         about Android and DTDs.
 	 */
 	public final native org.urish.gwtit.titanium.xml.DocumentType getDoctype()
 	/*-{
@@ -57,7 +57,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * @return The [domimplementation](titanium.xml.domimplementation) that
+	 * @return The [DOMImplementation](Titanium.XML.DOMImplementation) that
 	 *         handles this document
 	 */
 	public final native org.urish.gwtit.titanium.xml.DOMImplementation getImplementation()
@@ -91,7 +91,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Creates and returns a {@link org.urish.gwtit.titanium.xml.cdatasection}.
+	 * Creates and returns a {@link org.urish.gwtit.titanium.xml.CDATASection}.
 	 * 
 	 * @param data
 	 *            The String data to go into the CDATA section.
@@ -104,7 +104,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Creates a {@link org.urish.gwtit.titanium.xml.comment} with the supplied
+	 * Creates a {@link org.urish.gwtit.titanium.xml.Comment} with the supplied
 	 * string data.
 	 * 
 	 * @param data
@@ -117,7 +117,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Creates an empty {@link org.urish.gwtit.titanium.xml.documentfragment}.
+	 * Creates an empty {@link org.urish.gwtit.titanium.xml.DocumentFragment}.
 	 * 
 	 * @return The empty {@link org.urish.gwtit.titanium.xml.DocumentFragment}.
 	 */
@@ -153,7 +153,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Creates an {@link org.urish.gwtit.titanium.xml.entityreference} with the
+	 * Creates an {@link org.urish.gwtit.titanium.xml.EntityReference} with the
 	 * given name.
 	 * 
 	 * @param name
@@ -166,7 +166,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Creates a processing instruction for inserting into the dom tree.
+	 * Creates a processing instruction for inserting into the DOM tree.
 	 * 
 	 * @param target
 	 *            The target part for the processing instruction.
@@ -193,7 +193,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Returns an {@link org.urish.gwtit.titanium.xml.element} that has an id
+	 * Returns an {@link org.urish.gwtit.titanium.xml.Element} that has an ID
 	 * attribute with the given value.
 	 * 
 	 * @param elementId
@@ -238,7 +238,7 @@ public class Document extends org.urish.gwtit.titanium.xml.Node {
 	/**
 	 * Imports a node from another document to this document, without altering
 	 * or removing the source node from the original document; this method
-	 * creates a new copy of the source node. the returned node has no parent.
+	 * creates a new copy of the source node. The returned node has no parent.
 	 * 
 	 * @param importedNode
 	 *            The node to import.

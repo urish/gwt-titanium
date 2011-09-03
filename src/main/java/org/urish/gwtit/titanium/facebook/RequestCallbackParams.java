@@ -44,7 +44,7 @@ public class RequestCallbackParams extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The rest method call you specified
+	 * @return The REST method call you specified
 	 */
 	public final native String getMethod()
 	/*-{
@@ -52,7 +52,7 @@ public class RequestCallbackParams extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The data returned by facebook
+	 * @return The data returned by Facebook
 	 */
 	public final native String getResult()
 	/*-{

@@ -23,8 +23,8 @@ import org.urish.gwtit.titanium.android.events.ClickHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The titanium binding of an [android
- * menuitem](http://developer.android.com/reference/android/view/menuitem.html)
+ * The Titanium binding of an [Android
+ * MenuItem](http://developer.android.com/reference/android/view/MenuItem.html)
  * 
  * @platforms android
  * @since 1.5
@@ -47,7 +47,7 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Groupid for this item
+	 * @return GroupId for this item
 	 */
 	public final native float getGroupId()
 	/*-{
@@ -55,7 +55,7 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Itemid for this item
+	 * @return ItemId for this item
 	 */
 	public final native float getItemId()
 	/*-{

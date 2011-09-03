@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.android.calendar;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An object which represents a single event in an android calendar.
+ * An object which represents a single event in an Android calendar.
  * <p>
  * Notes: The API supports retrieving information about existing events and
  * creating new events. However, modifying or deleting existing events is not
@@ -38,7 +38,7 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return An array of
-	 *         {@link org.urish.gwtit.titanium.android.calendar.alert} objects
+	 *         {@link org.urish.gwtit.titanium.android.calendar.Alert} objects
 	 *         which are the alerts - if any - for this event.
 	 */
 	public final native org.urish.gwtit.titanium.android.calendar.Alert[] getAlerts()
@@ -170,7 +170,7 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return An array of
-	 *         {@link org.urish.gwtit.titanium.android.calendar.reminder}
+	 *         {@link org.urish.gwtit.titanium.android.calendar.Reminder}
 	 *         objects which are the reminders - if any - for this event.
 	 */
 	public final native org.urish.gwtit.titanium.android.calendar.Reminder[] getReminders()
@@ -184,8 +184,8 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The status of the event. possible values are the status constants
-	 *         in {@link org.urish.gwtit.titanium.android.calendar}.
+	 * @return The status of the event. Possible values are the STATUS constants
+	 *         in {@link org.urish.gwtit.titanium.android.Calendar}.
 	 */
 	public final native float getStatus()
 	/*-{
@@ -211,8 +211,8 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The event's visibility. possible values are the visibility
-	 *         constants in {@link org.urish.gwtit.titanium.android.calendar}.
+	 * @return The event's visibility. Possible values are the VISIBILITY
+	 *         constants in {@link org.urish.gwtit.titanium.android.Calendar}.
 	 */
 	public final native float getVisibility()
 	/*-{
@@ -225,9 +225,9 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Create an alert for this event. pass a dictionary object containing
+	 * Create an alert for this event. Pass a dictionary object containing
 	 * attributes corresponding to properties of
-	 * {@link org.urish.gwtit.titanium.android.calendar.alert}. returns the
+	 * {@link org.urish.gwtit.titanium.android.calendar.Alert}. Returns the
 	 * created alert.
 	 * 
 	 * @param data
@@ -241,10 +241,10 @@ public class Event extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Create a reminder for this event. pass a dictionary object containing
+	 * Create a reminder for this event. Pass a dictionary object containing
 	 * attributes corresponding to properties of
-	 * {@link org.urish.gwtit.titanium.android.calendar.reminder}. returns the
-	 * created reminder.
+	 * {@link org.urish.gwtit.titanium.android.calendar.Reminder}. Returns the
+	 * created Reminder.
 	 * 
 	 * @param data
 	 *            Properties for the new reminder, corresponding to properties

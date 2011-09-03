@@ -21,9 +21,9 @@ package org.urish.gwtit.titanium.xml;
 
 /**
  * Represents the textual content of an
- * {@link org.urish.gwtit.titanium.xml.element} or
- * {@link org.urish.gwtit.titanium.xml.attr} this conforms to the [dom level
- * 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom text.
+ * {@link org.urish.gwtit.titanium.xml.Element} or
+ * {@link org.urish.gwtit.titanium.xml.Attr} This conforms to the [DOM Level
+ * 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) defintion of a DOM Text.
  */
 public class Text extends org.urish.gwtit.titanium.xml.CharacterData {
 	protected Text() {
@@ -32,7 +32,7 @@ public class Text extends org.urish.gwtit.titanium.xml.CharacterData {
 	/**
 	 * Breaks this node into two nodes at the specified by offset, and returns a
 	 * new node of the same type, which contains all the content at and after
-	 * the offset point. throws an exception if the specified offset is negative
+	 * the offset point. Throws an exception if the specified offset is negative
 	 * or if this node is read only.
 	 * 
 	 * @param offset

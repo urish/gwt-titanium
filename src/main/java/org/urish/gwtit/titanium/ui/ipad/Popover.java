@@ -23,13 +23,13 @@ import org.urish.gwtit.titanium.ui.ipad.events.HideHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A popover is used to manage the presentation of content in a popover. you use
+ * A Popover is used to manage the presentation of content in a popover. You use
  * popovers to present information temporarily but in a way that does not take
- * over the entire screen like a modal view does. the popover content is layered
- * on top of your existing content in a special type of window. the popover
+ * over the entire screen like a modal view does. The popover content is layered
+ * on top of your existing content in a special type of window. The popover
  * remains visible until the user taps outside of the popover window or you
- * explicitly dismiss it. the popover is created by the method
- * {@link org.urish.gwtit.titanium.ui.ipad.createpopover}.
+ * explicitly dismiss it. The Popover is created by the method
+ * {@link org.urish.gwtit.titanium.ui.ipad.createPopover}.
  * ![popover](http://img.skitch.com/20100406-pmssjk1a3a65s6ui8qnbqi59c4.png)
  * 
  * @platforms ipad

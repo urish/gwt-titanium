@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.network.socket;
 import org.urish.gwtit.client.EventCallback;
 
 /**
- * Tcp socket that implements the `titanium.iostream` interface. created by
- * `titanium.network.socket.createtcp`
+ * TCP socket that implements the `Titanium.IOStream` interface. Created by
+ * `Titanium.Network.Socket.createTCP`
  * 
  * @since 1.7
  */
@@ -31,8 +31,8 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The host to connect to or listen on. cannot be modified when not
-	 *         in the initialized state. supports both ipv4 and ipv6
+	 * @return The host to connect to or listen on. Cannot be modified when not
+	 *         in the INITIALIZED state. Supports both IPv4 and IPv6
 	 */
 	public final native String getHost()
 	/*-{
@@ -45,8 +45,8 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The port to connect to or listen on. cannot be modified when not
-	 *         in the initialized state
+	 * @return The port to connect to or listen on. Cannot be modified when not
+	 *         in the INITIALIZED state
 	 */
 	public final native float getPort()
 	/*-{
@@ -60,7 +60,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Max number of pending incoming connections to be allowed when
-	 *         listen() is called. any incoming connections received while the
+	 *         listen() is called. Any incoming connections received while the
 	 *         max number of pending connections has been reached will be
 	 *         rejected.
 	 */
@@ -75,8 +75,8 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The timeout for connect() and all i/o write() operations. cannot
-	 *         be modified when not in the initialized state
+	 * @return The timeout for connect() and all I/O write() operations. Cannot
+	 *         be modified when not in the INITIALIZED state
 	 */
 	public final native float getTimeout()
 	/*-{
@@ -90,7 +90,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The callback to be fired after the socket enters the "connected"
-	 *         state. only invoked following a successful connect() call
+	 *         state. Only invoked following a successful connect() call
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.ConnectedCallbackArgs> getConnected()
 	/*-{
@@ -105,7 +105,7 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The callback to be fired after the socket enters the error state
+	 * @return The callback to be fired after the socket enters the ERROR state
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{
@@ -143,9 +143,9 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Attempts to connect the socket to its host/port. throws exception if the
-	 * socket is in a connected or listening state. throws exception if a valid
-	 * host and port has not been set on the proxy. nonblocking; connection
+	 * Attempts to connect the socket to its host/port. Throws exception if the
+	 * socket is in a CONNECTED or LISTENING state. Throws exception if a valid
+	 * host and port has not been set on the proxy. Nonblocking; connection
 	 * attempts are asynchronous
 	 */
 	public final native void connect()
@@ -156,10 +156,10 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Attempts to start listening on the socket's host/port. listen() call will
 	 * attempt to listen on the specified host and/or port property for the
-	 * socket if they are set. this function blocks execution and throws an
-	 * exception on error (and sets the socket state to error) but does not fire
-	 * the error callback in this event. throws exception if the socket is in a
-	 * listening or connected state
+	 * socket if they are set. This function blocks execution and throws an
+	 * exception on error (and sets the socket state to ERROR) but does not fire
+	 * the error callback in this event. Throws exception if the socket is in a
+	 * LISTENING or CONNECTED state
 	 */
 	public final native void listen()
 	/*-{
@@ -167,16 +167,16 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Tells a listening socket to accept a connection request at the top of a
-	 * listener's request queue when one becomes available. takes an argument, a
-	 * box object which assigns callbacks to the created socket. note that the
+	 * Tells a LISTENING socket to accept a connection request at the top of a
+	 * listener's request queue when one becomes available. Takes an argument, a
+	 * box object which assigns callbacks to the created socket. Note that the
 	 * connected callback is not called (the socket does not "transition to" the
-	 * connected state - it's created in the connected state) on the newly
-	 * created socket. the accepted callback is called when a new connection is
-	 * accepted as a result of calling accept(). if the socket is already
+	 * CONNECTED state - it's created in the CONNECTED state) on the newly
+	 * created socket. The accepted callback is called when a new connection is
+	 * accepted as a result of calling accept(). If the socket is already
 	 * flagged to accept the next connection, the existing accept options will
-	 * be update to use the newly specified options object. throws an exception
-	 * if the socket is not in a listening state
+	 * be update to use the newly specified options object. Throws an exception
+	 * if the socket is not in a LISTENING state
 	 * 
 	 * @param options
 	 *            options that contain callbacks to be set on next accepted
@@ -188,8 +188,8 @@ public class TCP extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Closes a socket. throws exception if the socket is not in a connected or
-	 * listening state. blocking
+	 * Closes a socket. Throws exception if the socket is not in a CONNECTED or
+	 * LISTENING state. Blocking
 	 */
 	public final native void close()
 	/*-{

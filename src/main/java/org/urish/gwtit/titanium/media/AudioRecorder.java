@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.media;
 
 
 /**
- * The audiorecorder object is returned by
- * {@link org.urish.gwtit.titanium.media.createaudiorecorder} and is used for
+ * The AudioRecorder object is returned by
+ * {@link org.urish.gwtit.titanium.media.createAudioRecorder} and is used for
  * recording audio from the device microphone.
  * 
  * @since 0.9

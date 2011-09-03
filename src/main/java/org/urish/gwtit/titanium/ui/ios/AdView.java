@@ -23,8 +23,8 @@ import org.urish.gwtit.titanium.ui.ios.events.ErrorHandler;
 import org.urish.gwtit.titanium.ui.ios.events.LoadHandler;
 
 /**
- * The adview is a view for display apple iads. the view is created by the
- * method {@link org.urish.gwtit.titanium.ui.ios.createadview}.
+ * The AdView is a view for display Apple iAds. The View is created by the
+ * method {@link org.urish.gwtit.titanium.ui.ios.createAdView}.
  * 
  * @platforms iphone, ipad
  * @since 1.4
@@ -61,10 +61,10 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * A banner view action can cover your application's user interface.
-	 * however, your application continues to run, and receives events normally.
-	 * if your application receives an event that requires the user's attention,
+	 * However, your application continues to run, and receives events normally.
+	 * If your application receives an event that requires the user's attention,
 	 * it can programmatically cancel the action and uncover its interface by
-	 * calling cancelaction. canceling actions frequently can cause a loss of
+	 * calling cancelAction. Canceling actions frequently can cause a loss of
 	 * revenue for your application.
 	 */
 	public final native void cancelAction()

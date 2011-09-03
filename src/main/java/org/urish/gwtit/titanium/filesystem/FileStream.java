@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.filesystem;
 
 
 /**
- * Wrapper around `titanium.filesystem.file` that implements the
- * `titanium.iostream` interface
+ * Wrapper around `Titanium.Filesystem.File` that implements the
+ * `Titanium.IOStream` interface
  * 
  * @since 1.7
  */

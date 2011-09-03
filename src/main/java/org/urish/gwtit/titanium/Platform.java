@@ -24,7 +24,7 @@ import org.urish.gwtit.titanium.events.BatteryHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level platform module. the platform module is used accessing the
+ * The top level Platform module. The Platform module is used accessing the
  * device's platform related functionality.
  * 
  * @since 0.1
@@ -62,7 +62,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	public static final int BATTERY_STATE_UNPLUGGED = value_BATTERY_STATE_UNPLUGGED();
 
 	/**
-	 * @return The ip address that the device reports (only applicable on wifi
+	 * @return The ip address that the device reports (only applicable on WIFI
 	 *         network)
 	 */
 	public static native String getAddress()
@@ -88,7 +88,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return The current device battery level. this property is only
-	 *         accessible if `batterymonitoring` is enabled. on iphone, this
+	 *         accessible if `batteryMonitoring` is enabled. on iPhone, this
 	 *         level only changes at 5% intervals.
 	 */
 	public static native float getBatteryLevel()
@@ -106,7 +106,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Constant that represents the state of the battery. this property
-	 *         is only accessible if `batterymonitoring` is enabled
+	 *         is only accessible if `batteryMonitoring` is enabled
 	 */
 	public static native int getBatteryState()
 	/*-{
@@ -114,7 +114,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Return the displaycaps object for platform
+	 * @return Return the DisplayCaps object for platform
 	 */
 	public static native org.urish.gwtit.titanium.platform.DisplayCaps getDisplayCaps()
 	/*-{
@@ -162,7 +162,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The network mask that the device reports (only applicable on wifi
+	 * @return The network mask that the device reports (only applicable on WIFI
 	 *         network)
 	 */
 	public static native String getNetmask()
@@ -171,8 +171,8 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The shortname of the operating system. for example, on an iphone,
-	 *         will return `iphone`, ipad will return `ipad` and android will
+	 * @return The shortname of the operating system. for example, on an iPhone,
+	 *         will return `iphone`, iPad will return `ipad` and Android will
 	 *         return `android`.
 	 */
 	public static native String getOsname()
@@ -181,7 +181,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The os architecture, such as 32 bit
+	 * @return The OS architecture, such as 32 bit
 	 */
 	public static native String getOstype()
 	/*-{
@@ -218,7 +218,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns whether or not a system url can be opened.
+	 * Returns whether or not a system URL can be opened.
 	 * 
 	 * @platforms iphone, ipad
 	 * @param url
@@ -238,7 +238,7 @@ public class Platform extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Open a url in the system default manner
+	 * Open a URL in the system default manner
 	 * 
 	 * @param url
 	 *            the url to open

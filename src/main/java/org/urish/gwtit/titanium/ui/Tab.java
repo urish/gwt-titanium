@@ -21,12 +21,12 @@ package org.urish.gwtit.titanium.ui;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A tabgroup tab instance. each tab instance maintains a stack of tab windows.
- * only one window within in the tab can be visible at a time. when a window is
+ * A TabGroup Tab instance. Each Tab instance maintains a stack of tab windows.
+ * Only one window within in the Tab can be visible at a time. When a window is
  * closed, either by the user or by code, the window is removed from the stack,
- * make the previous window visible. the root tab window cannot be removed. the
- * tab group is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtab}.
+ * make the previous window visible. The root tab window cannot be removed. The
+ * Tab Group is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTab}.
  * 
  * @since 0.8
  */

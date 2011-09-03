@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The callback to be fired when writestream operation finishes
+ * The callback to be fired when writeStream operation finishes
  * 
  * @since 1.7
  */

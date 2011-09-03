@@ -21,10 +21,10 @@ package org.urish.gwtit.titanium.network;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The bonjourservice instance returned either from
- * {@link org.urish.gwtit.titanium.network.createbonjourservice} or via the
- * service list from a bonjourbrowser `updatedservices` event. this object
- * describes a service on the network which is published by bonjour.
+ * The BonjourService instance returned either from
+ * {@link org.urish.gwtit.titanium.network.createBonjourService} or via the
+ * service list from a BonjourBrowser `updatedServices` event. This object
+ * describes a service on the network which is published by Bonjour.
  * <p>
  * Notes: You can only publish Bonjour services attached to a socket which is
  * currently listening; you cannot publish a service for a remotely connected
@@ -84,7 +84,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The tcpsocket object that is used to connect to the service
+	 * @return The TCPSocket object that is used to connect to the service
 	 */
 	public final native JavaScriptObject getSocket()
 	/*-{
@@ -110,7 +110,7 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Publish a bonjour service to the network. only works if islocal is true
+	 * Publish a Bonjour service to the network. Only works if isLocal is TRUE
 	 * 
 	 * @param socket
 	 *            a TCPSocket object to associate with the Bonjour service.
@@ -121,9 +121,9 @@ public class BonjourService extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Resolve a bonjour service from the network. must be done before
+	 * Resolve a Bonjour service from the network. Must be done before
 	 * attempting to access the service's socket information, if a remote
-	 * service. you cannot resolve a locally published service.
+	 * service. You cannot resolve a locally published service.
 	 * 
 	 * @param timeout
 	 *            the timeout for service resolution, in seconds. Optional,

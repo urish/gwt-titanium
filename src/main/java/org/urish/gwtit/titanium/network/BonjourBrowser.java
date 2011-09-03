@@ -21,9 +21,9 @@ package org.urish.gwtit.titanium.network;
 import org.urish.gwtit.titanium.network.events.UpdatedServicesHandler;
 
 /**
- * The bonjourbrowser instance returned from
- * {@link org.urish.gwtit.titanium.network.createbonjourbrowser}. this object is
- * a browser for the discovery and retrieval of bonjour services available on
+ * The BonjourBrowser instance returned from
+ * {@link org.urish.gwtit.titanium.network.createBonjourBrowser}. This object is
+ * a browser for the discovery and retrieval of Bonjour services available on
  * the network.
  * <p>
  * Notes: If your application publishes Bonjour services itself, that service
@@ -85,7 +85,7 @@ public class BonjourBrowser extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Conduct a search for bonjour services matching the type and domain
+	 * Conduct a search for Bonjour services matching the type and domain
 	 * specified during creation
 	 */
 	public final native void search()

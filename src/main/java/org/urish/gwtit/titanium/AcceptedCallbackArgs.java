@@ -44,7 +44,7 @@ public class AcceptedCallbackArgs extends JavaScriptObject {
 
 	/**
 	 * @return Socket which represents the inbound connection; this should be
-	 *         considered a 'connected' socket and is created in the connected
+	 *         considered a 'connected' socket and is created in the CONNECTED
 	 *         state
 	 */
 	public final native org.urish.gwtit.titanium.network.socket.TCP getInbound()

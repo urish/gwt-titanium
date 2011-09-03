@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A specifier for a media library query. by default, filters perform an exact
+ * A specifier for a media library query. By default, filters perform an exact
  * match.
  * 
  * @platforms iphone, ipad
@@ -32,9 +32,9 @@ public class MediaQueryType extends JavaScriptObject {
 	}
 
 	/**
-	 * @return A constant that specifies the ordering of the result array. one
-	 *         of the `music_media_group_*` constants specified on the
-	 *         {@link org.urish.gwtit.titanium.media} module.
+	 * @return A constant that specifies the ordering of the result array. One
+	 *         of the `MUSIC_MEDIA_GROUP_*` constants specified on the
+	 *         {@link org.urish.gwtit.titanium.Media} module.
 	 */
 	public final native float getGrouping()
 	/*-{
@@ -57,9 +57,9 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The media type to filter on. value should be one of the
-	 *         `music_media_type_` constants on
-	 *         {@link org.urish.gwtit.titanium.media}.
+	 * @return The media type to filter on. Value should be one of the
+	 *         `MUSIC_MEDIA_TYPE_` constants on
+	 *         {@link org.urish.gwtit.titanium.Media}.
 	 */
 	public final native JavaScriptObject getMediaType()
 	/*-{
@@ -77,7 +77,7 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The title to filter on. value should be a string.
+	 * @return The title to filter on. Value should be a String.
 	 */
 	public final native JavaScriptObject getTitle()
 	/*-{
@@ -95,7 +95,7 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The album title to filter on. value should be a string.
+	 * @return The album title to filter on. Value should be a String.
 	 */
 	public final native JavaScriptObject getAlbumTitle()
 	/*-{
@@ -113,7 +113,7 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The artist to filter on. value should be a string.
+	 * @return The artist to filter on. Value should be a String.
 	 */
 	public final native JavaScriptObject getArtist()
 	/*-{
@@ -131,7 +131,7 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The album artist to filter on. value should be a string.
+	 * @return The album artist to filter on. Value should be a String.
 	 */
 	public final native JavaScriptObject getAlbumArtist()
 	/*-{
@@ -149,7 +149,7 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The genre to filter on. value should be a string.
+	 * @return The genre to filter on. Value should be a String.
 	 */
 	public final native JavaScriptObject getGenre()
 	/*-{
@@ -167,7 +167,7 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The composer to filter on. value should be a string.
+	 * @return The composer to filter on. Value should be a String.
 	 */
 	public final native JavaScriptObject getComposer()
 	/*-{
@@ -185,8 +185,8 @@ public class MediaQueryType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return Filter by whether or not the item is a compilation. value should
-	 *         be a boolean.
+	 * @return Filter by whether or not the item is a compilation. Value should
+	 *         be a Boolean.
 	 */
 	public final native JavaScriptObject getIsCompilation()
 	/*-{

@@ -20,11 +20,11 @@ package org.urish.gwtit.titanium.app.android;
 
 
 /**
- * The titanium binding of [application
- * resources](http://developer.android.com/guide/topics/resources/index.html).
- * this gives you access to resources you have packaged for your own
- * application. if you want to access the system-wide android `r`, use
- * {@link org.urish.gwtit.titanium.android.r}.
+ * The Titanium binding of [Application
+ * Resources](http://developer.android.com/guide/topics/resources/index.html).
+ * This gives you access to resources you have packaged for your own
+ * application. If you want to access the system-wide Android `R`, use
+ * {@link org.urish.gwtit.titanium.Android.R}.
  * <p>
  * Notes: These properties and sub-properties are queried directly against your
  * Application's `R` class, and should have the same syntax. For example, if you

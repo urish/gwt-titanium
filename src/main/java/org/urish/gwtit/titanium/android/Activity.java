@@ -30,8 +30,8 @@ import org.urish.gwtit.titanium.android.events.StopHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The titanium binding of an [android
- * activity](http://developer.android.com/reference/android/app/activity.html)
+ * The Titanium binding of an [Android
+ * Activity](http://developer.android.com/reference/android/app/Activity.html)
  * 
  * @platforms android
  * @since 1.5
@@ -41,7 +41,7 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The intent that was used to start this activity
+	 * @return The Intent that was used to start this Activity
 	 */
 	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
@@ -54,12 +54,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A callback function that is called to initially create an android
-	 *         [options
-	 *         menu](http://developer.android.com/guide/topics/ui/menus.
-	 *         html#options-menu) for this activity when the user presses the
-	 *         menu button. see the menu examples in
-	 *         {@link org.urish.gwtit.titanium.android.menu}
+	 * @return A callback function that is called to initially create an Android
+	 *         [Options
+	 *         Menu](http://developer.android.com/guide/topics/ui/menus.
+	 *         html#options-menu) for this Activity when the user presses the
+	 *         Menu button. See the menu examples in
+	 *         {@link org.urish.gwtit.titanium.android.Menu}
 	 */
 	public final native EventCallback<JavaScriptObject> getOnCreateOptionsMenu()
 	/*-{
@@ -74,12 +74,12 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A callback function that is called to prepare an [options
-	 *         menu](http
+	 * @return A callback function that is called to prepare an [Options
+	 *         Menu](http
 	 *         ://developer.android.com/guide/topics/ui/menus.html#options-menu)
-	 *         for displaying on this activity when the user presses the menu
-	 *         button. see the menu examples in
-	 *         {@link org.urish.gwtit.titanium.android.menu}
+	 *         for displaying on this Activity when the user presses the Menu
+	 *         button. See the menu examples in
+	 *         {@link org.urish.gwtit.titanium.android.Menu}
 	 */
 	public final native EventCallback<JavaScriptObject> getOnPrepareOptionsMenu()
 	/*-{
@@ -94,9 +94,9 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The requested orientation of this activity. see possible constant
-	 *         values that begin with screen_orientation in the
-	 *         {@link org.urish.gwtit.titanium.android} module.
+	 * @return The requested orientation of this Activity. See possible constant
+	 *         values that begin with SCREEN_ORIENTATION in the
+	 *         {@link org.urish.gwtit.titanium.Android} module.
 	 */
 	public final native float getRequestedOrientation()
 	/*-{
@@ -109,10 +109,10 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Called when the activity is done and should be closed. also see android's
+	 * Called when the activity is done and should be closed. Also see Android's
 	 * documentation for
 	 * [finish](http://developer.android.com/reference/android/
-	 * app/activity.html#finish())
+	 * app/Activity.html#finish())
 	 */
 	public final native void finish()
 	/*-{
@@ -120,13 +120,13 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Get an android or application string using the passed-in resource id and
-	 * optional format arguments. also see android's documentation for
-	 * [getstring
-	 * ](http://developer.android.com/reference/android/content/context
-	 * .html#getstring(int)) and [string
-	 * resources](http://developer.android.com/
-	 * guide/topics/resources/string-resource.html#string)
+	 * Get an Android or Application string using the passed-in Resource ID and
+	 * optional format arguments. Also see Android's documentation for
+	 * [getString
+	 * ](http://developer.android.com/reference/android/content/Context
+	 * .html#getString(int)) and [String
+	 * Resources](http://developer.android.com/
+	 * guide/topics/resources/string-resource.html#String)
 	 * 
 	 * @param resourceId
 	 *            A Resource ID from the Application or Android.
@@ -139,11 +139,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets the result of this activity using an intent. this should be used in
-	 * the case when the activity responds to startactivityforresult. also see
-	 * android's documentation for
-	 * [setresult](http://developer.android.com/reference
-	 * /android/app/activity.html#setresult(int))
+	 * Sets the result of this Activity using an Intent. This should be used in
+	 * the case when the Activity responds to startActivityForResult. Also see
+	 * Android's documentation for
+	 * [setResult](http://developer.android.com/reference
+	 * /android/app/Activity.html#setResult(int))
 	 * 
 	 * @param resultCode
 	 *            The result code for this Activity. Must be one of
@@ -160,11 +160,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Starts a new activity, using the passed in intent as the description.
-	 * also see android's documentation for
-	 * [startactivity](http://developer.android
-	 * .com/reference/android/app/activity
-	 * .html#startactivity(android.content.intent))
+	 * Starts a new Activity, using the passed in Intent as the description.
+	 * Also see Android's documentation for
+	 * [startActivity](http://developer.android
+	 * .com/reference/android/app/Activity
+	 * .html#startActivity(android.content.Intent))
 	 * 
 	 * @param intent
 	 *            Description of the Activity to start
@@ -175,11 +175,11 @@ public class Activity extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * The same as `startactivity`, but also accepts a callback function for
-	 * handling the result of the started activity. also see android's
+	 * The same as `startActivity`, but also accepts a callback function for
+	 * handling the result of the started Activity. Also see Android's
 	 * documentation for
-	 * [startactivityforresult](http://developer.android.com/reference
-	 * /android/app/activity.html#startactivityforresult(android.content.intent,
+	 * [startActivityForResult](http://developer.android.com/reference
+	 * /android/app/Activity.html#startActivityForResult(android.content.Intent,
 	 * int))
 	 * 
 	 * @param intent

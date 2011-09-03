@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 /**
  * A set of constants for the position value that can be used for the `position`
- * property of {@link org.urish.gwtit.titanium.ui.tableview} when invoking
- * `scrolltoindex`.
+ * property of {@link org.urish.gwtit.titanium.ui.TableView} when invoking
+ * `scrollToIndex`.
  * 
  * @platforms iphone, ipad
  * @since 0.9

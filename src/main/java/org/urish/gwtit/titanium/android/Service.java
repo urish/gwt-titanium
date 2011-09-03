@@ -24,13 +24,13 @@ import org.urish.gwtit.titanium.android.events.StartHandler;
 import org.urish.gwtit.titanium.android.events.StopHandler;
 
 /**
- * The titanium binding of an [android
- * service](http://developer.android.com/reference/android/app/service.html).
- * can be used to start/stop the service directly and listen for
- * service-specific events. in the javascript-based services you write, this can
- * be referenced with {@link org.urish.gwtit.titanium.android.currentservice}.
- * you can create an instance of the service with
- * {@link org.urish.gwtit.titanium.android.createservice}.
+ * The Titanium binding of an [Android
+ * Service](http://developer.android.com/reference/android/app/Service.html).
+ * Can be used to start/stop the service directly and listen for
+ * service-specific events. In the Javascript-based services you write, this can
+ * be referenced with {@link org.urish.gwtit.titanium.android.currentService}.
+ * You can create an instance of the service with
+ * {@link org.urish.gwtit.titanium.android.createService}.
  * 
  * @platforms android
  * @since 1.5
@@ -40,8 +40,8 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The {@link org.urish.gwtit.titanium.android.intent} used to start
-	 *         or bind to the service.
+	 * @return The {@link org.urish.gwtit.titanium.android.Intent} used to start
+	 *         or bind to the Service.
 	 */
 	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
@@ -59,9 +59,9 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Start the service. effective only if this instance of
-	 * {@link org.urish.gwtit.titanium.android.service} was created with
-	 * {@link org.urish.gwtit.titanium.android.createservice}.
+	 * Start the Service. Effective only if this instance of
+	 * {@link org.urish.gwtit.titanium.android.Service} was created with
+	 * {@link org.urish.gwtit.titanium.android.createService}.
 	 */
 	public final native void start()
 	/*-{
@@ -69,7 +69,7 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Stop this running instance of the service.
+	 * Stop this running instance of the Service.
 	 */
 	public final native void stop()
 	/*-{

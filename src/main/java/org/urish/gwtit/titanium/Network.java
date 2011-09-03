@@ -24,9 +24,9 @@ import org.urish.gwtit.titanium.events.ChangeHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level network module. the network module is used accessing networking
+ * The top level Network module. The Network module is used accessing Networking
  * related functionality, including
- * [titanium.network.socket](titanium.network.socket-module.html)
+ * [Titanium.Network.Socket](Titanium.Network.Socket-module.html)
  * 
  * @since 0.1
  */
@@ -162,8 +162,8 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The network type name constant. returns one of `none`, `wifi`,
-	 *         `lan` or `mobile`.
+	 * @return The network type name constant. Returns one of `NONE`, `WIFI`,
+	 *         `LAN` or `MOBILE`.
 	 */
 	public static native String getNetworkTypeName()
 	/*-{
@@ -172,7 +172,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Boolean value that indicates if the network is reachable to the
-	 *         internet either via wifi or carrier network
+	 *         Internet either via WIFI or Carrier network
 	 */
 	public static native boolean getOnline()
 	/*-{
@@ -180,8 +180,8 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The remote device uuid if the device was registered with the
-	 *         apple push notification service or null if not set.
+	 * @return The remote device UUID if the device was registered with the
+	 *         Apple Push Notification Service or null if not set.
 	 * @platforms iphone, ipad
 	 */
 	public static native String getRemoteDeviceUUID()
@@ -234,8 +234,10 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Adds a connectivity listener to listen for network changes. this method
+	 * Adds a connectivity listener to listen for network changes. This method
 	 * has been deprecated in favor of listening for a `change` event.
+	 * 
+	 * @deprecated since 1.7.0
 	 */
 	public static native void addConnectivityListener(EventCallback<JavaScriptObject> callback)
 	/*-{
@@ -244,7 +246,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.bonjourbrowser}
+	 * {@link org.urish.gwtit.titanium.network.BonjourBrowser}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param serviceType
@@ -258,7 +260,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.bonjourbrowser}
+	 * {@link org.urish.gwtit.titanium.network.BonjourBrowser}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param serviceType
@@ -276,7 +278,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.bonjourbrowser}
+	 * {@link org.urish.gwtit.titanium.network.BonjourBrowser}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param serviceType
@@ -297,7 +299,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.bonjourservice}
+	 * {@link org.urish.gwtit.titanium.network.BonjourService}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param name
@@ -314,7 +316,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.bonjourservice}
+	 * {@link org.urish.gwtit.titanium.network.BonjourService}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param name
@@ -335,7 +337,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.bonjourservice}
+	 * {@link org.urish.gwtit.titanium.network.BonjourService}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param name
@@ -359,7 +361,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create and return an instance of
-	 * {@link org.urish.gwtit.titanium.network.tcpsocket}
+	 * {@link org.urish.gwtit.titanium.network.TCPSocket}
 	 * 
 	 * @platforms iphone, ipad
 	 * @param hostName
@@ -374,6 +376,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	 * @param parameters
 	 *            A dictionary object with properties defined in
 	 *            {@link org.urish.gwtit.titanium.network.TCPSocket}
+	 * @deprecated since 1.7.0
 	 */
 	public static native org.urish.gwtit.titanium.network.TCPSocket createTCPSocket(String hostName, int port,
 			int mode, JavaScriptObject parameters)
@@ -382,7 +385,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Decode a uri component part using uri encoding
+	 * Decode a URI component part using URI encoding
 	 * 
 	 * @param value
 	 *            input value to be decoded
@@ -393,7 +396,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Encode a uri component part using uri encoding
+	 * Encode a URI component part using URI encoding
 	 * 
 	 * @param value
 	 *            input value to be encoded
@@ -404,7 +407,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Register for push notifications with the apple push notification service.
+	 * Register for push notifications with the Apple Push Notification Service.
 	 * 
 	 * @platforms iphone, ipad
 	 * @param config
@@ -423,8 +426,10 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Removes a connectivity listener. this method has been deprecated in favor
+	 * Removes a connectivity listener. This method has been deprecated in favor
 	 * of listening for a `change` event.
+	 * 
+	 * @deprecated since 1.7.0
 	 */
 	public static native void removeConnectivityListener(EventCallback<JavaScriptObject> callback)
 	/*-{

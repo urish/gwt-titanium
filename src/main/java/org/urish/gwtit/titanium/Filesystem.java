@@ -23,7 +23,7 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level filesystem module. the filesystem module is used for reading
+ * The top level Filesystem module. The Filesystem module is used for reading
  * and saving files and directories on the device.
  * 
  * @since 0.1
@@ -56,7 +56,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	/**
 	 * @return Constant where your application data directory is located. this
 	 *         directory should be used to place applications-specific files. on
-	 *         iphone, this directory is also backed up.
+	 *         iPhone, this directory is also backed up.
 	 */
 	public static native String getApplicationDataDirectory()
 	/*-{
@@ -115,7 +115,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create temp file and return a
-	 * {@link org.urish.gwtit.titanium.filesystem.file}
+	 * {@link org.urish.gwtit.titanium.filesystem.File}
 	 */
 	public static native org.urish.gwtit.titanium.filesystem.File createTempDirectory()
 	/*-{
@@ -124,7 +124,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Create a temp file and return a
-	 * {@link org.urish.gwtit.titanium.filesystem.file}
+	 * {@link org.urish.gwtit.titanium.filesystem.File}
 	 */
 	public static native org.urish.gwtit.titanium.filesystem.File createTempFile()
 	/*-{
@@ -133,7 +133,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Return a fully formed file path as a
-	 * {@link org.urish.gwtit.titanium.filesystem.file} object
+	 * {@link org.urish.gwtit.titanium.filesystem.File} object
 	 * 
 	 * @param path
 	 *            one or more path arguments to form the full path joined
@@ -148,7 +148,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Returns true if the android device supports external storage such as an
-	 * sd card. returns false on ios.
+	 * SD card. Returns false on iOS.
 	 */
 	public static native boolean isExternalStoragePresent()
 	/*-{

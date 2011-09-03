@@ -23,12 +23,12 @@ import org.urish.gwtit.titanium.ui.ipad.events.VisibleHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A splitwindow is a window that manages the presentation of two side-by-side
- * view controllers. you use this class to implement a master-detail interface,
+ * A SplitWindow is a window that manages the presentation of two side-by-side
+ * view controllers. You use this class to implement a master-detail interface,
  * in which the left-side view presents a list of items and the right-side
- * presents details of the selected item. the splitview is for use exclusively
- * on ipad devices. the splitwindow is created by the method
- * {@link org.urish.gwtit.titanium.ui.ipad.createsplitwindow}.
+ * presents details of the selected item. The SplitView is for use exclusively
+ * on iPad devices. The SplitWindow is created by the method
+ * {@link org.urish.gwtit.titanium.ui.ipad.createSplitWindow}.
  * ![splitview](http://img.skitch.com/20100406-1f85bm9cx8t768xgsjqax1ng6y.png)
  * <p>
  * Notes: The SplitWindow inherits its methods and properties from
@@ -48,7 +48,7 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return View for the detail view section of the splitwindow
+	 * @return View for the detail view section of the SplitWindow
 	 */
 	public final native JavaScriptObject getDetailView()
 	/*-{
@@ -61,7 +61,7 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return View for the master view section of the splitwindow
+	 * @return View for the master view section of the SplitWindow
 	 */
 	public final native JavaScriptObject getMasterView()
 	/*-{
@@ -74,7 +74,7 @@ public class SplitWindow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Whether or not to show the master view in portrait. default is
+	 * @return Whether or not to show the master view in portrait. Default is
 	 *         'false'.
 	 * @since 1.7.2
 	 */

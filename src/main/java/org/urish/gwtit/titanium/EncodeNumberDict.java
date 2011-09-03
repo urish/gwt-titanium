@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Options for {@link org.urish.gwtit.titanium.codec.encodenumber}
+ * Options for {@link org.urish.gwtit.titanium.codec.encodeNumber}
  */
 public class EncodeNumberDict extends JavaScriptObject {
 	protected EncodeNumberDict() {
@@ -36,7 +36,7 @@ public class EncodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The source number to encode
+	 * @return The source Number to encode
 	 */
 	public final native float getSource()
 	/*-{
@@ -62,13 +62,13 @@ public class EncodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The encoding type to use. must be one of
-	 *         {@link org.urish.gwtit.titanium.codec.type_byte},
-	 *         {@link org.urish.gwtit.titanium.codec.type_short},
-	 *         {@link org.urish.gwtit.titanium.codec.type_int},
-	 *         {@link org.urish.gwtit.titanium.codec.type_float},
-	 *         {@link org.urish.gwtit.titanium.codec.type_long}, or
-	 *         {@link org.urish.gwtit.titanium.codec.type_double}
+	 * @return The encoding type to use. Must be one of
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_BYTE},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_SHORT},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_INT},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_FLOAT},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_LONG}, or
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_DOUBLE}
 	 */
 	public final native String getType()
 	/*-{
@@ -81,6 +81,7 @@ public class EncodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default 0
 	 * @return The position in dest to set the encoded data
 	 */
 	public final native float getPosition()
@@ -94,6 +95,7 @@ public class EncodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default Return value of <Titanium.Codec.getNativeByteOrder>
 	 * @return The byte order to encode with
 	 */
 	public final native float getByteOrder()

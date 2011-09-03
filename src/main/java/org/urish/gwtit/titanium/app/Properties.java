@@ -23,7 +23,7 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The app properties module is used for storing application related
+ * The App Properties module is used for storing application related
  * property/value pairs which persist beyond application sessions.
  * 
  * @since 0.5

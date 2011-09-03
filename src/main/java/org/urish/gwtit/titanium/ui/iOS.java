@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * The apple ios specific ui capabilities. all properties, methods and events in
- * this namespace will only work on the apple ios related devices.
+ * The Apple iOS specific UI capabilities. All properties, methods and events in
+ * this namespace will only work on the Apple iOS related devices.
  * 
  * @platforms iphone, ipad
  * @since 1.4

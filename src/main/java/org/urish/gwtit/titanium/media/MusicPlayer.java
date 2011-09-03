@@ -25,8 +25,8 @@ import org.urish.gwtit.titanium.media.events.VolumeChangeHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The musicplayer instance returned from
- * {@link org.urish.gwtit.titanium.media.createmusicplayer}. this object
+ * The MusicPlayer instance returned from
+ * {@link org.urish.gwtit.titanium.media.createMusicPlayer}. This object
  * represents a music controller.
  * 
  * @platforms iphone, ipad
@@ -50,7 +50,7 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return An item object which indicates the currently playing media
+	 * @return An Item object which indicates the currently playing media
 	 */
 	public final native JavaScriptObject getNowPlaying()
 	/*-{
@@ -64,16 +64,16 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The playback state; one of
-	 *         {@link org.urish.gwtit.titanium.media.music_player_state_stopped}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_STATE_STOPPED}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.media.music_player_state_playing}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_STATE_PLAYING}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.media.music_player_state_paused},
-	 *         {@link org.urish.gwtit.titanium.media.music_player_state_interrupted}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_STATE_PAUSED},
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_STATE_INTERRUPTED}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.media.music_player_state_skeek_forward}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_STATE_SKEEK_FORWARD}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.media.music_player_state_seek_backward}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_STATE_SEEK_BACKWARD}
 	 */
 	public final native int getPlaybackState()
 	/*-{
@@ -87,10 +87,10 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The repeat setting; one of
-	 *         {@link org.urish.gwtit.titanium.media.music_player_repeat_default}
-	 *         , {@link org.urish.gwtit.titanium.media.music_player_repeat_none}
-	 *         , {@link org.urish.gwtit.titanium.media.music_player_repeat_one},
-	 *         {@link org.urish.gwtit.titanium.media.music_player_repeat_all}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_REPEAT_DEFAULT}
+	 *         , {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_REPEAT_NONE}
+	 *         , {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_REPEAT_ONE},
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_REPEAT_ALL}
 	 */
 	public final native int getRepeatMode()
 	/*-{
@@ -104,12 +104,12 @@ public class MusicPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The shuffle setting; one of
-	 *         {@link org.urish.gwtit.titanium.media.music_player_shuffle_default}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_SHUFFLE_DEFAULT}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.media.music_player_shuffle_none},
-	 *         {@link org.urish.gwtit.titanium.media.music_player_shuffle_songs}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_SHUFFLE_NONE},
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_SHUFFLE_SONGS}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.media.music_player_shuffle_albums}
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_PLAYER_SHUFFLE_ALBUMS}
 	 */
 	public final native int getShuffleMode()
 	/*-{

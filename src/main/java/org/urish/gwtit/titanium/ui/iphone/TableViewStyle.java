@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 /**
  * A set of constants for the style that can be used for the button `style`
- * property of {@link org.urish.gwtit.titanium.ui.tableview}.
+ * property of {@link org.urish.gwtit.titanium.ui.TableView}.
  * 
  * @platforms iphone, ipad
  * @since 0.9

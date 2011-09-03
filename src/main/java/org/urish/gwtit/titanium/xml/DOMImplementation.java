@@ -20,11 +20,11 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * The {@link org.urish.gwtit.titanium.xml.domimplementation} interface provides
+ * The {@link org.urish.gwtit.titanium.xml.DOMImplementation} interface provides
  * a number of methods for performing operations that are independent of any
- * particular instance of the document object model. this conforms to the [dom
- * level 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
- * domimplementation.
+ * particular instance of the document object model. This conforms to the [DOM
+ * Level 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) defintion of a DOM
+ * DOMImplementation.
  * 
  * @since 1.8
  */
@@ -33,10 +33,10 @@ public class DOMImplementation extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * Creates an {@link org.urish.gwtit.titanium.xml.document} object of the
-	 * specified type with its document element. raises an exception if
-	 * qualifiedname is malformed, contains an illegal character, or is
-	 * inconsistent with namespaceuri. also raises an exception if doctype has
+	 * Creates an {@link org.urish.gwtit.titanium.xml.Document} object of the
+	 * specified type with its document element. Raises an exception if
+	 * qualifiedName is malformed, contains an illegal character, or is
+	 * inconsistent with namespaceURI. Also raises an exception if doctype has
 	 * already been used with a different document.
 	 * 
 	 * @param namespaceURI
@@ -56,10 +56,10 @@ public class DOMImplementation extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Creates an empty {@link org.urish.gwtit.titanium.xml.documenttype} node.
-	 * entity declarations and notations are not made available. entity
-	 * reference expansions and default attribute additions do not occur. raises
-	 * an exception if qualifiedname is malformed or contains an illegal
+	 * Creates an empty {@link org.urish.gwtit.titanium.xml.DocumentType} node.
+	 * Entity declarations and notations are not made available. Entity
+	 * reference expansions and default attribute additions do not occur. Raises
+	 * an exception if qualifiedName is malformed or contains an illegal
 	 * character.
 	 * 
 	 * @param qualifiedName
@@ -78,7 +78,7 @@ public class DOMImplementation extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Test if the {@link org.urish.gwtit.titanium.xml.domimplementation}
+	 * Test if the {@link org.urish.gwtit.titanium.xml.DOMImplementation}
 	 * implements a specific feature.
 	 * 
 	 * @param feature

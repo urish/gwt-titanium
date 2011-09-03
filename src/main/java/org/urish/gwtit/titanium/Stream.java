@@ -53,10 +53,10 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	public static final float MODE_APPEND = value_MODE_APPEND();
 
 	/**
-	 * Creates stream from specified container. returns `titanium.bufferstream`
-	 * or `titanium.blobstream` depending on whether a buffer or blob is
-	 * provided as the 'source' property in params. write and append mode only
-	 * applies to buffer as blob is read only.
+	 * Creates stream from specified container. Returns `Titanium.BufferStream`
+	 * or `Titanium.BlobStream` depending on whether a Buffer or Blob is
+	 * provided as the 'source' property in params. Write and append mode only
+	 * applies to Buffer as Blob is read only.
 	 * 
 	 * @param params
 	 *            creation arguments
@@ -67,7 +67,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Async version of read on `titanium.iostream`
+	 * Async version of read on `Titanium.IOStream`
 	 * 
 	 * @param sourceStream
 	 *            Stream to read from
@@ -82,7 +82,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Async version of read on `titanium.iostream` that takes offset and length
+	 * Async version of read on `Titanium.IOStream` that takes offset and length
 	 * 
 	 * @param sourceStream
 	 *            Stream to read from
@@ -101,7 +101,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Reads all data from `titanium.iostream`
+	 * Reads all data from `Titanium.IOStream`
 	 * 
 	 * @param sourceStream
 	 *            Stream to read from
@@ -112,7 +112,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Async version of readall
+	 * Async version of readAll
 	 * 
 	 * @param sourceStream
 	 *            Stream to read from
@@ -127,7 +127,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Async version of write on `titanium.iostream`
+	 * Async version of write on `Titanium.IOStream`
 	 * 
 	 * @param outputStream
 	 *            Stream to write to
@@ -142,7 +142,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Async version of write on `titanium.iostream` that takes offset and
+	 * Async version of write on `Titanium.IOStream` that takes offset and
 	 * length
 	 * 
 	 * @param outputStream
@@ -180,7 +180,7 @@ public class Stream extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Async version of writestream
+	 * Async version of writeStream
 	 * 
 	 * @param inputStream
 	 *            Stream to read from

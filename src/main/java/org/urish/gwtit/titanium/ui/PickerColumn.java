@@ -22,7 +22,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The picker row object created by
- * [titanium.ui.createpickercolumn](titanium.ui.createpickercolumn).
+ * [Titanium.UI.createPickerColumn](Titanium.UI.createPickerColumn).
  * 
  * @since 0.9
  */

@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 /**
  * A set of constants for the bar styles used on the `style` property of
- * {@link org.urish.gwtit.titanium.ui.progressbar}.
+ * {@link org.urish.gwtit.titanium.ui.ProgressBar}.
  * 
  * @platforms iphone, ipad
  * @since 0.8

@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium;
 
 
 /**
- * Iostream is the interface that all stream types implement
+ * IOStream is the interface that all stream types implement
  * 
  * @since 1.7
  */

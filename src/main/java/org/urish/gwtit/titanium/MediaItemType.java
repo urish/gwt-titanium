@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An object representing an entry in the ipod's music library.
+ * An object representing an entry in the iPod's music library.
  * 
  * @platforms iphone, ipad
  * @since 1.5
@@ -31,8 +31,8 @@ public class MediaItemType extends JavaScriptObject {
 	}
 
 	/**
-	 * @return The type of the media. one of the `music_media_type_*` constants
-	 *         on {@link org.urish.gwtit.titanium.media}.
+	 * @return The type of the media. One of the `MUSIC_MEDIA_TYPE_*` constants
+	 *         on {@link org.urish.gwtit.titanium.Media}.
 	 */
 	public final native float getMediaType()
 	/*-{
@@ -45,7 +45,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The title id3 tag contents.
+	 * @return The title ID3 tag contents.
 	 */
 	public final native String getTitle()
 	/*-{
@@ -58,7 +58,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The album title id3 tag contents.
+	 * @return The album title ID3 tag contents.
 	 */
 	public final native String getAlbumTitle()
 	/*-{
@@ -71,7 +71,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The artist id3 tag contents.
+	 * @return The artist ID3 tag contents.
 	 */
 	public final native String getArtist()
 	/*-{
@@ -84,7 +84,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The album artist id3 tag contents.
+	 * @return The album artist ID3 tag contents.
 	 */
 	public final native String getAlbumArtist()
 	/*-{
@@ -97,7 +97,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The genre id3 tag contents.
+	 * @return The genre ID3 tag contents.
 	 */
 	public final native String getGenre()
 	/*-{
@@ -110,7 +110,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The composer id3 tag contents.
+	 * @return The composer ID3 tag contents.
 	 */
 	public final native String getComposer()
 	/*-{
@@ -201,7 +201,7 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The lyrics id3 tag contents.
+	 * @return The lyrics ID3 tag contents.
 	 */
 	public final native String getLyrics()
 	/*-{
@@ -214,8 +214,8 @@ public class MediaItemType extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The podcast title. only valid for media of type
-	 *         `music_media_type_podcast`.
+	 * @return The podcast title. Only valid for media of type
+	 *         `MUSIC_MEDIA_TYPE_PODCAST`.
 	 */
 	public final native String getPodcastTitle()
 	/*-{

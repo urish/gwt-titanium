@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium;
 
 
 /**
- * The top level map module. the map module is used for creating in-application
+ * The top level Map module. The Map module is used for creating in-application
  * native maps.
  * 
  * @since 0.8

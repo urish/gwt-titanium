@@ -20,10 +20,10 @@ package org.urish.gwtit.titanium;
 
 
 /**
- * The main {@link org.urish.gwtit..titanium.ui} module. the ui module is
+ * The main {@link org.urish.gwtit..Titanium.UI} module. The UI module is
  * responsible for native user-interface components and interaction inside
- * titanium. the goal of the ui module is to provide a native experience along
- * with native performance by compiling javascript code into their native
+ * Titanium. The goal of the UI module is to provide a native experience along
+ * with native performance by compiling Javascript code into their native
  * counterparts as part of the build process.
  * <p>
  * Notes: ### Design
@@ -753,7 +753,7 @@ public class UI extends org.urish.gwtit.titanium.Module {
 	public static final int UPSIDE_PORTRAIT = value_UPSIDE_PORTRAIT();
 
 	/**
-	 * @return This sets the background color of the master uiview (when there
+	 * @return This sets the background color of the master UIView (when there
 	 *         are no windows/tab groups on it)
 	 */
 	public static native String getBackgroundColor()
@@ -768,7 +768,7 @@ public class UI extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Path/url to an image file for setting a background for the master
-	 *         uiview (when there are no windows/tab groups on it).
+	 *         UIView (when there are no windows/tab groups on it).
 	 */
 	public static native String getBackgroundImage()
 	/*-{
@@ -781,7 +781,7 @@ public class UI extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The active window associated with the executing javascript
+	 * @return The active window associated with the executing Javascript
 	 *         context.
 	 */
 	public static native org.urish.gwtit.titanium.ui.Window getCurrentWindow()
@@ -791,10 +791,11 @@ public class UI extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return To set an orientation, it is suggested to instead set
-	 *         {@link org.urish.gwtit.titanium.window.orientationmodes} to the
-	 *         specific orientation desired. when set, this will update the
+	 *         {@link org.urish.gwtit.titanium.window.orientationModes} to the
+	 *         specific orientation desired. When set, this will update the
 	 *         orientation of the current window to the specified orientation
 	 *         value.
+	 * @deprecated since 1.7.2
 	 */
 	public static native float getOrientation()
 	/*-{

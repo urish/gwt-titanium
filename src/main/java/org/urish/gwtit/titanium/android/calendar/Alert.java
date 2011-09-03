@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium.android.calendar;
 
 
 /**
- * An object which represents a single alert for an event in an android
+ * An object which represents a single alert for an event in an Android
  * calendar.
  * 
  * @platforms android
@@ -109,8 +109,8 @@ public class Alert extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The current state of the alert. possible values are the state_
-	 *         constants in {@link org.urish.gwtit.titanium.android.calendar}.
+	 * @return The current state of the alert. Possible values are the STATE_
+	 *         constants in {@link org.urish.gwtit.titanium.android.Calendar}.
 	 */
 	public final native float getState()
 	/*-{

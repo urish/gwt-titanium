@@ -24,8 +24,8 @@ import org.urish.gwtit.titanium.ui.events.DashboardItemMoveHandler;
 
 /**
  * An item that represents a visual icon in the
- * {@link org.urish.gwtit.titanium.ui.dashboardview}. the dashboard item is
- * created by the method {@link org.urish.gwtit.titanium.ui.createdashboarditem}
+ * {@link org.urish.gwtit.titanium.ui.DashboardView}. The Dashboard Item is
+ * created by the method {@link org.urish.gwtit.titanium.ui.createDashboardItem}
  * .
  * 
  * @platforms iphone, ipad
@@ -63,7 +63,7 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The url to the image
+	 * @return The URL to the image
 	 */
 	public final native String getImage()
 	/*-{
@@ -76,7 +76,7 @@ public class DashboardItem extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The url to the image to display when the item is depressed
+	 * @return The URL to the image to display when the item is depressed
 	 *         (clicked)
 	 */
 	public final native String getSelectedImage()

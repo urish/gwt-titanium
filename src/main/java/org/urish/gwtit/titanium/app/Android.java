@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.app;
 
 
 /**
- * A module used to access the android's [application
- * resources](http://developer.android.com/guide/topics/resources/index.html)
+ * A module used to access the Android's [Application
+ * Resources](http://developer.android.com/guide/topics/resources/index.html)
  * 
  * @platforms android
  * @since 1.5

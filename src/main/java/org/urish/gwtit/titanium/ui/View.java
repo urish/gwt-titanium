@@ -35,8 +35,8 @@ import org.urish.gwtit.titanium.ui.events.TwoFingerTapHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The view is an empty drawing surface or container. the view is created by the
- * method {@link org.urish.gwtit.titanium.ui.createview}.
+ * The View is an empty drawing surface or container. The View is created by the
+ * method {@link org.urish.gwtit.titanium.ui.createView}.
  * 
  * @since 0.9
  */
@@ -141,8 +141,8 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return A background gradient for the view with the properties:
-	 *         type,startpoint
-	 *         ,endpoint,startradius,endradius,backfillstart,backfillend,colors.
+	 *         type,startPoint
+	 *         ,endPoint,startRadius,endRadius,backfillStart,backfillEnd,colors.
 	 */
 	public final native JavaScriptObject getBackgroundGradient()
 	/*-{
@@ -169,14 +169,14 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return End caps specify the portion of an image that should not be
-	 *         resized when an image is stretched. this technique is used to
+	 *         resized when an image is stretched. This technique is used to
 	 *         implement buttons and other resizable image-based interface
-	 *         elements. when a button with end caps is resized, the resizing
+	 *         elements. When a button with end caps is resized, the resizing
 	 *         occurs only in the middle of the button, in the region between
-	 *         the end caps. the end caps themselves keep their original size
-	 *         and appearance. this property specifies the size of the left end
-	 *         cap. the middle (stretchable) portion is assumed to be 1 pixel
-	 *         wide. the right end cap is therefore computed by adding the size
+	 *         the end caps. The end caps themselves keep their original size
+	 *         and appearance. This property specifies the size of the left end
+	 *         cap. The middle (stretchable) portion is assumed to be 1 pixel
+	 *         wide. The right end cap is therefore computed by adding the size
 	 *         of the left end cap and the middle portion together and then
 	 *         subtracting that value from the width of the image
 	 * @platforms iphone, ipad
@@ -223,14 +223,14 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return End caps specify the portion of an image that should not be
-	 *         resized when an image is stretched. this technique is used to
+	 *         resized when an image is stretched. This technique is used to
 	 *         implement buttons and other resizable image-based interface
-	 *         elements. when a button with end caps is resized, the resizing
+	 *         elements. When a button with end caps is resized, the resizing
 	 *         occurs only in the middle of the button, in the region between
-	 *         the end caps. the end caps themselves keep their original size
-	 *         and appearance. this property specifies the size of the top end
-	 *         cap. the middle (stretchable) portion is assumed to be 1 pixel
-	 *         wide. the bottom end cap is therefore computed by adding the size
+	 *         the end caps. The end caps themselves keep their original size
+	 *         and appearance. This property specifies the size of the top end
+	 *         cap. The middle (stretchable) portion is assumed to be 1 pixel
+	 *         wide. The bottom end cap is therefore computed by adding the size
 	 *         of the top end cap and the middle portion together and then
 	 *         subtracting that value from the height of the image
 	 * @platforms iphone, ipad
@@ -295,8 +295,8 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Property for the view bottom position. this position is relative
-	 *         to the view's parent. can be either a float value or a dimension
+	 * @return Property for the view bottom position. This position is relative
+	 *         to the view's parent. Can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
 	public final native float getBottom()
@@ -319,8 +319,9 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
+	 * @default False
 	 * @return Set true if you want a view to be focusable when navigating with
-	 *         the trackball or d-pad. default: false. (android only)
+	 *         the trackball or D-Pad. Default: false. (Android Only)
 	 * 
 	 * @platforms android
 	 */
@@ -345,7 +346,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Property for the view height. can be either a float value or a
+	 * @return Property for the view height. Can be either a float value or a
 	 *         dimension string ie 'auto' (default).
 	 */
 	public final native float getHeight()
@@ -364,8 +365,8 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Property for the view left position. this position is relative to
-	 *         the view's parent. can be either a float value or a dimension
+	 * @return Property for the view left position. This position is relative to
+	 *         the view's parent. Can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
 	public final native float getLeft()
@@ -397,8 +398,8 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Property for the view right position. this position is relative
-	 *         to the view's parent. can be either a float value or a dimension
+	 * @return Property for the view right position. This position is relative
+	 *         to the view's parent. Can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
 	public final native float getRight()
@@ -422,11 +423,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return One of
-	 *         {@link org.urish.gwtit.titanium.ui.android.soft_keyboard_default_on_focus}
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SOFT_KEYBOARD_DEFAULT_ON_FOCUS}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.ui.android.soft_keyboard_hide_on_focus}
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SOFT_KEYBOARD_HIDE_ON_FOCUS}
 	 *         , or
-	 *         {@link org.urish.gwtit.titanium.ui.android.soft_keyboard_show_on_focus}
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SOFT_KEYBOARD_SHOW_ON_FOCUS}
 	 *         .
 	 * @platforms android
 	 */
@@ -451,8 +452,8 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Property for the view top position. this position is relative to
-	 *         the view's parent. can be either a float value or a dimension
+	 * @return Property for the view top position. This position is relative to
+	 *         the view's parent. Can be either a float value or a dimension
 	 *         string ie 'auto' (default).
 	 */
 	public final native float getTop()
@@ -461,6 +462,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
+	 * @default False
 	 * @return A boolean indicating if the view should receive touch events
 	 *         (true, default) or forward them to peers (false)
 	 */
@@ -511,7 +513,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Property for the view width. can be either a float value or a
+	 * @return Property for the view width. Can be either a float value or a
 	 *         dimension string ie 'auto' (default).
 	 */
 	public final native float getWidth()
@@ -533,7 +535,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return When `true` the screen will not power down. note, enabling this
+	 * @return When `true` the screen will not power down. Note, enabling this
 	 *         feature will use more power thereby adversely affecting run time
 	 *         when on battery.
 	 * @platforms android
@@ -549,7 +551,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The layout algorithm to use for the layout. either 'absolute' or
+	 * @return The layout algorithm to use for the layout. Either 'absolute' or
 	 *         'vertical'
 	 */
 	public final native String getLayout()
@@ -613,7 +615,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Return a blob image of the rendered view
+	 * Return a Blob image of the rendered view
 	 */
 	public final native JavaScriptObject toImage()
 	/*-{
@@ -621,7 +623,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Return a blob image of the rendered view
+	 * Return a Blob image of the rendered view
 	 */
 	public final native JavaScriptObject toImage(EventCallback<JavaScriptObject> f)
 	/*-{
@@ -630,14 +632,14 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Translates a point from the receiver's view coordinate system to another
-	 * view's coordinate system. if both views are connected in the native view
+	 * view's coordinate system. If both views are connected in the native view
 	 * hierarchies, will return the converted point in the form of an object
-	 * with x and y properties. if either view is not in the view hierarchy, a
-	 * null is returned. keep in mind that views may be removed from the view
+	 * with x and y properties. If either view is not in the view hierarchy, a
+	 * null is returned. Keep in mind that views may be removed from the view
 	 * hierarchy if their window is blurred or if the view is offscreen (such as
 	 * in some situations with
-	 * {@link org.urish.gwtit.titanium.ui.scrollableview}). if this view is a
-	 * {@link org.urish.gwtit.titanium.ui.scrollview}, the view's x and y
+	 * {@link org.urish.gwtit.titanium.ui.ScrollableView}). If this view is a
+	 * {@link org.urish.gwtit.titanium.ui.ScrollView}, the view's x and y
 	 * offsets are subtracted from the return value.
 	 * 
 	 * @param point

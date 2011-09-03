@@ -20,10 +20,10 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A way to keep processor-specific information in the text of the document. see
- * [dom level 2
- * spec](http://www.w3.org/tr/2000/rec-dom-level-2-core-20001113/core
- * .html#id-1004215813)
+ * A way to keep processor-specific information in the text of the document. See
+ * [DOM Level 2
+ * Spec](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core
+ * .html#ID-1004215813)
  * 
  * @since 0.9
  */
@@ -32,10 +32,10 @@ public class ProcessingInstruction extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return Retrieve the content of this processing instruction. this from
+	 * @return Retrieve the content of this processing instruction. This from
 	 *         the first non white space character after the target to the
-	 *         character immediatly preceding the ?>. when setting a processing
-	 *         instruction, a domexception may be thrown on an invalid
+	 *         character immediatly preceding the ?>. When setting a processing
+	 *         instruction, a DOMException may be thrown on an invalid
 	 *         instruction.
 	 */
 	public final native String getData()
@@ -49,7 +49,7 @@ public class ProcessingInstruction extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Retrieve the target of this processing instruction. xml defines
+	 * @return Retrieve the target of this processing instruction. XML defines
 	 *         this as being the first token following the markup that begins
 	 *         the processing instruction.
 	 */

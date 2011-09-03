@@ -33,8 +33,8 @@ public class AcceptDict extends JavaScriptObject {
 	}
 
 	/**
-	 * @return The timeout for connect() and all i/o write() operations. cannot
-	 *         be modified when not in the initialized state
+	 * @return The timeout for connect() and all I/O write() operations. Cannot
+	 *         be modified when not in the INITIALIZED state
 	 */
 	public final native float getTimeout()
 	/*-{
@@ -47,7 +47,7 @@ public class AcceptDict extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The callback to be fired after the socket enters the error state
+	 * @return The callback to be fired after the socket enters the ERROR state
 	 */
 	public final native EventCallback<org.urish.gwtit.titanium.ErrorCallbackArgs> getError()
 	/*-{

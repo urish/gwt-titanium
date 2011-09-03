@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The android specific ui capabilities. all properties, methods and events in
- * this namespace will only work on android related devices.
+ * The Android specific UI capabilities. All properties, methods and events in
+ * this namespace will only work on Android related devices.
  * 
  * @platforms android
  * @since 1.0
@@ -272,9 +272,9 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	public static final float PLUGIN_STATE_ON_DEMAND = value_PLUGIN_STATE_ON_DEMAND();
 
 	/**
-	 * Request that the soft keyboard hide. note: it is not currently possible
-	 * in the native android api to detect that the keyboard is already visible.
-	 * note: it is not possible to globally show the keyboard at this point.
+	 * Request that the soft keyboard hide. Note: It is not currently possible
+	 * in the native Android API to detect that the keyboard is already visible.
+	 * Note: It is not possible to globally show the keyboard at this point.
 	 */
 	public static native void hideSoftKeyboard()
 	/*-{
@@ -282,11 +282,11 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Open android native preferences ui activity. you need to place your
+	 * Open Android native preferences UI activity. You need to place your
 	 * preferences.xml file in the platform/android/res/xml/ folder of your
-	 * project. documentation on the file format may be found in the [android
+	 * project. Documentation on the file format may be found in the [Android
 	 * documentation
-	 * ](http://developer.android.com/resources/samples/apidemos/res
+	 * ](http://developer.android.com/resources/samples/ApiDemos/res
 	 * /xml/preferences.html)
 	 */
 	public static native void openPreferences()

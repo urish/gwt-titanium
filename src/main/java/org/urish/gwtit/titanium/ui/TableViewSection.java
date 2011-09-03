@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A tableview section object created by the method
- * {@link org.urish.gwtit.titanium.ui.createtableviewsection}.
+ * A TableView section object created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTableViewSection}.
  * 
  * @since 0.9
  */

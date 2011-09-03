@@ -20,13 +20,13 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * Each {@link org.urish.gwtit.titanium.xml.document} has a `doctype` attribute
+ * Each {@link org.urish.gwtit.titanium.xml.Document} has a `doctype` attribute
  * whose value is either 'null' or a
- * {@link org.urish.gwtit.titanium.xml.documenttype} object. this provides an
- * interface to the list of entities that are defined for the document. this
- * conforms to the [dom level
- * 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
- * documenttype.
+ * {@link org.urish.gwtit.titanium.xml.DocumentType} object. This provides an
+ * interface to the list of entities that are defined for the document. This
+ * conforms to the [DOM Level
+ * 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) defintion of a DOM
+ * DocumentType.
  * 
  * <p>
  * Notes: As of version 3.1, Android still does not truly support DTDs. A
@@ -41,9 +41,9 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 	}
 
 	/**
-	 * @return A {@link org.urish.gwtit.titanium.xml.namednodemap} containing
+	 * @return A {@link org.urish.gwtit.titanium.xml.NamedNodeMap} containing
 	 *         the general entities, both external and internal, declared in the
-	 *         dtd. parameter entities are not contained. duplicates are
+	 *         DTD. Parameter entities are not contained. Duplicates are
 	 *         discarded.
 	 */
 	public final native org.urish.gwtit.titanium.xml.NamedNodeMap getEntities()
@@ -60,8 +60,8 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * @return The name of dtd; i.e., the name immediately following the
-	 *         `doctype` keyword.
+	 * @return The name of DTD; i.e., the name immediately following the
+	 *         `DOCTYPE` keyword.
 	 */
 	public final native String getName()
 	/*-{
@@ -69,10 +69,10 @@ public class DocumentType extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * @return A {@link org.urish.gwtit.titanium.xml.namednodemap} containing
-	 *         the notations declared in the dtd. duplicates are discarded.
-	 *         every node in this map also implements the
-	 *         {@link org.urish.gwtit.titanium.xml.notation} interface.
+	 * @return A {@link org.urish.gwtit.titanium.xml.NamedNodeMap} containing
+	 *         the notations declared in the DTD. Duplicates are discarded.
+	 *         Every node in this map also implements the
+	 *         {@link org.urish.gwtit.titanium.xml.Notation} interface.
 	 */
 	public final native org.urish.gwtit.titanium.xml.NamedNodeMap getNotations()
 	/*-{

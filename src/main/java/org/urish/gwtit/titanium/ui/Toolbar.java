@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * A toolbar is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtoolbar}. a toolbar can be placed at
+ * A Toolbar is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createToolbar}. A Toolbar can be placed at
  * the bottom of a window and contain buttons.
  * 
  * @platforms iphone, ipad

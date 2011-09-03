@@ -26,13 +26,13 @@ import org.urish.gwtit.titanium.ui.events.ScrollViewScrollHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A scroll view is used to create a scrollable region of content. views added
- * to the scroll view will be scrolled based on the content size of the scroll
- * view. the scroll view is created by the method
- * {@link org.urish.gwtit.titanium.ui.createscrollview}. note: in android,
- * scroll views can only scroll in one direction, either vertical or horizontal,
- * but not both at the same time. see the
- * {@link org.urish.gwtit.titanium.ui.scrollview.scrolltype} property
+ * A Scroll View is used to create a scrollable region of content. Views added
+ * to the Scroll View will be scrolled based on the content size of the Scroll
+ * View. The Scroll View is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createScrollView}. Note: In Android,
+ * Scroll Views can only scroll in one direction, either vertical or horizontal,
+ * but not both at the same time. See the
+ * {@link org.urish.gwtit.titanium.ui.scrollview.scrollType} property
  * 
  * <p>
  * Notes: If your scrollable region fits within the size of the content area the
@@ -58,7 +58,7 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Boolean to indicate if the scroll view can cancel subview touches
-	 *         in order to scroll instead. default of true
+	 *         in order to scroll instead. Default of true
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getCanCancelEvents()
@@ -169,8 +169,8 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return For explicitly setting the direction -- "vertical" or
-	 *         "horizontal" -- in which the scrollview will scroll. see also the
-	 *         documentation notes for more information concerning how android
+	 *         "horizontal" -- in which the ScrollView will scroll. See also the
+	 *         documentation notes for more information concerning how Android
 	 *         deduces the scroll direction when this property is *not* set.
 	 * 
 	 * @platforms android
@@ -242,7 +242,7 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Scrollto a particular point
+	 * ScrollTo a particular point
 	 * 
 	 * @param x
 	 *            the x point within the view

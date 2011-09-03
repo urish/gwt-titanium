@@ -22,7 +22,7 @@ import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * A pair of coordinates used to describe the location of a
- * {@link org.urish.gwtit.titanium.ui.view}
+ * {@link org.urish.gwtit.titanium.ui.View}
  * 
  * @since 1.8.0
  */

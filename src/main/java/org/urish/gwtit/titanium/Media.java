@@ -26,7 +26,7 @@ import org.urish.gwtit.titanium.events.VolumeHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level media module. the media module is used accessing the device's
+ * The top level Media module. The Media module is used accessing the device's
  * media related functionality such as playing audio or recording video.
  * 
  * @since 0.1
@@ -736,7 +736,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	public static final int VIDEO_TIME_OPTION_NEAREST_KEYFRAME = value_VIDEO_TIME_OPTION_NEAREST_KEYFRAME();
 
 	/**
-	 * @return An instance of {@link org.urish.gwtit.titanium.media.musicplayer}
+	 * @return An instance of {@link org.urish.gwtit.titanium.media.MusicPlayer}
 	 *         representing the app-specific music player.
 	 * @platforms iphone, ipad
 	 */
@@ -777,9 +777,9 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return A constant for the audio session mode to be used. must be set
+	 * @return A constant for the audio session mode to be used. Must be set
 	 *         while the audio session is inactive (no sounds are playing, no
-	 *         listeners for audio properties on the media module, but the ipod
+	 *         listeners for audio properties on the Media module, but the iPod
 	 *         may be active).
 	 */
 	public static native int getAudioSessionMode()
@@ -833,7 +833,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Return the current average microphone level in db or -1 if
+	 * @return Return the current average microphone level in dB or -1 if
 	 *         microphone monitoring is disabled
 	 */
 	public static native float getAverageMicrophonePower()
@@ -873,7 +873,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Return the current microphone level peak power in db or -1 if
+	 * @return Return the current microphone level peak power in dB or -1 if
 	 *         microphone monitoring is disabled
 	 */
 	public static native float getPeakMicrophonePower()
@@ -887,7 +887,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return An instance of {@link org.urish.gwtit.titanium.media.musicplayer}
+	 * @return An instance of {@link org.urish.gwtit.titanium.media.MusicPlayer}
 	 *         representing the system-wide music player.
 	 * @platforms iphone, ipad
 	 */
@@ -958,7 +958,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Hide the device camera ui. this must be called after calling `showcamera`
+	 * Hide the device camera UI. this must be called after calling `showCamera`
 	 * and only when `autohide` is set to false. this method will cause the
 	 * media capture device be hidden.
 	 */
@@ -968,8 +968,8 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Hide the music library. this must be called after calling
-	 * `showmusiclibrary` and only when `autohide` is set to false.
+	 * Hide the music library. This must be called after calling
+	 * `showMusicLibrary` and only when `autohide` is set to false.
 	 * 
 	 * @platforms iphone, ipad
 	 */
@@ -1126,7 +1126,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Use the device camera to capture a photo. this must be called after
-	 * calling `showcamera` and only when `autohide` is set to false. this
+	 * calling `showCamera` and only when `autohide` is set to false. this
 	 * method will cause the media capture device to capture a photo and call
 	 * the `success` callback.
 	 */
@@ -1136,7 +1136,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Take a screen shot of the visible ui on the device
+	 * Take a screen shot of the visible UI on the device
 	 */
 	public static native void takeScreenshot(
 			EventCallback<org.urish.gwtit.titanium.media.ScreenshotCallbackParams> callback)

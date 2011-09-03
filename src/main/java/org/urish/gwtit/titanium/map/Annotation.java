@@ -21,9 +21,9 @@ package org.urish.gwtit.titanium.map;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * An annotation object that is created by the method
- * {@link org.urish.gwtit.titanium.map.createannotation}. this object gives you
- * low level control over annotations that can be added to a map view.
+ * An Annotation object that is created by the method
+ * {@link org.urish.gwtit.titanium.map.createAnnotation}. This object gives you
+ * low level control over annotations that can be added to a Map View.
  * 
  * @since 0.9
  */
@@ -93,6 +93,7 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	 * @return Use {@link org.urish.gwtit.titanium.map.annotation.image}
 	 *         property instead.
 	 * @platforms android
+	 * @deprecated since 1.4
 	 */
 	public final native String getPinImage()
 	/*-{
@@ -106,9 +107,9 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The pin color as one of
-	 *         {@link org.urish.gwtit.titanium.map.annotation_red},
-	 *         {@link org.urish.gwtit.titanium.map.annotation_green} or
-	 *         {@link org.urish.gwtit.titanium.map.annotation_purple}.
+	 *         {@link org.urish.gwtit.titanium.Map.ANNOTATION_RED},
+	 *         {@link org.urish.gwtit.titanium.Map.ANNOTATION_GREEN} or
+	 *         {@link org.urish.gwtit.titanium.Map.ANNOTATION_PURPLE}.
 	 */
 	public final native int getPincolor()
 	/*-{

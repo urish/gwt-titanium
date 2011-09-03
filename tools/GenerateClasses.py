@@ -251,7 +251,10 @@ class JavaClass(object):
 		}
 
 def capitalFirst(s):
-	return s[0].upper() + s[1:]
+	if len(s) > 0:
+		return s[0].upper() + s[1:]
+	else:
+		return s
 
 def mapTypes(s, withConsts = False):
 	TYPE_MAP = {
@@ -295,6 +298,8 @@ def mapTypes(s, withConsts = False):
 			"DecodeStringDict", "EncodeNumberDict",  "EncodeStringDict", "ImageAsCroppedDict",
 			"MediaItemType", "MediaQueryInfoType", "MediaQueryType"]:
 		s = "Titanium.%s" % s
+	if s.startswith("Ti."):
+		s = "Titanium."+ s[3:]
 	if s.startswith("Titanium."):
 		path = s.split(".")
 		if withConsts and path[-1].upper() == path[-1]:
@@ -329,10 +334,12 @@ def mapMethodNames(s):
 	return s
 
 def docStringLink(match):
+	if match.group(1).startswith('Ti.'):
+		print mapTypes(match.group(1), True)
 	return "{@link %s}" % mapTypes(match.group(1), True)
 
 def parseDocString(text):
-	text = re.sub("<(Titanium.[^>]+)>", docStringLink, text)
+	text = re.sub("<((Ti|Titanium).[^>]+)>", docStringLink, text)
 	return re.sub("<[^>]+>", "", text)
 
 def generateProperties(type, isSingleton, types):
@@ -400,20 +407,32 @@ def generateProperties(type, isSingleton, types):
 				}
 	return result
 
+def generateCommonDoc(object):
+	parts = []
+	if 'since' in object:
+		parts += ["@since " + object['since']]
+	if 'deprecated' in object:
+		deprecatedText = "since " + object['deprecated']['since']
+		if 'removed' in object['deprecated']:
+			deprecatedText += ", removed in " + object['deprecated']['removed']
+		parts += ["@deprecated " + deprecatedText]
+	return parts	
+
 def generatePropertyDoc(property):
 	parts = []
+	if 'default' in property:
+		parts += ["@default " + str(property['default'])]
 	if 'description' in property and property['description']:
-		parts.append("@return " + parseDocString(property['description']).capitalize())
+		parts.append("@return " + capitalFirst(parseDocString(property['description'])))
 	if 'platforms' in property:
 		parts += ["@platforms " + ", ".join(property['platforms'])]
-	if 'since' in property:
-		parts += ["@since " + property['since']]
+	parts += generateCommonDoc(property)
 	return "\n * ".join(parts)
 
 def generateMethodDoc(method, paramNames):
 	parts = []
 	if 'description' in method:
-		parts.append(parseDocString(method['description']).capitalize())
+		parts.append(capitalFirst(parseDocString(method['description'])))
 	if 'platforms' in method:
 		parts += ["@platforms " + ", ".join(method['platforms'])]
 	if 'parameters' in method:
@@ -424,11 +443,12 @@ def generateMethodDoc(method, paramNames):
 		descr = parseDocString(method['returns']['description'])
 		if descr:
 			parts.append("@return " + descr)
+	parts += generateCommonDoc(method)
 	return "\n * ".join(parts)
 
 def generateClassDoc(typeInfo):
 	parts = [
-		parseDocString(typeInfo['description']).capitalize()
+		capitalFirst(parseDocString(typeInfo['description']))
 	]
 	if 'notes' in typeInfo:
 		parts += ["<p>", "Notes: " + typeInfo['notes']]

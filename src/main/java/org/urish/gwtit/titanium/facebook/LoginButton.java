@@ -20,12 +20,12 @@ package org.urish.gwtit.titanium.facebook;
 
 
 /**
- * The login button created by
- * {@link org.urish.gwtit.titanium.facebook.createloginbutton}. this is a
- * facebook-themed button that does not require a click event handler or any
- * listeners. it "just works" and changes its label to reflect the current state
- * of the facebook session. for example, if the user is already logged in, this
- * button will show "logout".
+ * The Login Button created by
+ * {@link org.urish.gwtit.titanium.facebook.createLoginButton}. This is a
+ * Facebook-themed button that does not require a click event handler or any
+ * listeners. It "just works" and changes its label to reflect the current state
+ * of the Facebook session. For example, if the user is already logged in, this
+ * button will show "Logout".
  * <p>
  * Notes: See the examples in the <Titanium.Facebook> documentation.
  * 
@@ -37,7 +37,7 @@ public class LoginButton extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Set to "wide" to show a wider version of the button that displays
-	 *         "connect with facebook" instead of just "connect".
+	 *         "Connect with Facebook" instead of just "Connect".
 	 */
 	public final native String getStyle()
 	/*-{

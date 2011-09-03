@@ -20,10 +20,10 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A key-value paired map that maps string objects to
- * {@link org.urish.gwtit.titanium.xml.node} objects. this conforms to the [dom
- * level 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
- * namednodemap.
+ * A key-value paired map that maps String objects to
+ * {@link org.urish.gwtit.titanium.xml.Node} objects. This conforms to the [DOM
+ * Level 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) defintion of a DOM
+ * NamedNodeMap.
  * 
  * @since 0.9
  */
@@ -32,7 +32,7 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The number of nodes in the map. the valid range of child node
+	 * @return The number of nodes in the map. The valid range of child node
 	 *         indices is 0-`length`-1, inclusive.
 	 */
 	public final native float getLength()
@@ -54,8 +54,8 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Adds a node using its `nodename` attribute. if a node with that name is
-	 * already present, it is replaced. throws an exception if the argument is
+	 * Adds a node using its `nodeName` attribute. If a node with that name is
+	 * already present, it is replaced. Throws an exception if the argument is
 	 * from a different document, the map is read-only, or the argument is an
 	 * attribute of another element.
 	 * 
@@ -69,7 +69,7 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Removes a node from the map specified by name. when this map contains
+	 * Removes a node from the map specified by name. When this map contains
 	 * attributes attached to an element, if the removed attribtue is known to
 	 * have a default, it is replaced with that value.
 	 * 
@@ -83,8 +83,8 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Retrieves the node at the specified index of the map. note that
-	 * namednodemaps are not ordered.
+	 * Retrieves the node at the specified index of the map. Note that
+	 * NamedNodeMaps are not ordered.
 	 * 
 	 * @param index
 	 *            The index of the node to retrieve.
@@ -97,7 +97,7 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Retrieves a node specified by name and namespace. returns `null` if no
+	 * Retrieves a node specified by name and namespace. Returns `null` if no
 	 * matching node is in the map.
 	 * 
 	 * @param namespaceURI
@@ -112,8 +112,8 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Adds a node using its `namespaceuri` and `localname` attributes. if a
-	 * node with that name is already present, it is replaced. throws an
+	 * Adds a node using its `namespaceURI` and `localName` attributes. If a
+	 * node with that name is already present, it is replaced. Throws an
 	 * exception if the argument is from a different document, the map is
 	 * read-only, or the argument is an attribute of another element.
 	 * 
@@ -127,10 +127,10 @@ public class NamedNodeMap extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Removes a node from the map specified by local name and namespace uri.
-	 * when this map contains attributes attached to an element, if the removed
+	 * Removes a node from the map specified by local name and namespace URI.
+	 * When this map contains attributes attached to an element, if the removed
 	 * attribtue is known to have a default, it is replaced with that value.
-	 * returns the node removed from the map, or `null` if there is no
+	 * Returns the node removed from the map, or `null` if there is no
 	 * corresponding node.
 	 * 
 	 * @param namespaceURI

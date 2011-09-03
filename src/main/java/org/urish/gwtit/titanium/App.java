@@ -27,7 +27,7 @@ import org.urish.gwtit.titanium.events.ResumedHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level app module. the app module is mainly used for accessing
+ * The top level App module. The App module is mainly used for accessing
  * information about the application at runtime.
  * 
  * @since 0.1
@@ -77,8 +77,8 @@ public class App extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The application's app id as specified in titanium developer or
-	 *         titanium studio
+	 * @return The application's app id as specified in Titanium Developer or
+	 *         Titanium Studio
 	 */
 	public static native String getId()
 	/*-{
@@ -92,7 +92,7 @@ public class App extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Property for controlling whether the phone screen will be locked
-	 *         on idle time. can be set to true to disable the timer
+	 *         on idle time. Can be set to true to disable the timer
 	 */
 	public static native boolean getIdleTimerDisabled()
 	/*-{

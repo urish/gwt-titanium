@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.database;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The database instance returned by
+ * The Database instance returned by
  * {@link org.urish.gwtit.titanium.database.open} or
  * {@link org.urish.gwtit.titanium.database.install}.
  * 
@@ -32,7 +32,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The last row identifier by the last insert query
+	 * @return The last row identifier by the last INSERT query
 	 */
 	public final native int getLastInsertRowId()
 	/*-{
@@ -80,7 +80,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Execute a sql statement against the database and returns a resultset
+	 * Execute a SQL statement against the database and returns a ResultSet
 	 * 
 	 * @param sql
 	 *            the SQL to execute
@@ -91,7 +91,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Execute a sql statement against the database and returns a resultset
+	 * Execute a SQL statement against the database and returns a ResultSet
 	 * 
 	 * @param sql
 	 *            the SQL to execute
@@ -106,9 +106,9 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Remove the database files for this instance from disk. warning: this is a
-	 * destructive operation and cannot be reversed. all data in the database
-	 * will be lost upon calling this function. use with caution.
+	 * Remove the database files for this instance from disk. WARNING: this is a
+	 * destructive operation and cannot be reversed. All data in the database
+	 * will be lost upon calling this function. Use with caution.
 	 */
 	public final native void remove()
 	/*-{

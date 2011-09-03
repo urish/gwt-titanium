@@ -20,11 +20,11 @@ package org.urish.gwtit.titanium.ui.ios;
 
 
 /**
- * The 3dmatrix is created by
- * {@link org.urish.gwtit.titanium.ui.ios.create3dmatrix}. the 3d matrix is an
- * object for holding values for an affine transformation matrix. a 3d matrix is
+ * The 3DMatrix is created by
+ * {@link org.urish.gwtit.titanium.ui.ios.create3DMatrix}. The 3D Matrix is an
+ * object for holding values for an affine transformation matrix. A 3D matrix is
  * used to rotate, scale, translate, or skew the objects in a three-dimensional
- * space. a 3d matrix is represented by a 4 by 4 matrix. because the forth
+ * space. A 3D matrix is represented by a 4 by 4 matrix. Because the forth
  * column is always (0,0,1), the data structure contains values for only the
  * first three columns.
  * <p>

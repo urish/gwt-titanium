@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A label is created by the method
- * {@link org.urish.gwtit.titanium.ui.createlabel}.
+ * A Label is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createLabel}.
  * 
  * @since 0.8
  */
@@ -31,8 +31,8 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return One of ti.ui.android.linkify constants. automatically create
-	 *         clickable links for the specified type. (android only)
+	 * @return One of Ti.UI.Android.LINKIFY constants. Automatically create
+	 *         clickable links for the specified type. (Android Only)
 	 * @platforms android
 	 */
 	public final native int getAutoLink()
@@ -115,8 +115,9 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default False
 	 * @return Turn on/off the addition of ellipses at the end of the label if
-	 *         the text is too large to fit. (android only, default false)
+	 *         the text is too large to fit. (Android Only, default false)
 	 * @platforms android
 	 */
 	public final native boolean getEllipsize()
@@ -156,7 +157,7 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Simple html formatting. (android only)
+	 * @return Simple html formatting. (Android Only)
 	 * @platforms android
 	 */
 	public final native String getHtml()
@@ -171,7 +172,7 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return The minimum size of the font when the font is sized based on the
-	 *         contents. enables font scaling to fit and forces the label
+	 *         contents. Enables font scaling to fit and forces the label
 	 *         content to be limited to a single line
 	 */
 	public final native int getMinimumFontSize()
@@ -256,7 +257,8 @@ public class Label extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Turn on/off word wrapping in the label. (android only - default
+	 * @default True
+	 * @return Turn on/off word wrapping in the label. (Android Only - default
 	 *         true)
 	 * @platforms android
 	 */

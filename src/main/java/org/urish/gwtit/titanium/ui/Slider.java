@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import org.urish.gwtit.titanium.ui.events.SliderChangeHandler;
 
 /**
- * A slider is created by the method
- * {@link org.urish.gwtit.titanium.ui.createslider}.
+ * A Slider is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createSlider}.
  * 
  * @since 0.8
  */
@@ -151,8 +151,8 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Value can't be moved higher than maxrange. maxrange equals max by
-	 *         default. (android)
+	 * @return Value can't be moved higher than maxRange. maxRange equals max by
+	 *         default. (Android)
 	 * @platforms android
 	 */
 	public final native int getMaxRange()
@@ -179,8 +179,8 @@ public class Slider extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Value can't be moved lower than minrange. minrange equals min by
-	 *         default. (android)
+	 * @return Value can't be moved lower than minRange. minRange equals min by
+	 *         default. (Android)
 	 * @platforms android
 	 */
 	public final native int getMinRange()

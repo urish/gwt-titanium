@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Buffer is a container for raw data. a buffer is created by the method
- * `titanium.createbuffer`.
+ * Buffer is a container for raw data. A buffer is created by the method
+ * `Titanium.createBuffer`.
  * 
  * @since 1.7
  */
@@ -31,11 +31,13 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The length of the buffer in bytes. when `length` is modified the
+	 * @default 0, unless `value` is specified, at which case the length of the
+	 *          encoded data is used
+	 * @return The length of the buffer in bytes. When `length` is modified the
 	 *         buffer will be re-sized while preserving existing data where
-	 *         possible. if the new buffer length is smaller than the length of
+	 *         possible. If the new buffer length is smaller than the length of
 	 *         the existing data then the existing data will be truncated down
-	 *         to the size of the new buffer. resizing the buffer via setting
+	 *         to the size of the new buffer. Resizing the buffer via setting
 	 *         length should be used sparingly due to the associated overhead.
 	 */
 	public final native float getLength()
@@ -59,10 +61,10 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Data to be encoded. if `value` is a number, `type` must also be
+	 * @return Data to be encoded. If `value` is a Number, `type` must also be
 	 *         set. (this is simply a convenient way of calling
-	 *         {@link org.urish.gwtit.titanium.codec.encodestring} or
-	 *         {@link org.urish.gwtit.titanium.codec.encodenumber}).
+	 *         {@link org.urish.gwtit.titanium.codec.encodeString} or
+	 *         {@link org.urish.gwtit.titanium.codec.encodeNumber}).
 	 */
 	public final native JavaScriptObject getValue()
 	/*-{
@@ -70,9 +72,9 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The type of data encoding to use with `value`. required when
-	 *         `value` is a number. when `value` is a string,
-	 *         {@link org.urish.gwtit.titanium.codec.charset_utf8} is the
+	 * @return The type of data encoding to use with `value`. Required when
+	 *         `value` is a Number. When `value` is a String,
+	 *         {@link org.urish.gwtit.titanium.Codec.CHARSET_UTF8} is the
 	 *         default.
 	 */
 	public final native String getType()
@@ -86,7 +88,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The byte order of this buffer. the os native byte order is used
+	 * @return The byte order of this buffer. The OS native byte order is used
 	 *         by default.
 	 */
 	public final native float getByteOrder()
@@ -100,7 +102,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Appends `sourcebuffer` to the current buffer. buffer is grown dynamically
+	 * Appends `sourceBuffer` to the current buffer. Buffer is grown dynamically
 	 * to accommodate the additional data if need be.
 	 * 
 	 * @param sourceBuffer
@@ -113,8 +115,8 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Same as normal append except this allows appending only `sourcelength`
-	 * bytes from the `sourcebuffer` starting at `sourceoffset`.
+	 * Same as normal append except this allows appending only `sourceLength`
+	 * bytes from the `sourceBuffer` starting at `sourceOffset`.
 	 * 
 	 * @param sourceBuffer
 	 *            buffer to append to current buffer
@@ -131,7 +133,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Inserts `sourcebuffer` into the current buffer at `offset`. buffer is
+	 * Inserts `sourceBuffer` into the current buffer at `offset`. Buffer is
 	 * grown to accommodate the new data.
 	 * 
 	 * @param sourceBuffer
@@ -146,8 +148,8 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Inserts `sourcelength` amount of data starting at `sourceoffset` from
-	 * `sourcebuffer` into current buffer at `offset`. buffer is grown to
+	 * Inserts `sourceLength` amount of data starting at `sourceOffset` from
+	 * `sourceBuffer` into current buffer at `offset`. Buffer is grown to
 	 * accommodate the new data.
 	 * 
 	 * @param sourceBuffer
@@ -167,9 +169,9 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Copies the contents of `sourcebuffer` into the current buffer at
+	 * Copies the contents of `sourceBuffer` into the current buffer at
 	 * `offset`. will not expand buffer if there is not enough room in the
-	 * current buffer to accomodate all the requested data from `sourcebuffer`.
+	 * current buffer to accomodate all the requested data from `sourceBuffer`.
 	 * 
 	 * @param sourceBuffer
 	 *            buffer to copy into current buffer
@@ -183,10 +185,10 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Copies `sourcelength` contents from `sourcebuffer` starting at
-	 * `sourceoffset` into the current buffer at `offset`. will not expand
+	 * Copies `sourceLength` contents from `sourceBuffer` starting at
+	 * `sourceOffset` into the current buffer at `offset`. will not expand
 	 * buffer if there is not enough room in the current buffer to accomodate
-	 * all the request data from `sourcebuffer`.
+	 * all the request data from `sourceBuffer`.
 	 * 
 	 * @param sourceBuffer
 	 *            buffer to copy into current buffer
@@ -227,7 +229,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Fills buffer with `fillbyte`
+	 * Fills buffer with `fillByte`
 	 * 
 	 * @param fillByte
 	 *            byte to fill buffer with
@@ -238,7 +240,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Fills buffer starting from `offset` until `length` number of `fillbyte`
+	 * Fills buffer starting from `offset` until `length` number of `fillByte`
 	 * has been written or the end of the buffer is reached
 	 * 
 	 * @param fillByte
@@ -262,7 +264,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Releases the space allocated to the buffer, sets length to 0. this is
+	 * Releases the space allocated to the buffer, sets length to 0. This is
 	 * effectively the same as `buffer.length = 0`
 	 */
 	public final native void release()
@@ -271,7 +273,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Converts this buffer to a string
+	 * Converts this buffer to a String
 	 */
 	public final native String toString_()
 	/*-{
@@ -279,7 +281,7 @@ public class Buffer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Converts this buffer to a {@link org.urish.gwtit.titanium.blob}
+	 * Converts this buffer to a {@link org.urish.gwtit.titanium.Blob}
 	 */
 	public final native org.urish.gwtit.titanium.Blob toBlob()
 	/*-{

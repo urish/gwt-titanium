@@ -21,11 +21,11 @@ package org.urish.gwtit.titanium.ui;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The 2dmatrix is created by {@link org.urish.gwtit.titanium.ui.create2dmatrix}
- * . the 2d matrix is an object for holding values for an affine transformation
- * matrix. a 2d matrix is used to rotate, scale, translate, or skew the objects
- * in a two-dimensional space. a 2d matrix is represented by a 3 by 3 matrix.
- * because the third column is always (0,0,1), the data structure contains
+ * The 2DMatrix is created by {@link org.urish.gwtit.titanium.ui.create2DMatrix}
+ * . The 2D Matrix is an object for holding values for an affine transformation
+ * matrix. A 2D matrix is used to rotate, scale, translate, or skew the objects
+ * in a two-dimensional space. A 2D matrix is represented by a 3 by 3 matrix.
+ * Because the third column is always (0,0,1), the data structure contains
  * values for only the first two columns.
  * <p>
  * Notes: You create an `identity matrix` by creating a 2D Matrix with an empty

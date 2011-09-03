@@ -21,12 +21,12 @@ package org.urish.gwtit.titanium.ui.ipad;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A documentviewer provides in-app support for managing user interactions with
- * files in the local system. for example, an email program might use this class
- * to allow the user to preview attachments and open them in other apps. use
+ * A DocumentViewer provides in-app support for managing user interactions with
+ * files in the local system. For example, an email program might use this class
+ * to allow the user to preview attachments and open them in other apps. Use
  * this class to present an appropriate user interface for previewing or
- * printing a specified file. the documentviewere is created by the method
- * {@link org.urish.gwtit.titanium.ui.ipad.createdocumentviewer}.
+ * printing a specified file. The DocumentViewere is created by the method
+ * {@link org.urish.gwtit.titanium.ui.ipad.createDocumentViewer}.
  * 
  * @platforms ipad
  * @since 1.8

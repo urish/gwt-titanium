@@ -23,9 +23,9 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Module to notify users of events that happen. it is a thin wrapper on
- * [notificationmanager
- * ](http://developer.android.com/reference/android/app/notificationmanager
+ * Module to notify users of events that happen. It is a thin wrapper on
+ * [NotificationManager
+ * ](http://developer.android.com/reference/android/app/NotificationManager
  * .html).
  * <p>
  * Notes: The constants above are taken from

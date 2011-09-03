@@ -23,11 +23,11 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level analytics module. the analytics module is used for transmitting
- * developer-defined analytics event for your application to the appcelerator
- * analytics product. it can be used to augment additional context or
+ * The top level Analytics module. The Analytics module is used for transmitting
+ * developer-defined Analytics event for your application to the Appcelerator
+ * Analytics product. It can be used to augment additional context or
  * application-specific information which can then be accessed during analysis
- * using analytics.
+ * using Analytics.
  * 
  * @since 0.1
  */

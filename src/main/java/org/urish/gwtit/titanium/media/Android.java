@@ -33,11 +33,11 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * Use the [android
-	 * mediascannerconnection](http://developer.android.com/reference
-	 * /android/media/mediascannerconnection.html) to request immediate scan of
+	 * Use the [Android
+	 * MediaScannerConnection](http://developer.android.com/reference
+	 * /android/media/MediaScannerConnection.html) to request immediate scan of
 	 * particular files so that they become available to the appropriate media
-	 * providers (gallery, etc.).
+	 * providers (Gallery, etc.).
 	 * 
 	 * @param paths
 	 *            Array of paths to the files you want to be scanned.

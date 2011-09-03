@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 
 /**
- * A set of constants for the animation styles used for transition on table view
+ * A set of constants for the Animation Styles used for transition on table view
  * rows.
  * 
  * @platforms iphone, ipad

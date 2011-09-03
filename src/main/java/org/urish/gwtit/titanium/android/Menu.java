@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.android;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The titanium binding of an [android
- * menu](http://developer.android.com/reference/android/view/menu.html)
+ * The Titanium binding of an [Android
+ * Menu](http://developer.android.com/reference/android/view/Menu.html)
  * 
  * @platforms android
  * @since 1.5
@@ -32,7 +32,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return Array of {@link org.urish.gwtit.titanium.android.menuitem}
+	 * @return Array of {@link org.urish.gwtit.titanium.android.MenuItem}
 	 */
 	public final native org.urish.gwtit.titanium.android.MenuItem[] getItems()
 	/*-{
@@ -45,7 +45,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Creates a {@link org.urish.gwtit.titanium.android.menuitem} from the
+	 * Creates a {@link org.urish.gwtit.titanium.android.MenuItem} from the
 	 * passed creation options.
 	 * 
 	 * @param options
@@ -58,8 +58,8 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Clear all items from the menu. you should release all references you have
-	 * retained to {@link org.urish.gwtit.titanium.android.menuitem} previously
+	 * Clear all items from the menu. You should release all references you have
+	 * retained to {@link org.urish.gwtit.titanium.android.MenuItem} previously
 	 * created.
 	 */
 	public final native void clear()
@@ -76,7 +76,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Locate a {@link org.urish.gwtit.titanium.android.menuitem}
+	 * Locate a {@link org.urish.gwtit.titanium.android.MenuItem}
 	 * 
 	 * @param item
 	 *            integer itemId or
@@ -88,7 +88,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Return the {@link org.urish.gwtit.titanium.android.menuitem} at a
+	 * Return the {@link org.urish.gwtit.titanium.android.MenuItem} at a
 	 * specific index
 	 * 
 	 * @param index
@@ -108,8 +108,8 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Remove all {@link org.urish.gwtit.titanium.android.menuitem} with the
-	 * specified groupid
+	 * Remove all {@link org.urish.gwtit.titanium.android.MenuItem} with the
+	 * specified groupId
 	 * 
 	 * @param groupId
 	 *            groupId of items to remove.
@@ -120,8 +120,8 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Remove a specific {@link org.urish.gwtit.titanium.android.menuitem} by
-	 * the specified itemid
+	 * Remove a specific {@link org.urish.gwtit.titanium.android.MenuItem} by
+	 * the specified itemId
 	 * 
 	 * @param itemId
 	 *            itemId of item to remove.
@@ -133,7 +133,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Enable or disable a group of
-	 * {@link org.urish.gwtit.titanium.android.menuitem} by groupid
+	 * {@link org.urish.gwtit.titanium.android.MenuItem} by groupId
 	 * 
 	 * @param groupId
 	 *            groupId to enable or disable
@@ -146,8 +146,8 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Show or hide a group of {@link org.urish.gwtit.titanium.android.menuitem}
-	 * by groupid
+	 * Show or hide a group of {@link org.urish.gwtit.titanium.android.MenuItem}
+	 * by groupId
 	 * 
 	 * @param groupId
 	 *            groupId to enable or disable
@@ -160,7 +160,7 @@ public class Menu extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Number of {@link org.urish.gwtit.titanium.android.menuitem} in this menu
+	 * Number of {@link org.urish.gwtit.titanium.android.MenuItem} in this menu
 	 */
 	public final native float size()
 	/*-{

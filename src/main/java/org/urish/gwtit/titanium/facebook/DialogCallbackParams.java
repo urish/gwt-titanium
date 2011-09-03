@@ -52,7 +52,7 @@ public class DialogCallbackParams extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The data returned by facebook
+	 * @return The data returned by Facebook
 	 */
 	public final native String getResult()
 	/*-{

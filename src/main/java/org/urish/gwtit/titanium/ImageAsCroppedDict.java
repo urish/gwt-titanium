@@ -21,13 +21,14 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Options for {@link org.urish.gwtit.titanium.blob.imageascropped}
+ * Options for {@link org.urish.gwtit.titanium.blob.imageAsCropped}
  */
 public class ImageAsCroppedDict extends JavaScriptObject {
 	protected ImageAsCroppedDict() {
 	}
 
 	/**
+	 * @default The image width
 	 * @return The width to crop this image to.
 	 */
 	public final native float getWidth()
@@ -41,6 +42,7 @@ public class ImageAsCroppedDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default The image height
 	 * @return The height to crop this image to.
 	 */
 	public final native float getHeight()
@@ -54,6 +56,7 @@ public class ImageAsCroppedDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default The center of the cropped rectangle.
 	 * @return The x point within the image to crop.
 	 */
 	public final native float getX()
@@ -67,6 +70,7 @@ public class ImageAsCroppedDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default The middle of the cropped rectangle.
 	 * @return The y point within the image to crop.
 	 */
 	public final native float getY()

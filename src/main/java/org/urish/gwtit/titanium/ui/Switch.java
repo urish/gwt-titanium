@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.ui;
 import org.urish.gwtit.titanium.ui.events.SwitchChangeHandler;
 
 /**
- * A switch is created by the method
- * {@link org.urish.gwtit.titanium.ui.createswitch}.
+ * A Switch is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createSwitch}.
  * <p>
  * Notes:
  * 
@@ -46,7 +46,11 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return One of or (default).
+	 * @return One of
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SWITCH_STYLE_CHECKBOX}
+	 *         or
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SWITCH_STYLE_TOGGLEBUTTON}
+	 *         (default).
 	 * @platforms android
 	 */
 	public final native int getStyle()
@@ -60,7 +64,8 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Text to display with checkbox. used if style is
+	 * @return Text to display with checkbox. Used if style is
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SWITCH_STYLE_CHECKBOX}
 	 * @platforms android
 	 */
 	public final native String getTitle()
@@ -75,6 +80,7 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Text to display when value is `false`. used if style is
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SWITCH_STYLE_TOGGLEBUTTON}
 	 * @platforms android
 	 */
 	public final native String getTitleOff()
@@ -89,6 +95,7 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Text to display when value is `true`. used if style is
+	 *         {@link org.urish.gwtit.titanium.ui.Android.SWITCH_STYLE_TOGGLEBUTTON}
 	 * @platforms android
 	 */
 	public final native String getTitleOn()

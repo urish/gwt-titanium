@@ -26,7 +26,7 @@ import org.urish.gwtit.titanium.events.LocationHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level geolocation module. the geolocation module is used for
+ * The top level Geolocation module. The Geolocation module is used for
  * accessing device location based information.
  * 
  * @since 0.1
@@ -163,7 +163,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return The minimum change of position (in meters) before a 'location'
-	 *         event is fired. default is 0, meaning that location events are
+	 *         event is fired. Default is 0, meaning that location events are
 	 *         continuously generated.
 	 */
 	public static native double getDistanceFilter()
@@ -178,7 +178,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return The minium change of heading (in degrees) before a 'heading'
-	 *         event is fired. default is 0, meaning that heading events are
+	 *         event is fired. Default is 0, meaning that heading events are
 	 *         continuously generated.
 	 */
 	public static native double getHeadingFilter()
@@ -193,9 +193,9 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Returns an authorization constant indicating if the application
-	 *         has access to location services. always returns
-	 *         authorization_unknown on pre-4.2 devices. attempting to
-	 *         re-authorize when authorization_restricted will lead to issues
+	 *         has access to location services. Always returns
+	 *         AUTHORIZATION_UNKNOWN on pre-4.2 devices. Attempting to
+	 *         re-authorize when AUTHORIZATION_RESTRICTED will lead to issues
 	 * @platforms iphone, ipad
 	 */
 	public static native int getLocationServicesAuthorization()
@@ -223,7 +223,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Allows setting of the preferred location provider. returns
+	 * @return Allows setting of the preferred location provider. Returns
 	 *         undefined when the preferred provider is auto-detected
 	 */
 	public static native String getPreferredProvider()
@@ -238,8 +238,8 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return This property informs the end-user why location services are
-	 *         being requested by the application. this string will be display
-	 *         in the permission dialog. this property is required starting in
+	 *         being requested by the application. This string will be display
+	 *         in the permission dialog. This property is REQUIRED starting in
 	 *         4.0.
 	 * @platforms iphone, ipad
 	 */
@@ -254,7 +254,7 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Returns true if the calibration ui can show
+	 * @return Returns true if the calibration UI can show
 	 */
 	public static native boolean getShowCalibration()
 	/*-{
@@ -287,8 +287,8 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Retrieve the last known location from the device. on android, the radios
-	 * are not turned on to update the location. on ios the radios may be used
+	 * Retrieve the last known location from the device. On Android, the radios
+	 * are not turned on to update the location. On iOS the radios MAY be used
 	 * if the location is too "old".
 	 */
 	public static native void getCurrentPosition(EventCallback<org.urish.gwtit.titanium.events.LocationEvent> callback)

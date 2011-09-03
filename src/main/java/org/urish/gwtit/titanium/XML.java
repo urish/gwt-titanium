@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level xml module. the xml module is used parsing and processing
- * xml-based content.
+ * The top level XML module. The XML module is used parsing and processing
+ * XML-based content.
  * 
  * @since 0.9
  */
@@ -98,8 +98,8 @@ public class XML extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Parses an xml string into a {@link org.urish.gwtit.titanium.xml.document}
-	 * object. throws an exception if the string is unable to be parsed into a
+	 * Parses an XML string into a {@link org.urish.gwtit.titanium.xml.Document}
+	 * object. Throws an exception if the string is unable to be parsed into a
 	 * valid document.
 	 * 
 	 * @param xml
@@ -111,7 +111,7 @@ public class XML extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Serializes a {@link org.urish.gwtit.titanium.xml.document} object into a
+	 * Serializes a {@link org.urish.gwtit.titanium.xml.Document} object into a
 	 * string.
 	 * 
 	 * @param node

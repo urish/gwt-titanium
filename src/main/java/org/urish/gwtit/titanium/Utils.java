@@ -23,7 +23,7 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level utils module. the utils module is a set of common javascript
+ * The top level Utils module. The Utils module is a set of common JavaScript
  * functions that are useful for applications.
  * 
  * @since 0.9
@@ -33,7 +33,7 @@ public class Utils extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * Decode a base64 string
+	 * Decode a Base64 string
 	 * 
 	 * @param str
 	 *            the string to use for the input
@@ -44,7 +44,7 @@ public class Utils extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Encode a string into base64
+	 * Encode a string into Base64
 	 * 
 	 * @param str
 	 *            the string to use for the input
@@ -55,7 +55,7 @@ public class Utils extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Compute a md5 hash algorithm against the input and return a hex-based
+	 * Compute a MD5 hash algorithm against the input and return a hex-based
 	 * string
 	 * 
 	 * @param str

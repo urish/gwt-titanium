@@ -23,9 +23,9 @@ import org.urish.gwtit.titanium.ui.events.CoverFlowViewChangeHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The cover flow view is container for showing animated, three dimensional
- * images in a nice ui. the cover flow view is created by the method
- * {@link org.urish.gwtit.titanium.ui.ios.createcoverflowview}.
+ * The Cover Flow view is container for showing animated, three dimensional
+ * images in a nice UI. The Cover Flow view is created by the method
+ * {@link org.urish.gwtit.titanium.ui.ios.createCoverFlowView}.
  * <p>
  * Notes:
  * 

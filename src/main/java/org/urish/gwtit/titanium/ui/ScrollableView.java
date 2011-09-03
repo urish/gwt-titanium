@@ -23,11 +23,11 @@ import org.urish.gwtit.titanium.ui.events.ScrollableViewScrollHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The scrollable view provides a view that supports horizontal scrolling on one
- * or more views in a gesture motion. the scrollable view also optionally
+ * The Scrollable View provides a view that supports horizontal scrolling on one
+ * or more views in a gesture motion. The Scrollable View also optionally
  * supports a visual paging control to indicate the page that the view is
- * visible. the scrollable view is created by the method
- * {@link org.urish.gwtit.titanium.ui.createscrollableview}.
+ * visible. The Scrollable View is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createScrollableView}.
  * 
  * @since 0.8
  */
@@ -36,10 +36,10 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return The number of views to cache (prerender). views are rendered in
-	 *         the range (currentpage +/- (cachesize - 1)/2), rounded down for
-	 *         even values (i.e. cachesize=4 renders 3 views into the cache).
-	 *         keep in mind that improved performance (larger cache) will lead
+	 * @return The number of views to cache (prerender). Views are rendered in
+	 *         the range (currentPage +/- (cacheSize - 1)/2), ROUNDED DOWN for
+	 *         even values (i.e. cacheSize=4 renders 3 views into the cache).
+	 *         Keep in mind that improved performance (larger cache) will lead
 	 *         to faster performance, but more memory usage.
 	 * @platforms iphone, ipad
 	 */
@@ -108,7 +108,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Boolean to indicate whether the paging control ui is visible
+	 * @return Boolean to indicate whether the paging control UI is visible
 	 */
 	public final native boolean getShowPagingControl()
 	/*-{
@@ -134,7 +134,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Add a new view to the scrollable view
+	 * Add a new view to the Scrollable View
 	 * 
 	 * @param view
 	 *            the view to add
@@ -145,7 +145,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Remove an existing view from the scrollable view
+	 * Remove an existing view from the Scrollable View
 	 * 
 	 * @param view
 	 *            the view to remove

@@ -36,8 +36,8 @@ import org.urish.gwtit.titanium.media.events.VideoPlayerErrorHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The videoplayer object is returned by
- * {@link org.urish.gwtit.titanium.media.createvideoplayer} and is useful for
+ * The VideoPlayer object is returned by
+ * {@link org.urish.gwtit.titanium.media.createVideoPlayer} and is useful for
  * playing videos.
  * <p>
  * Notes: Starting in iPhone 3.2 SDK, the video player can be embedded in any
@@ -69,7 +69,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Indicates if a movie should automatically start playback when it
 	 *         is likely to finish uninterrupted based on e.g. network
-	 *         conditions. defaults to true.
+	 *         conditions. Defaults to true.
 	 */
 	public final native boolean getAutoplay()
 	/*-{
@@ -83,6 +83,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Use url property instead.
+	 * @deprecated since 1.4.0
 	 */
 	public final native String getContentURL()
 	/*-{
@@ -122,7 +123,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The end time of movie playback. defaults to nan, which indicates
+	 * @return The end time of movie playback. Defaults to NaN, which indicates
 	 *         natural end time of the movie.
 	 */
 	public final native double getEndPlaybackTime()
@@ -137,8 +138,8 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Determines if the movie is presented in the entire screen
-	 *         (obscuring all other application content). default is false.
-	 *         setting this property to true before the movie player's view is
+	 *         (obscuring all other application content). Default is false.
+	 *         Setting this property to true before the movie player's view is
 	 *         visible will have no effect.
 	 */
 	public final native boolean getFullscreen()
@@ -152,7 +153,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The start time of movie playback. defaults to nan, indicating the
+	 * @return The start time of movie playback. Defaults to NaN, indicating the
 	 *         natural start time of the movie.
 	 */
 	public final native double getInitialPlaybackTime()
@@ -179,7 +180,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The media object, either a file or blob.
+	 * @return The media object, either a File or Blob.
 	 */
 	public final native JavaScriptObject getMedia()
 	/*-{
@@ -192,8 +193,8 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The style of the playback controls. defaults to
-	 *         {@link org.urish.gwtit.titanium.media.video_control_default}
+	 * @return The style of the playback controls. Defaults to
+	 *         {@link org.urish.gwtit.titanium.Media.VIDEO_CONTROL_DEFAULT}
 	 */
 	public final native int getMediaControlStyle()
 	/*-{
@@ -207,7 +208,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return The types of media in the movie, or
-	 *         {@link org.urish.gwtit.titanium.media.video_media_type_none} if
+	 *         {@link org.urish.gwtit.titanium.Media.VIDEO_MEDIA_TYPE_NONE} if
 	 *         not known.
 	 */
 	public final native int getMediaTypes()
@@ -221,10 +222,10 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Deprecated in 3.2+ of the iphone sdk - use `mediacontrolstyle`.
-	 *         provides the ability to set the control mode of the movie player.
-	 *         defaults to
-	 *         {@link org.urish.gwtit.titanium.media.video_control_default}.
+	 * @return Deprecated in 3.2+ of the iPhone SDK - use `mediaControlStyle`.
+	 *         Provides the ability to set the control mode of the movie player.
+	 *         Defaults to
+	 *         {@link org.urish.gwtit.titanium.Media.VIDEO_CONTROL_DEFAULT}.
 	 */
 	public final native int getMovieControlMode()
 	/*-{
@@ -238,7 +239,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Returns a dictionary with properties `width` and `height`.
-	 *         returns the natural size of the movie or 0 for both properties if
+	 *         Returns the natural size of the movie or 0 for both properties if
 	 *         not known or applicable.
 	 */
 	public final native org.urish.gwtit.client.util.Size getNaturalSize()
@@ -293,8 +294,8 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Determines how the movie player repeats when reaching the end of
-	 *         playback. defaults to
-	 *         {@link org.urish.gwtit.titanium.media.video_repeat_mode_none}.
+	 *         playback. Defaults to
+	 *         {@link org.urish.gwtit.titanium.Media.VIDEO_REPEAT_MODE_NONE}.
 	 */
 	public final native int getRepeatMode()
 	/*-{
@@ -307,8 +308,8 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Determines how the content scales to fit the view. defaults to
-	 *         {@link org.urish.gwtit.titanium.media.video_scaling_aspect_fit}.
+	 * @return Determines how the content scales to fit the view. Defaults to
+	 *         {@link org.urish.gwtit.titanium.Media.VIDEO_SCALING_ASPECT_FIT}.
 	 */
 	public final native int getScalingMode()
 	/*-{
@@ -321,9 +322,9 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The playback type of the movie. defaults to
-	 *         {@link org.urish.gwtit.titanium.media.video_source_type_unknown}.
-	 *         specifying a playback type before playing the movie can result in
+	 * @return The playback type of the movie. Defaults to
+	 *         {@link org.urish.gwtit.titanium.Media.VIDEO_SOURCE_TYPE_UNKNOWN}.
+	 *         Specifying a playback type before playing the movie can result in
 	 *         faster load times.
 	 */
 	public final native int getSourceType()
@@ -352,7 +353,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return Indicates if the movie player should inherit the application's
 	 *         audio session instead of creating a new session (which would
-	 *         interrupt the application's session). defaults to true. setting
+	 *         interrupt the application's session). Defaults to true. Setting
 	 *         this property during playback will not take effect until playback
 	 *         is stopped and started again.
 	 */
@@ -402,8 +403,8 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * Asynchronously request thumbnails for one or more times, provided as an
-	 * array of numbers (double). fires a `thumbnail` event on completion.
-	 * optionally invokes the callback function passed in the method.
+	 * array of numbers (double). Fires a `thumbnail` event on completion.
+	 * Optionally invokes the callback function passed in the method.
 	 * 
 	 * @param times
 	 *            array of doubles for each time to request

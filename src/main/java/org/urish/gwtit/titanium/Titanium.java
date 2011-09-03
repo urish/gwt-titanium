@@ -23,7 +23,7 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level titanium module.
+ * The top level Titanium module.
  * <p>
  * Notes: Titanium provides a number of built-in objects in the Javascript that
  * are not part of the Titanium namespace. Specifically, the following are
@@ -90,7 +90,7 @@ public class Titanium extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * @return The user-agent string used by titanium
+	 * @return The user-agent string used by Titanium
 	 */
 	public static native String getUserAgent()
 	/*-{
@@ -103,7 +103,7 @@ public class Titanium extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return The version of titanium that is executing
+	 * @return The version of Titanium that is executing
 	 */
 	public static native float getVersion()
 	/*-{
@@ -116,8 +116,8 @@ public class Titanium extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * A filename to include as if the javascript code was written in place.
-	 * this is similar to a c `#include` function.
+	 * A filename to include as if the Javascript code was written in place.
+	 * This is similar to a C `#include` function.
 	 * 
 	 * @param name
 	 *            filename to include

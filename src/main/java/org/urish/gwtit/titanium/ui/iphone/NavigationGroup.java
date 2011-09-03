@@ -21,11 +21,11 @@ package org.urish.gwtit.titanium.ui.iphone;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A navigation group implements a specialized view that manages the navigation
- * of hierarchical content. the navigation group is created by the method
- * {@link org.urish.gwtit.titanium.ui.iphone.navigationgroup}.
- * ![navgroup](http://img.skitch.com/20100406-rwe44533tkd94fdnbqqudxynpe.png) a
- * navigation group is very similar to tab bars with the exception that they do
+ * A Navigation Group implements a specialized view that manages the navigation
+ * of hierarchical content. The Navigation Group is created by the method
+ * {@link org.urish.gwtit.titanium.ui.iphone.NavigationGroup}.
+ * ![navgroup](http://img.skitch.com/20100406-rwe44533tkd94fdnbqqudxynpe.png) A
+ * Navigation Group is very similar to Tab Bars with the exception that they do
  * not maintain a group of windows with a interface bar at the bottom.
  * <p>
  * Notes: The `window` property must be set initially in the constructor when

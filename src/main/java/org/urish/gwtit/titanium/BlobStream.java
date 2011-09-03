@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium;
 
 
 /**
- * Wrapper around `titanium.blob` that implements the `titanium.iostream`
+ * Wrapper around `Titanium.Blob` that implements the `Titanium.IOStream`
  * interface
  * 
  * @since 1.7

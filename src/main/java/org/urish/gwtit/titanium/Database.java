@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level database module. the database module is used for creating and
- * accessing the in-application database.
+ * The top level Database module. The Database module is used for creating and
+ * accessing the in-application Database.
  * 
  * @since 0.1
  */
@@ -71,7 +71,7 @@ public class Database extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Install a database from the application resources folder (at build time)
+	 * Install a database from the application Resources folder (at build time)
 	 * and return a reference to the opened database. it is safe to call this
 	 * method multiple times since this method will only install once if it
 	 * doesn't already exist on the device.

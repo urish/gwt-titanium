@@ -228,8 +228,8 @@ public class Item extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The title of a podcast item. only for media types of
-	 *         {@link org.urish.gwtit.titanium.media.music_media_type_podcast}.
+	 * @return The title of a podcast item. Only for media types of
+	 *         {@link org.urish.gwtit.titanium.Media.MUSIC_MEDIA_TYPE_PODCAST}.
 	 */
 	public final native String getPodcastTitle()
 	/*-{

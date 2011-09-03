@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import org.urish.gwtit.titanium.events.UpdateHandler;
 
 /**
- * The top level accelerometer module. the accelerometer modules contains
+ * The top level Accelerometer module. The Accelerometer modules contains
  * methods and properties for using the device accelerometer.
  * <p>
  * Notes: You'll want to be selective about turning on and off the device

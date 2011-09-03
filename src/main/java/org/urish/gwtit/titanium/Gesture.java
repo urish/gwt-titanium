@@ -22,7 +22,7 @@ import org.urish.gwtit.titanium.events.OrientationChangeHandler;
 import org.urish.gwtit.titanium.events.ShakeHandler;
 
 /**
- * The top level gestures module. the gesture module is responsible for high
+ * The top level Gestures module. The Gesture module is responsible for high
  * level device gestures that are device-wide.
  * 
  * @since 0.8
@@ -50,12 +50,12 @@ public class Gesture extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Orientation of the current window. value will be one of the
-	 *         following - {@link org.urish.gwtit.titanium.ui.portrait},
-	 *         {@link org.urish.gwtit.titanium.ui.upside_portrait},
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_left},
-	 *         {@link org.urish.gwtit.titanium.ui.landscape_right} or
-	 *         {@link org.urish.gwtit.titanium.ui.unknown}
+	 * @return Orientation of the current window. Value will be one of the
+	 *         following - {@link org.urish.gwtit.titanium.UI.PORTRAIT},
+	 *         {@link org.urish.gwtit.titanium.UI.UPSIDE_PORTRAIT},
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_LEFT},
+	 *         {@link org.urish.gwtit.titanium.UI.LANDSCAPE_RIGHT} or
+	 *         {@link org.urish.gwtit.titanium.UI.UNKNOWN}
 	 */
 	public static native float getOrientation()
 	/*-{

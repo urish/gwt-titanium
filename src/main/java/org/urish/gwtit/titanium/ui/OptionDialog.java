@@ -23,8 +23,8 @@ import org.urish.gwtit.titanium.ui.events.OptionDialogClickHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The option dialog is created by
- * {@link org.urish.gwtit.titanium.ui.createoptiondialog} and allows you to show
+ * The Option Dialog is created by
+ * {@link org.urish.gwtit.titanium.ui.createOptionDialog} and allows you to show
  * a modal dialog of one or more options to the user.
  * 
  * @since 0.8
@@ -34,8 +34,8 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return A titanium.ui.view. allows for arbitrary contents inside a native
-	 *         dialog. works for any dialog.
+	 * @return A Titanium.UI.View. Allows for arbitrary contents inside a native
+	 *         dialog. Works for any dialog.
 	 * @platforms android
 	 */
 	public final native JavaScriptObject getAndroidView()
@@ -49,9 +49,9 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return An index to indicate which button should be the cancel button. if
-	 *         no button should be the cancel button, use -1. if there is a
-	 *         cancel button, it must be the last button for use on ipad.
+	 * @return An index to indicate which button should be the cancel button. If
+	 *         no button should be the cancel button, use -1. If there is a
+	 *         cancel button, it MUST be the last button for use on iPad.
 	 */
 	public final native int getCancel()
 	/*-{
@@ -64,7 +64,7 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The destructive button (indicated by a visual clue in the ui)
+	 * @return The destructive button (indicated by a visual clue in the UI)
 	 */
 	public final native int getDestructive()
 	/*-{
@@ -90,7 +90,7 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Set an initially selected option. only valid when options has
+	 * @return Set an initially selected option. Only valid when options has
 	 *         been specified.
 	 * @platforms android
 	 */

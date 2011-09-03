@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.app.ios;
 
 
 /**
- * The backgroundservice is created by
- * {@link org.urish.gwtit.titanium.app.ios.registerbackgroundservice}.
+ * The BackgroundService is created by
+ * {@link org.urish.gwtit.titanium.app.ios.registerBackgroundService}.
  * <p>
  * Notes: The background service runs when the Application is placed in the
  * background and will continue to run until the service is stopped with the

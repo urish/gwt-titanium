@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium.filesystem;
 
 
 /**
- * The file object which support various filesystem based operations.
+ * The File object which support various filesystem based operations.
  * 
  * @since 0.1
  */

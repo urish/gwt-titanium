@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * A button is created by the method
- * {@link org.urish.gwtit.titanium.ui.createbutton}.
+ * A Button is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createButton}.
  * 
  * @since 0.8
  */

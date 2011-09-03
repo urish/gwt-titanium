@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 
 /**
- * A set of constants for the style that can be used for the `selectionstyle`
- * property of {@link org.urish.gwtit.titanium.ui.tableviewrow}.
+ * A set of constants for the style that can be used for the `selectionStyle`
+ * property of {@link org.urish.gwtit.titanium.ui.TableViewRow}.
  * 
  * @platforms iphone, ipad
  * @since 0.9

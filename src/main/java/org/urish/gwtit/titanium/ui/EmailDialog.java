@@ -23,8 +23,8 @@ import org.urish.gwtit.titanium.ui.events.EmailDialogCompleteHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The email dialog is created by
- * {@link org.urish.gwtit.titanium.ui.createemaildialog} and allows you to send
+ * The Email Dialog is created by
+ * {@link org.urish.gwtit.titanium.ui.createEmailDialog} and allows you to send
  * in application emails on behalf of the application user.
  * <p>
  * Notes:
@@ -77,7 +77,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Array of email bcc: recipients
+	 * @return Array of email BCC: recipients
 	 */
 	public final native String[] getBccRecipients()
 	/*-{
@@ -90,7 +90,7 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Array of email cc: recipients
+	 * @return Array of email CC: recipients
 	 */
 	public final native String[] getCcRecipients()
 	/*-{
@@ -103,8 +103,8 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Boolean to indicate whether the email messagebody should be sent
-	 *         as html content type. defaults to false. (android note: you
+	 * @return Boolean to indicate whether the email messageBody should be sent
+	 *         as HTML content type. defaults to false. (Android note: you
 	 *         should not use html messages in 1.6: after that is okay.)
 	 */
 	public final native boolean getHtml()
@@ -157,13 +157,13 @@ public class EmailDialog extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Add an attachment to the email. the attachment can either be a blob or
-	 * file object. note: versions before 1.7.1 will only support one attachment
-	 * in android. since version 1.7.1, our android implementation will accept
+	 * Add an attachment to the email. The attachment can either be a Blob or
+	 * File object. Note: Versions before 1.7.1 will only support one attachment
+	 * in Android. Since version 1.7.1, our Android implementation will accept
 	 * multiple attachments, but multiple attachments will only work if the user
-	 * chooses to send via the android gmail app; the android "mail" app (which
+	 * chooses to send via the Android Gmail app; the Android "Mail" app (which
 	 * is anyway not available on some handsets) will only accept one attachment
-	 * from a titanium app. k9 has also been tested successfully with multiple
+	 * from a Titanium app. K9 has also been tested successfully with multiple
 	 * attachments.
 	 * 
 	 * @param attachment

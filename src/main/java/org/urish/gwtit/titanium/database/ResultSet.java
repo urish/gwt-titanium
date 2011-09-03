@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.database;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The resultset instance returned by invoking a database sql `execute`.
+ * The ResultSet instance returned by invoking a database SQL `execute`.
  * 
  * @since 0.1
  */

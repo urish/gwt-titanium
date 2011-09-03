@@ -27,9 +27,9 @@ import org.urish.gwtit.titanium.ui.events.TableViewScrollHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A table view allows you to create a scrollable table of content in a
- * list-based fashion. the table view is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtableview}.
+ * A Table View allows you to create a scrollable table of content in a
+ * list-based fashion. The Table View is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTableView}.
  * 
  * @since 0.8
  */
@@ -122,6 +122,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default True
 	 * @return Boolean to indicate if the search should be case sensitive or
 	 *         case insensitive (default)
 	 */
@@ -309,8 +310,8 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The separator style constant. for iphone,
-	 *         titanium.ui.iphone.tableviewseparatorstyle
+	 * @return The separator style constant. For iPhone,
+	 *         Titanium.UI.iPhone.TableViewSeparatorStyle
 	 * @platforms iphone, ipad
 	 */
 	public final native int getSeparatorStyle()
@@ -324,6 +325,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default True
 	 * @return Whether tableview displays vertical scroll indicator
 	 * @platforms iphone, ipad
 	 */
@@ -339,7 +341,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return The style of the table view. constant from
-	 *         {@link org.urish.gwtit.titanium.ui.iphone.tableviewstyle}
+	 *         {@link org.urish.gwtit.titanium.ui.iphone.TableViewStyle}
 	 * @platforms iphone, ipad
 	 */
 	public final native int getStyle()

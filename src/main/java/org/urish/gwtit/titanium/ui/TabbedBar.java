@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * A tabbed bar is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtabbedbar}. the difference between
- * the tabbed bar and the button bar is that the tabbed bar visually maintains a
+ * A Tabbed Bar is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTabbedBar}. The difference between
+ * the Tabbed Bar and the Button Bar is that the tabbed bar visually maintains a
  * state (visually distinguished as a pressed or selected look).
  * <p>
  * Notes: For iPhone, the style constants are available in the constants defined

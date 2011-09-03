@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Arguments to be passed to createstream
+ * Arguments to be passed to createStream
  * 
  * @since 1.7
  */
@@ -56,9 +56,9 @@ public class CreateStreamArgs extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return Mode for the stream to be opened in. can be
-	 *         `titanium.stream.mode_read`, `titanium.stream.mode_write` or
-	 *         `titanium.stream.mode_append`
+	 * @return Mode for the stream to be opened in. Can be
+	 *         `Titanium.Stream.MODE_READ`, `Titanium.Stream.MODE_WRITE` or
+	 *         `Titanium.Stream.MODE_APPEND`
 	 */
 	public final native float getMode()
 	/*-{

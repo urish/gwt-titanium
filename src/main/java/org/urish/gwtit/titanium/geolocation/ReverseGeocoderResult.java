@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.geolocation;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Reverse geocoder result
+ * Reverse Geocoder result
  */
 public class ReverseGeocoderResult extends JavaScriptObject {
 	protected ReverseGeocoderResult() {

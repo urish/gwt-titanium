@@ -20,12 +20,12 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * An interface extending {@link org.urish.gwtit.titanium.xml.node} with a set
- * of attributes and methods for accessing character data in the dom. this
- * conforms to the [dom level
- * 2](http://www.w3.org/tr/dom-level-2-core/core.html) defintion of a dom
- * characterdata. unlike the dom, for reasons of compatibility with the
- * javascript engine, text is represented by utf-8 instead of utf-16.
+ * An interface extending {@link org.urish.gwtit.titanium.xml.Node} with a set
+ * of attributes and methods for accessing character data in the DOM. This
+ * conforms to the [DOM Level
+ * 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) defintion of a DOM
+ * CharacterData. Unlike the DOM, for reasons of compatibility with the
+ * javascript engine, text is represented by UTF-8 instead of UTF-16.
  * 
  * @since 0.9
  */
@@ -35,7 +35,7 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return The character data of the node that implements this interface.
-	 *         throws an exception during setting if this node is readonly.
+	 *         Throws an exception during setting if this node is readonly.
 	 */
 	public final native String getData()
 	/*-{
@@ -49,8 +49,8 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * @return The number of characters that are available through data and the
-	 *         substringdata method. this may have the value zero, i.e.,
-	 *         {@link org.urish.gwtit.titanium.xml.characterdata} may be empty.
+	 *         substringData method. This may have the value zero, i.e.,
+	 *         {@link org.urish.gwtit.titanium.xml.CharacterData} may be empty.
 	 */
 	public final native float getLength()
 	/*-{
@@ -58,9 +58,9 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Append the string to the end of the character data of the node. upon
+	 * Append the string to the end of the character data of the node. Upon
 	 * success, data provides access to the concatenation of data and the string
-	 * specified. throws an exception if this node is readonly.
+	 * specified. Throws an exception if this node is readonly.
 	 * 
 	 * @param arg
 	 *            The string to append.
@@ -71,8 +71,8 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Remove a range of characters from the node. upon success, data and length
-	 * reflect the change. throws an exception if this node is readonly, if
+	 * Remove a range of characters from the node. Upon success, data and length
+	 * reflect the change. Throws an exception if this node is readonly, if
 	 * offset is negative, offset is beyond the data's length, or if count is
 	 * negative.
 	 * 
@@ -89,7 +89,7 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Insert a string at the specified offset. throws an exception if this node
+	 * Insert a string at the specified offset. Throws an exception if this node
 	 * is readonly, if offset is negative, or if offset is beyond the data's
 	 * length.
 	 * 
@@ -105,7 +105,7 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * Replace the characters starting at the specified offset with the
-	 * specified string. throws an exception if this node is readonly, if offset
+	 * specified string. Throws an exception if this node is readonly, if offset
 	 * is negative, offset is beyond the data's length, or if count is negative.
 	 * 
 	 * @param offset
@@ -125,7 +125,7 @@ public class CharacterData extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Extracts a range of data from the node. throws an exception if offset is
+	 * Extracts a range of data from the node. Throws an exception if offset is
 	 * negative, offset is beyond the data's length, or if count is negative.
 	 * 
 	 * @param offset

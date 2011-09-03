@@ -26,8 +26,8 @@ import org.urish.gwtit.titanium.ui.events.TextFieldReturnHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A text area is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtextfield}. the text field is a
+ * A Text Area is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTextField}. The Text Field is a
  * single line field.
  * <p>
  * Notes: On iPhone, the borderStyle can be set with a constant from
@@ -52,12 +52,12 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return One of
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_none},
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_words}
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_NONE},
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS}
 	 *         ,
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_sentences}
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_SENTENCES}
 	 *         , or
-	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_all}
+	 *         {@link org.urish.gwtit.titanium.UI.TEXT_AUTOCAPITALIZATION_ALL}
 	 *         to indicate how the field should be capitalized during typing.
 	 */
 	public final native int getAutocapitalization()
@@ -231,7 +231,7 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return The minimum size of the font when the font is sized based on the
-	 *         contents. enables font scaling to fit
+	 *         contents. Enables font scaling to fit
 	 */
 	public final native int getMinimumFontSize()
 	/*-{

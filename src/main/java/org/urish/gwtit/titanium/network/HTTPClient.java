@@ -23,9 +23,9 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The httpclient instance returned from
- * {@link org.urish.gwtit.titanium.network.createhttpclient}. this object
- * (mostly) implements the xmlhttprequest specification.
+ * The HttpClient instance returned from
+ * {@link org.urish.gwtit.titanium.network.createHTTPClient}. This object
+ * (mostly) implements the XMLHttpRequest specification.
  * 
  * @since 0.1
  */
@@ -82,7 +82,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The connection type, normally either `get` or `post`.
+	 * @return The connection type, normally either `GET` or `POST`.
 	 */
 	public final native String getConnectionType()
 	/*-{
@@ -95,7 +95,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return File to download contents to. can only be set after calling open.
+	 * @return File to download contents to. Can only be set after calling open.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getFile()
@@ -109,7 +109,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The absolute url of the request
+	 * @return The absolute URL of the request
 	 */
 	public final native String getLocation()
 	/*-{
@@ -173,7 +173,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Set this to a function before calling open to cause the function
-	 *         to be called for each readystate change
+	 *         to be called for each readyState change
 	 */
 	public final native EventCallback<JavaScriptObject> getOnreadystatechange()
 	/*-{
@@ -206,7 +206,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The readystate value
+	 * @return The readyState value
 	 */
 	public final native int getReadyState()
 	/*-{
@@ -219,7 +219,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The response data as a blob object.
+	 * @return The response data as a Blob object.
 	 */
 	public final native org.urish.gwtit.titanium.Blob getResponseData()
 	/*-{
@@ -236,8 +236,8 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The response object as an xml domdocument object. returns null if
-	 *         the content type returned by the server was not xml or the
+	 * @return The response object as an XML DOMDocument object. returns null if
+	 *         the content type returned by the server was not XML or the
 	 *         content could not be parsed
 	 */
 	public final native org.urish.gwtit.titanium.xml.Document getResponseXML()
@@ -246,7 +246,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The response http status code
+	 * @return The response HTTP status code
 	 */
 	public final native int getStatus()
 	/*-{
@@ -267,7 +267,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Set this to control how ssl certification validation is performed
+	 * @return Set this to control how SSL certification validation is performed
 	 *         on connection. defaults to false if in simulator or device
 	 *         testing and true if release for distribution mode.
 	 */
@@ -329,7 +329,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Send the request (only async is currently supported)
+	 * Send the request (Only async is currently supported)
 	 */
 	public final native void send()
 	/*-{
@@ -337,7 +337,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Send the request (only async is currently supported)
+	 * Send the request (Only async is currently supported)
 	 * 
 	 * @param data
 	 *            the data to send in the request. can either be null,
@@ -349,7 +349,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Set the request header. must be called after `open` but before `send`.
+	 * Set the request header. Must be called after `open` but before `send`.
 	 * 
 	 * @param name
 	 *            name of the header

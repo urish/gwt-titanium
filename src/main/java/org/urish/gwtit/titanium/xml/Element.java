@@ -20,12 +20,12 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * Represents an element in a dom document, a
- * {@link org.urish.gwtit.titanium.xml.node} defined by a start-tag and end-tag
- * (or an empty tag). elements may have [attributes](titanium.xml.attr)
- * associated with them. this conforms to the [dom level
- * 2](http://www.w3.org/tr/dom-level-2-core/core.html) definition of a dom
- * element.
+ * Represents an element in a DOM document, a
+ * {@link org.urish.gwtit.titanium.xml.Node} defined by a start-tag and end-tag
+ * (or an empty tag). Elements may have [attributes](Titanium.XML.Attr)
+ * associated with them. This conforms to the [DOM Level
+ * 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) definition of a DOM
+ * Element.
  */
 public class Element extends org.urish.gwtit.titanium.xml.Node {
 	protected Element() {
@@ -40,7 +40,7 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * @return Retrieves all child text nodes as one string
+	 * @return Retrieves all child text nodes as one String
 	 */
 	public final native String getText()
 	/*-{
@@ -62,8 +62,8 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Adds a new attribute. any attribute with the same name is replaced.
-	 * throws an exception if the element is read-only, or if the name contains
+	 * Adds a new attribute. Any attribute with the same name is replaced.
+	 * Throws an exception if the element is read-only, or if the name contains
 	 * an illegal character.
 	 * 
 	 * @param name
@@ -79,9 +79,9 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Removes an attribute by name. if the attribute has a default value, it is
-	 * immediately replaced with this default, including namespace uri and local
-	 * name. throws an exception if the element is read-only.
+	 * Removes an attribute by name. If the attribute has a default value, it is
+	 * immediately replaced with this default, including namespace URI and local
+	 * name. Throws an exception if the element is read-only.
 	 * 
 	 * @param name
 	 *            The name of the attribute to remove.
@@ -93,7 +93,7 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 
 	/**
 	 * Retrieves an attribute value by name, returning it as a
-	 * {@link org.urish.gwtit.titanium.xml.attr} object.
+	 * {@link org.urish.gwtit.titanium.xml.Attr} object.
 	 * 
 	 * @param name
 	 *            The name of the attribute
@@ -106,9 +106,9 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Adds a new attribute. any attribute with the same `nodename` as the
-	 * argument is replaced. throws an exception if the element is read-only, if
-	 * `newattr` is from a different document, or if `newattr` is already an
+	 * Adds a new attribute. Any attribute with the same `nodeName` as the
+	 * argument is replaced. Throws an exception if the element is read-only, if
+	 * `newAttr` is from a different document, or if `newAttr` is already an
 	 * attribute of another element.
 	 * 
 	 * @param newAttr
@@ -121,9 +121,9 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Removes the specified attribute node. if the removed attribute has a
+	 * Removes the specified attribute node. If the removed attribute has a
 	 * default value, it is replaced immediately, with the same namespace and
-	 * local name as the removed attribute, if applicable. throws an exception
+	 * local name as the removed attribute, if applicable. Throws an exception
 	 * if the element is read-only, or the attribute is not an attribute of the
 	 * element.
 	 * 
@@ -136,7 +136,7 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Retrieves a {@link org.urish.gwtit.titanium.xml.nodelist} of all
+	 * Retrieves a {@link org.urish.gwtit.titanium.xml.NodeList} of all
 	 * descendant elements with a given tag name, in preorder traversal.
 	 * 
 	 * @param name
@@ -148,7 +148,7 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Retrieves an attribute value by local name and namespace uri, returning
+	 * Retrieves an attribute value by local name and namespace URI, returning
 	 * it as a string.
 	 * 
 	 * @param namespaceURI
@@ -165,9 +165,9 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Adds a new attribute. any attribute with the same local name and
-	 * namespace uri is present on the element is replaced, with its prefix
-	 * changed to that of the `qualifiedname` parameter. throws an exception if
+	 * Adds a new attribute. Any attribute with the same local name and
+	 * namespace URI is present on the element is replaced, with its prefix
+	 * changed to that of the `qualifiedName` parameter. Throws an exception if
 	 * the element is read-only, if the name contains an illegal character, or
 	 * if the qualified name contains an error.
 	 * 
@@ -192,9 +192,9 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Removes an attribute by local name and namespace uri. if the attribute
+	 * Removes an attribute by local name and namespace URI. If the attribute
 	 * has a default value, it is immediately replaced with this default,
-	 * including namespace uri and local name. throws an exception if the
+	 * including namespace URI and local name. Throws an exception if the
 	 * element is read-only.
 	 * 
 	 * @param namespaceURI
@@ -208,8 +208,8 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Retrieves an attribute value by local name and namespace uri, returning
-	 * it as a {@link org.urish.gwtit.titanium.xml.attr} object.
+	 * Retrieves an attribute value by local name and namespace URI, returning
+	 * it as a {@link org.urish.gwtit.titanium.xml.Attr} object.
 	 * 
 	 * @param namespaceURI
 	 *            The namespace URI of the attribute to retrieve.
@@ -224,9 +224,9 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Adds a new attribute. any attribute with the same local name and
-	 * namespace uri is replaced. throws an exception if the element is
-	 * read-only, if `newattr` is from a different document, or if `newattr` is
+	 * Adds a new attribute. Any attribute with the same local name and
+	 * namespace URI is replaced. Throws an exception if the element is
+	 * read-only, if `newAttr` is from a different document, or if `newAttr` is
 	 * already an attribute of another element.
 	 * 
 	 * @param newAttr
@@ -239,8 +239,8 @@ public class Element extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * Retrieves a {@link org.urish.gwtit.titanium.xml.nodelist} of all
-	 * descendant elements with a given local name and namespace uri, in
+	 * Retrieves a {@link org.urish.gwtit.titanium.xml.NodeList} of all
+	 * descendant elements with a given local name and namespace URI, in
 	 * preorder traversal.
 	 * 
 	 * @param namespaceURI

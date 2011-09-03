@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * Represents a notation declared in the dtd. see [dom level 2
- * spec](http://www.w3
- * .org/tr/2000/rec-dom-level-2-core-20001113/core.html#id-5431d1b9)
+ * Represents a notation declared in the DTD. See [DOM Level 2
+ * Spec](http://www.w3
+ * .org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-5431D1B9)
  * 
  * @since 0.9
  */
@@ -31,7 +31,7 @@ public class Notation extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The public identifier of this notation. if the public identifier
+	 * @return The public identifier of this notation. If the public identifier
 	 *         was not specified, this is `null`.
 	 */
 	public final native String getPublicId()
@@ -45,7 +45,7 @@ public class Notation extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The system identifier of this notation. if the system identifier
+	 * @return The system identifier of this notation. If the system identifier
 	 *         was not specified, this is `null`.
 	 */
 	public final native String getSystemId()

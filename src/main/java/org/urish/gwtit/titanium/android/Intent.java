@@ -21,8 +21,8 @@ package org.urish.gwtit.titanium.android;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The titanium binding of an [android
- * intent](http://developer.android.com/reference/android/content/intent.html)
+ * The Titanium binding of an [Android
+ * Intent](http://developer.android.com/reference/android/content/Intent.html)
  * 
  * @platforms android
  * @since 1.5
@@ -32,7 +32,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return An action constant from {@link org.urish.gwtit.titanium.android}
+	 * @return An action constant from {@link org.urish.gwtit.titanium.Android}
 	 */
 	public final native String getAction()
 	/*-{
@@ -45,7 +45,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The java class name of the activity (packagename must also be
+	 * @return The Java class name of the activity (packageName must also be
 	 *         set)
 	 */
 	public final native String getClassName()
@@ -59,10 +59,10 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The intent's data uri. see also android's
-	 *         [intent.setdata](http://
+	 * @return The Intent's Data URI. See also Android's
+	 *         [Intent.setData](http://
 	 *         developer.android.com/reference/android/content
-	 *         /intent.html#setdata(android.net.uri))
+	 *         /Intent.html#setData(android.net.Uri))
 	 */
 	public final native String getData()
 	/*-{
@@ -75,8 +75,8 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Intent flags. see the flags constants in
-	 *         {@link org.urish.gwtit.titanium.android}.
+	 * @return Intent flags. See the flags constants in
+	 *         {@link org.urish.gwtit.titanium.Android}.
 	 */
 	public final native float getFlags()
 	/*-{
@@ -89,7 +89,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The fully-qualified java package name of the activity
+	 * @return The fully-qualified Java package name of the activity
 	 */
 	public final native String getPackageName()
 	/*-{
@@ -102,10 +102,10 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The mime type for this intent. see also android's
-	 *         [intent.settype]
+	 * @return The mime type for this Intent. See also Android's
+	 *         [Intent.setType]
 	 *         (http://developer.android.com/reference/android/content
-	 *         /intent.html#settype(java.lang.string))
+	 *         /Intent.html#setType(java.lang.String))
 	 */
 	public final native String getType()
 	/*-{
@@ -118,7 +118,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The url to a titanium javascript activity
+	 * @return The URL to a Titanium Javascript Activity
 	 */
 	public final native String getUrl()
 	/*-{
@@ -131,8 +131,8 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Add a category to this intent. see the category constants in
-	 * {@link org.urish.gwtit.titanium.android}.
+	 * Add a category to this Intent. See the category constants in
+	 * {@link org.urish.gwtit.titanium.Android}.
 	 * 
 	 * @param name
 	 *            The category name. See the category constants in
@@ -144,7 +144,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Augment the existing flags on the intent.
+	 * Augment the existing flags on the Intent.
 	 * 
 	 * @param flags
 	 *            the flags to add to the existing set.
@@ -155,7 +155,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Get a boolean property from this intent
+	 * Get a boolean property from this Intent
 	 * 
 	 * @param name
 	 *            The boolean property to get
@@ -166,7 +166,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Get a double property from this intent
+	 * Get a double property from this Intent
 	 * 
 	 * @param name
 	 *            The double property to get
@@ -177,7 +177,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Get a int property from this intent
+	 * Get a int property from this Intent
 	 * 
 	 * @param name
 	 *            The int property to get
@@ -188,7 +188,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Get a long property from this intent
+	 * Get a long property from this Intent
 	 * 
 	 * @param name
 	 *            The long property to get
@@ -199,7 +199,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Get a string property from this intent
+	 * Get a string property from this Intent
 	 * 
 	 * @param name
 	 *            The string property to get
@@ -210,7 +210,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Returns whether or not this intent has a property
+	 * Returns whether or not this Intent has a property
 	 * 
 	 * @param name
 	 *            The property name to check for
@@ -221,7 +221,7 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Put an extra property on this intent
+	 * Put an extra property on this Intent
 	 * 
 	 * @param name
 	 *            The property name
@@ -234,8 +234,8 @@ public class Intent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Put a uri property on this intent (useful for
-	 * {@link org.urish.gwtit.titanium.android.extra_stream})
+	 * Put a URI property on this Intent (useful for
+	 * {@link org.urish.gwtit.titanium.Android.EXTRA_STREAM})
 	 * 
 	 * @param name
 	 *            The property name

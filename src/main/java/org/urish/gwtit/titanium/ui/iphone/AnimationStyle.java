@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 
 /**
- * A set of constants for the animation styles used for transitions.
+ * A set of constants for the Animation Styles used for transitions.
  * 
  * @platforms iphone, ipad
  * @since 0.9

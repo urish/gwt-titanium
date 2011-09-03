@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The android.calendar module provides proxies and methods for accessing the
- * native android calendar functionality.
+ * The Android.Calendar module provides proxies and methods for accessing the
+ * native Android calendar functionality.
  * <p>
  * Notes: The API supports retrieving information about existing events and
  * creating new events. However, modifying or deleting existing events is not
@@ -136,7 +136,7 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	public static final float VISIBILITY_PUBLIC = value_VISIBILITY_PUBLIC();
 
 	/**
-	 * @return Array of {@link org.urish.gwtit.titanium.android.calendar.alert}
+	 * @return Array of {@link org.urish.gwtit.titanium.android.calendar.Alert}
 	 *         objects representing all alerts.
 	 */
 	public static native org.urish.gwtit.titanium.android.calendar.Alert[] getAllAlerts()
@@ -151,7 +151,7 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Array of
-	 *         {@link org.urish.gwtit.titanium.android.calendar.calendar}
+	 *         {@link org.urish.gwtit.titanium.android.calendar.Calendar}
 	 *         objects representing all the calendars known to the native
 	 *         calendar app.
 	 */
@@ -167,10 +167,10 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Array of
-	 *         {@link org.urish.gwtit.titanium.android.calendar.calendar}
+	 *         {@link org.urish.gwtit.titanium.android.calendar.Calendar}
 	 *         objects representing calendars selected within the native
-	 *         calendar app. this may be a subset of allcalendars; for example,
-	 *         the native calendar application may know -- via your gooogle
+	 *         calendar app. This may be a subset of allCalendars; for example,
+	 *         the native calendar application may know -- via your Gooogle
 	 *         account -- about calendars that you have access to but have not
 	 *         selected to be displayed in the native calendar app.
 	 */
@@ -205,7 +205,7 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns the {@link org.urish.gwtit.titanium.android.calendar.calendar}
+	 * Returns the {@link org.urish.gwtit.titanium.android.calendar.Calendar}
 	 * object specified by the given integer id.
 	 * 
 	 * @param id

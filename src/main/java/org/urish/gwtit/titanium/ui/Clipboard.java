@@ -32,7 +32,7 @@ public class Clipboard extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * Clear data of the given mime-type from the clipboard. if no mime-type is
+	 * Clear data of the given mime-type from the clipboard. If no mime-type is
 	 * given, clear all data from the clipboard.
 	 * 
 	 * @param type
@@ -92,7 +92,7 @@ public class Clipboard extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Set the data on the clipboard given a mime-type and the new data. this
+	 * Set the data on the clipboard given a mime-type and the new data. This
 	 * method will set data on the appropriate portion of the clipboard for the
 	 * given mime-type.
 	 * 
@@ -107,7 +107,7 @@ public class Clipboard extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Set the text on the clipboard. this will overwrite the current contents
+	 * Set the text on the clipboard. This will overwrite the current contents
 	 * of the clipboard.
 	 * 
 	 * @param text

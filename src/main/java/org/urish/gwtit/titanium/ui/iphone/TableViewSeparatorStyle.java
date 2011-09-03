@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 
 /**
- * A set of constants for the style that can be used for the `separatorstyle`
- * property of {@link org.urish.gwtit.titanium.ui.tableview}.
+ * A set of constants for the style that can be used for the `separatorStyle`
+ * property of {@link org.urish.gwtit.titanium.ui.TableView}.
  * 
  * @platforms iphone, ipad
  * @since 0.9

@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * A tableview row object created by the method
- * {@link org.urish.gwtit.titanium.ui.createtableviewrow}.
+ * A TableView row object created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTableViewRow}.
  * <p>
  * Notes: Make sure you set the tableClass on each row instance if using more
  * than one type of row layout. You can use the same value for each instance of
@@ -218,9 +218,9 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return A selection style constant to control the selection color. for
-	 *         iphone, use the constants from
-	 *         titanium.ui.iphone.tableviewcellselectionstyle
+	 * @return A selection style constant to control the selection color. For
+	 *         iPhone, use the constants from
+	 *         Titanium.UI.iPhone.TableViewCellSelectionStyle
 	 */
 	public final native int getSelectionStyle()
 	/*-{

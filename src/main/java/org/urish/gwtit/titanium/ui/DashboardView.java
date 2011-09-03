@@ -26,10 +26,10 @@ import org.urish.gwtit.titanium.ui.events.EditHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The dashboard view provides a view that supports the ability to have
- * springboard-like view of icons which can be reordered by dragging and can
- * contain multiple pages of icons in a scrollable view. the dashboard view is
- * created by the method {@link org.urish.gwtit.titanium.ui.createdashboardview}
+ * The Dashboard View provides a view that supports the ability to have
+ * Springboard-like view of icons which can be reordered by dragging and can
+ * contain multiple pages of icons in a scrollable view. The Dashboard View is
+ * created by the method {@link org.urish.gwtit.titanium.ui.createDashboardView}
  * .
  * 
  * @platforms iphone, ipad
@@ -40,7 +40,7 @@ public class DashboardView extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return An array of {@link org.urish.gwtit.titanium.ui.dashboarditem}
+	 * @return An array of {@link org.urish.gwtit.titanium.ui.DashboardItem}
 	 *         objects to display in the view
 	 */
 	public final native JavaScriptObject[] getData()

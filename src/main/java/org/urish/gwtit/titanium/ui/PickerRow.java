@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.ui;
 
 /**
  * The picker row object created by
- * [titanium.ui.createpickerrow](titanium.ui.createpickerrow).
+ * [Titanium.UI.createPickerRow](Titanium.UI.createPickerRow).
  * 
  * @since 0.9
  */

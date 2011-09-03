@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium.ui.iphone;
 
 /**
  * A set of constants for the styles available for
- * {@link org.urish.gwtit.titanium.ui.activityindicator} objects.
+ * {@link org.urish.gwtit.titanium.ui.ActivityIndicator} objects.
  * 
  * @platforms iphone, ipad
  * @since 0.9

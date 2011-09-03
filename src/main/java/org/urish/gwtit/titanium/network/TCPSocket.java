@@ -23,9 +23,9 @@ import org.urish.gwtit.titanium.network.events.ReadHandler;
 import org.urish.gwtit.titanium.network.events.WriteErrorHandler;
 
 /**
- * Deprecated: use {@link org.urish.gwtit.titanium.network.socket.tcp} where
- * possible. the tcpsocket instance returned from
- * {@link org.urish.gwtit.titanium.network.createtcpsocket}. this object
+ * DEPRECATED: USE {@link org.urish.gwtit.titanium.network.Socket.TCP} WHERE
+ * POSSIBLE. The TCPSocket instance returned from
+ * {@link org.urish.gwtit.titanium.network.createTCPSocket}. This object
  * represents a socket which either listens locally on the device for
  * connections, or connects to a remote machine.
  * 
@@ -53,9 +53,10 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return The host name to connect to. must be
-	 *         {@link org.urish.gwtit.titanium.network.inaddr_any} or an
+	 * @return The host name to connect to. Must be
+	 *         {@link org.urish.gwtit.titanium.Network.INADDR_ANY} or an
 	 *         identifier for the local device in order to listen
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native String getHostName()
 	/*-{
@@ -69,6 +70,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Whether or not the socket is valid
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native boolean getIsValid()
 	/*-{
@@ -82,6 +84,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The socket's mode
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native int getMode()
 	/*-{
@@ -95,6 +98,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The port to connect/listen on
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native int getPort()
 	/*-{
@@ -109,6 +113,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Strip terminating null character when sending string data;
 	 *         default is false
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native boolean getStripTerminator()
 	/*-{
@@ -122,6 +127,8 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Close the socket
+	 * 
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native void close()
 	/*-{
@@ -129,7 +136,9 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Connect the scocket to a tcp server
+	 * Connect the scocket to a TCP server
+	 * 
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native void connect()
 	/*-{
@@ -138,6 +147,8 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Set up the socket to receive connections
+	 * 
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native void listen()
 	/*-{
@@ -145,7 +156,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Write data to the socket, if the mode is write_mode or read_write_mode
+	 * Write data to the socket, if the mode is WRITE_MODE or READ_WRITE_MODE
 	 * 
 	 * @param data
 	 *            either a string or blob object representing the data to be
@@ -153,6 +164,7 @@ public class TCPSocket extends org.urish.gwtit.titanium.Proxy {
 	 * @param sendTo
 	 *            the socket reference to send the data to. Default is to send
 	 *            to all connected sockets
+	 * @deprecated since 1.7.0, removed in 2.0.0
 	 */
 	public final native void write(Object data, int sendTo)
 	/*-{

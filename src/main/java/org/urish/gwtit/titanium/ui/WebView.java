@@ -27,10 +27,10 @@ import org.urish.gwtit.titanium.ui.events.WebViewLoadHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The web view allows you to open an html5 based view which can load either
- * local or remote content. the content can be any valid web content such as
- * html, pdf, svg or other webkit supported content types. the web view is
- * created by the method {@link org.urish.gwtit.titanium.ui.createwebview}.
+ * The Web View allows you to open an HTML5 based view which can load either
+ * local or remote content. The content can be any valid web content such as
+ * HTML, PDF, SVG or other WebKit supported content types. The Web View is
+ * created by the method {@link org.urish.gwtit.titanium.ui.createWebView}.
  * <p>
  * Notes: Creating webviews are more expensive than creating pure native views
  * because of the requirement to load the HTML browser into memory.
@@ -86,16 +86,17 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Set how plugins are processed. accepts one of
-	 *         {@link org.urish.gwtit.titanium.ui.android.webview_plugins_off},
-	 *         {@link org.urish.gwtit.titanium.ui.android.webview_plugins_on},
+	 * @default <Titanium.UI.Android.WEBVIEW_PLUGINS_OFF>
+	 * @return Set how plugins are processed. Accepts one of
+	 *         {@link org.urish.gwtit.titanium.ui.Android.WEBVIEW_PLUGINS_OFF},
+	 *         {@link org.urish.gwtit.titanium.ui.Android.WEBVIEW_PLUGINS_ON},
 	 *         or
-	 *         {@link org.urish.gwtit.titanium.ui.android.webview_plugins_on_demand}
-	 *         . see android documentation for
-	 *         [websettings.pluginstate](http://developer
+	 *         {@link org.urish.gwtit.titanium.ui.Android.WEBVIEW_PLUGINS_ON_DEMAND}
+	 *         . See Android documentation for
+	 *         [WebSettings.PluginState](http://developer
 	 *         .android.com/reference/android
-	 *         /webkit/websettings.pluginstate.html). only works on android
-	 *         devices at api level 8 or greater.
+	 *         /webkit/WebSettings.PluginState.html). Only works on Android
+	 *         devices at API Level 8 or greater.
 	 * @platforms android
 	 * @since 1.8.0
 	 */
@@ -154,7 +155,7 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Invoke javascript inside the context of the webview and optionally,
+	 * Invoke JavaScript inside the context of the webview and optionally,
 	 * return a result
 	 * 
 	 * @param content

@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * A list of {@link org.urish.gwtit.titanium.xml.node} objects. this conforms to
- * the [dom level 2](http://www.w3.org/tr/dom-level-2-core/core.html) definition
- * of a dom nodelist.
+ * A list of {@link org.urish.gwtit.titanium.xml.Node} objects. This conforms to
+ * the [DOM Level 2](http://www.w3.org/TR/DOM-Level-2-Core/core.html) definition
+ * of a DOM NodeList.
  * 
  * @since 0.9
  */
@@ -39,7 +39,7 @@ public class NodeList extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Returns the {@link org.urish.gwtit.titanium.xml.node} object at the
+	 * Returns the {@link org.urish.gwtit.titanium.xml.Node} object at the
 	 * specified index.
 	 * 
 	 * @param index

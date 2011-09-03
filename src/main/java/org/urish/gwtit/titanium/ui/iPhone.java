@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The iphone/ipad specific ui capabilities. all properties, methods and events
- * in this namespace will only work on the apple iphone or ipad related devices.
+ * The iPhone/iPad specific UI capabilities. All properties, methods and events
+ * in this namespace will only work on the Apple iPhone or iPad related devices.
  * 
  * @platforms iphone, ipad
  * @since 0.5

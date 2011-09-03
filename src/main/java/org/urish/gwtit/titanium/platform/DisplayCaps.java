@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.platform;
 
 
 /**
- * The display caps object returned by the
- * {@link org.urish.gwtit.titanium.platform.displaycaps} property.
+ * The Display Caps object returned by the
+ * {@link org.urish.gwtit.titanium.platform.displayCaps} property.
  * <p>
  * Notes: On iPhone, the `density` property will return `high` for retina
  * devices and `medium` otherwise, the `dpi` property will return `160`. For
@@ -48,7 +48,7 @@ public class DisplayCaps extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The dpi of the display device.
+	 * @return The DPI of the display device.
 	 */
 	public final native int getDpi()
 	/*-{

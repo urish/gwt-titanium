@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level contacts module. the contacts module is used accessing the
- * device address book. (read-only on android.)
+ * The top level Contacts module. The Contacts module is used accessing the
+ * device Address Book. (Read-only on Android.)
  * <p>
  * Notes: Contacts on Android are currently only read-only, so methods such as
  * `createPerson`, `removePerson`, etc., are not supported.
@@ -68,7 +68,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	public static final int CONTACTS_SORT_LAST_NAME = value_CONTACTS_SORT_LAST_NAME();
 
 	/**
-	 * Create and return an instance of titanium.contacts.group
+	 * Create and return an instance of Titanium.Contacts.Group
 	 * 
 	 * @platforms iphone, ipad
 	 * @param parameters
@@ -82,7 +82,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create and return an instance of titanium.contacts.person
+	 * Create and return an instance of Titanium.Contacts.Person
 	 * 
 	 * @platforms ipad, iphone
 	 * @param parameters
@@ -96,7 +96,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns an of all {@link org.urish.gwtit.titanium.contacts.group} objects
+	 * Returns an of all {@link org.urish.gwtit.titanium.contacts.Group} objects
 	 * in the contacts database
 	 * 
 	 * @platforms ipad, iphone
@@ -107,7 +107,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns an array of all {@link org.urish.gwtit.titanium.contacts.person}
+	 * Returns an array of all {@link org.urish.gwtit.titanium.contacts.Person}
 	 * objects in the contacts database
 	 */
 	public static native void getAllPeople()
@@ -116,8 +116,8 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns a {@link org.urish.gwtit.titanium.contacts.group} object with the
-	 * given id
+	 * Returns a {@link org.urish.gwtit.titanium.contacts.Group} object with the
+	 * given ID
 	 * 
 	 * @platforms iphone, ipad
 	 * @param id
@@ -129,7 +129,7 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns an array of {@link org.urish.gwtit.titanium.contacts.person}
+	 * Returns an array of {@link org.urish.gwtit.titanium.contacts.Person}
 	 * objects who have a name (first, last, middle, composite) which matches
 	 * the given name
 	 * 
@@ -142,8 +142,8 @@ public class Contacts extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Returns a {@link org.urish.gwtit.titanium.contacts.person} object with
-	 * the given id
+	 * Returns a {@link org.urish.gwtit.titanium.contacts.Person} object with
+	 * the given ID
 	 * 
 	 * @param id
 	 *            The database ID of the person to retrieve

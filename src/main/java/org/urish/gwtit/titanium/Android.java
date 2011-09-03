@@ -23,8 +23,9 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level android module. provides each context an activity. this object
- * cannot be created directly.
+ * The top level Android module.
+ * {@link org.urish.gwtit.titanium.android.currentActivity} provides each
+ * context an Activity. This object cannot be created directly.
  * <p>
  * Notes: Several (almost all) of the constants you see above are directly taken
  * from Android. So if we've failed to document all of them, have a look online
@@ -1304,8 +1305,8 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create a {@link org.urish.gwtit.titanium.android.intent} to be used to
-	 * start a broadcast.
+	 * Create a {@link org.urish.gwtit.titanium.android.Intent} to be used to
+	 * start a Broadcast.
 	 */
 	public static native org.urish.gwtit.titanium.android.Intent createBroadcastIntent()
 	/*-{
@@ -1313,8 +1314,8 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create a {@link org.urish.gwtit.titanium.android.intent}. used to start
-	 * other activities and for marshaling data.
+	 * Create a {@link org.urish.gwtit.titanium.android.Intent}. Used to start
+	 * other Activities and for marshaling data.
 	 */
 	public static native org.urish.gwtit.titanium.android.Intent createIntent()
 	/*-{
@@ -1330,7 +1331,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create a {@link org.urish.gwtit.titanium.android.notification}. used to
+	 * Create a {@link org.urish.gwtit.titanium.android.Notification}. Used to
 	 * notify the user of an event.
 	 * 
 	 * @param options
@@ -1343,8 +1344,8 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create a {@link org.urish.gwtit.titanium.android.pendingintent} to be
-	 * used inside a {@link org.urish.gwtit.titanium.android.notification}
+	 * Create a {@link org.urish.gwtit.titanium.android.PendingIntent} to be
+	 * used inside a {@link org.urish.gwtit.titanium.android.Notification}
 	 * 
 	 * @param intent
 	 *            The Intent that will be executed
@@ -1356,8 +1357,8 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create a {@link org.urish.gwtit.titanium.android.pendingintent} to be
-	 * used inside a {@link org.urish.gwtit.titanium.android.notification}
+	 * Create a {@link org.urish.gwtit.titanium.android.PendingIntent} to be
+	 * used inside a {@link org.urish.gwtit.titanium.android.Notification}
 	 * 
 	 * @param intent
 	 *            The Intent that will be executed
@@ -1375,7 +1376,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create a {@link org.urish.gwtit.titanium.android.service} so you can
+	 * Create a {@link org.urish.gwtit.titanium.android.Service} so you can
 	 * start/stop it and listen for events from it.
 	 * 
 	 * @param intent
@@ -1390,8 +1391,8 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Create an {@link org.urish.gwtit.titanium.android.intent} to be used to
-	 * start a service.
+	 * Create an {@link org.urish.gwtit.titanium.android.Intent} to be used to
+	 * start a Service.
 	 * 
 	 * @param options
 	 *            Options dictionary -- pass in a `url` option to specify the
@@ -1403,7 +1404,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Check on state of service.
+	 * Check on state of Service.
 	 * 
 	 * @param intent
 	 *            An Intent created with
@@ -1429,7 +1430,7 @@ public class Android extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Stop a simple service that was started with `startservice`.
+	 * Stop a simple service that was started with `startService`.
 	 * 
 	 * @param intent
 	 *            An Intent created with

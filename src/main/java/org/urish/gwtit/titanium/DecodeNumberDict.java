@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Options for {@link org.urish.gwtit.titanium.codec.decodenumber}
+ * Options for {@link org.urish.gwtit.titanium.codec.decodeNumber}
  */
 public class DecodeNumberDict extends JavaScriptObject {
 	protected DecodeNumberDict() {
@@ -49,13 +49,13 @@ public class DecodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
-	 * @return The encoding type to use. must be one of
-	 *         {@link org.urish.gwtit.titanium.codec.type_byte},
-	 *         {@link org.urish.gwtit.titanium.codec.type_short},
-	 *         {@link org.urish.gwtit.titanium.codec.type_int},
-	 *         {@link org.urish.gwtit.titanium.codec.type_float},
-	 *         {@link org.urish.gwtit.titanium.codec.type_long}, or
-	 *         {@link org.urish.gwtit.titanium.codec.type_double}
+	 * @return The encoding type to use. Must be one of
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_BYTE},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_SHORT},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_INT},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_FLOAT},
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_LONG}, or
+	 *         {@link org.urish.gwtit.titanium.Codec.TYPE_DOUBLE}
 	 */
 	public final native String getType()
 	/*-{
@@ -68,6 +68,7 @@ public class DecodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default 0
 	 * @return The position in `source` to start at
 	 */
 	public final native float getPosition()
@@ -81,6 +82,7 @@ public class DecodeNumberDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default Return value of <Titanium.Codec.getNativeByteOrder>
 	 * @return The byte order to decode with
 	 */
 	public final native float getByteOrder()

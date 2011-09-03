@@ -24,9 +24,9 @@ import org.urish.gwtit.titanium.ui.events.AnimationStartHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The animation object is used for specifying lower-level animation properties
- * and more low-level control of events during an animation. the animation is
- * created by the method {@link org.urish.gwtit.titanium.ui.createanimation}.
+ * The Animation object is used for specifying lower-level animation properties
+ * and more low-level control of events during an animation. The Animation is
+ * created by the method {@link org.urish.gwtit.titanium.ui.createAnimation}.
  * <p>
  * Notes:
  * 
@@ -51,7 +51,7 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Value of the backgroundcolor property to change during animation
+	 * @return Value of the backgroundColor property to change during animation
 	 */
 	public final native String getBackgroundColor()
 	/*-{
@@ -287,7 +287,7 @@ public class Animation extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Value of the zindex property to change during animation
+	 * @return Value of the zIndex property to change during animation
 	 */
 	public final native int getZIndex()
 	/*-{

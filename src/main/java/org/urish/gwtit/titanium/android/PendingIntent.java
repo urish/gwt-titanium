@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.android;
 
 
 /**
- * The titanium binding of an [android pending
- * intent](http://developer.android.com
- * /reference/android/app/pendingintent.html)
+ * The Titanium binding of an [Android Pending
+ * Intent](http://developer.android.com
+ * /reference/android/app/PendingIntent.html)
  * <p>
  * Notes: The type of Intent you choose will effect what kind of PendingIntent
  * is created. Each type corresponds directly with a get method on Android's
@@ -50,11 +50,11 @@ public class PendingIntent extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return Flags used for creating the pending intent. possible values are
-	 *         {@link org.urish.gwtit.titanium.android.flag_cancel_current},
-	 *         {@link org.urish.gwtit.titanium.android.flag_no_create},
-	 *         {@link org.urish.gwtit.titanium.android.flag_one_shot}, and
-	 *         {@link org.urish.gwtit.titanium.android.flag_update_current}.
+	 * @return Flags used for creating the Pending Intent. Possible values are
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_CANCEL_CURRENT},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_NO_CREATE},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_ONE_SHOT}, and
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_UPDATE_CURRENT}.
 	 */
 	public final native float getFlags()
 	/*-{
@@ -67,8 +67,8 @@ public class PendingIntent extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The intent data to pass to the activity launched by this
-	 *         pendingintent
+	 * @return The intent data to pass to the Activity launched by this
+	 *         PendingIntent
 	 */
 	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{

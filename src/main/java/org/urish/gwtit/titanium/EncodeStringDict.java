@@ -21,7 +21,7 @@ package org.urish.gwtit.titanium;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * Options for {@link org.urish.gwtit.titanium.codec.encodestring}
+ * Options for {@link org.urish.gwtit.titanium.codec.encodeString}
  */
 public class EncodeStringDict extends JavaScriptObject {
 	protected EncodeStringDict() {
@@ -54,6 +54,7 @@ public class EncodeStringDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default 0
 	 * @return The position in `dest` to set the encoded string.
 	 */
 	public final native float getDestPosition()
@@ -67,6 +68,7 @@ public class EncodeStringDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default 0
 	 * @return The position in `source` to start encoding.
 	 */
 	public final native float getSourcePosition()
@@ -80,6 +82,7 @@ public class EncodeStringDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default The length of `source`
 	 * @return The number of characters in `source` to encode.
 	 */
 	public final native float getSourceLength()
@@ -93,6 +96,7 @@ public class EncodeStringDict extends JavaScriptObject {
 	}-*/;
 
 	/**
+	 * @default <Titanium.Codec.CHARSET_UTF8>
 	 * @return The character set to use when encoding this string to bytes.
 	 */
 	public final native String getCharset()

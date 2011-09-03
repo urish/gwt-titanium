@@ -43,8 +43,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	public static final JavaScriptObject URL = value_URL();
 
 	/**
-	 * @return The addresses for the person. multi-value, valid labels are:
-	 *         `home`, `work`, `other`. values are dictionaries.
+	 * @return The addresses for the person. Multi-value, valid labels are:
+	 *         `home`, `work`, `other`. Values are dictionaries.
 	 */
 	public final native JavaScriptObject getAddress()
 	/*-{
@@ -57,8 +57,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The birthday of the person. single value, format is
-	 *         "yyyy-mm-dd't'hh:mm:ss'.'sss+0000"
+	 * @return The birthday of the person. Single value, format is
+	 *         "yyyy-MM-dd'T'HH:mm:ss'.'SSS+0000"
 	 */
 	public final native String getBirthday()
 	/*-{
@@ -71,8 +71,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The date the person was created in the database. single value,
-	 *         format is "yyyy-mm-dd't'hh:mm:ss'.'sss+0000", read-only
+	 * @return The date the person was created in the database. Single value,
+	 *         format is "yyyy-MM-dd'T'HH:mm:ss'.'SSS+0000", read-only
 	 */
 	public final native String getCreated()
 	/*-{
@@ -85,9 +85,9 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Dates associated with the person. multi-value, valid labels are:
-	 *         `anniversary`. values are strings of format
-	 *         "yyyy-mm-dd't'hh:mm:ss'.'sss+0000"
+	 * @return Dates associated with the person. Multi-value, valid labels are:
+	 *         `anniversary`. Values are strings of format
+	 *         "yyyy-MM-dd'T'HH:mm:ss'.'SSS+0000"
 	 */
 	public final native JavaScriptObject getDate()
 	/*-{
@@ -100,7 +100,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The department of the person. single value
+	 * @return The department of the person. Single value
 	 */
 	public final native String getDepartment()
 	/*-{
@@ -113,8 +113,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The email addresses for the person. multi-value, valid labels
-	 *         are: `home`, `work`, `other`. values are strings.
+	 * @return The email addresses for the person. Multi-value, valid labels
+	 *         are: `home`, `work`, `other`. Values are strings.
 	 */
 	public final native JavaScriptObject getEmail()
 	/*-{
@@ -127,7 +127,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The first name of the person. single value
+	 * @return The first name of the person. Single value
 	 */
 	public final native String getFirstName()
 	/*-{
@@ -140,7 +140,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The phonetic first name of the person. single value
+	 * @return The phonetic first name of the person. Single value
 	 */
 	public final native String getFirstPhonetic()
 	/*-{
@@ -153,7 +153,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The localized full name of the person. single value, read-only
+	 * @return The localized full name of the person. Single value, read-only
 	 */
 	public final native String getFullName()
 	/*-{
@@ -166,8 +166,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A blob object representing the image for the person. set to
-	 *         `null` to remove the image. single value
+	 * @return A blob object representing the image for the person. Set to
+	 *         `null` to remove the image. Single value
 	 */
 	public final native JavaScriptObject getImage()
 	/*-{
@@ -180,8 +180,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The instant messenger names for the person. multi-value, valid
-	 *         labels are: `aim`, `icq`, `jabber`, `msn`, `yahoo`. values are
+	 * @return The instant messenger names for the person. Multi-value, valid
+	 *         labels are: `aim`, `icq`, `jabber`, `msn`, `yahoo`. Values are
 	 *         dictionaries.
 	 */
 	public final native JavaScriptObject getInstantMessage()
@@ -195,7 +195,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The job title of the person. single value
+	 * @return The job title of the person. Single value
 	 */
 	public final native String getJobTitle()
 	/*-{
@@ -208,9 +208,9 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The kind of person. single value, one of
-	 *         {@link org.urish.gwtit.titanium.contacts.contacts_kind_person} or
-	 *         {@link org.urish.gwtit.titanium.contacts.contacts_kind_organization}
+	 * @return The kind of person. Single value, one of
+	 *         {@link org.urish.gwtit.titanium.Contacts.CONTACTS_KIND_PERSON} or
+	 *         {@link org.urish.gwtit.titanium.Contacts.CONTACTS_KIND_ORGANIZATION}
 	 */
 	public final native int getKind()
 	/*-{
@@ -223,7 +223,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The last name of the person. single value
+	 * @return The last name of the person. Single value
 	 */
 	public final native String getLastName()
 	/*-{
@@ -236,7 +236,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The phonetic last name of the person. single value
+	 * @return The phonetic last name of the person. Single value
 	 */
 	public final native String getLastPhonetic()
 	/*-{
@@ -249,7 +249,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The middle name of the person. single value
+	 * @return The middle name of the person. Single value
 	 */
 	public final native String getMiddleName()
 	/*-{
@@ -262,7 +262,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The phonetic middle name of the person. single value
+	 * @return The phonetic middle name of the person. Single value
 	 */
 	public final native String getMiddlePhonetic()
 	/*-{
@@ -275,8 +275,8 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The most recent date the person was modified. single value,
-	 *         format is "yyyy-mm-dd't'hh:mm:ss'.'sss+0000", read-only
+	 * @return The most recent date the person was modified. Single value,
+	 *         format is "yyyy-MM-dd'T'HH:mm:ss'.'SSS+0000", read-only
 	 */
 	public final native String getModified()
 	/*-{
@@ -289,7 +289,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The nickname of the person. single value
+	 * @return The nickname of the person. Single value
 	 */
 	public final native String getNickname()
 	/*-{
@@ -302,7 +302,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Notes for the person. single value
+	 * @return Notes for the person. Single value
 	 */
 	public final native String getNote()
 	/*-{
@@ -315,7 +315,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The organization the person belongs to. single value
+	 * @return The organization the person belongs to. Single value
 	 */
 	public final native String getOrganization()
 	/*-{
@@ -328,9 +328,9 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The phone numbers for the person. multi-value, valid labels are:
-	 *         `home`, `work`, `other`, `mobile`, `pager`, `workfax`, `homefax`,
-	 *         `main`, `iphone`. values are strings.
+	 * @return The phone numbers for the person. Multi-value, valid labels are:
+	 *         `home`, `work`, `other`, `mobile`, `pager`, `workFax`, `homeFax`,
+	 *         `main`, `iPhone`. Values are strings.
 	 */
 	public final native JavaScriptObject getPhone()
 	/*-{
@@ -343,7 +343,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The prefix for the person. single value
+	 * @return The prefix for the person. Single value
 	 */
 	public final native String getPrefix()
 	/*-{
@@ -356,10 +356,10 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The names of people the person is related to. multi-value, valid
+	 * @return The names of people the person is related to. Multi-value, valid
 	 *         labels are: `mother`, `father`, `parent`, `sister`, `brother`,
 	 *         `child`, `friend`, `spouse`, `partner`, `manager`, `assistant`.
-	 *         values are strings.
+	 *         Values are strings.
 	 */
 	public final native JavaScriptObject getRelatedNames()
 	/*-{
@@ -372,7 +372,7 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The suffix for the person. single value
+	 * @return The suffix for the person. Single value
 	 */
 	public final native String getSuffix()
 	/*-{

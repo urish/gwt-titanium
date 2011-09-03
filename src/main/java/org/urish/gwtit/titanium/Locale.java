@@ -23,10 +23,10 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The top level locale module. the locale module works with localization files
+ * The top level Locale module. The Locale module works with localization files
  * to which are generated during compilation into the operating system specific
- * localization formats. the locale module provides locale-specific strings
- * which can be referenced at runtime. additionally, the module contains a few
+ * localization formats. The Locale module provides locale-specific strings
+ * which can be referenced at runtime. Additionally, the module contains a few
  * methods and properties for querying device locale information.
  * <p>
  * Notes: The macro `L` can also be used which aliases the method
@@ -39,7 +39,7 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	}
 
 	/**
-	 * @return Return the current (default) iso 2-letter country code for the
+	 * @return Return the current (default) ISO 2-letter country code for the
 	 *         device.
 	 */
 	public static native String getCurrentCountry()
@@ -63,7 +63,7 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Return the current locale string for the device based on the
-	 *         user's settings (e.g., en-us).
+	 *         user's settings (e.g., en-US).
 	 * @platforms android
 	 */
 	public static native String getCurrentLocale()

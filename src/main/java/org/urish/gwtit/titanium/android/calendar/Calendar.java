@@ -20,7 +20,7 @@ package org.urish.gwtit.titanium.android.calendar;
 
 
 /**
- * An object which represents a single calendar in android.
+ * An object which represents a single calendar in Android.
  * <p>
  * Notes: See <Titanium.Android.Calendar> for examples.
  * 
@@ -84,8 +84,8 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Add an event to the calendar. returns the created
-	 * {@link org.urish.gwtit.titanium.android.calendar.event}.
+	 * Add an event to the calendar. Returns the created
+	 * {@link org.urish.gwtit.titanium.android.calendar.Event}.
 	 * 
 	 * @param properties
 	 *            An object defining the properties of the event. These
@@ -99,7 +99,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Returns the {@link org.urish.gwtit.titanium.android.calendar.event}
+	 * Returns the {@link org.urish.gwtit.titanium.android.calendar.Event}
 	 * object for the event with the given integer id.
 	 * 
 	 * @param id
@@ -112,7 +112,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Returns an array of
-	 * {@link org.urish.gwtit.titanium.android.calendar.event} objects with all
+	 * {@link org.urish.gwtit.titanium.android.calendar.Event} objects with all
 	 * events in the given date range.
 	 * 
 	 * @param date1
@@ -128,7 +128,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Returns an array of
-	 * {@link org.urish.gwtit.titanium.android.calendar.event} objects with all
+	 * {@link org.urish.gwtit.titanium.android.calendar.Event} objects with all
 	 * events on the given date.
 	 * 
 	 * @param year
@@ -147,7 +147,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Returns an array of
-	 * {@link org.urish.gwtit.titanium.android.calendar.event} objects with all
+	 * {@link org.urish.gwtit.titanium.android.calendar.Event} objects with all
 	 * events in the given month.
 	 * 
 	 * @param year
@@ -163,7 +163,7 @@ public class Calendar extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * Returns an array of
-	 * {@link org.urish.gwtit.titanium.android.calendar.event} objects with all
+	 * {@link org.urish.gwtit.titanium.android.calendar.Event} objects with all
 	 * events in the given year.
 	 * 
 	 * @param year

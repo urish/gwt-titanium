@@ -21,9 +21,9 @@ package org.urish.gwtit.titanium.android;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The titanium binding of an [android
- * notification](http://developer.android.com
- * /reference/android/app/notification.html).
+ * The Titanium binding of an [Android
+ * Notification](http://developer.android.com
+ * /reference/android/app/Notification.html).
  * <p>
  * Notes: If you pass contentTitle and/or contentText into
  * <Titanium.Android.createNotification>, then setLatestEventInfo will
@@ -56,7 +56,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The {@link org.urish.gwtit.titanium.android.pendingintent} to
+	 * @return The {@link org.urish.gwtit.titanium.android.PendingIntent} to
 	 *         execute when the expanded status entry is clicked.
 	 */
 	public final native JavaScriptObject getContentIntent()
@@ -109,9 +109,9 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The {@link org.urish.gwtit.titanium.android.pendingintent} to
+	 * @return The {@link org.urish.gwtit.titanium.android.PendingIntent} to
 	 *         execute when the status entry is deleted by the user with the
-	 *         "clear all notifications" button.
+	 *         "Clear All Notifications" button.
 	 */
 	public final native JavaScriptObject getDeleteIntent()
 	/*-{
@@ -125,14 +125,14 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Set of flags for the notification, defaults to
-	 *         {@link org.urish.gwtit.titanium.android.flag_auto_cancel}.
-	 *         possible values:
-	 *         {@link org.urish.gwtit.titanium.android.flag_auto_cancel},
-	 *         {@link org.urish.gwtit.titanium.android.flag_insistent},
-	 *         {@link org.urish.gwtit.titanium.android.flag_no_clear},
-	 *         {@link org.urish.gwtit.titanium.android.flag_ongoing_event},
-	 *         {@link org.urish.gwtit.titanium.android.flag_only_alert_once},
-	 *         {@link org.urish.gwtit.titanium.android.flag_show_lights}
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_AUTO_CANCEL}.
+	 *         Possible values:
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_AUTO_CANCEL},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_INSISTENT},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_NO_CLEAR},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_ONGOING_EVENT},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_ONLY_ALERT_ONCE},
+	 *         {@link org.urish.gwtit.titanium.Android.FLAG_SHOW_LIGHTS}
 	 */
 	public final native float getFlags()
 	/*-{
@@ -155,8 +155,8 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A resource id or url to an icon (the url must be an image located
-	 *         in resources/android/images/ or an android content uri)
+	 * @return A resource id or URL to an icon (the URL must be an image located
+	 *         in Resources/android/images/ or an Android content URI)
 	 */
 	public final native JavaScriptObject getIcon()
 	/*-{
@@ -164,7 +164,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The color for the led to blink
+	 * @return The color for the LED to blink
 	 */
 	public final native float getLedARGB()
 	/*-{
@@ -177,7 +177,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The number of milliseconds for the led to be off while it's
+	 * @return The number of milliseconds for the LED to be off while it's
 	 *         flashing.
 	 */
 	public final native float getLedOffMS()
@@ -191,7 +191,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The number of milliseconds for the led to be on while it's
+	 * @return The number of milliseconds for the LED to be on while it's
 	 *         flashing.
 	 */
 	public final native float getLedOnMS()
@@ -218,7 +218,7 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return A url to the sound to play (supports android + titanium urls)
+	 * @return A URL to the sound to play (supports Android + Titanium URLs)
 	 */
 	public final native String getSound()
 	/*-{
@@ -263,12 +263,12 @@ public class Notification extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * Sets the latest event info using the builtin notification view for this
-	 * notification. see android's documentation for
-	 * [setlatesteventinfo](http://
-	 * developer.android.com/reference/android/app/notification
-	 * .html#setlatesteventinfo(android.content.context, java.lang.charsequence,
-	 * java.lang.charsequence, android.app.pendingintent))
+	 * Sets the latest event info using the builtin Notification View for this
+	 * notification. See Android's documentation for
+	 * [setLatestEventInfo](http://
+	 * developer.android.com/reference/android/app/Notification
+	 * .html#setLatestEventInfo(android.content.Context, java.lang.CharSequence,
+	 * java.lang.CharSequence, android.app.PendingIntent))
 	 */
 	public final native void setLatestEventInfo()
 	/*-{

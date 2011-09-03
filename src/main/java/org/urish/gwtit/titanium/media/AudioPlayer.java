@@ -22,8 +22,8 @@ import org.urish.gwtit.titanium.media.events.ChangeHandler;
 import org.urish.gwtit.titanium.media.events.ProgressHandler;
 
 /**
- * The audioplayer object is returned by
- * {@link org.urish.gwtit.titanium.media.createaudioplayer} and is used for
+ * The AudioPlayer object is returned by
+ * {@link org.urish.gwtit.titanium.media.createAudioPlayer} and is used for
  * streaming audio to the device and low-level control of the audio playback.
  * 
  * @since 0.9
@@ -97,7 +97,7 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Boolean to indicate if audio should continue playing even if
-	 *         activity is paused
+	 *         Activity is paused
 	 * @platforms android
 	 */
 	public final native boolean getAllowBackground()
@@ -163,8 +163,8 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Returns the current playback progress. will return zero if
-	 *         samplerate has not yet been detected
+	 * @return Returns the current playback progress. Will return zero if
+	 *         sampleRate has not yet been detected
 	 */
 	public final native double getProgress()
 	/*-{

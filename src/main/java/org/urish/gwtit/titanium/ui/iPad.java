@@ -20,13 +20,13 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * The ipad specific ui capabilities. all properties, methods and events in this
- * namespace will only work on the apple ipad related devices. to develop for
- * ipad, you will need the apple iphone sdk 3.2 or later and titanium mobile sdk
- * 1.2 or later. for ipad ui programming guidelines, please review the [ipad
- * human interface
- * guidelines](http://developer.apple.com/iphone/library/documentation
- * /general/conceptual/ipadhig/introduction/introduction.html).
+ * The iPad specific UI capabilities. All properties, methods and events in this
+ * namespace will only work on the Apple iPad related devices. To develop for
+ * iPad, you will need the Apple iPhone SDK 3.2 or later and Titanium Mobile SDK
+ * 1.2 or later. For iPad UI programming guidelines, please review the [iPad
+ * Human Interface
+ * Guidelines](http://developer.apple.com/iphone/library/documentation
+ * /General/Conceptual/iPadHIG/Introduction/Introduction.html).
  * <p>
  * Notes: ### Custom Fonts
  * 

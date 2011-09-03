@@ -26,9 +26,9 @@ import org.urish.gwtit.titanium.ui.events.TabGroupFocusHandler;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * The tab group allows you to manage a tabbed ui of one or more windows. the
- * tab group is created by the method
- * {@link org.urish.gwtit.titanium.ui.createtabgroup}.
+ * The Tab Group allows you to manage a tabbed UI of one or more windows. The
+ * Tab Group is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createTabGroup}.
  * <p>
  * Notes: Note that when opening a tab group, if one or more of its tabs have
  * been set 'active' prior to opening, or if setActiveTab() has been called
@@ -56,7 +56,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Whether or not the user can configure the tab group via the
-	 *         'more' tab's edit functionality.
+	 *         'More' tab's edit functionality.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getAllowUserCustomization()
@@ -70,7 +70,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The default navigation bar color (typically for the "more" tab)
+	 * @return The default navigation bar color (typically for the "More" tab)
 	 */
 	public final native String getBarColor()
 	/*-{
@@ -83,7 +83,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The title for the 'more' tab edit button.
+	 * @return The title for the 'More' tab edit button.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getEditButtonTitle()
@@ -110,13 +110,13 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return One of ti.ui.android.soft_input_adjust_pan,
-	 *         ti.ui.android.soft_input_adjust_resize, or
-	 *         ti.ui.android.soft_input_adjust_unspecified. note: must be passed
-	 *         in the creation options. [android doc:
-	 *         window.setsoftinputmode](http
+	 * @return One of Ti.UI.Android.SOFT_INPUT_ADJUST_PAN,
+	 *         Ti.UI.Android.SOFT_INPUT_ADJUST_RESIZE, or
+	 *         Ti.UI.Android.SOFT_INPUT_ADJUST_UNSPECIFIED. Note: MUST be passed
+	 *         in the creation options. [Android Doc:
+	 *         Window.setSoftInputMode](http
 	 *         ://developer.android.com/reference/android
-	 *         /view/window.html#setsoftinputmode(int))
+	 *         /view/Window.html#setSoftInputMode(int))
 	 * 
 	 * @platforms android
 	 */
@@ -142,7 +142,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Close the tab group and remove it from the ui
+	 * Close the tab group and remove it from the UI
 	 */
 	public final native void close()
 	/*-{

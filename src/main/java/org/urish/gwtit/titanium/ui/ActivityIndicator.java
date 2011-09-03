@@ -20,9 +20,9 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * An activity indicator is created by the method
- * {@link org.urish.gwtit.titanium.ui.createactivityindicator}. an activity
- * indicator can be used to show the progress of an operation in the ui to let
+ * An Activity Indicator is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createActivityIndicator}. An activity
+ * indicator can be used to show the progress of an operation in the UI to let
  * the user know some action is taking place.
  * <p>
  * Notes: For iPhone, the style can be set from the constants

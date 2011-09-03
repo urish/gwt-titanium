@@ -20,8 +20,8 @@ package org.urish.gwtit.titanium.ui;
 
 
 /**
- * A progress bar is created by the method
- * {@link org.urish.gwtit.titanium.ui.createprogressbar}.
+ * A Progress Bar is created by the method
+ * {@link org.urish.gwtit.titanium.ui.createProgressBar}.
  * <p>
  * Notes: For iPhone, progress bar styles are constants defined in
  * [Titanium.UI.iPhone.ProgressBarStyle](Titanium.UI.iPhone.ProgressBarStyle).

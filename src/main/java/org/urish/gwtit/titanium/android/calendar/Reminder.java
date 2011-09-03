@@ -20,10 +20,10 @@ package org.urish.gwtit.titanium.android.calendar;
 
 
 /**
- * An object which represents a single reminder for an event in an android
- * calendar. reminders should not be created directly, but rather by using the
- * createreminder method of
- * {@link org.urish.gwtit.titanium.android.calendar.event}.
+ * An object which represents a single reminder for an event in an Android
+ * calendar. Reminders should not be created directly, but rather by using the
+ * createReminder method of
+ * {@link org.urish.gwtit.titanium.android.calendar.Event}.
  * <p>
  * Notes: Reminder API See <Titanium.Android.Calendar> for examples of
  * retrieving reminder information and creating reminders for events.
@@ -49,8 +49,8 @@ public class Reminder extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The reminder method. possible values are the method constants in
-	 *         {@link org.urish.gwtit.titanium.android.calendar}.
+	 * @return The reminder method. Possible values are the METHOD constants in
+	 *         {@link org.urish.gwtit.titanium.android.Calendar}.
 	 */
 	public final native float getMethod()
 	/*-{

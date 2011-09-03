@@ -20,10 +20,10 @@ package org.urish.gwtit.titanium.xml;
 
 
 /**
- * Proxy representing an attribute of an [element](titanium.xml.element), as
- * defined in the [dom level 2
- * specification](http://www.w3.org/tr/2000/rec-dom-level
- * -2-core-20001113/core.html#id-637646024).
+ * Proxy representing an attribute of an [Element](Titanium.XML.Element), as
+ * defined in the [DOM Level 2
+ * specification](http://www.w3.org/TR/2000/REC-DOM-Level
+ * -2-Core-20001113/core.html#ID-637646024).
  */
 public class Attr extends org.urish.gwtit.titanium.xml.Node {
 	protected Attr() {
@@ -38,7 +38,7 @@ public class Attr extends org.urish.gwtit.titanium.xml.Node {
 	}-*/;
 
 	/**
-	 * @return The {@link org.urish.gwtit.titanium.xml.element} to which the
+	 * @return The {@link org.urish.gwtit.titanium.xml.Element} to which the
 	 *         attribute belongs.
 	 */
 	public final native org.urish.gwtit.titanium.xml.Element getOwnerElement()

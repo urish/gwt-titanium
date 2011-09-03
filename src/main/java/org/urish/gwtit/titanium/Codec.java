@@ -23,8 +23,8 @@ import org.urish.gwtit.client.EventCallback;
 import com.google.gwt.core.client.JavaScriptObject;
 
 /**
- * A module for converting numbers and strings to and from a
- * {@link org.urish.gwtit.titanium.buffer}.
+ * A module for converting Numbers and Strings to and from a
+ * {@link org.urish.gwtit.titanium.Buffer}.
  * 
  * @since 1.7
  */
@@ -131,9 +131,9 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	public static final float LITTLE_ENDIAN = value_LITTLE_ENDIAN();
 
 	/**
-	 * Get the os native byte order (either
-	 * {@link org.urish.gwtit.titanium.codec.big_endian} or
-	 * {@link org.urish.gwtit.titanium.codec.little_endian})
+	 * Get the OS native byte order (either
+	 * {@link org.urish.gwtit.titanium.Codec.BIG_ENDIAN} or
+	 * {@link org.urish.gwtit.titanium.Codec.LITTLE_ENDIAN})
 	 * 
 	 * @return The OS native byte order
 	 */
@@ -143,7 +143,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Encodes the number `source` into `dest` using the passed in data `type`.
+	 * Encodes the Number `source` into `dest` using the passed in data `type`.
 	 * 
 	 * @param options
 	 *            encodeNumber named options
@@ -156,7 +156,7 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Decodes the `source` buffer (starting at the optional `position`) using
-	 * the passed in data `type`. throws an exception if `source` is null, or
+	 * the passed in data `type`. Throws an Exception if `source` is null, or
 	 * `position` is greater than `source.length`
 	 * 
 	 * @param options
@@ -169,10 +169,10 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Encodes the string `source` into `dest` using `charset`. throws an
-	 * exception if `charset` is not a valid character set, `source` is null, or
-	 * either `sourceposition`, `sourcelength`, or
-	 * `sourceposition`+`sourcelength` is greater than `source.length`.
+	 * Encodes the String `source` into `dest` using `charset`. Throws an
+	 * Exception if `charset` is not a valid character set, `source` is null, or
+	 * either `sourcePosition`, `sourceLength`, or
+	 * `sourcePosition`+`sourceLength` is greater than `source.length`.
 	 * 
 	 * @param options
 	 *            encodeString named options
@@ -184,9 +184,9 @@ public class Codec extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Decodes the `source` buffer into a string starting at `position`, with
-	 * `length` bytes, using the supplied character set `charset`. throws an
-	 * exception if `charset` is not a valid character set, `source` is null, or
+	 * Decodes the `source` buffer into a String starting at `position`, with
+	 * `length` bytes, using the supplied character set `charset`. Throws an
+	 * Exception if `charset` is not a valid character set, `source` is null, or
 	 * either `position`, `length`, or `position`+`length` is greater than
 	 * `source.length`.
 	 * 
