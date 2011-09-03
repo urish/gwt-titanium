@@ -35,7 +35,7 @@ public class RowClickEvent extends TouchEvent {
 	/**
 	 * table view row index
 	 */
-	public final native float getIndex()
+	public final native int getIndex()
 	/*-{
 		return this.index;
 	}-*/;
