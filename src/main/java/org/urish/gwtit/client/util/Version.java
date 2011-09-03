@@ -14,45 +14,76 @@ public class Version {
 
 	public static final String PLATFORM_IPHONE_OS = "iPhone OS";
 
+	private static final boolean developementMode = GwtUtil.isDevelopmentMode();
+
 	public static final boolean iPad() {
+		if (developementMode) {
+			return cachedOsName().equals(OS_IPAD);
+		}
 		return Platform.getOsname().equals(OS_IPAD);
 	}
 
 	public static final boolean iPhone() {
+		if (developementMode) {
+			return cachedOsName().equals(OS_IPHONE);
+		}
 		return Platform.getOsname().equals(OS_IPHONE);
 	}
 
 	public static final boolean android() {
+		if (developementMode) {
+			return cachedOsName().equals(OS_ANDROID);
+		}
 		return Platform.getOsname().equals(OS_ANDROID);
 	}
+
+	private static Boolean cachediOs3_2Plus = null;
 
 	/**
 	 * Returns true if iphone/ipad and version is 3.2+
 	 */
 	public static final boolean iOs3_2Plus() {
-		if (Platform.getName().equals(PLATFORM_IPHONE_OS)) {
-			String[] version = Platform.getVersion().split(".");
-			int major = Integer.parseInt(version[0]);
-			int minor = Integer.parseInt(version[1]);
+		if (cachediOs3_2Plus == null) {
+			cachediOs3_2Plus = false;
+			if (Platform.getName().equals(PLATFORM_IPHONE_OS)) {
+				String[] version = Platform.getVersion().split(".");
+				int major = Integer.parseInt(version[0]);
+				int minor = Integer.parseInt(version[1]);
 
-			if ((major > 3) || ((major == 3) && (minor > 1))) {
-				return true;
+				if ((major > 3) || ((major == 3) && (minor > 1))) {
+					cachediOs3_2Plus = true;
+				}
 			}
 		}
 
-		return false;
+		return cachediOs3_2Plus;
 	}
+
+	private static Boolean cachediOs4Plus = null;
 
 	/**
 	 * Returns true if iphone/ipad and version is 4.0+
 	 */
 	public static final boolean iOS4Plus() {
-		if (Platform.getName().equals(PLATFORM_IPHONE_OS)) {
-			String[] version = Platform.getVersion().split(".");
-			int major = Integer.parseInt(version[0]);
-			return (major >= 4);
+		if (cachediOs4Plus == null) {
+			cachediOs4Plus = false;
+			if (Platform.getName().equals(PLATFORM_IPHONE_OS)) {
+				String[] version = Platform.getVersion().split(".");
+				int major = Integer.parseInt(version[0]);
+				cachediOs4Plus = (major >= 4);
+			}
 		}
 
-		return false;
+		return cachediOs4Plus;
+	}
+
+	/*--- Cache for speeding up hosted mode ---*/
+	private static String cachedOsNameValue = null;
+
+	private static String cachedOsName() {
+		if (cachedOsNameValue == null) {
+			cachedOsNameValue = Platform.getOsname();
+		}
+		return cachedOsNameValue;
 	}
 }
