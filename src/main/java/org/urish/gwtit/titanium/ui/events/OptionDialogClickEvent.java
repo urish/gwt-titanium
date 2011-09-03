@@ -40,7 +40,7 @@ public class OptionDialogClickEvent extends AbstractTitaniumEvent {
 
 	/**
 	 * boolean to indicate that the index refers to a button on the dialog and
-	 * not an item. (Android)
+	 * not an item.
 	 */
 	public final native boolean getButton()
 	/*-{

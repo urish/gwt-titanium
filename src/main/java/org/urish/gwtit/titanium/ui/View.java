@@ -60,17 +60,12 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Read-only object with x and y properties of where the view is
-	 *         during animation
+	 * @return Object with x and y properties of where the view is during
+	 *         animation
 	 */
 	public final native org.urish.gwtit.client.util.Point getAnimatedCenterPoint()
 	/*-{
 		return this.animatedCenterPoint;
-	}-*/;
-
-	public final native void setAnimatedCenterPoint(org.urish.gwtit.client.util.Point value)
-	/*-{
-		this.animatedCenterPoint = value;
 	}-*/;
 
 	/**
@@ -87,7 +82,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The disabled background color of the view. (android)
+	 * @return The disabled background color of the view.
 	 * @platforms android
 	 */
 	public final native String getBackgroundDisabledColor()
@@ -101,7 +96,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return The disabled background image url of the view. (android)
+	 * @return The disabled background image url of the view.
 	 * @platforms android
 	 */
 	public final native String getBackgroundDisabledImage()
@@ -116,7 +111,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The focused background color of the view. focusable must be true
-	 *         for normal views. (android)
+	 *         for normal views.
 	 * @platforms android
 	 */
 	public final native String getBackgroundFocusedColor()
@@ -131,7 +126,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The focused background image url of the view. focusable must be
-	 *         true for normal views. (android)
+	 *         true for normal views.
 	 * @platforms android
 	 */
 	public final native String getBackgroundFocusedImage()
@@ -184,6 +179,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         wide. the right end cap is therefore computed by adding the size
 	 *         of the left end cap and the middle portion together and then
 	 *         subtracting that value from the width of the image
+	 * @platforms iphone, ipad
 	 */
 	public final native float getBackgroundLeftCap()
 	/*-{
@@ -197,7 +193,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The selected background color of the view. focusable must be true
-	 *         for normal views. (android)
+	 *         for normal views.
 	 * @platforms android
 	 */
 	public final native String getBackgroundSelectedColor()
@@ -212,7 +208,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return The selected background image url of the view. focusable must be
-	 *         true for normal views. (android)
+	 *         true for normal views.
 	 * @platforms android
 	 */
 	public final native String getBackgroundSelectedImage()
@@ -237,6 +233,7 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	 *         wide. the bottom end cap is therefore computed by adding the size
 	 *         of the top end cap and the middle portion together and then
 	 *         subtracting that value from the height of the image
+	 * @platforms iphone, ipad
 	 */
 	public final native float getBackgroundTopCap()
 	/*-{
@@ -424,9 +421,13 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return One of titanium.ui.android.soft_keyboard_default_on_focus,
-	 *         titanium.ui.android.soft_keyboard_hide_on_focus, or
-	 *         titanium.ui.android.soft_keyboard_show_on_focus. (android only)
+	 * @return One of
+	 *         {@link org.urish.gwtit.titanium.ui.android.soft_keyboard_default_on_focus}
+	 *         ,
+	 *         {@link org.urish.gwtit.titanium.ui.android.soft_keyboard_hide_on_focus}
+	 *         , or
+	 *         {@link org.urish.gwtit.titanium.ui.android.soft_keyboard_show_on_focus}
+	 *         .
 	 * @platforms android
 	 */
 	public final native int getSoftKeyboardOnFocus()
@@ -532,6 +533,22 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
+	 * @return When `true` the screen will not power down. note, enabling this
+	 *         feature will use more power thereby adversely affecting run time
+	 *         when on battery.
+	 * @platforms android
+	 */
+	public final native boolean getKeepScreenOn()
+	/*-{
+		return this.keepScreenOn;
+	}-*/;
+
+	public final native void setKeepScreenOn(boolean value)
+	/*-{
+		this.keepScreenOn = value;
+	}-*/;
+
+	/**
 	 * @return The layout algorithm to use for the layout. either 'absolute' or
 	 *         'vertical'
 	 */
@@ -609,6 +626,33 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	public final native JavaScriptObject toImage(EventCallback<JavaScriptObject> f)
 	/*-{
 		return this.toImage(function(e) { f.@org.urish.gwtit.client.EventCallback::onEvent(Lcom/google/gwt/core/client/JavaScriptObject;)(e); });
+	}-*/;
+
+	/**
+	 * Translates a point from the receiver's view coordinate system to another
+	 * view's coordinate system. if both views are connected in the native view
+	 * hierarchies, will return the converted point in the form of an object
+	 * with x and y properties. if either view is not in the view hierarchy, a
+	 * null is returned. keep in mind that views may be removed from the view
+	 * hierarchy if their window is blurred or if the view is offscreen (such as
+	 * in some situations with
+	 * {@link org.urish.gwtit.titanium.ui.scrollableview}). if this view is a
+	 * {@link org.urish.gwtit.titanium.ui.scrollview}, the view's x and y
+	 * offsets are subtracted from the return value.
+	 * 
+	 * @param point
+	 *            an object with properties of x and y describing a point within
+	 *            the receiver's coordinate system. If this argument is missing
+	 *            an x or y property, or the properties can not be converted
+	 *            into numbers, an exception will be raised.
+	 * @param destinationView
+	 *            the view whose coordinate system to which the point will be
+	 *            converted. If this argument is not a view, an exception will
+	 *            be raised.
+	 */
+	public final native Object convertPointToView(Object point, org.urish.gwtit.titanium.ui.View destinationView)
+	/*-{
+		return this.convertPointToView(point, destinationView);
 	}-*/;
 
 	public final native void addClickHandler(ClickHandler handler)

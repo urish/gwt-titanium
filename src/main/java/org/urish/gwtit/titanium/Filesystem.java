@@ -54,10 +54,9 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	public static final int MODE_WRITE = value_MODE_WRITE();
 
 	/**
-	 * @return Readonly constant where your application data directory is
-	 *         located. this directory should be used to place
-	 *         applications-specific files. on iphone, this directory is also
-	 *         backed up.
+	 * @return Constant where your application data directory is located. this
+	 *         directory should be used to place applications-specific files. on
+	 *         iphone, this directory is also backed up.
 	 */
 	public static native String getApplicationDataDirectory()
 	/*-{
@@ -65,7 +64,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Readonly constant where your application is located
+	 * @return Constant where your application is located
 	 */
 	public static native String getApplicationDirectory()
 	/*-{
@@ -73,7 +72,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Readonly platform specific line ending constant
+	 * @return Platform specific line ending constant
 	 */
 	public static native String getLineEnding()
 	/*-{
@@ -81,7 +80,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Readonly constant where your application resources are located
+	 * @return Constant where your application resources are located
 	 */
 	public static native String getResourcesDirectory()
 	/*-{
@@ -89,7 +88,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Readonly path separator constant
+	 * @return Path separator constant
 	 */
 	public static native String getSeparator()
 	/*-{
@@ -97,8 +96,7 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Readonly constant where your application can place temporary
-	 *         files
+	 * @return Constant where your application can place temporary files
 	 */
 	public static native String getTempDirectory()
 	/*-{

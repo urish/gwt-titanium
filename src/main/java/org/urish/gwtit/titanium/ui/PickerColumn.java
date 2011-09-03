@@ -31,16 +31,11 @@ public class PickerColumn extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return Number of rows in the column (readonly)
+	 * @return Number of rows in the column
 	 */
 	public final native int getRowCount()
 	/*-{
 		return this.rowCount;
-	}-*/;
-
-	public final native void setRowCount(int value)
-	/*-{
-		this.rowCount = value;
 	}-*/;
 
 	/**

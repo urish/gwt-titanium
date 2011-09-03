@@ -47,42 +47,27 @@ public class MenuItem extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Groupid for this item (read-only)
+	 * @return Groupid for this item
 	 */
 	public final native float getGroupId()
 	/*-{
 		return this.groupId;
 	}-*/;
 
-	public final native void setGroupId(float value)
-	/*-{
-		this.groupId = value;
-	}-*/;
-
 	/**
-	 * @return Itemid for this item (read-only)
+	 * @return Itemid for this item
 	 */
 	public final native float getItemId()
 	/*-{
 		return this.itemId;
 	}-*/;
 
-	public final native void setItemId(float value)
-	/*-{
-		this.itemId = value;
-	}-*/;
-
 	/**
-	 * @return Integer used for controlling sort order (read-only)
+	 * @return Integer used for controlling sort order
 	 */
 	public final native float getOrder()
 	/*-{
 		return this.order;
-	}-*/;
-
-	public final native void setOrder(float value)
-	/*-{
-		this.order = value;
 	}-*/;
 
 	/**

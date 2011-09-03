@@ -72,7 +72,6 @@ public class TextArea extends org.urish.gwtit.titanium.ui.View {
 	 *         , or
 	 *         {@link org.urish.gwtit.titanium.ui.text_autocapitalization_all}
 	 *         to indicate how the field should be capitalized during typing.
-	 *         (only android)
 	 * @platforms android
 	 */
 	public final native int getAutocapitalization()

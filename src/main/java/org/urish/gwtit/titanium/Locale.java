@@ -54,31 +54,21 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Return the current language for the device based on the user's
-	 *         settings (readonly)
+	 *         settings
 	 */
 	public static native String getCurrentLanguage()
 	/*-{
 		return Titanium.Locale.currentLanguage;
 	}-*/;
 
-	public static native void setCurrentLanguage(String value)
-	/*-{
-		Titanium.Locale.currentLanguage = value;
-	}-*/;
-
 	/**
 	 * @return Return the current locale string for the device based on the
-	 *         user's settings (e.g., en-us). (readonly) (android only)
+	 *         user's settings (e.g., en-us).
 	 * @platforms android
 	 */
 	public static native String getCurrentLocale()
 	/*-{
 		return Titanium.Locale.currentLocale;
-	}-*/;
-
-	public static native void setCurrentLocale(String value)
-	/*-{
-		Titanium.Locale.currentLocale = value;
 	}-*/;
 
 	/**
@@ -93,8 +83,9 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Return a currency code for a given locale. (android only)
+	 * Return a currency code for a given locale.
 	 * 
+	 * @platforms android
 	 * @param locale
 	 *            the locale for which you want to the currency code, e.g.
 	 *            getCurrencyCode('en-US') -> 'USD'
@@ -105,7 +96,7 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Return a currency symbol for the given currency code. (android only)
+	 * Return a currency symbol for the given currency code.
 	 * 
 	 * @platforms android
 	 * @param currencyCode
@@ -118,7 +109,7 @@ public class Locale extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Return a currency symbol for the given locale. (android only)
+	 * Return a currency symbol for the given locale.
 	 * 
 	 * @platforms android
 	 * @param locale

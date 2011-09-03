@@ -38,6 +38,18 @@ import com.google.gwt.core.client.JavaScriptObject;
  * Notes: If your scrollable region fits within the size of the content area the
  * scroll view will not scroll.
  * 
+ * Android Note**: Android ScrollViews can only scroll in one direction,
+ * vertical or horizontal. We provide the `scrollType` property so you can
+ * explicitly set the scroll direction. If that property is *not* set, we
+ * attempt to deduce the scroll direction based on some of the other properties
+ * that have been set. Specifically, if `contentWidth` and `width` are both set
+ * and are equal to each other, or if they are both set *and*
+ * `showVerticalScrollIndicator` is set to `true`, then the scroll direction is
+ * set to "vertical". If `contentHeight` and `height` are both set and are
+ * equal, or if they are both set and `showHorizontalScrollIndicator` is set to
+ * `true`, then the scroll direction is set to "horizontal". If `scrollType` is
+ * set, it overrides the deduced setting.
+ * 
  * @since 0.9
  */
 public class ScrollView extends org.urish.gwtit.titanium.ui.View {
@@ -45,8 +57,9 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return (iphone only) boolean to indicate if the scroll view can cancel
-	 *         subview touches in order to scroll instead. default of true
+	 * @return Boolean to indicate if the scroll view can cancel subview touches
+	 *         in order to scroll instead. default of true
+	 * @platforms iphone, ipad
 	 */
 	public final native boolean getCanCancelEvents()
 	/*-{
@@ -99,7 +112,7 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Disable view bouncing. ios only.
+	 * @return Disable view bouncing.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getDisableBounce()
@@ -155,7 +168,10 @@ public class ScrollView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return (android only) the type of scrollview: "vertical" or "horizontal"
+	 * @return For explicitly setting the direction -- "vertical" or
+	 *         "horizontal" -- in which the scrollview will scroll. see also the
+	 *         documentation notes for more information concerning how android
+	 *         deduces the scroll direction when this property is *not* set.
 	 * 
 	 * @platforms android
 	 */

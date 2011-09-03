@@ -46,8 +46,7 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return One of ti.ui.android.switch_style_checkbox or
-	 *         ti.ui.android.switch_style_togglebutton (default). (android only)
+	 * @return One of or (default).
 	 * @platforms android
 	 */
 	public final native int getStyle()
@@ -62,7 +61,6 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Text to display with checkbox. used if style is
-	 *         ti.ui.android.switch_style_checkbox (android only)
 	 * @platforms android
 	 */
 	public final native String getTitle()
@@ -77,7 +75,6 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Text to display when value is `false`. used if style is
-	 *         ti.ui.android.switch_style_togglebutton (android only)
 	 * @platforms android
 	 */
 	public final native String getTitleOff()
@@ -92,7 +89,6 @@ public class Switch extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Text to display when value is `true`. used if style is
-	 *         ti.ui.android.switch_style_togglebutton (android only)
 	 * @platforms android
 	 */
 	public final native String getTitleOn()

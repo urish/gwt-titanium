@@ -31,7 +31,7 @@ public class LocationEvent extends AbstractTitaniumEvent {
 	}
 
 	/**
-	 * if success is false, the error code if available (iOS only)
+	 * if success is false, the error code if available
 	 */
 	public final native float getCode()
 	/*-{
@@ -48,8 +48,8 @@ public class LocationEvent extends AbstractTitaniumEvent {
 	}-*/;
 
 	/**
-	 * (Android only) location provider dictionary with the following
-	 * sub-properties: `name`, `accuracy`, `power`, and `provider`.
+	 * location provider dictionary with the following sub-properties: `name`,
+	 * `accuracy`, `power`, and `provider`.
 	 */
 	public final native org.urish.gwtit.titanium.geolocation.LocationProviderInfo getProvider()
 	/*-{

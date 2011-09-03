@@ -205,8 +205,8 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Title for the back button. only available in iphone. this is only
-	 *         valid when the window is a child of a tab.
+	 * @return Title for the back button. this is only valid when the window is
+	 *         a child of a tab.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getBackButtonTitle()
@@ -220,8 +220,8 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Url to an image to show as the back button. only available in
-	 *         iphone. this is only valid when the window is a child of a tab.
+	 * @return Url to an image to show as the back button.this is only valid
+	 *         when the window is a child of a tab.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getBackButtonTitleImage()
@@ -235,8 +235,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Web named color or hex value for the color of the nav bar. only
-	 *         available in iphone.
+	 * @return Web named color or hex value for the color of the nav bar.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getBarColor()
@@ -251,7 +250,6 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Url to a local image to place as the background of the nav bar.
-	 *         only available in iphone.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getBarImage()
@@ -265,10 +263,10 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return (android only.) boolean indicates if the application should exit
-	 *         when the android back button is pressed while the window is being
-	 *         shown. you can only set this as a createwindow({...}) option.
-	 *         setting it after window creation will no effect.
+	 * @return Boolean indicates if the application should exit when the android
+	 *         back button is pressed while the window is being shown. you can
+	 *         only set this as a createwindow({...}) option. setting it after
+	 *         window creation will no effect.
 	 * @platforms android
 	 */
 	public final native boolean getExitOnClose()
@@ -295,7 +293,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return View to show in the left nav bar area. only available in iphone.
+	 * @return View to show in the left nav bar area.
 	 * @platforms iphone, ipad
 	 */
 	public final native JavaScriptObject getLeftNavButton()
@@ -410,7 +408,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return View to show in the right nav bar area. only available in iphone.
+	 * @return View to show in the right nav bar area.
 	 * @platforms iphone, ipad
 	 */
 	public final native org.urish.gwtit.titanium.ui.View getRightNavButton()
@@ -451,7 +449,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return View to show in the title area. only available in iphone.
+	 * @return View to show in the title area.
 	 * @platforms iphone, ipad
 	 */
 	public final native org.urish.gwtit.titanium.ui.View getTitleControl()
@@ -465,8 +463,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Url to a image that show in the title area. only available in
-	 *         iphone.
+	 * @return Url to a image that show in the title area.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getTitleImage()
@@ -480,7 +477,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Title prompt for the window. only available in iphone.
+	 * @return Title prompt for the window.
 	 */
 	public final native String getTitlePrompt()
 	/*-{
@@ -520,8 +517,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Array of button objects to show in the toolbar of the window.
-	 *         only available in iphone. this is only valid when the window is a
-	 *         child of a tab.
+	 *         this is only valid when the window is a child of a tab.
 	 * @platforms iphone, ipad
 	 */
 	public final native JavaScriptObject[] getToolbar()
@@ -535,8 +531,7 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Boolean to indicate if the nav bar is translucent. only available
-	 *         in iphone.
+	 * @return Boolean to indicate if the nav bar is translucent.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getTranslucent()
@@ -565,12 +560,10 @@ public class Window extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return One of ti.ui.android.soft_input_adjust_pan,
-	 *         ti.ui.android.soft_input_adjust_resize, or
-	 *         ti.ui.android.soft_input_adjust_unspecified. note: must be passed
-	 *         in the creation options. (android only) [android doc:
-	 *         window.setsoftinputmode
-	 *         ](http://developer.android.com/reference/android
+	 * @return One of , , or . note: must be passed in the creation options.
+	 *         (android only) [android doc:
+	 *         window.setsoftinputmode](http://developer
+	 *         .android.com/reference/android
 	 *         /view/window.html#setsoftinputmode(int))
 	 * 
 	 * @platforms android

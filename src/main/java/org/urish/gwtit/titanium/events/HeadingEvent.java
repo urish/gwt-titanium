@@ -31,7 +31,7 @@ public class HeadingEvent extends AbstractTitaniumEvent {
 	}
 
 	/**
-	 * if success is false, the error code if available (iOS only)
+	 * if success is false, the error code if available
 	 */
 	public final native float getCode()
 	/*-{
@@ -56,7 +56,7 @@ public class HeadingEvent extends AbstractTitaniumEvent {
 	}-*/;
 
 	/**
-	 * heading results dictionary with the following sub-properties:
+	 * heading results dictionary with the following sub-pro perties:
 	 * `magneticHeading`, `trueHeading`, `accuracy`, `x`, `y`, `z`, `timestamp`.
 	 */
 	public final native org.urish.gwtit.titanium.geolocation.HeadingInfo getHeading()

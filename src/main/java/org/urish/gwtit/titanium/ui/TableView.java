@@ -51,8 +51,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return True if the rows can be selected while editing the table (ios
-	 *         only)
+	 * @return True if the rows can be selected while editing the table
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getAllowsSelectionDuringEditing()
@@ -81,7 +80,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Allow the table view to be editable (this must be true for
-	 *         swipe-to-delete) (ios only)
+	 *         swipe-to-delete)
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getEditable()
@@ -95,7 +94,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Boolean to control the editing state of the table view (ios only)
+	 * @return Boolean to control the editing state of the table view
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getEditing()
@@ -231,8 +230,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Boolean to control the moveable state of the table view (ios
-	 *         only)
+	 * @return Boolean to control the moveable state of the table view
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getMoving()
@@ -326,7 +324,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Whether tableview displays vertical scroll indicator (ios only)
+	 * @return Whether tableview displays vertical scroll indicator
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getShowVerticalScrollIndicator()
@@ -340,7 +338,7 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Iphone only. the style of the table view. constant from
+	 * @return The style of the table view. constant from
 	 *         {@link org.urish.gwtit.titanium.ui.iphone.tableviewstyle}
 	 * @platforms iphone, ipad
 	 */

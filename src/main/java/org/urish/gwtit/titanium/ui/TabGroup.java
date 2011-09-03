@@ -56,7 +56,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Whether or not the user can configure the tab group via the
-	 *         'more' tab's edit functionality. iphone/ipad only
+	 *         'more' tab's edit functionality.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getAllowUserCustomization()
@@ -83,7 +83,7 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return The title for the 'more' tab edit button. iphone/ipad only
+	 * @return The title for the 'more' tab edit button.
 	 * @platforms iphone, ipad
 	 */
 	public final native String getEditButtonTitle()
@@ -113,9 +113,9 @@ public class TabGroup extends org.urish.gwtit.titanium.ui.View {
 	 * @return One of ti.ui.android.soft_input_adjust_pan,
 	 *         ti.ui.android.soft_input_adjust_resize, or
 	 *         ti.ui.android.soft_input_adjust_unspecified. note: must be passed
-	 *         in the creation options. (android only) [android doc:
-	 *         window.setsoftinputmode
-	 *         ](http://developer.android.com/reference/android
+	 *         in the creation options. [android doc:
+	 *         window.setsoftinputmode](http
+	 *         ://developer.android.com/reference/android
 	 *         /view/window.html#setsoftinputmode(int))
 	 * 
 	 * @platforms android

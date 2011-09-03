@@ -35,7 +35,7 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return A titanium.ui.view. allows for arbitrary contents inside a native
-	 *         dialog. works for any dialog. (android)
+	 *         dialog. works for any dialog.
 	 * @platforms android
 	 */
 	public final native JavaScriptObject getAndroidView()
@@ -91,7 +91,7 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Set an initially selected option. only valid when options has
-	 *         been specified. (android only)
+	 *         been specified.
 	 * @platforms android
 	 */
 	public final native int getSelectedIndex()

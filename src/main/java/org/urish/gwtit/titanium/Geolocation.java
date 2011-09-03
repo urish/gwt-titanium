@@ -192,8 +192,8 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return (ios 4.2+ only). returns an authorization constant indicating if
-	 *         the application has access to location services. always returns
+	 * @return Returns an authorization constant indicating if the application
+	 *         has access to location services. always returns
 	 *         authorization_unknown on pre-4.2 devices. attempting to
 	 *         re-authorize when authorization_restricted will lead to issues
 	 * @platforms iphone, ipad
@@ -237,10 +237,10 @@ public class Geolocation extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return (ios only). this property informs the end-user why location
-	 *         services are being requested by the application. this string will
-	 *         be display in the permission dialog. this property is required
-	 *         starting in 4.0.
+	 * @return This property informs the end-user why location services are
+	 *         being requested by the application. this string will be display
+	 *         in the permission dialog. this property is required starting in
+	 *         4.0.
 	 * @platforms iphone, ipad
 	 */
 	public static native String getPurpose()

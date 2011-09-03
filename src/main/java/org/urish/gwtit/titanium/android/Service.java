@@ -40,32 +40,22 @@ public class Service extends org.urish.gwtit.titanium.Proxy {
 	}
 
 	/**
-	 * @return (read-only) the {@link org.urish.gwtit.titanium.android.intent}
-	 *         used to start or bind to the service.
+	 * @return The {@link org.urish.gwtit.titanium.android.intent} used to start
+	 *         or bind to the service.
 	 */
 	public final native org.urish.gwtit.titanium.android.Intent getIntent()
 	/*-{
 		return this.intent;
 	}-*/;
 
-	public final native void setIntent(org.urish.gwtit.titanium.android.Intent value)
-	/*-{
-		this.intent = value;
-	}-*/;
-
 	/**
-	 * @return (read-only) a service can be started more than once -- this
-	 *         number (based on an incrementing integer) indicates which
-	 *         "start number" in the sequence the current service instance is.
+	 * @return A service can be started more than once -- this number (based on
+	 *         an incrementing integer) indicates which "start number" in the
+	 *         sequence the current service instance is.
 	 */
 	public final native float getServiceInstanceId()
 	/*-{
 		return this.serviceInstanceId;
-	}-*/;
-
-	public final native void setServiceInstanceId(float value)
-	/*-{
-		this.serviceInstanceId = value;
 	}-*/;
 
 	/**

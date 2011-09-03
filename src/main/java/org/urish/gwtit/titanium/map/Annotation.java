@@ -90,9 +90,8 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return Android only. *deprecated* use
-	 *         {@link org.urish.gwtit.titanium.map.annotation.image} property
-	 *         instead.
+	 * @return Use {@link org.urish.gwtit.titanium.map.annotation.image}
+	 *         property instead.
 	 * @platforms android
 	 */
 	public final native String getPinImage()

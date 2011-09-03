@@ -161,11 +161,6 @@ public class Network extends org.urish.gwtit.titanium.Module {
 		return Titanium.Network.networkType;
 	}-*/;
 
-	public static native void setNetworkType(int value)
-	/*-{
-		Titanium.Network.networkType = value;
-	}-*/;
-
 	/**
 	 * @return The network type name constant. returns one of `none`, `wifi`,
 	 *         `lan` or `mobile`.
@@ -175,14 +170,9 @@ public class Network extends org.urish.gwtit.titanium.Module {
 		return Titanium.Network.networkTypeName;
 	}-*/;
 
-	public static native void setNetworkTypeName(String value)
-	/*-{
-		Titanium.Network.networkTypeName = value;
-	}-*/;
-
 	/**
-	 * @return Readonly boolean value that indicates if the network is reachable
-	 *         to the internet either via wifi or carrier network
+	 * @return Boolean value that indicates if the network is reachable to the
+	 *         internet either via wifi or carrier network
 	 */
 	public static native boolean getOnline()
 	/*-{
@@ -191,8 +181,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return The remote device uuid if the device was registered with the
-	 *         apple push notification service or null if not set. only
-	 *         available on iphone.
+	 *         apple push notification service or null if not set.
 	 * @platforms iphone, ipad
 	 */
 	public static native String getRemoteDeviceUUID()
@@ -207,7 +196,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return Returns an array of network type constants enabled for the
-	 *         application. only available on iphone.
+	 *         application.
 	 * @platforms iphone, ipad
 	 */
 	public static native int[] getRemoteNotificationTypes()
@@ -221,8 +210,7 @@ public class Network extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * @return Returns true if remote notifications have been enabled. only
-	 *         available on iphone.
+	 * @return Returns true if remote notifications have been enabled.
 	 * @platforms iphone, ipad
 	 */
 	public static native boolean getRemoteNotificationsEnabled()
@@ -417,7 +405,6 @@ public class Network extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Register for push notifications with the apple push notification service.
-	 * only available on iphone.
 	 * 
 	 * @platforms iphone, ipad
 	 * @param config

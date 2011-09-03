@@ -40,7 +40,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return Readonly boolean to indicate if the animation is animating
+	 * @return Boolean to indicate if the animation is animating
 	 */
 	public final native boolean getAnimating()
 	/*-{
@@ -48,7 +48,8 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Allow image to scale (android)
+	 * @return Allow image to scale
+	 * @platforms android
 	 */
 	public final native boolean getCanScale()
 	/*-{
@@ -61,8 +62,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Number of times to retry decoding the bitmap at this url (1.7.0 /
-	 *         android only. default: 5)
+	 * @return Number of times to retry decoding the bitmap at this url
 	 * 
 	 * @platforms android
 	 * @since 1.7.0
@@ -121,7 +121,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 
 	/**
 	 * @return Indicates whether or not the source image is in 2x resolution for
-	 *         retina displays. use for remote images only. (ios)
+	 *         retina displays. use for remote images only.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getHires()
@@ -172,7 +172,7 @@ public class ImageView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Readonly boolean to indicate if the animation is paused
+	 * @return Boolean to indicate if the animation is paused
 	 */
 	public final native boolean getPaused()
 	/*-{

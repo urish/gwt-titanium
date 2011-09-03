@@ -789,13 +789,8 @@ public class UI extends org.urish.gwtit.titanium.Module {
 		return Titanium.UI.currentWindow;
 	}-*/;
 
-	public static native void setCurrentWindow(org.urish.gwtit.titanium.ui.Window value)
-	/*-{
-		Titanium.UI.currentWindow = value;
-	}-*/;
-
 	/**
-	 * @return Deprecated. to set an orientation, it is suggested to instead set
+	 * @return To set an orientation, it is suggested to instead set
 	 *         {@link org.urish.gwtit.titanium.window.orientationmodes} to the
 	 *         specific orientation desired. when set, this will update the
 	 *         orientation of the current window to the specified orientation

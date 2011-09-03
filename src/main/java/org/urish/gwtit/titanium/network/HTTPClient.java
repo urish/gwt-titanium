@@ -96,7 +96,7 @@ public class HTTPClient extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return File to download contents to. can only be set after calling open.
-	 *         ios only
+	 * @platforms iphone, ipad
 	 */
 	public final native String getFile()
 	/*-{

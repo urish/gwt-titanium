@@ -97,7 +97,8 @@ public class AudioPlayer extends org.urish.gwtit.titanium.Proxy {
 
 	/**
 	 * @return Boolean to indicate if audio should continue playing even if
-	 *         activity is paused (android only as of 1.3.0)
+	 *         activity is paused
+	 * @platforms android
 	 */
 	public final native boolean getAllowBackground()
 	/*-{

@@ -73,7 +73,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return (android only, applicable only to the
+	 * @return (applicable only to the
 	 *         {@link org.urish.gwtit.titanium.ui.picker_type_time} picker.) if
 	 *         true, a 24-hour cloc will be used, with hours 0 through 23. if
 	 *         false, a 12-hour clock will be used, with hours 1 through 12 and
@@ -82,6 +82,7 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	 *         the native time picker (when "usespinner" is either un-set or
 	 *         false), the default is false. for the spinner-style time picker,
 	 *         the default is true.
+	 * @platforms android
 	 */
 	public final native boolean getFormat24()
 	/*-{
@@ -172,13 +173,13 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return (android only, default false.) an indicator that you wish to use
-	 *         a non-native android control that looks and behaves more like the
-	 *         ios picker in the sense that the user selects values by spinning
-	 *         a wheel. (the native android spinner is more like a conventional
-	 *         "dropdown".) note that this option works both plain pickers, date
-	 *         pickers and time pickers. set it preferably immediately when
-	 *         creating the picker, i.e., {@link
+	 * @return An indicator that you wish to use a non-native android control
+	 *         that looks and behaves more like the ios picker in the sense that
+	 *         the user selects values by spinning a wheel. (the native android
+	 *         spinner is more like a conventional "dropdown".) note that this
+	 *         option works both plain pickers, date pickers and time pickers.
+	 *         set it preferably immediately when creating the picker, i.e.,
+	 *         {@link
 	 *         org.urish.gwtit.titanium.ui.createpicker( usespinner:true});},
 	 *         but definitely before `.add()`ing the picker to its parent.
 	 * @platforms android
@@ -207,12 +208,14 @@ public class Picker extends org.urish.gwtit.titanium.Proxy {
 	}-*/;
 
 	/**
-	 * @return (android only.) this is relevant only if you set `usespinner` to
-	 *         `true`, and it is relevant only for the plain picker (not
-	 *         date/time). by default, the spinner-style android picker will
-	 *         show 5 rows: the one in the middle which is selected, and then 2
-	 *         above and below. you can set this to allow more (use an odd
-	 *         number to be sure the selected row is in the middle.)
+	 * @return This is relevant only if you set `usespinner` to `true`, and it
+	 *         is relevant only for the plain picker (not date/time). by
+	 *         default, the spinner-style android picker will show 5 rows: the
+	 *         one in the middle which is selected, and then 2 above and below.
+	 *         you can set this to allow more (use an odd number to be sure the
+	 *         selected row is in the middle.)
+	 * 
+	 * @platforms android
 	 */
 	public final native int getVisibleItems()
 	/*-{

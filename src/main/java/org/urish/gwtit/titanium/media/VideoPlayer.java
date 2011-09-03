@@ -53,8 +53,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}
 
 	/**
-	 * @return Whether or not the movie can be played on a remote device. ios
-	 *         4.3+ only.
+	 * @return Whether or not the movie can be played on a remote device.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getAllowsAirPlay()
@@ -83,7 +82,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Deprecated. use url property instead.
+	 * @return Use url property instead.
 	 */
 	public final native String getContentURL()
 	/*-{
@@ -376,7 +375,7 @@ public class VideoPlayer extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * Pause playing the video. on ios only available under 3.2 and later
+	 * Pause playing the video.
 	 */
 	public final native void pause()
 	/*-{

@@ -40,7 +40,8 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	 *         the range (currentpage +/- (cachesize - 1)/2), rounded down for
 	 *         even values (i.e. cachesize=4 renders 3 views into the cache).
 	 *         keep in mind that improved performance (larger cache) will lead
-	 *         to faster performance, but more memory usage. ios only.
+	 *         to faster performance, but more memory usage.
+	 * @platforms iphone, ipad
 	 */
 	public final native int getCacheSize()
 	/*-{
@@ -66,7 +67,7 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
-	 * @return Disable view bouncing. ios only.
+	 * @return Disable view bouncing.
 	 * @platforms iphone, ipad
 	 */
 	public final native boolean getDisableBounce()

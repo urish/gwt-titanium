@@ -737,7 +737,8 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return An instance of {@link org.urish.gwtit.titanium.media.musicplayer}
-	 *         representing the app-specific music player. iphone/ipad only
+	 *         representing the app-specific music player.
+	 * @platforms iphone, ipad
 	 */
 	public static native org.urish.gwtit.titanium.media.MusicPlayer getAppMusicPlayer()
 	/*-{
@@ -887,7 +888,8 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * @return An instance of {@link org.urish.gwtit.titanium.media.musicplayer}
-	 *         representing the system-wide music player. iphone/ipad only
+	 *         representing the system-wide music player.
+	 * @platforms iphone, ipad
 	 */
 	public static native JavaScriptObject getSystemMusicPlayer()
 	/*-{
@@ -967,8 +969,9 @@ public class Media extends org.urish.gwtit.titanium.Module {
 
 	/**
 	 * Hide the music library. this must be called after calling
-	 * `showmusiclibrary` and only when `autohide` is set to false. iphone and
-	 * ipad only.
+	 * `showmusiclibrary` and only when `autohide` is set to false.
+	 * 
+	 * @platforms iphone, ipad
 	 */
 	public static native void hideMusicLibrary()
 	/*-{
@@ -1068,7 +1071,7 @@ public class Media extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
-	 * Show the music library. iphone and ipad only.
+	 * Show the music library.
 	 * 
 	 * @platforms iphone, ipad
 	 * @param options
