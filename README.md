@@ -12,7 +12,7 @@ Copyright 2011, Uri Shaked. Licensed under the APACHE license.
  - Wrappers to the entire Titanium Mobile API
  - Javadocs for most methods and properties
  - Utility classes to perform common tasks (os version detection, timers, etc)
- - Available as a maven package, for automatic integration into your automated build process
+ - Available as a maven package, for quick integration into your automated build process
  
 ### Limitations
 
