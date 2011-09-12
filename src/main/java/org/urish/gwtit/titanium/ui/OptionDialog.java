@@ -79,12 +79,12 @@ public class OptionDialog extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * @return Array of button names as strings
 	 */
-	public final native JavaScriptObject[] getOptions()
+	public final native String[] getOptions()
 	/*-{
 		return this.options;
 	}-*/;
 
-	public final native void setOptions(JavaScriptObject[] value)
+	public final native void setOptions(String[] value)
 	/*-{
 		this.options = value;
 	}-*/;
