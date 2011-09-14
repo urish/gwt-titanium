@@ -70,6 +70,20 @@ public class TableViewRow extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return The text displayed on the red delete button when swiping the row
+	 *         in edit mode
+	 */
+	public final native String getDeleteButtonTitle()
+	/*-{
+		return this.deleteButtonTitle;
+	}-*/;
+
+	public final native void setDeleteButtonTitle(String value)
+	/*-{
+		this.deleteButtonTitle = value;
+	}-*/;
+
+	/**
 	 * @return Whether or not the row can be deleted
 	 * @platforms iphone, ipad
 	 */

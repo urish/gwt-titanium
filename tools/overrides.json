@@ -300,7 +300,8 @@
 		"events[name='scroll'] properties[name='size'] type": "$Size",
 		"events[name='scrollEnd'] properties[name='contentOffset'] type": "$Point",
 		"events[name='scrollEnd'] properties[name='contentSize'] type": "$Size",
-		"events[name='scrollEnd'] properties[name='size'] type": "$Size"
+		"events[name='scrollEnd'] properties[name='size'] type": "$Size",
+		"properties[name='index'] type": "Array<$TableViewIndexEntry>"		
 	},
 	"Titanium.UI.TableViewRow": {
 		"properties[name='layout']": null

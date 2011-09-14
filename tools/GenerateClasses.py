@@ -272,6 +272,7 @@ def mapTypes(s, withConsts = False):
 		"$Point": "org.urish.gwtit.client.util.Point",
 		"$Size": "org.urish.gwtit.client.util.Size",
 		"$Range": "org.urish.gwtit.client.util.Range",
+		"$TableViewIndexEntry": "org.urish.gwtit.client.types.TableViewIndexEntry",
 	}
 	if s in TYPE_MAP.keys():
 		return TYPE_MAP[s]
@@ -735,4 +736,5 @@ def processDir(inputDir, projectDir):
 		os.system("eclipsec -application org.eclipse.jdt.core.JavaCodeFormatter -verbose -config %s\.settings\org.eclipse.jdt.core.prefs %s" % (projectDir, " ".join(someClasses)))
 
 if __name__ == "__main__":
-	processDir(r"C:\projects\titanium_mobile\apidoc\titanium", "C:\Projects\gwt-titanium")
+	scriptPath = os.path.dirname(os.path.realpath(__file__))
+	processDir(os.path.join(scriptPath, r"..\..\titanium_mobile\apidoc\titanium"), os.path.join(scriptPath, ".."))

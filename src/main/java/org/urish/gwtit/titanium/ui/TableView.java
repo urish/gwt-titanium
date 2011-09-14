@@ -79,6 +79,20 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return The text displayed on the red delete button when swiping a row in
+	 *         edit mode
+	 */
+	public final native String getDeleteButtonTitle()
+	/*-{
+		return this.deleteButtonTitle;
+	}-*/;
+
+	public final native void setDeleteButtonTitle(String value)
+	/*-{
+		this.deleteButtonTitle = value;
+	}-*/;
+
+	/**
 	 * @return Allow the table view to be editable (this must be true for
 	 *         swipe-to-delete)
 	 * @platforms iphone, ipad
@@ -194,12 +208,12 @@ public class TableView extends org.urish.gwtit.titanium.ui.View {
 	 * @return An array of objects (with title and index properties) to control
 	 *         the table view index
 	 */
-	public final native JavaScriptObject[] getIndex()
+	public final native org.urish.gwtit.client.types.TableViewIndexEntry[] getIndex()
 	/*-{
 		return this.index;
 	}-*/;
 
-	public final native void setIndex(JavaScriptObject[] value)
+	public final native void setIndex(org.urish.gwtit.client.types.TableViewIndexEntry[] value)
 	/*-{
 		this.index = value;
 	}-*/;

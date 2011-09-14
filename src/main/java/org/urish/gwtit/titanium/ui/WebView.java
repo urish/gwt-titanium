@@ -111,6 +111,22 @@ public class WebView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default True
+	 * @return Sets whether the zoom controls are enabled
+	 * @platforms android
+	 * @since 1.8.0
+	 */
+	public final native boolean getEnableZoomControls()
+	/*-{
+		return this.enableZoomControls;
+	}-*/;
+
+	public final native void setEnableZoomControls(boolean value)
+	/*-{
+		this.enableZoomControls = value;
+	}-*/;
+
+	/**
 	 * @return Whether the webview should scale it's contents or not
 	 */
 	public final native boolean getScalesPageToFit()
