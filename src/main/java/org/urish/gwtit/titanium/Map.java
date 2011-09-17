@@ -29,6 +29,27 @@ public class Map extends org.urish.gwtit.titanium.Module {
 	protected Map() {
 	}
 
+	private static native final int value_ANNOTATION_GREEN()
+	/*-{
+		return Titanium.Map.ANNOTATION_GREEN;
+	}-*/;
+
+	public static final int ANNOTATION_GREEN = value_ANNOTATION_GREEN();
+
+	private static native final int value_ANNOTATION_PURPLE()
+	/*-{
+		return Titanium.Map.ANNOTATION_PURPLE;
+	}-*/;
+
+	public static final int ANNOTATION_PURPLE = value_ANNOTATION_PURPLE();
+
+	private static native final int value_ANNOTATION_RED()
+	/*-{
+		return Titanium.Map.ANNOTATION_RED;
+	}-*/;
+
+	public static final int ANNOTATION_RED = value_ANNOTATION_RED();
+
 	private static native final int value_HYBRID_TYPE()
 	/*-{
 		return Titanium.Map.HYBRID_TYPE;

@@ -1,5 +1,8 @@
 {
 	"Titanium.Map": {
+		"properties[name='ANNOTATION_GREEN'] type": "int",
+		"properties[name='ANNOTATION_PURPLE'] type": "int",
+		"properties[name='ANNOTATION_RED'] type": "int",
 		"properties[name='HYBRID_TYPE'] type": "int",
 		"properties[name='SATELLITE_TYPE'] type": "int",
 		"properties[name='STANDARD_TYPE'] type": "int"
