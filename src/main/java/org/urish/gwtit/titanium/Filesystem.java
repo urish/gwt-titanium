@@ -147,6 +147,43 @@ public class Filesystem extends org.urish.gwtit.titanium.Module {
 	}-*/;
 
 	/**
+	 * Return a fully formed file path as a
+	 * {@link org.urish.gwtit.titanium.filesystem.File} object
+	 * 
+	 * @param path
+	 *            one or more path arguments to form the full path joined
+	 *            together with the platform specific path separator. if a
+	 *            relative path is passed, the full path will be relative to the
+	 *            application resource folder.
+	 * @param pathPart2
+	 *            Optional part that will be appended to the path if specified
+	 */
+	public static native org.urish.gwtit.titanium.filesystem.File getFile(String path, String pathPart2)
+	/*-{
+		return Titanium.Filesystem.getFile(path, pathPart2);
+	}-*/;
+
+	/**
+	 * Return a fully formed file path as a
+	 * {@link org.urish.gwtit.titanium.filesystem.File} object
+	 * 
+	 * @param path
+	 *            one or more path arguments to form the full path joined
+	 *            together with the platform specific path separator. if a
+	 *            relative path is passed, the full path will be relative to the
+	 *            application resource folder.
+	 * @param pathPart2
+	 *            Optional part that will be appended to the path if specified
+	 * @param pathPart3
+	 *            Optional part that will be appended to the path if specified
+	 */
+	public static native org.urish.gwtit.titanium.filesystem.File getFile(String path, String pathPart2,
+			String pathPart3)
+	/*-{
+		return Titanium.Filesystem.getFile(path, pathPart2, pathPart3);
+	}-*/;
+
+	/**
 	 * Returns true if the android device supports external storage such as an
 	 * SD card. Returns false on iOS.
 	 */

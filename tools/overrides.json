@@ -62,6 +62,19 @@
 			{"name": "result", "type": "String", "description": "the data returned by Facebook"}
 		]
 	},
+	"Titanium.Filesystem": {
+		"methods[name='getFile'] parameters+": [{
+			"name": "pathPart2",
+			"description": "Optional part that will be appended to the path if specified",
+			"type": "String",
+			"optional": true
+		},{
+			"name": "pathPart3",
+			"description": "Optional part that will be appended to the path if specified",
+			"type": "String",
+			"optional": true
+		}]
+	},
 	"Titanium.Filesystem.File": {
 		"methods[name='getParent'] methodBody": "var x=this.getParent(); return (typeof x=='string')?Titanium.Filesystem.getFile(x):x;"
 	},
