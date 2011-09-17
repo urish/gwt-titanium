@@ -15,6 +15,8 @@
  */
 package org.urish.gwtit.client.util;
 
+import com.google.gwt.core.client.JavaScriptObject;
+
 public class Javascript {
 	/**
 	 * Throws a javascript string exception
@@ -86,4 +88,14 @@ public class Javascript {
 	public static Timer setInterval(int milliseconds, TimerCallback callback) {
 		return Timers.setInterval(milliseconds, callback);
 	}
+	
+	/**
+	 * Returns a JSON string representation of the given JavaScriptObject.
+	 * @param what Object to convert to JSON
+	 * @return The JSON representation of the given object
+	 */
+	public static native String stringify(JavaScriptObject what) 
+	/*-{
+		return JSON.stringify(what);
+	}-*/;
 }
