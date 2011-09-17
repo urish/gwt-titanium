@@ -59,12 +59,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	/**
 	 * @return An array of annotations to add to the map
 	 */
-	public final native JavaScriptObject[] getAnnotations()
+	public final native org.urish.gwtit.titanium.map.Annotation[] getAnnotations()
 	/*-{
 		return this.annotations;
 	}-*/;
 
-	public final native void setAnnotations(JavaScriptObject[] value)
+	public final native void setAnnotations(org.urish.gwtit.titanium.map.Annotation[] value)
 	/*-{
 		this.annotations = value;
 	}-*/;
@@ -90,12 +90,12 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *         the region location to set the map: `latitudeDelta`,
 	 *         `longitudeDelta`, `latitude`, `longitude`.
 	 */
-	public final native JavaScriptObject getRegion()
+	public final native org.urish.gwtit.titanium.RegionDict getRegion()
 	/*-{
 		return this.region;
 	}-*/;
 
-	public final native void setRegion(JavaScriptObject value)
+	public final native void setRegion(org.urish.gwtit.titanium.RegionDict value)
 	/*-{
 		this.region = value;
 	}-*/;
@@ -241,7 +241,7 @@ public class MapView extends org.urish.gwtit.titanium.ui.View {
 	 *            specifying the location to set the map: `latitudeDelta`,
 	 *            `longitudeDelta`, `latitude`, `longitude`.
 	 */
-	public final native void setLocation(JavaScriptObject location)
+	public final native void setLocation(org.urish.gwtit.titanium.RegionDict location)
 	/*-{
 		return this.setLocation(location);
 	}-*/;

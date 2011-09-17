@@ -297,7 +297,7 @@ def mapTypes(s, withConsts = False):
 		return "%s.events.%sEvent" % (innerType, capitalFirst(eventName))
 	if s in ["AcceptDict", "CreateBufferArgs", "CreateStreamArgs", "DecodeNumberDict", 
 			"DecodeStringDict", "EncodeNumberDict",  "EncodeStringDict", "ImageAsCroppedDict",
-			"MediaItemType", "MediaQueryInfoType", "MediaQueryType"]:
+			"MediaItemType", "MediaQueryInfoType", "MediaQueryType", "RegionDict"]:
 		s = "Titanium.%s" % s
 	if s.startswith("Ti."):
 		s = "Titanium."+ s[3:]

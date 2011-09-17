@@ -14,6 +14,9 @@
 	"EncodeNumberDict": {
 		"needsConstructor": true
 	},
+	"RegionDict": {
+		"needsConstructor": true
+	},
 	"Titanium.Android": {
 		"properties+": [
 			{"name": "currentActivity", "description": "The current activity", "permission": "read-only", "type": "Titanium.Android.Activity"}

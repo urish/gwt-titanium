@@ -57,6 +57,19 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 		this.image = value;
 	}-*/;
 
+	/**
+	 * @return The latitude
+	 */
+	public final native float getLatitude()
+	/*-{
+		return this.latitude;
+	}-*/;
+
+	public final native void setLatitude(float value)
+	/*-{
+		this.latitude = value;
+	}-*/;
+
 	public final native void setLeftButton(float value)
 	/*-{
 		this.leftButton = value;
@@ -87,6 +100,19 @@ public class Annotation extends org.urish.gwtit.titanium.Proxy {
 	public final native void setLeftView(JavaScriptObject value)
 	/*-{
 		this.leftView = value;
+	}-*/;
+
+	/**
+	 * @return The longitude
+	 */
+	public final native float getLongitude()
+	/*-{
+		return this.longitude;
+	}-*/;
+
+	public final native void setLongitude(float value)
+	/*-{
+		this.longitude = value;
 	}-*/;
 
 	/**
