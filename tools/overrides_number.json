@@ -461,7 +461,8 @@
 		"properties[name='locationServicesAuthorization'] type": "int"
 	},
 	"Titanium.UI.Button": {
-		"properties[name='style'] type": "int"
+		"properties[name='style'] type": "int",
+		"properties[name='systemButton'] type": "int"
 	},
 	"Titanium.UI.Animation": {
 		"properties[name='bottom'] type": "float",

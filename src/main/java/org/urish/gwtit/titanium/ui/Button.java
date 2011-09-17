@@ -109,6 +109,21 @@ public class Button extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return System button constant for the type of button (one of the values
+	 *         in Titanium.UI.iPhone.SystemButton)
+	 * @platforms iphone, ipad
+	 */
+	public final native int getSystemButton()
+	/*-{
+		return this.systemButton;
+	}-*/;
+
+	public final native void setSystemButton(int value)
+	/*-{
+		this.systemButton = value;
+	}-*/;
+
+	/**
 	 * @return Button title
 	 */
 	public final native String getTitle()
