@@ -18,7 +18,6 @@
 
 package org.urish.gwtit.titanium.ui;
 
-import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The 2DMatrix is created by {@link org.urish.gwtit.titanium.ui.create2DMatrix}
@@ -124,7 +123,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	/**
 	 * Returns a matrix constructed by inverting an existing matrix
 	 */
-	public final native void invert()
+	public final native org.urish.gwtit.titanium.ui._2DMatrix invert()
 	/*-{
 		return this.invert();
 	}-*/;
@@ -144,7 +143,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            matrix t2 does not necessarily equal the result of multiplying
 	 *            matrix t2 by matrix t1.
 	 */
-	public final native JavaScriptObject multiply(JavaScriptObject t2)
+	public final native org.urish.gwtit.titanium.ui._2DMatrix multiply(org.urish.gwtit.titanium.ui._2DMatrix t2)
 	/*-{
 		return this.multiply(t2);
 	}-*/;
@@ -157,9 +156,20 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 *            positive value specifies counterclockwise rotation and a
 	 *            negative value specifies clockwise rotation.
 	 */
-	public final native JavaScriptObject rotate(float angle)
+	public final native org.urish.gwtit.titanium.ui._2DMatrix rotate(float angle)
 	/*-{
 		return this.rotate(angle);
+	}-*/;
+
+	/**
+	 * Returns a matrix constructed by scaling an existing matrix
+	 * 
+	 * @param sx
+	 *            The value by which to scale x values of the matrix
+	 */
+	public final native org.urish.gwtit.titanium.ui._2DMatrix scale(float sx)
+	/*-{
+		return this.scale(sx);
 	}-*/;
 
 	/**
@@ -170,7 +180,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param sy
 	 *            The value by which to scale y values of the matrix
 	 */
-	public final native JavaScriptObject scale(float sx, float sy)
+	public final native org.urish.gwtit.titanium.ui._2DMatrix scale(float sx, float sy)
 	/*-{
 		return this.scale(sx, sy);
 	}-*/;
@@ -183,7 +193,7 @@ public class _2DMatrix extends org.urish.gwtit.titanium.Proxy {
 	 * @param ty
 	 *            The value by which to move y values with the matrix
 	 */
-	public final native JavaScriptObject translate(float tx, float ty)
+	public final native org.urish.gwtit.titanium.ui._2DMatrix translate(float tx, float ty)
 	/*-{
 		return this.translate(tx, ty);
 	}-*/;
