@@ -18,7 +18,6 @@
 
 package org.urish.gwtit.titanium.database;
 
-import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The Database instance returned by
@@ -84,25 +83,14 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 * 
 	 * @param sql
 	 *            the SQL to execute
-	 */
-	public final native JavaScriptObject execute(String sql)
-	/*-{
-		return this.execute(sql);
-	}-*/;
-
-	/**
-	 * Execute a SQL statement against the database and returns a ResultSet
-	 * 
-	 * @param sql
-	 *            the SQL to execute
 	 * @param vararg
 	 *            one or more optional variable arguments passed to this
 	 *            function or an array of objects to be replaced in the query
 	 *            using `?` substitution.
 	 */
-	public final native JavaScriptObject execute(String sql, JavaScriptObject[] vararg)
+	public final native org.urish.gwtit.titanium.database.ResultSet execute(String sql, Object... vararg)
 	/*-{
-		return this.execute(sql, vararg);
+		var callargs=[sql];for (var i=0;i<varargs.length;i++) {callargs[i+1]=varargs[i];};return this.execute.apply(this, callargs);
 	}-*/;
 
 	/**

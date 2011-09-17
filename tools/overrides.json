@@ -30,6 +30,15 @@
 		"events[name='pause'] javaEventName": "ServicePause",
 		"events[name='resume'] javaEventName": "ServiceResume"
 	},
+	"Titanium.Database.DB": {
+		"methods[name='execute'] methodBody": "var callargs=[sql];for (var i=0;i<varargs.length;i++) {callargs[i+1]=varargs[i];};return this.execute.apply(this, callargs);",
+		"methods[name='execute'] parameters[name='vararg'] optional": false,
+		"methods[name='execute'] parameters[name='vararg'] type": "JavaObject..."
+	},
+	"Titanium.Database.ResultSet": {
+		"methods[name='field'] returns type": "JavaObject",
+		"methods[name='fieldByName'] returns type": "JavaObject"
+	},
 	"Titanium.Facebook": {
 		"methods[name='dialog'] parameters[name='callback'] type": "Callback<Titanium.Facebook.DialogCallbackParams>",
 		"methods[name='request'] parameters[name='callback'] type": "Callback<Titanium.Facebook.RequestCallbackParams>",

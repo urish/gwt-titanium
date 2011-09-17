@@ -267,6 +267,7 @@ def mapTypes(s, withConsts = False):
 		"Boolean": "boolean",
 		"void": "void",
 		"Object": "JavaScriptObject",
+		"JavaObject": "Object",
 		"Date": "java.util.Date",
 		"Font": "org.urish.gwtit.client.font.Font",
 		"$Point": "org.urish.gwtit.client.util.Point",
@@ -281,6 +282,8 @@ def mapTypes(s, withConsts = False):
 	arrayMatch = re.match("^Array<(.+)>$", s)
 	if arrayMatch:
 		return mapTypes(arrayMatch.group(1), withConsts) + "[]"
+	if s.endswith("..."):
+		return mapTypes(s[:-3], withConsts) + "..."
 	dictionaryMatch = re.match("^Dictionary<(.+)>$", s)
 	if dictionaryMatch:
 		return mapTypes(dictionaryMatch.group(1), withConsts)
@@ -492,8 +495,7 @@ def methodPermutations(method):
 	paramNames = []
 	if 'parameters' in method:
 		for parameter in method['parameters']:
-			optional = ('optional' in parameter and parameter['optional'] or
-						'default' in parameter and parameter['default'])
+			optional = (parameter.get('optional', False) or parameter.get('default', False))
 			if optional:
 				yield (copy(params), copy(paramNames))
 			name = mapIdentifiers(parameter['name'])

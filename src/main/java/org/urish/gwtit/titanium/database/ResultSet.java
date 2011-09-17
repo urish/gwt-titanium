@@ -18,7 +18,6 @@
 
 package org.urish.gwtit.titanium.database;
 
-import com.google.gwt.core.client.JavaScriptObject;
 
 /**
  * The ResultSet instance returned by invoking a database SQL `execute`.
@@ -70,7 +69,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * @param index
 	 *            column index (which is zero based)
 	 */
-	public final native JavaScriptObject field(int index)
+	public final native Object field(int index)
 	/*-{
 		return this.field(index);
 	}-*/;
@@ -87,7 +86,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public final native JavaScriptObject field(int index, int type)
+	public final native Object field(int index, int type)
 	/*-{
 		return this.field(index, type);
 	}-*/;
@@ -98,7 +97,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 * @param name
 	 *            column name from SQL query
 	 */
-	public final native JavaScriptObject fieldByName(String name)
+	public final native Object fieldByName(String name)
 	/*-{
 		return this.fieldByName(name);
 	}-*/;
@@ -115,7 +114,7 @@ public class ResultSet extends org.urish.gwtit.titanium.Proxy {
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_FLOAT} |
 	 *            {@link org.urish.gwtit.titanium.Database.FIELD_TYPE_DOUBLE})
 	 */
-	public final native JavaScriptObject fieldByName(String name, int type)
+	public final native Object fieldByName(String name, int type)
 	/*-{
 		return this.fieldByName(name, type);
 	}-*/;
