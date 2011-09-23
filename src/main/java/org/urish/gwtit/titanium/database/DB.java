@@ -90,7 +90,7 @@ public class DB extends org.urish.gwtit.titanium.Proxy {
 	 */
 	public final native org.urish.gwtit.titanium.database.ResultSet execute(String sql, Object... vararg)
 	/*-{
-		var callargs=[sql];for (var i=0;i<varargs.length;i++) {callargs[i+1]=varargs[i];};return this.execute.apply(this, callargs);
+		var callargs=Array.prototype.slice.call(arguments, 1)||[sql];return Function.prototype.apply.call(this.execute, this, callargs);
 	}-*/;
 
 	/**
