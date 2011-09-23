@@ -41,22 +41,12 @@ public class AdView extends org.urish.gwtit.titanium.ui.View {
 		return this.SIZE_320x50;
 	}-*/;
 
-	public final native void setSIZE_320x50(String value)
-	/*-{
-		this.SIZE_320x50 = value;
-	}-*/;
-
 	/**
 	 * @return Constant for 480x32 ad sizes
 	 */
 	public final native String getSIZE_480x32()
 	/*-{
 		return this.SIZE_480x32;
-	}-*/;
-
-	public final native void setSIZE_480x32(String value)
-	/*-{
-		this.SIZE_480x32 = value;
 	}-*/;
 
 	/**

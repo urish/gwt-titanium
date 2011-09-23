@@ -35,12 +35,22 @@ public class Person extends org.urish.gwtit.titanium.Proxy {
 	protected Person() {
 	}
 
-	private static native final JavaScriptObject value_URL()
+	/**
+	 * @return URLs of webpages associated with the person. Multi-value, valid
+	 *         labels are: `home`, `work`, `other`, `homepage`. Values are
+	 *         strings.
+	 * 
+	 * @platforms iphone, ipad, ipod
+	 */
+	public final native JavaScriptObject getUrl()
 	/*-{
-		return Titanium.Contacts.Person.URL;
+		return this.url;
 	}-*/;
 
-	public static final JavaScriptObject URL = value_URL();
+	public final native void setUrl(JavaScriptObject value)
+	/*-{
+		this.url = value;
+	}-*/;
 
 	/**
 	 * @return The addresses for the person. Multi-value, valid labels are:

@@ -24,6 +24,7 @@ import org.urish.gwtit.titanium.ui.events.DoubleClickHandler;
 import org.urish.gwtit.titanium.ui.events.DoubleTapHandler;
 import org.urish.gwtit.titanium.ui.events.LongClickHandler;
 import org.urish.gwtit.titanium.ui.events.LongPressHandler;
+import org.urish.gwtit.titanium.ui.events.PinchHandler;
 import org.urish.gwtit.titanium.ui.events.SingleTapHandler;
 import org.urish.gwtit.titanium.ui.events.SwipeHandler;
 import org.urish.gwtit.titanium.ui.events.TouchCancelHandler;
@@ -680,6 +681,11 @@ public class View extends org.urish.gwtit.titanium.Proxy {
 	public final native void addLongPressHandler(LongPressHandler handler)
 	/*-{
 		return this.addEventListener('longpress', function(e) { handler.@org.urish.gwtit.titanium.ui.events.LongPressHandler::onLongPress(Lorg/urish/gwtit/titanium/ui/events/LongPressEvent;)(e); } );
+	}-*/;
+
+	public final native void addPinchHandler(PinchHandler handler)
+	/*-{
+		return this.addEventListener('pinch', function(e) { handler.@org.urish.gwtit.titanium.ui.events.PinchHandler::onPinch(Lorg/urish/gwtit/titanium/ui/events/PinchEvent;)(e); } );
 	}-*/;
 
 	public final native void addSingleTapHandler(SingleTapHandler handler)

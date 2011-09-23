@@ -121,6 +121,22 @@ public class ScrollableView extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @return Number of milliseconds to wait before hiding the paging control.
+	 *         Less than or equal to 0 disables timeout keeping controls
+	 *         displayed.
+	 * @platforms android
+	 */
+	public final native float getPagingControlTimeout()
+	/*-{
+		return this.pagingControlTimeout;
+	}-*/;
+
+	public final native void setPagingControlTimeout(float value)
+	/*-{
+		this.pagingControlTimeout = value;
+	}-*/;
+
+	/**
 	 * @return Array of view objects to place in the view
 	 */
 	public final native JavaScriptObject[] getViews()

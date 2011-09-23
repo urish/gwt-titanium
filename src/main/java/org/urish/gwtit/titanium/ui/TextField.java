@@ -355,6 +355,24 @@ public class TextField extends org.urish.gwtit.titanium.ui.View {
 	}-*/;
 
 	/**
+	 * @default -1
+	 * @return The maximum length of text field input. Any attempt to input text
+	 *         beyond this length (including pasting a string larger than
+	 *         maxLength) will not edit the field's contents. A value of -1
+	 *         indicates unlimited length.
+	 * @platforms iphone
+	 */
+	public final native float getMaxLength()
+	/*-{
+		return this.maxLength;
+	}-*/;
+
+	public final native void setMaxLength(float value)
+	/*-{
+		this.maxLength = value;
+	}-*/;
+
+	/**
 	 * Force the field to lose focus
 	 */
 	public final native void blur()

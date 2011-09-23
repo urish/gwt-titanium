@@ -144,11 +144,6 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 		return Titanium.Android.Calendar.allAlerts;
 	}-*/;
 
-	public static native void setAllAlerts(org.urish.gwtit.titanium.android.calendar.Alert[] value)
-	/*-{
-		Titanium.Android.Calendar.allAlerts = value;
-	}-*/;
-
 	/**
 	 * @return Array of
 	 *         {@link org.urish.gwtit.titanium.android.calendar.Calendar}
@@ -158,11 +153,6 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.android.calendar.Calendar[] getAllCalendars()
 	/*-{
 		return Titanium.Android.Calendar.allCalendars;
-	}-*/;
-
-	public static native void setAllCalendars(org.urish.gwtit.titanium.android.calendar.Calendar[] value)
-	/*-{
-		Titanium.Android.Calendar.allCalendars = value;
 	}-*/;
 
 	/**
@@ -177,11 +167,6 @@ public class Calendar extends org.urish.gwtit.titanium.Module {
 	public static native org.urish.gwtit.titanium.android.calendar.Calendar[] getSelectableCalendars()
 	/*-{
 		return Titanium.Android.Calendar.selectableCalendars;
-	}-*/;
-
-	public static native void setSelectableCalendars(org.urish.gwtit.titanium.android.calendar.Calendar[] value)
-	/*-{
-		Titanium.Android.Calendar.selectableCalendars = value;
 	}-*/;
 
 	public static native org.urish.gwtit.titanium.android.calendar.Alert createAlert()

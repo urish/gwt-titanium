@@ -18,16 +18,11 @@
 
 package org.urish.gwtit.titanium.ui.events;
 
-import org.urish.gwtit.client.event.AbstractTitaniumEvent;
-
 /**
  * 
  */
-public class LongPressEvent extends AbstractTitaniumEvent {
+public interface PinchHandler {
 
-	public final static String NATIVE_EVENT_NAME = "longpress";
-
-	protected LongPressEvent() {
-	}
+	public void onPinch(PinchEvent event);
 
 }

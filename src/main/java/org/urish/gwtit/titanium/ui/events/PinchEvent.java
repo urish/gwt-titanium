@@ -23,11 +23,28 @@ import org.urish.gwtit.client.event.AbstractTitaniumEvent;
 /**
  * 
  */
-public class LongPressEvent extends AbstractTitaniumEvent {
+public class PinchEvent extends AbstractTitaniumEvent {
 
-	public final static String NATIVE_EVENT_NAME = "longpress";
+	public final static String NATIVE_EVENT_NAME = "pinch";
 
-	protected LongPressEvent() {
+	protected PinchEvent() {
 	}
+
+	/**
+	 * The scale factor relative to the points of the two touches in screen
+	 * coordinates.
+	 */
+	public final native float getScale()
+	/*-{
+		return this.scale;
+	}-*/;
+
+	/**
+	 * The velocity of the pinch in scale factor per second.
+	 */
+	public final native float getVelocity()
+	/*-{
+		return this.velocity;
+	}-*/;
 
 }
