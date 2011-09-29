@@ -67,6 +67,7 @@ public class Version {
 		return Platform.getOsname().equals(OS_ANDROID);
 	}
 
+	/*--- Cache for speeding up hosted mode ---*/
 	private static Boolean cachediOs3_2Plus = null;
 
 	/**
@@ -76,7 +77,7 @@ public class Version {
 		if (cachediOs3_2Plus == null) {
 			cachediOs3_2Plus = false;
 			if (Platform.getName().equals(PLATFORM_IPHONE_OS)) {
-				String[] version = Platform.getVersion().split(".");
+				String[] version = Javascript.stringSplit(Platform.getVersion(), ".");
 				int major = Integer.parseInt(version[0]);
 				int minor = Integer.parseInt(version[1]);
 
@@ -89,6 +90,7 @@ public class Version {
 		return cachediOs3_2Plus;
 	}
 
+	/*--- Cache for speeding up hosted mode ---*/
 	private static Boolean cachediOs4Plus = null;
 
 	/**
@@ -98,7 +100,7 @@ public class Version {
 		if (cachediOs4Plus == null) {
 			cachediOs4Plus = false;
 			if (Platform.getName().equals(PLATFORM_IPHONE_OS)) {
-				String[] version = Platform.getVersion().split(".");
+				String[] version = Javascript.stringSplit(Platform.getVersion(), ".");
 				int major = Integer.parseInt(version[0]);
 				cachediOs4Plus = (major >= 4);
 			}
